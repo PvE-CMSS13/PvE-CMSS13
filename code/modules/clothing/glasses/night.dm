@@ -86,26 +86,54 @@
 	req_skill = null
 	req_skill_level = null
 
+/obj/effect/target_mark
+	icon = 'icons/obj/items/marine-items.dmi'
+	icon_state = "tracker_blip"
+	layer = BELOW_FULLSCREEN_LAYER
+	plane = FULLSCREEN_PLANE
+
+/obj/effect/target_mark/proc/update_marker_pos(mob/user, atom/target)
+	var/c_view = user.client.view
+	var/view_x_offset = 0
+	var/view_y_offset = 0
+	if(c_view > 7)
+		if(user.client.pixel_x >= 0)
+			view_x_offset = round(user.client.pixel_x/32)
+		else
+			view_x_offset = Ceiling(user.client.pixel_x/32)
+
+		if(user.client.pixel_y >= 0)
+			view_y_offset = round(user.client.pixel_y/32)
+		else
+			view_y_offset = Ceiling(user.client.pixel_y/32)
+
+	screen_loc = "[Clamp(c_view + 1 - view_x_offset + (target.x - user.x), 1, 2*c_view+1)],[Clamp(c_view + 1 - view_y_offset + (target.y - user.y), 1, 2*c_view+1)]"
+
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
 	gender = NEUTER
-	desc = "A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain."
+	desc = "A headset and goggles system for the M56 Smartgun."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
-	deactive_state = "m56_goggles_0"
-	toggleable = TRUE
-	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
-	vision_flags = SEE_TURFS
+	deactive_state = "m56_goggles"
+	active = FALSE
+	toggleable = FALSE
+	vision_flags = FALSE
+	clothing_traits_active = FALSE
+	actions_types = list(/datum/action/item_action/m56_goggles/target_highlighting)
 	fullscreen_vision = null
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = SKILL_SPEC_SMARTGUN
 
-	var/far_sight = FALSE
+	var/target_highlighting = FALSE
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
+
+	var/list/blip_pool = list()
+	var/iff_signal = FACTION_MARINE
 
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
 	linked_smartgun = null
-	disable_far_sight()
+	disable_target_highlighting()
 	return ..()
 
 /obj/item/clothing/glasses/night/m56_goggles/proc/link_smartgun(mob/user)
@@ -124,76 +152,140 @@
 
 /obj/item/clothing/glasses/night/m56_goggles/equipped(mob/user, slot)
 	if(slot != SLOT_EYES)
-		disable_far_sight(user)
+		disable_target_highlighting(user)
 	return ..()
 
 /obj/item/clothing/glasses/night/m56_goggles/dropped(mob/living/carbon/human/user)
 	linked_smartgun = null
-	disable_far_sight(user)
+	disable_target_highlighting(user)
 	return ..()
 
-/obj/item/clothing/glasses/night/m56_goggles/proc/set_far_sight(mob/living/carbon/human/user, set_to_state = TRUE)
+/obj/item/clothing/glasses/night/m56_goggles/proc/set_target_highlighting(mob/living/carbon/human/user, set_to_state = TRUE)
 	if(set_to_state)
 		if(user.glasses != src)
-			to_chat(user, SPAN_WARNING("You can't activate far sight without wearing \the [src]!"))
+			to_chat(user, SPAN_WARNING("You can't activate target highlighting without wearing \the [src]!"))
 			return
 		if(!link_smartgun(user))
 			to_chat(user, SPAN_WARNING("You can't use this without a smartgun!"))
 			return
-		far_sight = TRUE
-		if(user)
-			if(user.client)
-				user.client.change_view(8, src)
-		START_PROCESSING(SSobj, src)
+		target_highlighting = TRUE
+		START_PROCESSING(SSfastobj, src)
 	else
 		linked_smartgun = null
-		far_sight = FALSE
-		if(user)
-			if(user.client)
-				user.client.change_view(world_view_size, src)
-		STOP_PROCESSING(SSobj, src)
+		target_highlighting = FALSE
+		for(var/target in blip_pool)
+			remove_marker(user, target, blip_pool[target])
+		STOP_PROCESSING(SSfastobj, src)
 
-	var/datum/action/item_action/m56_goggles/far_sight/FT = locate(/datum/action/item_action/m56_goggles/far_sight) in actions
-	if(FT)
-		FT.update_button_icon()
+	var/datum/action/item_action/m56_goggles/target_highlighting/action = locate(/datum/action/item_action/m56_goggles/target_highlighting) in actions
+	if(action)
+		action.update_button_icon()
 
-/obj/item/clothing/glasses/night/m56_goggles/proc/disable_far_sight(mob/living/carbon/human/user)
+/obj/item/clothing/glasses/night/m56_goggles/proc/disable_target_highlighting(mob/living/carbon/human/user)
 	if(!istype(user))
 		user = loc
 		if(!istype(user))
 			user = null
-	set_far_sight(user, FALSE)
+	set_target_highlighting(user, FALSE)
 
 /obj/item/clothing/glasses/night/m56_goggles/process(delta_time)
 	var/mob/living/carbon/human/user = loc
 	if(!istype(user))
-		set_far_sight(null, FALSE)
+		set_target_highlighting(null, FALSE)
 		return PROCESS_KILL
 	if(!link_smartgun(user))
-		set_far_sight(user, FALSE)
+		set_target_highlighting(user, FALSE)
 		return PROCESS_KILL
-	if(!linked_smartgun.drain_battery(25 * delta_time))
-		set_far_sight(user, FALSE)
+	if(!linked_smartgun.drain_battery(15 * delta_time))
+		set_target_highlighting(user, FALSE)
+		return PROCESS_KILL
 
-/datum/action/item_action/m56_goggles/far_sight/New()
+	scan()
+
+/obj/item/clothing/glasses/night/m56_goggles/proc/scan()
+	set waitfor = 0
+	var/mob/living/carbon/human/human_user = loc
+	if(!human_user.client)
+		return
+
+	var/got_target = FALSE
+	var/list/viewed = view(human_user.client.view, human_user)
+	for(var/mob/living/target in viewed)
+		if(target.stat)
+			continue
+
+		if(isrobot(target))
+			continue
+
+		if(blip_pool[target])
+			continue
+
+		if(target == human_user)
+			continue //device user isn't detected
+
+		if(target.get_target_lock(iff_signal))
+			continue
+
+		if(world.time > target.l_move_time + 10 SECONDS)
+			continue //hasn't moved for quite a while
+
+		got_target = TRUE
+		show_marker(human_user, target)
+
+	if(got_target)
+		playsound_client(human_user.client, 'sound/items/tick.ogg')
+
+	for(var/target in blip_pool)
+		var/obj/effect/target_mark/mark = blip_pool[target]
+		if(target in viewed)
+			mark.update_marker_pos(human_user, target)
+			continue
+
+		remove_marker(human_user, target, mark)
+
+/obj/item/clothing/glasses/night/m56_goggles/proc/show_marker(mob/user, atom/target)
+	blip_pool[target] = new /obj/effect/target_mark
+
+	var/obj/effect/target_mark/TM = blip_pool[target]
+	user.client.add_to_screen(TM)
+
+	RegisterSignal(target, list(COMSIG_MOB_DEATH, COMSIG_XENO_HANDLE_CRIT), PROC_REF(handle_removing))
+
+/obj/item/clothing/glasses/night/m56_goggles/proc/handle_removing(atom/target)
+	SIGNAL_HANDLER
+	var/mob/living/carbon/human/human_user = loc
+	if(!istype(human_user))
+		return
+
+	remove_marker(human_user, target, blip_pool[target])
+
+/obj/item/clothing/glasses/night/m56_goggles/proc/remove_marker(mob/user, atom/target, obj/effect/target_mark/mark)
+	if(!user.client)
+		return
+
+	user.client.remove_from_screen(mark)
+	blip_pool -= target
+	qdel(mark)
+
+/datum/action/item_action/m56_goggles/target_highlighting/New()
 	. = ..()
-	name = "Toggle Far Sight"
+	name = "Toggle Target Highlighting"
 	action_icon_state = "far_sight"
 	button.name = name
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/datum/action/item_action/m56_goggles/far_sight/action_activate()
+/datum/action/item_action/m56_goggles/target_highlighting/action_activate()
 	if(target)
 		var/obj/item/clothing/glasses/night/m56_goggles/G = target
-		G.set_far_sight(owner, !G.far_sight)
-		to_chat(owner, SPAN_NOTICE("You [G.far_sight ? "enable" : "disable"] \the [G]'s far sight system."))
+		G.set_target_highlighting(owner, !G.target_highlighting)
+		to_chat(owner, SPAN_NOTICE("You [G.target_highlighting ? "enable" : "disable"] \the [G]'s target highlighting system."))
 
-/datum/action/item_action/m56_goggles/far_sight/update_button_icon()
+/datum/action/item_action/m56_goggles/target_highlighting/update_button_icon()
 	if(!target)
 		return
 	var/obj/item/clothing/glasses/night/m56_goggles/G = target
-	if(G.far_sight)
+	if(G.target_highlighting)
 		button.icon_state = "template_on"
 	else
 		button.icon_state = "template"
@@ -202,6 +294,8 @@
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
 	vision_flags = SEE_TURFS|SEE_MOBS
+	clothing_traits_active = TRUE
+	active = TRUE
 
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
