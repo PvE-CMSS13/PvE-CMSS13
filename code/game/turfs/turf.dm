@@ -623,6 +623,12 @@
 /turf/open/auto_turf/shale/layer2/is_weedable()
 	return SEMI_WEEDABLE
 
+/turf/open/auto_turf/strata_grass/layer1/unweedable/is_weedable()
+	return FALSE
+
+/turf/open/auto_turf/strata_grass/layer0/unweedable/is_weedable()
+	return FALSE
+
 /turf/closed/wall/is_weedable()
 	return FULLY_WEEDABLE //so we can spawn weeds on the walls
 

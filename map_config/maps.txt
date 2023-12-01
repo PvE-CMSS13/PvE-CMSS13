@@ -62,5 +62,8 @@ endmap
 map derelict_almayer
 endmap
 
+map lv624_outpost_furidamu
+endmap
+
 map whiskey_outpost_v2
 endmap

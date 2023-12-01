@@ -293,6 +293,10 @@
 	bleed_layer = 0
 	variant_prefix_name = "matted grass"
 
+/turf/open/auto_turf/strata_grass/layer0/unweedable
+	variant_prefix_name = "matted grass"
+	bleed_layer = 0
+
 /turf/open/auto_turf/strata_grass/layer0_mud
 	icon_state = "grass_0_mud"
 	bleed_layer = 0
@@ -307,6 +311,10 @@
 
 /turf/open/auto_turf/strata_grass/layer1
 	icon_state = "grass_1"
+	bleed_layer = 1
+
+/turf/open/auto_turf/strata_grass/layer1/unweedable
+	variant_prefix_name = "matted grass"
 	bleed_layer = 1
 
 //Chance's Claim / Hadley Shale dirt

@@ -139,6 +139,12 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/furidamu
+	name = "\improper Outpost Furidamu map"
+	desc = "A satellite view of Outpost Furidamu"
+	html_link = ""
+	color = "#964B00"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -157,6 +163,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_LV624_OUTPOST_FURIDAMU = new /obj/item/map/furidamu(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
