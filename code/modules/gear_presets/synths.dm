@@ -30,7 +30,7 @@
 	if(iscolonysynthetic(new_human) && !isworkingjoe(new_human))
 		new_human.set_skills(/datum/skills/colonial_synthetic)
 
-	new_human.allow_gun_usage = FALSE
+	new_human.allow_gun_usage = TRUE
 
 //*****************************************************************************************************/
 

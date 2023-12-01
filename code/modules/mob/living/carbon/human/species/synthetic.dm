@@ -13,10 +13,7 @@
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/synthsplatter
 
-	total_health = 150 //more health than regular humans
-
-	brute_mod = 0.5
-	burn_mod = 0.9 //a small bit of resistance
+	total_health = 100 //same health as regular humans
 
 	cold_level_1 = -1
 	cold_level_2 = -1
@@ -40,7 +37,7 @@
 
 	knock_down_reduction = 5
 	stun_reduction = 5
-	acid_blood_dodge_chance = 25
+	acid_blood_dodge_chance = 50
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/synthetic/proc/toggle_HUD,
@@ -76,19 +73,14 @@
 	name = SYNTH_COLONY
 	name_plural = "Colonial Synthetics"
 	uses_ethnicity = TRUE
+	brute_mod = 0.8
 	burn_mod = 0.8
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG)
 
 	pain_type = /datum/pain/synthetic/colonial
 	rarity_value = 1.5
-	slowdown = 0.2
-	total_health = 200 //But more durable
 
 	default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-
-	knock_down_reduction = 3.5
-	stun_reduction = 3.5
-
 
 /datum/species/synthetic/colonial/colonial_gen_two
 	name = SYNTH_COLONY_GEN_TWO
@@ -111,8 +103,8 @@
 	uses_ethnicity = FALSE
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES)
 
-	burn_mod = 0.6 //made for combat
-	total_health = 250 //made for combat
+	brute_mod = 0.5
+	burn_mod = 0.5 //made for combat
 
 	hair_color = "#000000"
 	icobase = 'icons/mob/humans/species/r_synthetic.dmi'
