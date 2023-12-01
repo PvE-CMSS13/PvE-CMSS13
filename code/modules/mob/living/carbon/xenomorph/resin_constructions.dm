@@ -20,11 +20,6 @@ GLOBAL_VAR_INIT(resin_lz_allowed, FALSE)
 	var/can_build_on_doors = TRUE // if it can be built on a tile with an open door or not
 
 /datum/resin_construction/proc/can_build_here(turf/T, mob/living/carbon/xenomorph/X)
-	var/mob/living/carbon/xenomorph/blocker = locate() in T
-	if(blocker && blocker != X && blocker.stat != DEAD)
-		to_chat(X, SPAN_WARNING("Can't do that with [blocker] in the way!"))
-		return FALSE
-
 	if(!istype(T) || T.is_weedable() < FULLY_WEEDABLE)
 		to_chat(X, SPAN_WARNING("You can't do that here."))
 		return FALSE

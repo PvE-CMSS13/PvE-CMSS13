@@ -401,6 +401,7 @@
 #include "code\datums\components\xeno\shield_slash.dm"
 #include "code\datums\components\xeno\ai_behavior_overrides\attack_override_behavior.dm"
 #include "code\datums\components\xeno\ai_behavior_overrides\base_override_behavior.dm"
+#include "code\datums\components\xeno\ai_behavior_overrides\build_override_behavior.dm"
 #include "code\datums\components\xeno\ai_behavior_overrides\capture_override_behavior.dm"
 #include "code\datums\components\xeno\ai_behavior_overrides\hive_override_behavior.dm"
 #include "code\datums\construction\construction_template.dm"

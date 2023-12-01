@@ -900,6 +900,7 @@
 				M.visible_message(SPAN_DANGER("[M] smashes \the [src] open!"), \
 				SPAN_DANGER("You smash \the [src] open!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 		else
+			take_damage(M.melee_damage_upper)
 			M.visible_message(SPAN_DANGER("[M] smashes [src]!"), \
 			SPAN_DANGER("You smash [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 		return XENO_ATTACK_ACTION
