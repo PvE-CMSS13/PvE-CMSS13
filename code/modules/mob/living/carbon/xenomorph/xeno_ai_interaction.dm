@@ -30,9 +30,15 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	return OBJECT_PENALTY
 
 /obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(unslashable)
+	if(unslashable || indestructible || (climbable && islurker(X)))
 		if(!X.action_busy)
 			do_climb(X)
+		return
+
+	return ..()
+
+/obj/structure/machinery/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(stat & TIPPED_OVER)
 		return
 
 	return ..()

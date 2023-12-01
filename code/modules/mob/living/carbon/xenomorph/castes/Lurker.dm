@@ -59,6 +59,7 @@
 	icon_xeno = 'icons/mob/xenos/lurker.dmi'
 	icon_xenonid = 'icons/mob/xenonids/lurker.dmi'
 
+	forced_retarget_time = (2 SECONDS)
 	var/pull_direction
 
 /mob/living/carbon/xenomorph/lurker/launch_towards(datum/launch_metadata/LM)

@@ -67,8 +67,13 @@
 			continue
 
 		var/blocked = FALSE
-		for(var/atom/potential_blocker as anything in potential_home)
-			if(potential_blocker != idle_xeno && (potential_blocker.can_block_movement || potential_blocker.density))
+		for(var/obj/structure/potential_blocker in potential_home)
+			if(potential_blocker.unslashable && potential_blocker.can_block_movement && potential_blocker.density)
+				blocked = TRUE
+				break
+
+		for(var/mob/potential_blocker in potential_home)
+			if(potential_blocker != idle_xeno && potential_blocker.can_block_movement && potential_blocker.density)
 				blocked = TRUE
 				break
 
@@ -76,7 +81,24 @@
 			continue
 
 		var/preferred = FALSE
+		for(var/obj/structure/structure in potential_home)
+			if(structure.unslashable && structure.can_block_movement && structure.density)
+				continue
+
+			if(structure.invisibility == 101)
+				continue
+
+			preferred = TRUE
+			break
+
 		for(var/turf/closed/touching_turf in orange(1, potential_home))
+			if(get_dir(potential_home, touching_turf) in diagonals)
+				continue
+
+			preferred = TRUE
+			break
+
+		for(var/obj/item/stack/sheet/sheet in potential_home)
 			preferred = TRUE
 			break
 
@@ -194,12 +216,14 @@
 #undef LURKER_BAITS_BEFORE_AMBUSH
 
 /datum/xeno_ai_movement/linger/lurking/proc/interact_random(mob/living/carbon/xenomorph/X)
-	for(var/obj/potential_interaction in orange(1, X))
-		if(istype(potential_interaction, /obj/structure/window_frame))
+	for(var/atom/potential_interaction in orange(1, X))
+		if(istype(potential_interaction, /obj/structure/shuttle))
 			continue
-		if(istype(potential_interaction, /obj/structure/pipes))
+		if(istype(potential_interaction, /turf/closed/shuttle))
 			continue
-		if(istype(potential_interaction, /obj/structure/sign))
+		if(istype(potential_interaction, /obj/effect))
+			continue
+		if(istype(potential_interaction, /turf/open))
 			continue
 		if(!potential_interaction.xeno_ai_act(X))
 			continue

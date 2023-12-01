@@ -520,6 +520,10 @@
 
 	. = XENO_NO_DELAY_ACTION
 
+	if(M.action_busy)
+		to_chat(M, SPAN_WARNING("You are already doing something!"))
+		return
+
 	if(M.claw_type >= CLAW_TYPE_SHARP)
 		M.animation_attack_on(src)
 		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
@@ -933,6 +937,7 @@
 			M.visible_message(SPAN_DANGER("[M] smashes [src] beyond recognition!"), \
 			SPAN_DANGER("You enter a frenzy and smash [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 			malfunction()
+			tip_over()
 		else
 			M.visible_message(SPAN_DANGER("[M] [M.slashes_verb] [src]!"), \
 			SPAN_DANGER("You [M.slash_verb] [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
