@@ -315,3 +315,20 @@
 	customizable = TRUE
 	matter = list("metal" = 3750)
 	has_blast_wave_dampener = TRUE
+
+// Other mine types
+
+/obj/item/explosive/mine/sebb // SEBB mine mode
+	icon_state = "grenade_sebb_planted"
+	map_deployed = TRUE
+
+/obj/item/explosive/mine/sebb/disarm()
+	. = ..()
+	new /obj/item/explosive/grenade/sebb(src)
+	qdel(src)
+
+/obj/item/explosive/mine/sebb/prime()
+	set waitfor = 0
+	new /obj/item/explosive/grenade/sebb/primed(src)
+	if(!QDELETED(src))
+		disarm()

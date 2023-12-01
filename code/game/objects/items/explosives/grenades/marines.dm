@@ -713,6 +713,125 @@
 	s.start()
 	qdel(src)
 
+
+
+
+
+/*
+//================================================
+					Special
+//================================================
+*/
+/obj/item/explosive/grenade/sebb
+	name = "\improper G2 Electroshock grenade"
+	desc = "This is a G2 Electroshock Grenade. Produced by Armat Battlefield Systems, it's sometimes referred to as the Sonic Electric Ball Breaker, after a rash of incidents where the intense 1.2 gV sonic payload caused... rupturing. A bounding landmine mode is available for this weapon."
+	icon_state = "grenade_sebb"
+	item_state = "grenade_sebb"
+	det_time = 40
+	var/range = 5
+	var/damage = 120 // Generic Energy damage from 1.2 GV. Distance scaled
+	var/dam_range_mult = 15 // Range is multiplied by this, then damage is subracted by this
+
+
+/obj/item/explosive/grenade/afterattack(atom/target, mob/user, proximity)
+	if(!proximity || active || !isturf(target))
+		return
+
+	if(user.action_busy)
+		return
+
+	var/turf/T = target
+	to_chat(user, SPAN_NOTICE("You switch \the [src] into landmind mode and start burying it..."))
+	playsound(user.loc, 'sound/effects/thud.ogg', 100, 6)
+	if(!do_after(user,20 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		to_chat(user, SPAN_NOTICE("You stop digging."))
+		return
+	new /obj/item/explosive/mine/sebb(T.loc)
+	qdel(src)
+
+/obj/item/explosive/grenade/sebb/activate()
+	..()
+	var/soundtime = det_time - 5
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound),src.loc,'sound/effects/sebb_beep.ogg',60,0, 10),soundtime)
+	addtimer(CALLBACK(src, PROC_REF(hover)),soundtime)
+	//playsound(src.loc, 'sound/effects/sebb.ogg', 60, 1, 10)
+
+/obj/item/explosive/grenade/sebb/proc/hover()
+	icon_state = "grenade_sebb_active"
+	return
+
+/obj/item/explosive/grenade/sebb/prime()
+	//flick('icons/effects/sebb.dmi',src)
+	new /obj/effect/overlay/sebb(src.loc)
+	playsound(src.loc, 'sound/effects/sebb_explode.ogg', 75, 0, 10)
+	for(var/turf/turf in oview(range,src)) // special effect funnies
+		if(prob(25))
+			var/datum/effect_system/spark_spread/spark = new /datum/effect_system/spark_spread
+			spark.set_up(2, 1, turf)
+			spark.start()
+	for(var/mob/living/Mob in oview(range,src))
+		var/mob_range = get_dist(src,Mob)
+		to_chat(world,mob_range)  /// REMOVETHIS REMOVETHIS
+		var/dam_factor = mob_range * dam_range_mult
+		to_chat(world,dam_factor)  /// REMOVETHIS REMOVETHIS
+		var/damage_applied = damage - dam_factor  //divides damage
+		if(ishuman(Mob))
+			var/mob/living/carbon/human/shockedH = Mob
+			shockedH.take_overall_armored_damage(damage_applied ,ARMOR_ENERGY,BURN, 90) // 90% chance to be on additional limbs
+			shockedH.make_dizzy(damage_applied*3)
+			shockedH.make_jittery(damage_applied*3)
+			shockedH.emote("pain")
+		else
+			Mob.apply_damage(damage_applied, BURN)
+		//Mob.KnockDown(5)  /// REMOVETHIS REMOVETHIS
+		if(mob_range < 1)
+			Mob.KnockDown(2)
+			Mob.Superslow(3)
+			Mob.eye_blurry = damage_applied/4
+		else
+			Mob.Slow(damage_applied/mob_range)
+			to_chat_immediate(world,SPAN_ALERT(damage_applied/mob_range))
+			to_chat(Mob,SPAN_HIGHDANGER("Your entire body seizes up as a powerful shock courses through it!"))
+
+	qdel(src)
+
+
+/obj/item/explosive/grenade/sebb/primed
+	name = "\improper G2 Electroshock grenade"
+	desc = "A G2 Electroshock Grenade, looks like its quite angry! Oh shit!"
+	icon_state = "grenade_sebb_active"
+	det_time = 10
+
+/obj/item/explosive/grenade/sebb/primed/New()
+	activate()
+
+/obj/effect/overlay/sebb
+	name = "Danger"
+	icon = 'icons/effects/sebb.dmi'
+	icon_state = "sebb_explode" // testing
+	layer = ABOVE_LIGHTING_PLANE
+	var/time_to_live = 1 SECONDS
+	pixel_x = -175
+	pixel_y = -175
+	appearance_flags = RESET_COLOR
+
+
+
+/obj/effect/overlay/sebb/New()
+	addtimer(CALLBACK(GLOBAL_PROC,.proc/qdel,src),time_to_live)
+
+/obj/item/explosive/grenade/sebb/proc/unique_action(mob/user)
+	var/mob/living/carbon/human/Human = user
+	user.visible_message(SPAN_NOTICE("\The [user] starts preparing the [src]'s mine mode"), \
+	SPAN_NOTICE("You preparing \the [src] to be deployed as a mine."), null, 5)
+	if(!do_after(Human, 5 SECONDS, INTERRUPT_INCAPACITATED & INTERRUPT_NEEDHAND, BUSY_ICON_HOSTILE))
+		return
+	new /obj/item/explosive/mine/sebb(src)
+	user.visible_message(SPAN_NOTICE("[user] plants \the [src] into the ground!"), \
+	SPAN_NOTICE("You plant \the [src] into the ground as a mine."), null, 5)
+	qdel(src)
+	return
+
 // abstract grenades used for hijack explosions
 
 /obj/item/explosive/grenade/high_explosive/bursting_pipe
