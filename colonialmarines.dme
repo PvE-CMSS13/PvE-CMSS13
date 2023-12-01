@@ -2017,6 +2017,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\base_define.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\crusher.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\drone.dm"
+#include "code\modules\mob\living\carbon\xenomorph\ai\movement\facehugger.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\linger.dm"
 #include "code\modules\mob\living\carbon\xenomorph\ai\movement\lurking.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Boiler.dm"

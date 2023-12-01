@@ -17,3 +17,5 @@
 	freeze_time = 5
 	freeze_play_sound = FALSE
 	can_be_shield_blocked = TRUE
+
+	ai_prob_chance = 45

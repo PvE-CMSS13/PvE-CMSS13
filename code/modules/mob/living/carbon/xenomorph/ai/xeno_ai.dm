@@ -242,6 +242,7 @@
 	var/list/viable_targets = list()
 	var/atom/movable/closest_target
 	var/smallest_distance = INFINITY
+
 	for(var/mob/living/carbon/human/potential_alive_human_target as anything in GLOB.alive_human_list)
 		if(z != potential_alive_human_target.z)
 			continue

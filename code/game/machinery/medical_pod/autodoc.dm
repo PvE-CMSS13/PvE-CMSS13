@@ -500,6 +500,11 @@
 									S.limb_ref.implants -= I
 									H.embedded_items -= I
 									qdel(I)
+						var/obj/item/larva_ref = locate(/obj/item/alien_embryo) in H.contents
+						if(S.limb_ref.name == "chest" && larva_ref)
+							sleep(REMOVE_OBJECT_MAX_DURATION*surgery_mod)
+							H.contents -= larva_ref
+						qdel(larva_ref)
 						if(S.limb_ref.name == "chest" || S.limb_ref.name == "head")
 							close_encased(H,S.limb_ref)
 						if(!surgery) break

@@ -7,7 +7,7 @@
 	melee_damage_upper = 5
 	max_health = XENO_HEALTH_LARVA
 	caste_desc = "Ewwww, that's disgusting!"
-	speed = XENO_SPEED_TIER_8
+	speed = XENO_SPEED_TIER_10
 
 	evolution_allowed = FALSE
 	can_be_revived = FALSE
@@ -24,7 +24,7 @@
 	pixel_y = -6
 	old_x = -8
 	old_y = -6
-	layer = MOB_LAYER
+	layer = XENO_HIDING_LAYER
 	mob_flags = NOBIOSCAN
 	see_in_dark = 8
 	tier = 0  //Facehuggers don't count towards Pop limits
@@ -55,9 +55,14 @@
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 	mutation_type = "Normal"
+	claw_type = 0 // No claws at all
 
 	icon_xeno = 'icons/mob/xenos/facehugger.dmi'
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
+
+	ai_range = 24
+	var/linger_range = 8
+	var/linger_deviation = 1
 
 /mob/living/carbon/xenomorph/facehugger/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -78,6 +83,12 @@
 		new /obj/item/clothing/mask/facehugger(loc, hivenumber)
 		qdel(src)
 	return ..()
+
+/mob/living/carbon/xenomorph/facehugger/init_movement_handler()
+	var/datum/xeno_ai_movement/linger/facehugger/facehugger_movement = new(src)
+	facehugger_movement.linger_range = linger_range
+	facehugger_movement.linger_deviation = linger_deviation
+	return facehugger_movement
 
 /mob/living/carbon/xenomorph/facehugger/update_icons(is_pouncing)
 	if(!caste)
