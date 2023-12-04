@@ -201,6 +201,7 @@
 //ALWAYS CALL THIS WHEN ATTACHING HARDPOINTS
 /obj/vehicle/multitile/proc/add_hardpoint(obj/item/hardpoint/HP, mob/user)
 	HP.owner = src
+	set_muzzle_offsets(HP)
 	HP.forceMove(src)
 	hardpoints += HP
 
@@ -208,6 +209,9 @@
 	HP.rotate(turning_angle(HP.dir, dir))
 
 	update_icon()
+
+/obj/vehicle/multitile/proc/set_muzzle_offsets(obj/item/hardpoint/HP)
+	return
 
 //General proc for taking off hardpoints
 //ALWAYS CALL THIS WHEN REMOVING HARDPOINTS

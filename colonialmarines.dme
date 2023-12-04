@@ -2382,6 +2382,7 @@
 #include "code\modules\vehicles\apc\apc.dm"
 #include "code\modules\vehicles\apc\apc_command.dm"
 #include "code\modules\vehicles\apc\apc_medical.dm"
+#include "code\modules\vehicles\apc\apc_movie.dm"
 #include "code\modules\vehicles\apc\interior.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint.dm"
 #include "code\modules\vehicles\hardpoints\armor\armor.dm"
