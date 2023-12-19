@@ -411,6 +411,14 @@ var/global/list/activated_medevac_stretchers = list()
 	buckling_y = 0
 	foldabletype = /obj/item/roller/bedroll
 	accepts_bodybag = FALSE
+	buckling_sound = "rustle"
+
+/obj/structure/bed/bedroll/clicked(mob/user, list/mods)
+	if(mods["alt"] && !buckled_mob)
+		buckle_lying = !buckle_lying
+		to_chat(user, SPAN_NOTICE("You tuck [src] for comfortable [buckle_lying ? "lying" : "sitting"]."))
+		return TRUE
+	return ..()
 
 /obj/item/roller/bedroll
 	name = "folded bedroll"
