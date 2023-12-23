@@ -115,3 +115,21 @@
 
 /datum/map_template/shuttle/trijent_elevator/B
 	elevator_network = "B"
+
+/datum/map_template/shuttle/trijent_elevator/ice_elevator
+	name = "Classic Ice Elevator"
+	shuttle_id = "ice_classic_shuttle"
+
+/datum/map_template/shuttle/trijent_elevator/ice_elevator/lab
+	elevator_network = "lab"
+
+/datum/map_template/shuttle/trijent_elevator/ice_elevator/dorm
+	elevator_network = "dorm"
+
+/datum/map_template/shuttle/trijent_elevator/ice_elevator/arrivals
+	elevator_network = "Arrivals"
+/datum/map_template/shuttle/trijent_elevator/ice_elevator/omicorn
+	elevator_network = "Omicorn"
+
+/datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
+	elevator_network = "Requisitions"

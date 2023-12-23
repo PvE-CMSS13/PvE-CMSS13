@@ -366,22 +366,36 @@
 	},
 /area/ice_colony/exterior/surface/valley/north)
 "aby" = (
-/turf/closed/shuttle/elevator{
-	dir = 9
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "abz" = (
-/turf/closed/shuttle/elevator/gears,
-/area/shuttle/elevator4/ground)
-"abA" = (
-/turf/closed/shuttle/elevator/button/freight,
-/area/shuttle/elevator4/ground)
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Lower_Requisitions";
+	name = "Lower Requisitions";
+	airlock_exit = "elevator";
+	elevator_network = "Requisitions";
+	airlock_area = /area/shuttle/elevator4/underground
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
 "abB" = (
-/turf/closed/shuttle/elevator/freight,
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator4/ground)
 "abC" = (
-/turf/closed/shuttle/elevator{
-	dir = 5
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "abD" = (
@@ -457,23 +471,18 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/northwest)
 "abT" = (
-/turf/closed/shuttle/elevator,
-/area/shuttle/elevator4/ground)
-"abU" = (
-/turf/open/shuttle/elevator,
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator4/ground)
 "abV" = (
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator4/ground)
-"abW" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator4{
-	pixel_y = 30
-	},
-/turf/open/shuttle/elevator/grating,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator4/ground)
 "abX" = (
-/turf/closed/shuttle/elevator{
-	dir = 1
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "abY" = (
@@ -554,27 +563,30 @@
 	},
 /area/ice_colony/exterior/surface/cliff)
 "aco" = (
-/turf/closed/shuttle/elevator{
-	dir = 10
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Upper_Requisitions";
+	name = "Upper Requisitions";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions;
+	airlock_exit = "elevator";
+	elevator_network = "Requisitions";
+	airlock_area = /area/shuttle/elevator4/ground
 	},
-/area/shuttle/elevator4/ground)
-"acp" = (
-/turf/closed/shuttle/elevator{
-	dir = 8
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "acq" = (
-/obj/structure/machinery/door/airlock/multi_tile/elevator/freight,
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator4/ground)
-"acr" = (
-/turf/closed/shuttle/elevator{
-	dir = 4
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "acs" = (
-/turf/closed/shuttle/elevator{
-	dir = 6
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator4/ground)
 "act" = (
@@ -779,8 +791,10 @@
 /area/ice_colony/surface/requesitions)
 "ada" = (
 /obj/item/lightstick/planted,
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator4{
-	pixel_y = 30
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle";
+	dockId = "Upper_Requisitions";
+	pixel_y = 32
 	},
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/surface/requesitions)
@@ -4710,22 +4724,33 @@
 	},
 /area/ice_colony/surface/dorms/restroom_w)
 "anS" = (
-/turf/closed/shuttle/elevator{
-	dir = 9
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "anT" = (
-/turf/closed/shuttle/elevator/gears,
-/area/shuttle/elevator2/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator2/underground)
 "anU" = (
-/turf/closed/shuttle/elevator/button/dorm,
-/area/shuttle/elevator2/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "anV" = (
-/turf/closed/shuttle/elevator/dorm,
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator2/ground)
 "anW" = (
-/turf/closed/shuttle/elevator{
-	dir = 5
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "anX" = (
@@ -4847,23 +4872,30 @@
 	},
 /area/ice_colony/surface/hydroponics/north)
 "aom" = (
-/turf/closed/shuttle/elevator,
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator2/ground)
 "aon" = (
-/turf/open/shuttle/elevator,
-/area/shuttle/elevator2/ground)
-"aoo" = (
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator2/ground)
-"aop" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator2{
-	pixel_y = 30
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
 	},
-/turf/open/shuttle/elevator/grating,
+/area/shuttle/elevator2/underground)
+"aoo" = (
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
+"aop" = (
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator2/ground)
 "aoq" = (
-/turf/closed/shuttle/elevator{
-	dir = 1
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "aor" = (
@@ -5057,7 +5089,7 @@
 /area/ice_colony/surface/clinic/treatment)
 "aoV" = (
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aoW" = (
@@ -5065,7 +5097,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aoX" = (
@@ -5076,7 +5108,7 @@
 	name = "\improper Aurora Medical Clinic Recovery Room"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aoY" = (
@@ -5084,7 +5116,7 @@
 	dir = 1
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aoZ" = (
@@ -5092,7 +5124,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "apa" = (
@@ -5103,7 +5135,7 @@
 	name = "\improper Aurora Medical Clinic Scanning Unit"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "apb" = (
@@ -5111,13 +5143,13 @@
 	dir = 8
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "apc" = (
 /obj/effect/landmark/hunter_primary,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "apd" = (
@@ -5223,27 +5255,41 @@
 /turf/open/floor,
 /area/ice_colony/surface/mining)
 "apt" = (
-/turf/closed/shuttle/elevator{
-	dir = 10
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Upper_Dorms";
+	name = "Upper Dorms";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/dorm;
+	airlock_exit = "elevator";
+	elevator_network = "dorm";
+	airlock_area = /area/shuttle/elevator2/ground
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "apu" = (
-/turf/closed/shuttle/elevator{
-	dir = 8
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
 	},
-/area/shuttle/elevator2/ground)
+/area/shuttle/elevator3/underground)
 "apv" = (
-/obj/structure/machinery/door/airlock/multi_tile/elevator/dormatory,
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator2/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "apw" = (
-/turf/closed/shuttle/elevator{
-	dir = 4
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "apx" = (
-/turf/closed/shuttle/elevator{
-	dir = 6
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator2/ground)
 "apy" = (
@@ -5463,8 +5509,10 @@
 	},
 /area/ice_colony/surface/dorms)
 "aqb" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator2{
-	pixel_y = 30
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle3";
+	dockId = "Upper_Dorms";
+	pixel_y = 32
 	},
 /turf/open/floor{
 	dir = 1;
@@ -5527,7 +5575,7 @@
 "aqi" = (
 /obj/structure/curtain/medical,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aqj" = (
@@ -5539,7 +5587,7 @@
 	dir = 8
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aql" = (
@@ -5560,7 +5608,7 @@
 	name = "\improper Aurora Medical Clinic Storage"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/storage)
 "aqn" = (
@@ -5568,7 +5616,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/storage)
 "aqo" = (
@@ -5576,7 +5624,7 @@
 	dir = 8
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/storage)
 "aqp" = (
@@ -5590,7 +5638,7 @@
 /area/ice_colony/exterior/surface/clearing/pass)
 "aqq" = (
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/storage)
 "aqr" = (
@@ -5691,7 +5739,7 @@
 	icon_state = "gib6"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aqD" = (
@@ -5700,20 +5748,20 @@
 	icon_state = "gib6"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aqE" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpsespawner/scientist,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aqF" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "aqG" = (
@@ -5925,7 +5973,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "arc" = (
@@ -6106,7 +6154,7 @@
 "arz" = (
 /obj/structure/curtain/open/medical,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/treatment)
 "arA" = (
@@ -6351,7 +6399,7 @@
 	name = "\improper Aurora Medical Clinic Storage"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/storage)
 "asm" = (
@@ -6507,7 +6555,7 @@
 /area/ice_colony/surface/clinic/lobby)
 "asJ" = (
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "asK" = (
@@ -6603,13 +6651,13 @@
 "asX" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "asY" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "asZ" = (
@@ -6632,7 +6680,7 @@
 	layer = 3
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "atc" = (
@@ -6788,7 +6836,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "aty" = (
@@ -6810,7 +6858,7 @@
 "atA" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "atB" = (
@@ -6855,7 +6903,7 @@
 	dir = 8
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "atF" = (
@@ -6988,7 +7036,7 @@
 	dir = 4
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "aua" = (
@@ -7015,7 +7063,7 @@
 	icon_state = "pipe-j2"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "aud" = (
@@ -7162,7 +7210,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor{
-	icon_state = "cafeteria"
+	icon_state = "white"
 	},
 /area/ice_colony/surface/clinic/lobby)
 "auz" = (
@@ -7395,6 +7443,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/machinery/sensortower,
 /turf/open/floor{
 	icon_state = "darkgreencorners2"
 	},
@@ -12477,22 +12526,32 @@
 	},
 /area/ice_colony/surface/storage_unit/telecomms)
 "aJq" = (
-/turf/closed/shuttle/elevator{
-	dir = 9
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator1/ground)
 "aJr" = (
-/turf/closed/shuttle/elevator/gears,
-/area/shuttle/elevator1/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
 "aJs" = (
-/turf/closed/shuttle/elevator/button/arrivals,
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator1/ground)
 "aJt" = (
-/turf/closed/shuttle/elevator/arrivals,
-/area/shuttle/elevator1/ground)
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
 "aJu" = (
-/turf/closed/shuttle/elevator{
-	dir = 5
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator1/ground)
 "aJx" = (
@@ -12508,23 +12567,39 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/southwest)
 "aJz" = (
-/turf/closed/shuttle/elevator,
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator1/ground)
 "aJA" = (
-/turf/open/shuttle/elevator,
-/area/shuttle/elevator1/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "aJB" = (
-/turf/open/shuttle/elevator/grating,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator1/ground)
 "aJC" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator1{
-	pixel_y = 30
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Lower_Arrivals";
+	name = "Lower Arrivals";
+	airlock_exit = "elevator";
+	elevator_network = "Arrivals";
+	airlock_area = /area/shuttle/elevator1/underground
 	},
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator1/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "aJD" = (
-/turf/closed/shuttle/elevator{
-	dir = 1
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator1/ground)
 "aJE" = (
@@ -12592,27 +12667,42 @@
 /turf/open/ice,
 /area/ice_colony/exterior/surface/valley/southwest)
 "aJY" = (
-/turf/closed/shuttle/elevator{
-	dir = 10
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Upper_Arrivals";
+	name = "Upper Arrivals";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/arrivals;
+	airlock_exit = "elevator";
+	elevator_network = "Arrivals";
+	airlock_area = /area/shuttle/elevator1/ground
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator1/ground)
 "aJZ" = (
-/turf/closed/shuttle/elevator{
-	dir = 8
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground)
+/area/shuttle/elevator1/underground)
 "aKa" = (
-/obj/structure/machinery/door/airlock/multi_tile/elevator/arrivals,
-/turf/open/shuttle/elevator/grating,
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator1/ground)
 "aKb" = (
-/turf/closed/shuttle/elevator{
-	dir = 4
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground)
+/area/shuttle/elevator2/underground)
 "aKc" = (
-/turf/closed/shuttle/elevator{
-	dir = 6
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator1/ground)
 "aKd" = (
@@ -12763,8 +12853,10 @@
 	},
 /area/ice_colony/surface/hangar/checkpoint)
 "aKN" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator1{
-	pixel_y = 30
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle4";
+	dockId = "Upper_Arrivals";
+	pixel_y = 32
 	},
 /turf/open/floor{
 	icon_state = "dark2"
@@ -13301,22 +13393,32 @@
 	},
 /area/ice_colony/surface/disposals)
 "aMy" = (
-/turf/closed/shuttle/elevator{
-	dir = 9
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aMz" = (
-/turf/closed/shuttle/elevator/gears,
-/area/shuttle/elevator3/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator2/underground)
 "aMA" = (
-/turf/closed/shuttle/elevator/button/research,
-/area/shuttle/elevator3/ground)
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "aMB" = (
-/turf/closed/shuttle/elevator/research,
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator3/ground)
 "aMC" = (
-/turf/closed/shuttle/elevator{
-	dir = 5
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aMD" = (
@@ -13456,24 +13558,29 @@
 	},
 /area/ice_colony/surface/research/field_gear)
 "aNd" = (
-/turf/closed/shuttle/elevator,
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
 /area/shuttle/elevator3/ground)
 "aNe" = (
-/turf/open/shuttle/elevator,
-/area/shuttle/elevator3/ground)
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator2/underground)
 "aNf" = (
-/turf/open/shuttle/elevator/grating,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator3/ground)
 "aNg" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator3{
-	dir = 1;
-	pixel_y = 30
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
 	},
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator3/ground)
+/area/shuttle/elevator2/underground)
 "aNh" = (
-/turf/closed/shuttle/elevator{
-	dir = 1
+/turf/open/floor/plating/icefloor{
+	dir = 4;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aNi" = (
@@ -14136,27 +14243,42 @@
 	},
 /area/ice_colony/surface/research)
 "aPg" = (
-/turf/closed/shuttle/elevator{
-	dir = 10
+/obj/docking_port/stationary/trijent_elevator{
+	airlock_area = /area/shuttle/elevator3/ground;
+	airlock_exit = "elevator";
+	elevator_network = "Omicorn";
+	height = 5;
+	width = 8;
+	name = "Upper Omicorn";
+	id = "Upper_Omicorn";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/omicorn
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aPh" = (
-/turf/closed/shuttle/elevator{
-	dir = 8
+/turf/open/floor/plating/icefloor{
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aPi" = (
-/obj/structure/machinery/door/airlock/multi_tile/elevator/research,
-/turf/open/shuttle/elevator/grating,
-/area/shuttle/elevator3/ground)
-"aPj" = (
-/turf/closed/shuttle/elevator{
-	dir = 4
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
 	},
-/area/shuttle/elevator3/ground)
+/area/shuttle/elevator4/underground)
+"aPj" = (
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "aPk" = (
-/turf/closed/shuttle/elevator{
-	dir = 6
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
 	},
 /area/shuttle/elevator3/ground)
 "aPl" = (
@@ -14815,10 +14937,6 @@
 "aRb" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
-	},
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator3{
-	dir = 1;
-	pixel_y = 30
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -18092,7 +18210,7 @@
 	},
 /area/ice_colony/exterior/surface/landing_pad)
 "bbn" = (
-/turf/open/gm/empty,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator4/underground)
 "bbo" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
@@ -18692,8 +18810,10 @@
 	},
 /area/ice_colony/underground/requesition)
 "bdN" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator4{
-	pixel_y = 30
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle";
+	dockId = "Lower_Requisitions";
+	pixel_y = 32
 	},
 /turf/open/floor{
 	dir = 1;
@@ -20918,7 +21038,7 @@
 	},
 /area/ice_colony/underground/crew/chapel)
 "blo" = (
-/turf/open/gm/empty,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator2/underground)
 "blp" = (
 /obj/structure/machinery/light/small{
@@ -21919,7 +22039,9 @@
 	},
 /area/ice_colony/underground/hallway/north_west)
 "bom" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator2{
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle3";
+	dockId = "Lower_Dorms";
 	pixel_y = 32
 	},
 /turf/open/floor{
@@ -23391,7 +23513,6 @@
 /area/ice_colony/underground/engineering)
 "bsL" = (
 /obj/structure/filingcabinet,
-/obj/structure/closet/toolcloset,
 /turf/open/floor{
 	icon_state = "darkyellow2"
 	},
@@ -24893,14 +25014,6 @@
 	icon_state = "white"
 	},
 /area/ice_colony/underground/medical/treatment)
-"bwQ" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/ice_colony/underground/medical/treatment)
 "bwR" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor{
@@ -25469,7 +25582,7 @@
 /turf/open/floor/plating,
 /area/ice_colony/underground/maintenance/engineering)
 "byM" = (
-/turf/open/gm/empty,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator3/underground)
 "byO" = (
 /turf/closed/ice/end{
@@ -26503,15 +26616,11 @@
 	},
 /area/ice_colony/underground/research)
 "bBG" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator3{
-	dir = 1;
-	pixel_y = 30
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
 	},
-/turf/open/floor{
-	dir = 1;
-	icon_state = "darkpurple2"
-	},
-/area/ice_colony/underground/research)
+/area/shuttle/elevator4/underground)
 "bBH" = (
 /obj/structure/machinery/power/apc{
 	dir = 1;
@@ -32812,7 +32921,7 @@
 /turf/open/floor/wood,
 /area/ice_colony/underground/reception)
 "bTv" = (
-/turf/open/gm/empty,
+/turf/open/floor/plating/icefloor,
 /area/shuttle/elevator1/underground)
 "bTx" = (
 /obj/structure/flora/pottedplant,
@@ -33063,7 +33172,9 @@
 	},
 /area/ice_colony/underground/hallway/south_east)
 "bUm" = (
-/obj/structure/machinery/computer/shuttle_control/ice_colony/elevator1{
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle4";
+	dockId = "Lower_Arrivals";
 	pixel_y = 32
 	},
 /turf/open/floor{
@@ -34498,6 +34609,12 @@
 /obj/docking_port/stationary/marine_dropship/lz2,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/hangar)
+"cFF" = (
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator2/underground)
 "cVM" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -34510,6 +34627,12 @@
 	icon_state = "darkyellow2"
 	},
 /area/ice_colony/surface/tcomms)
+"dxa" = (
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "dxl" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -34589,6 +34712,12 @@
 	icon_state = "dark2"
 	},
 /area/ice_colony/surface/hangar/alpha)
+"gdd" = (
+/obj/effect/landmark/static_comms/net_one,
+/turf/open/floor{
+	icon_state = "dark2"
+	},
+/area/ice_colony/surface/disposals)
 "giH" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor{
@@ -34677,6 +34806,12 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/valley/south)
+"jjD" = (
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
 "jtr" = (
 /turf/closed/wall,
 /area/ice_colony/exterior/surface/cliff)
@@ -34684,6 +34819,13 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/closed/wall/r_wall,
 /area/ice_colony/underground/crew/leisure)
+"jAR" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	dockId = "Upper_Omicorn";
+	shuttleId = "ice_classic_shuttle2"
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/ice_colony/surface/research)
 "jCk" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -34712,6 +34854,12 @@
 	icon_state = "warnplate"
 	},
 /area/ice_colony/surface/tcomms)
+"kjt" = (
+/turf/open/floor/plating/icefloor{
+	dir = 5;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "kKZ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/disposalpipe/segment,
@@ -34743,6 +34891,12 @@
 	icon_state = "darkbrown2"
 	},
 /area/ice_colony/surface/hangar/beta)
+"lIV" = (
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "lJQ" = (
 /turf/open/auto_turf/snow/layer4,
 /area/ice_colony/exterior/surface/valley/south)
@@ -34770,6 +34924,12 @@
 	icon_state = "darkbrown2"
 	},
 /area/ice_colony/surface/hangar/beta)
+"mXA" = (
+/turf/open/floor/plating/icefloor{
+	dir = 1;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "neZ" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
 	name = "\improper Colony Dormitories"
@@ -34786,6 +34946,21 @@
 	icon_state = "darkpurple2"
 	},
 /area/ice_colony/underground/research/storage)
+"oqw" = (
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Lower_Dorms";
+	name = "Lower Dorms";
+	airlock_exit = "elevator";
+	elevator_network = "dorm";
+	airlock_area = /area/shuttle/elevator2/underground
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator2/underground)
 "osF" = (
 /turf/open/auto_turf/snow/layer4,
 /area/ice_colony/exterior/surface/valley/north)
@@ -34892,6 +35067,13 @@
 	icon_state = "darkbrown2"
 	},
 /area/ice_colony/surface/hangar/alpha)
+"rNn" = (
+/obj/effect/landmark/static_comms/net_two,
+/turf/open/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/ice_colony/underground/requesition/sec_storage)
 "rNB" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -34904,7 +35086,7 @@
 /area/ice_colony/surface/hangar/alpha)
 "sto" = (
 /obj/docking_port/stationary/marine_dropship/lz1{
-	name = "Hangar Landing Zone"
+	name = "LZ1: Hangar Landing Zone"
 	},
 /turf/open/floor/plating,
 /area/ice_colony/exterior/surface/landing_pad)
@@ -34956,6 +35138,12 @@
 /obj/structure/bed/chair,
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/hangar)
+"tDi" = (
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "tEG" = (
 /obj/effect/landmark/xeno_hive_spawn,
 /obj/effect/landmark/ert_spawns/groundside_xeno,
@@ -34980,6 +35168,13 @@
 	icon_state = "dark2"
 	},
 /area/ice_colony/surface/hydroponics/south)
+"uiF" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	dockId = "Lower_Omicorn";
+	shuttleId = "ice_classic_shuttle2"
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/ice_colony/underground/research)
 "umI" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
 	name = "\improper Colony Dormitories"
@@ -35036,6 +35231,12 @@
 	},
 /turf/open/floor/plating/icefloor,
 /area/ice_colony/underground/hangar)
+"vpe" = (
+/turf/open/floor/plating/icefloor{
+	dir = 9;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator4/underground)
 "vtU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -35046,6 +35247,12 @@
 	icon_state = "darkbrown2"
 	},
 /area/ice_colony/surface/hangar/alpha)
+"vQI" = (
+/turf/open/floor/plating/icefloor{
+	dir = 8;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "waD" = (
 /obj/structure/surface/table,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
@@ -35094,11 +35301,32 @@
 	icon_state = "darkyellow2"
 	},
 /area/ice_colony/surface/tcomms)
+"xGL" = (
+/turf/open/floor/plating/icefloor{
+	dir = 6;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator1/underground)
 "xWm" = (
 /obj/effect/landmark/xeno_hive_spawn,
 /obj/effect/landmark/ert_spawns/groundside_xeno,
 /turf/open/ice,
 /area/ice_colony/exterior/surface/landing_pad_external)
+"xYW" = (
+/obj/docking_port/stationary/trijent_elevator{
+	airlock_area = /area/shuttle/elevator3/underground;
+	airlock_exit = "elevator";
+	elevator_network = "Omicorn";
+	height = 5;
+	width = 8;
+	name = "Lower Omicorn";
+	id = "Lower_Omicorn"
+	},
+/turf/open/floor/plating/icefloor{
+	dir = 10;
+	icon_state = "warnplate"
+	},
+/area/shuttle/elevator3/underground)
 "ygw" = (
 /obj/structure/surface/table,
 /obj/item/device/encryptionkey,
@@ -38978,11 +39206,11 @@ bkJ
 blc
 blc
 byv
-byM
-byM
-byM
-byM
-byM
+tDi
+vQI
+vQI
+vQI
+xYW
 byv
 bBC
 bls
@@ -39260,11 +39488,11 @@ bkJ
 blc
 blc
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
+apu
 bBa
 bBf
 bCj
@@ -39542,11 +39770,11 @@ blc
 blc
 blc
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
+apu
 bBb
 bBD
 bCk
@@ -39824,11 +40052,11 @@ bxa
 blc
 blc
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
+apu
 bBc
 bBE
 bCk
@@ -40106,11 +40334,11 @@ bls
 blc
 ble
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
+apu
 bBc
 bBE
 bCl
@@ -40388,11 +40616,11 @@ bls
 blc
 ble
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
+apu
 bBd
 bBF
 bCm
@@ -40670,13 +40898,13 @@ bls
 blc
 blc
 byv
+aJA
 byM
 byM
 byM
-byM
-byM
-bBa
-bBG
+apu
+uiF
+bBc
 bBE
 bCM
 bCM
@@ -40952,11 +41180,11 @@ bls
 blc
 ble
 byv
-byM
-byM
-byM
-byM
-byM
+aPj
+apv
+apv
+apv
+dxa
 bBa
 bBH
 bCm
@@ -41049,11 +41277,11 @@ aac
 aac
 aae
 abl
-abz
-abU
+abB
 abV
-abU
-acp
+abV
+abV
+acq
 abl
 acV
 acg
@@ -41331,7 +41559,7 @@ aac
 aac
 aae
 abl
-abz
+abB
 abV
 abV
 abV
@@ -41613,11 +41841,11 @@ aac
 aac
 aae
 abl
-abA
-abW
-abU
+abB
 abV
 abV
+abV
+acq
 abE
 acX
 acg
@@ -41897,9 +42125,9 @@ aae
 abl
 abB
 abV
-abU
 abV
 abV
+acq
 abE
 acY
 ado
@@ -42177,11 +42405,11 @@ aac
 aac
 aae
 abl
-abz
+abB
 abV
 abV
 abV
-abV
+acq
 acG
 acZ
 acg
@@ -42459,11 +42687,11 @@ aac
 aac
 aae
 abl
-abz
-abU
+abB
 abV
-abU
-acr
+abV
+abV
+acq
 abl
 ada
 acg
@@ -44868,7 +45096,7 @@ bik
 biz
 biS
 bjn
-bjl
+rNn
 bjn
 bjl
 bjl
@@ -45126,11 +45354,11 @@ aZF
 aZF
 aZF
 bba
-bbn
-bbn
-bbn
-bbn
-bbn
+vpe
+aPi
+aPi
+aPi
+abz
 bdc
 bdb
 bdb
@@ -45408,11 +45636,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bba
 bdJ
 beu
@@ -45690,11 +45918,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bdd
 bdK
 bdL
@@ -45972,11 +46200,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bde
 bdL
 bdL
@@ -46254,11 +46482,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bde
 bdL
 bdL
@@ -46536,11 +46764,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bdf
 bdM
 bev
@@ -46818,11 +47046,11 @@ aZF
 aZF
 aZF
 bba
+aJr
 bbn
 bbn
 bbn
-bbn
-bbn
+aJt
 bba
 bdN
 bfn
@@ -47100,11 +47328,11 @@ aZF
 aZF
 aZF
 bba
-bbn
-bbn
-bbn
-bbn
-bbn
+bBG
+aoo
+aoo
+aoo
+jjD
 bba
 bde
 bfo
@@ -51858,10 +52086,10 @@ asi
 asi
 asi
 aLL
-aMz
-aNe
+aMB
 aNf
-aNe
+aNf
+aNf
 aPh
 aLM
 aQX
@@ -52140,11 +52368,11 @@ aJN
 asi
 asi
 aLL
-aMz
+aMB
 aNf
 aNf
 aNf
-aPi
+aPh
 aQg
 aQY
 aRO
@@ -52422,11 +52650,11 @@ aaC
 uBE
 asi
 aLL
-aMA
-aNg
-aNe
+aMB
 aNf
 aNf
+aNf
+aPh
 aQh
 aQY
 aRO
@@ -52706,9 +52934,9 @@ uBE
 aLM
 aMB
 aNf
-aNe
 aNf
 aNf
+aPh
 aQi
 aQZ
 aRP
@@ -52986,11 +53214,11 @@ aae
 arM
 asi
 aLM
-aMz
+aMB
 aNf
 aNf
 aNf
-aNf
+aPh
 aQi
 aRa
 aRQ
@@ -53268,12 +53496,12 @@ aae
 ats
 asi
 aLM
-aMz
-aNe
+aMB
 aNf
-aNe
-aPj
-aLM
+aNf
+aNf
+aPh
+jAR
 aRb
 aRR
 aSI
@@ -54483,7 +54711,7 @@ bqZ
 bqZ
 bqZ
 bwt
-bwQ
+bwS
 bxt
 bxQ
 bqZ
@@ -55590,11 +55818,11 @@ bgH
 bgH
 bgH
 bkW
-blo
-blo
-blo
-blo
-blo
+anT
+aon
+aon
+aon
+oqw
 bkW
 boj
 bkr
@@ -55872,11 +56100,11 @@ bkj
 bgH
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bkW
 bok
 boF
@@ -56154,11 +56382,11 @@ bjA
 bgH
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bny
 bol
 bkr
@@ -56436,11 +56664,11 @@ bjA
 bgH
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bnz
 bkr
 bkr
@@ -56718,11 +56946,11 @@ bjA
 bku
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bnz
 bkr
 bkr
@@ -57000,11 +57228,11 @@ bjA
 bhD
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bkO
 bkN
 bkr
@@ -57282,11 +57510,11 @@ bjA
 bgH
 bgH
 bkW
+aNe
 blo
 blo
 blo
-blo
-blo
+aNg
 bkW
 bom
 bkr
@@ -57564,11 +57792,11 @@ bjA
 bgH
 bgH
 bkW
-blo
-blo
-blo
-blo
-blo
+aMz
+aKb
+aKb
+aKb
+cFF
 bkW
 bon
 bkr
@@ -65332,11 +65560,11 @@ akC
 akC
 akC
 ann
-anT
-aon
-aoo
-aon
-apu
+anV
+aop
+aop
+aop
+apw
 ano
 apX
 apZ
@@ -65614,11 +65842,11 @@ abL
 abL
 abL
 ano
-anT
-aoo
-aoo
-aoo
-apv
+anV
+aop
+aop
+aop
+apw
 apB
 apY
 apZ
@@ -65896,11 +66124,11 @@ abL
 hrN
 hrN
 ano
-anU
+anV
 aop
-aon
-aoo
-aoo
+aop
+aop
+apw
 apC
 apZ
 aqx
@@ -66179,10 +66407,10 @@ abL
 hrN
 ano
 anV
-aoo
-aon
-aoo
-aoo
+aop
+aop
+aop
+apw
 apC
 apZ
 apZ
@@ -66460,11 +66688,11 @@ hrN
 hrN
 abL
 ano
-anT
-aoo
-aoo
-aoo
-aoo
+anV
+aop
+aop
+aop
+apw
 apD
 aqa
 apZ
@@ -66742,10 +66970,10 @@ akD
 akD
 akD
 anp
-anT
-aon
-aoo
-aon
+anV
+aop
+aop
+aop
 apw
 ano
 aqb
@@ -67217,11 +67445,11 @@ bOV
 bEe
 bSZ
 bTl
-bTv
-bTv
-bTv
-bTv
-bTv
+lIV
+anU
+anU
+anU
+aJC
 bTl
 bUj
 brn
@@ -67499,11 +67727,11 @@ bOV
 bEe
 bTa
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bTl
 bUk
 bEL
@@ -67781,11 +68009,11 @@ bOV
 bEe
 bCI
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bUc
 bUl
 bpu
@@ -68063,11 +68291,11 @@ bOV
 bEe
 bCI
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bpc
 bpu
 bpu
@@ -68345,11 +68573,11 @@ bOV
 bEe
 bCI
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bpc
 bpu
 bpu
@@ -68627,11 +68855,11 @@ bOV
 bEe
 bCI
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bTo
 bTJ
 bpu
@@ -68909,11 +69137,11 @@ bOX
 bEe
 bCI
 bTl
+mXA
 bTv
 bTv
 bTv
-bTv
-bTv
+aMA
 bTl
 bUm
 bUr
@@ -69191,11 +69419,11 @@ bOX
 bEe
 bCI
 bTl
-bTv
-bTv
-bTv
-bTv
-bTv
+kjt
+aJZ
+aJZ
+aJZ
+xGL
 bTl
 bTM
 buW
@@ -80330,11 +80558,11 @@ aGC
 aaS
 acm
 aJl
-aJr
-aJA
+aJs
 aJB
-aJA
-aJZ
+aJB
+aJB
+aKa
 aJl
 aKh
 aLo
@@ -80612,7 +80840,7 @@ aGD
 aaQ
 acm
 aJl
-aJr
+aJs
 aJB
 aJB
 aJB
@@ -80895,10 +81123,10 @@ aaQ
 acm
 aJl
 aJs
-aJC
-aJA
 aJB
 aJB
+aJB
+aKa
 aKj
 aKj
 aLq
@@ -81176,11 +81404,11 @@ aoG
 aaQ
 acm
 aJl
-aJt
-aJB
-aJA
+aJs
 aJB
 aJB
+aJB
+aKa
 aKj
 aKj
 aLr
@@ -81458,11 +81686,11 @@ aoG
 abc
 acm
 aJl
-aJr
+aJs
 aJB
 aJB
 aJB
-aJB
+aKa
 aKj
 aKj
 aLr
@@ -81740,11 +81968,11 @@ aoG
 aoG
 acm
 aJl
-aJr
-aJA
+aJs
 aJB
-aJA
-aKb
+aJB
+aJB
+aKa
 aJl
 aKN
 aLr
@@ -90741,7 +90969,7 @@ axy
 ayn
 ayU
 azs
-azs
+gdd
 aAo
 awP
 awL
