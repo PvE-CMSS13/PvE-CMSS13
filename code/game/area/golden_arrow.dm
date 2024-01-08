@@ -65,3 +65,7 @@
 /area/golden_arrow/synthcloset
 	name = "\improper Synthetic Storage Closet"
 	icon_state = "livingspace"
+
+/area/golden_arrow/firingrange
+	name = "\improper Firing Range"
+	icon_state = "firingrange"
