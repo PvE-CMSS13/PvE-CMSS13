@@ -1,0 +1,914 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/tank{
+	dir = 4
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -15;
+	pixel_y = 16
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"bN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -2;
+	icon_state = "intact";
+	dir = 6;
+	pixel_y = 24
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"cR" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -1;
+	pixel_y = 17
+	},
+/obj/structure/kitchenspike,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"cY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/pipes/tvalve{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"dF" = (
+/obj/item/legcuffs,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"eY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -21;
+	pixel_y = 5
+	},
+/obj/item/stack/sheet/metal,
+/obj/item/legcuffs/beartrap{
+	icon_state = "beartrap1";
+	armed = 1;
+	pixel_y = 3;
+	pixel_x = 1
+	},
+/obj/item/tool/candle/decorative{
+	pixel_y = 6;
+	pixel_x = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 11;
+	pixel_y = 5
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"fm" = (
+/obj/item/stack/rods,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -10;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = 11
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 4;
+	icon_state = "intact";
+	dir = 5;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"gK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 1;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"jb" = (
+/obj/structure/pipes/portables_connector,
+/obj/item/tool/candle/decorative{
+	pixel_y = -5;
+	pixel_x = 10
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"jf" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -13
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -1;
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = 19
+	},
+/obj/effect/decal/cleanable/blood/splatter{
+	icon_state = "csplatter5"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"jm" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 19;
+	pixel_x = -14
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"jJ" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -13;
+	pixel_y = 6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"kN" = (
+/obj/item/weapon/sword/machete,
+/obj/item/attachable/bayonet{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/attachable/bayonet/upp{
+	pixel_y = -1;
+	pixel_x = 4
+	},
+/obj/structure/surface/table/woodentable/poor,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"nc" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 1;
+	icon_state = "intact";
+	dir = 5;
+	pixel_y = 21
+	},
+/obj/item/stack/sheet/animalhide/human{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/structure/surface/table/woodentable/poor,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"nf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/match{
+	pixel_x = 1;
+	pixel_y = 13
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"nE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = 21
+	},
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = 6
+	},
+/obj/item/reagent_container/food/snacks/meat/human{
+	pixel_x = -8;
+	pixel_y = 3
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/structure/machinery/light_construct/small{
+	dir = 1;
+	pixel_y = 18
+	},
+/obj/item/reagent_container/food/snacks/meat/human{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"oe" = (
+/obj/item/tool/surgery/scalpel{
+	pixel_y = 10;
+	pixel_x = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 17
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 4;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/snacks/meat/human{
+	pixel_x = -9
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/snacks/meat/human{
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/snacks/meat/human{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/organ/eyes{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 17
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"ol" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 17
+	},
+/obj/item/frame/table/wood/poor,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"pT" = (
+/obj/item/tool/surgery/circular_saw,
+/obj/item/tool/surgery/hemostat{
+	pixel_x = 9
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -12;
+	pixel_x = -2
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/structure/machinery/light_construct/small{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"sb" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"tq" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 2;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = 20
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"tD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/gibspawner/human,
+/obj/item/tool/candle/decorative{
+	pixel_y = 5;
+	pixel_x = 10
+	},
+/obj/item/organ/heart{
+	pixel_x = -14;
+	pixel_y = -8
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"ui" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"um" = (
+/obj/structure/pipes/standard/simple/visible,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/gibspawner/human,
+/obj/item/tool/candle/decorative{
+	pixel_y = -11;
+	pixel_x = -10
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"wE" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light_construct/small,
+/obj/item/light_bulb/bulb{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"xk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/tank{
+	icon_state = "n2o_map";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"xv" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -11;
+	pixel_y = 7
+	},
+/obj/effect/spawner/gibspawner/human,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"xw" = (
+/turf/closed/wall/r_wall/unmeltable,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"xG" = (
+/turf/template_noop,
+/area/template_noop)
+"yu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -5
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"zd" = (
+/obj/structure/girder/displaced,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Am" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -4
+	},
+/obj/structure/pipes/standard/simple/visible{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -20;
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Ar" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/item/tool/crowbar,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"BD" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 20;
+	pixel_x = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"BU" = (
+/obj/item/stack/rods,
+/obj/item/tool/wirecutters{
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 24;
+	pixel_x = -6
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -2;
+	pixel_x = -6
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Fu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/visible,
+/obj/item/clothing/head/welding{
+	pixel_x = 9
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"FW" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/effect/spawner/gibspawner/human,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Ii" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 22
+	},
+/obj/structure/pipes/standard/tank{
+	icon_state = "o2_map"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 10;
+	pixel_x = -24
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"IM" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 3;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = -2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/tool/screwdriver,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Js" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 4;
+	icon_state = "intact";
+	dir = 5;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Kb" = (
+/obj/structure/pipes/tvalve{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Kk" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -13
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Kr" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 4;
+	icon_state = "intact";
+	dir = 5;
+	pixel_y = -2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/light_construct/small,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Ks" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/pipedispenser,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"KU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall/unmeltable,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"KZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light_construct/small,
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Lq" = (
+/obj/item/weapon/twohanded/fireaxe{
+	pixel_y = -5
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -10;
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 19;
+	pixel_x = -14
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/organ/liver{
+	pixel_y = 2;
+	pixel_x = 2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"LF" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -20;
+	icon_state = "intact";
+	dir = 6;
+	pixel_y = 7
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Mk" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -3;
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = -12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -12;
+	pixel_x = -2
+	},
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"MX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Nd" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = 20;
+	pixel_y = 8
+	},
+/turf/closed/wall/r_wall/unmeltable,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"OB" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 2;
+	icon_state = "intact";
+	dir = 5;
+	pixel_y = 20
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"OJ" = (
+/turf/closed/wall,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Qs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal,
+/obj/item/pipe{
+	pixel_x = -12
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Qu" = (
+/obj/structure/pipes/standard/tank{
+	icon_state = "co2_map"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Rk" = (
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"RE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/visible,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Sb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 19;
+	pixel_x = -14
+	},
+/obj/effect/spawner/gibspawner/human,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Tl" = (
+/obj/structure/pipes/standard/simple/visible,
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -11;
+	pixel_y = 7
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"TJ" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 3;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"TP" = (
+/obj/structure/bed/bedroll{
+	dir = 6
+	},
+/obj/effect/spawner/gibspawner/human,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Ul" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light_construct/small{
+	dir = 1;
+	pixel_y = 18
+	},
+/obj/item/light_bulb/bulb{
+	pixel_y = 4;
+	pixel_x = 7
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 4;
+	icon_state = "intact";
+	dir = 9;
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -16;
+	pixel_y = -11
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"UG" = (
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Vn" = (
+/obj/structure/pipes/standard/simple/visible,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -11;
+	pixel_y = 5
+	},
+/obj/effect/decal/hefa_cult_decals/d96{
+	pixel_x = -14;
+	pixel_y = -7;
+	color = "#FF0000";
+	desc = "The paint is flaking and peeling."
+	},
+/obj/item/tool/candle/decorative{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"VD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/tvalve/digital/bypass{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Wr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/obj/effect/spawner/gibspawner/human,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Xe" = (
+/obj/structure/pipes/portables_connector{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"Yn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/gibspawner/human,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+"ZH" = (
+/obj/structure/pipes/portables_connector{
+	dir = 1
+	},
+/obj/item/tool/weldingtool{
+	pixel_x = -10;
+	pixel_y = -4
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/maintenance/boiler)
+
+(1,1,1) = {"
+xG
+xG
+xG
+xG
+bN
+BU
+UG
+xG
+xG
+xG
+xG
+"}
+(2,1,1) = {"
+UG
+Nd
+UG
+Ul
+Yn
+UG
+OJ
+xG
+bb
+ui
+xG
+"}
+(3,1,1) = {"
+Rk
+oe
+fm
+jm
+Sb
+Lq
+kN
+Rk
+cY
+VD
+xG
+"}
+(4,1,1) = {"
+Rk
+cR
+yu
+FW
+MX
+Yn
+KZ
+Kk
+jf
+Js
+xG
+"}
+(5,1,1) = {"
+Rk
+ol
+gK
+KU
+nc
+jb
+um
+Vn
+Kb
+TJ
+xw
+"}
+(6,1,1) = {"
+Mk
+pT
+Wr
+KU
+nE
+nf
+tD
+eY
+sb
+wE
+UG
+"}
+(7,1,1) = {"
+Rk
+Ks
+Qs
+xv
+RE
+Xe
+dF
+OJ
+BD
+OB
+jJ
+"}
+(8,1,1) = {"
+xG
+Rk
+Qu
+Tl
+Fu
+ZH
+TP
+Rk
+Ar
+tq
+xw
+"}
+(9,1,1) = {"
+xG
+LF
+Ii
+Am
+Kr
+OJ
+xG
+xG
+xk
+ui
+xG
+"}
+(10,1,1) = {"
+xG
+xG
+OJ
+zd
+IM
+UG
+xG
+xG
+xG
+xG
+xG
+"}

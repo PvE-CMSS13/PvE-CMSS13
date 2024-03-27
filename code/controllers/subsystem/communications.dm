@@ -99,6 +99,14 @@ var/const/CLF_ENGI_FREQ = 1273
 var/const/CLF_MED_FREQ = 1274
 var/const/CLF_CCT_FREQ = 1275
 
+//USCM GGround
+var/const/USCM_GROUND_FREQ = 1440
+var/const/USCM_GROUND_ONE_FREQ = 1441
+var/const/USCM_GROUND_TWO_FREQ = 1442
+var/const/USCM_GROUND_MED_FREQ = 1444
+var/const/USCM_GROUND_ENGI_FREQ = 1445
+var/const/USCM_GROUND_CMD_FREQ = 1446
+
 var/const/MIN_FREQ = 1460 // ------------------------------------------------------
 var/const/PUB_FREQ = 1461
 var/const/MAX_FREQ = 1468 // ------------------------------------------------------
@@ -168,6 +176,13 @@ var/list/radiochannels = list(
 	RADIO_CHANNEL_ALAMO = DS1_FREQ,
 	RADIO_CHANNEL_NORMANDY = DS2_FREQ,
 
+	RADIO_CHANNEL_USCM_GROUND = USCM_GROUND_FREQ,
+	SQUAD_USCM_GROUND_1 = USCM_GROUND_ONE_FREQ,
+	SQUAD_USCM_GROUND_2 = USCM_GROUND_TWO_FREQ,
+	RADIO_CHANNEL_USCM_GROUND_MED = USCM_GROUND_MED_FREQ,
+	RADIO_CHANNEL_USCM_GROUND_ENGI = USCM_GROUND_ENGI_FREQ,
+	RADIO_CHANNEL_USCM_GROUND_CMD = USCM_GROUND_CMD_FREQ,
+
 	RADIO_CHANNEL_COLONY = COLONY_FREQ,
 
 
@@ -192,6 +207,9 @@ var/list/radiochannels = list(
 	RADIO_CHANNEL_CLF_MED = CLF_MED_FREQ,
 	RADIO_CHANNEL_CLF_CCT = CLF_CCT_FREQ,
 )
+
+//USCM Outpost
+#define USCM_GROUND_FREQS list(USCM_GROUND_FREQ, USCM_GROUND_ONE_FREQ, USCM_GROUND_TWO_FREQ, USCM_GROUND_MED_FREQ, USCM_GROUND_ENGI_FREQ, USCM_GROUND_CMD_FREQ)
 
 // Response Teams
 #define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ)
@@ -269,6 +287,11 @@ SUBSYSTEM_DEF(radio)
 		"[HC_FREQ]" = "hcradio",
 		"[PVST_FREQ]" = "pvstradio",
 		"[COLONY_FREQ]" = "deptradio",
+		"[USCM_GROUND_CMD_FREQ]" = "comradio", //These are the same as their regular counterparts.
+		"[USCM_GROUND_MED_FREQ]" = "medradio",
+		"[USCM_GROUND_ENGI_FREQ]" = "engradio",
+		"[USCM_GROUND_ONE_FREQ]" = "grpltoneradio",//These are a little different.
+		"[USCM_GROUND_TWO_FREQ]" = "grplttworadio"
 	)
 
 /datum/controller/subsystem/radio/proc/add_object(obj/device as obj, new_frequency as num, filter = null as text|null)

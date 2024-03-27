@@ -1,0 +1,280 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/warning_cone,
+/turf/open/asphalt,
+/area/template_noop)
+"b" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8"
+	},
+/obj/item/tool/warning_cone{
+	pixel_x = -2;
+	pixel_y = -5
+	},
+/turf/open/asphalt,
+/area/template_noop)
+"e" = (
+/turf/template_noop,
+/area/template_noop)
+"f" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice13"
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"g" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal4"
+	},
+/obj/item/tool/crowbar,
+/turf/open/asphalt,
+/area/template_noop)
+"i" = (
+/obj/structure/prop/structure_lattice,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice14"
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"k" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/item/tool/warning_cone,
+/turf/open/asphalt,
+/area/template_noop)
+"l" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/turf/open/asphalt,
+/area/template_noop)
+"m" = (
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"p" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal4"
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = -8
+	},
+/turf/open/asphalt,
+/area/template_noop)
+"r" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal4"
+	},
+/obj/item/stack/rods{
+	pixel_y = 13
+	},
+/turf/open/asphalt,
+/area/template_noop)
+"s" = (
+/obj/item/stack/tile/plasteel{
+	turf_type = /turf/open/asphalt
+	},
+/obj/item/tool/weldingtool{
+	pixel_x = 5
+	},
+/turf/open/floor/plating,
+/area/template_noop)
+"t" = (
+/obj/item/tool/screwdriver,
+/turf/open/floor/plating,
+/area/template_noop)
+"u" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"v" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"w" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/structure/barricade/handrail/strata,
+/turf/open/asphalt,
+/area/template_noop)
+"y" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"A" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 1
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"B" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice14"
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"F" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/asphalt,
+/area/template_noop)
+"H" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 1
+	},
+/obj/item/stack/sheet/metal,
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"I" = (
+/obj/item/stack/sheet/metal/small_stack,
+/turf/open/floor/plating,
+/area/template_noop)
+"J" = (
+/obj/structure/platform_decoration,
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"M" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"O" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice14"
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"Q" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice13"
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"S" = (
+/obj/item/stack/rods,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"T" = (
+/obj/structure/platform,
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"V" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/asphalt,
+/area/template_noop)
+"X" = (
+/turf/open/asphalt,
+/area/template_noop)
+"Y" = (
+/obj/structure/prop/structure_lattice,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_y = 1
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+"Z" = (
+/obj/structure/prop/structure_lattice,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice13"
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/gm/river/deep,
+/area/whiskey_outpost/blackstone/outside/river/east)
+
+(1,1,1) = {"
+e
+b
+F
+k
+w
+e
+"}
+(2,1,1) = {"
+e
+g
+V
+s
+I
+e
+"}
+(3,1,1) = {"
+M
+v
+O
+Z
+v
+y
+"}
+(4,1,1) = {"
+m
+A
+B
+f
+H
+m
+"}
+(5,1,1) = {"
+J
+S
+i
+Q
+Y
+u
+"}
+(6,1,1) = {"
+T
+r
+t
+X
+l
+e
+"}
+(7,1,1) = {"
+e
+p
+F
+a
+w
+e
+"}

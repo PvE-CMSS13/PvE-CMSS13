@@ -30,7 +30,7 @@
 
 	required_skill = SKILL_VEHICLE_LARGE
 
-	vehicle_flags = VEHICLE_CLASS_MEDIUM
+	vehicle_flags = VEHICLE_CLASS_MEDIUM|VEHICLE_BYPASS_STAIRS|VEHICLE_BYPASS_DEEP_WATER
 
 	move_max_momentum = 2
 	move_momentum_build_factor = 1.5

@@ -1,0 +1,180 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground)
+"b" = (
+/turf/closed/wall/mineral/sandstone/runed/decor,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"d" = (
+/obj/effect/decal/remains/human,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"f" = (
+/obj/effect/spider/stickyweb,
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"g" = (
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"j" = (
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"q" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"r" = (
+/obj/effect/decal/cleanable/spiderling_remains,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"u" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"z" = (
+/obj/effect/spider/stickyweb,
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"A" = (
+/obj/item/clothing/head/helmet/augment{
+	desc = "Part of a strange alien mask. sssssssIt loosely fits on a human, but just barely.";
+	name = "alien mask";
+	unacidable = 1;
+	pixel_x = -2;
+	pixel_y = -8
+	},
+/obj/effect/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"D" = (
+/obj/effect/spider/eggcluster,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"H" = (
+/obj/effect/spider/stickyweb{
+	icon_state = "stickyweb2"
+	},
+/obj/effect/decal/remains/human,
+/obj/structure/platform_decoration/mineral/sandstone/runed,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"L" = (
+/obj/effect/decal/cleanable/spiderling_remains,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"Q" = (
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/sandstone/runed{
+	name = "Strange Temple"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"Y" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"Z" = (
+/obj/effect/spider/eggcluster,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+j
+j
+j
+j
+a
+"}
+(3,1,1) = {"
+b
+f
+Y
+d
+D
+j
+a
+"}
+(4,1,1) = {"
+Q
+g
+q
+r
+A
+j
+a
+"}
+(5,1,1) = {"
+b
+H
+u
+L
+Z
+j
+a
+"}
+(6,1,1) = {"
+a
+a
+j
+j
+z
+j
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

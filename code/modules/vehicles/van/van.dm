@@ -3,7 +3,7 @@
 //Read the documentation in multitile.dm before trying to decipher this stuff
 
 /obj/vehicle/multitile/van
-	name = "Colony Van"
+	name = "\improper Colony Van"
 	desc = "A rather old hunk of metal with four wheels, you know what to do. Entrance on the back and sides."
 	layer = ABOVE_XENO_LAYER
 
@@ -245,12 +245,18 @@
 ** PRESETS SPAWNERS
 */
 
+#define VAN_SPAWN_NON_FUNCTIONAL 0
+#define VAN_SPAWN_DAMAGED 1
+#define VAN_SPAWN_FUNCTIONAL 2
+
 /obj/effect/vehicle_spawner/van
 	name = "Van Spawner"
 	icon = 'icons/obj/vehicles/van.dmi'
 	icon_state = "van_base"
 	pixel_x = -16
 	pixel_y = -16
+	var/vehicle_name
+	var/vehicle_status = VAN_SPAWN_NON_FUNCTIONAL
 
 /obj/effect/vehicle_spawner/van/Initialize()
 	. = ..()
@@ -259,33 +265,30 @@
 
 //PRESET: no hardpoints
 /obj/effect/vehicle_spawner/van/spawn_vehicle()
-	var/obj/vehicle/multitile/van/VAN = new (loc)
+	var/obj/vehicle/multitile/van/V = new (loc)
 
-	load_misc(VAN)
-	handle_direction(VAN)
-	VAN.update_icon()
+	load_misc(V)
+	load_hardpoints(V)
+	handle_direction(V)
+	if(vehicle_status == VAN_SPAWN_DAMAGED) load_damage(V)
+	V.update_icon()
+
+	if(vehicle_name) V.name = vehicle_name
+
+/obj/effect/vehicle_spawner/van/load_hardpoints(obj/vehicle/multitile/van/V)
+	if(vehicle_status > VAN_SPAWN_NON_FUNCTIONAL) V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
 
 //PRESET: wheels installed, destroyed
-/obj/effect/vehicle_spawner/van/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/van/VAN = new (loc)
-
-	load_misc(VAN)
-	load_hardpoints(VAN)
-	handle_direction(VAN)
-	load_damage(VAN)
-	VAN.update_icon()
-
-/obj/effect/vehicle_spawner/van/decrepit/load_hardpoints(obj/vehicle/multitile/van/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+/obj/effect/vehicle_spawner/van/decrepit
+	vehicle_status = VAN_SPAWN_DAMAGED
 
 //PRESET: wheels installed
-/obj/effect/vehicle_spawner/van/fixed/spawn_vehicle()
-	var/obj/vehicle/multitile/van/VAN = new (loc)
+/obj/effect/vehicle_spawner/van/fixed
+	vehicle_status = VAN_SPAWN_FUNCTIONAL
 
-	load_misc(VAN)
-	load_hardpoints(VAN)
-	handle_direction(VAN)
-	VAN.update_icon()
+/obj/effect/vehicle_spawner/van/fixed/uscm_ground
+	vehicle_name = "\improper Outpost Van"
 
-/obj/effect/vehicle_spawner/van/fixed/load_hardpoints(obj/vehicle/multitile/van/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
+#undef VAN_SPAWN_NON_FUNCTIONAL
+#undef VAN_SPAWN_DAMAGED
+#undef VAN_SPAWN_FUNCTIONAL

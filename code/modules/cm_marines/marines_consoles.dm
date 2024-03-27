@@ -485,7 +485,7 @@
 //But in the long run it's not really a big deal.
 
 /obj/structure/machinery/computer/squad_changer
-	name = "Squad Distribution Computer"
+	name = "squad distribution computer"
 	desc = "You can use this to change someone's squad."
 	icon_state = "guest"
 	req_access = list(ACCESS_MARINE_DATABASE)
@@ -664,6 +664,12 @@
 		if(!isxenos)
 			person_to_modify = user
 
+/obj/structure/machinery/computer/squad_changer/uscm_ground
+	dir = NORTH
+	faction = FACTION_USCM_GROUND
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+
+
 /// How often the sensor data is updated
 #define SENSORS_UPDATE_PERIOD 10 SECONDS //How often the sensor data updates.
 /// The job sorting ID associated with otherwise unknown jobs
@@ -721,6 +727,11 @@
 	desc = "Used to monitor active health sensors of all Yautja in the system. You can see that the console highlights the human's ship areas with BLUE and the hunting locations with RED."
 	faction = FACTION_YAUTJA
 	crewmonitor_type = /datum/crewmonitor/yautja
+
+/obj/structure/machinery/computer/crew/uscm_ground
+	icon_state = "cmonitor"
+	faction = FACTION_USCM_GROUND
+	req_access = list(ACCESS_USCM_GROUND_GENERAL)
 
 /obj/structure/machinery/computer/crew/upp
 	faction = FACTION_UPP
@@ -1107,6 +1118,43 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_UPP_REPRESENTATIVE = 201,
 				JOB_TWE_REPRESENTATIVE = 201,
 				JOB_COLONEL = 201
+			)
+		if(FACTION_USCM_GROUND)
+			jobs = list(
+				//We want to keep the high command list; they should still appear here.
+				JOB_CMC = 00,//Grade O10
+				JOB_ACMC = 00,
+				JOB_PROVOST_CMARSHAL = 00,
+				JOB_GENERAL = 00,
+				JOB_PROVOST_SMARSHAL = 01,//Grade O9
+				JOB_PROVOST_MARSHAL = 02,//Grade O8
+				JOB_COLONEL = 04,//Grade O6
+				JOB_PROVOST_INSPECTOR = 04,
+
+				JOB_USCM_GROUND_CO = 10,
+				JOB_USCM_GROUND_AO = 20,
+
+				JOB_USCM_GROUND_SQUAD_LEADER = 02,
+				JOB_USCM_GROUND_SQUAD_TEAM_LEADER = 03,
+				JOB_USCM_GROUND_SQUAD_MEDIC = 04,
+				JOB_USCM_GROUND_SQUAD_SPECIALIST = 05,
+				JOB_USCM_GROUND_SQUAD_SMARTGUNNER = 06,
+				JOB_USCM_GROUND_SQUAD_MARINE = 07,
+
+				JOB_USCM_GROUND_CIVILIAN = 140,
+				JOB_USCM_GROUND_SYNTH = 150,
+
+				JOB_STOWAWAY = 999,
+
+				// 200-229: Visitors, includes other USCM ranking officers. Subject to change.
+				JOB_UPP_REPRESENTATIVE = 201,
+				JOB_TWE_REPRESENTATIVE = 201,
+				JOB_CO = 202,
+				JOB_XO = 203,
+				JOB_MARINE_RAIDER_CMD = 204,
+				RAIDER_OFFICER_SQUAD = 205,
+				JOB_PMC_DIRECTOR = 220,
+				JOB_PMC_LEAD_INVEST = 220,
 			)
 		else
 			jobs = list()

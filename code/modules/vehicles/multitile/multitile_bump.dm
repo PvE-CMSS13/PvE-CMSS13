@@ -23,6 +23,10 @@
 		visible_message(SPAN_DANGER("\The [V] rams \the [src]!"))
 	return FALSE
 
+//Can we get through deep water?
+/turf/open/gm/river/handle_vehicle_bump(obj/vehicle/multitile/V)
+	return V.vehicle_flags & VEHICLE_BYPASS_DEEP_WATER
+
 //-----------------------------------------------------------
 //-------------------------OBJECTS---------------------------
 //-----------------------------------------------------------
@@ -45,6 +49,14 @@
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		return TRUE
 	return FALSE
+
+//You weren't able to bypass these, but it made for some weird bumps and graphical errors to to directional blocking.
+/obj/structure/platform/handle_vehicle_bump(obj/vehicle/multitile/V)
+	return FALSE
+
+//Certain vehicles shouldn't be able to traverse stairs.
+/obj/structure/stairs/handle_vehicle_bump(obj/vehicle/multitile/V)
+	return V.vehicle_flags & VEHICLE_BYPASS_STAIRS
 
 /obj/structure/barricade/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(!(V.vehicle_flags & VEHICLE_CLASS_WEAK))

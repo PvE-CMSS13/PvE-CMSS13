@@ -502,6 +502,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/rock/ice/thin
 	alpha = 166
 
+/turf/closed/wall/rock/underground
+	color = "#675a48"
+
 //Strata New Blendy Ice
 
 /turf/closed/wall/strata_ice

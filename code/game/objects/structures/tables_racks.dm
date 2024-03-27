@@ -420,13 +420,13 @@
 /**
  * Flip a table along a certain direction. By default checks whether table is flippable along axis perpendicular to flip direction.
  */
-/obj/structure/surface/table/proc/flip(direction, skip_straight_check=FALSE)
-	if(world.time < flip_cooldown)
+/obj/structure/surface/table/proc/flip(direction, skip_straight_check=FALSE, batch_flip=FALSE)
+	if(world.time < flip_cooldown && !batch_flip)
 		to_chat(usr, SPAN_WARNING("You have moved a table too recently."))
 		return FALSE
 
 	if(!skip_straight_check && !(straight_table_check(turn(direction, 90)) && straight_table_check(turn(direction, -90))))
-		to_chat(usr, SPAN_WARNING("[src] is too wide to be flipped."))
+		if(!batch_flip) to_chat(usr, SPAN_WARNING("[src] is too wide to be flipped.")) //If we're flipping this via a batch proc, we don't want the message to spam us.
 		return FALSE
 
 	ADD_TRAIT(src, TRAIT_TABLE_FLIPPING, TRAIT_SOURCE_FLIP_TABLE)

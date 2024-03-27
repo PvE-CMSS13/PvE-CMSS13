@@ -47,6 +47,9 @@
 /obj/structure/phone_base/tent
 	layer = INTERIOR_WALLMOUNT_LAYER
 
+/obj/structure/phone_base/uscm_ground/tent
+	layer = INTERIOR_WALLMOUNT_LAYER
+
 /obj/structure/phone_base/tent/Initialize(mapload, ...)
 	AddComponent(/datum/component/tent_supported_object)
 	return ..()

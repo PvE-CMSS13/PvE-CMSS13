@@ -279,6 +279,10 @@
 /obj/effect/landmark/start/AISloc
 	name = "AI"
 
+//Can spawn ambush sites; see map_manipulation_menu.dm
+/obj/effect/landmark/tunnel_ambush
+	name = "xeno ambush"
+	icon_state = "xeno_ambush"
 
 //****************************************** MARINE ROLES ************************************************/
 /obj/effect/landmark/start/whiskey //category moment, indeed
@@ -437,6 +441,32 @@
 	name = "forecon late join"
 	squad = SQUAD_LRRP
 
+//Outpost latejoins that matter.
+/obj/effect/landmark/late_join/uscm_ground
+
+/obj/effect/landmark/late_join/uscm_ground/oco
+	name = "\improper OCO late join"
+	job = JOB_USCM_GROUND_CO
+
+/obj/effect/landmark/late_join/uscm_ground/ao
+	name = "\improper AO late join"
+	job = JOB_USCM_GROUND_AO
+
+/obj/effect/landmark/late_join/uscm_ground/civ
+	name = "civ late join"
+	job = JOB_USCM_GROUND_CIVILIAN
+
+/obj/effect/landmark/late_join/uscm_ground/synth
+	name = "maint synth late join"
+	job = JOB_USCM_GROUND_SYNTH
+
+/obj/effect/landmark/late_join/uscm_ground/plt_one //These aren't actually used.
+	name = "outpost platoon one late join"
+	squad = SQUAD_USCM_GROUND_1
+
+/obj/effect/landmark/late_join/uscm_ground/plt_two
+	name = "outpost platoon two late join"
+	squad = SQUAD_USCM_GROUND_2
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()

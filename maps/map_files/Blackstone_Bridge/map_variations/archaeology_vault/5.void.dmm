@@ -1,0 +1,94 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground)
+"o" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"p" = (
+/turf/open/void,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"w" = (
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"C" = (
+/obj/structure/blocker/invisible_wall,
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"M" = (
+/turf/closed/wall/mineral/sandstone/runed/decor,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"R" = (
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/sandstone/runed{
+	name = "Strange Temple"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+C
+p
+p
+p
+a
+"}
+(3,1,1) = {"
+M
+w
+o
+p
+p
+p
+a
+"}
+(4,1,1) = {"
+R
+w
+o
+p
+p
+p
+a
+"}
+(5,1,1) = {"
+M
+w
+o
+p
+p
+p
+a
+"}
+(6,1,1) = {"
+a
+a
+C
+p
+p
+p
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

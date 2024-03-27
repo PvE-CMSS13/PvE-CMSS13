@@ -10719,7 +10719,7 @@
 /obj/structure/flora/jungle/plantbot1{
 	pixel_y = 10
 	},
-/turf/open/jungle,
+/turf/open/jungle/clear,
 /area/bigredv2/outside/admin_building)
 "aFg" = (
 /obj/structure/surface/rack,
@@ -23501,10 +23501,7 @@
 	},
 /area/bigredv2/caves/eta/research)
 "bBp" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/research)
 "bBq" = (
 /turf/open/floor{
@@ -23560,10 +23557,7 @@
 "bBC" = (
 /obj/effect/landmark/monkey_spawn,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/research)
 "bBH" = (
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
@@ -23577,10 +23571,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/research)
 "bBJ" = (
 /turf/open/floor{
@@ -24063,10 +24054,7 @@
 /area/bigredv2/caves/eta/xenobiology)
 "bDe" = (
 /obj/effect/landmark/monkey_spawn,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/xenobiology)
 "bDf" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -24115,10 +24103,7 @@
 	},
 /obj/effect/landmark/monkey_spawn,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/xenobiology)
 "bDm" = (
 /obj/structure/machinery/light{
@@ -24545,10 +24530,7 @@
 /area/bigredv2/caves/eta/living)
 "bEx" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/living)
 "bEy" = (
 /obj/effect/decal/cleanable/blood,
@@ -25205,10 +25187,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/xenobiology)
 "cyv" = (
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -26132,10 +26111,7 @@
 "dPs" = (
 /obj/effect/landmark/monkey_spawn,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/xenobiology)
 "dPC" = (
 /obj/structure/barricade/wooden{
@@ -27564,10 +27540,7 @@
 	},
 /area/bigredv2/outside/engineering)
 "fWw" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/xenobiology)
 "fXO" = (
 /obj/structure/closet/secure_closet/scientist,
@@ -39375,10 +39348,7 @@
 	},
 /area/bigredv2/caves/lambda/research)
 "xfW" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/bigredv2/caves/eta/living)
 "xgi" = (
 /obj/effect/decal/cleanable/blood{

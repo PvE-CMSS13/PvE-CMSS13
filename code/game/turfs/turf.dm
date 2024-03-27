@@ -251,8 +251,8 @@
 	//Next, check the turf itself
 	blocking_dir |= BlockedPassDirs(mover, fdir)
 	if ((!fd1 || blocking_dir & fd1) && (!fd2 || blocking_dir & fd2))
-		mover.Collide(src)
-		return FALSE
+		if(!mover.Collide(src))
+			return FALSE
 	for(obstacle in src) //Then, check atoms in the target turf
 		if(forget == obstacle)
 			continue

@@ -226,7 +226,7 @@
 /obj/structure/flora/jungle/plantbot1{
 	pixel_y = 10
 	},
-/turf/open/jungle,
+/turf/open/jungle/clear,
 /area/bigredv2/outside/admin_building)
 "sT" = (
 /obj/structure/surface/table,

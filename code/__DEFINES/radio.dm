@@ -37,6 +37,12 @@
 #define RADIO_CHANNEL_SENTRY "Sentry Network"
 #define RADIO_CHANNEL_SPECIAL "special"
 
+//USCM Outpost Comms
+#define RADIO_CHANNEL_USCM_GROUND "Outpost"
+#define RADIO_CHANNEL_USCM_GROUND_CMD "OutCmd"
+#define RADIO_CHANNEL_USCM_GROUND_MED "OutMed"
+#define RADIO_CHANNEL_USCM_GROUND_ENGI "OutEngi"
+
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"

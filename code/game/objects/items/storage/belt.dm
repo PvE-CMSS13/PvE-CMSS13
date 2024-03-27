@@ -693,6 +693,12 @@
 		var/random_shell_type = pick(shotgun_handfuls_12g)
 		new random_shell_type(src)
 
+/obj/item/storage/belt/shotgun/full/mou53/fill_preset_inventory()
+	var/shell_type
+	for(var/i = 1 to storage_slots) //Picks ammo for MOU, which cannot shoot buck; slightly randomized with a preference for flachette.
+		shell_type = pick(75; /obj/item/ammo_magazine/handful/shotgun/slug, 50; /obj/item/ammo_magazine/handful/shotgun/incendiary, 150; /obj/item/ammo_magazine/handful/shotgun/flechette)
+		new shell_type(src)
+
 /obj/item/storage/belt/shotgun/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/ammo_magazine/shotgun))
 		var/obj/item/ammo_magazine/shotgun/M = W
@@ -1781,6 +1787,9 @@
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/device/multitool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
+	new /obj/item/ammo_magazine/pistol/mod88(src)
 
 ////////////OTHER BELTS//////////////
 

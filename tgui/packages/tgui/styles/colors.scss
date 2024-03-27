@@ -32,6 +32,8 @@ $bad: #db2828 !default;
 $label: #7e90a7 !default;
 $underline: #7e90a767 !default;
 $xeno: #52375c !default;
+$ground_one: #9fcd61 !default;
+$ground_two: #d99281 !default;
 
 // Background and foreground color lightness ratios
 $bg-lightness: -15% !default;
@@ -69,6 +71,8 @@ $_gen_map: (
   'bad': $bad,
   'label': $label,
   'xeno': $xeno,
+  'ground_one': $ground_one,
+  'ground_two': $ground_two,
 );
 
 // Foreground color names for which to generate a color map

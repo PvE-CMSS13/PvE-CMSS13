@@ -4,6 +4,7 @@
 
 /datum/job/marine/medic
 	title = JOB_SQUAD_MEDIC
+	squad_root_title = JOB_SQUAD_MEDIC
 	total_positions = 16
 	spawn_positions = 16
 	allow_additional = 1
@@ -40,6 +41,14 @@
 	else
 		gear_preset = initial(gear_preset)
 
+/datum/job/marine/medic/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_MEDIC
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/medic/uscm_ground
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/uscm_ground/lesser_rank
+	entry_message_body = "You are uniquely qualified to treat battlefield injuries, so make sure to do just that. Stick close to your allies, and pull them out of harm's way when they need it."
+
 /datum/job/marine/medic/whiskey
 	title = JOB_WO_SQUAD_MEDIC
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
@@ -70,6 +79,10 @@ AddTimelock(/datum/job/marine/medic, list(
 /obj/effect/landmark/start/marine/medic/delta
 	icon_state = "medic_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/medic/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_MEDIC
+	job = /datum/job/marine/medic/uscm_ground
 
 /datum/job/marine/medic/ai
 	total_positions = 1

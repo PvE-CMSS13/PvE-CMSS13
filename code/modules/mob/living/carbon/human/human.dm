@@ -1227,7 +1227,10 @@
 		TRACKER_CSL = /datum/squad/marine/charlie,
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
-		TRACKER_FSL = /datum/squad/marine/cryo
+		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_GFSL = /datum/squad/marine/ground_one,
+		TRACKER_GSSL = /datum/squad/marine/ground_two
+
 	)
 	switch(tracker_setting)
 		if(TRACKER_SL)
@@ -1251,9 +1254,15 @@
 		if(TRACKER_CO)
 			H = GLOB.marine_leaders[JOB_CO]
 			tracking_suffix = "_co"
+		if(TRACKER_OCO)
+			H = GLOB.marine_leaders[JOB_USCM_GROUND_CO]
+			tracking_suffix = "_oco"
 		if(TRACKER_XO)
 			H = GLOB.marine_leaders[JOB_XO]
 			tracking_suffix = "_xo"
+		if(TRACKER_AO)
+			H = GLOB.marine_leaders[JOB_USCM_GROUND_AO]
+			tracking_suffix = "_ao"
 		if(TRACKER_PLTCO)
 			H = GLOB.marine_leaders[JOB_SO]
 			tracking_suffix = "_co"

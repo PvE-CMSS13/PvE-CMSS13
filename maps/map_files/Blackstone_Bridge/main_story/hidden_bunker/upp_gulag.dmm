@@ -1,0 +1,2491 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"al" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"aK" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/bodybag{
+	pixel_x = -10
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"bs" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/platform_decoration/strata/metal,
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 1;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"bG" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/reinforced/black,
+/obj/item/device/flashlight{
+	pixel_x = -1;
+	pixel_y = 10
+	},
+/obj/item/facepaint/black{
+	pixel_x = -6;
+	pixel_y = -11
+	},
+/obj/item/reagent_container/spray/pepper{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"bH" = (
+/obj/structure/ladder{
+	id = "blackstone_hidden_bunker";
+	height = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"bM" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = 3;
+	icon_state = "intact";
+	dir = 10;
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_x = -17;
+	pixel_y = -11
+	},
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"cn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Gulag Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"cO" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"db" = (
+/obj/item/tool/extinguisher{
+	pixel_y = 16;
+	pixel_x = -10
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 29;
+	pixel_x = -4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"dY" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"eD" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/snacks/upp,
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"eL" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"eU" = (
+/turf/template_noop,
+/area/template_noop)
+"eY" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"fb" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floorscorched1"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"fl" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 1;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"fE" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"fK" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	icon_state = "gib5"
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"gx" = (
+/obj/structure/bed/bedroll{
+	dir = 6
+	},
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"gz" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"gB" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"gH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Gulag Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"gM" = (
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"gP" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"gU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/shower{
+	pixel_y = 17
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"hd" = (
+/obj/item/bodybag{
+	pixel_x = 3
+	},
+/turf/open/floor/strata{
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"hn" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"hu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"hH" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"hM" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/glasses/sunglasses/blindfold,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"il" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"in" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"iD" = (
+/obj/structure/platform_decoration/strata/metal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"iT" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"jy" = (
+/turf/closed/wall/strata_outpost,
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"jH" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/snacks/protein_pack,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"jI" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -7;
+	pixel_y = 7;
+	icon_state = "4"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"jK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"ke" = (
+/obj/item/explosive/mine/active{
+	iff_signal = "UPP"
+	},
+/obj/item/tool/wrench{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"kw" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"lr" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"lJ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/structure/machinery/computer/cameras/almayer{
+	pixel_x = -8;
+	pixel_y = 6;
+	network = list("UPP Secret Facility");
+	name = "\improper Gulag Security Monitor"
+	},
+/obj/item/tool/stamp{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/paper{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/tool/pen/red/clicky{
+	pixel_x = 5
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"ms" = (
+/obj/structure/barricade/handrail/strata{
+	layer = 3.1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"mK" = (
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/strata{
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"mN" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"mT" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/item/prop/colony/usedbandage{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/prop/colony/usedbandage{
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"na" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"nf" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/reinforced/black,
+/obj/item/attachable/bayonet/upp{
+	pixel_x = -11;
+	pixel_y = 6
+	},
+/obj/item/toy/deck{
+	pixel_x = 2;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"oa" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/snacks/upp{
+	pixel_y = 3;
+	pixel_x = 4
+	},
+/obj/item/reagent_container/food/snacks/upp,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue,
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_x = 12;
+	pixel_y = 14
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"od" = (
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 7
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"oj" = (
+/obj/structure/barricade/handrail/strata{
+	layer = 3.1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/lighter{
+	pixel_y = 9;
+	pixel_x = -4
+	},
+/obj/item/storage/fancy/cigarettes{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"ok" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"ol" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/blood/splatter{
+	icon_state = "gibup1"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"or" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/spray/pepper{
+	pixel_x = -10;
+	pixel_y = -13
+	},
+/obj/item/weapon/gun/rifle/type71/carbine{
+	pixel_y = 5
+	},
+/obj/item/clothing/head/uppcap{
+	pixel_y = -8;
+	pixel_x = 9
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"oN" = (
+/obj/effect/decal/cleanable/blood/writing,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"pb" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/item/stack/tile/plasteel{
+	pixel_y = 6;
+	pixel_x = 1;
+	turf_type = /turf/open/floor/strata
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"po" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"pv" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"px" = (
+/obj/structure/platform/strata/metal,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"pT" = (
+/obj/structure/window/framed/strata/reinforced,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 2";
+	name = "\improper Cell 2 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"qr" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"qy" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e"
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"qH" = (
+/obj/structure/largecrate/supply/ammo/type71{
+	icon_state = "lisacrate";
+	pixel_x = -3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 29
+	},
+/obj/item/device/motiondetector{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"qK" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/obj/structure/machinery/optable,
+/obj/item/device/autopsy_scanner,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"qQ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/prop/magazine/book{
+	name = "UPP Party Doctrine Booklet";
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_y = 4;
+	pixel_x = 8
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"qZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"ry" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Gulag Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"rD" = (
+/obj/item/paper/crumpled/bloody,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"sz" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata{
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"sK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"sQ" = (
+/obj/structure/xenoautopsy/tank/hugger,
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 2
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"te" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/reagent_container/glass/bucket,
+/obj/item/tool/mop{
+	pixel_x = -6;
+	pixel_y = 24
+	},
+/obj/structure/machinery/shower{
+	pixel_y = 17
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"tx" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/surgery/scalpel{
+	pixel_x = -1;
+	pixel_y = 12
+	},
+/obj/item/tool/surgery/hemostat{
+	pixel_y = 3;
+	pixel_x = -9
+	},
+/obj/item/tool/surgery/cautery{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = 2
+	},
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"tE" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"ud" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/platform/strata/metal,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"uO" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"uX" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice4";
+	pixel_y = 10;
+	pixel_x = -19
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"uZ" = (
+/obj/item/stack/tile/plasteel{
+	pixel_y = 6;
+	pixel_x = 7;
+	turf_type = /turf/open/floor/strata
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"vc" = (
+/obj/item/trash/tray,
+/obj/item/trash/cigbutt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"vf" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/door/airlock/bunker/upp/gulag_cell{
+	name = "\improper Gulag Cell 3"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 3";
+	name = "\improper Cell 3 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"vk" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"vp" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "UPP Bunker Gulag Autopsy";
+	name = "\improper Autopsy Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"vr" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"vt" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_y = 7;
+	pixel_x = -5
+	},
+/obj/item/storage/box/bodybags{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"ww" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"wC" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "UPP Bunker Gulag Autopsy";
+	name = "\improper Autopsy Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"wF" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/lighter/random{
+	pixel_x = -15;
+	pixel_y = 4
+	},
+/obj/structure/machinery/door_control{
+	id = "UPP Bunker Gulag Cell 3";
+	name = "toggle lockdown cell 3";
+	pixel_x = 8;
+	pixel_y = 7;
+	req_one_access_txt = "233;239";
+	access_modified = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "UPP Bunker Gulag Cell 2";
+	name = "toggle lockdown cell 2";
+	pixel_y = 7;
+	req_one_access_txt = "233;239";
+	access_modified = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "UPP Bunker Gulag Autopsy";
+	name = "toggle autopsy shutters";
+	req_one_access_txt = "231;240;239";
+	access_modified = 1
+	},
+/obj/structure/machinery/door_control{
+	id = "UPP Bunker Gulag Cell 1";
+	name = "toggle lockdown cell 1";
+	pixel_x = -8;
+	pixel_y = 7;
+	access_modified = 1;
+	req_one_access_txt = "233;239"
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"wP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"xu" = (
+/obj/structure/bed/bedroll{
+	dir = 10
+	},
+/obj/item/storage/fancy/cigar/matchbook/brown{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"xG" = (
+/obj/structure/xenoautopsy/tank,
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"xU" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 24;
+	pixel_x = -1
+	},
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"yk" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"yK" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"zd" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"zI" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/bunker/upp/security,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"AH" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"AS" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"AX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/clipboard,
+/obj/item/device/camera/oldcamera{
+	pixel_x = -10
+	},
+/obj/item/tool/pen/red{
+	pixel_x = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Bh" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Bi" = (
+/obj/structure/barricade/handrail/strata{
+	layer = 3.1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"BJ" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"BP" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"BQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/deployable{
+	dir = 4
+	},
+/obj/structure/machinery/defenses/sentry/premade/upp{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Cw" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"CC" = (
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"CU" = (
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"CX" = (
+/obj/structure/barricade/handrail/strata{
+	layer = 3.1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"DP" = (
+/obj/item/trash/cigbutt{
+	pixel_x = -14
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -1;
+	pixel_y = 5
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Ed" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/device/megaphone,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"El" = (
+/obj/item/tool/pen,
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"EG" = (
+/obj/structure/largecrate/random/mini{
+	pixel_x = -8;
+	pixel_y = -5
+	},
+/obj/structure/largecrate/random/mini{
+	pixel_x = 7;
+	pixel_y = -5
+	},
+/obj/structure/largecrate/random/mini{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = -12;
+	pixel_y = 5
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"EH" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Fh" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/item/tool/extinguisher,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Fm" = (
+/turf/closed/wall/strata_outpost,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Ge" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Gh" = (
+/obj/item/paper,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"GB" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/clothing/head/uppcap/ushanka{
+	pixel_y = -13
+	},
+/obj/item/weapon/gun/pistol/t73{
+	pixel_y = 2;
+	pixel_x = -4
+	},
+/obj/item/reagent_container/food/drinks/cans/boda{
+	pixel_x = 11;
+	pixel_y = -7
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Ha" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/bunker/upp/security,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Hc" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Gulag Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Hg" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"Hh" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Hn" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/door/airlock/bunker/upp/gulag_cell{
+	name = "\improper Gulag Cell 1"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 1";
+	name = "\improper Cell 1 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"Is" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Ix" = (
+/obj/structure/sink{
+	pixel_y = 24;
+	pixel_x = 1
+	},
+/obj/item/tool/soap{
+	pixel_x = -2;
+	pixel_y = 22
+	},
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"KD" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"KF" = (
+/turf/closed/wall/strata_outpost,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"KI" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"KT" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"La" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Lj" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Lp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -7;
+	pixel_y = 7;
+	icon_state = "3"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Lr" = (
+/obj/item/explosive/mine/active{
+	iff_signal = "UPP"
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 2;
+	pixel_y = 12
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"LH" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet{
+	name = "lethal injection closet"
+	},
+/obj/item/reagent_container/ld50_syringe/choral,
+/obj/item/reagent_container/ld50_syringe/choral{
+	pixel_y = 9
+	},
+/obj/item/reagent_container/ld50_syringe/choral{
+	pixel_y = 4
+	},
+/obj/item/reagent_container/ld50_syringe/choral{
+	pixel_y = -4
+	},
+/obj/item/reagent_container/ld50_syringe/choral{
+	pixel_y = -8
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"LU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/explosive/mine/active{
+	iff_signal = "UPP";
+	dir = 8
+	},
+/obj/item/trash/plate{
+	pixel_x = 9;
+	pixel_y = 1
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Mq" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Gulag Lockdown"
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ms" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Mu" = (
+/obj/structure/machinery/door/airlock/bunker/upp/security,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"MB" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"MC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/screwdriver{
+	pixel_x = 9
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"MD" = (
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 8
+	},
+/obj/structure/surface/rack,
+/obj/item/weapon/baton{
+	pixel_x = -2
+	},
+/obj/item/weapon/baton{
+	pixel_x = 5
+	},
+/obj/item/weapon/baton{
+	pixel_x = 11;
+	pixel_y = -1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"ME" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stool,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"MU" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"MZ" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"Nm" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Nn" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 1;
+	icon_state = "red3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"Nq" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"Od" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Pw" = (
+/obj/structure/stairs/perspective{
+	color = "#6e6e6e";
+	dir = 8;
+	icon_state = "p_stair_sn_full_cap"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Px" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"Pz" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"PJ" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Qk" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"Qr" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Qv" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 4;
+	icon_state = "lattice-simple";
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Qw" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 9
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"QS" = (
+/obj/structure/xenoautopsy/tank/broken,
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 4
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"QU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ra" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Re" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/surgery/circular_saw{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/tool/surgery/retractor{
+	pixel_x = 5
+	},
+/turf/open/floor/strata{
+	icon_state = "red4";
+	dir = 8
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"RB" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/bunker/upp/autopsy,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "UPP Bunker Gulag Autopsy";
+	name = "\improper Autopsy Lockdown";
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/autopsy)
+"RF" = (
+/obj/structure/window/framed/strata/reinforced,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 1";
+	name = "\improper Cell 1 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"RJ" = (
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 18
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"RM" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/firstaid/adv{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/obj/item/storage/box/gloves{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka{
+	pixel_y = 10;
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"RN" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/door/airlock/bunker/upp/gulag_cell{
+	name = "\improper Gulag Cell 2"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 2";
+	name = "\improper Cell 2 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"RP" = (
+/obj/item/trash/tray,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/kitchen/utensil/pfork{
+	pixel_x = 11
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"Ss" = (
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"ST" = (
+/obj/structure/barricade/handrail/strata{
+	layer = 3.1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/handcuffs,
+/obj/item/handcuffs{
+	pixel_y = 7
+	},
+/obj/item/handcuffs{
+	pixel_y = 2
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Tq" = (
+/obj/structure/largecrate/random/barrel/green,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice8";
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"TB" = (
+/obj/structure/largecrate/random/barrel/yellow,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"TP" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"TX" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"UJ" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/blue{
+	dir = 1
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_two)
+"UQ" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"UR" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Vb" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/gun_rack/type71{
+	initial_stored = 3
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Vs" = (
+/obj/structure/platform/strata/metal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Vw" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"VX" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Wf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/shard/shrapnel,
+/obj/item/organ/kidneys{
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"WJ" = (
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/shower{
+	pixel_y = 17
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Xv" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform_decoration/strata/metal,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"XU" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Yr" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ashtray/bronze{
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/chess/random{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/chess/random{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 11
+	},
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Yx" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 4
+	},
+/turf/open/floor/strata{
+	dir = 4;
+	icon_state = "floor3"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"YE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata{
+	dir = 6;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"YO" = (
+/obj/structure/window/framed/strata/reinforced,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "UPP Bunker Gulag Cell 3";
+	name = "\improper Cell 3 Lockdown"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/cell_three)
+"Zc" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 24;
+	pixel_x = -1
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+"Zi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/rifle/type71,
+/obj/structure/closet/coffin/woodencrate{
+	name = "rifle ammo crate"
+	},
+/obj/item/ammo_magazine/rifle/type71,
+/obj/item/ammo_magazine/rifle/type71,
+/obj/item/ammo_magazine/rifle/type71,
+/obj/item/ammo_magazine/rifle/type71,
+/obj/item/ammo_magazine/rifle/type71,
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/break_room)
+"ZD" = (
+/obj/structure/bed/bedroll{
+	dir = 1
+	},
+/obj/structure/machinery/camera/autoname/upp_bunker{
+	dir = 8
+	},
+/obj/item/prop/helmetgarb/rosary{
+	pixel_y = -3;
+	pixel_x = -3
+	},
+/turf/open/floor/strata{
+	icon_state = "floor2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/cell_one)
+"ZR" = (
+/obj/item/clothing/shoes/marine/upp{
+	pixel_y = -2;
+	pixel_x = -5
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 24;
+	pixel_x = -1
+	},
+/turf/open/floor/strata{
+	dir = 8;
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/security_post)
+
+(1,1,1) = {"
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+Ss
+cO
+eL
+Ss
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+"}
+(2,1,1) = {"
+eU
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Mq
+cn
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+eU
+"}
+(3,1,1) = {"
+eU
+Ss
+fE
+jH
+RF
+QU
+pb
+Yx
+UQ
+ms
+vk
+Wf
+al
+sQ
+xG
+QS
+Ss
+eU
+"}
+(4,1,1) = {"
+eU
+Ss
+El
+RP
+Hn
+il
+KT
+fl
+Lp
+hn
+mN
+TX
+wC
+yk
+gB
+hd
+Ss
+eU
+"}
+(5,1,1) = {"
+eU
+Ss
+ZD
+Gh
+RF
+UR
+jI
+Pw
+AS
+gP
+tE
+KI
+vp
+Nn
+qK
+sz
+Ss
+eU
+"}
+(6,1,1) = {"
+eU
+Ss
+Cw
+Cw
+Cw
+WJ
+iD
+ud
+gz
+ms
+Fh
+Bh
+al
+Ix
+Pz
+mK
+Ss
+eU
+"}
+(7,1,1) = {"
+eU
+Ss
+qr
+fb
+pT
+ww
+Vs
+Ed
+in
+sK
+GB
+vt
+al
+tx
+MB
+Re
+Ss
+eU
+"}
+(8,1,1) = {"
+eU
+Ss
+UJ
+oN
+RN
+EH
+Vs
+Is
+jK
+sK
+Qw
+Ra
+al
+al
+RB
+al
+Ss
+eU
+"}
+(9,1,1) = {"
+eU
+Ss
+gx
+fK
+pT
+ol
+px
+Od
+od
+sK
+sK
+oj
+bM
+Nm
+Zc
+ZR
+xU
+eU
+"}
+(10,1,1) = {"
+eU
+Ss
+BJ
+BJ
+BJ
+te
+Vs
+Od
+lJ
+BP
+CU
+uO
+hH
+Nm
+vr
+RM
+Ss
+eU
+"}
+(11,1,1) = {"
+eU
+Ss
+iT
+mT
+YO
+aK
+Vs
+Od
+wF
+qQ
+CU
+Hh
+Lj
+Nm
+na
+AX
+Ss
+eU
+"}
+(12,1,1) = {"
+eU
+Ss
+lr
+rD
+vf
+Vw
+Vs
+Od
+DP
+sK
+sK
+ST
+Vb
+Qr
+AS
+Ms
+Ss
+eU
+"}
+(13,1,1) = {"
+eU
+Ss
+xu
+vc
+YO
+ww
+px
+VX
+sK
+sK
+hu
+Fm
+Fm
+Fm
+zI
+Fm
+Ss
+eU
+"}
+(14,1,1) = {"
+eU
+Ss
+pv
+pv
+pv
+gU
+Ge
+hM
+MD
+sK
+or
+Yr
+jy
+RJ
+dY
+Zi
+Ss
+eU
+"}
+(15,1,1) = {"
+eU
+Ss
+TB
+BQ
+KF
+KF
+Ha
+KF
+KF
+Mu
+KF
+KF
+jy
+db
+zd
+Hg
+Ss
+eU
+"}
+(16,1,1) = {"
+eU
+Ss
+qH
+MC
+LU
+AH
+XU
+LH
+YE
+wP
+uX
+Bi
+Nq
+KD
+bG
+oa
+Ss
+eU
+"}
+(17,1,1) = {"
+eU
+Ss
+bH
+ke
+La
+kw
+Xv
+bs
+MU
+ok
+Qv
+qy
+Px
+Qk
+nf
+eD
+Ss
+eU
+"}
+(18,1,1) = {"
+eU
+Ss
+EG
+qZ
+uZ
+Lr
+po
+yK
+ME
+PJ
+Tq
+CX
+Nq
+eY
+zd
+MZ
+Ss
+eU
+"}
+(19,1,1) = {"
+eU
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+gH
+Hc
+ry
+Ss
+eU
+"}
+(20,1,1) = {"
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+Ss
+CC
+TP
+gM
+Ss
+eU
+"}

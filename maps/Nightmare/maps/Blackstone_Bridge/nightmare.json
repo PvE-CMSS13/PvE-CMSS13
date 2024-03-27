@@ -1,0 +1,111 @@
+[
+	{
+		"type": "map_insert",
+		"name": "WY Lab Insert",
+		"landmark": "hidden_bunker",
+		"path": "main_story/hidden_bunker/wy_lab.dmm",
+		"when": { "blackstone_main_story": "wy_lab" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Gulag Insert",
+		"landmark": "hidden_bunker",
+		"path": "main_story/hidden_bunker/upp_gulag.dmm",
+		"when": { "blackstone_main_story": "upp_gulag" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Predator Temple Insert",
+		"landmark": "sandstone_temple",
+		"path": "main_story/sandstone/sandstone_temple.dmm",
+		"when": { "blackstone_main_story": "predators" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Sandstone Shrine Insert",
+		"landmark": "sandstone_shrine",
+		"chance": 0.7,
+		"path": "main_story/sandstone/sandstone_shrine.dmm",
+		"when": { "blackstone_main_story": "predators" }
+	},
+
+	{
+		"type": "pick",
+		"name": "Bunker Ladder Spawn",
+		"choices": [
+			{ "type": "map_insert", "landmark": "bunker_ladder_1", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_2", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_3", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_4", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_5", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_6", "path": "main_story/hidden_bunker/bunker_ladder.dmm" },
+			{ "type": "map_insert", "landmark": "bunker_ladder_7", "path": "main_story/hidden_bunker/bunker_ladder.dmm" }
+		],
+		"when": { "bunker_ladder": "place_ladder" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Cave Church Insert",
+		"landmark": "cave_church",
+		"path": "side_story/cave_church.dmm",
+		"when": { "blackstone_side_story": "cave_church" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Crashed CLF Ship Insert",
+		"landmark": "crashed_clf_ship",
+		"path": "side_story/crashed_clf_ship.dmm",
+		"when": { "blackstone_side_story": "crashed_clf_ship" }
+	},
+
+	{
+		"type": "map_insert",
+		"name": "Boiler Room Insert",
+		"landmark": "boiler_room",
+		"path": "side_story/boiler_room.dmm",
+		"when": { "blackstone_side_story": "boiler_room" }
+	},
+
+	{ 
+		"type": "branch", 
+		"nodes": [
+			{ "type": "map_insert",  "landmark": "cave_church", "path": "side_story/cave_church.dmm" },
+			{ "type": "map_insert",  "landmark": "crashed_clf_ship", "path": "side_story/crashed_clf_ship.dmm" },
+			{ "type": "map_insert",  "landmark": "boiler_room", "path": "side_story/boiler_room.dmm" }
+		],
+		"when": { "blackstone_side_story": "everything" }
+	},
+
+	{	
+		"type": "map_variations",
+		"landmark": "archaeology_vault",
+		"path": "map_variations/archaeology_vault/",
+		"when": { "vault_contents": "regular_loot" }
+	},
+
+	{	
+		"type": "map_variations",
+		"landmark": "cafeteria",
+		"path": "map_variations/cafeteria/",
+		"chance": 0.65
+	},
+
+	{	
+		"type": "map_insert",
+		"name": "Archaelogy Vault Predator Insert",
+		"landmark": "archaeology_vault",
+		"path": "main_story/sandstone/sarcophagus.dmm",
+		"when": { "vault_contents": "predator_loot" }
+	},
+
+	{
+		"type": "map_sprinkle",
+		"path": "sprinkles/"
+	}
+	
+]

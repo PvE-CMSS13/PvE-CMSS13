@@ -1,0 +1,189 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"b" = (
+/obj/structure/safe/floor{
+	spawnkey = 0
+	},
+/obj/item/weapon/gun/pistol/heavy/co/gold,
+/obj/item/ammo_magazine/pistol/heavy/super,
+/obj/item/ammo_magazine/pistol/heavy/super/highimpact,
+/obj/item/ammo_magazine/pistol/heavy/super/highimpact/ap,
+/obj/item/ammo_magazine/pistol/heavy/super,
+/obj/structure/bed,
+/obj/item/storage/pouch/pistol,
+/obj/item/storage/pouch/magazine/pistol/large,
+/obj/item/ammo_magazine/pistol/heavy/super,
+/obj/item/spacecash/c500/counterfeit,
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"e" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"f" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"g" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/closed/wall/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"j" = (
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"o" = (
+/turf/template_noop,
+/area/template_noop)
+"p" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"q" = (
+/obj/effect/decal/grass_overlay/jungle{
+	dir = 6
+	},
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/serviceoveralls,
+/obj/item/clothing/under/colonist/workwear,
+/obj/item/clothing/shoes/leather,
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"v" = (
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"z" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"A" = (
+/obj/effect/decal/grass_overlay/jungle{
+	dir = 4
+	},
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"B" = (
+/obj/structure/flora/jungle/alienplant1,
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"G" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/device/flashlight/lantern{
+	pixel_y = 12;
+	pixel_x = -11
+	},
+/obj/item/trash/ceramic_plate,
+/obj/item/reagent_container/food/snacks/csandwich{
+	pixel_y = 1
+	},
+/obj/item/clothing/glasses/regular{
+	pixel_y = 8;
+	pixel_x = 5
+	},
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"K" = (
+/obj/effect/decal/grass_overlay/jungle{
+	dir = 5
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/snacks/mre_pack/meal5{
+	pixel_y = 11;
+	pixel_x = -2
+	},
+/obj/item/tool/kitchen/utensil/spoon{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"Q" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"T" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/paper/fortune{
+	pixel_y = 5
+	},
+/obj/item/prop/helmetgarb/compass{
+	pixel_x = -5;
+	pixel_y = -8
+	},
+/obj/item/tool/pen/invisible{
+	pixel_x = 1;
+	pixel_y = -14
+	},
+/turf/open/floor/interior/wood,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+"V" = (
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/southern/east)
+
+(1,1,1) = {"
+o
+o
+o
+o
+o
+V
+"}
+(2,1,1) = {"
+o
+p
+o
+o
+o
+p
+"}
+(3,1,1) = {"
+o
+e
+o
+o
+o
+z
+"}
+(4,1,1) = {"
+o
+z
+B
+p
+v
+z
+"}
+(5,1,1) = {"
+f
+a
+a
+p
+a
+a
+"}
+(6,1,1) = {"
+a
+T
+K
+A
+q
+a
+"}
+(7,1,1) = {"
+g
+G
+Q
+j
+b
+g
+"}
+(8,1,1) = {"
+a
+g
+a
+a
+a
+a
+"}

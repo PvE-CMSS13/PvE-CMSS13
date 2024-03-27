@@ -170,6 +170,16 @@
 	freq_listening = UPP_FREQS
 	var/faction_shorthand = "UPP"
 
+/obj/structure/machinery/telecomms/relay/preset/tower/faction/uscm_ground
+	name = "\improper TA-3G-L telecommunications tower"
+	desc = "A robust telecommunications tower, used to set up communication lines in a USCM outpost."
+	icon = 'icons/obj/structures/machinery/comm_tower2.dmi'
+	icon_state = "comm_tower"
+	id = "Outpost Relay"
+	hide = FALSE
+	freq_listening = USCM_GROUND_FREQS
+	faction_shorthand = "USCM Ground"
+
 /obj/structure/machinery/telecomms/relay/preset/tower/faction/Initialize(mapload, ...)
 	if(faction_shorthand)
 		name = replacetext(name, "UPP", faction_shorthand)

@@ -35,6 +35,7 @@ var/global/players_preassigned = 0
 
 	var/list/roles_by_path //Master list generated when role aithority is created, listing every role by path, including variable roles. Great for manually equipping with.
 	var/list/roles_by_name //Master list generated when role authority is created, listing every default role by name, including those that may not be regularly selected.
+	var/list/roles_for_squad //Handy list of *all* squad roles and what base USCM squad role they correspond to, so that huds and other procs that specify a squad role know what to run with.
 	var/list/roles_for_mode //Derived list of roles only for the game mode, generated when the round starts.
 	var/list/roles_whitelist //Associated list of lists, by ckey. Checks to see if a person is whitelisted for a specific role.
 	var/list/castes_by_path //Master list generated when role aithority is created, listing every caste by path.
@@ -97,6 +98,7 @@ var/global/players_preassigned = 0
 
 	roles_by_path = list()
 	roles_by_name = list()
+	roles_for_squad = list()
 	roles_for_mode = list()
 	for(var/role in roles_all) //Setting up our roles.
 		var/datum/job/J = new role()
@@ -108,6 +110,7 @@ var/global/players_preassigned = 0
 
 		roles_by_path[J.type] = J
 		roles_by_name[J.title] = J
+		if(J.squad_root_title) roles_for_squad[J.title] = J.squad_root_title
 
 	squads = list()
 	squads_by_type = list()
@@ -115,7 +118,6 @@ var/global/players_preassigned = 0
 		var/datum/squad/S = new squad()
 		squads += S
 		squads_by_type[S.type] = S
-
 	load_whitelist()
 
 
@@ -607,14 +609,15 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	//Non-standards are distributed regardless of squad population.
 	//If the number of available positions for the job are more than max_whatever, it will break.
 	//Ie. 8 squad medic jobs should be available, and total medics in squads should be 8.
-	if(H.job != JOB_SQUAD_MARINE && H.job != "Reinforcements")
+	var/marine_role = roles_for_squad[H.job] //This gets us the mapped name, so we can better make an educated guess of where they belong.
+	if(marine_role != JOB_SQUAD_MARINE && marine_role != "Reinforcements")
 		var/pref_squad_name
 		if(H && H.client && H.client.prefs.preferred_squad && H.client.prefs.preferred_squad != "None")
 			pref_squad_name = H.client.prefs.preferred_squad
 
 		var/datum/squad/lowest
 
-		switch(H.job)
+		switch(marine_role)
 			if(JOB_SQUAD_ENGI)
 				for(var/datum/squad/S in mixed_squads)
 					if(S.usable && S.roundstart)
@@ -703,8 +706,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 						if(!lowest)
 							lowest = S
 		if(!lowest)
-			var/ranpick = rand(1,4)
-			lowest = mixed_squads[ranpick]
+			var/len = length(mixed_squads)
+			if(len) //Let's check to see we even have choices.
+				len = rand(1,len) //More of a fallback; rand() should not be higher than the list length, otherwise it will runtime.
+				lowest = mixed_squads[len]
 		if(lowest) lowest.put_marine_in_squad(H)
 		else to_chat(H, "Something went badly with randomize_squad()! Tell a coder!")
 

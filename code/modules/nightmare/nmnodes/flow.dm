@@ -21,7 +21,6 @@
 		node.invoke(context)
 	return TRUE
 
-
 /// Same as branch, but load node data from another included file
 /datum/nmnode/branch/include
 	id = "include"
@@ -71,6 +70,18 @@
 			pickables[node] = node.raw["weight"]
 	var/list/datum/nmnode/picked = list()
 	var/remaining = src.amount
+
+	/*
+	Here we catalogue all of the possible combinations.
+	scenario_def isn't resolved until it's picked in context, which means the other scenarios are not resolved.
+	Ideally, this would plug into New() or something like that, to grab all of the values without having to
+	iterate during picker/resolve().
+	Considering that /picker is the only method for gaining scenario values at the moment, it's probably fine here.
+	But in the future it may need to move.
+	*/
+	for(var/datum/nmnode/scenario_def/def in pickables) //It might not be a scenario_def, so we have to be sure.
+		def.catalogue(context)
+
 #if defined(UNIT_TESTS)
 	remaining = length(pickables) // Force all to be picked for testing (this could potentially make false positives though)
 #endif

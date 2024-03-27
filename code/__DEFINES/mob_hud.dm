@@ -50,7 +50,9 @@
 #define TRACKER_FTL "track_ftl"
 #define TRACKER_LZ "track_lz"
 #define TRACKER_CO "track_co"
+#define TRACKER_OCO "track_oco"
 #define TRACKER_XO "track_xo"
+#define TRACKER_AO "track_ao"
 #define TRACKER_CL "track_cl"
 #define TRACKER_PLTCO "track_pltco"
 
@@ -60,6 +62,8 @@
 #define TRACKER_DSL "_dsl" // Delta Squad Leader
 #define TRACKER_ESL "_esl" // Echo Squad Leader
 #define TRACKER_FSL "_fsl" // Cryo Squad Leader
+#define TRACKER_GFSL "_gfsl" // Ground Squad One Leader
+#define TRACKER_GSSL "_gssl" // Ground Squad Two Leader
 
 //for tracking the queen/hivecore on xeno locator huds
 #define TRACKER_QUEEN "Queen"

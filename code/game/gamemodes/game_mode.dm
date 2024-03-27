@@ -69,13 +69,21 @@ var/global/cas_tracking_id_increment = 0 //this var used to assign unique tracki
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/proc/pre_setup()
 	SHOULD_CALL_PARENT(TRUE)
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 	setup_structures()
 	if(static_comms_amount)
 		spawn_static_comms()
 	if(corpses_to_spawn)
 		generate_corpses()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MODE_PRESETUP)
-	return 1
+	return TRUE
+
+///Signal proc for alien AI specifically.
+/datum/game_mode/proc/handle_xeno_spawn(datum/source, mob/living/carbon/xenomorph/spawning_xeno, ai_hard_off = FALSE)
+	SIGNAL_HANDLER
+
+	return !ai_hard_off && spawning_xeno.make_ai()
 
 ///Triggered partway through the first drop, based on DROPSHIP_DROP_MSG_DELAY. Marines are underway but haven't yet landed.
 /datum/game_mode/proc/ds_first_drop(obj/docking_port/mobile/marine_dropship)
@@ -133,7 +141,7 @@ var/global/cas_tracking_id_increment = 0 //this var used to assign unique tracki
 		round_statistics.track_round_end()
 	log_game("Round end result: [round_finished]")
 	to_chat_spaced(world, margin_top = 2, type = MESSAGE_TYPE_SYSTEM, html = SPAN_ROUNDHEADER("|Round Complete|"))
-	to_chat_spaced(world, type = MESSAGE_TYPE_SYSTEM, html = SPAN_ROUNDBODY("Thus ends the story of the brave men and women of the [MAIN_SHIP_NAME] and their struggle on [SSmapping.configs[GROUND_MAP].map_name].\nThe game-mode was: [master_mode]!\n[CONFIG_GET(string/endofroundblurb)]"))
+	to_chat_spaced(world, type = MESSAGE_TYPE_SYSTEM, html = SPAN_ROUNDBODY("Thus ends the story of the brave men and women [flags_round_type & MODE_GROUND_ONLY ? null : "of the [MAIN_SHIP_NAME] and their struggle "]on [SSmapping.configs[GROUND_MAP].map_name].\nThe game-mode was: [src]!\n[CONFIG_GET(string/endofroundblurb)]"))
 
 /datum/game_mode/proc/declare_completion()
 	if(round_statistics)

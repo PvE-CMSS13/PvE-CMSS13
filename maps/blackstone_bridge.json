@@ -1,0 +1,13 @@
+{
+    "map_name": "Blackstone Bridge",
+    "map_path": "map_files/Blackstone_Bridge",
+    "map_file": "Blackstone_Bridge.dmm",
+    "short_name": "Blackstone",
+    "webmap_url": "WhiskeyOutpost",
+    "map_item_type": "/obj/item/map/whiskey_outpost_map",
+    "nightmare_path": "maps/Nightmare/maps/Blackstone_Bridge/",
+    "camouflage": "desert",
+    "gamemodes": [
+	"Distress Signal: Lowpop"
+    ]
+}

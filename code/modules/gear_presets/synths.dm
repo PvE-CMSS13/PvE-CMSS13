@@ -7,9 +7,9 @@
 
 	minimap_icon = "synth"
 
-/datum/equipment_preset/synth/New()
+/datum/equipment_preset/synth/New(access_override)
 	. = ..()
-	access = get_access(ACCESS_LIST_GLOBAL)
+	access = access_override ? access_override : get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/synth/load_race(mob/living/carbon/human/new_human)
 	if(new_human.client?.prefs?.synthetic_type)
@@ -99,6 +99,55 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/tan(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/synth/uscm/wo/ai
+	name = "WO Maintenance Synthetic"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND_WO
+
+/datum/equipment_preset/synth/uscm/wo/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/synth/uscm_ground
+	name = "USCM Outpost Maintenance Synthetic"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	faction = FACTION_USCM_GROUND
+	idtype = /obj/item/card/id/gold
+	assignment = JOB_USCM_GROUND_SYNTH
+	rank = "Synthetic"
+	role_comm_title = "Syn"
+
+/datum/equipment_preset/synth/uscm_ground/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/uscm_ground/cmd/synth(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+
+/datum/equipment_preset/synth/uscm_ground/New()
+	. = ..(list(
+		ACCESS_USCM_GROUND_GENERAL,
+		ACCESS_USCM_GROUND_MAINT,
+		ACCESS_USCM_GROUND_SYNTH,
+		ACCESS_USCM_GROUND_MEDICAL,
+		ACCESS_USCM_GROUND_GUEST,
+		ACCESS_USCM_GROUND_WAREHOUSE,
+		ACCESS_USCM_GROUND_COMMAND,
+		ACCESS_USCM_GROUND_CHECKPOINT,
+		ACCESS_USCM_GROUND_PLATOONL
+		))
 
 //*****************************************************************************************************/
 

@@ -45,18 +45,18 @@ SUBSYSTEM_DEF(nightmare)
 	if(!initialized)
 		message_admins("Nightmare subsystem is performing prepare_game prior to initialization! No nightmare inserts will be loaded.")
 
-	if(stat == NIGHTMARE_STATUS_DONE)
-		return TRUE
-	if(stat == NIGHTMARE_STATUS_RUNNING)
-		return FALSE
-	if(stat == NIGHTMARE_STATUS_STANDBY)
-		start_time = world.time
-		stat = NIGHTMARE_STATUS_RUNNING
+	switch(stat)
+		if(NIGHTMARE_STATUS_DONE) return TRUE
+		if(NIGHTMARE_STATUS_RUNNING) return FALSE
+		if(NIGHTMARE_STATUS_STANDBY)
+			start_time = world.time
+			stat = NIGHTMARE_STATUS_RUNNING
+
 	. = FALSE
 	for(var/context_name in contexts)
 		if(stat != NIGHTMARE_STATUS_RUNNING)
 			return TRUE // Panic Abort
-		set_scenario_value("gamemode", GLOB.master_mode) // Architectural pitfall - Hope it doesn't change during setup :(
+		set_scenario_value("gamemode", GLOB.master_mode, NIGHTMARE_CTX_GLOBAL) // Architectural pitfall - Hope it doesn't change during setup :(
 		var/datum/nmcontext/context = contexts[context_name]
 		var/datum/nmnode/root = roots["[context_name]-[NIGHTMARE_ACT_BASE]"]
 		if(root)
@@ -83,14 +83,24 @@ SUBSYSTEM_DEF(nightmare)
 	load_file("[MC.nightmare_path]/[NIGHTMARE_FILE_BASE]", "[context_name]-[NIGHTMARE_ACT_BASE]")
 	log_debug("Nightmare: Loaded map environment {[context_name],[map_type]}")
 
-/// Returns a value from the global scenario
-/datum/controller/subsystem/nightmare/proc/get_scenario_value(name)
-	var/datum/nmcontext/context = contexts[NIGHTMARE_CTX_GLOBAL]
+/// Returns a value from stype scenario. Possible scenario types are defined in nightmare.dm in __DEFINES. NIGHTMARE_CTX_GLOBAL would be global scenario.
+/datum/controller/subsystem/nightmare/proc/get_scenario_value(name, stype)
+	var/datum/nmcontext/context = contexts[stype]
 	return context.get_scenario_value(name)
 
-/// Override a value from the global scenario.
-/datum/controller/subsystem/nightmare/proc/set_scenario_value(name, value)
-	var/datum/nmcontext/context = contexts[NIGHTMARE_CTX_GLOBAL]
+/// Returns a list of all currently set values for the scenario.
+/datum/controller/subsystem/nightmare/proc/get_scenario_list(stype)
+	var/datum/nmcontext/context = contexts[stype]
+	return context.scenario
+
+/// Returns all scenario keys and their possible values for that stype as an associated list of lists.
+/datum/controller/subsystem/nightmare/proc/get_directory(stype)
+	var/datum/nmcontext/context = contexts[stype]
+	return context.directory
+
+/// Override a value from stype scenario.
+/datum/controller/subsystem/nightmare/proc/set_scenario_value(name, value, stype)
+	var/datum/nmcontext/context = contexts[stype]
 	return context.set_scenario_value(name, value)
 
 /// Reads a JSON file, returns a branch nmnode representing contents of file

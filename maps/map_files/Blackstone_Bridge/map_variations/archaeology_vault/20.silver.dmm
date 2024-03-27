@@ -1,0 +1,218 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground)
+"c" = (
+/obj/effect/decal/remains/human{
+	pixel_y = -5;
+	pixel_x = 1
+	},
+/obj/item/stack/sheet/mineral/silver/small_stack{
+	pixel_x = 1;
+	pixel_y = 10
+	},
+/obj/item/stack/sheet/mineral/silver/small_stack{
+	pixel_y = 15
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"h" = (
+/obj/item/coin/silver{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/coin/silver{
+	pixel_x = -1
+	},
+/obj/item/coin/silver{
+	pixel_x = -9
+	},
+/obj/item/coin/silver{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/obj/item/coin/silver{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"q" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/item/coin/silver{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"r" = (
+/obj/effect/decal/remains/human{
+	pixel_y = -5;
+	pixel_x = 1
+	},
+/obj/item/coin/silver{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/obj/item/coin/silver{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"u" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/remains/human{
+	pixel_x = -9;
+	pixel_y = 3
+	},
+/obj/item/coin/silver{
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/obj/item/ore/silver{
+	pixel_y = -5
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"w" = (
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"z" = (
+/obj/item/stack/sheet/mineral/silver/small_stack{
+	pixel_x = 1;
+	pixel_y = 10
+	},
+/obj/item/stack/sheet/mineral/silver/small_stack{
+	pixel_y = 15
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"B" = (
+/obj/item/ore/silver{
+	pixel_y = -5
+	},
+/obj/item/ore/silver{
+	pixel_y = -5
+	},
+/obj/item/ore/silver{
+	pixel_y = 8;
+	pixel_x = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"C" = (
+/turf/closed/wall/mineral/silver,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"M" = (
+/turf/closed/wall/mineral/sandstone/runed/decor,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"P" = (
+/obj/item/ore/silver{
+	pixel_y = -5
+	},
+/obj/item/ore/silver{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"R" = (
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/sandstone/runed{
+	name = "Strange Temple"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"V" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"Y" = (
+/obj/effect/decal/remains/human{
+	pixel_y = 2;
+	pixel_x = -4
+	},
+/obj/item/coin/silver{
+	pixel_x = 7
+	},
+/obj/item/coin/silver{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+C
+C
+C
+C
+a
+"}
+(3,1,1) = {"
+M
+B
+V
+u
+P
+C
+a
+"}
+(4,1,1) = {"
+R
+w
+V
+h
+z
+C
+a
+"}
+(5,1,1) = {"
+M
+c
+q
+Y
+r
+C
+a
+"}
+(6,1,1) = {"
+a
+a
+C
+C
+C
+C
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

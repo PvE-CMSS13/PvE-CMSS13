@@ -1,0 +1,166 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/prop/brazier/frame/full/torch{
+	pixel_y = 28
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"m" = (
+/obj/item/weapon/twohanded/yautja/glaive,
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"n" = (
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 4
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed,
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/machinery/door/airlock/sandstone/runed{
+	name = "Strange Temple"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"B" = (
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground)
+"C" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"D" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/platform/mineral/sandstone/runed,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"E" = (
+/obj/structure/showcase{
+	desc = "An ancient, dusty tomb with strange alien writing. It's best not to touch it.";
+	icon_state = "yaut";
+	name = "alien sarcophagus"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"F" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"I" = (
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"M" = (
+/turf/closed/wall/mineral/sandstone/runed/decor,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"V" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_solo_cap";
+	dir = 1;
+	color = "#b29082"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+(2,1,1) = {"
+B
+B
+I
+I
+I
+I
+B
+"}
+(3,1,1) = {"
+M
+a
+E
+D
+E
+I
+B
+"}
+(4,1,1) = {"
+n
+F
+F
+C
+V
+m
+B
+"}
+(5,1,1) = {"
+M
+a
+E
+D
+E
+I
+B
+"}
+(6,1,1) = {"
+B
+B
+I
+I
+I
+I
+B
+"}
+(7,1,1) = {"
+B
+B
+B
+B
+B
+B
+B
+"}

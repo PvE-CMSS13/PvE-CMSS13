@@ -62,6 +62,7 @@
 
 #define AMBIENCE_SHIP 'sound/ambience/shipambience.ogg'
 #define AMBIENCE_JUNGLE 'sound/ambience/ambienceLV624.ogg'
+#define AMBIENCE_DENSE_JUNGLE 'sound/ambience/jungle_amb1.ogg'
 #define AMBIENCE_RIVER  'sound/ambience/ambienceriver.ogg'
 #define AMBIENCE_MALL 'sound/ambience/medbay1.ogg'
 #define AMBIENCE_CAVE 'sound/ambience/desert.ogg'

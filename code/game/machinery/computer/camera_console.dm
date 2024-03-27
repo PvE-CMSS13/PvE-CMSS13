@@ -341,6 +341,21 @@
 /obj/structure/machinery/computer/cameras/almayer_network/vehicle
 	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_VEHICLE)
 
+/obj/structure/machinery/computer/cameras/uscm_ground
+	desc = "A computer console linked to all outpost camera feeds."
+	network = list(CAMERA_NET_USCM_GROUND, CAMERA_NET_USCM_GROUND_WEST, CAMERA_NET_USCM_GROUND_EAST)
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+
+/obj/structure/machinery/computer/cameras/uscm_ground/checkpoint
+	name = "checkpoint camera console"
+	desc = "A computer console linked to a security checkpoint feed."
+	dir = EAST
+	network = list(CAMERA_NET_USCM_GROUND_WEST)
+	req_access = list(ACCESS_USCM_GROUND_CHECKPOINT)
+
+/obj/structure/machinery/computer/cameras/uscm_ground/checkpoint/east
+	network = list(CAMERA_NET_USCM_GROUND_EAST)
+
 /obj/structure/machinery/computer/cameras/mortar
 	name = "Mortar Camera Interface"
 	alpha = 0

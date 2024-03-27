@@ -260,9 +260,7 @@
 		if("bulb")
 			switch(dir)
 				if(NORTH)
-					pixel_y = 10
-				if(SOUTH)
-					pixel_y = -10
+					pixel_y = 23
 				if(EAST)
 					pixel_x = 10
 				if(WEST)

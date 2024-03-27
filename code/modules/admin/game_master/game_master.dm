@@ -117,7 +117,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_USCM_GROUND, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_USCM_GROUND, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 

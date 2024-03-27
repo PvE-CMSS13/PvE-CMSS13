@@ -113,11 +113,30 @@
 	desc = "A secure storage unit for a squad sergeant."
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_TL_PREP)
 
+/obj/structure/closet/secure_closet/squad_sergeant/uscm_ground
+	name = "squad lead locker"
+	desc = "A secure storage unit for an outpost squad leader."
+	req_one_access = null
+	density = FALSE
+
+/obj/structure/closet/secure_closet/squad_sergeant/uscm_ground/one/Initialize()
+	. = ..()
+	req_access = list(ACCESS_USCM_GROUND_TLPREP, ACCESS_USCM_GROUND_PLATOON_ONE)
+	name = "[name] - [uppertext(SQUAD_USCM_GROUND_1)]"
+	desc = "[desc] [uppertext(SQUAD_USCM_GROUND_1)] platoon."
+
+/obj/structure/closet/secure_closet/squad_sergeant/uscm_ground/two/Initialize()
+	. = ..()
+	req_access = list(ACCESS_USCM_GROUND_TLPREP, ACCESS_USCM_GROUND_PLATOON_TWO)
+	name = "[name] - [uppertext(SQUAD_USCM_GROUND_2)]"
+	desc = "[desc] [uppertext(SQUAD_USCM_GROUND_2)] platoon."
+
 /obj/structure/closet/secure_closet/squad_sergeant/Initialize()
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/rto(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/whistle(src)
+	new /obj/item/device/flash(src) //The boys have to diffuse some situations.
 
 /obj/structure/closet/secure_closet/squad_sergeant_forecon
 	name = "assistant squad leader locker"
@@ -133,6 +152,23 @@
 	name = "smartgunner locker"
 	desc = "A secure storage unit for a smartgunner."
 	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/closet/secure_closet/smartgunner/uscm_ground
+	req_one_access = null
+	desc = "A secure storage unit for an outpost smartgunner."
+	density = FALSE
+
+/obj/structure/closet/secure_closet/smartgunner/uscm_ground/one/Initialize()
+	. = ..()
+	req_access = list(ACCESS_USCM_GROUND_SMARTPREP, ACCESS_USCM_GROUND_PLATOON_ONE)
+	name = "[name] - [uppertext(SQUAD_USCM_GROUND_1)]"
+	desc = "[desc] [uppertext(SQUAD_USCM_GROUND_1)] platoon."
+
+/obj/structure/closet/secure_closet/smartgunner/uscm_ground/two/Initialize()
+	. = ..()
+	req_access = list(ACCESS_USCM_GROUND_SMARTPREP, ACCESS_USCM_GROUND_PLATOON_TWO)
+	name = "[name] - [uppertext(SQUAD_USCM_GROUND_2)]"
+	desc = "[desc] [uppertext(SQUAD_USCM_GROUND_2)] platoon."
 
 /obj/structure/closet/secure_closet/smartgunner/Initialize()
 	. = ..()

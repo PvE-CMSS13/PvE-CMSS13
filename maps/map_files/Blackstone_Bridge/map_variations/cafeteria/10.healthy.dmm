@@ -1,0 +1,241 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/item/reagent_container/food/drinks/bottle/orangejuice{
+	layer = 3.1;
+	pixel_x = 6;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/bottle/orangejuice{
+	layer = 3.1;
+	pixel_x = -4;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/bottle/orangejuice{
+	layer = 3.1;
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/bottle/orangejuice{
+	layer = 3.1;
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/structure/surface/table,
+/turf/template_noop,
+/area/template_noop)
+"f" = (
+/obj/item/tool/kitchen/tray{
+	pixel_y = 9
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/grown/orange{
+	pixel_y = 5;
+	pixel_x = -9
+	},
+/obj/item/reagent_container/food/snacks/watermelonslice{
+	pixel_x = 4;
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/snacks/grown/lemon{
+	pixel_y = 4;
+	pixel_x = 7
+	},
+/turf/template_noop,
+/area/template_noop)
+"j" = (
+/obj/structure/surface/table,
+/obj/item/newspaper{
+	pixel_x = -12;
+	pixel_y = 8
+	},
+/obj/item/tool/kitchen/utensil/pknife{
+	pixel_y = 5;
+	pixel_x = -1
+	},
+/obj/item/tool/kitchen/utensil/pfork{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/template_noop,
+/area/template_noop)
+"m" = (
+/obj/item/tool/kitchen/tray{
+	pixel_y = 9
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/breadslice{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/snacks/breadslice{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/snacks/omelette{
+	pixel_x = -31;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/snacks/meat/fish{
+	pixel_y = 6;
+	pixel_x = -7
+	},
+/obj/item/reagent_container/food/snacks/egg{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/template_noop,
+/area/template_noop)
+"o" = (
+/obj/item/reagent_container/food/drinks/milk{
+	pixel_y = 11
+	},
+/obj/item/reagent_container/food/drinks/soymilk{
+	pixel_y = 11;
+	pixel_x = 11
+	},
+/obj/structure/surface/table,
+/obj/item/storage/box/cups{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/template_noop,
+/area/template_noop)
+"u" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/carrotcakeslice{
+	pixel_y = 13
+	},
+/obj/item/tool/kitchen/utensil/pknife{
+	pixel_x = 16;
+	pixel_y = 6
+	},
+/turf/template_noop,
+/area/template_noop)
+"y" = (
+/obj/item/tool/kitchen/tray{
+	pixel_y = 9
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/applepie{
+	pixel_y = 7
+	},
+/obj/item/tool/kitchen/utensil/pspoon{
+	pixel_x = 17
+	},
+/turf/template_noop,
+/area/template_noop)
+"z" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/tomatosoup{
+	pixel_y = 10;
+	pixel_x = 1
+	},
+/turf/template_noop,
+/area/template_noop)
+"B" = (
+/turf/template_noop,
+/area/template_noop)
+"C" = (
+/obj/structure/surface/table,
+/obj/item/storage/box/condimentbottles{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/reagent_container/food/snacks/orangecakeslice{
+	pixel_y = -8
+	},
+/turf/template_noop,
+/area/template_noop)
+"O" = (
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/validsalad{
+	pixel_y = 4
+	},
+/turf/template_noop,
+/area/template_noop)
+"S" = (
+/obj/item/tool/kitchen/tray{
+	pixel_y = 9
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/grown/apple{
+	pixel_y = 9;
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/snacks/grown/banana{
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/snacks/grown/cherries{
+	pixel_y = 4;
+	pixel_x = 10
+	},
+/turf/template_noop,
+/area/template_noop)
+"V" = (
+/obj/item/tool/kitchen/tray{
+	pixel_y = 9
+	},
+/obj/structure/surface/table,
+/obj/item/reagent_container/food/snacks/meat/fish/squid/alt{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/snacks/meat/fish/crab{
+	pixel_x = -1;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/snacks/meat/fish/crab/shelled{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+B
+B
+B
+B
+o
+V
+"}
+(2,1,1) = {"
+B
+B
+B
+B
+a
+j
+"}
+(3,1,1) = {"
+y
+z
+B
+B
+B
+B
+"}
+(4,1,1) = {"
+O
+f
+B
+B
+B
+B
+"}
+(5,1,1) = {"
+B
+B
+B
+B
+S
+u
+"}
+(6,1,1) = {"
+B
+B
+B
+B
+C
+m
+"}

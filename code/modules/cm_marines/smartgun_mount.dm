@@ -1091,17 +1091,29 @@
 /obj/structure/machinery/m56d_hmg/mg_turret //Our mapbound version with stupid amounts of ammo.
 	name = "\improper scoped M56D heavy machine gun nest"
 	desc = "A scoped M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. Drag its sprite onto yourself to man it. Ctrl-click it to toggle burst fire."
+	icon_state = "towergun"
+	icon_full = "towergun"
+	icon_empty = "towergun"
 	fire_delay = 2
-	rounds = 1500
-	rounds_max = 1500
+	rounds = 1400
+	rounds_max = 1400
 	locked = 1
 	projectile_coverage = PROJECTILE_COVERAGE_HIGH
-	icon = 'icons/turf/whiskeyoutpost.dmi'
 	zoom = 1
+
+/obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve
+	rounds = 700 //I don't want them to have stupid amounts of ammo.
+
+/obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve/folding //folding barricade version.
+	desc = "A scoped M56D heavy machine gun mounted behind a metal shield. Drag its sprite onto yourself to man it. Ctrl-click it to toggle burst fire."
+	icon_state = "towergun_folding"
+	icon_full = "towergun_folding"
+	icon_empty = "towergun_folding"
 
 /obj/structure/machinery/m56d_hmg/mg_turret/dropship
 	name = "\improper scoped M56D heavy machine gun"
 	desc = "A scoped M56D heavy machine gun mounted behind a metal shield. Drag its sprite onto yourself to man it. Ctrl-click it to toggle burst fire."
+	icon_state = "towergun_folding"
 	icon_full = "towergun_folding"
 	icon_empty = "towergun_folding"
 	var/obj/structure/dropship_equipment/mg_holder/deployment_system

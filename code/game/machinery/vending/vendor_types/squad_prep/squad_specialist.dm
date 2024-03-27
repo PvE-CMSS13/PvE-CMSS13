@@ -51,6 +51,22 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 /obj/structure/machinery/cm_vending/gear/spec/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_spec
 
+/obj/structure/machinery/cm_vending/gear/spec/uscm_ground
+	//We're old school here.
+	show_points = TRUE
+	vendor_role = null
+	req_access = list(ACCESS_USCM_GROUND_SPECPREP)
+	req_access = null
+//	use_snowflake_points = FALSE
+	vend_flags = VEND_TO_HAND|VEND_LIMITED_INVENTORY|VEND_CLUTTER_PROTECTION
+
+/obj/structure/machinery/cm_vending/gear/spec/uscm_ground/get_listed_products(mob/user)
+	listed_products = list(
+		list("WEAPONS SPECIALIST SETS", -1, null, null, null),
+		list("B18 Personal Defense Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/B18, null, VENDOR_ITEM_REGULAR),
+		list("Sapper and Custom Turret Set", MARINE_TOTAL_SNOWFLAKE_POINTS, /obj/item/storage/box/spec/sapper, null, VENDOR_ITEM_REGULAR),
+		)
+	return listed_products
 
 //------------CLOTHING VENDOR---------------
 

@@ -54,6 +54,10 @@
 	icon_state = "pamphlet_construction"
 	trait = /datum/character_trait/skills/miniengie
 
+/obj/item/pamphlet/skill/engineer/sapper
+	name = "sapper instructional pamphlet"
+	trait = /datum/character_trait/skills/miniengie/sapper
+
 /obj/item/pamphlet/skill/jtac
 	name = "JTAC instructional pamphlet"
 	desc = "A pamphlet used to quickly impart vital knowledge. This one has the image of a radio on it."

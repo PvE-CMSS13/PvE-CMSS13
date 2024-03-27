@@ -30,6 +30,8 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
+#define SKILL_UNSKILLED 0
+
 //firearms skill (general knowledge of guns) (hidden skill)
 //increase or decrase accuracy, recoil, and firing delay of rifles and smgs.
 #define SKILL_FIREARMS_CIVILIAN 0  //civilian

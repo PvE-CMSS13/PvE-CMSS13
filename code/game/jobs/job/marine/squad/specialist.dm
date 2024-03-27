@@ -1,5 +1,6 @@
 /datum/job/marine/specialist
 	title = JOB_SQUAD_SPECIALIST
+	squad_root_title = JOB_SQUAD_SPECIALIST
 	total_positions = 4
 	spawn_positions = 4
 	allow_additional = 1
@@ -23,6 +24,27 @@
 		total_positions_so_far = positions
 	return positions
 
+
+/datum/job/marine/specialist/uscm_ground
+	scaled = FALSE
+	total_positions = 2
+	scaled = FALSE
+
+/datum/job/marine/specialist/uscm_ground/set_spawn_positions(count)
+
+/datum/job/marine/specialist/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_SPECIALIST
+	total_positions = 2
+	spawn_positions = 2
+	scaled = FALSE
+	gear_preset = /datum/equipment_preset/uscm/spec/uscm_ground
+	entry_message_body = "You have received specialized training to field test unique, experimental loadouts. You can serve a variety of roles, so decide accordingly."
+
+/datum/job/marine/smartgunner/uscm_ground/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/smartgunner/uscm_ground/get_total_positions(latejoin = FALSE)
+	return latejoin ? total_positions : spawn_positions
 
 /datum/job/marine/specialist/whiskey
 	title = JOB_WO_SQUAD_SPECIALIST
@@ -53,3 +75,7 @@ AddTimelock(/datum/job/marine/specialist, list(
 /obj/effect/landmark/start/marine/spec/delta
 	icon_state = "spec_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/spec/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_SPECIALIST
+	job = /datum/job/marine/specialist/uscm_ground

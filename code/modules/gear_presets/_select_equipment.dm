@@ -3,6 +3,7 @@
 #define EQUIPMENT_PRESET_EXTRA (1<<1)
 #define EQUIPMENT_PRESET_START_OF_ROUND_WO (1<<2)
 #define EQUIPMENT_PRESET_MARINE (1<<3)
+#define EQUIPMENT_PRESET_GROUND (1<<4)
 
 /datum/equipment_preset
 	var/name = "Preset"
@@ -171,12 +172,9 @@
 
 /datum/equipment_preset/proc/do_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	var/turf/T = get_turf(new_human)
-	if(!T)
-		return
-	if(is_mainship_level(T.z))
-		spawn_vanity_in_personal_lockers(new_human, mob_client)
-	else
-		load_vanity(new_human, mob_client)
+	if(!T) return
+	//Should be fine if it's not on the ship, so long as the z levels match. Could be some edge cases, but it should overall be fine.
+	spawn_vanity_in_personal_lockers(new_human, mob_client, T)
 
 /datum/equipment_preset/proc/load_vanity(mob/living/carbon/human/new_human, client/mob_client)
 	if(!new_human.client || !new_human.client.prefs || !new_human.client.prefs.gear)
@@ -258,15 +256,18 @@
 
 GLOBAL_LIST_EMPTY(personal_closets)
 
-/datum/equipment_preset/proc/spawn_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/proc/spawn_vanity_in_personal_lockers(mob/living/carbon/human/new_human, client/mob_client, turf/T)
 	var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
 	if(!new_human?.client?.prefs?.gear)
 		return//We want to equip them with custom stuff second, after they are equipped with everything else.
-	for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets)
-		if(closet.owner)
-			continue
-		if(new_human.job != closet.job)
-			continue
+
+	var/obj/structure/closet/secure_closet/marine_personal/closet
+	for(var/i in GLOB.personal_closets)
+		closet = i //We don't need to type check.
+		if(T.z != closet.z) continue //Should be on the same z level. Might be a bit of weirdness if props spawn in before the mains.
+		if(closet.owner) continue //Has an owner already.
+		if(new_human.job != closet.job) continue //Not the same job.
+		if(closet.squad && ( !new_human.assigned_squad || new_human.assigned_squad.name != closet.squad ) ) continue //Expected a specific squad but didn't match.
 		closet.owner = new_human.real_name
 		closet_to_spawn_in = closet
 		closet_to_spawn_in.name = "[closet_to_spawn_in.owner]'s personal locker"

@@ -2,6 +2,7 @@
 	//The name of the job
 	var/title = ""  //The internal title for the job, used for the job ban system and so forth. Don't change these, change the disp_title instead.
 	var/disp_title  //Determined on new(). Usually the same as the title, but doesn't have to be. Set this to override what the player sees in the game as their title.
+	var/squad_root_title //Only for squad roles, maps their children to a root title for easier reference.
 	var/role_ban_alternative // If the roleban title needs to be an extra check, like Xenomorphs = Alien.
 
 	var/total_positions = 0 //How many players can be this job

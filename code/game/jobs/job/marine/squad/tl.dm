@@ -3,6 +3,7 @@
 
 /datum/job/marine/tl
 	title = JOB_SQUAD_TEAM_LEADER
+	squad_root_title = JOB_SQUAD_TEAM_LEADER
 	total_positions = 8
 	spawn_positions = 8
 	allow_additional = 1
@@ -19,6 +20,13 @@
 AddTimelock(/datum/job/marine/tl, list(
 	JOB_SQUAD_ROLES = 8 HOURS
 ))
+
+/datum/job/marine/tl/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
+	total_positions = 4
+	spawn_positions = 4
+	gear_preset = /datum/equipment_preset/uscm/tl/uscm_ground
+	entry_message_body = "You were deemed competent enough to lead a squad. Act accordingly. Make sure your squad stays together and accounted for. Report to the platoon leader and help them get the job done."
 
 /obj/effect/landmark/start/marine/tl
 	name = JOB_SQUAD_TEAM_LEADER
@@ -40,6 +48,10 @@ AddTimelock(/datum/job/marine/tl, list(
 /obj/effect/landmark/start/marine/tl/delta
 	icon_state = "tl_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/tl/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
+	job = /datum/job/marine/tl/uscm_ground
 
 /datum/job/marine/tl/ai
 	total_positions = 2

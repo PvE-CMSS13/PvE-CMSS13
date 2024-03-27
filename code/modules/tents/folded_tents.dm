@@ -133,6 +133,10 @@
 	desc = "A standard USCM Command Tent. This one comes equipped with a self-powered Overwatch Console and a Telephone. Unfold in a suitable location to maximize usefulness. Staff Officer not included. ENTRANCE TO THE SOUTH."
 	template_preset = "tent_cmd"
 
+/obj/item/folded_tent/cmd/ground
+	name = "folded USCM Officer Tent"
+	template_preset = "tent_officer"
+
 /obj/item/folded_tent/med
 	name = "folded USCM Medical Tent"
 	icon_state = "med"
@@ -144,6 +148,11 @@
 	icon_state = "req"
 	desc = "A standard USCM Requisitions Tent. Now, you can enjoy req line anywhere you go! Unfold in a suitable location to maximize resource distribution. ASRS not included. ENTRANCE TO THE SOUTH."
 	template_preset = "tent_reqs"
+
+/obj/item/folded_tent/reqs/ground
+	name = "folded USCM Supply Tent"
+	desc = "A standard USCM Supply Tent. Now you will have a dedicated place for all of your ammo, or just random stuff you have lying around! Unfold in a suitable location to maximize clutter. Logistics not included. ENTRANCE TO THE SOUTH."
+	template_preset = "tent_supply"
 
 /obj/item/folded_tent/big
 	name = "folded USCM Big Tent"

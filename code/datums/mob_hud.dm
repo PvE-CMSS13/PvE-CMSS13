@@ -191,8 +191,8 @@ var/list/datum/mob_hud/huds = list(
 	var/faction_to_check = FACTION_MARINE
 
 /datum/mob_hud/faction/add_to_single_hud(mob/user, mob/target)
-	var/faction = target.faction
-	if(faction == faction_to_check || isobserver(user) || isyautja(user))
+	var/datum/faction/F = get_faction(target.faction) //We'll grab the target faction: grouped hud types will reference a single faction.
+	if(F.faction_tag == faction_to_check || isobserver(user) || isyautja(user)) //The faction should match the one we referenced.
 		..()
 
 /datum/mob_hud/faction/upp

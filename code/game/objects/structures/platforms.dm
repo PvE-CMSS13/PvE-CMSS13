@@ -54,6 +54,9 @@
 	..()
 
 /obj/structure/platform/BlockedPassDirs(atom/movable/mover, target_dir)
+	if(istype(mover, /obj/vehicle/multitile))
+		return BLOCKED_MOVEMENT
+
 	var/obj/structure/S = locate(/obj/structure) in get_turf(mover)
 	if(S && S.climbable && !(S.flags_atom & ON_BORDER) && climbable && isliving(mover)) //Climbable objects allow you to universally climb over others
 		return NO_BLOCKED_MOVEMENT
@@ -97,13 +100,7 @@
 /obj/structure/platform_decoration/Initialize()
 	. = ..()
 	switch(dir)
-		if (NORTH)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTH)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTHEAST)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTHWEST)
+		if(NORTH, SOUTH, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
 			layer = ABOVE_MOB_LAYER+0.2
 
 /obj/structure/platform_decoration/initialize_pass_flags(datum/pass_flags_container/PF)

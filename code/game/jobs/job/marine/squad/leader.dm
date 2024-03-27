@@ -4,6 +4,7 @@
 
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
+	squad_root_title = JOB_SQUAD_LEADER
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the acting commanding officer"
@@ -19,6 +20,15 @@
 		gear_preset = gear_preset_secondary
 	else
 		gear_preset = initial(gear_preset)
+
+/datum/job/marine/leader/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_LEADER
+	supervisors = "outpost officers"
+	gear_preset = /datum/equipment_preset/uscm/leader/uscm_ground
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/uscm_ground/lesser_rank
+	total_positions = 2
+	spawn_positions = 2
+	entry_message_body = "You were deemed competent enough to lead a platoon, act accordingly. Make sure your platoon is at task, correct them if they are not. Delegate to your squad leaders, let them breathe. Communicate with officers in charge of the outpost and follow their instructions."
 
 /datum/job/marine/leader/whiskey
 	title = JOB_WO_SQUAD_LEADER
@@ -49,6 +59,14 @@ AddTimelock(/datum/job/marine/leader, list(
 /obj/effect/landmark/start/marine/leader/delta
 	icon_state = "leader_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/leader/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_LEADER
+	squad = SQUAD_USCM_GROUND_1
+	job = /datum/job/marine/leader/uscm_ground
+
+/obj/effect/landmark/start/marine/leader/uscm_ground/two
+	squad = SQUAD_USCM_GROUND_2
 
 /datum/job/marine/leader/ai
 	total_positions = 1

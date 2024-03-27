@@ -1,5 +1,4 @@
 /datum/equipment_preset/uscm_ship
-	name = "USCM (ship roles)"
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
 	minimum_age = 20

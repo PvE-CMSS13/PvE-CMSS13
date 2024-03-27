@@ -4,6 +4,7 @@
 
 /datum/job/marine/smartgunner
 	title = JOB_SQUAD_SMARTGUN
+	squad_root_title = JOB_SQUAD_SMARTGUN
 	total_positions = 4
 	spawn_positions = 4
 	allow_additional = 1
@@ -36,6 +37,21 @@
 	else
 		gear_preset = initial(gear_preset)
 
+/datum/job/marine/smartgunner/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	total_positions = 4
+	spawn_positions = 4
+	scaled = FALSE
+	gear_preset = /datum/equipment_preset/uscm/sg/uscm_ground
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/uscm_ground/lesser_rank
+	entry_message_body = "You got the big, mean killin' machine of a gun. But don't get too crazy, you're still human."
+
+/datum/job/marine/smartgunner/uscm_ground/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/smartgunner/uscm_ground/get_total_positions(latejoin = FALSE)
+	return latejoin ? total_positions : spawn_positions
+
 /datum/job/marine/smartgunner/whiskey
 	title = JOB_WO_SQUAD_SMARTGUNNER
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
@@ -65,6 +81,10 @@ AddTimelock(/datum/job/marine/smartgunner, list(
 /obj/effect/landmark/start/marine/smartgunner/delta
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/smartgunner/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	job = /datum/job/marine/smartgunner/uscm_ground
 
 /datum/job/marine/smartgunner/ai
 	total_positions = 2

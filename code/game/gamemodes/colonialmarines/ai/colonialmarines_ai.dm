@@ -32,7 +32,6 @@
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/pre_setup()
-	RegisterSignal(SSdcs, COMSIG_GLOB_XENO_SPAWN, PROC_REF(handle_xeno_spawn))
 	squad_limit.Cut()
 	squad_limit += MAIN_SHIP_PLATOON
 	for(var/i in squad_limit)
@@ -62,13 +61,6 @@
 
 /datum/game_mode/colonialmarines/ai/end_round_message()
 	return ..()
-
-/datum/game_mode/colonialmarines/ai/proc/handle_xeno_spawn(datum/source, mob/living/carbon/xenomorph/spawning_xeno, ai_hard_off = FALSE)
-	SIGNAL_HANDLER
-	if(ai_hard_off)
-		return
-
-	spawning_xeno.make_ai()
 
 /datum/game_mode/colonialmarines/ai/check_win()
 	if(!game_started || round_finished || SSticker.current_state != GAME_STATE_PLAYING)

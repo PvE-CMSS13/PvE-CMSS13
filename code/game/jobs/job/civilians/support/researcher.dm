@@ -31,7 +31,34 @@ AddTimelock(/datum/job/civilian/researcher, list(
 	JOB_MEDIC_ROLES = 5 HOURS
 ))
 
+
+/datum/job/civilian/researcher/uscm_ground
+	title = JOB_USCM_GROUND_CIVILIAN
+	scaled = FALSE
+	supervisors = "greater scientific community"
+	gear_preset = /datum/equipment_preset/uscm_ground/civilian
+	entry_message_body = null
+
+/datum/job/civilian/researcher/uscm_ground/generate_entry_message()
+	entry_message_body =  {"You are a visiting scientific expert, conducting studies around [SSmapping.configs[GROUND_MAP].map_name] outpost.
+You have been graciously housed and fed by the USCM for the duration of your visit through a substantial government grant.
+You are not a military asset, but you are expected to follow military rules and regulations; you have guest access to the outpost, but it is fairly limited.
+Keep your head down, study the local environment as befit your expertise, and further the reaches of science and reason.
+While you may defend yourself if needed, the outpost houses marines who are far better trained and equipped to do the fighting for you."}
+
+	return ..()
+
+/datum/job/civilian/researcher/uscm_ground/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/civilian/researcher/uscm_ground/get_total_positions(latejoin = FALSE)
+	return latejoin ? total_positions : spawn_positions
+
 /obj/effect/landmark/start/researcher
 	name = JOB_RESEARCHER
 	icon_state = "res_spawn"
 	job = /datum/job/civilian/researcher
+
+/obj/effect/landmark/start/researcher/uscm_ground
+	name = JOB_USCM_GROUND_CIVILIAN
+	job = /datum/job/civilian/researcher/uscm_ground

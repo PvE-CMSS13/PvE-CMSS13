@@ -115,9 +115,11 @@
 
 	if(!current_squad)
 		data["squad_list"] = list()
+		data["overwatch_color"] = list()
 		for(var/datum/squad/current_squad in RoleAuthority.squads)
 			if(current_squad.active && !current_squad.overwatch_officer && current_squad.faction == faction && current_squad.name != "Root")
 				data["squad_list"] += current_squad.name
+				data["overwatch_color"] += list(current_squad.name = current_squad.overwatch_color)
 		return data
 
 	data["current_squad"] = current_squad.name
@@ -587,9 +589,6 @@
 	if(current_squad.squad_leader)
 		current_squad.send_message("Attention: [current_squad.squad_leader] is [current_squad.squad_leader.stat == DEAD ? "stepping down" : "demoted"]. A new Squad Leader has been set: [selected_sl.real_name].")
 		visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("Squad Leader [current_squad.squad_leader] of squad '[current_squad]' has been [current_squad.squad_leader.stat == DEAD ? "replaced" : "demoted and replaced"] by [selected_sl.real_name]! Logging to enlistment files.")]")
-		var/old_lead = current_squad.squad_leader
-		current_squad.demote_squad_leader(current_squad.squad_leader.stat != DEAD)
-		SStracking.start_tracking(current_squad.tracking_id, old_lead)
 	else
 		current_squad.send_message("Attention: A new Squad Leader has been set: [selected_sl.real_name].")
 		visible_message("[icon2html(src, viewers(src))] [SPAN_BOLDNOTICE("[selected_sl.real_name] is the new Squad Leader of squad '[current_squad]'! Logging to enlistment file.")]")
@@ -597,34 +596,7 @@
 	to_chat(selected_sl, "[icon2html(src, selected_sl)] <font size='3' color='blue'><B>Overwatch: You've been promoted to \'[selected_sl.job == JOB_SQUAD_LEADER ? "SQUAD LEADER" : "ACTING SQUAD LEADER"]\' for [current_squad.name]. Your headset has access to the command channel (:v).</B></font>")
 	to_chat(user, "[icon2html(src, usr)] [selected_sl.real_name] is [current_squad]'s new leader!")
 
-	if(selected_sl.assigned_fireteam)
-		if(selected_sl == current_squad.fireteam_leaders[selected_sl.assigned_fireteam])
-			current_squad.unassign_ft_leader(selected_sl.assigned_fireteam, TRUE, FALSE)
-		current_squad.unassign_fireteam(selected_sl, FALSE)
-
-	current_squad.squad_leader = selected_sl
-	current_squad.update_squad_leader()
-	current_squad.update_free_mar()
-
-	SStracking.set_leader(current_squad.tracking_id, selected_sl)
-	SStracking.start_tracking("marine_sl", selected_sl)
-
-	if(selected_sl.job == JOB_SQUAD_LEADER)//a real SL
-		selected_sl.comm_title = "SL"
-	else //an acting SL
-		selected_sl.comm_title = "aSL"
-	ADD_TRAIT(selected_sl, TRAIT_LEADERSHIP, TRAIT_SOURCE_SQUAD_LEADER)
-
-	var/obj/item/device/radio/headset/almayer/marine/sl_headset = selected_sl.get_type_in_ears(/obj/item/device/radio/headset/almayer/marine)
-	if(sl_headset)
-		sl_headset.keys += new /obj/item/device/encryptionkey/squadlead/acting(sl_headset)
-		sl_headset.recalculateChannels()
-	if(istype(selected_sl.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = selected_sl.wear_id
-		ID.access += ACCESS_MARINE_LEADER
-	selected_sl.hud_set_squad()
-	selected_sl.update_inv_head() //updating marine helmet leader overlays
-	selected_sl.update_inv_wear_suit()
+	current_squad.promote_squad_leader(selected_sl)
 
 
 /obj/structure/machinery/computer/overwatch/check_eye(mob/user)
@@ -894,6 +866,13 @@
 
 /obj/structure/machinery/computer/overwatch/almayer/broken
 	name = "Broken Overwatch Console"
+
+/obj/structure/machinery/computer/overwatch/uscm_ground
+	faction = FACTION_USCM_GROUND
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "overwatch"
+	dir = WEST
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
 
 /obj/structure/machinery/computer/overwatch/clf
 	faction = FACTION_CLF

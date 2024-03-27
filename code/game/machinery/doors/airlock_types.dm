@@ -1,3 +1,4 @@
+//I think these need to be children of colony, not the other way around.
 
 /obj/structure/machinery/door/airlock/secure/colony
 	name = "\improper Secure Airlock"
@@ -163,6 +164,9 @@
 	opacity = 0
 	glass = 1
 	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_LOGISTICS)
+
+
+//==========================================
 
 /obj/structure/machinery/door/airlock/gold
 	name = "\improper Gold Airlock"
@@ -429,6 +433,14 @@
 	icon = 'icons/obj/structures/doors/maintdoor.dmi'
 	req_access = list()
 	req_one_access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_MAINT)
+
+/obj/structure/machinery/door/airlock/almayer/maint/sealed
+	req_access = null //No access requirements
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/almayer/maint/sealed/LateInitialize() //Has a chance to start bolted, welded, or both.
+	. = ..()
+	break_or_seal(15) //15% chance it starts out deconstructed.
 
 /obj/structure/machinery/door/airlock/almayer/maint/autoname
 	autoname = TRUE
@@ -908,11 +920,193 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
 
+//==========================================
+
+//USCM GROUND OUTPOST DOORS
+
+/obj/structure/machinery/door/airlock/uscm_ground
+	icon = 'icons/obj/structures/doors/prepdoor.dmi'
+	dir = NORTH
+	autoname = TRUE
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/uscm_ground/general
+	req_one_access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_GUEST)
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/uscm_ground/general/bathroom
+	name = "\improper Bathroom"
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	dir = EAST
+	autoname = FALSE
+	glass = FALSE
+	opacity = TRUE
+
+/obj/structure/machinery/door/airlock/uscm_ground/general/bathroom/shower
+	name = "\improper Shower"
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	dir = EAST
+	autoname = FALSE
+	glass = FALSE
+	opacity = TRUE
+
+/obj/structure/machinery/door/airlock/uscm_ground/maintenance
+	icon = 'icons/obj/structures/doors/maintdoor.dmi'
+	dir = EAST
+	req_access = list(ACCESS_USCM_GROUND_MAINT)
+
+/obj/structure/machinery/door/airlock/uscm_ground/maintenance/synth
+	icon = 'icons/obj/structures/doors/securedoor.dmi'
+	dir = NORTH
+	req_one_access = list(ACCESS_USCM_GROUND_SYNTH, ACCESS_USCM_GROUND_COMMAND)
+
+/obj/structure/machinery/door/airlock/uscm_ground/checkpoint
+	icon = 'icons/obj/structures/doors/secdoor_glass.dmi'
+	dir = EAST
+	glass = TRUE
+	opacity = FALSE
+	req_access = list(ACCESS_USCM_GROUND_CHECKPOINT)
+
+/obj/structure/machinery/door/airlock/uscm_ground/platoon_sarge_office
+	icon = 'icons/obj/structures/doors/secdoor_glass.dmi'
+	dir = EAST
+	glass = TRUE
+	opacity = FALSE
+	req_one_access = list(ACCESS_USCM_GROUND_COMMAND, ACCESS_USCM_GROUND_PLATOONL)
+	var/squad_name = SQUAD_USCM_GROUND_1
+
+/obj/structure/machinery/door/airlock/uscm_ground/platoon_sarge_office/two
+	squad_name = SQUAD_USCM_GROUND_2
+
+/obj/structure/machinery/door/airlock/uscm_ground/platoon_sarge_office/Initialize()
+	. = ..()
+	name = "[name] - [uppertext(squad_name)]"
+	desc = "[desc] [uppertext(squad_name)] platoon."
+
+/obj/structure/machinery/door/airlock/uscm_ground/command
+	icon = 'icons/obj/structures/doors/secdoor.dmi'
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/cic
+	req_access = null
+	req_one_access = list(ACCESS_USCM_GROUND_COMMAND, ACCESS_USCM_GROUND_PLATOONL)
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/cic/glass
+	icon = 'icons/obj/structures/doors/secdoor_glass.dmi'
+	dir = EAST
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/commander_office
+	icon = 'icons/obj/structures/doors/comdoor.dmi'
+	dir = EAST
+	req_access = list(ACCESS_USCM_GROUND_CO_OFFICE)
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/commander_quarters
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	req_access = list(ACCESS_USCM_GROUND_CO_QUARTERS)
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/lieutenant_office
+	icon = 'icons/obj/structures/doors/comdoor.dmi'
+	dir = EAST
+	req_access = list(ACCESS_USCM_GROUND_LT)
+
+/obj/structure/machinery/door/airlock/uscm_ground/command/lieutenant_office
+	icon = 'icons/obj/structures/doors/comdoor.dmi'
+	dir = EAST
+	req_access = list(ACCESS_USCM_GROUND_LT)
+
+/obj/structure/machinery/door/airlock/uscm_ground/civilian
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	dir = EAST
+	req_access = list(ACCESS_USCM_GROUND_GUEST)
+
+/obj/structure/machinery/door/airlock/uscm_ground/warehouse
+	icon = 'icons/obj/structures/doors/engidoor_glass.dmi'
+	glass = TRUE
+	opacity = FALSE
+	req_access = list(ACCESS_USCM_GROUND_WAREHOUSE)
+
+//==========================================
+
+//UNDERGROUND BUNKER PARENT
+
+/obj/structure/machinery/door/airlock/bunker
+	dir = NORTH
+	openspeed = 4
+
+//==========================================
+
+//WY SECRET LAB
+
+/obj/structure/machinery/door/airlock/bunker/wy
+
+/obj/structure/machinery/door/airlock/bunker/wy/containment
+	name = "\improper Containment Access"
+	icon = 'icons/obj/structures/doors/medidoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	locked = TRUE
+	masterkey_resist = TRUE
+	autoclose = FALSE //Can lead to some strange behavior with the computer.
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/research
+	name = "\improper Containment Monitoring"
+	icon = 'icons/obj/structures/doors/medidoor.dmi'
+	dir = EAST
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/server
+	icon = 'icons/obj/structures/doors/personaldoor.dmi'
+	name = "\improper Server Monitoring"
+	req_access = list(ACCESS_WY_GENERAL)
+
+/obj/structure/machinery/door/airlock/bunker/wy/surgery
+	name = "\improper Operating Theatre"
+	icon = 'icons/obj/structures/doors/medidoor.dmi'
+	req_one_access = list(ACCESS_WY_MEDICAL, ACCESS_WY_PMC)
+
+/obj/structure/machinery/door/airlock/bunker/wy/specimen_storage
+	name = "\improper Specimen Storage"
+	icon = 'icons/obj/structures/doors/securedoor.dmi'
+	req_one_access = list(ACCESS_WY_RESEARCH, ACCESS_WY_PMC, ACCESS_WY_SECRETS)
+
+/obj/structure/machinery/door/airlock/bunker/wy/aux_storage
+	name = "\improper Auxiliary Storage"
+	icon = 'icons/obj/structures/doors/maintdoor.dmi'
+	dir = EAST
+	req_one_access = list(ACCESS_WY_SECURITY, ACCESS_WY_ENGINEERING, ACCESS_WY_PMC)
+
+//==========================================
+
+//UPP GULAG
+
+/obj/structure/machinery/door/airlock/bunker/upp
+	icon = 'icons/obj/structures/doors/strata/strata_doors.dmi'
+	req_one_access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_COMMANDO)
+
+/obj/structure/machinery/door/airlock/bunker/upp/gulag_cell
+	name = "\improper Gulag Cell"
+
+/obj/structure/machinery/door/airlock/bunker/upp/security
+	name = "\improper Gulag Security Access"
+	icon  = 'icons/obj/structures/doors/prison_FOP/prison_hatches.dmi'
+	dir = EAST
+
+/obj/structure/machinery/door/airlock/bunker/upp/autopsy
+	name = "\improper Specimen Autopsy"
+	dir = EAST
+	req_one_access = list(ACCESS_UPP_MEDICAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_COMMANDO)
+
+//==========================================
+
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison
 	name = "cell Door"
 	icon = 'icons/obj/structures/doors/celldoor.dmi'
-	glass = 0
+	glass = FALSE
 
 /obj/structure/machinery/door/airlock/prison/horizontal
 	dir = SOUTH

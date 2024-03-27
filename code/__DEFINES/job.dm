@@ -1,6 +1,7 @@
 #define get_job_playtime(client, job) (client.player_data? LAZYACCESS(client.player_data.playtimes, job)? client.player_data.playtimes[job].total_minutes MINUTES_TO_DECISECOND : 0 : 0)
 #define GET_MAPPED_ROLE(title) (RoleAuthority?.role_mappings[title] ? RoleAuthority.role_mappings[title] : RoleAuthority.roles_by_name[title])
 #define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
+#define GET_SQUAD_ROLE_MAP(title) (RoleAuthority?.roles_for_squad[title] ? RoleAuthority.roles_for_squad[title] : title)
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
@@ -10,6 +11,8 @@
 #define SQUAD_MARINE_5 "Echo"
 #define SQUAD_MARINE_CRYO "Foxtrot"
 #define SQUAD_MARINE_INTEL "Intel"
+#define SQUAD_USCM_GROUND_1 "Copperheads"
+#define SQUAD_USCM_GROUND_2 "Rattlesnakes"
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
@@ -152,6 +155,22 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 	. = ..(L);\
 }
 
+//-------------USCM Outpost roles---------------
+
+#define JOB_USCM_GROUND_CO "Outpost Commanding Officer"
+#define JOB_USCM_GROUND_AO "Outpost Adjunct Officer"
+#define JOB_USCM_GROUND_SYNTH "Outpost Maint. Synthetic"
+
+#define JOB_USCM_GROUND_SQUAD_LEADER "Outpost Plt. Lead"
+#define JOB_USCM_GROUND_SQUAD_TEAM_LEADER "Outpost Sq. Lead"
+#define JOB_USCM_GROUND_SQUAD_MEDIC "Outpost Corpsman"
+#define JOB_USCM_GROUND_SQUAD_SPECIALIST "Outpost Specialist"
+#define JOB_USCM_GROUND_SQUAD_SMARTGUNNER "Outpost Smartgunner"
+#define JOB_USCM_GROUND_SQUAD_MARINE "Outpost Rifleman"
+
+#define JOB_USCM_GROUND_CIVILIAN "Civilian Researcher"
+//------------------------------------
+
 //-------------WO roles---------------
 
 #define JOB_WO_CO "Ground Commander"
@@ -182,7 +201,6 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_WO_SQUAD_SMARTGUNNER "Dust Raider Squad Smartgunner"
 #define JOB_WO_SQUAD_SPECIALIST "Dust Raider Squad Weapons Specialist"
 #define JOB_WO_SQUAD_LEADER "Dust Raider Squad Leader"
-
 //------------------------------------
 
 //-------- PMC --------//

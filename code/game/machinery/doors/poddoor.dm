@@ -16,17 +16,11 @@
 
 /obj/structure/machinery/door/poddoor/Initialize()
 	. = ..()
-	if(density)
-		set_opacity(1)
-	else
-		set_opacity(0)
+	set_opacity(density)
 	update_icon()
 
 /obj/structure/machinery/door/poddoor/update_icon()
-	if(density)
-		icon_state = "[base_icon_state]1"
-	else
-		icon_state = "[base_icon_state]0"
+	icon_state = "[base_icon_state][density]"
 
 /obj/structure/machinery/door/poddoor/Collided(atom/movable/AM)
 	if(!density)
@@ -72,6 +66,12 @@
 	open()
 	return TRUE
 
+/obj/structure/machinery/door/poddoor/proc/toggle_pod_door(signal_id)
+	if(id == signal_id)
+		if(density)
+			INVOKE_ASYNC(src, PROC_REF(open))
+		else
+			INVOKE_ASYNC(src, PROC_REF(close))
 
 /obj/structure/machinery/door/poddoor/try_to_activate_door(mob/user)
 	return
@@ -301,6 +301,11 @@
 /obj/structure/machinery/door/poddoor/almayer/open
 	density = FALSE
 
+/obj/structure/machinery/door/poddoor/almayer/open/white
+	name = "\improper Containment Cell Lockdown"
+	icon_state = "w_almayer_pdoor1"
+	base_icon_state = "w_almayer_pdoor"
+
 /obj/structure/machinery/door/poddoor/almayer/blended
 	icon_state = "almayer_pdoor1"
 	base_icon_state = "almayer_pdoor"
@@ -322,6 +327,11 @@
 /obj/structure/machinery/door/poddoor/almayer/locked
 	unacidable = TRUE
 
+/obj/structure/machinery/door/poddoor/almayer/locked/white
+	name = "\improper Biohazard Lockdown"
+	icon_state = "w_almayer_pdoor1"
+	base_icon_state = "w_almayer_pdoor"
+
 /obj/structure/machinery/door/poddoor/almayer/locked/attackby(obj/item/C as obj, mob/user as mob)
 	if(HAS_TRAIT(C, TRAIT_TOOL_CROWBAR))
 		return
@@ -334,3 +344,10 @@
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor
 	density = TRUE
 	opacity = TRUE
+
+/obj/structure/machinery/door/poddoor/tunnel
+	name = "\improper Tunnel Gate"
+	desc = "Heavy, metal blast doors, sealed to block passage to and from the mountain pass."
+	unslashable = TRUE
+	unacidable = TRUE
+	id = "tunnel_gate_main"

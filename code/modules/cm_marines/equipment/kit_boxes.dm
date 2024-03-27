@@ -139,17 +139,39 @@
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/device/binoculars(src)
 
-
-//maybe put in req for later use?
+//Happening.
 /obj/item/storage/box/spec/B18
 	name = "\improper B18 heavy armor case"
-	desc = "A large case containing the experimental B18 armor platform. Handle with care, it's more expensive than all of Delta combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing the experimental B18 armor platform, designed minimize battlefield injury. It's heavy, uncomfortable to wear for more than five minutes, and will probably never leave field testing. It's also very effective. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "b18"
 
 /obj/item/storage/box/spec/B18/fill_preset_inventory()
 	new /obj/item/clothing/gloves/marine/specialist(src)
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
 	new /obj/item/clothing/suit/storage/marine/specialist(src)
+	new /obj/item/device/helmet_visor/medical(src)
+	new /obj/item/storage/pouch/autoinjector/full(src)
+	new /obj/item/storage/pouch/machete/full(src)
+	new /obj/item/weapon/gun/shotgun/double/mou53(src)
+	new /obj/item/storage/belt/shotgun/full/mou53(src)
+	new /obj/item/attachable/angledgrip(src)
+
+/obj/item/storage/box/spec/sapper
+	name = "\improper Sapper equipment case"
+	desc = "A large case containing a variety of materials for constructing in the field, defending choke points, and sabotaging enemy fortifications. Comes with an improved sentry turret and other important equipment. \nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/sapper/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/custom(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/storage/pouch/general/large(src)
+	new /obj/item/storage/pouch/construction(src)
+	new /obj/item/stack/sheet/plasteel/med_large_stack(src)
+	new /obj/item/clothing/head/helmet/marine/tech(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/storage/belt/gun/utility/full(src)
+	new /obj/item/pamphlet/skill/engineer/sapper(src)
 
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm

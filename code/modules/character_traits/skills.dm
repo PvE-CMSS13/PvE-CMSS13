@@ -71,6 +71,12 @@
 	skill_cap = 2
 	skill_increment = 2
 
+/datum/character_trait/skills/miniengie/sapper
+	trait_name = "Sapper Specialist Training"
+	trait_desc = "Boosts the construction and engineering skills to 2. Specialist received full training in creating fortifications and maintaining various machinery."
+	skill_cap = 2
+	skill_increment = 2
+
 /datum/character_trait/skills/vc
 	trait_name = "Vehicle Crewman Training"
 	trait_desc = "Boosts the engineering and vehicle operation skills to 2. Crewmember received full vehicle crewman training."

@@ -11,7 +11,7 @@
 	config_tag = GAMEMODE_WHISKEY_OUTPOST
 	required_players = 0
 	xeno_bypass_timer = 1
-	flags_round_type = MODE_NEW_SPAWN
+	flags_round_type = MODE_NEW_SPAWN|MODE_GROUND_ONLY
 	role_mappings = list(
 		/datum/job/command/commander/whiskey = JOB_CO,
 		/datum/job/command/executive/whiskey = JOB_XO,

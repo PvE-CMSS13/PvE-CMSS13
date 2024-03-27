@@ -26,7 +26,10 @@
 	var/ert_squad = FALSE
 
 /datum/equipment_preset/uscm/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = rand(NUTRITION_VERYLOW, NUTRITION_LOW)
+	if(flags & EQUIPMENT_PRESET_GROUND)
+		new_human.nutrition	= rand(NUTRITION_LOW, NUTRITION_MAX)
+	else
+		new_human.nutrition = rand(NUTRITION_VERYLOW, NUTRITION_LOW)
 
 /datum/equipment_preset/uscm/load_preset(mob/living/carbon/human/new_human, randomise, count_participant)
 	. = ..()
@@ -42,7 +45,7 @@
 	var/datum/squad/auto_squad = get_squad_by_name(auto_squad_name)
 	if(auto_squad)
 		transfer_marine_to_squad(new_human, auto_squad, new_human.assigned_squad, new_human.wear_id)
-	if(!ert_squad && !auto_squad.active)
+	if(!ert_squad && !auto_squad?.active)
 		auto_squad.engage_squad(FALSE)
 
 	if(!auto_squad)
@@ -82,6 +85,18 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/pfc/uscm_ground
+	name = "USCM Outpost Rifleman"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE)
+	assignment = JOB_USCM_GROUND_SQUAD_MARINE
+	rank = JOB_USCM_GROUND_SQUAD_MARINE
+	skills = /datum/skills/pfc/uscm_ground
+	faction = FACTION_USCM_GROUND
+
+/datum/equipment_preset/uscm/pfc/uscm_ground/lesser_rank
+	paygrade = "UE1"
 
 /datum/equipment_preset/uscm/pfc/cryo
 	name = "USCM Cryo Squad Rifleman"
@@ -156,6 +171,18 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/sg/uscm_ground
+	name = "USCM Outpost Smartgunner"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_SMARTPREP)
+	assignment = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	rank = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	skills = /datum/skills/smartgunner/uscm_ground
+	faction = FACTION_USCM_GROUND
+
+/datum/equipment_preset/uscm/sg/uscm_ground/lesser_rank
+	paygrade = "ME3"
 
 /datum/equipment_preset/uscm/sg/cryo
 	name = "USCM Cryo Squad Smartgunner"
@@ -353,7 +380,7 @@
 /*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/spec
-	name = "USCM (Cryo) Squad Weapons Specialist"
+	name = "USCM Squad Weapons Specialist"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
@@ -364,6 +391,17 @@
 	skills = /datum/skills/specialist
 
 	minimap_icon = "spec"
+
+/datum/equipment_preset/uscm/spec/uscm_ground
+	name = "USCM Outpost Specialist"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_SPECPREP)
+	assignment = JOB_USCM_GROUND_SQUAD_SPECIALIST
+	rank = JOB_USCM_GROUND_SQUAD_SPECIALIST
+	skills = /datum/skills/specialist/uscm_ground
+	faction = FACTION_USCM_GROUND
+
+/datum/equipment_preset/uscm/spec/uscm_ground/
 
 /datum/equipment_preset/uscm/spec/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
@@ -430,6 +468,18 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
+/datum/equipment_preset/uscm/medic/uscm_ground
+	name = "USCM Outpost Corpsman"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL,  ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_MEDPREP)
+	assignment = JOB_USCM_GROUND_SQUAD_MEDIC
+	rank = JOB_USCM_GROUND_SQUAD_MEDIC
+	skills = /datum/skills/combat_medic/uscm_ground
+	faction = FACTION_USCM_GROUND
+
+/datum/equipment_preset/uscm/medic/uscm_ground/lesser_rank
+	paygrade = "ME3"
+
 /datum/equipment_preset/uscm/medic/cryo
 	name = "USCM Cryo Squad Hospital Corpsman"
 	auto_squad_name = SQUAD_MARINE_CRYO
@@ -495,6 +545,15 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/tl/uscm_ground
+	name = "USCM Outpost Squad Lead"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_TLPREP)
+	assignment = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
+	rank = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
+	skills = /datum/skills/tl/uscm_ground
+	faction = FACTION_USCM_GROUND
 
 /datum/equipment_preset/uscm/tl/cryo
 	name = "USCM Cryo Squad Sergeant"
@@ -584,6 +643,24 @@
 		back_item = /obj/item/storage/backpack/marine
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
+
+/datum/equipment_preset/uscm/leader/uscm_ground
+	name = "USCM Outpost Platoon Lead"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_GROUND
+	access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_WAREHOUSE, ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_GUEST, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_CHECKPOINT, ACCESS_USCM_GROUND_ARMORY, ACCESS_USCM_GROUND_PLATOONL)
+	assignment = JOB_USCM_GROUND_SQUAD_LEADER
+	rank = JOB_USCM_GROUND_SQUAD_LEADER
+	skills = /datum/skills/SL/uscm_ground
+	faction = FACTION_USCM_GROUND
+
+/datum/equipment_preset/uscm/leader/uscm_ground/lesser_rank
+	paygrade = "ME6"
+
+//So they spawn in their office/latejoin cryo with clothing and shoes.
+/datum/equipment_preset/uscm/leader/uscm_ground/load_gear(mob/living/carbon/human/new_human)
+	..()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 
 /datum/equipment_preset/uscm/leader/cryo
 	name = "USCM Cryo Platoon Sergeant"
