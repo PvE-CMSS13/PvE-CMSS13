@@ -23,5 +23,9 @@ endmap
 map chapaev
 endmap
 
+
+map lead_hawk
+endmap
+
 map rover
 endmap

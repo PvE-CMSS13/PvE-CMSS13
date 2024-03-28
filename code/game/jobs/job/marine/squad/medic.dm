@@ -96,10 +96,22 @@ AddTimelock(/datum/job/marine/medic, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/medic/ai/upp
 
+
+/datum/job/marine/medic/ai/pmc
+	title = JOB_PMCPLAT_MEDIC
+	gear_preset = /datum/equipment_preset/uscm/pmc/med
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/med
+
+/obj/effect/landmark/start/marine/medic/pmc
+	name = JOB_PMCPLAT_MEDIC
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/medic/ai/pmc
+
 /obj/effect/landmark/start/marine/medic/forecon
 	name = JOB_SQUAD_MEDIC_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
+
 
 #undef LCPL_VARIANT
 #undef CPL_VARIANT

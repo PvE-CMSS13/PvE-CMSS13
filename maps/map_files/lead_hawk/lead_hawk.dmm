@@ -1,0 +1,27537 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/flora/bush/ausbushes/reedbush,
+/turf/open/gm/river,
+/area/lead_hawk)
+"ai" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/obj/structure/sign/poster/ad{
+	pixel_x = -25;
+	pixel_y = -7
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"aj" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"ak" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"an" = (
+/obj/structure/machinery/sleep_console,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"aq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/leader/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"at" = (
+/obj/structure/cargo_container/arious/mid,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"au" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 30
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"az" = (
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 20
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"aA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"aH" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+	pixel_y = 14
+	},
+/obj/structure/barricade/handrail{
+	layer = 3.1
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"aL" = (
+/obj/item/tool/warning_cone,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"aO" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"aR" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"aT" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"aU" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"aV" = (
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"aY" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"bd" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"bi" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/space)
+"bj" = (
+/obj/structure/cargo_container/wy/right,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"bn" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"bp" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"by" = (
+/obj/structure/machinery/computer/aifixer,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"bA" = (
+/obj/structure/sign/safety/maint{
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"bG" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"bI" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"bJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"bM" = (
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"bN" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"bP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"bU" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"bX" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"cc" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/cryo_cell)
+"ce" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"co" = (
+/obj/structure/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"ct" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/storage/box/cups,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"cx" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
+"cB" = (
+/obj/structure/dropship_equipment/electronics/spotlights,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"cC" = (
+/obj/structure/flora/bush/ausbushes/var3/leafybush,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	layer = 3.1
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"cD" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/cafeteria)
+"cE" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"cG" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 4;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"cT" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/squad_theta)
+"dq" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"ds" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"du" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/ashtray/glass{
+	pixel_x = -6
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"dx" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 5;
+	layer = 3.7
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"dA" = (
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"dJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"dK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"dL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"dM" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"dQ" = (
+/obj/structure/prop/almayer/computers/mission_planning_system{
+	pixel_x = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"dS" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/prop/flower_vase/bluewhiteflowers,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"dX" = (
+/obj/structure/machinery/power/smes/buildable,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/engineer)
+"dY" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/obj/structure/flora/jungle/alienplant1,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	layer = 3.1
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"ee" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/cryo_cell)
+"ei" = (
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
+"el" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"em" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk/squad_theta)
+"eo" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"ew" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/hangar)
+"eJ" = (
+/obj/structure/barricade/handrail,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"eL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/area_atmos/area{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"eM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/snacks/meatsteak{
+	pixel_x = -5
+	},
+/obj/item/tool/candle{
+	pixel_x = 13;
+	pixel_y = -8
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo{
+	pixel_x = 9;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"eO" = (
+/obj/structure/catwalk/bigred,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/obj/structure/barricade/handrail,
+/turf/open/gm/river,
+/area/lead_hawk)
+"eR" = (
+/obj/structure/platform/kutjevo{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/hangar)
+"eZ" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/lead_hawk/computer)
+"fb" = (
+/obj/structure/ship_ammo/rocket/widowmaker{
+	pixel_x = 7
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"fh" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"fl" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"fp" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/pillbottles,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"fr" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/computer)
+"fy" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"fz" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"fE" = (
+/obj/structure/closet/l3closet/security,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"fN" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
+"fO" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/engineer)
+"fQ" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 1;
+	name = "Omega squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"fS" = (
+/obj/structure/ship_ammo/laser_battery,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"fU" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"gc" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 9;
+	layer = 3.7
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 3.3
+	},
+/obj/structure/platform_decoration{
+	dir = 5;
+	layer = 3.7
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"gl" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"gn" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/item/ammo_box/rounds,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"gp" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"gE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/vehicle/powerloader{
+	desc = "An abstract representation of the digital tasks and automation required to load an orbital-cannon slug.";
+	name = "\improper Abstract Virtual Loader"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"gO" = (
+/obj/structure/closet/secure_closet{
+	name = "heavy weapons specialist locker";
+	req_one_access_txt = "204"
+	},
+/obj/item/storage/belt/marine/smartgunner,
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"gR" = (
+/turf/open/space/basic,
+/area/space)
+"gT" = (
+/obj/structure/ship_ammo/sentry,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"gZ" = (
+/obj/effect/landmark/start/bridge/pmc,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/lead_hawk/ares)
+"hb" = (
+/obj/structure/machinery/cryopod{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"hk" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"hq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/medic/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"hr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"hs" = (
+/obj/structure/bed/sofa/south/white/left,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"hx" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetancorner"
+	},
+/area/lead_hawk/ares)
+"hA" = (
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"hB" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"hD" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/lead_hawk/cryo_cell)
+"hF" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/co)
+"hG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"hO" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"hU" = (
+/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+	pixel_y = 8
+	},
+/obj/structure/flora/bush/ausbushes/var3/fernybush{
+	pixel_x = 6;
+	pixel_y = -11
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"hX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light/spot{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"ih" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	dir = 2;
+	name = "\improper Briefing Room"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/briefing)
+"ip" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 8;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"iy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"iz" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"iC" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"iH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"iM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"iR" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"iU" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/hangar)
+"iZ" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/space)
+"jb" = (
+/obj/structure/closet/secure_closet{
+	name = "team leader locker"
+	},
+/obj/item/device/binoculars/range/designator,
+/obj/item/device/whistle,
+/obj/item/clothing/mask/gas/pmc,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"jd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/sign/poster/safety{
+	pixel_x = -27
+	},
+/obj/structure/sign/poster/io{
+	pixel_x = -39;
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"jj" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/lead_hawk/engineer)
+"jo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"jv" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"jx" = (
+/obj/structure/flora/bush/ausbushes/var3/leafybush{
+	layer = 3.05;
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	layer = 3.1
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"jE" = (
+/obj/structure/largecrate/random/case,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"jG" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk)
+"jH" = (
+/obj/structure/machinery/floodlight/landing,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"jP" = (
+/turf/open/floor/almayer_hull{
+	dir = 8;
+	icon_state = "outerhull_dir"
+	},
+/area/lead_hawk)
+"jT" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/cryo_cell)
+"jX" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"jZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/tl/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"kc" = (
+/turf/closed/wall/dev/reinforced/hull,
+/area/space)
+"kg" = (
+/mob/living/silicon/decoy/ship_ai{
+	layer = 2.98;
+	pixel_y = -16
+	},
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/ares)
+"ku" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/co)
+"kx" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"ky" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/medical)
+"kz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"kA" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/ares)
+"kD" = (
+/obj/structure/machinery/light/spot,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"kF" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"kH" = (
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"kI" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"kO" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_y = -30
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"kY" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"lc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"lg" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cryo_cell)
+"lj" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
+	},
+/area/lead_hawk/cafeteria)
+"lm" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"lo" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 10
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"lB" = (
+/obj/structure/window/framed/corsat/hull/security,
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"lC" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/ptsgt)
+"lF" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/ares)
+"lP" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetancorner"
+	},
+/area/lead_hawk/ares)
+"lT" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"lV" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cryo_cell)
+"mb" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"mc" = (
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"md" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 4;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"me" = (
+/obj/structure/cargo_container/arious/right,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"mn" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/organic/grass,
+/area/lead_hawk)
+"mo" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/hangar)
+"mt" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/hangar)
+"mH" = (
+/turf/closed/wall/almayer/white/hull,
+/area/lead_hawk/cryo_cell)
+"mJ" = (
+/obj/structure/cargo_container/lockmart/right{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"mO" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/cafeteria)
+"mV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"nd" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/lead_hawk/ares)
+"nk" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/ares)
+"nm" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"np" = (
+/obj/structure/largecrate/random/mini/chest/b{
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/obj/structure/largecrate/random/mini/chest{
+	pixel_x = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"nr" = (
+/obj/structure/largecrate/supply/ammo/m41a/extended,
+/obj/structure/largecrate/supply/ammo/m41a/extended{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/item/storage/box/guncase/flamer/special{
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"nz" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"nE" = (
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"nF" = (
+/obj/structure/machinery/prop/almayer/computer/NavCon2,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"nN" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"nR" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"nW" = (
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"ob" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"oj" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"on" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk)
+"or" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"oy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"oB" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"oE" = (
+/obj/structure/cargo_container/wy/mid,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"oN" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"oO" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"oQ" = (
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"oR" = (
+/obj/structure/machinery/vending/cola{
+	pixel_y = 22
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"pa" = (
+/obj/structure/machinery/light/blue{
+	dir = 4;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"pv" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"py" = (
+/obj/structure/machinery/light/blue{
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"pz" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk)
+"pP" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/obj/structure/flora/jungle/cart_wreck,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"pR" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	name = "\improper Kerr-Newman Engine";
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/engineer)
+"pT" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"pX" = (
+/obj/structure/machinery/autolathe/full,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"qd" = (
+/turf/open/floor/almayer_hull,
+/area/lead_hawk)
+"qe" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/tl/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"qi" = (
+/obj/structure/machinery/power/terminal,
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/engineer)
+"qn" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = -16
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"qo" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"qr" = (
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"qt" = (
+/turf/closed/wall/almayer/outer,
+/area/lead_hawk)
+"qx" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/sign/nosmoking_2{
+	pixel_y = 30
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"qB" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/computer)
+"qD" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"qE" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	name = "\improper Kerr-Newman Engine"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/computer)
+"qG" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "greencorner"
+	},
+/area/lead_hawk/medical)
+"qH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"qK" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"qL" = (
+/obj/vehicle/powerloader/ft,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"qS" = (
+/obj/structure/closet/secure_closet{
+	name = "team leader locker";
+	req_one_access_txt = "212"
+	},
+/obj/item/device/binoculars/range/designator,
+/obj/item/device/whistle,
+/obj/item/clothing/mask/gas/pmc,
+/obj/item/clothing/under/marine/veteran/pmc/leader,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"qW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"qX" = (
+/turf/open/floor/plating/almayer,
+/area/lead_hawk)
+"rc" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"rg" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk/cafeteria)
+"ro" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/computer)
+"rx" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/medical)
+"ry" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass/colony{
+	name = "Engineering";
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/engineer)
+"rA" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/squad_omega)
+"rC" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/cryo_cell)
+"rD" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
+"rI" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"rK" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/hangar)
+"rO" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"rV" = (
+/obj/structure/platform,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"rZ" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"se" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/lead_hawk/computer)
+"si" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"ss" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/almayer,
+/area/lead_hawk)
+"sz" = (
+/obj/structure/machinery/light/small,
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"sA" = (
+/obj/structure/foamed_metal,
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk/ares)
+"sF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"sK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"sM" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/attachable/pkpbarrel{
+	desc = "A spare barrel for the M41A, in case of wear-and-tear and overheating. You'd need to deconstruct the entire gun to swap this out.";
+	name = "spare m41a barrel";
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/attachable/scope/mini_iff{
+	pixel_x = 5;
+	pixel_y = -3
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
+	layer = 2.97;
+	name = "go-pills";
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"sR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "greencorner"
+	},
+/area/lead_hawk/medical)
+"tc" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/squad_theta)
+"td" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"tg" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/built,
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"tl" = (
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"tv" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/guestpass{
+	dir = 4;
+	pixel_y = 9
+	},
+/obj/item/tool/pen/red{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"ty" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"tA" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"tD" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Omega Squad Preparation"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/squad_theta)
+"tJ" = (
+/obj/structure/cargo_container/lockmart/mid{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"tM" = (
+/obj/structure/largecrate/random{
+	pixel_y = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"tQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"tW" = (
+/obj/structure/pipes/standard/manifold/visible/purple{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"uc" = (
+/obj/structure/flora/jungle/planttop1{
+	pixel_y = 7
+	},
+/turf/open/gm/river,
+/area/lead_hawk)
+"uf" = (
+/obj/structure/catwalk/bigred,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/gm/river,
+/area/lead_hawk)
+"uk" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"up" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/open/floor/engine,
+/area/lead_hawk/computer)
+"ur" = (
+/obj/structure/machinery/hologram/holopad,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"uv" = (
+/obj/structure/window/framed/corsat/indestructible,
+/turf/open/floor/plating,
+/area/lead_hawk/briefing)
+"uE" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"uG" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"uK" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"uP" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"uV" = (
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = -8
+	},
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = 9
+	},
+/obj/structure/largecrate/random/mini/med{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"vh" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_21";
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"vi" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/engineer)
+"vm" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 4;
+	name = "Omega squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"vo" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"vr" = (
+/turf/open/floor/almayer,
+/area/lead_hawk)
+"vx" = (
+/obj/structure/cargo_container/wy/left,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"vz" = (
+/obj/structure/dropship_equipment/weapon/heavygun,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"vN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"vR" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"vS" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc{
+	req_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"vV" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush{
+	pixel_x = -9
+	},
+/obj/structure/flora/bush/ausbushes/var3/fullgrass{
+	pixel_x = 4
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"vW" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"vY" = (
+/obj/structure/foamed_metal,
+/turf/open/space/basic,
+/area/lead_hawk/squad_theta)
+"wf" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"wg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cryo_cell)
+"wn" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"wr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"wz" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/engineer)
+"wB" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
+"wK" = (
+/obj/item/tool/warning_cone{
+	pixel_x = 4;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"wM" = (
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"wQ" = (
+/obj/structure/closet/secure_closet{
+	name = "heavy weapons specialist locker";
+	req_one_access_txt = "204"
+	},
+/obj/item/storage/belt/marine/smartgunner,
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun/dirty,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"wV" = (
+/obj/item/storage/large_holster/m39,
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"wW" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"xf" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/structure/closet{
+	name = "operation leader closet"
+	},
+/obj/item/weapon/gun/rifle/m46c,
+/obj/item/device/binoculars/range/designator,
+/obj/item/clothing/under/marine/veteran/pmc/leader,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"xg" = (
+/turf/open/floor/carpet,
+/area/lead_hawk/co)
+"xx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/body_scanconsole,
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"xB" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/gm/river,
+/area/lead_hawk)
+"xE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5;
+	pixel_x = -2
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"xH" = (
+/obj/structure/machinery/chem_dispenser{
+	req_access_txt = "100"
+	},
+/obj/item/reagent_container/glass/beaker/bluespace,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"xS" = (
+/obj/item/storage/large_holster/m39,
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/item/ammo_magazine/smg/m39/pve,
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"xX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"ya" = (
+/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"yj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"yl" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"yn" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	name = "\improper Operation Leader";
+	req_one_access_txt = "216"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/hangar)
+"yp" = (
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"yt" = (
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"yA" = (
+/obj/structure/prop/almayer/computers/mission_planning_system{
+	pixel_x = -6
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"yG" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/medical)
+"yH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"yM" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
+"yV" = (
+/turf/open/floor/plating,
+/area/lead_hawk/hangar)
+"yX" = (
+/turf/open/floor/almayer{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"zb" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	unacidable = 1
+	},
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"zj" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"zn" = (
+/turf/open/floor/corsat{
+	icon_state = "yellowcorner"
+	},
+/area/lead_hawk/engineer)
+"zt" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
+	dir = 1;
+	req_one_access = null;
+	req_one_access_txt = "202"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"zG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"zH" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetancorner"
+	},
+/area/lead_hawk/ares)
+"zN" = (
+/obj/structure/prop/dam/crane{
+	bound_height = 32;
+	climbable = 1;
+	layer = 3.5;
+	pixel_y = -23
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"zO" = (
+/turf/open/floor/corsat{
+	icon_state = "theta"
+	},
+/area/lead_hawk/cafeteria)
+"zR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"zY" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk)
+"Aa" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"Ad" = (
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Ae" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"Ao" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"Ar" = (
+/obj/structure/machinery/medical_pod/autodoc,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"Au" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"Az" = (
+/turf/open/floor/corsat{
+	icon_state = "whitetancorner"
+	},
+/area/lead_hawk/ares)
+"AE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"AF" = (
+/obj/structure/ship_ammo/rocket/napalm,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"AM" = (
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"AO" = (
+/obj/structure/cargo_container/lockmart/left{
+	layer = 3.1;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"AT" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"Bd" = (
+/obj/structure/dropship_equipment/electronics/flare_launcher,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Bu" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"BF" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
+"BM" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"Ci" = (
+/obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Cj" = (
+/turf/open/floor/corsat{
+	icon_state = "omega"
+	},
+/area/lead_hawk/squad_theta)
+"Cl" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"Cp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"Cu" = (
+/obj/item/tool/mop{
+	pixel_x = -9;
+	pixel_y = 20
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/engineer)
+"Cv" = (
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/obj/item/clothing/shoes/marine,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"CB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"CD" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Hangar"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cafeteria)
+"CI" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"CK" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"CO" = (
+/obj/structure/closet/l3closet/scientist,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/engineer)
+"CT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/tl/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"CV" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/squad_omega)
+"CZ" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/smartgunner/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"Dc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"Dd" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"Df" = (
+/obj/structure/sign/catclock{
+	pixel_y = 32
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"Dk" = (
+/obj/structure/pipes/standard/manifold/visible,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/medical)
+"Dq" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin/wy{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"Dy" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"DB" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 4
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/medical)
+"DE" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"DK" = (
+/obj/structure/bed/chair/comfy/charlie{
+	name = "Omege squad chair"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"DO" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"DP" = (
+/obj/structure/prop/almayer/hangar_stencil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "bolted floodlight"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"DQ" = (
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 20
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/ares)
+"DY" = (
+/obj/structure/machinery/light/blue{
+	dir = 1;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"DZ" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/engineer)
+"Ea" = (
+/obj/structure/prop/almayer/computers/sensor_computer3{
+	name = "weapon targetting computer"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"Ee" = (
+/obj/structure/catwalk/bigred,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/gm/river,
+/area/lead_hawk)
+"Ej" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"Ek" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/hangar)
+"En" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/ares)
+"Es" = (
+/obj/structure/machinery/autolathe/full,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	layer = 2
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Et" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"Ey" = (
+/obj/structure/largecrate/random/barrel/red,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"EC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/no_build{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk/ares)
+"ED" = (
+/turf/open/floor/engine,
+/area/lead_hawk/computer)
+"EF" = (
+/obj/structure/machinery/door/airlock/almayer/security/reinforced{
+	dir = 2;
+	name = "\improper OVERLORD Airlock";
+	req_one_access_txt = "216"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/ares)
+"EJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/plasteel{
+	amount = 40;
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"EP" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"ET" = (
+/obj/structure/dropship_equipment/electronics/targeting_system,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"EX" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1;
+	pixel_y = 15
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"EY" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk)
+"Fa" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cryo_cell)
+"Fd" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/medical)
+"Fw" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/ares)
+"FG" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk)
+"FI" = (
+/obj/structure/sign/nosmoking_1{
+	pixel_x = -30
+	},
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/cafeteria)
+"FJ" = (
+/obj/structure/bed/sofa/south/white/right,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"FL" = (
+/obj/structure/machinery/chem_master,
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"FM" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"FO" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"FV" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cafeteria)
+"FZ" = (
+/obj/structure/reagent_dispensers/fueltank/custom,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"Gg" = (
+/obj/structure/window/framed/corsat/indestructible,
+/turf/open/floor/plating,
+/area/lead_hawk/squad_omega)
+"Gh" = (
+/obj/structure/machinery/light/blue{
+	dir = 8;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"Gm" = (
+/obj/structure/platform,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Gs" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/bed/roller,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/medical)
+"Gv" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"Gy" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk/computer)
+"GB" = (
+/obj/item/prop/almayer/box{
+	pixel_x = 5;
+	pixel_y = -7
+	},
+/obj/structure/largecrate/random/mini/wooden{
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"GS" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/lead_hawk/cafeteria)
+"GX" = (
+/obj/structure/machinery/light/spot{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"GY" = (
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor/carpet,
+/area/lead_hawk/co)
+"Hb" = (
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk)
+"Hj" = (
+/obj/structure/largecrate{
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Ho" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"Hr" = (
+/obj/structure/flora/bush/desert/cactus/multiple,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"Hx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"HA" = (
+/obj/structure/platform_decoration,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"HB" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/prop/geiger_counter,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"HD" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Cafeteria"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cryo_cell)
+"HF" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/medical)
+"HO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"HT" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"HZ" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"It" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"Iu" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/medical)
+"Iz" = (
+/obj/structure/dropship_equipment/weapon/launch_bay,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"IG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/corsat{
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"IH" = (
+/turf/open/floor/corsat{
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"II" = (
+/obj/structure/window/framed/corsat/hull/security,
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/space/basic,
+/area/lead_hawk/ares)
+"IJ" = (
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "red"
+	},
+/area/lead_hawk/computer)
+"IL" = (
+/obj/structure/machinery/prop/almayer/computer/NavCon{
+	pixel_y = 24
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/ares)
+"IN" = (
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sandbags_empty/full,
+/obj/item/stack/sandbags_empty/full,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"Jl" = (
+/obj/structure/closet/toolcloset,
+/turf/open/floor/corsat{
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Jn" = (
+/obj/structure/prop/almayer/cannon_cables,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk)
+"JH" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/closed/wall/almayer/white/hull,
+/area/lead_hawk/cryo_cell)
+"JJ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"JL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Long-Term Biounit Storage"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cryo_cell)
+"JM" = (
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"JQ" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk)
+"JW" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/crew/alt,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Kd" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 8;
+	name = "Omega squad chair"
+	},
+/obj/structure/machinery/light/spot{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"Ke" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/briefing)
+"Km" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"Kx" = (
+/obj/structure/largecrate/random,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"KA" = (
+/obj/structure/dropship_equipment/rappel_system,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"KB" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 3.3
+	},
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform_decoration{
+	dir = 9;
+	layer = 3.8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"KC" = (
+/obj/structure/pipes/standard/simple/visible/purple{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"KD" = (
+/obj/structure/catwalk/bigred,
+/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/gm/river,
+/area/lead_hawk)
+"KH" = (
+/obj/structure/flora/jungle/plantbot1{
+	pixel_y = 7
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/gm/river,
+/area/lead_hawk)
+"KK" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/cafeteria)
+"KN" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
+"KO" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 8;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"KV" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating,
+/area/lead_hawk/hangar)
+"Lc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"Li" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/juicer{
+	pixel_y = 9
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"Lw" = (
+/obj/structure/flora/grass/ice/green{
+	pixel_x = 27;
+	pixel_y = 3
+	},
+/obj/structure/flora/bush{
+	layer = 3;
+	pixel_y = 18
+	},
+/obj/structure/flora/grass/ice/both,
+/turf/open/auto_turf/snow/layer2,
+/area/lead_hawk)
+"Lz" = (
+/obj/structure/machinery/light/blue{
+	dir = 1;
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"LJ" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitecorner"
+	},
+/area/lead_hawk/ares)
+"LW" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"LY" = (
+/obj/structure/machinery/light/blue{
+	light_color = "#66FFFF"
+	},
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/lead_hawk/ares)
+"Me" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Mf" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/turf/open/floor/plating,
+/area/lead_hawk/hangar)
+"Mh" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list()
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Mi" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Mj" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/engineer)
+"Ms" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Mu" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"Mw" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/ares)
+"MB" = (
+/turf/open/floor/almayer{
+	dir = 4;
+	icon_state = "redcorner"
+	},
+/area/lead_hawk)
+"MC" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin/wy,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"MG" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/co)
+"MJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"MM" = (
+/obj/item/weapon/gun/smartgun/dirty,
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/cryo_cell)
+"MO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/lead_hawk/ares)
+"Nm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/closed/wall/almayer/white/hull,
+/area/lead_hawk/cryo_cell)
+"Ns" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/taperecorder{
+	name = "maintenance log recorder"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Ny" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "white"
+	},
+/area/lead_hawk/computer)
+"NC" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/engineer)
+"ND" = (
+/obj/structure/surface/table/woodentable/fancy,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"NP" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/chem_dispenser/soda,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"NR" = (
+/obj/structure/window/framed/almayer/hull,
+/turf/open/floor/plating,
+/area/lead_hawk)
+"Of" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/helmetgarb/compass{
+	layer = 3.5;
+	pixel_x = 4
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	desc = "A bottle of go-pills- for when cryosleep treats you a bit rougher than usual. Bad for you in the long-run, but...";
+	name = "go-pills";
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/obj/item/storage/box/guncase/flamer/special{
+	pixel_y = -2
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"Oo" = (
+/obj/structure/machinery/pipedispenser,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"Oz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"OA" = (
+/obj/structure/prop/almayer/computers/sensor_computer2,
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"OJ" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = -28
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"ON" = (
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"OS" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/cafeteria)
+"OZ" = (
+/obj/structure/cargo_container/arious/left,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"Pb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"Pl" = (
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/structure/janitorialcart,
+/obj/structure/closet/fireaxecabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Pn" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc{
+	req_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Po" = (
+/obj/structure/machinery/portable_atmospherics/powered/pump,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"Pq" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Pt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
+	},
+/area/lead_hawk/cryo_cell)
+"PA" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk)
+"PG" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1;
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"PN" = (
+/obj/item/tool/weldpack{
+	pixel_x = 7
+	},
+/obj/item/tool/weldpack,
+/obj/structure/surface/rack,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"PP" = (
+/obj/structure/prop/almayer/computers/sensor_computer2,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/computer)
+"PR" = (
+/obj/structure/foamed_metal,
+/turf/open/floor/plating,
+/area/lead_hawk/ares)
+"PW" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellowcorner"
+	},
+/area/lead_hawk/engineer)
+"PZ" = (
+/obj/structure/orbital_cannon{
+	density = 0
+	},
+/turf/open/floor/plating/almayer,
+/area/lead_hawk)
+"Qj" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/squad_omega)
+"Qk" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/tool/pen/fountain,
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"Qm" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/almayer{
+	icon_state = "dark_sterile"
+	},
+/area/lead_hawk/cryo_cell)
+"Qq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"Qw" = (
+/turf/open/floor/almayer/no_build{
+	icon_state = "test_floor4"
+	},
+/area/lead_hawk/ares)
+"Qx" = (
+/obj/vehicle/powerloader/ft,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"QE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"QH" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/squad_theta)
+"QI" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/plating,
+/area/lead_hawk/medical)
+"QK" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_x = 9;
+	pixel_y = 7
+	},
+/obj/item/prop/helmetgarb/helmet_gasmask{
+	pixel_x = -7
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"QN" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 12
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 6
+	},
+/obj/item/weapon/gun/rifle/m41a/elite,
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = -7
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"QO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"QQ" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform/kutjevo{
+	dir = 1;
+	layer = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/lead_hawk/hangar)
+"QT" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"QU" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk)
+"Ra" = (
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 12
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 6
+	},
+/obj/item/weapon/gun/rifle/m41a/elite,
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = -7
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Rk" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/white{
+	name = "Overlord Auxilliary Processor Access"
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/ares)
+"Rq" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_omega)
+"RC" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"RE" = (
+/obj/structure/stairs/perspective,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"RI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 2
+	},
+/obj/item/clothing/shoes/marine/knife,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"RT" = (
+/turf/open/floor/corsat{
+	icon_state = "omega"
+	},
+/area/lead_hawk/cafeteria)
+"Se" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Sf" = (
+/obj/structure/sign/poster/safety{
+	pixel_x = 27
+	},
+/obj/structure/closet,
+/obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"Ss" = (
+/obj/structure/machinery/suit_storage_unit/carbon_unit{
+	density = 0;
+	pixel_x = 2;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"St" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk)
+"Sw" = (
+/obj/structure/machinery/computer/orbital_cannon_console,
+/obj/structure/bed/chair/ob_chair,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk)
+"Sx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/medical)
+"SA" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"SF" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"SK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"SR" = (
+/obj/item/ammo_box/rounds{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/rounds{
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"SV" = (
+/obj/structure/machinery/power/fusion_engine{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/lead_hawk/engineer)
+"Tc" = (
+/obj/structure/largecrate/random/barrel/white,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Tg" = (
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = -6
+	},
+/obj/item/ammo_box/magazine/ext{
+	pixel_y = 9
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Th" = (
+/obj/structure/bed/chair/comfy/teal{
+	name = "Theta squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_theta)
+"Ti" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/corsat{
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Ts" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Tu" = (
+/turf/closed/wall/r_wall/biodome,
+/area/lead_hawk/computer)
+"Tw" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/lead_hawk/cryo_cell)
+"Tx" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Tz" = (
+/obj/structure/machinery/door/airlock/multi_tile/secure{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/computer)
+"TA" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/lead_hawk/briefing)
+"TD" = (
+/obj/structure/machinery/defenses/tesla_coil/stun,
+/turf/open/floor/engine,
+/area/lead_hawk/computer)
+"TE" = (
+/turf/open/ice,
+/area/lead_hawk)
+"TJ" = (
+/obj/structure/pipes/unary/freezer{
+	icon_state = "freezer_1"
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"TK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"TL" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/engineer)
+"TT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/camera/autoname/golden_arrow,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"TU" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"TW" = (
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"Ug" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Uu" = (
+/obj/structure/pipes/standard/tank/oxygen,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Uw" = (
+/obj/item/prop/almayer/comp_closed,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Uy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"Uz" = (
+/obj/structure/flora/pottedplant{
+	desc = "A bioluminescent potted-plant from a particularly pleased W-Y executive after a mission well-done. This costs more than the contents of your armory.";
+	icon_state = "pottedplant_20";
+	name = "alien potted plant"
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"UC" = (
+/obj/structure/closet,
+/obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/clothing/shoes/veteran/pmc/commando/knife,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"UF" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"UK" = (
+/obj/structure/largecrate/supply/ammo/m41a/extended,
+/obj/structure/largecrate/supply/ammo/m41a/extended{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"UN" = (
+/obj/structure/dropship_equipment/weapon/laser_beam_gun,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"UO" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"UV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
+	},
+/area/lead_hawk/cryo_cell)
+"UY" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/squad_theta)
+"Vb" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/lead_hawk/briefing)
+"Vd" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk/cryo_cell)
+"Vh" = (
+/obj/structure/machinery/cryopod{
+	dir = 4
+	},
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"Vp" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_east"
+	},
+/area/lead_hawk)
+"Vr" = (
+/obj/structure/pipes/standard/simple/visible/purple,
+/obj/structure/pipes/binary/circulator{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/lead_hawk/computer)
+"Vv" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"VB" = (
+/obj/structure/machinery/cryo_cell{
+	layer = 3.20
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"VE" = (
+/obj/structure/sign/safety/fire_haz{
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer{
+	icon_state = "red"
+	},
+/area/lead_hawk)
+"VL" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/gm/river,
+/area/lead_hawk)
+"VN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/smartgunner/pmc,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"Wb" = (
+/obj/structure/bed/chair/comfy/charlie{
+	dir = 8;
+	name = "Omega squad chair"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cafeteria)
+"Wg" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Theta Squad Preparation"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"Wn" = (
+/turf/closed/wall/dev/reinforced/hull,
+/area/lead_hawk)
+"Wt" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	req_access = list()
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"Wv" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_west"
+	},
+/area/lead_hawk/ares)
+"WD" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitecorner"
+	},
+/area/lead_hawk/ares)
+"WI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/cafeteria)
+"WL" = (
+/obj/item/tool/wrench,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/engineer)
+"WT" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/hangar)
+"Xe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/medic/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"Xh" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/flora/bush/ausbushes/var3/fullgrass{
+	pixel_x = -12
+	},
+/turf/open/organic/grass,
+/area/lead_hawk)
+"Xi" = (
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Xl" = (
+/turf/open/gm/river,
+/area/lead_hawk)
+"Xr" = (
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "red"
+	},
+/area/lead_hawk/engineer)
+"Xs" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/pmc,
+/turf/open/floor/almayer{
+	icon_state = "cargo_arrow"
+	},
+/area/lead_hawk/cryo_cell)
+"Xu" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
+	},
+/area/lead_hawk/cryo_cell)
+"Xz" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "green"
+	},
+/area/lead_hawk/medical)
+"XC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"XI" = (
+/obj/structure/prop/almayer/cannon_cable_connector,
+/turf/open/floor/almayer{
+	icon_state = "tcomms"
+	},
+/area/lead_hawk)
+"XP" = (
+/turf/open/floor/corsat{
+	icon_state = "marked"
+	},
+/area/lead_hawk/medical)
+"XS" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
+	},
+/area/lead_hawk/cafeteria)
+"XU" = (
+/turf/open/floor/corsat{
+	icon_state = "sigma"
+	},
+/area/lead_hawk/hangar)
+"XX" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/tools/tactical,
+/obj/item/tool/shovel/etool/folded{
+	pixel_x = 9;
+	pixel_y = 10
+	},
+/obj/item/tool/screwdriver/tactical{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/engineer)
+"Ye" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list()
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "yellow"
+	},
+/area/lead_hawk/engineer)
+"Yl" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_north"
+	},
+/area/lead_hawk/cryo_cell)
+"Yo" = (
+/obj/structure/largecrate/random/barrel/green{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_x = -9;
+	pixel_y = -4
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Ys" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/lead_hawk/cryo_cell)
+"Yt" = (
+/obj/structure/ship_ammo/heavygun,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"Yy" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/drinks/cans/ale{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/cans/souto/vanilla{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/item/ashtray/glass{
+	pixel_x = 6
+	},
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt{
+	pixel_x = -4;
+	pixel_y = 17
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"YB" = (
+/obj/structure/largecrate/machine/recycler,
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/lead_hawk/hangar)
+"YJ" = (
+/obj/structure/window/framed/corsat,
+/turf/open/floor/plating,
+/area/lead_hawk/briefing)
+"YL" = (
+/turf/open/floor/corsat{
+	icon_state = "theta"
+	},
+/area/lead_hawk/squad_omega)
+"YT" = (
+/obj/structure/surface/table/reinforced/black,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/hangar)
+"YW" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/prop/geiger_counter{
+	desc = "An attempted upgrade to the B8 smart-scope that used an onboard AGI to automatically resolve firing solutions, resulting in IFF with none of the downsides of the B8. Unfortunately, it was not to be- the battery pack was too big and clumsy, and the electronics too fragile.";
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi';
+	icon_state = "sniperscope";
+	name = "unpowered B10 Smart-Scope"
+	},
+/obj/item/attachable/scope/mini_iff{
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"Za" = (
+/turf/open/floor/corsat{
+	icon_state = "arrow_south"
+	},
+/area/lead_hawk/cafeteria)
+"Zc" = (
+/obj/structure/machinery/power/apc/almayer{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/ptsgt)
+"Ze" = (
+/obj/structure/closet,
+/obj/item/clothing/shoes/marine,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/device/radio/headset/distress/WY,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/under/marine/veteran/pmc,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"Zo" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/sign/safety/coffee{
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/obj/item/reagent_container/food/snacks/grown/lemon{
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/snacks/grown/lime,
+/obj/item/reagent_container/food/snacks/grown/orange{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/obj/item/trash/ceramic_plate{
+	layer = 2.97
+	},
+/turf/open/floor/wood/ship,
+/area/lead_hawk/briefing)
+"Zr" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
+	},
+/area/lead_hawk/cryo_cell)
+"Zy" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/cryo_cell)
+"ZN" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc{
+	req_access = null
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/lead_hawk/squad_omega)
+"ZP" = (
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/lead_hawk/engineer)
+"ZR" = (
+/obj/structure/prop/invuln/lattice_prop,
+/turf/open/space/basic,
+/area/space)
+
+(1,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(2,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(3,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(4,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(5,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(6,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(7,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(8,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(9,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(10,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(11,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(12,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(13,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(14,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(15,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(16,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(17,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(18,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(19,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(20,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(21,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(22,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(23,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(24,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(25,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(26,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(27,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+rK
+Xi
+Xi
+ET
+ai
+jd
+fl
+wr
+KA
+Xi
+UN
+Xi
+vz
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(28,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+rK
+Xi
+Xi
+Xi
+fl
+Oz
+fl
+SK
+Xi
+fS
+fS
+Yt
+Yt
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(29,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+lC
+lC
+lC
+lC
+lC
+rK
+Xi
+Xi
+Xi
+fl
+Oz
+fl
+SK
+Xi
+fS
+Yt
+Xi
+nE
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(30,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+lC
+lC
+gl
+Zc
+bI
+xf
+rK
+Xi
+Xi
+Xi
+Cv
+bP
+fl
+vN
+cB
+Bd
+fb
+AF
+Yt
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(31,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+lC
+Dq
+aV
+aV
+aV
+aV
+rK
+Xi
+Xi
+Xi
+RI
+fl
+fl
+fl
+wr
+gT
+Xi
+Xi
+Iz
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(32,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+lC
+aU
+EX
+aV
+aV
+aV
+rK
+rK
+rK
+rK
+rK
+mo
+mo
+mo
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(33,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ku
+ku
+ku
+ku
+ku
+lC
+aO
+aV
+aV
+aV
+rK
+Me
+Bu
+zj
+Bu
+iy
+iy
+iy
+zj
+kx
+Yy
+kx
+Bu
+TU
+ob
+yl
+eJ
+fl
+fl
+AO
+OZ
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(34,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ei
+ei
+ei
+ei
+ei
+ku
+rK
+rK
+KV
+yn
+rK
+wW
+AE
+iy
+hB
+Bu
+Bu
+Bu
+Bu
+fl
+fl
+fl
+Bu
+rV
+jH
+kz
+eJ
+fl
+fl
+tJ
+at
+Bu
+Bu
+Et
+iy
+DP
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(35,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+cx
+xg
+MG
+xg
+ei
+ku
+rK
+Ss
+Bu
+XU
+Bu
+Bu
+Uy
+fl
+XC
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+Se
+WT
+UO
+eJ
+fl
+fl
+mJ
+me
+Bu
+Bu
+Uy
+fl
+XC
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(36,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ei
+GY
+GY
+GY
+ei
+ku
+rK
+Ss
+Bu
+Bu
+Bu
+Bu
+zG
+MJ
+xX
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+Pb
+Hx
+hr
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(37,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ei
+ei
+ei
+ei
+ei
+ku
+rK
+rK
+hs
+YT
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(38,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+qd
+qt
+zb
+zb
+qt
+qd
+qd
+qd
+jP
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ei
+ei
+xg
+ei
+ei
+ku
+PA
+rK
+FJ
+YT
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(39,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+qd
+qt
+zY
+zY
+qt
+qd
+qd
+qd
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ku
+ku
+ku
+fN
+hF
+ku
+Vb
+Vb
+Ke
+au
+Bu
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(40,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+qt
+qt
+zb
+zb
+qt
+NR
+NR
+NR
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+Uz
+tl
+tl
+OJ
+tl
+tl
+YJ
+eR
+fl
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+vx
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(41,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+qt
+qX
+EY
+EY
+Hb
+PZ
+gE
+bA
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+Df
+hA
+TA
+TA
+hA
+tl
+YJ
+eR
+Bu
+Bu
+fl
+Uw
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+oE
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(42,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+qt
+ss
+EY
+EY
+Hb
+qX
+sF
+VE
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+tl
+ur
+ND
+HB
+pT
+tl
+YJ
+eR
+Bu
+Bu
+fl
+Ns
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+Mf
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+bj
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(43,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+qt
+qX
+EY
+EY
+Hb
+Sw
+sF
+qr
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+Zo
+hA
+dS
+ND
+pT
+tl
+YJ
+QQ
+yl
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+vx
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(44,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+qt
+qX
+EY
+EY
+Jn
+XI
+sF
+tg
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+uv
+Li
+hA
+ND
+du
+pT
+tl
+YJ
+fl
+KB
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+oE
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(45,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+qt
+yj
+yj
+yj
+yj
+yj
+hG
+rc
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+uv
+ct
+hA
+MC
+ND
+pT
+tl
+ih
+fl
+RE
+iU
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+bj
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(46,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+qt
+yX
+yX
+yX
+MB
+vr
+vr
+aR
+qt
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+uv
+NP
+hA
+Qk
+ND
+pT
+tl
+YJ
+fl
+gc
+Bu
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(47,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Wn
+Wn
+Wn
+Wn
+Wn
+pz
+Wn
+Wn
+Wn
+Wn
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+rI
+hA
+ND
+ND
+pT
+tl
+ih
+fl
+RE
+iU
+Bu
+Bu
+BF
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+yV
+rD
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(48,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Wn
+Xl
+Xl
+Xl
+Xl
+KD
+Xl
+Xl
+TE
+Lw
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+OA
+hA
+JM
+JM
+hA
+tl
+YJ
+fl
+dx
+Bu
+Bu
+mV
+iy
+nz
+yM
+yM
+yM
+Ek
+Ek
+Ek
+Ek
+Ek
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+yM
+Au
+iH
+hB
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(49,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+kc
+kc
+Wn
+Xl
+mn
+ae
+Xl
+KD
+Xl
+Xl
+Xl
+TE
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Vb
+rZ
+tl
+tl
+tl
+tl
+tl
+Ke
+oR
+HZ
+Bu
+Bu
+Uy
+fl
+XC
+wK
+Bu
+eJ
+Kx
+Xi
+Xi
+SR
+Ey
+HA
+ob
+yl
+Bu
+Xi
+Xi
+Xi
+Bu
+Bu
+Bu
+Uy
+fl
+XC
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(50,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+kc
+kc
+bi
+iZ
+Wn
+Xl
+Xl
+Dd
+pP
+on
+hU
+cC
+Xl
+Xl
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+St
+Vb
+Ke
+Ke
+Ke
+Ke
+Ke
+Ke
+Ke
+vh
+HZ
+Bu
+Bu
+td
+MJ
+hr
+Bu
+qL
+Bu
+Xi
+Xi
+Xi
+Xi
+Ug
+Gm
+jH
+kz
+Hj
+np
+Xi
+Xi
+Ug
+zN
+Bu
+zG
+MJ
+dK
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(51,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+bi
+bi
+iZ
+iZ
+Wn
+Xl
+Xl
+QT
+on
+on
+on
+jx
+Xl
+Xl
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+St
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+jG
+ew
+UO
+mt
+mt
+ew
+Bu
+Bu
+aL
+Bu
+eJ
+Yo
+tM
+uV
+Tc
+YB
+Dy
+WT
+UO
+Bu
+jE
+GB
+UF
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+Bu
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(52,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+bi
+iZ
+iZ
+iZ
+QU
+Ee
+Ee
+on
+on
+FG
+on
+on
+Ee
+uf
+JQ
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+DZ
+DZ
+DZ
+DZ
+DZ
+DZ
+jG
+PA
+jG
+jG
+OS
+CD
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(53,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+bi
+bi
+iZ
+iZ
+Wn
+Xl
+Xl
+ty
+on
+on
+on
+aH
+uc
+KH
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+Ci
+Mh
+Ye
+qD
+mb
+hO
+FV
+FV
+FV
+uE
+rg
+rg
+uE
+RC
+JJ
+JJ
+PG
+uE
+RC
+JJ
+FV
+TJ
+jv
+hX
+Ar
+zR
+ds
+QI
+JW
+FO
+xH
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(54,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+kc
+kc
+bi
+iZ
+Wn
+Xl
+Xl
+Hr
+Xh
+on
+FM
+dY
+Xl
+xB
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+wz
+Ts
+Mj
+Mj
+ZP
+ZP
+Jl
+FV
+vm
+vm
+uE
+Cp
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+KO
+FV
+Uu
+Dk
+qW
+DB
+qH
+xx
+QI
+Tx
+Fd
+FL
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(55,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+kc
+kc
+kc
+Wn
+Xl
+Xl
+Xl
+Xl
+eO
+Xl
+Xl
+vV
+xB
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+uK
+PW
+Po
+Oo
+ZP
+ZP
+Ti
+FV
+TT
+JJ
+lc
+GS
+WI
+cG
+cG
+uE
+uE
+uE
+md
+md
+uE
+FV
+VB
+Dk
+Ae
+Km
+HO
+IG
+QI
+Xz
+Fd
+fp
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(56,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Wn
+Xl
+Xl
+Xl
+Xl
+eO
+Xl
+Xl
+Xl
+VL
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+Pl
+Cu
+IN
+FZ
+zn
+nR
+iz
+FV
+Kd
+Wb
+lc
+lj
+SA
+QE
+QE
+nm
+uE
+RC
+JJ
+JJ
+PG
+FV
+VB
+HF
+Fd
+CI
+CI
+bM
+zt
+Xz
+CI
+Ad
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(57,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Wn
+Wn
+Wn
+Wn
+Wn
+Vp
+Wn
+Wn
+Wn
+Wn
+Wn
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+Qx
+TL
+WL
+yp
+IH
+DZ
+DZ
+FV
+tA
+uE
+lc
+XS
+SA
+QE
+QE
+nm
+uE
+RC
+JJ
+JJ
+PG
+FV
+Wt
+SF
+qG
+Gs
+CI
+bM
+QI
+el
+GX
+kO
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(58,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+nW
+TL
+NC
+NC
+IH
+vi
+ry
+mO
+uE
+uE
+uE
+Dc
+uE
+ip
+ip
+uE
+uE
+uE
+KO
+KO
+kD
+FV
+ky
+ky
+bd
+Gs
+CI
+bM
+ky
+yG
+yG
+yG
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(59,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+ON
+TL
+ZP
+ZP
+IH
+vi
+fO
+mO
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+uE
+FI
+Iu
+rx
+Xz
+CI
+CI
+sR
+kI
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(60,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+lo
+XX
+ZP
+ZP
+IH
+DZ
+DZ
+FV
+vR
+jX
+DK
+JJ
+fQ
+cD
+cD
+co
+lm
+uE
+jX
+jX
+uE
+Za
+XP
+rx
+Xz
+CI
+CI
+Sx
+an
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(61,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+pX
+TL
+ZP
+EJ
+IH
+qi
+dX
+FV
+RT
+RT
+lV
+lV
+lV
+Fa
+HD
+cc
+cc
+lV
+zO
+zO
+KK
+FV
+ky
+ky
+qx
+ya
+GX
+Ms
+TK
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(62,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+Es
+TL
+ZP
+yp
+IH
+qi
+dX
+tc
+cT
+tD
+lV
+Zy
+fz
+Vd
+Vd
+gn
+qn
+lV
+TW
+Wg
+Qj
+Qj
+iR
+Qj
+ky
+ky
+ky
+yG
+yG
+yG
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(63,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+wM
+nR
+nR
+PN
+bX
+tc
+tc
+tc
+Cj
+Cj
+lV
+UC
+Yl
+lg
+lg
+jT
+Ze
+lV
+YL
+YL
+It
+Qj
+Qj
+Qj
+ZN
+lT
+ZN
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(64,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+wz
+wz
+pR
+DZ
+tc
+tc
+Tg
+DE
+UY
+UY
+lV
+UC
+Yl
+lg
+lg
+jT
+UC
+lV
+Rq
+It
+It
+Qj
+aT
+Vv
+It
+It
+It
+Gg
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(65,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+wz
+CO
+Xr
+uk
+qK
+tc
+Pn
+UY
+UY
+UY
+aY
+MM
+UC
+Yl
+lg
+lg
+jT
+UC
+lV
+vo
+It
+It
+Qq
+It
+It
+It
+It
+It
+Gg
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(66,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+fr
+fr
+fr
+fr
+wz
+CO
+fy
+TL
+kF
+tc
+Pq
+UY
+UY
+UY
+UY
+MM
+UC
+Yl
+lg
+lg
+jT
+UC
+lV
+jb
+It
+It
+It
+It
+TW
+It
+It
+It
+Gg
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(67,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+fr
+eL
+tv
+aj
+wz
+CO
+AM
+wn
+bG
+tc
+vS
+UY
+UY
+qS
+wQ
+lV
+Sf
+ee
+lg
+lg
+jT
+UC
+lV
+gO
+It
+It
+pv
+Aa
+It
+It
+It
+It
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(68,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+ZR
+ZR
+ZR
+ZR
+ZR
+fr
+fU
+Ny
+rO
+fr
+fr
+qE
+tc
+tc
+tc
+tc
+cT
+cT
+tc
+tc
+lV
+lV
+wg
+rC
+rC
+lV
+lV
+lV
+tc
+Th
+eM
+Qj
+Qj
+Qj
+CV
+CV
+Qj
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(69,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+iC
+CK
+Vr
+CK
+BM
+fr
+bp
+DO
+DO
+DO
+DO
+bN
+tc
+Ra
+DE
+wV
+UY
+UY
+jG
+PA
+PA
+PA
+Nm
+Fa
+JL
+mH
+vY
+vY
+tc
+tc
+tc
+Qj
+xS
+TW
+It
+It
+Aa
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(70,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+KC
+fr
+lB
+lB
+bU
+fr
+az
+dQ
+LW
+LW
+LW
+dA
+tc
+Ra
+UY
+sM
+UY
+Mi
+mH
+mH
+mH
+mH
+Nm
+Vd
+Vd
+mH
+mH
+mH
+mH
+mH
+em
+Qj
+QN
+TW
+It
+It
+Aa
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(71,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+tW
+qB
+up
+se
+se
+lB
+kY
+ce
+LW
+nF
+LW
+dA
+tc
+qo
+UY
+UY
+UY
+qo
+mH
+Mu
+Mu
+Mu
+Gv
+oQ
+oQ
+wf
+Mu
+Mu
+Mu
+mH
+em
+Qj
+QN
+It
+It
+It
+UK
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(72,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+KC
+fr
+TD
+ED
+ED
+lB
+kY
+PP
+LW
+PP
+LW
+dA
+tc
+qo
+QK
+nr
+qo
+qo
+mH
+eo
+or
+or
+iM
+oQ
+oQ
+Ho
+or
+or
+sz
+mH
+em
+Qj
+Of
+YW
+hk
+Aa
+Aa
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(73,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+tW
+qB
+up
+eZ
+eZ
+lB
+kY
+ce
+LW
+Ea
+LW
+dA
+tc
+tc
+tc
+tc
+tc
+tc
+mH
+Ys
+Ys
+Ys
+vW
+yH
+yH
+dq
+Ys
+Ys
+Ys
+mH
+QH
+rA
+rA
+rA
+rA
+rA
+rA
+rA
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(74,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+KC
+fr
+lB
+lB
+bU
+Tu
+kY
+yA
+LW
+LW
+LW
+dA
+Tu
+PA
+PA
+PA
+PA
+PA
+mH
+mH
+mH
+mH
+mH
+Tw
+hD
+mH
+mH
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(75,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+cE
+CK
+Vr
+CK
+oj
+Tu
+Ao
+Cl
+Cl
+Cl
+Cl
+IJ
+Tu
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+mH
+hb
+bn
+Zr
+UV
+Xe
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(76,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+ZR
+ZR
+ZR
+ZR
+ZR
+ZR
+Tu
+fE
+Tu
+Gy
+Gy
+Tu
+Tu
+Tu
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+mH
+mH
+Nm
+Xu
+Pt
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(77,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Tu
+Tu
+Tu
+ro
+Tz
+Tu
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+mH
+hb
+qe
+xE
+xE
+CT
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(78,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+lF
+Wv
+Wv
+lF
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+KN
+KN
+KN
+mH
+mH
+mH
+DY
+py
+JH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(79,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+EC
+dJ
+dL
+EC
+Fw
+oO
+kA
+kA
+Gh
+Fw
+EC
+dJ
+dL
+EC
+Mw
+gR
+gR
+gR
+mH
+hb
+aq
+oQ
+oQ
+jZ
+Vh
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(80,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Qw
+Ej
+bJ
+Qw
+Fw
+EP
+kA
+kA
+yt
+Fw
+Qw
+Ej
+bJ
+Qw
+Mw
+gR
+gR
+gR
+mH
+mH
+mH
+oQ
+oQ
+mH
+JH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(81,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Qw
+Ej
+bJ
+Qw
+II
+EP
+kA
+kA
+yt
+II
+Qw
+Ej
+bJ
+Qw
+Mw
+gR
+gR
+gR
+mH
+hb
+CZ
+oQ
+oQ
+VN
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(82,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+aA
+jo
+tQ
+aA
+Rk
+nk
+kA
+kA
+En
+Rk
+aA
+jo
+tQ
+aA
+Mw
+gR
+gR
+gR
+mH
+mH
+mH
+oQ
+oQ
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(83,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Qw
+Qw
+Qw
+Qw
+Fw
+EP
+kA
+kA
+yt
+Fw
+Qw
+Qw
+Qw
+Qw
+Mw
+gR
+gR
+gR
+mH
+hb
+Xs
+oQ
+oQ
+hq
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(84,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Lz
+kA
+kA
+LY
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+gR
+gR
+gR
+mH
+mH
+mH
+DY
+py
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(85,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+by
+oB
+si
+Mw
+PR
+PR
+sA
+Mw
+Mw
+EP
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+mH
+hb
+oN
+kH
+oQ
+QO
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(86,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+gp
+nd
+mc
+Mw
+Mw
+Mw
+Mw
+Mw
+DQ
+EP
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+mH
+mH
+mH
+Qm
+oQ
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(87,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+kg
+uP
+hx
+nd
+zH
+uP
+uP
+MO
+EF
+CB
+HT
+WD
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+mH
+hb
+Xs
+oQ
+oQ
+oy
+hb
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(88,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+nd
+nd
+gZ
+nd
+nd
+nd
+nd
+Mw
+kA
+kA
+kA
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+mH
+mH
+mH
+mH
+mH
+mH
+mH
+mH
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(89,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+ak
+lP
+nd
+Az
+ak
+ak
+Lc
+EF
+sK
+dM
+LJ
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(90,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+gp
+nd
+mc
+Mw
+Mw
+Mw
+Mw
+Mw
+IL
+EP
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(91,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+nN
+pa
+AT
+Mw
+gR
+gR
+gR
+Mw
+Mw
+EP
+kA
+kA
+yt
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(92,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+Mw
+Mw
+gR
+gR
+gR
+gR
+Mw
+uG
+dM
+dM
+fh
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(93,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(94,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(95,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(96,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(97,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(98,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(99,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(100,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(101,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(102,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(103,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(104,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(105,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(106,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(107,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(108,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(109,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(110,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(111,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(112,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(113,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(114,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(115,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(116,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(117,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(118,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(119,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(120,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(121,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(122,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(123,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(124,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+SV
+SV
+SV
+SV
+SV
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(125,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+SV
+jj
+SV
+SV
+SV
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(126,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+SV
+SV
+SV
+SV
+SV
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(127,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(128,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(129,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(130,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(131,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(132,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(133,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(134,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(135,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(136,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(137,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(138,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(139,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(140,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(141,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(142,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(143,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(144,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(145,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(146,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(147,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(148,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(149,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}
+(150,1,1) = {"
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+gR
+"}

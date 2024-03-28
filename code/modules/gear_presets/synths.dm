@@ -713,3 +713,27 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/chloroform(new_human), WEAR_IN_L_STORE)
 
 //*****************************************************************************************************/
+
+/datum/equipment_preset/synth/survivor/overwatch
+	name = "Synthetic - OVERWATCH"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	faction = FACTION_PMC
+	idtype = /obj/item/card/id/gold
+	assignment = JOB_SYNTH
+	rank = "Synthetic"
+	paygrade = "SYN"
+	role_comm_title = "Syn"
+
+	equipment_to_spawn = list(
+		WEAR_HEAD = /obj/item/clothing/head/soft/sec/corp,
+		WEAR_L_EAR = /obj/item/device/radio/headset/distress/WY,
+		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
+		WEAR_BODY = /obj/item/clothing/under/marine/officer/formal/servicedress,
+		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
+		WEAR_IN_BACK = /obj/item/weapon/telebaton,
+		WEAR_JACKET = /obj/item/clothing/suit/storage/webbing,
+		WEAR_WAIST = /obj/item/storage/belt/security/MP/full,
+		WEAR_HANDS = /obj/item/clothing/gloves/black,
+		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
+	)

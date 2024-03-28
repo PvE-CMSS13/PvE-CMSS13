@@ -281,6 +281,10 @@
 
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/flamer/advanced)
 
+/obj/item/weapon/gun/rifle/m41a/corporate/pmc
+	current_mag = /obj/item/ammo_magazine/rifle/extended
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/heavy_barrel)
+
 //-------------------------------------------------------
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 

@@ -998,6 +998,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/pve
+	name = "\improper M11-PMC helmet"
+	desc = "An aftermarket helmet worn by PMC groups. A more comfortable M11, covered by a sterilized white antibacterial layer. It's a shockingly useful feature after a firefight."
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	name = "\improper PMC gunner helmet"
 	desc = "A modification of the standard Armat Systems M3 armor."
