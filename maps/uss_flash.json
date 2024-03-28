@@ -1,0 +1,9 @@
+{
+    "map_name": "USS Flash",
+    "map_path": "map_files/flash",
+    "map_file": "uss_flash.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow/",
+    "platoon": "/datum/squad/marine/raider"
+}

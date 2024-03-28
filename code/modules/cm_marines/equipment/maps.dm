@@ -145,6 +145,12 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/flash
+	name = "\improper USS Flash Map"
+	desc = "A labelled blueprint of the USS Flash"
+	html_link = "images/5/54/USS_Almayer.png"
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()

@@ -649,6 +649,19 @@
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
+/obj/item/storage/backpack/general_belt_tactical
+	name = "\improper G8-T tactical utility pouch"
+	desc = "A small, lightweight pouch that can be clipped onto Armat Systems M3 Pattern armor to provide additional storage. The cutting-edge G8-T model provides a mix of comfort and utility."
+	max_storage_space = 10
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	flags_equip_slot = SLOT_WAIST
+	icon = 'icons/obj/items/clothing/belts.dmi'
+	icon_state = "t_g8pouch"
+	item_state = "t_g8pouch"
+	has_gamemode_skin = TRUE
+	can_hold_skill = list()
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"

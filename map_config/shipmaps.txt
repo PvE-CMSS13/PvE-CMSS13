@@ -25,3 +25,6 @@ endmap
 
 map rover
 endmap
+
+map uss_flash
+endmap

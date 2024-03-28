@@ -60,7 +60,7 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
-	
+
 /obj/item/ammo_box/magazine/mk1
 	name = "magazine box (M41A MK1 X 10)"
 	flags_equip_slot = SLOT_BACK
@@ -69,6 +69,26 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/ammo_box/magazine/mk1/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/xm40
+	name = "magazine box (XM40 AP X 10)"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_ap"
+	overlay_content = "_ap"
+	magazine_type = /obj/item/ammo_magazine/rifle/xm40
+
+/obj/item/ammo_box/magazine/xm40/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/xm40/heap
+	name = "magazine box (XM40 HEAP X 10)"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_heap"
+	overlay_content = "_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/xm40/heap
+
+/obj/item/ammo_box/magazine/xm40/heap/empty
 	empty = TRUE
 
 //-----------------------M39 Rifle Mag Boxes-----------------------

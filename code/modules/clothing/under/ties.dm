@@ -405,6 +405,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
 	icon_state = "navalpatch"
 
+/obj/item/clothing/accessory/patch/marsoc
+	name = "USCM Silent Hunters patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Marine Raiders' 'Silent Hunters' battalion. If you're seeing this, you're probably already dead."
+	icon_state = "raiderpatch"
+
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."

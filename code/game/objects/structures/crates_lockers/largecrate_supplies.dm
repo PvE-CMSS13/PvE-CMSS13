@@ -206,6 +206,15 @@
 	desc = "An ammunition case containing 20 Type 71 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
 
+/obj/structure/largecrate/supply/ammo/xm40/heap
+	name = "\improper XM40 HEAP magazine case (x20)"
+	desc = "An ammunition case containing 20 XM40 HEAP magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/xm40/heap = 20)
+
+/obj/structure/largecrate/supply/ammo/xm40
+	name = "\improper XM40 AP magazine case (x20)"
+	desc = "An ammunition case containing 20 XM40 AP magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/xm40 = 20)
 
 /obj/structure/largecrate/supply/explosives
 	name = "explosives supply crate"

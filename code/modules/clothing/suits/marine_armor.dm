@@ -397,6 +397,22 @@
 		/obj/item/device/walkman,
 	)
 
+/obj/item/clothing/suit/storage/marine/sof/smartgunner
+	name = "\improper SOF Smartgun Harness"
+	desc = "A heavily customized M56 smartgun harness. This version has a reinforced arm and advanced high-speed gyroscopes used to stabilize recoil. Used by marine raiders. "
+	icon_state = "marsoc_sg"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	unacidable = TRUE
+	flags_atom = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
+	flags_inventory = SMARTGUN_HARNESS
+	storage_slots = 4
+
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "M56 combat harness")
@@ -1021,6 +1037,22 @@
 	unacidable = TRUE
 	flags_atom = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
 	storage_slots = 4
+
+/obj/item/clothing/suit/storage/marine/sof/light
+	name = "\improper SOF Armor (Padless)"
+	desc = "A heavily custmoized suit of M3 armor. Used by marine raiders. This one is stripped of it's pauldrons."
+	icon_state = "marsoc_l"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	unacidable = TRUE
+	flags_atom = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE|NO_SNOW_TYPE
+	storage_slots = 4
+
 
 //=============================//pmcS\\==================================\\
 //=======================================================================\\

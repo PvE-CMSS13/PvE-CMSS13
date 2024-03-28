@@ -159,6 +159,17 @@
 	minimap_color = "#32CD32"
 	usable = TRUE
 
+/datum/squad/marine/raider
+	name = SQUAD_RAIDER
+	access = list (ACCESS_MARINE_ALPHA)
+	radio_freq = SOF_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#881700"
+	chat_color = "#F32900"
+	minimap_color = "#881700"
+	usable = TRUE
+
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

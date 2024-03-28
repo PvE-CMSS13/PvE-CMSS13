@@ -75,3 +75,10 @@
 	max_stored = 2
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/boyars_dualcannon
+
+/obj/structure/gun_rack/xm40
+	icon_state = "xm40"
+	desc = "ARMAT-produced gun rack for storage of long guns. This one in particular is fitted to hold the advanced XM40SD series of rifles, one that never got slated for mass production and is now given out to select special forces units. Get tactical."
+	max_stored = 6
+	initial_stored = 6
+	allowed_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40/ap

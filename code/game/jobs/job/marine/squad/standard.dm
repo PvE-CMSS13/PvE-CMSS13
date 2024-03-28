@@ -70,6 +70,13 @@
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 
+/datum/job/marine/standard/ai/raider
+	title = JOB_SQUAD_MARINE_RAIDER
+	total_positions = 5
+	spawn_positions = 5
+	gear_preset = /datum/equipment_preset/uscm/pfc/raider
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/raider/lesser_rank
+
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
 	spawn_positions = 1
@@ -91,6 +98,11 @@
 	name = JOB_SQUAD_RTO
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
+
+/obj/effect/landmark/start/marine/raider
+	name = JOB_SQUAD_MARINE_RAIDER
+	squad = SQUAD_RAIDER
+	job = /datum/job/marine/standard/ai/raider
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

@@ -14,6 +14,7 @@
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_RAIDER "Silent Hunters"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -39,6 +40,11 @@
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+#define JOB_SQUAD_LEADER_RAIDER "Marine Raider Element Leader"
+#define JOB_SQUAD_TEAM_LEADER_RAIDER "Marine Raider Communications and Signals Specialist"
+#define JOB_SQUAD_MEDIC_RAIDER "Marine Raider Special Reconnaisance Corpsman"
+#define JOB_SQUAD_MARINE_RAIDER "Marine Raider Critical Skill Operator"
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
