@@ -31,22 +31,19 @@
 		qdel(src)
 		return FALSE
 
+	var/area/current_area = get_area(location)
+	if(!current_area.is_resin_allowed)
+		for(var/client/game_master in GLOB.game_masters)
+			to_chat(game_master, SPAN_XENOBOLDNOTICE("[current_area] doesn't allow xenos to build here"))
+
+		qdel(src)
+		return FALSE
+
 	if(locate(/obj/structure/mineral_door/resin) in location)
 		qdel(src)
 		return FALSE
 
-	var/area/current_area = get_area(location)
-	if(!current_area.is_resin_allowed)
-		for(var/client/game_master in GLOB.game_masters)
-			to_chat(game_master, SPAN_XENOBOLDNOTICE("This area doesn't allow xenos to build here"))
-
-		qdel(src)
-		return FALSE
-
 	if(distance > 10)
-		return FALSE
-
-	if(checked_xeno.current_target)
 		return FALSE
 
 	if(!locate(/datum/action/xeno_action/activable/secrete_resin) in checked_xeno.actions)
@@ -55,7 +52,7 @@
 	if(checked_xeno.get_plasma_percentage() < PLASMA_RETREAT_PERCENTAGE)
 		var/turf/xeno_loc = get_turf(checked_xeno)
 		if(xeno_loc.weeds)
-			checked_xeno.set_resting(TRUE, FALSE, TRUE)
+			checked_xeno.set_resting(TRUE, FALSE)
 
 		return FALSE
 
@@ -75,19 +72,21 @@
 	var/turf/parent_turf = get_turf(parent)
 	var/distance = get_dist(processing_xeno, parent)
 
-	var/list/turfs_around = xeno_loc.AdjacentTurfs()
-	if(turfs_around && distance < 1) // We are gonna be stuck after building at our loc, let's step away
-		return processing_xeno.move_to_next_turf(pick(turfs_around))
-
-	var/is_diagonal = (get_dir(processing_xeno, parent_turf) in diagonals)
-	if(is_diagonal || distance > 1)
+	/// Is xeno adjacent to parent_turf?
+	if(distance > 1)
 		return processing_xeno.move_to_next_turf(parent_turf)
 
+	/// Xeno will be stuck after building at its loc, if so - we command droney to step away
+	if(distance < 1)
+		return processing_xeno.move_to_next_turf(pick(GLOB.cardinals))
+
+	/// If there is something that might block our resin - slash it
 	for(var/obj/structure/blocker in parent_turf.contents)
-		if(!blocker.unslashable && blocker.density || istype(blocker, /obj/structure/bed))
+		if(!blocker.unslashable && (blocker.density || istype(blocker, /obj/structure/bed)))
 			INVOKE_ASYNC(processing_xeno, TYPE_PROC_REF(/mob, do_click), blocker, "", list())
 			return TRUE
 
+	/// If no ground weeds present - command our xeno to plant one
 	if(!parent_turf.weeds)
 		var/datum/action/xeno_action/onclick/plant_weeds/weeds_action = locate() in processing_xeno.actions
 		INVOKE_ASYNC(weeds_action, TYPE_PROC_REF(/datum/action/xeno_action/onclick/plant_weeds, use_ability_wrapper))
@@ -96,24 +95,30 @@
 	var/list/resin_types = processing_xeno.resin_build_order
 	processing_xeno.selected_resin = locate(/datum/resin_construction/resin_turf/wall) in resin_types
 
-	var/wall_nearby = FALSE
-	var/blocked_turfs = 0
-	for(var/turf/blocked_turf in orange(1, parent_turf) - parent_turf.AdjacentTurfs())
-		blocked_turfs++
-
-		if(get_dir(blocked_turf, parent_turf) in diagonals)
+	/// Let's decide whenever we are building a door or naw
+	var/build_door = FALSE
+	for(var/turf/blocked_turf in RANGE_TURFS(1, parent_turf) - parent_turf)
+		var/direction = get_dir(parent_turf, blocked_turf)
+		if(direction in diagonals)
 			continue
 
-		if(blocked_turf.density)
-			wall_nearby = TRUE
+		if(!blocked_turf.density)
+			continue
 
-		var/obj/effect/alien/weeds/turf_weeds = blocked_turf.weeds
-		if(turf_weeds && turf_weeds.secreting)
-			wall_nearby = TRUE // Something is being constructed nearby, let's bet this is a new resin wall
+		/// Checking for any opposite walls on angles 135, 180, 225 respectfully
+		for(var/opposite_dir in reverse_nearby_direction(direction))
+			var/turf/opposite_turf = get_step(parent_turf, opposite_dir)
+			if(opposite_turf.density)
+				build_door = TRUE
+				break
 
-	if(wall_nearby)
-		if(prob(XENO_DOOR_BUILDING_CHANCE) || (wall_nearby && blocked_turfs > 1))
-			processing_xeno.selected_resin = locate(/datum/resin_construction/resin_obj/door) in resin_types
+			var/obj/effect/alien/weeds/opposite_weeds = opposite_turf.weeds
+			if(opposite_weeds && opposite_weeds.secreting)
+				/// Something is being constructed nearby, let's bet this is a new resin wall
+				build_door = TRUE
+
+	if(build_door || prob(XENO_DOOR_BUILDING_CHANCE))
+		processing_xeno.selected_resin = locate(/datum/resin_construction/resin_obj/door) in resin_types
 
 	var/datum/action/xeno_action/activable/secrete_resin/build_action = locate() in processing_xeno.actions
 	INVOKE_ASYNC(build_action, TYPE_PROC_REF(/datum/action/xeno_action/activable/secrete_resin, use_ability_wrapper), parent_turf)
