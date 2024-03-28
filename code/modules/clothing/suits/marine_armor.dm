@@ -424,6 +424,10 @@
 	if(slot != WEAR_BACK)
 		return
 
+
+	if(istype(equipping_item, /obj/item/weapon/gun))
+		return
+		
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
