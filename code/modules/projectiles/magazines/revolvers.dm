@@ -90,7 +90,7 @@
 
 /obj/item/ammo_magazine/revolver/cmb/normalpoint //put these in the marshal ert - ok sure :)
 	name = "\improper Spearhead speed loader (.357)"
-	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
+	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks but service standard for the USCM."
 	default_ammo = /datum/ammo/bullet/revolver/small
 	icon_state = "cmb"
 

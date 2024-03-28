@@ -746,3 +746,14 @@
 
 /obj/item/weapon/gun/revolver/cmb/normalpoint
 	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+
+//-------------------------------------------------------
+//MARINE REVOLVER //Spearhead exists in Alien cannon, this one is based on the Dark Descent model.
+
+/obj/item/weapon/gun/revolver/cmb/marine
+	name = "\improper SA .357"
+	desc = "An automatic revolver chambered in .357, recognizably similar to its civilian counterpart. In Limited Service with the USCM, typically provided to more veteran units."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "mspearhead"
+	item_state = "mspearhead"
+	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb

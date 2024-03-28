@@ -120,7 +120,7 @@
 	name = "small revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
 
-	damage = 45
+	damage = 70
 
 	penetration = ARMOR_PENETRATION_TIER_3
 
@@ -128,7 +128,7 @@
 	name = "small hollowpoint revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 75 // way too strong because it's hard to make a good balance between HP and normal with this system, but the damage falloff is really strong
+	damage = 85 // way too strong because it's hard to make a good balance between HP and normal with this system, but the damage falloff is really strong
 	penetration = 0
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
