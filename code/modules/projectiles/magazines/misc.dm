@@ -19,8 +19,8 @@
 //M60
 
 /obj/item/ammo_magazine/m60
-	name = "M60 ammo box (7.62x51mm)"
-	desc = "A blast from the past chambered in 7.62X51mm NATO."
+	name = "\improper Mk70 belt box"
+	desc = "A limited production run by Henjin-Garcia of old Earth weapons. This is a 100rnd box magazine for their Mk70 reproduction of the M60 GPMG. \nHolds 100 rounds of cased 7.62x51mm frangible ammunition. Open the feed tray cover with alt-click before loading!"
 	caliber = "7.62x51mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m60" //PLACEHOLDER

@@ -152,16 +152,20 @@
 	accurate_range = 12
 
 /datum/ammo/bullet/m60
-	name = "M60 bullet"
+	name = "frangible machine gun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	accuracy = HIT_ACCURACY_TIER_2
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
-	damage = 45 //7.62x51 is scary
-	penetration= ARMOR_PENETRATION_TIER_6
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	damage = 55 //7.62x51 is scary, redux...
+	penetration = 0 //...but frangibles suck ass at punching through armor...
+	shrapnel_chance = 0 //...and they tend to disintegrate into dust.
+
+/datum/ammo/bullet/m60/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 3) //at close range you can juggle back a horde which should be nice.
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"

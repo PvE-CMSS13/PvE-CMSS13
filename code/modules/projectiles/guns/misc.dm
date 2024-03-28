@@ -63,8 +63,8 @@
 
 //M60
 /obj/item/weapon/gun/m60
-	name = "\improper M60 General Purpose Machine Gun"
-	desc = "The M60. The Pig. The Action Hero's wet dream. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
+	name = "\improper H-G Mk70 Machine Gun"
+	desc = "Part of the Henjin-Garcia repro line, found surprising niche in Frontier colony home defense against aggressive, largescale xenofauna. /nAlt-click to open the feed tray cover for handling reloads."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "m60"
 	item_state = "m60"
