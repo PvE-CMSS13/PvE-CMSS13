@@ -138,14 +138,6 @@
 	icon_state = "rasputin15"
 	},
 /area/shuttle/cyclone)
-"jR" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/cyclone)
 "lc" = (
 /obj/structure/machinery/light{
 	dir = 4;
@@ -407,6 +399,15 @@
 	icon_state = "rasputin3"
 	},
 /area/shuttle/cyclone)
+"Ey" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone{
+	dir = 1;
+	id = "starboard_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/cyclone)
 "EP" = (
 /turf/closed/shuttle/cyclone{
 	icon_state = "75"
@@ -537,8 +538,9 @@
 	},
 /area/shuttle/cyclone)
 "QA" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	id = "starboard_door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone{
+	dir = 1;
+	id = "port_door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -657,8 +659,8 @@ EP
 uH
 mI
 pb
-jR
-jR
+Ty
+QA
 xY
 hS
 wA
@@ -777,8 +779,8 @@ AP
 sa
 Hg
 Uo
-QA
-QA
+Ty
+Ey
 At
 fo
 zH

@@ -350,9 +350,9 @@
 /turf/template_noop,
 /area/shuttle/drop2/sulaco)
 "En" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	dir = 8;
-	id = "starboard_door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2{
+	dir = 1;
+	id = "port_door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -406,6 +406,15 @@
 /obj/docking_port/mobile/marine_dropship/normandy,
 /turf/closed/shuttle/dropship2{
 	icon_state = "53"
+	},
+/area/shuttle/drop2/sulaco)
+"JN" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2{
+	dir = 1;
+	id = "starboard_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/drop2/sulaco)
 "Kl" = (
@@ -582,14 +591,6 @@
 /obj/structure/shuttle/part/dropship2/nose_front_left,
 /turf/template_noop,
 /area/shuttle/drop2/sulaco)
-"SC" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/drop2/sulaco)
 "SO" = (
 /turf/closed/shuttle/dropship2{
 	icon_state = "36"
@@ -708,8 +709,8 @@ eu
 OI
 GE
 lJ
-SC
-SC
+PJ
+En
 jc
 pU
 nS
@@ -892,8 +893,8 @@ wX
 fI
 fx
 Tp
-En
-En
+PJ
+JN
 gG
 RG
 QK

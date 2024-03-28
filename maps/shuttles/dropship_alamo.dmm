@@ -216,14 +216,6 @@
 	icon_state = "23"
 	},
 /area/shuttle/drop1/sulaco)
-"rS" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/drop1/sulaco)
 "rV" = (
 /obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing,
 /turf/template_noop,
@@ -237,6 +229,15 @@
 	layer = 3.5;
 	pixel_x = 21;
 	pixel_y = 43
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/drop1/sulaco)
+"uR" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1{
+	dir = 1;
+	id = "starboard_door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -481,9 +482,9 @@
 	},
 /area/shuttle/drop1/sulaco)
 "Pf" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	dir = 8;
-	id = "starboard_door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1{
+	dir = 1;
+	id = "port_door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -675,8 +676,8 @@ hG
 Et
 iI
 JP
-rS
-rS
+il
+Pf
 mW
 qn
 sA
@@ -859,8 +860,8 @@ zS
 iv
 zV
 MP
-Pf
-Pf
+il
+uR
 nC
 nE
 rl

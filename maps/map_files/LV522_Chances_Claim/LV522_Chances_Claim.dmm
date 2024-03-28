@@ -27970,6 +27970,16 @@
 	icon_state = "plate"
 	},
 /area/lv522/atmos/cargo_intake)
+"lgw" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "UD6 East";
+	indestructible = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/lv522/landing_zone_forecon/UD6_Tornado)
 "lgR" = (
 /obj/structure/largecrate/random/secure,
 /turf/open/floor/plating,
@@ -41284,6 +41294,20 @@
 	icon_state = "platingdmg3"
 	},
 /area/lv522/indoors/a_block/dorms)
+"qjy" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "UD6 East";
+	indestructible = 1
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2{
+	dir = 1;
+	name = "\improper Tornado crew hatch"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/lv522/landing_zone_forecon/UD6_Tornado)
 "qjC" = (
 /obj/item/stack/rods,
 /turf/open/floor/prison,
@@ -42172,8 +42196,9 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "qzp" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	dir = 8
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2{
+	dir = 1;
+	name = "\improper Typhoon crew hatch"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin3"
@@ -62477,8 +62502,9 @@
 	},
 /area/lv522/outdoors/colony_streets/north_street)
 "xRM" = (
-/obj/structure/machinery/door/airlock/dropship_hatch/two{
-	dir = 8
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2{
+	dir = 1;
+	name = "\improper Tornado crew hatch"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -66220,7 +66246,7 @@ pRK
 qmM
 qGQ
 qTh
-qzp
+rjP
 qzp
 nfq
 fDg
@@ -67582,7 +67608,7 @@ pUc
 qst
 qLz
 qVl
-qzp
+rjP
 qzp
 rFp
 sdE
@@ -103011,7 +103037,7 @@ sCp
 toY
 uwQ
 wzg
-xRM
+lgw
 xRM
 bpZ
 wRL
@@ -104373,8 +104399,8 @@ tcu
 tSo
 vjv
 wCr
-xRM
-xRM
+lgw
+qjy
 fXn
 uSB
 ecP

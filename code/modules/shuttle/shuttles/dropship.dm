@@ -42,6 +42,9 @@
 					door_control.add_door(air, "port")
 				if("aft_door")
 					door_control.add_door(air, "aft")
+			var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/hatch = air
+			if(istype(hatch))
+				hatch.linked_dropship = src
 
 /obj/docking_port/mobile/marine_dropship/Destroy(force)
 	. = ..()

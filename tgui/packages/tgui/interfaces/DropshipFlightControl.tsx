@@ -3,6 +3,14 @@ import { Window } from '../layouts';
 import { Box, Button, Flex, Icon, ProgressBar, Section, Stack } from '../components';
 import { LaunchButton, CancelLaunchButton, DisabledScreen, InFlightCountdown, LaunchCountdown, NavigationProps, ShuttleRecharge, DockingPort } from './NavigationShuttle';
 
+const DoorStatusEnum = {
+  SHUTTLE_DOOR_BROKEN: -1,
+  SHUTTLE_DOOR_UNLOCKED: 0,
+  SHUTTLE_DOOR_LOCKED: 1,
+} as const;
+
+type DoorStatusEnums = typeof DoorStatusEnum[keyof typeof DoorStatusEnum];
+
 interface DoorStatus {
   id: string;
   value: 0 | 1;
@@ -45,7 +53,7 @@ const DropshipDoorControl = (_, context) => {
                 disabled={disable_door_controls}
                 onClick={() =>
                   act('door-control', {
-                    interaction: 'lock',
+                    interaction: 'force-lock',
                     location: 'all',
                   })
                 }
@@ -81,7 +89,7 @@ const DropshipDoorControl = (_, context) => {
                     <Button
                       onClick={() =>
                         act('door-control', {
-                          interaction: 'lock',
+                          interaction: 'force-lock',
                           location: x.id,
                         })
                       }

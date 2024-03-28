@@ -475,7 +475,8 @@
 /area/shuttle/midway)
 "HY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
-	id = "aft_door"
+	id = "aft_door";
+	name = "\improper Midway cargo door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -495,6 +496,15 @@
 "Jq" = (
 /turf/closed/shuttle/midway{
 	icon_state = "72"
+	},
+/area/shuttle/midway)
+"Kp" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
+	dir = 1;
+	id = "starboard_door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
 	},
 /area/shuttle/midway)
 "Ks" = (
@@ -533,14 +543,6 @@
 	name = "\improper Midway"
 	},
 /turf/template_noop,
-/area/shuttle/midway)
-"Mf" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
 /area/shuttle/midway)
 "Mz" = (
 /obj/structure/stairs/perspective,
@@ -608,9 +610,9 @@
 	},
 /area/shuttle/midway)
 "SS" = (
-/obj/structure/machinery/door/airlock/dropship_hatch{
-	dir = 8;
-	id = "starboard_door"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
+	dir = 1;
+	id = "port_door"
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin15"
@@ -722,8 +724,8 @@ Hj
 Jq
 Vu
 xp
-Mf
-Mf
+ME
+SS
 QI
 gw
 ls
@@ -842,8 +844,8 @@ wB
 VU
 ym
 Ji
-SS
-SS
+ME
+Kp
 rF
 ul
 BS
