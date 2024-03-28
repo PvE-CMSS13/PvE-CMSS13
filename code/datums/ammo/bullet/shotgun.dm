@@ -35,6 +35,64 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/buckshot/canister
+//constructed with the assistance of vero5123.
+	name = "M108 Canister Grenade"
+	handful_state = "grenade_hedp"
+	icon_state = "buckshot"
+	multiple_handful_name = TRUE
+	bonus_projectiles_type = "/datum/ammo/bullet/shotgun/spread/canister"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	accurate_range = 5
+	max_range = 8
+	damage = 25
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_1
+	damage_armor_punch = 1
+	pen_armor_punch = 0
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_10
+
+/datum/ammo/bullet/shotgun/buckshot/canister/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+	slowdown(M, P)
+
+/datum/ammo/bullet/shotgun/buckshot/canister/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 12, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+	))
+
+/datum/ammo/bullet/shotgun/buckshot/canister/spread
+	name = "low velocity canister shot"
+	icon_state = "buckshot"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	accurate_range = 5
+	max_range = 8
+	damage = 25
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_1
+	damage_armor_punch = 1
+	pen_armor_punch = 0
+
+/datum/ammo/bullet/shotgun/spread/canister/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+	slowdown(M, P)
+
+
+/datum/ammo/bullet/shotgun/spread/canister/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 12, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+	))
+
 /datum/ammo/bullet/shotgun/beanbag
 	name = "beanbag slug"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT //It's not meant to kill people... but if you put it in your mouth, it will.

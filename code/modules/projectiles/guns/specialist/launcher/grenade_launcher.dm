@@ -195,6 +195,13 @@
 	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
 	log_game("[key_name_admin(user)] used a grenade ([name]).")
 
+	// canister rounds explode before leaving the barrel of the launcher.
+	// section constructed by vero5123.
+	if(istype(fired, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = fired
+		canister_round.canister_fire(src, target)
+		return
+
 	fired.throw_range = 20
 	fired.det_time = min(10, fired.det_time)
 	fired.activate(user, FALSE)
