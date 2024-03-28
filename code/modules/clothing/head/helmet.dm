@@ -351,8 +351,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 ))
 
 /obj/item/clothing/head/helmet/marine
-	name = "\improper M10 pattern marine helmet"
-	desc = "A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side."
+	name = "\improper M10 pattern ballistic helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display eyepiece. Also features white/black hot IR viewing modes from the camera system."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "helmet"
 	item_state = "helmet"
@@ -755,8 +755,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/tech/tanker
-	name = "\improper M50 tanker helmet"
-	desc = "The lightweight M50 tanker helmet is designed for use by armored crewmen in the USCM. It offers low weight protection, and allows agile movement inside the confines of an armored vehicle. Features a toggleable welding screen for eye protection."
+	name = "\improper Mk20 tanker helmet"
+	desc = "The older Mk20 Advanced Armored Crew Helmet is essentially just a slimmed down combat helmet with a flipdown welding visor attached. Camera on the side and biometric transmitter ties into the sensor matrix."
 	icon_state = "tanker_helmet"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
@@ -790,15 +790,15 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/leader
-	name = "\improper M11 pattern helmet"
-	desc = "A variant of the standard M10 pattern. The front plate is reinforced. This one contains a small built-in camera and has cushioning to project your fragile brain."
+	name = "\improper M09 pattern helmet"
+	desc = "Back issue model of an older combat helmet. Uncomfortable, but the added protection is supposedly worth it. It's been wired up the same, so it still ties into the sensor matrix fine."
 	icon_state = "sl_helmet"
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M11 pattern marine"
 
 /obj/item/clothing/head/helmet/marine/rto
-	name = "\improper M12 pattern dust helmet"
-	desc = "An experimental brain-bucket. A dust ruffle hangs from back instead of the standard lobster shell design. Moderately better at deflecting blunt objects at the cost of humiliation, can also hold a second visor optic. But who will be laughing at the memorial? Not you, you'll be busy getting medals for your fantastic leadership."
+	name = "\improper M12 pattern helmet"
+	desc = "A failed procurement for the successor to the old M10 Ballistic Helmet. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
 	icon_state = "io"
 	item_state = "io"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
@@ -813,7 +813,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/specialist
 	name = "\improper B18 helmet"
-	desc = "The B18 Helmet that goes along with the B18 Defensive Armor. It's heavy, reinforced, and protects more of the face."
+	desc = "Helmet and faceplate component of the B18 armor system. Nanobonded carbonfiber laminated with ultrahigh molecular density polymer, with an integral rebreather and heads up display."
 	icon_state = "grenadier_helmet"
 	item_state = "grenadier_helmet"
 	armor_melee = CLOTHING_ARMOR_HIGH
@@ -828,7 +828,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	specialty = "B18"
 
 /obj/item/clothing/head/helmet/marine/grenadier
-	name = "\improper M3-G4 grenadier helmet"
+	name = "\improper M10 grenadier helmet"
 	desc = "Pairs with the M3-G4 heavy grenadier plating. A distant cousin of the experimental B18 defensive helmet. Comes with inbuilt ear blast protection."
 	icon_state = "grenadier_helmet"
 	item_state = "grenadier_helmet"
@@ -845,7 +845,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 
 /obj/item/clothing/head/helmet/marine/scout
-	name = "\improper M3-S light helmet"
+	name = "\improper M23 light helmet"
 	icon_state = "scout_helmet"
 	desc = "A custom helmet designed for USCM Scouts."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
@@ -855,14 +855,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/pyro
 	name = "\improper M35 pyrotechnician helmet"
 	icon_state = "pyro_helmet"
-	desc = "A helmet designed for USCM Pyrotechnicians."
+	desc = "A helmet designed for USCM Pyrotechnicians. Environmentally sealed with a full suit of polymer compounds to resist burning."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
 	specialty = "M35 pyrotechnician"
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 
 /obj/item/clothing/head/helmet/marine/M3T
-	name = "\improper M3-T bombardier helmet"
+	name = "\improper M10R bombardier helmet"
 	icon_state = "sadar_helmet"
 	desc = "A custom-built helmet for explosive weaponry users. Comes with inbuilt ear blast protection, firing a rocket launcher without this is not recommended."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
@@ -874,7 +874,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/pilot
 	name = "\improper M30 tactical helmet"
-	desc = "The M30 tactical helmet has a left eyepiece filter used to filter tactical data. It is required to fly the dropships manually and in safety."
+	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time."
 	icon_state = "helmetp"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
@@ -943,7 +943,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/mp/provost/marshal
 	name = "\improper Provost Marshal Cap"
-	desc = "The expensive headwear of a Provost Marshal. Contains shards of kevlar to keep its valuable contents safe."
+	desc = "The expensive headwear of a Provost Marshal. Venlar lined, boron carbide tiled."
 	icon_state = "pvmarshalhat"
 	item_state = "pvmarshalhat"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
@@ -971,7 +971,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper PMC tactical cap"
-	desc = "A protective cap made from flexible kevlar. Standard issue for most security forms in the place of a helmet."
+	desc = "Venlar padded cap with rheological armor reinforcement. A bit finicky to fit right, but lightweight while protecting like a helmet."
 	icon_state = "pmc_hat"
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
