@@ -97,6 +97,11 @@
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
 
+/datum/ammo/flamethrower/pve/drop_flame(turf/T, datum/cause_data/cause_data)
+	if(!istype(T)) return
+	var/datum/reagent/R = new flamer_reagent_type()
+	new /obj/flamer_fire(T, cause_data, R, 1)
+
 /datum/ammo/flare
 	name = "flare"
 	ping = null //no bounce off.

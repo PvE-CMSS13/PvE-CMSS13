@@ -19,3 +19,9 @@
 	black_market_value = 50
 	dead_black_market_value = 0
 	squeeze_under = TRUE
+
+/mob/living/simple_animal/lizard/lexi
+	name = "Lexi"
+	desc = "The Apostay's pet, and a reminder of W-Y's wealth. A tiny lizard that, a few years ago, had one leg replaced with a delicate-looking prosthetic after an illness. If they can splurge this hard on your company pet, what can they give you? Will probably outlive your natural lifespan."
+	icon_state = "lexi"
+	icon_living = "lexi"

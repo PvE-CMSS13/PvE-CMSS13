@@ -82,6 +82,17 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+
+/datum/job/marine/standard/ai/pmc
+	title = JOB_PMCPLAT_STANDARD
+	gear_preset = /datum/equipment_preset/uscm/pmc
+	gear_preset_secondary = /datum/equipment_preset/uscm/pmc
+
+/obj/effect/landmark/start/marine/pmc
+	name = JOB_PMCPLAT_STANDARD
+	squad = SQUAD_PMCPLT
+	job = /datum/job/marine/standard/ai/pmc
+
 /obj/effect/landmark/start/marine/forecon
 	name = JOB_SQUAD_MARINE_FORECON
 	squad = SQUAD_LRRP
@@ -91,6 +102,7 @@
 	name = JOB_SQUAD_RTO
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
+
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

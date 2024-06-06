@@ -72,6 +72,13 @@
 	prefix = "TML."
 	pay_multiplier = 3.5
 
+/datum/paygrade/pmc/oplead
+	paygrade = "PMC-OL"
+	name = "Operations Leader"
+	prefix = "OPL."
+	pay_multiplier = 3.5
+
+
 /datum/paygrade/pmc/elitelead
 	paygrade = "PMC-ETL"
 	name = "Elite Team Leader"
@@ -95,3 +102,9 @@
 	name = "Site Director"
 	prefix = "DIR."
 	pay_multiplier = 10 //it's a corpo director. money is what they care about.
+
+/datum/paygrade/pmc/overwatch
+	paygrade = "PMC-OW"
+	name = "Overwatch"
+	prefix = "OW."
+	pay_multiplier = 10

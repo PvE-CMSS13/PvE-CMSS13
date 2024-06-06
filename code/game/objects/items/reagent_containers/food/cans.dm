@@ -270,7 +270,7 @@
 /obj/item/reagent_container/food/drinks/cans/boda
 	name = "\improper Boda"
 	desc = "State regulated soda beverage. Enjoy comrades."
-	desc_lore = "Designed back in 2159, the advertising campaign for BODA started out as an attempt by the UPP to win the hearts and minds of colonists and settlers across the galaxy. Soon after, the ubiquitous cyan vendors and large supplies of the drink began to crop up in UA warehouses with seemingly no clear origin. Despite some concerns, after initial testing determined that the stored products were safe for consumption and surprisingly popular when blind-tested with focus groups, the strange surplus of BODA was authorized for usage within the UA-associated colonies. Subsequently, it enjoyed a relative popularity before falling into obscurity in the coming decades as supplies dwindled." 
+	desc_lore = "Designed back in 2159, the advertising campaign for BODA started out as an attempt by the UPP to win the hearts and minds of colonists and settlers across the galaxy. Soon after, the ubiquitous cyan vendors and large supplies of the drink began to crop up in UA warehouses with seemingly no clear origin. Despite some concerns, after initial testing determined that the stored products were safe for consumption and surprisingly popular when blind-tested with focus groups, the strange surplus of BODA was authorized for usage within the UA-associated colonies. Subsequently, it enjoyed a relative popularity before falling into obscurity in the coming decades as supplies dwindled."
 	icon_state = "boda"
 	center_of_mass = "x=16;y=10"
 
@@ -309,6 +309,19 @@
 /obj/item/reagent_container/food/drinks/cans/waterbottle/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 30)
+
+/obj/item/reagent_container/food/drinks/cans/soylent
+	name = "\improper Weyland-Yutani Meal Ready-to-Drink"
+	desc = "Plastic bottle full of gooey goodness, choco flavor. One bottle has enough calories for a day - don't drink it all in one sitting, better not risk getting diarrhea."
+	desc_lore = "Initially designed in 2173 as meal replacement for high-intensity workers, MRD was recalled from the market multiple times due to reports of gastrointestinal illness, including nausea, vomiting, and diarrhea. Improved formula was created, but the brand name was already stained (quite literally), so now Meal Ready-to-Drink remains as emergency food supply for internal Company use."
+	icon_state = "wy_soylent"
+	center_of_mass = "x=15;y=8"
+	volume = 30
+
+/obj/item/reagent_container/food/drinks/cans/soylent/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 20)
+	reagents.add_reagent("coco", 10)
 
 /obj/item/reagent_container/food/drinks/cans/beer
 	name = "\improper Weyland-Yutani Lite"

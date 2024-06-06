@@ -1,0 +1,9 @@
+{
+    "map_name": "USCSS Apostasy",
+    "map_path": "map_files/lead_hawk",
+    "map_file": "lead_hawk.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/lead_hawk/",
+    "platoon": "/datum/squad/marine/pmc"
+}

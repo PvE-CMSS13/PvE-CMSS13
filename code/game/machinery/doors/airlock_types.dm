@@ -886,7 +886,6 @@
 /obj/structure/machinery/door/airlock/dropship_hatch/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
 
-
 /obj/structure/machinery/door/airlock/dropship_hatch/monorail
 	icon = 'icons/obj/structures/doors/pod_doors.dmi' //TEMPLATE NEED TO REPLACE LATER
 	name = "monorail door"
@@ -908,6 +907,9 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
 
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc
+	icon = 'icons/obj/structures/doors/dropshippmc_pilot.dmi'
+
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison
 	name = "cell Door"
@@ -916,5 +918,3 @@
 
 /obj/structure/machinery/door/airlock/prison/horizontal
 	dir = SOUTH
-
-

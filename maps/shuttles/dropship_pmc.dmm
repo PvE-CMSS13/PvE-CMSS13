@@ -1,0 +1,759 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ax" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"bw" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"bM" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/outer_right_weapons,
+/turf/template_noop,
+/area/shuttle/pmc)
+"bO" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "30"
+	},
+/area/shuttle/pmc)
+"dw" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"eV" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y2"
+	},
+/area/shuttle/pmc)
+"eX" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Orphan Stomper"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"fQ" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_left_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"gg" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32;
+	ship_tag = "dropship_pmc"
+	},
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "33"
+	},
+/area/shuttle/pmc)
+"go" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y0"
+	},
+/area/shuttle/pmc)
+"gG" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "86"
+	},
+/area/shuttle/pmc)
+"gX" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Orphan Stomper"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"hn" = (
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"hT" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"im" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"jt" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"jA" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "27"
+	},
+/area/shuttle/pmc)
+"kB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"kH" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_top_right,
+/turf/template_noop,
+/area/shuttle/pmc)
+"kN" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/pmc)
+"la" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"lo" = (
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"lJ" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	name = "\improper 'Orphan Stomper' camera controls";
+	network = list("Orphan Stomper","Laser Targets")
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"lK" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center{
+	icon_state = "93"
+	},
+/obj/effect/attach_point/electronics/midway{
+	ship_tag = "dropship_pmc"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"lX" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/pmc)
+"mq" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "24"
+	},
+/area/shuttle/pmc)
+"mK" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "70"
+	},
+/area/shuttle/pmc)
+"po" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "26"
+	},
+/area/shuttle/pmc)
+"pp" = (
+/obj/structure/shuttle/part/dropshippmc/inner_left_corner,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"qm" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"rd" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "32"
+	},
+/area/shuttle/pmc)
+"rU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"sh" = (
+/obj/structure/shuttle/part/dropshippmc/lower_left_corner,
+/turf/template_noop,
+/area/shuttle/pmc)
+"ts" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/upper_left_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc{
+	id = "port_door";
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"tC" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_right_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
+"tR" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "57"
+	},
+/area/shuttle/pmc)
+"uo" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/engine_left_exhaust,
+/turf/template_noop,
+/area/shuttle/pmc)
+"uT" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -30
+	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"vY" = (
+/obj/structure/shuttle/part/dropshippmc/inner_right_corner,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"wh" = (
+/obj/structure/shuttle/part/dropshippmc/nose_front_left,
+/turf/template_noop,
+/area/shuttle/pmc)
+"wN" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_inner_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"wR" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing,
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_pmc"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"xz" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "89"
+	},
+/area/shuttle/pmc)
+"yv" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "72"
+	},
+/area/shuttle/pmc)
+"zh" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_outer_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"zk" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "51"
+	},
+/area/shuttle/pmc)
+"zu" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"zF" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "25"
+	},
+/area/shuttle/pmc)
+"zI" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "84"
+	},
+/area/shuttle/pmc)
+"zK" = (
+/obj/structure/shuttle/part/dropshippmc/lower_right_corner,
+/turf/template_noop,
+/area/shuttle/pmc)
+"At" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/upper_right_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"AN" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/outer_left_weapons,
+/turf/template_noop,
+/area/shuttle/pmc)
+"AU" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "31"
+	},
+/area/shuttle/pmc)
+"Bl" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "85"
+	},
+/area/shuttle/pmc)
+"Bq" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/lower_left_wing,
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_pmc"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"Bv" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/pmc)
+"CC" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "29"
+	},
+/area/shuttle/pmc)
+"DU" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "71"
+	},
+/area/shuttle/pmc)
+"DZ" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "88"
+	},
+/area/shuttle/pmc)
+"Em" = (
+/obj/structure/shuttle/part/dropshippmc/nose_front_right,
+/turf/template_noop,
+/area/shuttle/pmc)
+"EB" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "94"
+	},
+/area/shuttle/pmc)
+"FF" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/middle_right_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"GL" = (
+/obj/structure/phone_base/rotary{
+	name = "Midway Telephone";
+	phone_category = "Dropship";
+	phone_id = "Orphan Stomper";
+	pixel_x = 11;
+	pixel_y = 16
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	shuttle_tag = "dropship_pmc";
+	name = "\improper 'Orphan Stomper' weapons controls"
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"HW" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "50"
+	},
+/area/shuttle/pmc)
+"Iv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc{
+	id = "starboard_door";
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"IU" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/left_outer_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"Ji" = (
+/turf/open/floor/almayer{
+	dir = 1;
+	icon_state = "w-y1"
+	},
+/area/shuttle/pmc)
+"JF" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_wing_connector,
+/turf/template_noop,
+/area/shuttle/pmc)
+"Ki" = (
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_x = 12
+	},
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "88"
+	},
+/area/shuttle/pmc)
+"KE" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "39"
+	},
+/area/shuttle/pmc)
+"KT" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5;
+	pixel_x = -2
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"Lv" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16;
+	network = list("Golden Arrow","Orphan Stomper")
+	},
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"Ng" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_inner_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"Nx" = (
+/obj/structure/stairs/perspective,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"Op" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"OO" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "80"
+	},
+/area/shuttle/pmc)
+"OQ" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_top_left,
+/turf/template_noop,
+/area/shuttle/pmc)
+"OW" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_pmc"
+	},
+/obj/docking_port/mobile/marine_dropship/pmc,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"Qz" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23;
+	network = list("Golden Arrow","Orphan Stomper")
+	},
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair,
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"QX" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "87"
+	},
+/area/shuttle/pmc)
+"Rv" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "38"
+	},
+/area/shuttle/pmc)
+"RA" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "69"
+	},
+/area/shuttle/pmc)
+"Sw" = (
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "35"
+	},
+/area/shuttle/pmc)
+"SE" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"SG" = (
+/obj/effect/attach_point/electronics/midway,
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center{
+	icon_state = "93"
+	},
+/obj/effect/attach_point/electronics/midway{
+	ship_tag = "dropship_pmc"
+	},
+/turf/template_noop,
+/area/shuttle/pmc)
+"SQ" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 30
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"TN" = (
+/turf/template_noop,
+/area/space)
+"Ud" = (
+/obj/structure/machinery/door_control{
+	id = "dropship_midway";
+	name = "Dropship Lockdown";
+	normaldoorcontrol = 3;
+	pixel_y = -23;
+	req_one_access_txt = "3;22"
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"UJ" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "81"
+	},
+/area/shuttle/pmc)
+"UT" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"UU" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "62"
+	},
+/area/shuttle/pmc)
+"Vk" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "90"
+	},
+/area/shuttle/pmc)
+"Vw" = (
+/obj/effect/attach_point/fuel/midway{
+	ship_tag = "dropship_pmc"
+	},
+/turf/closed/shuttle/pmc/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/pmc)
+"Wb" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/right_outer_bottom_wing,
+/turf/template_noop,
+/area/shuttle/pmc)
+"WN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "56"
+	},
+/area/shuttle/pmc)
+"Yl" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "95"
+	},
+/area/shuttle/pmc)
+"YP" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc{
+	id = "aft_door"
+	},
+/turf/open/shuttle/vehicle/med,
+/area/shuttle/pmc)
+"Zl" = (
+/obj/structure/shuttle/part/dropshippmc/transparent/nose_center,
+/turf/template_noop,
+/area/shuttle/pmc)
+"ZN" = (
+/turf/closed/shuttle/pmc{
+	icon_state = "63"
+	},
+/area/shuttle/pmc)
+
+(1,1,1) = {"
+TN
+TN
+TN
+TN
+TN
+ts
+fQ
+Bq
+TN
+TN
+TN
+gX
+kN
+Vw
+lX
+uo
+TN
+zh
+"}
+(2,1,1) = {"
+TN
+TN
+TN
+AN
+xz
+yv
+ZN
+UU
+lo
+tv
+sh
+eX
+Sw
+CC
+Bv
+tC
+TN
+hT
+"}
+(3,1,1) = {"
+OQ
+wh
+EB
+OO
+zI
+hn
+uT
+qm
+ax
+Ud
+pp
+HW
+HW
+bO
+mq
+WN
+wN
+IU
+"}
+(4,1,1) = {"
+SG
+Bl
+lJ
+SE
+Ki
+hn
+hn
+rU
+go
+la
+Nx
+la
+lo
+UT
+SE
+YP
+TN
+TN
+"}
+(5,1,1) = {"
+Zl
+gG
+zu
+Op
+jt
+lo
+lo
+kB
+Ji
+OW
+Nx
+la
+lo
+lo
+lo
+lo
+TN
+TN
+"}
+(6,1,1) = {"
+lK
+QX
+GL
+Lv
+DZ
+hn
+hn
+rU
+eV
+la
+Nx
+la
+SQ
+lo
+dw
+lo
+TN
+TN
+"}
+(7,1,1) = {"
+kH
+Em
+Yl
+UJ
+zI
+hn
+Qz
+bw
+KT
+Ud
+vY
+zk
+zk
+AU
+zF
+tR
+im
+JF
+"}
+(8,1,1) = {"
+TN
+TN
+TN
+bM
+Vk
+DU
+mK
+RA
+lo
+Iv
+zK
+gX
+Rv
+rd
+po
+uo
+TN
+Ng
+"}
+(9,1,1) = {"
+TN
+TN
+TN
+TN
+TN
+At
+FF
+wR
+TN
+TN
+TN
+eX
+KE
+gg
+jA
+tC
+TN
+Wb
+"}

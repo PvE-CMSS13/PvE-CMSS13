@@ -253,6 +253,41 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank/EX
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_WIELDED_FIRING_ONLY
 
+/obj/item/weapon/gun/flamer/deathsquad/pve
+	name = "\improper M240-R2 incinerator unit"
+	desc = "A next-generation incinerator unit, the M240-R2 is much lighter and dextrous than its predecessors thanks to the ceramic alloy construction. It can be slinged over a belt and usually comes equipped with EX-type fuel. This one is configured to fire globs of fire to preserve fuel."
+	start_automatic = FALSE
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/extinguisher/pyro)
+	var/fuel_usage = 10
+
+/obj/item/weapon/gun/flamer/deathsquad/pve/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_6 * 5)
+
+/obj/item/weapon/gun/flamer/deathsquad/pve/unleash_flame(atom/target, mob/living/user)
+	if(!length(current_mag.reagents.reagent_list))
+		to_chat(user, SPAN_WARNING("\The [src] doesn't have enough fuel to launch a projectile!"))
+		return
+
+	var/datum/reagent/flamer_reagent = current_mag.reagents.reagent_list[1]
+	if(flamer_reagent.volume < FLAME_REAGENT_USE_AMOUNT * fuel_usage)
+		to_chat(user, SPAN_WARNING("\The [src] doesn't have enough fuel to launch a projectile!"))
+		return
+
+	last_fired = world.time
+	current_mag.reagents.remove_reagent(flamer_reagent.id, FLAME_REAGENT_USE_AMOUNT * fuel_usage)
+
+	var/obj/projectile/P = new(src, create_cause_data(initial(name), user, src))
+	var/datum/ammo/flamethrower/ammo_datum = new /datum/ammo/flamethrower/pve
+	ammo_datum.flamer_reagent_type = flamer_reagent.type
+	P.generate_bullet(ammo_datum)
+	P.icon_state = "naptha_ball"
+	P.color = flamer_reagent.color
+	P.hit_effect_color = flamer_reagent.burncolor
+	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
+	var/turf/user_turf = get_turf(user)
+	playsound(user_turf, get_fire_sound(), 50, TRUE)
+
 /obj/item/weapon/gun/flamer/deathsquad/nolock
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY
 

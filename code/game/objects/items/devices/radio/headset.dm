@@ -875,6 +875,22 @@
 		"Corporate Liaison" = TRACKER_CL
 	)
 
+/obj/item/device/radio/headset/distress/pmc/platoon
+	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc)
+	locate_setting = TRACKER_SL
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
+/obj/item/device/radio/headset/distress/pmc/platoon/cmd
+	name = "overwatch headset"
+	desc = "A special headset used by PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
 	desc = "A headset given to CBRN marines. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel"
