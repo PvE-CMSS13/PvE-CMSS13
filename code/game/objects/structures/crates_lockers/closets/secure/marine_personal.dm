@@ -30,3 +30,12 @@
 		new /obj/item/clothing/under/marine(src)
 		new /obj/item/clothing/shoes/marine/knife(src)
 		new /obj/item/device/radio/headset/almayer/marine(src)
+
+/obj/structure/closet/secure_closet/marine_personal/storm_breaker
+	has_cryo_gear = FALSE
+
+/obj/structure/closet/secure_closet/marine_personal/storm_breaker/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/marine(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/bravo(src)

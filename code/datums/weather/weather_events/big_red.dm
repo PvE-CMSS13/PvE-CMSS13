@@ -42,3 +42,27 @@
 	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
 
 	fire_smothering_strength = 3
+
+/datum/weather_event/pollen
+	name = "Pollenstorm"
+	display_name = "Pollenstorm"
+	length = 5 MINUTES
+	fullscreen_type = /atom/movable/screen/fullscreen/weather/low
+	turf_overlay_icon_state = "hallucination"
+
+	effect_message = "You feel colourful sickly-sweet pollen cover you..."
+	damage_per_tick = 0.001
+	damage_type = TOX
+	ambience = 'sound/ambience/rainforest.ogg'
+	fire_smothering_strength = 0
+
+/datum/weather_event/pollen/process_mob_effect(mob/living/carbon/affected_mob, delta_time = 1)
+	..()
+	if(!ishuman(affected_mob))
+		return
+	var/mob/living/carbon/human/human = affected_mob
+	if(human.wear_mask && (human.wear_mask.flags_inventory & BLOCKGASEFFECT))
+		return
+	if(human.head && (human.head.flags_inventory & BLOCKGASEFFECT))
+		return
+	human.hallucination += 5

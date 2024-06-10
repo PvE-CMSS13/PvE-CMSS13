@@ -1385,3 +1385,14 @@
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
 
+/obj/structure/prop/hard_weeds
+	name = "hardened weeds"
+	desc = "They pulsate and twist quietly..."
+	layer = 2.51
+	plane = -7
+	icon = 'icons/mob/xenos/weeds.dmi'
+	icon_state = "hive_weed0"
+
+/obj/structure/prop/hard_weeds/Initialize()
+	. = ..()
+	icon_state = "hive_weed[rand(0, 15)]"

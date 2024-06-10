@@ -14,9 +14,9 @@
 	pay_multiplier = 1.75
 
 /datum/paygrade/contractors/mg
-	paygrade = "VAI-G"
-	name = "VAI Machinegunner"
-	prefix = "VAI MG"
+	paygrade = "VAI-AR"
+	name = "VAI Automatic Rifleman"
+	prefix = "VAI AR"
 	pay_multiplier = 1.75
 
 /datum/paygrade/contractors/engi

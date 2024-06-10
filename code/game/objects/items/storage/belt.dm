@@ -619,11 +619,13 @@
 	storage_slots = 7
 	bypass_w_limit = list(
 		/obj/item/ammo_magazine/pkp,
+		/obj/item/ammo_magazine/m60,
 	)
 	can_hold = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/pkp,
+		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/pistol,
@@ -642,6 +644,10 @@
 
 /obj/item/storage/belt/marine/smartgunner/upp/fill_preset_inventory()
 	return
+
+/obj/item/storage/belt/marine/smartgunner/upp/vaipo/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/m60(src)
 
 /obj/item/storage/belt/marine/quackers
 	name = "Mr. Quackers"

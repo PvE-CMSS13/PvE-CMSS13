@@ -320,6 +320,13 @@
 	name = "platinum service medal"
 	desc = "The highest service medal that can be awarded to a marine; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
 	icon_state = "platinum"
+
+/obj/item/clothing/accessory/medal/gold/odolla
+	name = MARINE_ODOLLA_CAMPAIGN_MEDAL
+	desc = "A gold medal with a picture of a star surrounded by three planets. Above is the inscription <i>\"ODOLLA'S CRADLE\"</i>. This medal was awarded to marines who participated in <b>Operation Odolla Onslaught</b>."
+	desc_lore = "Yellow stripe on the ribbon represents LV-701, Tarhan Desert Colony, gray stripe represents urban LV-702, and purple stripe represents LV-703, from where xenomorph infestation spread out."
+	icon_state = "odolla"
+
 //Armbands
 /obj/item/clothing/accessory/armband
 	name = "red armband"
@@ -379,6 +386,11 @@
 	name = "USCM Solar Devils patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Solar Devils, the 3rd battalion of the 2nd division of the USCM."
 	icon_state = "solardevilspatch"
+
+/obj/item/clothing/accessory/patch/thefirst
+	name = "USCM The First patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the First battalion of the 2nd division of the USCM."
+	icon_state = "thefirstpatch"
 
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"

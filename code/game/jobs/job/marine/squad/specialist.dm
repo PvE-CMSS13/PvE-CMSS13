@@ -33,6 +33,18 @@ AddTimelock(/datum/job/marine/specialist, list(
 	JOB_SQUAD_ROLES = 5 HOURS
 ))
 
+/datum/job/marine/specialist/vaipo
+	title = JOB_SQUAD_MARKSMAN_VAIPO
+	total_positions = 1
+	spawn_positions = 1
+	allow_additional = 0
+	scaled = 0
+	gear_preset = /datum/equipment_preset/uscm/spec/vaipo
+	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the very rare and valuable weapon expert</a>, trained to use special equipment. You can serve a variety of roles, so choose carefully."
+
+/datum/job/marine/specialist/vaipo/get_total_positions(latejoin = 0)
+	return total_positions
+
 /obj/effect/landmark/start/marine/spec
 	name = JOB_SQUAD_SPECIALIST
 	icon_state = "spec_spawn"
@@ -53,3 +65,7 @@ AddTimelock(/datum/job/marine/specialist, list(
 /obj/effect/landmark/start/marine/spec/delta
 	icon_state = "spec_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/spec/vaipo
+	name = JOB_SQUAD_MARKSMAN_VAIPO
+	squad = SQUAD_VAIPO

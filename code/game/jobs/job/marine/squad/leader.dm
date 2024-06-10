@@ -65,6 +65,10 @@ AddTimelock(/datum/job/marine/leader, list(
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 
+/datum/job/marine/leader/ai/vaipo
+	title = JOB_SQUAD_LEADER_VAIPO
+	gear_preset = /datum/equipment_preset/uscm/leader/vaipo
+
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
@@ -74,6 +78,11 @@ AddTimelock(/datum/job/marine/leader, list(
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
+
+/obj/effect/landmark/start/marine/leader/vaipo
+	name = JOB_SQUAD_LEADER_VAIPO
+	squad = SQUAD_VAIPO
+	job = /datum/job/marine/leader/ai/vaipo
 
 #undef SSGT_VARIANT
 #undef GYSGT_VARIANT

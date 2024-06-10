@@ -410,6 +410,12 @@
 	gun_type = /obj/item/weapon/gun/rifle/l42a
 	w_class = SIZE_MEDIUM
 
+/obj/item/ammo_magazine/rifle/l42a/extended/heap
+	name = "\improper L42A extended HEAP magazine (10x24mm)"
+	default_ammo = /datum/ammo/bullet/rifle/heap
+	max_rounds = 45
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
 /obj/item/ammo_magazine/rifle/l42a/incendiary
 	name = "\improper L42A incendiary magazine (10x24mm)"
 	desc = "A 10mm battle rifle incendiary magazine."

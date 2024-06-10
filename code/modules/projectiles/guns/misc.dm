@@ -69,7 +69,7 @@
 	icon_state = "m60"
 	item_state = "m60"
 
-	fire_sound = 'sound/weapons/gun_m60.ogg'
+	fire_sound = 'sound/weapons/gun_m16.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
 	current_mag = /obj/item/ammo_magazine/m60
 	w_class = SIZE_LARGE

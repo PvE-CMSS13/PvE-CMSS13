@@ -115,6 +115,8 @@
 	var/squad_one_access = ACCESS_SQUAD_ONE
 	var/squad_two_access = ACCESS_SQUAD_TWO
 
+	var/has_fireteams = TRUE
+
 /datum/squad/marine
 	name = "Root"
 	active = TRUE
@@ -123,11 +125,11 @@
 
 /datum/squad/marine/alpha
 	name = SQUAD_MARINE_1
-	equipment_color = "#4148c8"
-	chat_color = "#828cff"
+	equipment_color = "#808080"
+	chat_color = "#696969"
 	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = ALPHA_FREQ
-	minimap_color = MINIMAP_SQUAD_ALPHA
+	minimap_color = "#696969"
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
@@ -159,13 +161,26 @@
 	minimap_color = "#32CD32"
 	usable = TRUE
 
+
+/datum/squad/marine/vaipo
+	name = SQUAD_VAIPO
+	access = list(ACCESS_CIVILIAN_PUBLIC)
+	radio_freq = VAI_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#000000"
+	chat_color = "#ffffff"
+	minimap_color = "#000000"
+	usable = TRUE
+	has_fireteams = FALSE
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
-	equipment_color = "#ffc32d"
-	chat_color = "#ffe650"
+	equipment_color = "#996633"
+	chat_color = "#996633"
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
+	usable = TRUE
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
@@ -743,6 +758,8 @@
 
 //below are procs used by acting SL to organize their squad
 /datum/squad/proc/assign_fireteam(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
+	if(!has_fireteams)
+		return
 	if(H.assigned_fireteam)
 		if(fireteam_leaders[H.assigned_fireteam])
 			if(fireteam_leaders[H.assigned_fireteam] == H)

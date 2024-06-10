@@ -564,6 +564,15 @@
 	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	phone_category = PHONE_IO
 
+/obj/item/storage/backpack/marine/satchel/rto/cl
+	name = "\improper liaison's phonecase"
+	desc = "It's a briefcase with a phone attached. Company loves their employees and always wants to be in contact with them."
+	icon = 'icons/obj/items/storage.dmi'
+	icon_state = "suitcase_phone"
+	item_state = "suitcase"
+	flags_equip_slot = 0
+	phone_category = "Weyland-Yutani"
+
 /obj/item/storage/backpack/marine/smock
 	name = "\improper M3 sniper's smock"
 	desc = "A specially-designed smock with pockets for all your sniper needs."

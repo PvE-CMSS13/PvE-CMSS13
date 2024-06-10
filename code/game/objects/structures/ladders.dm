@@ -14,6 +14,7 @@
 	var/is_watching = 0
 	var/obj/structure/machinery/camera/cam
 	var/busy = FALSE //Ladders are wonderful creatures, only one person can use it at a time
+	var/update_sprite = TRUE
 
 /obj/structure/ladder/Initialize(mapload, ...)
 	. = ..()
@@ -55,6 +56,8 @@
 	. = ..()
 
 /obj/structure/ladder/update_icon()
+	if(!update_sprite)
+		return
 	if(up && down)
 		icon_state = "ladder11"
 

@@ -30,6 +30,11 @@
 	name = "Movie APC"
 	interior_id = "apc_movie"
 
+/datum/map_template/interior/apc_custom
+	name = "Pit Stop APC"
+	interior_id = "apc_custom"
+
+
 /datum/map_template/interior/arc
 	name = "ARC"
 	interior_id = "arc"
@@ -41,6 +46,10 @@
 /datum/map_template/interior/tank
 	name = "Tank"
 	interior_id = "tank"
+
+/datum/map_template/interior/tank_custom
+	name = "Six Feet Thunder Tank"
+	interior_id = "tank_custom"
 
 /datum/map_template/interior/aev
 	name = "AEV"

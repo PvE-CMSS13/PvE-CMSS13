@@ -190,6 +190,8 @@
 	update_icon()
 
 	GLOB.all_multi_vehicles += src
+	if(nickname)
+		name = initial(name) + " \"[nickname]\""
 
 	return INITIALIZE_HINT_LATELOAD
 

@@ -16,9 +16,9 @@
 	service_hat = list(/obj/item/clothing/head/cmcap)
 	service_shoes = list(/obj/item/clothing/shoes/dress)
 
-	dress_under = list(/obj/item/clothing/under/marine/dress)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress)
-	dress_hat = list(/obj/item/clothing/head/marine/peaked)
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/dress)
 	var/auto_squad_name
@@ -77,9 +77,9 @@
 	minimap_icon = "private"
 
 /datum/equipment_preset/uscm/pfc/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -136,6 +136,16 @@
 /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
 	paygrade = "ME2"
 
+
+/datum/equipment_preset/uscm/pfc/vaipo
+	name = "VAIPO Contractor"
+	assignment = "Contractor"
+	paygrade = "VAI"
+	role_comm_title = "Merc"
+
+/datum/equipment_preset/uscm/pfc/vaipo/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -152,9 +162,9 @@
 	minimap_icon = "smartgunner"
 
 /datum/equipment_preset/uscm/sg/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -203,6 +213,21 @@
 
 /datum/equipment_preset/uscm/sg/forecon/lesser_rank
 	paygrade = "ME4"
+
+/datum/equipment_preset/uscm/sg/vaipo
+	name = "VAIPO Automatic Rifleman"
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+	assignment = "Automatic Rifleman"
+	paygrade = "VAI-AR"
+	role_comm_title = "AR"
+
+
+
+	access = list(ACCESS_CIVILIAN_LOGISTICS)
+
+/datum/equipment_preset/uscm/sg/vaipo/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
+
 
 //*****************************************************************************************************/
 
@@ -385,6 +410,23 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/cryo(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/spec_kit/cryo, WEAR_R_HAND)
 
+
+/datum/equipment_preset/uscm/spec/vaipo
+	name = "VAIPO Marksman"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	assignment = "Designated Marksman"
+	paygrade = "VAI"
+	role_comm_title = "Mrk"
+
+
+
+	access = list(ACCESS_CIVILIAN_ENGINEERING)
+
+/datum/equipment_preset/uscm/spec/vaipo/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/spec/full_armor
@@ -479,6 +521,18 @@
 /datum/equipment_preset/uscm/medic/forecon/lesser_rank
 	paygrade = "ME4"
 
+/datum/equipment_preset/uscm/medic/vaipo
+	name = "VAIPO Medic"
+	assignment = "Medic"
+	paygrade = "VAI-M"
+	role_comm_title = "MED"
+
+
+	access = list(ACCESS_CIVILIAN_MEDBAY)
+
+/datum/equipment_preset/uscm/medic/vaipo/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -493,10 +547,13 @@
 	skills = /datum/skills/tl
 	minimap_icon = "tl"
 
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
+
 /datum/equipment_preset/uscm/tl/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -584,10 +641,13 @@
 
 	minimap_icon = "leader"
 
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
+
 /datum/equipment_preset/uscm/leader/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel
+	var/back_item = /obj/item/storage/backpack/marine/satchel/tech
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine
+		back_item = /obj/item/storage/backpack/marine/tech
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
@@ -635,6 +695,18 @@
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	paygrade = "ME7"
+
+/datum/equipment_preset/uscm/leader/vaipo
+	name = "VAIPO Team Leader"
+	assignment = "Team Leader"
+	paygrade = "VAI-L"
+	role_comm_title = "TL"
+
+
+	access = list(ACCESS_CIVILIAN_COMMAND)
+
+/datum/equipment_preset/uscm/leader/vaipo/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack(new_human), WEAR_BACK)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

@@ -9,8 +9,8 @@
 	allow_additional = 1
 	scaled = FALSE
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
-	gear_preset = /datum/equipment_preset/uscm_ship/so
-	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
+	gear_preset = /datum/equipment_preset/uscm_ship/so/ai
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/ai/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to conduct the briefing for the platoon, monitor the operation, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and supported by your Company Command.<br>They will give your orders VIA the telephone in your office once they are ready.<br><b>You remember that you've stored your personal gear are located in your personal quarters.</b><br>Your job involves heavy roleplay and requires you to behave like an officer and to stay in character at all times."
 
 	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")

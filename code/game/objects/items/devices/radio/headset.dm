@@ -624,8 +624,6 @@
 
 //############################## BRAVO ###############################
 /obj/item/device/radio/headset/almayer/marine/bravo
-	name = "marine bravo radio headset"
-	desc = "This is used by Bravo squad members. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	icon_state = "bravo_headset"
 	frequency = BRAVO_FREQ
 
@@ -997,10 +995,10 @@
 
 /obj/item/device/radio/headset/distress/contractor
 	name = "VAI Headset"
-	desc = "A special headset used by Vanguard's Arrow Incorporated mercenaries, features a non-standard brace. Channels are as follows: :g - public, :v - marine command, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel."
+	desc = "A special headset used by Vanguard's Arrow Incorporated mercenaries, features a non-standard brace."
 	frequency = VAI_FREQ
 	icon_state = "vai_headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/contractor)
+	initial_keys = list(/obj/item/device/encryptionkey/contractor)
 	has_hud = TRUE
 
 /obj/item/device/radio/headset/distress/royal_marine

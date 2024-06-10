@@ -2006,6 +2006,30 @@ Defined in conflicts.dm of the #defines folder.
 	gun.recalculate_attachment_bonuses()
 	gun.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/rifle/stockgrip
+	name = "\improper MK1 stock-grip assembly"
+	desc = "An experimental combination of solid stock and enlarged grip designed to ease usage of Mk1 assault rifles one handed."
+	slot = "stock"
+	melee_mod = 10
+	size_mod = 1
+	icon_state = "41stock"
+	attach_icon = "41stock_a"
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	hud_offset_mod = 3
+	wield_delay_mod = WIELD_DELAY_FAST
+
+/obj/item/attachable/stock/rifle/stockgrip/New()
+	..()
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+	burst_scatter_mod = -2
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_3
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_6
+	accuracy_unwielded_mod = 2
+	recoil_unwielded_mod = -8
+	recoil_mod = -RECOIL_AMOUNT_TIER_5
+
+
 /obj/item/attachable/stock/m16
 	name = "\improper M16 bump stock"
 	desc = "Technically illegal in the state of California."

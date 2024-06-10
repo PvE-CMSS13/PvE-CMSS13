@@ -1,0 +1,864 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aw" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	id = "aft_door";
+	name = "\improper Wrecker cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"aX" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/wrecker)
+"bn" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "35"
+	},
+/area/shuttle/wrecker)
+"bS" = (
+/obj/effect/attach_point/fuel/dropship2{
+	pixel_x = -32
+	},
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "33"
+	},
+/area/shuttle/wrecker)
+"do" = (
+/obj/effect/attach_point/weapon/dropship2/right_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_right_wing{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_wrecker";
+	attach_id = 6
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"ei" = (
+/obj/structure/shuttle/part/dropship2/transparent/left_outer_inner_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"ep" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "32"
+	},
+/area/shuttle/wrecker)
+"eu" = (
+/obj/effect/attach_point/weapon/dropship2/left_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_left_wing{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_wrecker";
+	attach_id = 5
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"eK" = (
+/obj/structure/shuttle/part/dropship2/lower_right_wall{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"gr" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "30"
+	},
+/area/shuttle/wrecker)
+"gG" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/wrecker)
+"hW" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"iM" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "64"
+	},
+/area/shuttle/wrecker)
+"ju" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"jz" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"ky" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "96";
+	name = "\improper Wrecker"
+	},
+/area/shuttle/wrecker)
+"kz" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/wrecker)
+"kU" = (
+/obj/effect/attach_point/weapon/dropship2/right_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_right_wing{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"lm" = (
+/obj/structure/shuttle/part/dropship2/left_inner_wing_connector{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"mf" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "27"
+	},
+/area/shuttle/wrecker)
+"mU" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "18"
+	},
+/area/shuttle/wrecker)
+"nI" = (
+/obj/structure/shuttle/part/dropship2/nose_front_right{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"op" = (
+/obj/structure/shuttle/part/dropship2/transparent/outer_left_weapons{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"pf" = (
+/obj/structure/machinery/door_control{
+	id = "dropship_midway";
+	name = "Dropship Lockdown";
+	normaldoorcontrol = 3;
+	pixel_y = -19;
+	req_one_access_txt = "3;22"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/wrecker)
+"pN" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"pP" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "42"
+	},
+/area/shuttle/wrecker)
+"pY" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/wrecker)
+"qp" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
+	},
+/area/shuttle/wrecker)
+"qr" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "62"
+	},
+/area/shuttle/wrecker)
+"qt" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_exhaust{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"qx" = (
+/obj/structure/shuttle/part/dropship2/right_outer_wing_connector{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"qR" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"rc" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/wrecker)
+"rz" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/wrecker)
+"rA" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "78"
+	},
+/area/shuttle/wrecker)
+"rL" = (
+/obj/structure/shuttle/part/dropship2/left_outer_wing_connector{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"td" = (
+/obj/structure/shuttle/part/dropship2/transparent/outer_right_weapons{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/left_fore{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"tZ" = (
+/obj/structure/shuttle/part/dropship2/transparent/nose_top_right{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"vh" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23;
+	network = list("Golden Arrow","Wrecker")
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"wr" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "80"
+	},
+/area/shuttle/wrecker)
+"wt" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "38"
+	},
+/area/shuttle/wrecker)
+"wK" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/wrecker)
+"xd" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "19"
+	},
+/area/shuttle/wrecker)
+"xv" = (
+/obj/structure/shuttle/part/dropship2/transparent/upper_right_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"xH" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "43"
+	},
+/area/shuttle/wrecker)
+"yv" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "37"
+	},
+/area/shuttle/wrecker)
+"zM" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "86"
+	},
+/area/shuttle/wrecker)
+"Aq" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "75"
+	},
+/area/shuttle/wrecker)
+"AD" = (
+/obj/structure/shuttle/part/dropship2/transparent/upper_left_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Bi" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23;
+	network = list("Golden Arrow","Wrecker")
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Bs" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_exhaust{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"BR" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/space)
+"Cv" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Dv" = (
+/obj/structure/shuttle/part/dropship2/nose_front_left{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"DM" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Ed" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "29"
+	},
+/area/shuttle/wrecker)
+"Em" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
+/area/shuttle/wrecker)
+"Et" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "89"
+	},
+/area/shuttle/wrecker)
+"EO" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "97"
+	},
+/area/shuttle/wrecker)
+"Fi" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/cameras/dropship/two{
+	name = "\improper 'Wrecker' camera controls";
+	network = list("Wrecker","Laser Targets")
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Fq" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"Ge" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "39"
+	},
+/area/shuttle/wrecker)
+"Gs" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "72"
+	},
+/area/shuttle/wrecker)
+"GN" = (
+/turf/template_noop,
+/area/space)
+"Hh" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Ht" = (
+/obj/structure/shuttle/part/dropship2/transparent/nose_center{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"HW" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"IO" = (
+/obj/structure/shuttle/part/dropship2/transparent/nose_top_left{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Jd" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "92";
+	name = "\improper Wrecker"
+	},
+/area/shuttle/wrecker)
+"Jx" = (
+/obj/structure/stairs/perspective,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Kl" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "47"
+	},
+/area/shuttle/wrecker)
+"KF" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"KT" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "31"
+	},
+/area/shuttle/wrecker)
+"LB" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/space)
+"Mi" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "69"
+	},
+/area/shuttle/wrecker)
+"Mv" = (
+/obj/structure/shuttle/part/dropship2/transparent/right_inner_bottom_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Mx" = (
+/obj/structure/machinery/computer/dropship_weapons/dropship2{
+	name = "\improper 'Wrecker' weapons controls";
+	shuttle_tag = "dropship_wrecker"
+	},
+/obj/structure/phone_base/rotary{
+	name = "Wrecker Telephone";
+	phone_category = "Dropship";
+	phone_id = "Wrecker";
+	pixel_x = 11;
+	pixel_y = 16
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Nn" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wrecker)
+"NI" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "77"
+	},
+/area/shuttle/wrecker)
+"Oz" = (
+/obj/effect/attach_point/fuel/dropship2,
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/wrecker)
+"Ps" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "73"
+	},
+/area/shuttle/wrecker)
+"PJ" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/wrecker)
+"Qh" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "26"
+	},
+/area/shuttle/wrecker)
+"Sa" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "36"
+	},
+/area/shuttle/wrecker)
+"Sb" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"SA" = (
+/obj/structure/machinery/camera/autoname/almayer/dropship_two{
+	pixel_x = 8;
+	pixel_y = -16;
+	network = list("Golden Arrow","Wrecker");
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"SG" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "81"
+	},
+/area/shuttle/wrecker)
+"Tx" = (
+/obj/structure/shuttle/part/dropship2/transparent/middle_left_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Vb" = (
+/obj/structure/shuttle/part/dropship2/transparent/left_outer_bottom_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Vi" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "25"
+	},
+/area/shuttle/wrecker)
+"Vo" = (
+/obj/structure/shuttle/part/dropship2/transparent/middle_right_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"VC" = (
+/obj/structure/shuttle/part/dropship2/transparent/right_outer_bottom_wing{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"VO" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "83"
+	},
+/area/shuttle/wrecker)
+"VP" = (
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"VQ" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "67"
+	},
+/area/shuttle/wrecker)
+"Wo" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "24"
+	},
+/area/shuttle/wrecker)
+"WI" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "48"
+	},
+/area/shuttle/wrecker)
+"WL" = (
+/turf/closed/shuttle/wrecker{
+	icon_state = "94"
+	},
+/area/shuttle/wrecker)
+"WV" = (
+/obj/docking_port/mobile/marine_dropship/cyclone{
+	name = "Wrecker";
+	id = "dropship_wrecker"
+	},
+/obj/effect/attach_point/crew_weapon/midway{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/wrecker)
+"Xe" = (
+/obj/effect/attach_point/weapon/dropship2/left_wing,
+/obj/structure/shuttle/part/dropship2/transparent/lower_left_wing{
+	name = "\improper Wrecker"
+	},
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"XV" = (
+/obj/structure/shuttle/part/dropship2/right_inner_wing_connector{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+"Yt" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/wrecker)
+"Zq" = (
+/turf/closed/shuttle/wrecker/transparent{
+	icon_state = "98"
+	},
+/area/shuttle/wrecker)
+"Zs" = (
+/obj/structure/shuttle/part/dropship2/lower_left_wall{
+	name = "\improper Wrecker"
+	},
+/turf/template_noop,
+/area/shuttle/wrecker)
+
+(1,1,1) = {"
+GN
+GN
+GN
+GN
+GN
+AD
+Tx
+Xe
+AD
+Tx
+eu
+BR
+kz
+Oz
+rc
+qt
+GN
+Vb
+"}
+(2,1,1) = {"
+GN
+GN
+GN
+op
+Aq
+Gs
+VQ
+qr
+Gs
+VQ
+Zs
+LB
+bn
+Ed
+wK
+Bs
+GN
+ei
+"}
+(3,1,1) = {"
+IO
+Dv
+Jd
+zM
+NI
+qR
+qR
+Cv
+Sb
+pf
+Kl
+pP
+Sa
+gr
+Wo
+mU
+lm
+rL
+"}
+(4,1,1) = {"
+Ht
+ky
+Fi
+SA
+rA
+aX
+hW
+hW
+Em
+gG
+Nn
+aX
+hW
+vh
+jz
+aw
+GN
+GN
+"}
+(5,1,1) = {"
+Ht
+EO
+KF
+HW
+Hh
+pY
+VP
+VP
+pY
+WV
+Jx
+rz
+Sb
+ju
+Sb
+Sb
+GN
+GN
+"}
+(6,1,1) = {"
+Ht
+Zq
+Mx
+Sb
+wr
+PJ
+hW
+hW
+qp
+gG
+Fq
+PJ
+hW
+hW
+pN
+Sb
+GN
+GN
+"}
+(7,1,1) = {"
+tZ
+nI
+WL
+Et
+SG
+DM
+Bi
+Yt
+Sb
+pf
+WI
+xH
+yv
+KT
+Vi
+xd
+XV
+qx
+"}
+(8,1,1) = {"
+GN
+GN
+GN
+td
+VO
+Ps
+Mi
+iM
+Ps
+Mi
+eK
+BR
+wt
+ep
+Qh
+qt
+GN
+Mv
+"}
+(9,1,1) = {"
+GN
+GN
+GN
+GN
+GN
+xv
+Vo
+kU
+xv
+Vo
+do
+LB
+Ge
+bS
+mf
+Bs
+GN
+VC
+"}

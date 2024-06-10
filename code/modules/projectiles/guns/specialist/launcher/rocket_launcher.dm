@@ -196,6 +196,12 @@
 			C.apply_effect(6, STUTTER)
 			C.emote("pain")
 
+/obj/item/weapon/gun/launcher/rocket/pve
+	unacidable = FALSE
+	indestructible = FALSE
+	skill_locked = FALSE
+	current_mag = /obj/item/ammo_magazine/rocket/anti_tank/pve
+
 //-------------------------------------------------------
 //M5 RPG'S MEAN FUCKING COUSIN
 

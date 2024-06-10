@@ -1314,12 +1314,14 @@ var/datum/controller/supply/supply_controller = new()
 	return
 
 /datum/vehicle_order/tank
-	name = "M34A2 Longstreet Light Tank"
-	ordered_vehicle = /obj/effect/vehicle_spawner/tank/decrepit
+	name = "M34A3-C Longstreet Command Tank"
+	ordered_vehicle = /obj/effect/vehicle_spawner/tank/fixed/custom
 
-/datum/vehicle_order/tank/has_vehicle_lock()
-	return
+/datum/vehicle_order/apc
+	name = "M577A3 Armored Personnel Carrier"
+	ordered_vehicle = /obj/effect/vehicle_spawner/apc_movie/fixed/custom
 
+/*
 /datum/vehicle_order/tank/broken
 	name = "Smashed M34A2 Longstreet Light Tank"
 	ordered_vehicle = /obj/effect/vehicle_spawner/tank/hull/broken
@@ -1343,14 +1345,13 @@ var/datum/controller/supply/supply_controller = new()
 /datum/vehicle_order/apc/empty
 	name = "Barebones M577 Armored Personal Carrier"
 	ordered_vehicle = /obj/effect/vehicle_spawner/apc/unarmed/broken
-
+*/
 /obj/structure/machinery/computer/supplycomp/vehicle/Initialize()
 	. = ..()
 
 	vehicles = list(
 		new /datum/vehicle_order/apc(),
-		new /datum/vehicle_order/apc/med(),
-		new /datum/vehicle_order/apc/cmd(),
+		new /datum/vehicle_order/tank(),
 	)
 
 	if(!VehicleElevatorConsole)
@@ -1365,7 +1366,7 @@ var/datum/controller/supply/supply_controller = new()
 		return
 
 	if(LAZYLEN(allowed_roles) && !allowed_roles.Find(H.job)) //replaced Z-level restriction with role restriction.
-		to_chat(H, SPAN_WARNING("This console isn't for you."))
+		to_chat(H, SPAN_WARNING("This console can be accessed by Platoon Commander and Platoon Sergeant."))
 		return
 
 	if(!allowed(H))
@@ -1381,17 +1382,21 @@ var/datum/controller/supply/supply_controller = new()
 		return
 
 	dat += "Platform position: "
-	if (SSshuttle.vehicle_elevator.timeLeft())
+	if (SSshuttle.vehicle_elevator.mode != SHUTTLE_IDLE)
 		dat += "Moving"
 	else
 		if(is_mainship_level(SSshuttle.vehicle_elevator.z))
 			dat += "Raised"
+			if(!spent)
+				dat += "<br>\[<a href='?src=\ref[src];lower_elevator=1'>Lower</a>\]"
 		else
 			dat += "Lowered"
 	dat += "<br><hr>"
 
 	if(spent)
 		dat += "No vehicles are available for retrieval."
+	else if(is_mainship_level(SSshuttle.vehicle_elevator.z))
+		dat += "Elevator must be lowered for vehicle retrieval.<br>"
 	else
 		dat += "Available vehicles:<br>"
 
@@ -1421,10 +1426,6 @@ var/datum/controller/supply/supply_controller = new()
 		world.log << "## ERROR: Eek. The supply/elevator datum is missing somehow."
 		return
 
-	if(!is_admin_level(SSshuttle.vehicle_elevator.z))
-		to_chat(usr, SPAN_WARNING("The elevator needs to be in the cargo bay dock to call a vehicle up. Ask someone to send it away."))
-		return
-
 	if(ismaintdrone(usr))
 		return
 
@@ -1432,7 +1433,7 @@ var/datum/controller/supply/supply_controller = new()
 		usr.set_interaction(src)
 
 	if(href_list["get_vehicle"])
-		if(is_mainship_level(SSshuttle.vehicle_elevator.z))
+		if(is_mainship_level(SSshuttle.vehicle_elevator.z) || SSshuttle.vehicle_elevator.mode != SHUTTLE_IDLE)
 			return
 		// dunno why the +1 is needed but the vehicles spawn off-center
 		var/turf/middle_turf = get_turf(SSshuttle.vehicle_elevator)
@@ -1451,6 +1452,12 @@ var/datum/controller/supply/supply_controller = new()
 		VO.on_created(ordered_vehicle)
 
 		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_VEHICLE_ORDERED, ordered_vehicle)
+
+	else if(href_list["lower_elevator"])
+		if(!is_mainship_level(SSshuttle.vehicle_elevator.z))
+			return
+
+		SSshuttle.vehicle_elevator.request(SSshuttle.getDock("adminlevel vehicle"))
 
 	add_fingerprint(usr)
 	updateUsrDialog()

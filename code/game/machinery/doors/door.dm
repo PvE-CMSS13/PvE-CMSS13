@@ -316,3 +316,9 @@
 
 /obj/structure/machinery/door/morgue
 	icon = 'icons/obj/structures/doors/doormorgue.dmi'
+
+/obj/structure/machinery/door/proc/open_or_close()
+	if(density)
+		open()
+	else
+		close()
