@@ -632,6 +632,12 @@
 	var/datum/asset/asset = get_asset_datum(/datum/asset/simple/paper)
 	info = "<center><img src = [asset.get_url_mappings()["wylogo.png"]]></center><BR>\n<span class=\"paper_field\"></span>"
 
+/obj/item/paper/xenoreport
+	info = "XX-121 specimens continue to be pacified in containment. Readings show their hivemind activity is high. TDD activation should commence like normal."
+
+/obj/item/paper/tdd_warning
+	info = "<center><h2>TEMPORAL DISTORTION DEVICE WARNING</h2></center><br><br>Before placing the power source in the TDD, ensure that all on-site staff are aware and are on alert. Once the power source is placed within the TDD, stay away from it until it has completed initialization, the estimated time of which is 20 minutes.<br><br>For the utmost safety, ensure the on-site warhead is prepared at all times when configuring or using the TDD. Should the device malfunction or the XX-121 specimens escape, the warhead is to be armed."
+
 /obj/item/paper/uscm
 	icon_state = "paper_uscm"
 

@@ -198,3 +198,68 @@
 /turf/open/floor/sandstone/runed
 	name = "sandstone temple floor"
 	icon_state = "runedsandstone"
+
+/obj/effect/turf_destroyer
+	name = "turf destroyer"
+
+/obj/effect/turf_destroyer/Initialize(mapload, ...)
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/turf_destroyer/plate
+	name = "plating breaker"
+
+/obj/effect/turf_destroyer/plate/LateInitialize()
+	. = ..()
+	var/turf/open/floor/T = get_turf(src)
+	if(!istype(T))
+		qdel(src)
+		return
+	T.ChangeTurf(/turf/open/floor/plating, list(/turf/open/floor/plating))
+	T.break_tile()
+	qdel(src)
+
+/obj/effect/turf_destroyer/floor
+	name = "floor breaker"
+
+/obj/effect/turf_destroyer/floor/LateInitialize()
+	. = ..()
+	var/turf/open/floor/T = get_turf(src)
+	if(!istype(T))
+		qdel(src)
+		return
+	T.icon_state = "damaged[pick(1, 2, 3, 4, 5)]"
+	T.broken = TRUE
+	qdel(src)
+
+/obj/effect/turf_destroyer/cm_vendor
+	name = "cm vendor breaker"
+
+/obj/effect/turf_destroyer/cm_vendor/LateInitialize()
+	. = ..()
+	var/turf/open/floor/T = get_turf(src)
+	if(!istype(T))
+		qdel(src)
+		return
+	var/obj/structure/machinery/cm_vending/vending_machine = locate() in T.contents
+	if(!vending_machine)
+		qdel(src)
+		return
+	vending_machine.malfunction()
+	qdel(src)
+
+/obj/effect/turf_destroyer/reg_vendor
+	name = "regular vendor breaker"
+
+/obj/effect/turf_destroyer/reg_vendor/LateInitialize()
+	. = ..()
+	var/turf/open/floor/T = get_turf(src)
+	if(!istype(T))
+		qdel(src)
+		return
+	var/obj/structure/machinery/vending/vending_machine = locate() in T.contents
+	if(!vending_machine)
+		qdel(src)
+		return
+	vending_machine.malfunction()
+	qdel(src)

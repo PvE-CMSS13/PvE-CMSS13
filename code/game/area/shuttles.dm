@@ -47,6 +47,7 @@
 /area/shuttle/ert
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "lifeboat"
+	base_lighting_alpha = 0
 
 /area/shuttle/trijent_shuttle
 	name = "Trijent Elevator"

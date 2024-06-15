@@ -203,3 +203,7 @@
 /obj/effect/landmark/corpsespawner/forecon_spotter
 	name = "USCM Reconnaissance Spotter"
 	equip_path = /datum/equipment_preset/corpse/forecon_spotter
+
+/obj/effect/landmark/corpsespawner/wy_rsr
+	name = "Weyland-Yutani Researcher"
+	equip_path = /datum/equipment_preset/corpse/wy_rsr

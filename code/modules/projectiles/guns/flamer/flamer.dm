@@ -437,6 +437,7 @@ GLOBAL_LIST_EMPTY(flamer_particles)
 	var/fire_variant = FIRE_VARIANT_DEFAULT
 
 	var/weather_smothering_strength = 0
+	var/do_process = TRUE
 
 /obj/flamer_fire/Initialize(mapload, datum/cause_data/cause_data, datum/reagent/R, fire_spread_amount = 0, datum/reagents/obj_reagents = null, new_flameshape = FLAMESHAPE_DEFAULT, atom/target = null, datum/callback/C, fuel_pressure = 1, fire_type = FIRE_VARIANT_DEFAULT)
 	. = ..()
@@ -491,7 +492,8 @@ GLOBAL_LIST_EMPTY(flamer_particles)
 	update_flame()
 
 	addtimer(CALLBACK(src, PROC_REF(un_burst_flame)), 0.5 SECONDS)
-	START_PROCESSING(SSobj, src)
+	if(do_process)
+		START_PROCESSING(SSobj, src)
 
 	to_call = C
 

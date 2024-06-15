@@ -185,6 +185,9 @@
 	icon_state = "vulture_scope_overlay_spotter"
 	should_resize = FALSE
 
+/atom/movable/screen/fullscreen/timeloop
+	icon_state = "timeloop"
+
 //Weather overlays//
 
 /atom/movable/screen/fullscreen/weather

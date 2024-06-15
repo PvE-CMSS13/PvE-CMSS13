@@ -205,6 +205,7 @@
 	name = "Almayer stern landing pad"
 	dir = NORTH
 	id = "almayer-ert3"
+	roundstart_template = /datum/map_template/shuttle/pmc_ert
 
 /obj/docking_port/stationary/emergency_response/external
 	is_external = TRUE

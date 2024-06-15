@@ -3,6 +3,7 @@
 	config_tag = "Distress Signal: Lowpop"
 	required_players = 0
 	votable = TRUE
+	corpses_to_spawn = 100
 
 	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
 

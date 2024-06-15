@@ -55,7 +55,7 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 	set name = "Show Server Revision"
 	set desc = "Check the current server code revision"
 
-	var/list/msg = list("")
+	/*var/list/msg = list("")
 	// Round ID
 
 	msg += "<b>BYOND Version:</b> [world.byond_version].[world.byond_build]"
@@ -81,4 +81,5 @@ GLOBAL_DATUM_INIT(revdata, /datum/getrev, new)
 		msg += "DMAPI version: [api_version.raw_parameter]"
 
 	// Game mode odds
-	to_chat(src, SPAN_INFO(msg.Join("<br>")))
+	to_chat(src, SPAN_INFO(msg.Join("<br>")))*/.
+	return
