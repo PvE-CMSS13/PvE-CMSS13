@@ -117,6 +117,9 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
+/datum/ammo/bullet/shotgun/flechette_spread/awesome
+	damage = 60
+
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
 	icon_state = "buckshot"

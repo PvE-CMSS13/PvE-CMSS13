@@ -40,6 +40,8 @@ They're all essentially identical when it comes to getting the job done.
 	/// Is the greyscale icon used for the ammo band when it's empty of bullets.
 	var/ammo_band_icon_empty
 
+	var/description_ammo = "rounds"
+
 
 /obj/item/ammo_magazine/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -98,7 +100,7 @@ They're all essentially identical when it comes to getting the job done.
 		. += "Something went horribly wrong. Ahelp the following: ERROR CODE R1: negative current_rounds on examine."
 		log_debug("ERROR CODE R1: negative current_rounds on examine. User: <b>[usr]</b> Magazine: <b>[src]</b>")
 	else
-		. += "[src] has <b>[current_rounds]</b> rounds out of <b>[max_rounds]</b>."
+		. += "[src] has <b>[current_rounds]</b> [description_ammo] out of <b>[max_rounds]</b>."
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(flags_magazine & AMMUNITION_REFILLABLE) //actual refillable magazine, not just a handful of bullets or a fuel tank.
