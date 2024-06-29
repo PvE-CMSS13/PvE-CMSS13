@@ -107,7 +107,7 @@
 	// Config vars
 	var/max_momentum = 8
 	var/steps_to_charge = 3
-	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5//2.2
+	var/speed_per_momentum = XENO_SPEED_FASTMOD_TIER_5 // 2.2
 	var/plasma_per_step = 0
 
 	// State vars
@@ -278,8 +278,8 @@
 	if(momentum > 0)
 		xeno.use_plasma(plasma_per_step) // take plasma when you have momentum
 
-	noise_timer = noise_timer ? --noise_timer : 3
-	if(noise_timer == 3)
+	noise_timer = noise_timer ? --noise_timer : 4
+	if(noise_timer == 4)
 		playsound(xeno, 'sound/effects/alien_footstep_charge1.ogg', 100)
 
 		for(var/mob/living/carbon/human/Mob in range(14, xeno))
@@ -296,26 +296,33 @@
 				dist = momentum * 0.25
 			step(Mob, ram_dir, dist)
 			Mob.take_overall_armored_damage(momentum * 8)
-			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon/human, emote),"pain")
+			INVOKE_ASYNC(Mob, TYPE_PROC_REF(/mob/living/carbon, emote), "pain")
 			shake_camera(Mob, 7, 3)
 			animation_flash_color(Mob)
 
 	if(momentum >= 5)
-		for(var/mob/living/carbon/human/hit_human in orange(1, xeno))
-			if(hit_human.body_position == LYING_DOWN)
+		for(var/mob/living/carbon/hit_carbon in orange(1, xeno))
+			if(hit_carbon.body_position == LYING_DOWN)
 				continue
 
-			if(xeno.can_not_harm(hit_human))
+			if(xeno.can_not_harm(hit_carbon))
 				continue
 
-			shake_camera(hit_human, 4, 2)
-			if(hit_human.buckled)
-				hit_human.buckled.unbuckle()
-			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_human, xeno, get_dir(xeno, hit_human), 1, FALSE)
-			to_chat(hit_human, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
-			hit_human.take_overall_armored_damage(momentum * 4)
-			hit_human.apply_effect(0.5, WEAKEN)
-			animation_flash_color(hit_human)
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_throw_human), hit_carbon, xeno, get_dir(xeno, hit_carbon), 1, FALSE)
+			to_chat(hit_carbon, SPAN_XENOHIGHDANGER("You fall backwards as [xeno] gives you a glancing blow!"))
+			shake_camera(hit_carbon, 4, 2)
+
+			var/total_damage = momentum * 8
+			if(ishuman(hit_carbon))
+				var/mob/living/carbon/human/hit_human = hit_carbon
+				hit_human.take_overall_armored_damage(total_damage)
+
+			else if(isxeno(hit_carbon))
+				var/mob/living/carbon/xenomorph/hit_xeno = hit_carbon
+				hit_xeno.apply_armoured_damage(total_damage)
+
+			hit_carbon.apply_effect(0.5, WEAKEN)
+			animation_flash_color(hit_carbon)
 
 	xeno.recalculate_speed()
 

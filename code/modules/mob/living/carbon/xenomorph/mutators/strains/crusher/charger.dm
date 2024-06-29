@@ -43,7 +43,6 @@
 	crusher.small_explosives_stun = FALSE
 	crusher.health_modifier += XENO_HEALTH_MOD_LARGE
 	crusher.speed_modifier += XENO_SPEED_FASTMOD_TIER_3
-	crusher.armor_modifier -= XENO_ARMOR_MOD_SMALL
 	crusher.damage_modifier -= XENO_DAMAGE_MOD_SMALL
 	crusher.ignore_aura = "frenzy" // no funny crushers going 7 morbillion kilometers per second
 	crusher.phero_modifier = -crusher.caste.aura_strength
@@ -56,8 +55,8 @@
 /datum/behavior_delegate/crusher_charger
 	name = "Charger Crusher Behavior Delegate"
 
-	var/frontal_armor = 30
-	var/side_armor = 20
+	var/frontal_armor = 30 // +75%
+	var/rear_armor = 15 // Fortified butt, +37%
 
 	var/aoe_slash_damage_reduction = 0.40
 
@@ -103,15 +102,14 @@
 
 /datum/behavior_delegate/crusher_charger/proc/apply_directional_armor(mob/living/carbon/xenomorph/xeno, list/damagedata)
 	SIGNAL_HANDLER
+	if(xeno.resting)
+		return
+
 	var/projectile_direction = damagedata["direction"]
-	if(xeno.dir & REVERSE_DIR(projectile_direction))
-		// During the charge windup, crusher gets an extra 15 directional armor in the direction its charging
+	if(xeno.dir in reverse_nearby_direction(projectile_direction))
 		damagedata["armor"] += frontal_armor
-	else
-		for(var/side_direction in get_perpen_dir(xeno.dir))
-			if(projectile_direction == side_direction)
-				damagedata["armor"] += side_armor
-				return
+	else if(xeno.dir & projectile_direction)
+		damagedata["armor"] += rear_armor
 
 /datum/behavior_delegate/crusher_charger/on_update_icons()
 	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && bound_xeno.body_position == STANDING_UP)
