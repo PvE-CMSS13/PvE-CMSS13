@@ -1073,3 +1073,8 @@ var/global/list/gear_datums_by_name = list()
 	display_name = "Cut-throat razor"
 	path = /obj/item/weapon/straight_razor
 	cost = 3
+
+/datum/gear/misc/flak
+	display_name = "M67 flak jacket"
+	path = /obj/item/clothing/accessory/flak
+	cost = 3
