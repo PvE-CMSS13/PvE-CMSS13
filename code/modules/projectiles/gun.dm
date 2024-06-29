@@ -1437,6 +1437,7 @@ and you're good to go.
 		if(bullets_fired == 1) //First shot gives the PB message.
 			user.visible_message(SPAN_DANGER("[user] fires [src] point blank at [attacked_mob]!"),
 				SPAN_WARNING("You fire [src] point blank at [attacked_mob]!"), null, null, CHAT_TYPE_WEAPON_USE)
+		user.next_move += 4
 
 		user.track_shot(initial(name))
 		apply_bullet_effects(projectile_to_fire, user, bullets_fired, dual_wield) //We add any damage effects that we need.
