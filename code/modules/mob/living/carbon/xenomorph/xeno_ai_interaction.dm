@@ -163,6 +163,12 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(isfacehugger(X))
 		return stat != DEAD
 
+	if(isxeno(pulledby) && pulledby != X)
+		return .
+
+	if(GLOB.ai_capture_crit && stat == UNCONSCIOUS)
+		return TRUE
+
 
 /////////////////////////////
 //          XENOS          //
