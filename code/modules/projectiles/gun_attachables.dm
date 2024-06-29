@@ -984,6 +984,8 @@ Defined in conflicts.dm of the #defines folder.
 			apply_scoped_buff(G,user)
 	return TRUE
 
+
+
 //variable zoom scopes, they go between 2x and 4x zoom.
 
 #define ZOOM_LEVEL_2X 0
@@ -1066,6 +1068,59 @@ Defined in conflicts.dm of the #defines folder.
 #undef ZOOM_LEVEL_2X
 #undef ZOOM_LEVEL_4X
 
+/obj/item/attachable/scope_pve
+//intended to allow people to have 'scopes' that don't zoom you in nearly as much, so as to not fuck up stuff.
+	name = "AN/PVR-52 Scope"
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "miniscope"
+	attach_icon = "miniscope_a"
+	desc = "The AN/PVR-52E1 scope is equipped with TREE hardening for exoatmospheric/atomic combat conditions. No longer suitable for lowlight environments, but it comes with irons now. Yay...? Best used for short bursts or single fire."
+	slot = "rail"
+	zoom_offset = 0
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	aim_speed_mod = 0
+	aim_speed_mod = SLOWDOWN_ADS_QUICK //Just to have a little offset.
+	wield_delay_mod = WIELD_DELAY_FAST
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+	var/dynamic_aim_slowdown = SLOWDOWN_ADS_MINISCOPE_DYNAMIC
+
+	/obj/item/attachable/scope_pve/New()
+	..()
+	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
+	accuracy_unwielded_mod = 0
+
+	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_6
+	scatter_mod = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mod = -2
+
+	/obj/item/attachable/scope_pve/apply_scoped_buff(obj/item/weapon/gun/G, mob/living/carbon/user)
+	. = ..()
+	if(G.zoom)
+		G.slowdown += dynamic_aim_slowdown
+
+/obj/item/attachable/scope_pve/remove_scoped_buff(mob/living/carbon/user, obj/item/weapon/gun/G)
+	G.slowdown -= dynamic_aim_slowdown
+	..()
+
+/*
+	delay_mod = FIRE_DELAY_TIER_12
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_1
+	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
+	accuracy_unwielded_mod = 0
+
+	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_8 //to compensate initial debuff
+	delay_scoped_nerf = FIRE_DELAY_TIER_11 //to compensate initial debuff. We want "high_fire_delay"
+	damage_falloff_scoped_buff = -0.4 //has to be negative
+
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+	burst_scatter_mod = -1
+	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+
+*/
 
 /obj/item/attachable/scope/mini
 	name = "S4 2x telescopic mini-scope"
