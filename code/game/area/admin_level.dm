@@ -134,6 +134,10 @@
 	soundscape_playlist = SCAPE_PL_ELEVATOR_MUSIC
 	icon_state = "yellow"
 
+/area/adminlevel/ert_station/pizza
+	name = "Pizza Galaxy"
+	icon_state = "red"
+
 //Simulation area
 /area/adminlevel/simulation
 	name = "Simulated Reality"

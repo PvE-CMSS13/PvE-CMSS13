@@ -382,6 +382,7 @@ block( \
 #define WALL_DEVWALL "devwall"
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
+#define WALL_DINER "diner"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
