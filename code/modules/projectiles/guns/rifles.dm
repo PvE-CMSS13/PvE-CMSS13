@@ -36,8 +36,8 @@
 //M41A PULSE RIFLE
 
 /obj/item/weapon/gun/rifle/m41a
-	name = "\improper M41A pulse rifle MK2"
-	desc = "The standard issue rifle of the Colonial Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition."
+	name = "\improper M41AE1 pulse rifle"
+	desc = "A modification of the M41A in limited trials, the M41AE1 improves handling and flexibility with increased modification support, while improving reliability by eliminating the legacy U-type magazine for a more traditional design."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m41a"
 	item_state = "m41a"
@@ -112,7 +112,7 @@
 
 /obj/item/weapon/gun/rifle/nsg23
 	name = "\improper NSG 23 assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
+	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -200,7 +200,7 @@
 
 /obj/item/weapon/gun/rifle/m41a/elite
 	name = "\improper M41A/2 pulse rifle"
-	desc = "A modified version M41A Pulse Rifle MK2, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts. Given only to elite units."
+	desc = "A modified version M41AE1 Pulse Rifle, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts. Given only to elite units."
 	icon_state = "m41a2"
 	item_state = "m41a2"
 
@@ -249,7 +249,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/angledgrip, /obj/item/attachable/suppressor)
 
 /obj/item/weapon/gun/rifle/m41a/corporate
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
+	desc = "A Weyland-Yutani creation, this M41AE1 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'
 	item_icons = list(
 		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_lefthand.dmi',
@@ -262,7 +262,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
 
 /obj/item/weapon/gun/rifle/m41a/corporate/no_lock //for PMC nightmares.
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. This one had its IFF electronics removed."
+	desc = "A Weyland-Yutani creation, this M41AE1 comes equipped in corporate white. Uses 10x24mm caseless ammunition. This one had its IFF electronics removed."
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 /obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
@@ -286,7 +286,7 @@
 
 /obj/item/weapon/gun/rifle/m41a/elite/xm40
 	name = "\improper XM40 pulse rifle"
-	desc = "One of the experimental predecessors to the M41 line that never saw widespread adoption beyond elite marine units. Of the rifles in the USCM inventory that are still in production, this is the only one to feature an integrated suppressor. It can accept M41A MK2 magazines, but also features its own proprietary magazine system. Extremely lethal in burstfire mode."
+	desc = "One of the experimental predecessors to the M41A line that never saw widespread adoption beyond elite marine units. Of the rifles in the USCM inventory that are still in production, this is the only one to feature an integrated suppressor. It can accept M41AE1 magazines, but also features its own proprietary magazine system. Extremely lethal in burstfire mode."
 	icon_state = "m40sd"
 	item_state = "m40sd"
 	reload_sound = 'sound/weapons/handling/m40sd_reload.ogg'
@@ -418,12 +418,12 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/weapon/gun/rifle/m41aMK1/anchorpoint
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel shotgun. Uses 10x24mm caseless ammunition."
+	desc = "A classic M41A Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel shotgun. Uses 10x24mm caseless ammunition."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/shotgun)
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/weapon/gun/rifle/m41aMK1/anchorpoint/gl
-	desc = "A classic M41 MK1 Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
+	desc = "A classic M41A Pulse Rifle painted in a fresh coat of the classic Humbrol 170 camoflauge. This one appears to be used by the Colonial Marine contingent aboard Anchorpoint Station, and is equipped with an underbarrel grenade launcher. Uses 10x24mm caseless ammunition."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/grenade/mk1)
 
 /obj/item/weapon/gun/rifle/m41aMK1/forecon
@@ -441,7 +441,7 @@
 
 /obj/item/weapon/gun/rifle/m46c
 	name = "\improper M46C pulse rifle"
-	desc = "A prototype M46C, an experimental rifle platform built to outperform the standard M41A. Back issue only. Uses standard MK1 & MK2 rifle magazines."
+	desc = "A prototype M46C, an experimental rifle platform built to outperform the standard M41A. Back issue only. Can feed from the standard magazines as well as the short M41AE1 mags."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m46c"
 	item_state = "m46c"
