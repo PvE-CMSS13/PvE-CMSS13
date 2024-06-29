@@ -21,7 +21,7 @@
 		if(istype(I))
 			I.access = J.get_access()
 			I.rank = J.title
-			I.assignment = J.disp_title
+			I.assignment = J.get_assignment()
 			I.name = "[I.registered_name]'s [I.card_name] ([I.assignment])"
 			I.paygrade = J.get_paygrade()
 			if(H.w_uniform)

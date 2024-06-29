@@ -16,16 +16,14 @@
 	var/build_stage = BARRICADE_SANDBAG_1
 	metallic = FALSE
 
-/obj/structure/barricade/sandbags/New(loc, mob/user, direction, amount = 1)
+/obj/structure/barricade/sandbags/Initialize(loc, mob/user, direction, amount = 1)
 	if(direction)
 		setDir(direction)
 
 	if(dir == SOUTH)
 		pixel_y = -7
-	else if(dir == NORTH)
-		pixel_y = 7
 
-	..(loc, user)
+	. = ..(loc, user)
 
 	for(var/i = 1 to amount-1)
 		increment_build_stage()
@@ -134,7 +132,7 @@
 	build_stage++
 
 
-/obj/structure/barricade/sandbags/wired/New()
+/obj/structure/barricade/sandbags/wired/Initialize()
 	health = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth += 50
@@ -149,5 +147,5 @@
 
 /obj/structure/barricade/sandbags/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
-	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+	flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED

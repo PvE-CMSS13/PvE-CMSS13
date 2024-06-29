@@ -133,15 +133,14 @@
 
 		ventcrawl_message_busy = world.time + 20
 		playsound(src, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 25, 1)
-		visible_message(SPAN_HIGHDANGER("You hear something squeezing through the ducts."))
 		to_chat(user, SPAN_NOTICE("You begin to climb out of [src]"))
-		animate_ventcrawl()
+		animate_crawl()
 		user.remove_specific_pipe_image(src)
 		if(!do_after(user, 20, INTERRUPT_NO_NEEDHAND))
-			animate_ventcrawl_reset()
+			animate_crawl_reset()
 			return
 
-		animate_ventcrawl_reset()
+		animate_crawl_reset()
 		user.remove_ventcrawl()
 		user.forceMove(src.loc)
 		user.visible_message(SPAN_HIGHDANGER("[user] climbs out of [src]."), SPAN_NOTICE("You climb out of [src]."))
@@ -156,15 +155,6 @@
 	if(world.time - user.last_played_vent > VENT_SOUND_DELAY)
 		user.last_played_vent = world.time
 		playsound(src, pick('sound/effects/alien_ventcrawl1.ogg', 'sound/effects/alien_ventcrawl2.ogg'), 25, 1)
-
-
-/obj/structure/pipes/proc/animate_ventcrawl(speed = 3, loop_amount = -1, sections = 4)
-	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, loop = loop_amount, easing = JUMP_EASING)
-	for(var/i in 1 to sections)
-		animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, easing = JUMP_EASING)
-
-/obj/structure/pipes/proc/animate_ventcrawl_reset()
-	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
 
 /obj/structure/pipes/proc/add_underlay(turf/T, direction)
 	if(T && T.intact_tile && level == 1)

@@ -259,7 +259,7 @@
 	update_icon()
 
 
-/obj/structure/barricade/plasteel/wired/New()
+/obj/structure/barricade/plasteel/wired/Initialize()
 	can_wire = FALSE
 	is_wired = TRUE
 	climbable = FALSE
@@ -268,8 +268,8 @@
 
 /obj/structure/barricade/plasteel/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
-	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+	flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED
 
 /obj/structure/barricade/plasteel/metal
 	name = "folding metal barricade"

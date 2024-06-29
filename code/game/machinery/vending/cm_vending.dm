@@ -513,14 +513,14 @@ GLOBAL_LIST_EMPTY(vending_products)
 				vend_fail()
 				return FALSE
 
-			if(vend_flags & VEND_CATEGORY_CHECK)
+			if(vend_flags & (VEND_CATEGORY_CHECK|VEND_SPECIALIZED_STOCK))
 				// if the vendor uses flags to control availability
 				var/can_buy_flags = itemspec[4]
 				if(can_buy_flags)
-					if(can_buy_flags == MARINE_CAN_BUY_ESSENTIALS)
+					if(can_buy_flags == MARINE_CAN_BUY_ESSENTIALS || vend_flags & VEND_SPECIALIZED_STOCK)
 						if(vendor_role.Find(JOB_SQUAD_SPECIALIST))
 							// handle specalist essential gear assignment
-							if(user.job != JOB_SQUAD_SPECIALIST)
+							if(GET_SQUAD_ROLE_MAP(user.job) != JOB_SQUAD_SPECIALIST)
 								to_chat(user, SPAN_WARNING("Only specialists can take specialist sets."))
 								vend_fail()
 								return FALSE
@@ -529,7 +529,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 								vend_fail()
 								return FALSE
 							var/p_name = itemspec[1]
-							if(!available_specialist_sets.Find(p_name))
+							if(!(vend_flags & VEND_SPECIALIZED_STOCK) && !available_specialist_sets.Find(p_name))
 								to_chat(user, SPAN_WARNING("That set is already taken."))
 								vend_fail()
 								return FALSE
@@ -537,7 +537,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 							if(!istype(ID) || ID.registered_ref != WEAKREF(usr))
 								to_chat(user, SPAN_WARNING("You must be wearing your [SPAN_INFO("dog tags")] to select a specialization!"))
 								return FALSE
+
+							//Costs all snowflake points to grab a set; single vendor based, so it doesn't pull them from a global list.
+							if(vend_flags & VEND_SPECIALIZED_STOCK && !handle_points(user)) //handle_points() is specified for the sorted spec vendor.
+								to_chat(user, SPAN_WARNING("Not enough points."))
+								vend_fail()
+								return FALSE
+
 							var/specialist_assignment
+
 							switch(p_name)
 								if("Scout Set")
 									user.skills.set_skill(SKILL_SPEC_WEAPONS, SKILL_SPEC_SCOUT)
@@ -554,13 +562,21 @@ GLOBAL_LIST_EMPTY(vending_products)
 								if("Pyro Set")
 									user.skills.set_skill(SKILL_SPEC_WEAPONS, SKILL_SPEC_PYRO)
 									specialist_assignment = "Pyro"
+								if("B18 Personal Defense Set")
+									user.skills.set_skill(SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL)
+									specialist_assignment = "Heavy"
+								if("Sapper Custom Turret Set")
+									user.skills.set_skill(SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL)
+									specialist_assignment = "Sapper"
 								else
 									to_chat(user, SPAN_WARNING("<b>Something bad occured with [src], tell a Dev.</b>"))
 									vend_fail()
 									return FALSE
-							ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + JOB_SQUAD_SPECIALIST + " ([specialist_assignment])")
-							GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), ID.assignment)
-							available_specialist_sets -= p_name
+
+							ID.set_assignment(ID.assignment + ": [specialist_assignment]")
+							var/assignment = user.assigned_equipment_preset?.assignment || user.job
+							GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), assignment + ": [specialist_assignment]")
+							available_specialist_sets -= p_name //Doesn't matter for the last two.
 						else if(vendor_role.Find(JOB_SYNTH))
 							if(user.job != JOB_SYNTH)
 								to_chat(user, SPAN_WARNING("Only USCM Synthetics may vend experimental tool tokens."))
@@ -765,7 +781,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				vend_fail()
 			return FALSE
 
-		if(LAZYLEN(vendor_role) && !vendor_role.Find(user.job))
+		if(LAZYLEN(vendor_role) && !vendor_role.Find(GET_SQUAD_ROLE_MAP(user.job))) //In case this is something like a spec vend; will work fine for non-squad jobs.
 			if(display)
 				to_chat(user, SPAN_WARNING("This machine isn't for you."))
 				vend_fail()
@@ -813,11 +829,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION|VEND_CATEGORY_CHECK|VEND_TO_HAND
 
-/obj/structure/machinery/cm_vending/gear/Initialize()
-	. = ..()
-	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
-		malfunction()
-
 /obj/structure/machinery/cm_vending/gear/ui_static_data(mob/user)
 	. = ..(user)
 	.["vendor_type"] = "gear"
@@ -834,11 +845,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 	show_points = TRUE
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_UNIFORM_RANKS | VEND_UNIFORM_AUTOEQUIP | VEND_CATEGORY_CHECK
-
-/obj/structure/machinery/cm_vending/clothing/Initialize()
-	. = ..()
-	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
-		malfunction()
 
 /obj/structure/machinery/cm_vending/clothing/ui_static_data(mob/user)
 	. = ..(user)

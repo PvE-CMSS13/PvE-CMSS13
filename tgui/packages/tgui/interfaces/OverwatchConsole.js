@@ -21,15 +21,7 @@ const HomePanel = (props, context) => {
   const { act, data } = useBackend(context);
 
   // Buttons don't seem to support hexcode colors, so we'll have to do this manually, sadly
-  const squadColorMap = {
-    'alpha': 'red',
-    'bravo': 'yellow',
-    'charlie': 'purple',
-    'delta': 'blue',
-    'echo': 'green',
-    'foxtrot': 'brown',
-    'intel': 'green',
-  };
+  const squadColorMap = data.overwatch_color;
 
   return (
     <Section
@@ -41,11 +33,7 @@ const HomePanel = (props, context) => {
           return (
             <Stack.Item key={index}>
               <Button
-                color={
-                  squadColorMap[squad.toLowerCase()]
-                    ? squadColorMap[squad.toLowerCase()]
-                    : 'red'
-                }
+                color={squadColorMap[squad]}
                 onClick={() => act('pick_squad', { squad: squad })}>
                 {squad.toUpperCase()}
               </Button>

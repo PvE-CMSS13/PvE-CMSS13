@@ -356,29 +356,20 @@
 	message_admins("[key_name(src)] changed hivenumber of [H] to [H.hivenumber].")
 
 
-/client/proc/cmd_admin_change_their_name(mob/living/carbon/X)
+/client/proc/cmd_admin_change_their_name(mob/living/carbon/target)
 	set name = "Change Name"
 	set category = null
 
-	var/newname = input(usr, "What do you want to name them?", "Name:") as null|text
-	if(!newname)
+	var/new_name = input(usr, "What do you want to name them?", "Name:") as null|text
+	if(!new_name)
 		return
 
-	if(!X)
+	if(!target || QDELETED(target))
 		to_chat(usr, "This mob no longer exists")
 		return
 
-	var/old_name = X.name
-	X.change_real_name(X, newname)
-	if(istype(X, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = X
-		if(H.wear_id)
-			H.wear_id.name = "[H.real_name]'s ID Card"
-			H.wear_id.registered_name = "[H.real_name]"
-			if(H.wear_id.assignment)
-				H.wear_id.name += " ([H.wear_id.assignment])"
-
-	message_admins("[key_name(src)] changed name of [old_name] to [newname].")
+	message_admins("[key_name_admin(usr)] set [key_name_admin(target)]'s name to [new_name]")
+	target.modify_name_and_record(new_name)
 
 /datum/admins/proc/togglesleep(mob/living/M as mob in GLOB.mob_list)
 	set name = "Toggle Sleeping"

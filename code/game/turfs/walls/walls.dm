@@ -30,7 +30,7 @@
 	var/image/bullet_overlay = null
 	var/list/wall_connections = list("0", "0", "0", "0")
 	var/neighbors_list = 0
-	var/max_temperature = 1800 //K, walls will take damage if they're next to a fire hotter than this
+	var/max_temperature = MELTPOINT_ROCK //K, walls will take damage if they're next to a fire hotter than this
 	var/repair_materials = list("wood"= 0.075, "metal" = 0.15, "plasteel" = 0.3) //Max health % recovered on a nailgun repair
 
 	var/d_state = 0 //Normal walls are now as difficult to remove as reinforced walls
@@ -152,38 +152,38 @@
 /turf/closed/wall/get_examine_text(mob/user)
 	. = ..()
 
-	if(hull)
+	if(hull)  //If it's indestructable, we don't want to give the wrong impression by saying "you can decon it with a welder"
 		.+= SPAN_WARNING("You don't think you have any tools able to even scratch this.")
-		return //If it's indestructable, we don't want to give the wrong impression by saying "you can decon it with a welder"
-
-	if(!damage)
-		if (acided_hole)
-			. += SPAN_WARNING("It looks fully intact, except there's a large hole that could've been caused by some sort of acid.")
-		else
-			. += SPAN_NOTICE("It looks fully intact.")
 	else
-		var/dam = damage / damage_cap
-		if(dam <= 0.3)
-			. += SPAN_WARNING("It looks slightly damaged.")
-		else if(dam <= 0.6)
-			. += SPAN_WARNING("It looks moderately damaged.")
+		if(!damage)
+			if (acided_hole)
+				. += SPAN_WARNING("It looks fully intact, except there's a large hole that could've been caused by some sort of acid.")
+			else
+				. += SPAN_NOTICE("It looks fully intact.")
 		else
-			. += SPAN_DANGER("It looks heavily damaged.")
+			var/dam = damage / damage_cap
+			if(dam <= 0.3)
+				. += SPAN_WARNING("It looks slightly damaged.")
+			else if(dam <= 0.6)
+				. += SPAN_WARNING("It looks moderately damaged.")
+			else
+				. += SPAN_DANGER("It looks heavily damaged.")
 
-		if (acided_hole)
-			. += SPAN_WARNING("There's a large hole in the wall that could've been caused by some sort of acid.")
+			if (acided_hole)
+				. += SPAN_WARNING("There's a large hole in the wall that could've been caused by some sort of acid.")
 
-	switch(d_state)
-		if(WALL_STATE_WELD)
-			. += SPAN_INFO("The outer plating is intact. A blowtorch should slice it open.")
-		if(WALL_STATE_SCREW)
-			. += SPAN_INFO("The outer plating has been sliced open. A screwdriver should remove the support lines.")
-		if(WALL_STATE_WIRECUTTER)
-			. += SPAN_INFO("The support lines have been removed. Wirecutters will take care of the hydraulic lines.")
-		if(WALL_STATE_WRENCH)
-			. += SPAN_INFO("The hydralic lines have been cut. A wrench will remove the anchor bolts.")
-		if(WALL_STATE_CROWBAR)
-			. += SPAN_INFO("The anchor bolts have been removed. A crowbar will pry apart the connecting rods.")
+		if(!(flags_turf & (TURF_ORGANIC|TURF_NATURAL))) //No description is it's not a regular wall.
+			switch(d_state)
+				if(WALL_STATE_WELD)
+					. += SPAN_INFO("The outer plating is intact. A blowtorch should slice it open.")
+				if(WALL_STATE_SCREW)
+					. += SPAN_INFO("The outer plating has been sliced open. A screwdriver should remove the support lines.")
+				if(WALL_STATE_WIRECUTTER)
+					. += SPAN_INFO("The support lines have been removed. Wirecutters will take care of the hydraulic lines.")
+				if(WALL_STATE_WRENCH)
+					. += SPAN_INFO("The hydralic lines have been cut. A wrench will remove the anchor bolts.")
+				if(WALL_STATE_CROWBAR)
+					. += SPAN_INFO("The anchor bolts have been removed. A crowbar will pry apart the connecting rods.")
 
 //Damage
 /turf/closed/wall/proc/take_damage(dam, mob/M)
@@ -206,16 +206,23 @@
 	else
 		update_icon()
 
+/turf/closed/wall/flamer_fire_act(damage)
+	/*
+	Sadly, this proc has no temperature value, only flat damage, so we have to do some eyeballing to convert it to a melting point.
+	Damage is configured via flame defines * 2 (BURN_LEVEL_TIER). See weapon_stats.dm for those defines. The idea is to
+	multiply the damage and give it a little variance to arrive at the final value.
+	*/
+	if(!hull && ((damage*21+rand(-150,150)) >= max_temperature)) //Damage will check for hull, but we don't need to fire another proc.
+		take_damage(damage * (flags_turf & TURF_ORGANIC ? 2 : 1)) //Organic will take double damage.
 
 /turf/closed/wall/proc/make_girder(destroyed_girder = FALSE)
-	var/obj/structure/girder/G = new /obj/structure/girder(src)
-	G.icon_state = "girder[junctiontype]"
-	G.original = src.type
+	if(!(flags_turf & (TURF_ORGANIC|TURF_NATURAL))) //If it is not organic or natural, we do make a girder.
+		var/obj/structure/girder/new_girder = new /obj/structure/girder(src)
+		new_girder.icon_state = "girder[junctiontype]"
+		new_girder.original = type
 
-	if (destroyed_girder)
-		G.dismantle()
-
-
+		if(destroyed_girder)
+			new_girder.dismantle()
 
 // Devastated and Explode causes the wall to spawn a damaged girder
 // Walls no longer spawn a metal sheet when destroyed to reduce clutter and
@@ -329,7 +336,7 @@
 				return
 
 
-/turf/closed/wall/attackby(obj/item/attacking_item, mob/user)
+/turf/closed/wall/attackby(obj/item/attacking_item, mob/living/user)
 	if(isxeno(user) && istype(attacking_item, /obj/item/grab))
 		var/obj/item/grab/attacker_grab = attacking_item
 		var/mob/living/carbon/xenomorph/user_as_xenomorph = user
@@ -374,6 +381,22 @@
 		take_damage(damage_cap)
 		return
 
+	if(flags_turf & TURF_ORGANIC)
+		if(!hull && attacking_item.sharp >= IS_SHARP_ITEM_ACCURATE)//Sharp enough to cut dense flora/organics.
+			user.animation_attack_on(src)
+			playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
+			take_damage(attacking_item.force)
+			user.flick_attack_overlay(src, "punch") //Flick after the vege hit. Otherwise overlays are Cut() through take_damage() -> update_icon(), and the attack indicator never shows up. Ugh.
+			return TRUE
+
+		to_chat(user, SPAN_WARNING("There isn't anything you can do with that!"))
+		return FALSE //We'll return early if it's organic. No reason to run the rest, you shouldn't be able to build or do anything like that.
+
+	if(istype(attacking_item, /obj/item/frame))
+		if(flags_turf & TURF_ORGANIC)
+			to_chat(user, SPAN_WARNING("You can't place this on [src]!"))
+			return FALSE
+
 	if(istype(attacking_item,/obj/item/frame/apc))
 		var/obj/item/frame/apc/AH = attacking_item
 		AH.try_build(src)
@@ -408,6 +431,7 @@
 		to_chat(user, SPAN_NOTICE("You place the torch down on the wall."))
 		new /obj/structure/prop/brazier/frame/full/torch(src)
 		qdel(attacking_item)
+		return TRUE
 
 	if(hull)
 		to_chat(user, SPAN_WARNING("[src] is much too tough for you to do anything to it with [attacking_item]."))
@@ -477,6 +501,9 @@
 	return attack_hand(user)
 
 /turf/closed/wall/proc/try_weldingtool_usage(obj/item/W, mob/user)
+	if(flags_turf & (TURF_ORGANIC|TURF_NATURAL)) //Nothing organic or natural, like a jungle or rock wall.
+		return FALSE
+
 	if(!damage || !iswelder(W))
 		return FALSE
 
@@ -495,6 +522,9 @@
 	return TRUE
 
 /turf/closed/wall/proc/try_weldingtool_deconstruction(obj/item/tool/weldingtool/WT, mob/user)
+	if(flags_turf & (TURF_ORGANIC|TURF_NATURAL))
+		return FALSE
+
 	if(!WT.isOn())
 		to_chat(user, SPAN_WARNING("\The [WT] needs to be on!"))
 		return
@@ -514,6 +544,9 @@
 	return
 
 /turf/closed/wall/proc/try_nailgun_usage(obj/item/W, mob/user)
+	if(flags_turf & (TURF_ORGANIC|TURF_NATURAL))
+		return FALSE
+
 	if((!damage && !acided_hole) || !istype(W, /obj/item/weapon/gun/smg/nailgun))
 		return FALSE
 

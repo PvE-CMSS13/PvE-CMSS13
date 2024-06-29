@@ -75,7 +75,6 @@
 		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", 2, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
 		list("Stethoscope", 2, /obj/item/clothing/accessory/stethoscope, null, VENDOR_ITEM_REGULAR)
-
 	)
 
 //------------CLOTHING VENDOR---------------
@@ -175,6 +174,69 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 
 /obj/structure/machinery/cm_vending/clothing/synth/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_synth
+
+/obj/structure/machinery/cm_vending/clothing/synth/uscm_ground
+	req_access = list(ACCESS_USCM_GROUND_SYNTH)
+	vendor_role = list(JOB_USCM_GROUND_SYNTH) //You don't get to use it if you're not a maint. synth.
+
+///Shortened list. I removed items that I didn't think made a lot of sense for the synth to have access to. Mostly medical gear.
+/obj/structure/machinery/cm_vending/clothing/synth/uscm_ground/get_listed_products(mob/user)
+	return list(
+		list("UNIFORM (CHOOSE 1)", 0, null, null, null),
+		list("Uniform, Standard Synth", 0, /obj/item/clothing/under/rank/synthetic, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Uniform, Outdated Synth", 0, /obj/item/clothing/under/rank/synthetic/old, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
+		list("USCM Standard Uniform", 0, /obj/item/clothing/under/marine, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
+
+		list("WEBBING (CHOOSE 1)", 0, null, null, null),
+		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Tool Webbing", 0, /obj/item/clothing/accessory/storage/tool_webbing/equipped, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+
+		list("SHOES (CHOOSE 1)", 0, null, null, null),
+		list("Boots", 0, /obj/item/clothing/shoes/marine, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
+		list("Shoes, White", 0, /obj/item/clothing/shoes/white, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_REGULAR),
+
+		list("HELMET (CHOOSE 1)", 0, null, null, null),
+		list("Welding Helmet", 0, /obj/item/clothing/head/welding, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
+		list("Expedition Cap", 0, /obj/item/clothing/head/cmcap/flap, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+		list("Hard Hat, Orange", 0, /obj/item/clothing/head/hardhat/orange, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+
+		list("GLOVES (CHOOSE 1)", 0, null, null, null),
+		list("Insulated Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_RECOMMENDED),
+		list("Black Gloves", 0, /obj/item/clothing/gloves/black, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_REGULAR),
+
+		list("SUITS (CHOOSE 1)", 0, null, null, null),
+		list("Utility Vest", 0, /obj/item/clothing/suit/storage/utility_vest, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("External Webbing", 0, /obj/item/clothing/suit/storage/webbing, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Hazard Vest(Orange)", 0, /obj/item/clothing/suit/storage/hazardvest, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Hazard Vest(Blue)", 0, /obj/item/clothing/suit/storage/hazardvest/blue, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Hazard Vest(Yellow)", 0, /obj/item/clothing/suit/storage/hazardvest/yellow, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Hazard Vest(Black)", 0, /obj/item/clothing/suit/storage/hazardvest/black, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Satchel, USCM", 0, /obj/item/storage/backpack/marine/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Satchel, Leather", 0, /obj/item/storage/backpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Backpack, Industrial", 0, /obj/item/storage/backpack/industrial, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Chestrig, Technician", 0, /obj/item/storage/backpack/marine/satchel/tech, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("USCM Welderpack", 0, /obj/item/storage/backpack/marine/engineerpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("USCM Weldersatchel", 0, /obj/item/storage/backpack/marine/engineerpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("USCM Welder Chestrig", 0, /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Toolbelt Rig (Full)", 0, /obj/item/storage/belt/utility/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Sling Pouch", 0, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Construction Pouch (Full)", 0, /obj/item/storage/pouch/construction/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Electronics Pouch (Full)", 0, /obj/item/storage/pouch/electronics/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch (Full)", 0, /obj/item/storage/pouch/tools/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Machete Pouch (Full)", 0, /obj/item/storage/pouch/machete/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+	)
 
 //------------SNOWFLAKE VENDOR---------------
 
@@ -322,6 +384,96 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth_snowflake, list(
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_synth_snowflake
 
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake/uscm_ground
+	vendor_role = list(JOB_USCM_GROUND_SYNTH)
+	req_access = list(ACCESS_USCM_GROUND_SYNTH)
+
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake/uscm_ground/get_listed_products(mob/user)
+	return list(
+		list("USCM UNIFORMS", 0, null, null, null),
+		list("USCM Service Uniform", 60, /obj/item/clothing/under/marine/officer/bridge, null, VENDOR_ITEM_REGULAR),
+		list("USCM Flightsuit", 60, /obj/item/clothing/under/rank/synthetic/flight, null, VENDOR_ITEM_REGULAR),
+		list("USCM Engineers Uniform", 60, /obj/item/clothing/under/marine/engineer/standard, null, VENDOR_ITEM_REGULAR),
+		list("USCM Engineers Uniform (Darker)", 60, /obj/item/clothing/under/marine/engineer/darker, null, VENDOR_ITEM_REGULAR),
+		list("USCM Engineering Officers Uniform", 60, /obj/item/clothing/under/marine/officer/engi, null, VENDOR_ITEM_REGULAR),
+		list("USCM Military Police Uniform", 60, /obj/item/clothing/under/marine/mp/standard, null, VENDOR_ITEM_REGULAR),
+		list("USCM Military Police Uniform (Darker)", 60, /obj/item/clothing/under/marine/mp/darker, null, VENDOR_ITEM_REGULAR),
+
+		list("NON-STANDARD UNIFORMS", 0, null, null, null),
+		list("White T-Shirt and Brown Jeans", 60, /obj/item/clothing/under/tshirt/w_br, null, VENDOR_ITEM_REGULAR),
+		list("Gray T-Shirt and Blue Jeans", 60, /obj/item/clothing/under/tshirt/gray_blu, null, VENDOR_ITEM_REGULAR),
+		list("Red T-Shirt and Black Jeans", 60, /obj/item/clothing/under/tshirt/r_bla, null, VENDOR_ITEM_REGULAR),
+		list("Frontier Jumpsuit", 60, /obj/item/clothing/under/rank/synthetic/frontier, null, VENDOR_ITEM_REGULAR),
+		list("UA Grey Jumpsuit", 60, /obj/item/clothing/under/colonist/ua_civvies, null, VENDOR_ITEM_REGULAR),
+		list("UA Brown Jumpsuit", 60, /obj/item/clothing/under/colonist/wy_davisone, null, VENDOR_ITEM_REGULAR),
+		list("UA Green Utility Uniform", 60, /obj/item/clothing/under/rank/synthetic/utility, null, VENDOR_ITEM_REGULAR),
+		list("Grey Utilities", 60, /obj/item/clothing/under/rank/synthetic/utility/yellow, null, VENDOR_ITEM_REGULAR),
+		list("Grey Utilities and Blue Jeans", 60, /obj/item/clothing/under/rank/synthetic/utility/red, null, VENDOR_ITEM_REGULAR),
+		list("Blue Utilities and Brown Jeans", 60, /obj/item/clothing/under/rank/synthetic/utility/blue, null, VENDOR_ITEM_REGULAR),
+		list("Steward Clothes", 60, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, null, VENDOR_ITEM_REGULAR),
+		list("Red Dress Skirt", 60, /obj/item/clothing/under/blackskirt, null, VENDOR_ITEM_REGULAR),
+		list("Working Joe Uniform", 60, /obj/item/clothing/under/rank/synthetic/joe, null, VENDOR_ITEM_REGULAR),
+
+		list("GLASSES", 0, null, null, null),
+		list("Marine RPG Glasses", 30, /obj/item/clothing/glasses/regular, null, VENDOR_ITEM_REGULAR),
+		list("Optical Meson Scanner", 30, /obj/item/clothing/glasses/meson, null, VENDOR_ITEM_REGULAR),
+		list("Sunglasses", 30, /obj/item/clothing/glasses/sunglasses, null, VENDOR_ITEM_REGULAR),
+		list("Welding Goggles", 30, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
+
+		list("SHOES", 0, null, null, null),
+		list("Boots", 30, /obj/item/clothing/shoes/marine, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Black", 30, /obj/item/clothing/shoes/black, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Blue", 30, /obj/item/clothing/shoes/blue, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Brown", 30, /obj/item/clothing/shoes/brown, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Green", 30, /obj/item/clothing/shoes/green, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Purple", 30, /obj/item/clothing/shoes/purple, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Red", 30, /obj/item/clothing/shoes/red, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, White", 30, /obj/item/clothing/shoes/white, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Yellow", 30, /obj/item/clothing/shoes/yellow, null, VENDOR_ITEM_REGULAR),
+		list("Shoes, Dress", 30, /obj/item/clothing/shoes/dress, null, VENDOR_ITEM_REGULAR),
+
+		list("HEADWEAR", 0, null, null, null),
+		list("Beanie", 30, /obj/item/clothing/head/beanie, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Engineering", 30, /obj/item/clothing/head/beret/eng, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Purple", 30, /obj/item/clothing/head/beret/jan, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Red", 30, /obj/item/clothing/head/beret/cm/red, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Standard", 30, /obj/item/clothing/head/beret/cm, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Tan", 30, /obj/item/clothing/head/beret/cm/tan, null, VENDOR_ITEM_REGULAR),
+		list("Beret, Black", 30, /obj/item/clothing/head/beret/cm/black, null, VENDOR_ITEM_REGULAR),
+		list("Beret, White", 30, /obj/item/clothing/head/beret/cm/white, null, VENDOR_ITEM_REGULAR),
+		list("Ushanka", 30, /obj/item/clothing/head/ushanka, null, VENDOR_ITEM_REGULAR),
+		list("Cap", 30, /obj/item/clothing/head/cmcap, null, VENDOR_ITEM_REGULAR),
+		list("MP Cap", 30, /obj/item/clothing/head/beret/marine/mp/mpcap, null, VENDOR_ITEM_REGULAR),
+		list("QM Cap", 30, /obj/item/clothing/head/cmcap/req/ro, null, VENDOR_ITEM_REGULAR),
+		list("Req Cap", 30, /obj/item/clothing/head/cmcap/req, null, VENDOR_ITEM_REGULAR),
+		list("Officer Cap", 30, /obj/item/clothing/head/cmcap/bridge, null, VENDOR_ITEM_REGULAR),
+		list("Bio Hood", 30, /obj/item/clothing/head/bio_hood/synth, null, VENDOR_ITEM_REGULAR),
+
+		list("SUIT", 0, null, null, null),
+		list("Bomber Jacket, Brown", 60, /obj/item/clothing/suit/storage/bomber, null, VENDOR_ITEM_REGULAR),
+		list("Bomber Jacket, Black", 60, /obj/item/clothing/suit/storage/bomber/alt, null, VENDOR_ITEM_REGULAR),
+		list("Synthetic's Snow Suit", 60, /obj/item/clothing/suit/storage/snow_suit/synth, null, VENDOR_ITEM_REGULAR),
+		list("USCM Service Jacket", 60, /obj/item/clothing/suit/storage/jacket/marine/service, null, VENDOR_ITEM_REGULAR),
+		list("USCM MP Service Jacket", 60, /obj/item/clothing/suit/storage/jacket/marine/service/mp, null, VENDOR_ITEM_REGULAR),
+		list("Windbreaker, Brown", 60, /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown, null, VENDOR_ITEM_REGULAR),
+		list("Windbreaker, Grey", 60, /obj/item/clothing/suit/storage/windbreaker/windbreaker_gray, null, VENDOR_ITEM_REGULAR),
+		list("Windbreaker, Green", 60, /obj/item/clothing/suit/storage/windbreaker/windbreaker_green, null, VENDOR_ITEM_REGULAR),
+		list("Windbreaker, First Responder", 60, /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr, null, VENDOR_ITEM_REGULAR),
+		list("Windbreaker, Exploration", 60, /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant, null, VENDOR_ITEM_REGULAR),
+		list("Quartermaster Jacket", 60, /obj/item/clothing/suit/storage/RO, null, VENDOR_ITEM_REGULAR),
+		list("Bio Suit", 60, /obj/item/clothing/suit/storage/synthbio, null, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES", 0, null, null, null),
+		list("Red Armband", 30, /obj/item/clothing/accessory/armband, null, VENDOR_ITEM_REGULAR),
+		list("Yellow Armband", 30, /obj/item/clothing/accessory/armband/engine, null, VENDOR_ITEM_REGULAR),
+		list("Green Armband", 30, /obj/item/clothing/accessory/armband/medgreen, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Mission-Specific Camo)", 30, /obj/item/clothing/accessory/poncho, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Green)", 30, /obj/item/clothing/accessory/poncho/green, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Brown)", 30, /obj/item/clothing/accessory/poncho/brown, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Black)", 30, /obj/item/clothing/accessory/poncho/black, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Blue)", 30, /obj/item/clothing/accessory/poncho/blue, null, VENDOR_ITEM_REGULAR),
+		list("USCM Poncho (Purple)", 30, /obj/item/clothing/accessory/poncho/purple, null, VENDOR_ITEM_REGULAR),
+	)
 
 //------------EXPERIMENTAL TOOLS---------------
 /obj/structure/machinery/cm_vending/own_points/experimental_tools

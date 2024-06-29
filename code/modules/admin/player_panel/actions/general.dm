@@ -160,8 +160,9 @@
 	name = "Set Name"
 
 /datum/player_action/set_name/act(client/user, mob/target, list/params)
-	target.name = params["name"]
-	message_admins("[key_name_admin(user)] set [key_name_admin(target)]'s name to [params["name"]]")
+	var/new_name = params["name"]
+	message_admins("[key_name_admin(user)] set [key_name_admin(target)]'s name to [new_name]")
+	target.modify_name_and_record(new_name)
 	return TRUE
 
 /datum/player_action/set_ckey

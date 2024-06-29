@@ -48,10 +48,10 @@
 	..()
 	if (pass_flags)
 		pass_flags.flags_can_pass_all = NONE
-		pass_flags.flags_can_pass_front = NONE
-		pass_flags.flags_can_pass_behind = PASS_OVER^(PASS_OVER_ACID_SPRAY|PASS_OVER_THROW_MOB)
-	flags_can_pass_front_temp = PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp = PASS_OVER_THROW_MOB
+		pass_flags.flags_can_pass_front = PASS_BARRICADE_FRONT
+		pass_flags.flags_can_pass_behind = PASS_BARRICADE_BEHIND
+	flags_can_pass_front_temp = PASS_BARRICADE_FRONT_NOT_WIRED
+	flags_can_pass_behind_temp = PASS_BARRICADE_BEHIND_NOT_WIRED
 
 /obj/structure/barricade/get_examine_text(mob/user)
 	. = ..()
@@ -214,8 +214,8 @@
 				update_health(-50)
 				can_wire = FALSE
 				is_wired = TRUE
-				flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-				flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+				flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+				flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED
 				climbable = FALSE
 				update_icon()
 		return
@@ -235,8 +235,8 @@
 				update_health(50)
 				can_wire = TRUE
 				is_wired = FALSE
-				flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-				flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+				flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+				flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED
 				climbable = TRUE
 				update_icon()
 				new/obj/item/stack/barbed_wire( src.loc )

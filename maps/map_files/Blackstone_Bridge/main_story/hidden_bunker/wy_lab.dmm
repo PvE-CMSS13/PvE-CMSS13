@@ -1,0 +1,1916 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"am" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 8
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"ay" = (
+/obj/structure/machinery/computer3/server/rack,
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"aB" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"aO" = (
+/obj/structure/bed/roller,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"bj" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"bp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/camera/autoname/wy_bunker/containment,
+/turf/open/floor/almayer/research/containment/corner_var1{
+	dir = 4
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"bs" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = 8
+	},
+/obj/item/folder/black{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/prop/helmetgarb/prescription_bottle{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 6
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"bv" = (
+/turf/closed/wall/almayer/research/containment/wall/corner,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"bB" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"cj" = (
+/obj/structure/flora/pottedplant/random,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"cn" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"cp" = (
+/obj/structure/surface/rack,
+/obj/item/storage/box/lights,
+/obj/item/device/lightreplacer,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"dm" = (
+/obj/item/reagent_container/glass/bucket/janibucket{
+	pixel_x = -4;
+	pixel_y = 13
+	},
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"dB" = (
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"dK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/pipes/unary/outlet_injector{
+	dir = 8;
+	name = "Mixed Air Injector"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"dW" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"el" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"es" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/structure/machinery/flasher{
+	alpha = 1;
+	id = "WY Bunker Containment Cell";
+	layer = 2.1;
+	name = "Mounted Flash";
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/research/containment/corner_var1{
+	icon_state = "containment_corner_variant_2"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"ev" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 6
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"ew" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	dir = 4;
+	id = "WY Bunker Containment Cell";
+	name = "\improper Containment Viewport"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open/white{
+	dir = 4;
+	id = "WY Bunker Lockdown";
+	name = "\improper Containment Lockdown"
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"eX" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"eZ" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/storage/firstaid/adv{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/obj/item/storage/box/bodybags{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/structure/machinery/door_control{
+	id = "WY Bunker Surgery Shutters";
+	name = "Containment Lockdown";
+	pixel_x = -5;
+	pixel_y = -1;
+	req_access_txt = "202"
+	},
+/obj/structure/machinery/door_control{
+	id = "WY Bunker Specimen Storage";
+	name = "Containment Lockdown";
+	pixel_x = 5;
+	pixel_y = -1;
+	req_one_access_txt = "206;210;213"
+	},
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"fw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/research/containment/corner{
+	dir = 4
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"fC" = (
+/obj/structure/machinery/optable,
+/obj/item/tank/anesthetic{
+	pixel_x = 6
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"fJ" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/bunker/wy/research,
+/obj/structure/machinery/door/poddoor/almayer/open/white{
+	dir = 4;
+	id = "WY Bunker Lockdown";
+	name = "\improper Containment Lockdown"
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"fO" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/surgery/scalpel/manager,
+/obj/item/tool/surgery/retractor{
+	pixel_x = 6
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"fW" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"go" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"gu" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"gz" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"gN" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "purplewhitecorner"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"hh" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"hD" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/bunker/wy/specimen_storage,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "WY Bunker Specimen Storage"
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"hF" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"ii" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"il" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"im" = (
+/obj/structure/janitorialcart,
+/obj/item/tool/mop,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"iN" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/storage/box/gloves{
+	pixel_x = 6;
+	pixel_y = 9
+	},
+/obj/item/storage/box/gloves{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/clipboard{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = -9
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"jq" = (
+/obj/structure/closet/firecloset/full,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"jH" = (
+/obj/structure/machinery/door/window/southleft{
+	name = "\improper Server Access";
+	req_access = list(200);
+	access_modified = 1
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"jR" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"jY" = (
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"kd" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 8
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"li" = (
+/obj/item/shard,
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"mf" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/poddoor/almayer/locked/white,
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"mP" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/rifle/m41a/elite{
+	pixel_y = -2
+	},
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"mT" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"nD" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/paper{
+	pixel_x = 8
+	},
+/obj/item/storage/fancy/vials{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/tool/pen/green/clicky{
+	pixel_x = 8
+	},
+/obj/item/storage/pill_bottle/bicaridine{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"nS" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"om" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "retrosquareslight"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"oq" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"ow" = (
+/obj/structure/prop/almayer/computers/sensor_computer1,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"oD" = (
+/obj/structure/largecrate/random/barrel/green,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"pi" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"pB" = (
+/turf/open/floor/corsat{
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"pR" = (
+/obj/structure/xenoautopsy/tank/larva,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 2;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"pU" = (
+/turf/closed/wall/almayer/research/containment/wall/east,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"pZ" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"qe" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/machinery/iv_drip,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"qk" = (
+/obj/structure/machinery/vending/coffee,
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"qz" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"qT" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"qU" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"rk" = (
+/obj/structure/pipes/vents/pump,
+/obj/item/tool/wet_sign,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"sB" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 28
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 12;
+	pixel_y = 9
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"tF" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"tG" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"tH" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"tK" = (
+/obj/structure/largecrate/random/barrel/green,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"tZ" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/bunker/wy/server,
+/turf/open/floor/corsat{
+	icon_state = "squares"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"uh" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"ul" = (
+/obj/structure/machinery/computer3/server/rack,
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"uN" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhitecorner"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"uU" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"vv" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"vC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 21;
+	unacidable = 1;
+	unslashable = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"vX" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"wv" = (
+/obj/structure/prop/almayer/computers/sensor_computer2,
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 21
+	},
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"xg" = (
+/obj/item/ammo_box/magazine/m39/ap{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/ap,
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"xm" = (
+/obj/structure/machinery/recharge_station,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"yp" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"zD" = (
+/obj/structure/machinery/door/poddoor/almayer/locked/white,
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Bo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"BD" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"BM" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/gun/smg/m39/elite,
+/obj/item/weapon/gun/smg/m39/elite{
+	pixel_y = -5
+	},
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Cj" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 10
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"Cl" = (
+/obj/structure/machinery/blackbox_recorder,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Cu" = (
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"CI" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/surgery/circular_saw,
+/obj/item/clothing/mask/surgical{
+	pixel_x = 8;
+	pixel_y = 3
+	},
+/obj/item/device/camera{
+	pixel_x = -15;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"DP" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ei" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/storage/xeno_tag_case/full{
+	pixel_y = 11
+	},
+/obj/item/device/camera{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/cans/dr_gibb{
+	pixel_x = 9;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"EK" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"FB" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"FJ" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/surgery/hemostat,
+/obj/item/tool/surgery/cautery{
+	pixel_x = -3
+	},
+/obj/item/device/taperecorder{
+	pixel_x = 13
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"GH" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ht" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "WY Bunker Specimen Storage"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"HU" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"If" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Is" = (
+/obj/structure/xenoautopsy/tank/alien,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"IU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhitecorner"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"IX" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/emails{
+	pixel_x = -2;
+	pixel_y = 3;
+	dir = 4;
+	req_access = list(200);
+	access_modified = 1
+	},
+/obj/item/reagent_container/food/snacks/grilledcheese{
+	pixel_x = -7;
+	pixel_y = -4
+	},
+/obj/item/reagent_container/food/drinks/cans/cola{
+	pixel_x = 10;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 9
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Jd" = (
+/obj/structure/window/reinforced,
+/turf/open/floor/corsat{
+	icon_state = "plate"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Jp" = (
+/obj/structure/ladder{
+	id = "blackstone_hidden_bunker";
+	height = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Kd" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/bunker/wy/aux_storage,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/storage)
+"Kh" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/computer/emails{
+	dir = 8;
+	req_access = list(200);
+	access_modified = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 5
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Kx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/visible{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"KG" = (
+/turf/closed/wall/almayer/research/containment/wall/west,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"KM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/research/containment/corner{
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Ll" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhitecorner"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Lp" = (
+/obj/structure/bed/sofa/south/white/left,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ly" = (
+/obj/structure/machinery/computer3/server/rack,
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"LT" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 4
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Mt" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"MC" = (
+/obj/structure/machinery/door/window/southright{
+	name = "\improper Server Access";
+	req_access = list(200);
+	access_modified = 1
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"MN" = (
+/obj/structure/xenoautopsy/tank/hugger,
+/turf/open/floor/corsat{
+	dir = 10;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"MU" = (
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Ns" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"NJ" = (
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/whiskey_outpost/blackstone/underground/bunker)
+"NK" = (
+/obj/structure/machinery/light/small,
+/obj/structure/xenoautopsy/tank/larva,
+/turf/open/floor/corsat{
+	dir = 2;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"NN" = (
+/turf/closed/wall/almayer/research/containment/wall/south,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Og" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5
+	},
+/obj/structure/pipes/standard/simple/visible,
+/turf/open/floor/almayer/research/containment/entrance,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Ok" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/door_control{
+	id = "WY Bunker Lockdown";
+	name = "lockdown containment";
+	pixel_x = 16;
+	pixel_y = -4;
+	req_one_access_txt = "206;213";
+	access_modified = 1
+	},
+/obj/structure/machinery/computer/cameras/bunker/wy,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Oo" = (
+/obj/item/shard,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"OM" = (
+/turf/template_noop,
+/area/template_noop)
+"Pj" = (
+/obj/structure/closet/l3closet/general,
+/turf/open/floor/corsat{
+	dir = 6;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Px" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"PK" = (
+/obj/structure/bed/sofa/south/white/right,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 28
+	},
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"PQ" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"PS" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"PX" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"QK" = (
+/turf/closed/wall/almayer/research/containment/wall/north,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"QS" = (
+/obj/structure/machinery/door/poddoor/almayer/locked/white,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Rb" = (
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Rx" = (
+/obj/structure/machinery/camera/autoname/wy_bunker{
+	dir = 1
+	},
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Rz" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"RO" = (
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"SG" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/tool/surgery/surgicaldrill,
+/obj/item/tool/surgery/bonegel{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"SO" = (
+/turf/closed/wall/almayer/research/containment/wall/corner{
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"SP" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhitecorner"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"SZ" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"TT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/pipes/standard/simple/visible,
+/obj/structure/machinery/door/airlock/bunker/wy/containment{
+	id = "WY Bunker Containment Cell"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "WY Bunker Containment Cell";
+	name = "\improper Containment Shutter"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open/white{
+	id = "WY Bunker Lockdown";
+	name = "\improper Containment Lockdown"
+	},
+/turf/open/floor/corsat{
+	icon_state = "cargo"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"TX" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"Ud" = (
+/obj/structure/machinery/vending/snack,
+/obj/structure/machinery/camera/autoname/wy_bunker,
+/turf/open/floor/corsat{
+	dir = 5;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"Ug" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/bunker/wy/surgery,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"Uj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2{
+	dir = 8
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Uy" = (
+/turf/closed/wall/biodome,
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"Vo" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "WY Bunker Surgery Shutters"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"Vu" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	icon_state = "white"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"VG" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/recharger{
+	layer = 3.1;
+	pixel_x = 4
+	},
+/obj/item/spacecash/c10{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/item/explosive/grenade/flashbang{
+	pixel_x = -5
+	},
+/obj/item/explosive/grenade/flashbang{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/turf/open/floor/corsat{
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"VQ" = (
+/obj/structure/window/framed/corsat/research,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"VT" = (
+/obj/structure/window/framed/corsat/research,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	dir = 4;
+	id = "WY Bunker Surgery Shutters"
+	},
+/turf/open/floor/plating,
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+"WO" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/corsat{
+	dir = 8;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"WZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	layer = 2.9;
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet/filingcabinet{
+	density = 0;
+	layer = 2.9;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat{
+	dir = 9;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"Xd" = (
+/obj/structure/xenoautopsy/tank/broken,
+/obj/structure/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat{
+	dir = 2;
+	icon_state = "darkgreen"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/specimens)
+"Xt" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat{
+	dir = 4;
+	icon_state = "purplewhite"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker)
+"XB" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	dir = 4;
+	id = "WY Bunker Containment Cell";
+	name = "\improper Containment Viewport"
+	},
+/obj/structure/machinery/door/poddoor/almayer/open/white{
+	dir = 4;
+	id = "WY Bunker Lockdown";
+	name = "\improper Containment Lockdown"
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple,
+/area/whiskey_outpost/blackstone/underground/bunker/containment)
+"Yt" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = -8
+	},
+/obj/item/paper_bin{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/tool/pen/blue/clicky{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/turf/open/floor/corsat{
+	icon_state = "white";
+	dir = 10
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/servers)
+"YH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door_display/research_cell{
+	id = "WY Bunker Containment Cell";
+	name = "\improper Containment Control";
+	pixel_y = 4;
+	req_one_access_txt = "206;213";
+	req_access = null;
+	access_modified = 1
+	},
+/obj/structure/surface/table/reinforced,
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "whitetan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/observation)
+"YO" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "tan"
+	},
+/area/whiskey_outpost/blackstone/underground/bunker/surgery)
+
+(1,1,1) = {"
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+"}
+(2,1,1) = {"
+OM
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+OM
+"}
+(3,1,1) = {"
+OM
+NJ
+xm
+hh
+Jp
+uU
+SO
+KG
+KG
+KG
+kd
+WZ
+MU
+gz
+MU
+mP
+NJ
+OM
+"}
+(4,1,1) = {"
+OM
+NJ
+im
+cn
+cp
+uU
+QK
+es
+am
+fw
+NN
+YH
+BD
+nD
+BD
+BM
+NJ
+OM
+"}
+(5,1,1) = {"
+OM
+NJ
+oD
+cn
+dm
+uU
+QK
+vC
+SZ
+Og
+TT
+Kx
+BD
+Ok
+pZ
+xg
+NJ
+OM
+"}
+(6,1,1) = {"
+OM
+NJ
+tK
+ev
+rk
+uU
+QK
+bp
+Uj
+KM
+NN
+dK
+BD
+Ei
+BD
+Rx
+NJ
+OM
+"}
+(7,1,1) = {"
+OM
+NJ
+hF
+Kd
+uU
+uU
+LT
+pU
+ew
+XB
+bv
+Bo
+BD
+BD
+BD
+VG
+NJ
+OM
+"}
+(8,1,1) = {"
+OM
+NJ
+qk
+el
+DP
+go
+go
+go
+VQ
+VQ
+go
+qe
+yp
+pi
+RO
+Pj
+NJ
+OM
+"}
+(9,1,1) = {"
+OM
+NJ
+jq
+mT
+Ll
+Mt
+Mt
+FB
+bB
+dB
+go
+tH
+tH
+fJ
+tH
+tH
+NJ
+NJ
+"}
+(10,1,1) = {"
+OM
+NJ
+Ud
+nS
+Xt
+nS
+nS
+uN
+om
+SP
+Mt
+FB
+gu
+WO
+bj
+bB
+QS
+qT
+"}
+(11,1,1) = {"
+OM
+NJ
+Uy
+Uy
+Uy
+Uy
+Uy
+Px
+gN
+nS
+nS
+nS
+nS
+nS
+IU
+mT
+mf
+eX
+"}
+(12,1,1) = {"
+OM
+NJ
+ul
+tF
+IX
+Yt
+Uy
+GH
+PX
+tG
+VT
+VT
+VT
+tG
+fW
+nS
+zD
+dW
+"}
+(13,1,1) = {"
+OM
+NJ
+wv
+Jd
+il
+If
+Rz
+GH
+PX
+Vo
+FJ
+iN
+fO
+tG
+vX
+vX
+NJ
+NJ
+"}
+(14,1,1) = {"
+OM
+NJ
+ay
+MC
+Rb
+Vu
+Rz
+GH
+PX
+Vo
+SG
+qU
+CI
+tG
+li
+MN
+NJ
+OM
+"}
+(15,1,1) = {"
+OM
+NJ
+Cl
+Jd
+Ns
+jR
+tZ
+oq
+HU
+Ug
+EK
+YO
+qU
+Ht
+Oo
+Xd
+NJ
+OM
+"}
+(16,1,1) = {"
+OM
+NJ
+ay
+jH
+Rb
+Cu
+Rz
+cj
+pB
+Vo
+qU
+Cj
+aB
+hD
+ii
+pR
+NJ
+OM
+"}
+(17,1,1) = {"
+OM
+NJ
+ow
+Jd
+vv
+Cu
+Rz
+Lp
+pB
+Vo
+aO
+fC
+uh
+Ht
+PS
+NK
+NJ
+OM
+"}
+(18,1,1) = {"
+OM
+NJ
+Ly
+PQ
+Kh
+bs
+Uy
+PK
+jY
+tG
+sB
+TX
+eZ
+tG
+qz
+Is
+NJ
+OM
+"}
+(19,1,1) = {"
+OM
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+OM
+"}
+(20,1,1) = {"
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+OM
+"}

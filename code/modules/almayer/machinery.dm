@@ -89,8 +89,7 @@
 /obj/structure/machinery/prop/almayer/CICmap/Initialize()
 	. = ..()
 
-	map = new /datum/tacmap/drawing(src, minimap_type)
-
+	map = new /datum/tacmap/drawing(src, minimap_type, faction)
 
 /obj/structure/machinery/prop/almayer/CICmap/Destroy()
 	QDEL_NULL(map)
@@ -100,6 +99,9 @@
 	. = ..()
 
 	map.tgui_interact(user)
+
+/obj/structure/machinery/prop/almayer/CICmap/uscm_ground
+	faction = FACTION_USCM_GROUND
 
 /obj/structure/machinery/prop/almayer/CICmap/upp
 	minimap_type = MINIMAP_FLAG_UPP

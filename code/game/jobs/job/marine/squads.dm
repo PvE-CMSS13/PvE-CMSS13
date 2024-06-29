@@ -1,8 +1,5 @@
 //This datum keeps track of individual squads. New squads can be added without any problem but to give them
 //access you must add them individually to access.dm with the other squads. Just look for "access_alpha" and add the new one
-
-//Note: some important procs are held by the job controller, in job_controller.dm.
-//In particular, get_lowest_squad() and randomize_squad()
 /datum/squad_type //Majority of this is for a follow-on PR to fully flesh the system out and add more bits for other factions.
 	var/name = "Squad Type"
 	var/lead_name
@@ -37,6 +34,8 @@
 	var/equipment_color = "#FFFFFF"
 	/// The alpha for the armor overlay used by equipment color
 	var/armor_alpha = 125
+	/// OW console platoon buttons do not recognize hex, so you have to associate them with a predefined color. See colors.scss for what is available.
+	var/overwatch_color = "red"
 	/// Color for the squad marines langchat
 	var/chat_color = "#FFFFFF"
 	/// Which special access do we grant them
@@ -55,6 +54,8 @@
 	var/max_smartgun = 2
 	/// maximum # of squad leaders allowed in the squad
 	var/max_leaders = 1
+	/// Maxium number of standards; anything below 0 means there is no hard cap.
+	var/max_riflemen = -1
 	/// Squad headsets default radio frequency
 	var/radio_freq = 1461
 
@@ -112,6 +113,10 @@
 	///Should we add the name of our squad in front of their name? Ex: Alpha Hospital Corpsman
 	var/prepend_squad_name_to_assignment = TRUE
 
+	var/headset_path //What sort of headset they are using.
+	var/encryption_key_path//Lead encrypt key, used for radios and setting aSLs.
+
+	var/platoon_leader_access //Not defined by default.
 	var/squad_one_access = ACCESS_SQUAD_ONE
 	var/squad_two_access = ACCESS_SQUAD_TWO
 
@@ -130,6 +135,9 @@
 	minimap_color = MINIMAP_SQUAD_ALPHA
 	use_stripe_overlay = FALSE
 	usable = TRUE
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 /datum/squad/marine/upp
 	name = SQUAD_UPP
@@ -143,6 +151,7 @@
 	faction = FACTION_UPP
 	squad_one_access = ACCESS_UPP_SQUAD_ONE
 	squad_two_access = ACCESS_UPP_SQUAD_TWO
+	platoon_leader_access = ACCESS_UPP_LEADERSHIP
 
 /datum/squad/marine/upp/New()
 	. = ..()
@@ -155,42 +164,64 @@
 	radio_freq = SOF_FREQ
 	use_stripe_overlay = FALSE
 	equipment_color = "#32CD32"
+	overwatch_color = "green"
 	chat_color = "#32CD32"
 	minimap_color = "#32CD32"
 	usable = TRUE
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
+
+
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
+	overwatch_color = "yellow"
 	chat_color = "#ffe650"
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
 	equipment_color = "#c864c8"
+	overwatch_color = "purple"
 	chat_color = "#ff96ff"
 	access = list(ACCESS_MARINE_CHARLIE)
 	radio_freq = CHARLIE_FREQ
 	minimap_color = MINIMAP_SQUAD_CHARLIE
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 /datum/squad/marine/delta
 	name = SQUAD_MARINE_4
 	equipment_color = "#4148c8"
+	overwatch_color = "blue"
 	chat_color = "#828cff"
 	access = list(ACCESS_MARINE_DELTA)
 	radio_freq = DELTA_FREQ
 	minimap_color = MINIMAP_SQUAD_DELTA
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 /datum/squad/marine/echo
 	name = SQUAD_MARINE_5
 	equipment_color = "#67d692"
+	overwatch_color = "green"
 	chat_color = "#67d692"
 	access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
 	radio_freq = ECHO_FREQ
 	omni_squad_vendor = TRUE
 	minimap_color = MINIMAP_SQUAD_ECHO
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 	active = FALSE
 	roundstart = FALSE
@@ -199,9 +230,13 @@
 /datum/squad/marine/cryo
 	name = SQUAD_MARINE_CRYO
 	equipment_color = "#c47a50"
+	overwatch_color = "brown"
 	chat_color = "#c47a50"
 	access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
 	minimap_color = MINIMAP_SQUAD_FOXTROT
+	platoon_leader_access = ACCESS_MARINE_LEADER
+	headset_path = /obj/item/device/radio/headset/almayer
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead
 
 	omni_squad_vendor = TRUE
 	radio_freq = CRYO_FREQ
@@ -214,6 +249,7 @@
 	name = SQUAD_MARINE_INTEL
 	use_stripe_overlay = FALSE
 	equipment_color = "#053818"
+	overwatch_color = "green"
 	minimap_color = MINIMAP_SQUAD_INTEL
 	radio_freq = INTEL_FREQ
 
@@ -226,6 +262,41 @@
 	max_tl = 0
 	max_smartgun = 0
 	max_leaders = 0
+	max_riflemen = 0
+
+/datum/squad/marine/ground_one
+	name = SQUAD_USCM_GROUND_1
+	equipment_color = "#D99281"
+	armor_alpha = 140
+	overwatch_color = "ground_one"
+	chat_color = "#965545"
+	access = list(ACCESS_USCM_GROUND_PLATOON_ONE)
+	radio_freq = USCM_GROUND_ONE_FREQ
+	minimap_color = MINIMAP_SQUAD_USCM_GROUND_ONE
+	usable = TRUE
+	faction = FACTION_USCM_GROUND
+	max_medics = 2
+	max_riflemen = 4 /// Without this, it was likely to have uneven number of riflemen in each squad.
+	platoon_leader_access = ACCESS_USCM_GROUND_PLATOONL
+	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead/uscm_ground
+
+/datum/squad/marine/ground_two
+	name = SQUAD_USCM_GROUND_2
+	equipment_color = "#9FCD61"
+	armor_alpha = 140
+	overwatch_color = "ground_two"
+	chat_color = "#698740"
+	access = list(ACCESS_USCM_GROUND_PLATOON_TWO)
+	radio_freq = USCM_GROUND_TWO_FREQ
+	minimap_color = MINIMAP_SQUAD_USCM_GROUND_TWO
+	usable = TRUE
+	faction = FACTION_USCM_GROUND
+	max_medics = 2
+	max_riflemen = 4
+	platoon_leader_access = ACCESS_USCM_GROUND_PLATOONL
+	headset_path = /obj/item/device/radio/headset/uscm_ground/marine
+	encryption_key_path = /obj/item/device/encryptionkey/squadlead/uscm_ground
 
 /datum/squad/marine/sof
 	name = SQUAD_SOF
@@ -243,6 +314,7 @@
 /datum/squad/marine/cbrn
 	name = SQUAD_CBRN
 	equipment_color = "#3B2A7B" //Chemical Corps Purple
+	overwatch_color = "purple"
 	chat_color = "#553EB2"
 	radio_freq = CBRN_FREQ
 	minimap_color = "#3B2A7B"
@@ -291,6 +363,7 @@
 	faction = FACTION_PMC
 	usable = TRUE
 	omni_squad_vendor = TRUE
+	overwatch_color = "white"
 
 /datum/squad/pmc/one
 	name = "Team Upsilon"
@@ -313,6 +386,7 @@
 	faction = FACTION_CLF
 	usable = TRUE
 	omni_squad_vendor = TRUE
+	overwatch_color = "brown"
 
 /datum/squad/clf/one
 	name = "Python"
@@ -520,7 +594,7 @@
 
 	var/list/extra_access = list()
 
-	switch(GET_DEFAULT_ROLE(M.job))
+	switch(GET_SQUAD_ROLE_MAP(M.job))
 		if(JOB_SQUAD_MARINE)
 			assignment = JOB_SQUAD_MARINE
 			num_riflemen++
@@ -550,7 +624,7 @@
 			var/squad_number = (num_smartgun > 2) ? pick(1, 2) : num_smartgun
 			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_LEADER)
-			if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_SQUAD_LEADER) //field promoted SL
+			if(squad_leader && GET_SQUAD_ROLE_MAP(squad_leader.job) != JOB_SQUAD_LEADER) //field promoted SL
 				var/old_lead = squad_leader
 				demote_squad_leader() //replaced by the real one
 				SStracking.start_tracking(tracking_id, old_lead)
@@ -558,9 +632,8 @@
 			squad_leader = M
 			SStracking.set_leader(tracking_id, M)
 			SStracking.start_tracking("marine_sl", M)
+			num_leaders++
 
-			if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_LEADER) //field promoted SL don't count as real ones
-				num_leaders++
 		if(JOB_SQUAD_RTO)
 			assignment = JOB_SQUAD_RTO
 
@@ -571,7 +644,7 @@
 		if(JOB_MARINE_RAIDER_SL)
 			assignment = JOB_MARINE_RAIDER_SL
 			if(name == JOB_MARINE_RAIDER)
-				if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_MARINE_RAIDER_SL) //field promoted SL
+				if(squad_leader && GET_SQUAD_ROLE_MAP(squad_leader.job) != JOB_MARINE_RAIDER_SL) //field promoted SL
 					var/old_lead = squad_leader
 					demote_squad_leader() //replaced by the real one
 					SStracking.start_tracking(tracking_id, old_lead)
@@ -579,8 +652,8 @@
 				squad_leader = M
 				SStracking.set_leader(tracking_id, M)
 				SStracking.start_tracking("marine_sl", M)
-				if(GET_DEFAULT_ROLE(M.job) == JOB_MARINE_RAIDER_SL) //field promoted SL don't count as real ones
-					num_leaders++
+				num_leaders++
+
 		if(JOB_MARINE_RAIDER_CMD)
 			assignment = JOB_MARINE_RAIDER_CMD
 			if(name == JOB_MARINE_RAIDER)
@@ -592,7 +665,7 @@
 
 	count++ //Add up the tally. This is important in even squad distribution.
 
-	if(GET_DEFAULT_ROLE(M.job) != JOB_SQUAD_MARINE)
+	if(GET_SQUAD_ROLE_MAP(M.job) != JOB_SQUAD_MARINE)
 		log_admin("[key_name(M)] has been assigned as [name] [M.job]") // we don't want to spam squad marines but the others are useful
 
 	marines_list += M
@@ -609,8 +682,8 @@
 		C.paygrade = paygrade
 	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
 
-	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
-	if(headset && radio_freq)
+	var/obj/item/device/radio/headset/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
+	if(headset?.squad_headset && radio_freq) //Must be a platoon headset.
 		headset.set_frequency(radio_freq)
 	M.update_inv_head()
 	M.update_inv_wear_suit()
@@ -636,7 +709,7 @@
 //gracefully remove a marine from squad system, alive, dead or otherwise
 /datum/squad/proc/forget_marine_in_squad(mob/living/carbon/human/M)
 	if(M.assigned_squad.squad_leader == M)
-		if(GET_DEFAULT_ROLE(M.job) != JOB_SQUAD_LEADER) //a field promoted SL, not a real one
+		if(GET_SQUAD_ROLE_MAP(M.job) != JOB_SQUAD_LEADER) //a field promoted SL, not a real one
 			demote_squad_leader()
 		else
 			M.assigned_squad.squad_leader = null
@@ -654,7 +727,7 @@
 	update_free_mar()
 	M.assigned_squad = null
 
-	switch(GET_DEFAULT_ROLE(M.job))
+	switch(GET_SQUAD_ROLE_MAP(M.job))
 		if(JOB_SQUAD_ENGI)
 			num_engineers--
 		if(JOB_SQUAD_MEDIC)
@@ -668,7 +741,45 @@
 		if(JOB_SQUAD_LEADER)
 			num_leaders--
 
-//proc for demoting current Squad Leader
+//proc for promoting a Platoon Leader. Moved away from OW code as it really should be here instead. Also refactored to a degree.
+/datum/squad/proc/promote_squad_leader(mob/living/carbon/human/selected_sl)
+	var/mob/living/carbon/human/old_lead = squad_leader
+	if(old_lead)
+		demote_squad_leader(squad_leader.stat != DEAD)
+		SStracking.start_tracking(tracking_id, old_lead)
+
+	if(selected_sl.assigned_fireteam)
+		if(selected_sl == fireteam_leaders[selected_sl.assigned_fireteam])
+			unassign_ft_leader(selected_sl.assigned_fireteam, TRUE, FALSE)
+		unassign_fireteam(selected_sl, FALSE)
+
+	squad_leader = selected_sl
+	update_squad_leader()
+	update_free_mar()
+
+	SStracking.set_leader(tracking_id, selected_sl)
+	SStracking.start_tracking("marine_sl", selected_sl)
+
+	//Resetting regular platoon lead's comm title shouldn't be necessary, but is done for completeness.
+	selected_sl.comm_title = ( GET_SQUAD_ROLE_MAP(selected_sl.job) == JOB_SQUAD_LEADER ) ? set_new_radio_title(selected_sl, "PltSgt") : "aPltSgt"
+	ADD_TRAIT(selected_sl, TRAIT_LEADERSHIP, TRAIT_SOURCE_SQUAD_LEADER)
+
+	if(encryption_key_path)
+		var/obj/item/device/radio/headset/sl_headset = selected_sl.get_type_in_ears(headset_path) //get_type_in_ears() is a simple istype() check. Should be a define.
+		if(sl_headset)
+			var/obj/item/device/encryptionkey/K = new encryption_key_path(sl_headset)
+			sl_headset.keys += K
+			K.abstract = TRUE
+			sl_headset.recalculateChannels()
+
+	var/obj/item/card/id/ID = selected_sl.wear_id
+	if(platoon_leader_access && istype(ID)) ID.access += platoon_leader_access //May not have a PL access specific to them, so we check for it. We don't want to add empty list items.
+
+	selected_sl.hud_set_squad()
+	selected_sl.update_inv_head() //updating marine helmet leader overlays
+	selected_sl.update_inv_wear_suit()
+
+//proc for demoting current Platoon Leader
 /datum/squad/proc/demote_squad_leader(leader_killed)
 	var/mob/living/carbon/human/old_lead = squad_leader
 
@@ -676,46 +787,36 @@
 	SStracking.stop_tracking("marine_sl", old_lead)
 
 	squad_leader = null
-	switch(GET_DEFAULT_ROLE(old_lead.job))
-		if(JOB_SQUAD_SPECIALIST)
-			old_lead.comm_title = "Spc"
-		if(JOB_SQUAD_ENGI)
-			old_lead.comm_title = "ComTech"
-		if(JOB_SQUAD_MEDIC)
-			old_lead.comm_title = "HM"
-		if(JOB_SQUAD_TEAM_LEADER)
-			old_lead.comm_title = "SqSgt"
-		if(JOB_SQUAD_SMARTGUN)
-			old_lead.comm_title = "SG"
-		if(JOB_SQUAD_LEADER)
-			if(!leader_killed)
-				old_lead.comm_title = "PltSgt"
-		if(JOB_SQUAD_RTO)
-			old_lead.comm_title = "RTO"
-		if(JOB_MARINE_RAIDER)
-			old_lead.comm_title = "Op."
-		if(JOB_MARINE_RAIDER_SL)
-			old_lead.comm_title = "TL."
-		if(JOB_MARINE_RAIDER_CMD)
-			old_lead.comm_title = "CMD."
-		else
-			old_lead.comm_title = "RFN"
 
-	if(GET_DEFAULT_ROLE(old_lead.job) != JOB_SQUAD_LEADER || !leader_killed)
-		var/obj/item/device/radio/headset/almayer/marine/R = old_lead.get_type_in_ears(/obj/item/device/radio/headset/almayer/marine)
-		if(R)
-			for(var/obj/item/device/encryptionkey/squadlead/acting/key in R.keys)
-				R.keys -= key
-				qdel(key)
-			R.recalculateChannels()
-		if(istype(old_lead.wear_id, /obj/item/card/id))
+	old_lead.comm_title = set_new_radio_title(old_lead)
+
+	if(GET_SQUAD_ROLE_MAP(old_lead.job) != JOB_SQUAD_LEADER || !leader_killed)
+		var/obj/item/device/radio/headset/sl_headset = old_lead.get_type_in_ears(headset_path)
+		if(sl_headset)
+			for(var/i in sl_headset.keys)
+				if(istype(i, encryption_key_path))
+					sl_headset.keys -= i
+					qdel(i)
+			sl_headset.recalculateChannels()
+
+		if(platoon_leader_access) //May not have one. Not strictly needed for removing null from the list, but might as well.
 			var/obj/item/card/id/ID = old_lead.wear_id
-			ID.access -= ACCESS_MARINE_LEADER
+			if(istype(ID)) ID.access -= platoon_leader_access
+
 	REMOVE_TRAITS_IN(old_lead, TRAIT_SOURCE_SQUAD_LEADER)
 	old_lead.hud_set_squad()
 	old_lead.update_inv_head() //updating marine helmet leader overlays
 	old_lead.update_inv_wear_suit()
 	to_chat(old_lead, FONT_SIZE_BIG(SPAN_BLUE("You're no longer the [squad_type] Leader for [src]!")))
+
+/datum/squad/proc/set_new_radio_title(mob/living/carbon/human/H, fallback_title = "RFN")
+	var/new_comm_title
+	var/datum/job/job_datum = RoleAuthority?.roles_by_name[H.job] //Look up RoleAuthority for the appropriate role name --> datum.
+	if(job_datum)
+		var/datum/equipment_preset/gear_datum = job_datum.gear_preset //Pull up the gear preset.
+		if(gear_datum)
+			new_comm_title = initial(gear_datum.role_comm_title) //Set the comm title to what it normally initializes to.
+	return new_comm_title || fallback_title //In case we get something completely unexpected.
 
 //Not a safe proc. Returns null if squads or jobs aren't set up.
 //Mostly used in the marine squad console in marine_consoles.dm.
@@ -783,6 +884,7 @@
 
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
 	if(H.wear_id)
+		//Wait, can you be in BOTH fireteams? What.
 		if(fireteam == "SQ1")
 			H.wear_id.access += squad_one_access
 		if(fireteam == "SQ2")

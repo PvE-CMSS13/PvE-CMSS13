@@ -107,7 +107,7 @@ export const AccessList = (props, context) => {
                 icon="check"
                 content="Grant Region"
                 color="good"
-                onClick={() => grantDep(selectedAccess.regid)}
+                onClick={() => grantDep(selectedAccess.name)}
               />
             </Stack.Item>
             <Stack.Item>
@@ -116,7 +116,7 @@ export const AccessList = (props, context) => {
                 icon="times"
                 content="Deny Region"
                 color="bad"
-                onClick={() => denyDep(selectedAccess.regid)}
+                onClick={() => denyDep(selectedAccess.name)}
               />
             </Stack.Item>
           </Stack>

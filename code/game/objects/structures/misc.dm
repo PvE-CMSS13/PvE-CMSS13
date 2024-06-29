@@ -152,6 +152,10 @@
 	density = FALSE
 	opacity = FALSE
 
+//Unique handling for multi-tile vehicles. Allows Collide() and handle_vehicle_bump().
+/obj/structure/stairs/BlockedPassDirs(obj/vehicle/multitile/V, target_dir)
+	return istype(V) && BLOCKED_MOVEMENT
+
 /obj/structure/stairs/perspective //instance these for the required icons
 	icon = 'icons/obj/structures/stairs/perspective_stairs.dmi'
 	icon_state = "np_stair"
@@ -161,6 +165,7 @@
 
 /obj/structure/stairs/perspective/ice
 	icon = 'icons/obj/structures/stairs/perspective_stairs_ice.dmi'
+
 
 
 // Prop

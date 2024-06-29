@@ -576,3 +576,6 @@
 
 /obj/item/device/radio/marine
 	frequency = PUB_FREQ
+
+/obj/item/device/radio/uscm_ground
+	frequency = USCM_GROUND_FREQ

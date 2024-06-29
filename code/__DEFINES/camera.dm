@@ -9,6 +9,12 @@
 #define CAMERA_NET_MIDWAY "Midway"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
+#define CAMERA_NET_USCM_GROUND "USCM Outpost"
+#define CAMERA_NET_USCM_GROUND_WEST "Outpost Warehouse Checkpoint"
+#define CAMERA_NET_USCM_GROUND_EAST "Outpost Bridge Checkpoint"
+#define CAMERA_NET_WY_BUNKER "WY Site #16"
+#define CAMERA_NET_WY_BUNKER_CONTAINMENT "Site #16 Containment"
+#define CAMERA_NET_UPP_BUNKER "UPP Detention Facility #31"
 
 #define CAMERA_NET_MILITARY "Military"
 #define CAMERA_NET_OVERWATCH "Overwatch"

@@ -51,12 +51,13 @@
 
 	sleep(10)
 	to_chat(mob, "<B>Objectives:</b> [objectives]")
-	RoleAuthority.randomize_squad(mob)
+	var/datum/job/mob_job = RoleAuthority.roles_by_name[mob.job]
+	if(mob_job)
+		RoleAuthority.randomize_squad(mob, mob_job)
 	mob.sec_hud_set_ID()
 	mob.hud_set_squad()
 
 	GLOB.data_core.manifest_inject(mob) //Put people in crew manifest
-
 
 /datum/game_mode/whiskey_outpost/activate_distress()
 	var/datum/emergency_call/em_call = /datum/emergency_call/wo

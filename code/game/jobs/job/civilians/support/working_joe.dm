@@ -13,6 +13,7 @@
 	flags_whitelist = WHITELIST_JOE
 	gear_preset = /datum/equipment_preset/synth/working_joe
 	gets_emergency_kit = FALSE
+	category = JOB_CATEGORY_SUPPORT
 
 	job_options = list(STANDARD_VARIANT = "JOE", HAZMAT_VARIANT = "HAZ")
 	var/standard = TRUE

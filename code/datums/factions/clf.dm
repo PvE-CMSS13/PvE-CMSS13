@@ -1,6 +1,11 @@
 /datum/faction/clf
 	name = "Colonial Liberation Front"
 	faction_tag = FACTION_CLF
+	access_all = ACCESS_LIST_CLF_ALL
+	access_main = ACCESS_LIST_CLF_BASE
+	access_regions = ACCESS_LIST_CLF_REGIONS
+
+//CLF does not currently have a unique department map.
 
 /datum/faction/clf/modify_hud_holder(image/holder, mob/living/carbon/human/human)
 	var/hud_icon_state

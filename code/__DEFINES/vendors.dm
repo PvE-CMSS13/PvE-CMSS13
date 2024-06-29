@@ -67,3 +67,5 @@
 //Whether or not to load ammo boxes depending on ammo loaded into the vendor
 //Only relevant in big vendors, like Requisitions or Squad Prep
 #define VEND_LOAD_AMMO_BOXES (1<<9)
+//If the vendor has some specialized behavior that needs to override other behavior. Crutch, best to refactor appropriate code.
+#define VEND_SPECIALIZED_STOCK (1<<10)

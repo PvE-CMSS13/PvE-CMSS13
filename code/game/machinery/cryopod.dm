@@ -337,7 +337,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		if(H.assigned_squad)
 			var/datum/squad/S = H.assigned_squad
 			S.forget_marine_in_squad(H)
-			var/datum/job/J = GET_MAPPED_ROLE(H.job)
+			var/datum/job/J = RoleAuthority.roles_for_mode[H.job]
 			if(istype(J, /datum/job/marine/specialist))
 				//we make the set this specialist took if any available again
 				if(H.skills)
@@ -360,22 +360,10 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	SSticker.mode.latejoin_tally-- //Cryoing someone out removes someone from the Marines, blocking further larva spawns until accounted for
 
 	//Handle job slot/tater cleanup.
-	RoleAuthority.free_role(GET_MAPPED_ROLE(occupant.job), TRUE)
+	RoleAuthority.free_role(RoleAuthority.roles_for_mode[occupant.job], TRUE)
 
-	var/occupant_ref = WEAKREF(occupant)
-	//Delete them from datacore.
-	for(var/datum/data/record/R as anything in GLOB.data_core.medical)
-		if((R.fields["ref"] == occupant_ref))
-			GLOB.data_core.medical -= R
-			qdel(R)
-	for(var/datum/data/record/T in GLOB.data_core.security)
-		if((T.fields["ref"] == occupant_ref))
-			GLOB.data_core.security -= T
-			qdel(T)
-	for(var/datum/data/record/G in GLOB.data_core.general)
-		if((G.fields["ref"] == occupant_ref))
-			GLOB.data_core.general -= G
-			qdel(G)
+	/// Removes them from records/manifest.
+	GLOB.data_core.manifest_erase(WEAKREF(occupant))
 
 	icon_state = "body_scanner_open"
 	set_light(0)
@@ -530,7 +518,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 			if(!is_admin_level(src.z)) // Set their queue time now because the client has to actually leave to despawn and at that point the client is lost
 				mob.client.player_details.larva_queue_time = max(mob.client.player_details.larva_queue_time, world.time)
 		var/area/location = get_area(src)
-		if(mob.job != GET_MAPPED_ROLE(JOB_SQUAD_MARINE))
+		if(GET_SQUAD_ROLE_MAP(mob.job) != JOB_SQUAD_MARINE)
 			message_admins("[key_name_admin(mob)], [mob.job], has entered \a [src] at [location] after playing for [duration2text(world.time - mob.life_time_start)].")
 		playsound(src, 'sound/machines/hydraulics_3.ogg', 30)
 	silent_exit = silent

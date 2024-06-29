@@ -150,7 +150,7 @@
 	name = "void"
 	icon = 'icons/turf/floors/space.dmi'
 	icon_state = "black"
-	mouse_opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	can_bloody = FALSE
 	supports_surgery = FALSE
 
@@ -460,6 +460,7 @@
 	var/cover_icon_state = "grate"
 	var/default_name = "river"
 	var/no_overlay = FALSE
+	var/block_vehicles = FALSE
 	var/base_river_slowdown = 1.75
 	baseturfs = /turf/open/gm/river
 	supports_surgery = FALSE
@@ -534,6 +535,8 @@
 		if(H.bloody_footsteps)
 			SEND_SIGNAL(H, COMSIG_HUMAN_CLEAR_BLOODY_FEET)
 
+/turf/open/gm/river/BlockedPassDirs(obj/vehicle/V, target_dir)
+	return block_vehicles && istype(V) && BLOCKED_MOVEMENT
 
 /turf/open/gm/river/proc/cleanup(mob/living/carbon/human/M)
 	if(!M || !istype(M)) return
@@ -559,7 +562,6 @@
 /turf/open/gm/river/stop_crusher_charge()
 	return !covered
 
-
 /turf/open/gm/river/poison/Initialize(mapload, ...)
 	. = ..()
 	overlays += image("icon"='icons/effects/effects.dmi',"icon_state"="greenglow","layer"=MOB_LAYER+0.1)
@@ -568,10 +570,21 @@
 	..()
 	if(istype(M)) M.apply_damage(55,TOX)
 
+/turf/open/gm/river/deep
+	name = "deeper river"
+	base_river_slowdown = 3 //More wading, more slowdown.
+	color = "#e4f0ef"
+	block_vehicles = TRUE //Don't want vehicles crossing this.
+	/*
+	There was some potential code here to make people fall/get bitten by fish, but it doesn't balance out well when we have synths/preds/xenos running through deep water.
+	For now it only slows down. Maybe if something like agility is a thing, it could be checked here.
+	*/
 
 /turf/open/gm/river/ocean
+	name = "ocean"
 	color = "#dae3e2"
 	base_river_slowdown = 4 // VERY. SLOW.
+	block_vehicles = TRUE
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
@@ -650,7 +663,6 @@
 	minimap_color = MINIMAP_WATER
 	is_groundmap_turf = FALSE // Not real ground
 
-
 /turf/open/gm/riverdeep/Initialize(mapload, ...)
 	. = ..()
 	overlays += image("icon"='icons/turf/ground_map.dmi',"icon_state"="water","layer"=MOB_LAYER+0.1)
@@ -658,9 +670,6 @@
 /turf/open/gm/river/no_overlay
 	no_overlay = TRUE
 	supports_surgery = FALSE
-
-
-
 
 //ELEVATOR SHAFT-----------------------------------//
 /turf/open/gm/empty
@@ -721,66 +730,73 @@
 
 
 // Jungle turfs (Whiksey Outpost)
-
+#define JUNGLE_SPAWN_BUSHES (1<<0)
+#define JUNGLE_SPAWN_PLANTS (1<<1)
+#define JUNGLE_SPAWN_VINES (1<<2)
+#define JUNGLE_SPAWN_BLOCKER (1<<3)
 
 /turf/open/jungle
-	allow_construction = FALSE
-	var/bushes_spawn = 1
-	var/plants_spawn = 1
-	is_groundmap_turf = TRUE
 	name = "wet grass"
 	desc = "Thick, long, wet grass."
 	icon = 'icons/turf/floors/jungle.dmi'
 	icon_state = "grass1"
-	var/icon_spawn_state = "grass1"
+	is_groundmap_turf = TRUE
+	allow_construction = FALSE
 	baseturfs = /turf/open/jungle
+	var/icon_spawn_state = "grass1"
+	var/flags_jungle_vegetation = JUNGLE_SPAWN_BUSHES|JUNGLE_SPAWN_PLANTS
 
 /turf/open/jungle/Initialize(mapload, ...)
 	. = ..()
 
 	icon_state = icon_spawn_state
 
-	if(plants_spawn && prob(40))
-		if(prob(90))
-			var/image/I
-			if(prob(35))
-				I = image('icons/obj/structures/props/jungleplants.dmi',"plant[rand(1,7)]")
-			else
-				if(prob(30))
-					I = image('icons/obj/structures/props/ausflora.dmi',"reedbush_[rand(1,4)]")
-				else if(prob(33))
-					I = image('icons/obj/structures/props/ausflora.dmi',"leafybush_[rand(1,3)]")
-				else if(prob(50))
-					I = image('icons/obj/structures/props/ausflora.dmi',"fernybush_[rand(1,3)]")
+	if(flags_jungle_vegetation & JUNGLE_SPAWN_BLOCKER)
+		var/obj/structure/flora/jungle/thickbush/blocker_brush = new(src)
+		blocker_brush.indestructable = TRUE
+		blocker_brush.unacidable = TRUE
+
+	else
+		if((flags_jungle_vegetation & JUNGLE_SPAWN_BUSHES) && prob(90))
+			new /obj/structure/flora/jungle/thickbush(src)
+		//We do not want to spawn a bush and plants on the same tile. Looks weird.
+		else
+			if((flags_jungle_vegetation & JUNGLE_SPAWN_PLANTS) && prob(40))
+				if(prob(90))
+					var/obj/structure/flora/new_flora
+					if(prob(35))
+						new_flora = new /obj/structure/flora/bush/jungle(src)
+					else
+						switch(pick(50; 1, 70; 2, 150; 3, 30; 4))
+							if(1)
+								new_flora = new /obj/structure/flora/bush/ausbushes/reedbush(src)
+							if(2)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/leafybush(src)
+							if(3)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/fernybush(src)
+							else
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/stalkybush(src)
+
+					new_flora.pixel_x = rand(-6,6)
+					new_flora.pixel_y = rand(-6,6)
+
+				else if(!(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)) //Don't want to spawn these along with vines.
+					var/obj/structure/flora/jungle/thickbush/jungle_plant/new_jungle_plant = new(src)
+					new_jungle_plant.pixel_x = rand(-6,6)
+					new_jungle_plant.pixel_y = rand(-6,6)
+
+		if(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)
+			if(prob(65))
+				if(prob(55))
+					switch(pick(1,3))
+						if(1)
+							new /obj/structure/flora/jungle/vines/light_1(src)
+						if(2)
+							new /obj/structure/flora/jungle/vines/light_2(src)
+						if(3)
+							new /obj/structure/flora/jungle/vines/light_3(src)
 				else
-					I = image('icons/obj/structures/props/ausflora.dmi',"stalkybush_[rand(1,3)]")
-			I.pixel_x = rand(-6,6)
-			I.pixel_y = rand(-6,6)
-			overlays += I
-		else
-			var/obj/structure/flora/jungle/thickbush/jungle_plant/J = new(src)
-			J.pixel_x = rand(-6,6)
-			J.pixel_y = rand(-6,6)
-	if(bushes_spawn && prob(90))
-		new /obj/structure/flora/jungle/thickbush(src)
-
-
-
-/turf/open/jungle/proc/Spread(probability, prob_loss = 50)
-	if(probability <= 0)
-		return
-	for(var/turf/open/jungle/J in orange(1, src))
-		if(!J.bushes_spawn)
-			continue
-
-		var/turf/open/jungle/P = null
-		if(J.type == src.type)
-			P = J
-		else
-			P = new src.type(J)
-
-		if(P && prob(probability))
-			P.Spread(probability - prob_loss)
+					new /obj/structure/flora/jungle/vines/heavy(src)
 
 /turf/open/jungle/attackby(obj/item/I, mob/user)
 	//Light Stick
@@ -806,98 +822,36 @@
 	return
 
 /turf/open/jungle/clear
-	bushes_spawn = 0
-	plants_spawn = 0
 	icon_state = "grass_clear"
+	flags_jungle_vegetation = NONE
+
+/turf/open/jungle/shrubs
+	icon_state = "grass_shrubs"
+	flags_jungle_vegetation = JUNGLE_SPAWN_PLANTS
+
+/turf/open/jungle/vines
+	icon_state = "grass_vines"
+	icon_spawn_state = "grass2"
+	flags_jungle_vegetation = JUNGLE_SPAWN_VINES|JUNGLE_SPAWN_PLANTS
+
+/turf/open/jungle/impenetrable
+	icon_state = "grass_impenetrable"
 	icon_spawn_state = "grass1"
+	flags_jungle_vegetation = JUNGLE_SPAWN_BLOCKER
 
 /turf/open/jungle/path
-	bushes_spawn = 0
 	name = "dirt"
 	desc = "it is very dirty."
 	icon = 'icons/turf/floors/jungle.dmi'
 	icon_state = "grass_path"
 	icon_spawn_state = "dirt"
 	minimap_color = MINIMAP_DIRT
+	flags_jungle_vegetation = NONE
 
-/turf/open/jungle/path/Initialize(mapload, ...)
-	. = ..()
-	for(var/obj/structure/flora/jungle/thickbush/B in src)
-		qdel(B)
-
-/turf/open/jungle/impenetrable
-	bushes_spawn = 0
-	icon_state = "grass_impenetrable"
-	icon_spawn_state = "grass1"
-
-/turf/open/jungle/impenetrable/Initialize(mapload, ...)
-	. = ..()
-	var/obj/structure/flora/jungle/thickbush/B = new(src)
-	B.indestructable = 1
-
-
-/turf/open/jungle/water
-	bushes_spawn = 0
-	name = "murky water"
-	desc = "thick, murky water"
-	icon = 'icons/turf/floors//beach.dmi'
-	icon_state = "water"
-	icon_spawn_state = "water"
-	can_bloody = FALSE
-	supports_surgery = FALSE
-
-
-/turf/open/jungle/water/Initialize(mapload, ...)
-	. = ..()
-	for(var/obj/structure/flora/jungle/thickbush/B in src)
-		qdel(B)
-
-/turf/open/jungle/water/Entered(atom/movable/O)
-	..()
-	if(istype(O, /mob/living/))
-		var/mob/living/M = O
-		//slip in the murky water if we try to run through it
-		if(prob(50))
-			to_chat(M, pick(SPAN_NOTICE("You slip on something slimy."),SPAN_NOTICE("You fall over into the murk.")))
-			M.apply_effect(2, STUN)
-			M.apply_effect(1, WEAKEN)
-
-		//piranhas - 25% chance to be an omnipresent risk, although they do practically no damage
-		if(prob(25))
-			to_chat(M, SPAN_NOTICE(" You feel something slithering around your legs."))
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-			if(prob(50))
-				spawn(rand(25,50))
-					var/turf/T = get_turf(M)
-					if(istype(T, /turf/open/jungle/water))
-						to_chat(M, pick(SPAN_DANGER("Something sharp bites you!"),SPAN_DANGER("Sharp teeth grab hold of you!"),SPAN_DANGER("You feel something take a chunk out of your leg!")))
-						M.apply_damage(rand(0,1), BRUTE, sharp=1)
-
-/turf/open/jungle/water/deep
-	plants_spawn = 0
-	density = TRUE
-	icon_state = "water2"
-	icon_spawn_state = "water2"
-
-
-
+#undef JUNGLE_SPAWN_BUSHES
+#undef JUNGLE_SPAWN_PLANTS
+#undef JUNGLE_SPAWN_VINES
+#undef JUNGLE_SPAWN_BLOCKER
 
 
 //SHUTTLE 'FLOORS'

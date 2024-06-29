@@ -2,7 +2,7 @@
 	name = "Blank"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "white"
-	mouse_opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	can_bloody = FALSE
 
 /obj/effect/node

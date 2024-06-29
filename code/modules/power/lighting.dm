@@ -17,7 +17,7 @@
 	icon = 'icons/obj/items/lighting.dmi'
 	icon_state = "tube-construct-stage1"
 	anchored = TRUE
-	layer = FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	var/stage = 1
 	var/fixture_type = "tube"
 	var/sheets_refunded = 2
@@ -138,7 +138,7 @@
 	icon_state = "tube1"
 	desc = "A lighting fixture that is fitted with a bright fluorescent light tube. Looking at it for too long makes your eyes go watery."
 	anchored = TRUE
-	layer = FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 20
@@ -260,9 +260,7 @@
 		if("bulb")
 			switch(dir)
 				if(NORTH)
-					pixel_y = 10
-				if(SOUTH)
-					pixel_y = -10
+					pixel_y = 23
 				if(EAST)
 					pixel_x = 10
 				if(WEST)

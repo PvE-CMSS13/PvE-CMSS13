@@ -53,6 +53,7 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 		else
 			cut_hits = 0
 		user.animation_attack_on(src)
+		user.flick_attack_overlay(src, "punch")
 		to_chat(user, SPAN_WARNING("You cut [cut_hits > 0 ? "some of" : "all of"] \the [src] away with \the [W]."))
 		playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
 		if(cut_hits <= 0)
@@ -513,6 +514,18 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	name = "cacti"
 	icon_state = "cacti_1"
 
+
+/*
+
+	JUNGLE BUSH
+
+*/
+
+/obj/structure/flora/bush/jungle
+	icon_tag = "plant"
+	variations = 7
+
+
 /*
 
 	POTTED PLANTS
@@ -716,7 +729,7 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 						H.next_move_slowdown = new_slowdown
 						to_chat(H, SPAN_WARNING("You got completely tangled in [src]! Oh boy..."))
 
-/obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/user as mob)
+/obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/living/user as mob)
 	//hatchets and shiet can clear away undergrowth
 	if(I && (I.sharp >= IS_SHARP_ITEM_ACCURATE) && !stump)
 		var/damage = rand(2,5)
@@ -727,7 +740,9 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 			to_chat(user, SPAN_DANGER("You chop at the undergrowth, but it's too thick here."))
 		else
 			user.visible_message(SPAN_DANGER("[user] chops at the  [src] with [I]."),SPAN_DANGER("You chop at the [src] with [I]."))
-			playsound(src.loc, 'sound/effects/vegetation_hit.ogg', 25, 1)
+			user.animation_attack_on(src)
+			user.flick_attack_overlay(src, "punch")
+			playsound(loc, 'sound/effects/vegetation_hit.ogg', 25, 1)
 			health -= damage
 			if(health < 0)
 				to_chat(user, SPAN_NOTICE("You clear away [src]."))

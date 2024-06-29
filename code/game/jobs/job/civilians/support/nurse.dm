@@ -7,6 +7,7 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
 	gear_preset = /datum/equipment_preset/uscm_ship/uscm_medical/nurse
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are tasked with keeping the Marines healthy and strong.</a> You are also an expert when it comes to medication and treatment, and can do minor surgical procedures. Focus on assisting doctors and triaging wounded marines."
+	category = JOB_CATEGORY_MEDICAL
 
 /obj/effect/landmark/start/nurse
 	name = JOB_NURSE

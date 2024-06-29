@@ -351,33 +351,46 @@
 			now_pushing = FALSE
 			return
 
-	if(!L.buckled && !L.anchored)
-		var/mob_swap
-		//the puller can always swap with its victim if on grab intent
-		if(L.pulledby == src && a_intent == INTENT_GRAB)
-			mob_swap = 1
-		//restrained people act if they were on 'help' intent to prevent a person being pulled from being separated from their puller
-		else if((L.is_mob_restrained() || L.a_intent == INTENT_HELP) && (is_mob_restrained() || a_intent == INTENT_HELP))
-			mob_swap = 1
-		if(mob_swap)
-			//switch our position with L
-			if(loc && !loc.Adjacent(L.loc))
-				now_pushing = FALSE
-				return
-			var/oldloc = loc
-			var/oldLloc = L.loc
 
+	if(!L.buckled && !L.anchored)
+		// Small mobs can only swap/push each other around, and small and big mobs can freely move through each other.
+		// MOB_SIZE_SMALL is defined as 0, so in the else case it should be equal or greater than 0.
+		if((mob_size * L.mob_size) - abs(mob_size - L.mob_size) < 0) // One of the mobs is small, but not both.
 			L.add_temp_pass_flags(PASS_MOB_THRU)
 			add_temp_pass_flags(PASS_MOB_THRU)
-
-			L.Move(oldloc)
-			Move(oldLloc)
-
+			Move(L.loc)
 			remove_temp_pass_flags(PASS_MOB_THRU)
 			L.remove_temp_pass_flags(PASS_MOB_THRU)
-
 			now_pushing = FALSE
 			return
+
+		else // Our mobs are both small or both are not small.
+			var/mob_swap
+			//the puller can always swap with its victim if on grab intent
+			if(L.pulledby == src && a_intent == INTENT_GRAB)
+				mob_swap = 1
+			//restrained people act if they were on 'help' intent to prevent a person being pulled from being separated from their puller
+			else if((L.is_mob_restrained() || L.a_intent == INTENT_HELP) && (is_mob_restrained() || a_intent == INTENT_HELP))
+				mob_swap = 1
+			if(mob_swap)
+				//switch our position with L
+				if(loc && !loc.Adjacent(L.loc))
+					now_pushing = FALSE
+					return
+				var/oldloc = loc
+				var/oldLloc = L.loc
+
+				L.add_temp_pass_flags(PASS_MOB_THRU)
+				add_temp_pass_flags(PASS_MOB_THRU)
+
+				L.Move(oldloc)
+				Move(oldLloc)
+
+				remove_temp_pass_flags(PASS_MOB_THRU)
+				L.remove_temp_pass_flags(PASS_MOB_THRU)
+
+				now_pushing = FALSE
+				return
 
 	now_pushing = FALSE
 

@@ -13,8 +13,9 @@
 	var/list/defaultmaps
 
 	var/list/modes // allowed modes
-	var/list/gamemode_cache
 	var/list/mode_names
+	var/list/mode_paths
+	var/datum/game_mode/mode_cache /// We cache the current game mode, so that we can run all of the relevant procs before round start.
 
 	var/motd
 	var/policy
@@ -289,30 +290,31 @@
 		return PROC_BLOCKED
 	return E.ValidateAndSet("[new_val]")
 
-
 /datum/controller/configuration/proc/LoadModes()
-	gamemode_cache = typecacheof(/datum/game_mode, TRUE)
+	var/gamemode_types[] = typecacheof(/datum/game_mode, TRUE)
 	modes = list()
 	mode_names = list()
-	for(var/T in gamemode_cache)
-		// I wish I didn't have to instance the game modes in order to look up
-		// their information, but it is the only way (at least that I know of).
-		var/datum/game_mode/M = new T()
-		if(M.config_tag)
-			if(!(M.config_tag in modes)) //Ensure each mode is added only once
-				modes += M.config_tag
-				mode_names[M.config_tag] = M.name
-		GLOB.gamemode_roles[M.name] = M.get_roles_list()
-		qdel(M)
+	mode_paths = list()
+	var/datum/game_mode/mode
+	var/m_tag
+	var/m_name
+	for(var/i in gamemode_types)
+		/// Revised. You don't have to instance objects to get their information, unless it's computed at runtime, like with lists.
+		mode = i
+		m_tag = initial(mode.config_tag)
+		m_name = initial(mode.name)
+		if(m_tag && !(m_tag in modes)) /// Ensure each mode is added only once.
+			modes += m_tag
+			mode_names[m_tag] = m_name
+			mode_paths[m_tag] = i
 
-/datum/controller/configuration/proc/pick_mode(mode_name)
-	for(var/T in gamemode_cache)
-		var/datum/game_mode/M = T
-		var/ct = initial(M.config_tag)
-		if(ct && ct == mode_name)
-			return new T
-	return new /datum/game_mode/extended()
-
+/// This does not safety check if the mode is running; right now only admins can change the game mode as far as I am aware, and that proc safety checks.
+/datum/controller/configuration/proc/pick_mode(config_tag)
+	if(config_tag != mode_cache?.config_tag)
+		QDEL_NULL(mode_cache)
+		var/mode_path = mode_paths[config_tag]
+		if(mode_path) mode_cache = new mode_path()
+	return mode_cache || new /datum/game_mode/extended()
 
 /datum/controller/configuration/proc/LoadChatFilter()
 	var/list/in_character_filter = list()

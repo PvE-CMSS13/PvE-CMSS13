@@ -45,12 +45,25 @@
 	health = 450
 	tcomms_machine = TRUE
 	freq_listening = DEPT_FREQS
+	var/obj/effect/vis_object
 
 /obj/structure/machinery/telecomms/relay/preset/tower/Initialize()
+	vis_object = new()
+	vis_object.vis_flags = VIS_INHERIT_ID|VIS_INHERIT_ICON
+	vis_object.layer = ABOVE_FLY_LAYER /// Won't properly place this over tent roofs, but that can be adjusted via planes if desired.
+	vis_contents += vis_object
+
+	GLOB.all_static_telecomms_towers += src
 	. = ..()
 
 	if(z)
 		SSminimaps.add_marker(src, z, MINIMAP_FLAG_ALL, "supply")
+
+/obj/structure/machinery/telecomms/relay/preset/tower/Destroy()
+	vis_contents -= vis_object
+	QDEL_NULL(vis_object)
+	GLOB.all_static_telecomms_towers -= src
+	. = ..()
 
 // doesn't need power, instead uses health
 /obj/structure/machinery/telecomms/relay/preset/tower/inoperable(additional_flags)
@@ -117,6 +130,7 @@
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]_off"
+	vis_object.icon_state = "[icon_state]_overlay"
 
 /obj/structure/machinery/telecomms/relay/preset/tower/attackby(obj/item/I, mob/user)
 	if(iswelder(I))
@@ -163,12 +177,21 @@
 /obj/structure/machinery/telecomms/relay/preset/tower/faction
 	name = "UPP telecommunications relay"
 	desc = "A mighty piece of hardware used to send massive amounts of data far away. This one is intercepting and rebroadcasting UPP frequencies."
-	icon = 'icons/obj/structures/props/stationobjs.dmi'
-	icon_state = "relay"
+	icon = 'icons/obj/structures/machinery/comm_tower.dmi'
 	id = "UPP Relay"
 	hide = TRUE
 	freq_listening = UPP_FREQS
 	var/faction_shorthand = "UPP"
+
+/obj/structure/machinery/telecomms/relay/preset/tower/faction/uscm_ground
+	name = "\improper TA-3G-L telecommunications tower"
+	desc = "A robust telecommunications tower, used to set up communication lines in a USCM outpost."
+	icon = 'icons/obj/structures/machinery/comm_tower2.dmi'
+	icon_state = "comm_tower"
+	id = "Outpost Relay"
+	hide = FALSE
+	freq_listening = USCM_GROUND_FREQS
+	faction_shorthand = "USCM Ground"
 
 /obj/structure/machinery/telecomms/relay/preset/tower/faction/Initialize(mapload, ...)
 	if(faction_shorthand)
@@ -190,14 +213,6 @@
 	faction_shorthand = "colony"
 
 GLOBAL_LIST_EMPTY(all_static_telecomms_towers)
-
-/obj/structure/machinery/telecomms/relay/preset/tower/Initialize()
-	GLOB.all_static_telecomms_towers += src
-	. = ..()
-
-/obj/structure/machinery/telecomms/relay/preset/tower/Destroy()
-	GLOB.all_static_telecomms_towers -= src
-	. = ..()
 
 /obj/structure/machinery/telecomms/relay/preset/tower/mapcomms
 	name = "TC-3T static telecommunications tower"

@@ -47,7 +47,6 @@
 
 	// General information
 	var/origin = ""
-	var/personal_faction = ""
 	var/religion = ""
 
 	//Equipment slots
@@ -115,7 +114,6 @@
 	var/shield_slowdown = 0 // Slowdown from readying shields
 
 	var/datum/equipment_preset/assigned_equipment_preset
-	var/rank_fallback
 
 	var/datum/squad/assigned_squad //the squad this human is assigned to
 	var/assigned_fireteam = 0 //the fireteam this human is assigned to

@@ -1,0 +1,921 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground)
+"aL" = (
+/obj/structure/prop/brazier,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"aU" = (
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"bL" = (
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"bN" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/sandstone{
+	dir = 1
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"de" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/structure/flora/jungle/vines/light_3,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"dq" = (
+/obj/structure/machinery/door/airlock/sandstone/runed{
+	name = "Strange Temple"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"dw" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"el" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"eE" = (
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"fP" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"gq" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"gE" = (
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"gF" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"ia" = (
+/obj/effect/decal/remains/human{
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = -8;
+	pixel_y = -6
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"ji" = (
+/obj/effect/decal/remains/human{
+	pixel_y = 1;
+	pixel_x = 6
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"jy" = (
+/obj/effect/decal/remains/human{
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"jY" = (
+/obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"lN" = (
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"lQ" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"lV" = (
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/obj/item/stack/sheet/mineral/sandstone,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"md" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 2;
+	icon_state = "p_stair_full"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"nd" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 6;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"nu" = (
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"nA" = (
+/obj/item/stack/yautja_rope,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"nK" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"oZ" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_full_cap";
+	dir = 8;
+	color = "#b29082"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"pV" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_ew_full_cap";
+	color = "#b29082"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8;
+	layer = 1.99;
+	icon_state = "stone_stair"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"ql" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"qm" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"qR" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"rc" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed,
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"rq" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_full_cap";
+	dir = 4;
+	color = "#b29082"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"rz" = (
+/obj/effect/decal/remains/human{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = -12
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"sq" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/obj/item/stack/sheet/mineral/sandstone/runed,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"ta" = (
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/sandstone,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"tV" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/stack/sheet/animalhide/human{
+	pixel_x = 3
+	},
+/obj/item/weapon/yautja/knife{
+	pixel_x = -11
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"up" = (
+/obj/effect/landmark/yautja_teleport,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"uq" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 6;
+	pixel_x = -23
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"vc" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 5
+	},
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"vt" = (
+/obj/effect/decal/remains/human{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"wf" = (
+/turf/closed/wall/mineral/sandstone/runed/decor,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"xb" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/turf/open/jungle/shrubs,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"yg" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/turf/open/jungle/clear,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"zT" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/weapon/harpoon/yautja{
+	name = "Alien Harpoon";
+	pixel_x = 6
+	},
+/obj/item/weapon/harpoon/yautja{
+	name = "Alien Harpoon";
+	pixel_x = 1
+	},
+/obj/item/weapon/harpoon/yautja{
+	name = "Alien Harpoon";
+	pixel_x = -4
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"AC" = (
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Bc" = (
+/turf/template_noop,
+/area/template_noop)
+"Dj" = (
+/obj/structure/prop/brazier,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Eb" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Gu" = (
+/obj/structure/machinery/door/airlock/sandstone/runed/destroyable{
+	id = "blackstone_temple"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"GV" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1;
+	layer = 1.99;
+	icon_state = "stone_stair"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Hx" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"HN" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Ii" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"IC" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/hunting_trap{
+	desc = "A bizarre alien device used for trapping and killing prey.";
+	name = "Alien Mine"
+	},
+/obj/item/stack/sheet/animalhide/xeno{
+	name = "Warrior hide";
+	pixel_x = -11;
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/energy/yautja/plasma_caster{
+	anchored = 1;
+	desc = "A powerful, shoulder-mounted energy weapon. This one is damaged beyond use.";
+	name = "damaged plasma caster";
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"IH" = (
+/obj/item/clothing/suit/armor/yautja_flavor{
+	anchored = 1;
+	icon_state = "halfarmor7_ebony"
+	},
+/obj/item/clothing/shoes/yautja_flavor{
+	anchored = 1;
+	icon_state = "y-boots4_ebony"
+	},
+/obj/item/clothing/mask/yautja_flavor{
+	anchored = 1;
+	icon_state = "pred_mask12_ebony";
+	unacidable = 0
+	},
+/obj/structure/showcase{
+	color = "#95948B";
+	desc = "A grey statue dawned in ancient armor, it stares into your soul.";
+	icon = 'icons/mob/humans/species/r_synthetic.dmi';
+	icon_state = "Synthetic_Template";
+	name = "Eternal guardian"
+	},
+/obj/item/weapon/harpoon/yautja{
+	name = "Alien Harpoon";
+	pixel_x = 6
+	},
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Jp" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Jt" = (
+/obj/structure/barricade/handrail/sandstone{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"KM" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"MD" = (
+/obj/item/clothing/suit/armor/yautja_flavor{
+	anchored = 1
+	},
+/obj/item/clothing/mask/yautja_flavor{
+	anchored = 1;
+	unacidable = 0
+	},
+/obj/item/clothing/shoes/yautja_flavor{
+	anchored = 1
+	},
+/obj/structure/showcase{
+	color = "#95948B";
+	desc = "A grey statue dawned in ancient armor, it stares into your soul.";
+	icon = 'icons/mob/humans/species/r_synthetic.dmi';
+	icon_state = "Synthetic_Template";
+	name = "Eternal guardian"
+	},
+/turf/open/floor/strata{
+	color = "#5e5d5d";
+	icon_state = "multi_tiles"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"NS" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"NY" = (
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"NZ" = (
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 5;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 2;
+	layer = 1.99;
+	icon_state = "stone_stair"
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Ol" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Op" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"OY" = (
+/obj/structure/barricade/handrail/sandstone{
+	dir = 4
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Pn" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"QN" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"QX" = (
+/obj/effect/decal/remains/human{
+	pixel_y = -5;
+	pixel_x = -6
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Rp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Sf" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/stairs/perspective{
+	color = "#b29082";
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/underground)
+"Sw" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/stack/medical/advanced/bruise_pack/predator{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/stack/medical/advanced/ointment/predator{
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Up" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Vl" = (
+/obj/structure/prop/brazier,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Wn" = (
+/obj/effect/decal/remains/human{
+	pixel_y = 10;
+	pixel_x = 7
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"WV" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Xl" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"XD" = (
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/sandstone,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Ys" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/storage/large_holster/ceremonial_sword/full{
+	pixel_y = -3;
+	pixel_x = 1
+	},
+/obj/item/storage/large_holster/katana/full{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/turf/open/floor/corsat{
+	dir = 1;
+	icon_state = "squareswood"
+	},
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"Yx" = (
+/obj/effect/decal/remains/human{
+	pixel_x = 1
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = -3;
+	pixel_y = -7
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = 7;
+	pixel_y = -6
+	},
+/obj/effect/decal/remains/human{
+	pixel_x = -10;
+	pixel_y = 7
+	},
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+"ZS" = (
+/obj/structure/platform/mineral/sandstone/runed,
+/obj/structure/platform/mineral/sandstone/runed{
+	dir = 8
+	},
+/obj/structure/platform_decoration/mineral/sandstone/runed{
+	dir = 10
+	},
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
+
+(1,1,1) = {"
+Bc
+Bc
+Bc
+Bc
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+Bc
+Bc
+Bc
+Bc
+"}
+(2,1,1) = {"
+Bc
+Bc
+Bc
+Bc
+ac
+ac
+ac
+ac
+Sf
+Sf
+ac
+ac
+ac
+ac
+Bc
+Bc
+Bc
+Bc
+"}
+(3,1,1) = {"
+Bc
+Bc
+Bc
+AC
+AC
+AC
+wf
+wf
+dq
+dq
+wf
+wf
+AC
+AC
+AC
+AC
+Bc
+Bc
+"}
+(4,1,1) = {"
+Bc
+AC
+AC
+AC
+AC
+AC
+Sw
+nu
+nu
+nu
+nu
+zT
+AC
+lN
+KM
+Dj
+AC
+Bc
+"}
+(5,1,1) = {"
+Bc
+Eb
+aL
+KM
+de
+AC
+Ys
+nu
+nu
+nu
+nu
+IC
+AC
+Xl
+nA
+Rp
+md
+bL
+"}
+(6,1,1) = {"
+Bc
+AC
+qR
+Rp
+Jp
+AC
+AC
+wf
+Gu
+Gu
+wf
+AC
+AC
+Xl
+vt
+Rp
+md
+bL
+"}
+(7,1,1) = {"
+Bc
+AC
+jy
+tV
+ql
+WV
+XD
+NZ
+gF
+GV
+nd
+bN
+WV
+Ii
+gE
+Rp
+md
+bL
+"}
+(8,1,1) = {"
+aU
+yg
+nK
+Ol
+NS
+gE
+gE
+uq
+gE
+up
+gE
+gE
+gE
+nK
+Ol
+lQ
+md
+aU
+"}
+(9,1,1) = {"
+aU
+yg
+QN
+MD
+Op
+lV
+ta
+rz
+el
+jY
+Yx
+Jt
+OY
+sq
+IH
+Up
+md
+aU
+"}
+(10,1,1) = {"
+bL
+oZ
+HN
+fP
+Ii
+Rp
+gE
+eE
+gE
+el
+Pn
+gE
+gE
+ql
+KM
+Ii
+rq
+bL
+"}
+(11,1,1) = {"
+aU
+xb
+gq
+ZS
+ia
+ji
+Vl
+pV
+qm
+qm
+rc
+Vl
+Wn
+QX
+vc
+Hx
+NY
+bL
+"}
+(12,1,1) = {"
+Bc
+Bc
+Bc
+xb
+gq
+Hx
+gq
+dw
+aU
+aU
+xb
+gq
+Hx
+Hx
+dw
+Bc
+Bc
+Bc
+"}

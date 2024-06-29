@@ -7,9 +7,9 @@
 
 	minimap_icon = "synth"
 
-/datum/equipment_preset/synth/New()
+/datum/equipment_preset/synth/New(access_override)
 	. = ..()
-	access = get_access(ACCESS_LIST_GLOBAL)
+	access = access_override ? access_override : get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/synth/load_race(mob/living/carbon/human/new_human)
 	if(new_human.client?.prefs?.synthetic_type)
@@ -43,6 +43,10 @@
 	rank = "Synthetic"
 	paygrade = "SYN"
 	role_comm_title = "Syn"
+
+/datum/equipment_preset/synth/uscm/New(access_override)
+	. = ..(access_override)
+	faction_group = FACTION_LIST_MARINE
 
 /datum/equipment_preset/synth/uscm/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
@@ -102,6 +106,32 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/synth/uscm/uscm_ground
+	name = "USCM Outpost Maintenance Synthetic"
+	faction = FACTION_USCM_GROUND
+	assignment = "Maintenance Synthetic"
+	rank = JOB_USCM_GROUND_SYNTH
+
+/datum/equipment_preset/synth/uscm/uscm_ground/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/uscm_ground/cmd/synth(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/synth/uscm/uscm_ground/New()
+	. = ..(list(
+		ACCESS_USCM_GROUND_GENERAL,
+		ACCESS_USCM_GROUND_MAINT,
+		ACCESS_USCM_GROUND_SYNTH,
+		ACCESS_USCM_GROUND_MEDICAL,
+		ACCESS_USCM_GROUND_GUEST,
+		ACCESS_USCM_GROUND_WAREHOUSE,
+		ACCESS_USCM_GROUND_COMMAND,
+		ACCESS_USCM_GROUND_CHECKPOINT,
+		ACCESS_USCM_GROUND_PLATOONL
+		))
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/synth/survivor
 	name = "Survivor - Synthetic - Classic Joe"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -141,7 +171,7 @@
 
 /datum/equipment_preset/synth/survivor/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_COLONIAL_ALL) + get_region_accesses(2) + get_region_accesses(4) + ACCESS_MARINE_RESEARCH //Access to civillians stuff + medbay stuff + engineering stuff + research
+	access = get_access(ACCESS_LIST_COLONIAL_ALL) + list(ACCESS_MARINE_CMO, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY) + list(ACCESS_MARINE_CE, ACCESS_MARINE_ENGINEERING, ACCESS_MARINE_OT, ACCESS_MARINE_MAINT) + ACCESS_MARINE_RESEARCH //Access to civillians stuff + medbay stuff + engineering stuff + research
 
 /datum/equipment_preset/synth/survivor/pmc/New()
 	. = ..()
@@ -149,7 +179,7 @@
 
 /datum/equipment_preset/synth/survivor/wy/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_COLONIAL_ALL) + get_region_accesses(2) + get_region_accesses(4) + ACCESS_MARINE_RESEARCH + ACCESS_WY_GENERAL // for WY synths - admin building and wy fax machines access
+	access = get_access(ACCESS_LIST_COLONIAL_ALL) + list(ACCESS_MARINE_CMO, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY) + list(ACCESS_MARINE_CE, ACCESS_MARINE_ENGINEERING, ACCESS_MARINE_OT, ACCESS_MARINE_MAINT) + ACCESS_MARINE_RESEARCH + ACCESS_WY_GENERAL // for WY synths - admin building and wy fax machines access
 
 /datum/equipment_preset/synth/survivor/load_gear(mob/living/carbon/human/new_human)
 	for(var/equipment in equipment_to_spawn)
@@ -647,11 +677,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/synth/infiltrator
-	name = "Infiltrator Synthetic"
+	name = "Colonist - Synthetic - Infiltrator"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NEUTRAL
 	assignment = JOB_COLONIST
-	rank = JOB_COLONIST
+	rank = SYNTH_INFILTRATOR
 	skills = /datum/skills/infiltrator_synthetic
 	idtype = /obj/item/card/id/lanyard
 	paygrade = "C"

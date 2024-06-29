@@ -30,7 +30,7 @@
 	var/landing_sound = 'sound/machines/techpod/techpod_drilling.ogg'
 	var/land_sound = 'sound/machines/techpod/techpod_hit.ogg'
 
-	layer = ABOVE_FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	var/land_layer = MOB_LAYER
 	appearance_flags = TILE_BOUND | KEEP_TOGETHER
 

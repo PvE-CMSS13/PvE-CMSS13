@@ -22,28 +22,43 @@
 	var/fail_check_ticks = 50 //Check for failure every this many ticks
 	//The sensor tower fails more often since it is experimental.
 	var/cur_tick = 0 //Tick updater
+	var/obj/effect/vis_object /// Creates an overlay effect, so that the tower overlays people.
 
 	/// weakrefs of xenos temporarily added to the marine minimap
 	var/list/minimap_added = list()
 
+/obj/structure/machinery/sensortower/Initialize()
+	vis_object = new()
+	vis_object.vis_flags = VIS_INHERIT_ID|VIS_INHERIT_ICON
+	vis_object.layer = ABOVE_FLY_LAYER /// Won't properly place this over tent roofs, but that can be adjusted via planes if desired.
+	vis_contents += vis_object
+	. = ..() /// Have to create the object first; update_icon() takes place during the parent calls.
+
+/obj/structure/machinery/sensortower/Destroy()
+	vis_contents -= vis_object
+	QDEL_NULL(vis_object)
+	. = ..()
 
 /obj/structure/machinery/sensortower/update_icon()
 	..()
-	if(!buildstate && is_on)
-		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is online."
-		icon_state = "sensor_"
-	else if (!buildstate && !is_on)
-		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is offline."
-		icon_state = "sensor_off"
-	else if(buildstate == SENSORTOWER_BUILDSTATE_BLOWTORCH)
-		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a blowtorch, wirecutters, then a wrench to repair it."
-		icon_state = "sensor_broken"
-	else if(buildstate == SENSORTOWER_BUILDSTATE_WIRECUTTERS)
-		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use wirecutters, then a wrench to repair it."
-		icon_state = "sensor_broken"
-	else if(buildstate == SENSORTOWER_BUILDSTATE_WRENCH)
-		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a wrench to repair it."
-		icon_state = "sensor_broken"
+	switch(buildstate)
+		if(SENSORTOWER_BUILDSTATE_BLOWTORCH)
+			desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a blowtorch, wirecutters, then a wrench to repair it."
+			icon_state = "sensor_broken"
+		if(SENSORTOWER_BUILDSTATE_WIRECUTTERS)
+			desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use wirecutters, then a wrench to repair it."
+			icon_state = "sensor_broken"
+		if(SENSORTOWER_BUILDSTATE_WRENCH)
+			desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a wrench to repair it."
+			icon_state = "sensor_broken"
+		else
+			if(is_on)
+				desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is online."
+				icon_state = "sensor_"
+			else
+				desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is offline."
+				icon_state = "sensor_off"
+	vis_object.icon_state = "[icon_state]_overlay"
 
 /obj/structure/machinery/sensortower/process()
 	if(!is_on || buildstate || !anchored) //Default logic checking

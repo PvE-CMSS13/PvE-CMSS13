@@ -4,6 +4,7 @@
 	icon = 'icons/obj/structures/gun_racks.dmi'
 	icon_state = "m41a"
 	density = TRUE
+	health = 250
 	var/allowed_type
 	var/populate_type
 	var/max_stored = 5
@@ -11,40 +12,73 @@
 
 /obj/structure/gun_rack/Initialize()
 	. = ..()
-	if(!allowed_type)
-		icon_state = "m41a_0"
-		return
 
-	if(initial_stored)
+	debris = list(/obj/item/stack/rods, /obj/item/stack/sheet/metal) //Want to initialize lists here instead of defining them per item.
+
+	if(initial_stored > 0 && populate_type)
 		var/i = 0
-		while(i < initial_stored)
-			contents += new populate_type(src)
-			i++
+		while(i++ < min(initial_stored, max_stored))
+			new populate_type(src) //Automatically go into contents.
+
 	update_icon()
 
+/obj/structure/gun_rack/Destroy()
+	dump_contents() //Dump everything available.
+	return ..()
+
+/obj/structure/gun_rack/ex_act(severity, direction)
+	if(indestructible || !health)
+		return //If it has no health or isn't supposed to be destroyed.
+
+	health -= severity
+	if(health <= 0)
+		handle_debris(severity, direction)
+		deconstruct(FALSE) //This will call dump_contents()
+	else if(severity > EXPLOSION_THRESHOLD_LOW) //If it's greater than a small explosion, we want to dump one or two guns out.
+		dump_contents(rand(1,2))
+
+/obj/structure/gun_rack/update_icon()
+	icon_state = "[initial(icon_state)]_[max(0, length(contents))]"
+
 /obj/structure/gun_rack/attackby(obj/item/O, mob/user)
-	if(istype(O, allowed_type) && contents.len < max_stored)
+	if(istype(O, allowed_type) && length(contents) < max_stored)
 		user.drop_inv_item_to_loc(O, src)
-		contents += O
 		update_icon()
 
 /obj/structure/gun_rack/attack_hand(mob/living/user)
-	if(!contents.len)
+	var/len = length(contents)
+	if(!len)
 		to_chat(user, SPAN_WARNING("[src] is empty."))
 		return
 
-	var/obj/stored_obj = contents[contents.len]
-	contents -= stored_obj
+	var/obj/stored_obj = contents[len]
 	user.put_in_hands(stored_obj)
 	to_chat(user, SPAN_NOTICE("You grab [stored_obj] from [src]."))
 	playsound(src, "gunequip", 25, TRUE)
 	update_icon()
 
-/obj/structure/gun_rack/update_icon()
-	if(contents.len)
-		icon_state = "[initial(icon_state)]_[contents.len]"
-	else
-		icon_state = "[initial(icon_state)]_0"
+//Similar to closets, these can dump out their contents. Except in this case we dump a variable amount depending on what triggered the proc.
+/obj/structure/gun_rack/proc/dump_contents(number_to_remove = max_stored)
+	number_to_remove = min(length(contents), number_to_remove)
+	for(var/obj/thing in src) //obj iteration should be pretty fast.
+		if(number_to_remove-- <= 0)
+			break
+		thing.forceMove(loc)
+		thing.pixel_x = 0 //Reset offsets so that it is centered properly on a tile.
+		thing.pixel_y = 0
+
+	update_icon()
+
+/obj/structure/gun_rack/proc/empty_out(number_to_remove = max_stored)
+	number_to_remove = min(length(contents), number_to_remove) //We don't want our specified mumber, if provided, to be greater than what is actually inside the rack.
+	for(var/i in src)
+		if(!number_to_remove--)
+			break
+		qdel(i)
+
+	update_icon()
+
+//===================================================
 
 /obj/structure/gun_rack/m41
 	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1

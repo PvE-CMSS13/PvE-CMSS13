@@ -48,10 +48,15 @@
 	if(health <= 0)
 		qdel(src)
 
+/// This is legacy support for when atmos was still around. Hopefully it finds its way back home some day.
 /obj/effect/spider/fire_act(exposed_temperature, exposed_volume)
 	if(exposed_temperature > 300)
 		health -= 5
 		healthcheck()
+
+/obj/effect/spider/flamer_fire_act(damage = BURN_LEVEL_TIER_1)
+	health -= damage
+	healthcheck(src)
 
 /obj/effect/spider/stickyweb
 	icon_state = "stickyweb1"
@@ -189,18 +194,15 @@
 /obj/effect/decal/cleanable/spiderling_remains
 	name = "spiderling remains"
 	gender = PLURAL
-	desc = "Green squishy mess."
+	desc = "A dead spiderling, still gooey." // They previously turned into cacoons when killed, for some reason.
 	icon = 'icons/effects/effects.dmi'
-	icon_state = "greenshatter"
+	icon_state = "spiderling_dead"
 
 /obj/effect/spider/cocoon
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web"
 	icon_state = "cocoon1"
 	health = 60
-
-/obj/effect/decal/cleanable/spiderling_remains/New()
-	icon_state = pick("cocoon1","cocoon2","cocoon3")
 
 /obj/effect/spider/cocoon/Destroy()
 	visible_message(SPAN_DANGER("[src] splits open."))

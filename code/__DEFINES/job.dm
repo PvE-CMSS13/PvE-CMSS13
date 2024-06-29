@@ -1,6 +1,6 @@
 #define get_job_playtime(client, job) (client.player_data? LAZYACCESS(client.player_data.playtimes, job)? client.player_data.playtimes[job].total_minutes MINUTES_TO_DECISECOND : 0 : 0)
-#define GET_MAPPED_ROLE(title) (RoleAuthority?.role_mappings[title] ? RoleAuthority.role_mappings[title] : RoleAuthority.roles_by_name[title])
-#define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
+#define GET_SQUAD_ROLE_MAP(title) (RoleAuthority?.roles_for_squad[title] || title)
+#define GET_MANIFEST_ROLES (RoleAuthority? RoleAuthority.manifest_roles | RoleAuthority.manifest_append : list())
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
@@ -10,6 +10,8 @@
 #define SQUAD_MARINE_5 "Echo"
 #define SQUAD_MARINE_CRYO "Foxtrot"
 #define SQUAD_MARINE_INTEL "Intel"
+#define SQUAD_USCM_GROUND_1 "Copperheads"
+#define SQUAD_USCM_GROUND_2 "Rattlesnakes"
 #define SQUAD_SOF "SOF"
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
@@ -24,21 +26,7 @@
 #define JOB_SQUAD_TEAM_LEADER "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN "Smartgunner"
 #define JOB_SQUAD_ROLES /datum/timelock/squad
-#define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
-
-#define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
-#define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
-#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
-#define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
-#define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
-#define JOB_SO_UPP "UPP Platoon Commander"
-
-#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
-#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
-#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
-#define JOB_SQUAD_RTO "Radio Telephone Operator"
-#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
-#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+#define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_LEADER, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE)
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 
@@ -152,6 +140,32 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 	. = ..(L);\
 }
 
+//-------------USCM Outpost roles---------------
+
+#define JOB_USCM_GROUND_CO "Outpost Commanding Officer"
+#define JOB_USCM_GROUND_AO "Outpost Adjunct Officer"
+#define JOB_USCM_GROUND_SYNTH "Outpost Maint. Synthetic"
+
+#define JOB_USCM_GROUND_SQUAD_LEADER "Outpost Plt. Sergeant"
+#define JOB_USCM_GROUND_SQUAD_TEAM_LEADER "Outpost Sqd. Sergeant"
+#define JOB_USCM_GROUND_SQUAD_MEDIC "Outpost Corpsman"
+#define JOB_USCM_GROUND_SQUAD_SPECIALIST "Outpost Specialist"
+#define JOB_USCM_GROUND_SQUAD_SMARTGUNNER "Outpost Smartgunner"
+#define JOB_USCM_GROUND_SQUAD_MARINE "Outpost Rifleman"
+
+#define JOB_USCM_GROUND_CIVILIAN "Civilian Researcher"
+
+#define DEPARTMENT_USCM_GROUND_COMMAND
+#define DEPARTMENT_USCM_GROUND_SUPPORT
+#define DEPARTMENT_USCM_GROUND_MARINE
+#define DEPARTMENT_USCM_GROUND_ALL list(\
+										"Outpost Command" = list(JOB_USCM_GROUND_CO, JOB_USCM_GROUND_AO),\
+										"Outpost Support" = list(JOB_USCM_GROUND_SYNTH),\
+										"Outpost Marine" = list(JOB_USCM_GROUND_SQUAD_LEADER, JOB_USCM_GROUND_SQUAD_TEAM_LEADER, JOB_USCM_GROUND_SQUAD_MEDIC, JOB_USCM_GROUND_SQUAD_SPECIALIST, JOB_USCM_GROUND_SQUAD_SMARTGUNNER, JOB_USCM_GROUND_SQUAD_MARINE),\
+									)
+
+//------------------------------------
+
 //-------------WO roles---------------
 
 #define JOB_WO_CO "Ground Commander"
@@ -182,7 +196,6 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_WO_SQUAD_SMARTGUNNER "Dust Raider Squad Smartgunner"
 #define JOB_WO_SQUAD_SPECIALIST "Dust Raider Squad Weapons Specialist"
 #define JOB_WO_SQUAD_LEADER "Dust Raider Squad Leader"
-
 //------------------------------------
 
 //-------- PMC --------//
@@ -193,7 +206,7 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_PMC_INVESTIGATOR "PMC Medical Investigator"
 #define JOB_PMC_DETAINER "Weyland-Yutani PMC (Detainer)"
 #define JOB_PMC_ELITE "PMC Elite"
-#define JOB_PMC_GUNNER "PMC Support Weapons Specialist" //Renamed from Specialist to Support Specialist as it only has SG skills.
+#define JOB_PMC_GUNNER "PMC Smartgunner" //Renamed to Smartgunner.
 #define JOB_PMC_SNIPER "PMC Weapons Specialist" //Renamed from Sharpshooter to specialist as it uses specialist skills.
 #define JOB_PMC_CREWMAN "Weyland-Yutani PMC (Crewman)"
 #define JOB_PMC_NINJA "PMC Ninja"
@@ -205,6 +218,13 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_PMC_SYNTH "PMC Support Synthetic"
 
 #define JOB_PMC_GRUNT_LIST list(JOB_PMC_STANDARD, JOB_PMC_ENGINEER, JOB_PMC_MEDIC, JOB_PMC_INVESTIGATOR, JOB_PMC_DETAINER, JOB_PMC_ELITE, JOB_PMC_GUNNER, JOB_PMC_SNIPER, JOB_PMC_CREWMAN, JOB_PMC_NINJA, JOB_PMC_XENO_HANDLER, JOB_PMC_COMMANDO, JOB_PMC_LEADER, JOB_PMC_LEAD_INVEST)
+
+#define DEPARTMENT_PMC_ALL list(\
+								"PMC Command" = list(JOB_PMC_DIRECTOR, JOB_PMC_LEAD_INVEST, JOB_PMC_LEADER),\
+								"PMC Elite" = list(JOB_PMC_COMMANDO, JOB_PMC_ELITE),\
+								"PMC Support" = list(JOB_PMC_DOCTOR, JOB_PMC_MEDIC, JOB_PMC_ENGINEER, JOB_PMC_INVESTIGATOR, JOB_PMC_CREWMAN, JOB_PMC_XENO_HANDLER, JOB_PMC_SYNTH),\
+								"PMC Combat" = list(JOB_PMC_STANDARD, JOB_PMC_GUNNER, JOB_PMC_SNIPER, JOB_PMC_NINJA),\
+							)
 
 //-------- WY --------//
 
@@ -223,8 +243,16 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_WY_GOON "WY Corporate Security"
 #define JOB_WY_GOON_LEAD "WY Corporate Security Lead"
 #define JOB_WY_GOON_RESEARCHER "WY Research Consultant"
-
 #define JOB_WY_GOON_LIST list(JOB_WY_GOON, JOB_WY_GOON_LEAD)
+
+#define DEPARTMENT_WY_ALL list(\
+								"WY Senior Management" = list(JOB_DIRECTOR, JOB_CHIEF_EXECUTIVE, JOB_DIVISION_MANAGER),\
+								"WY Middle Management" = list(JOB_ASSISTANT_MANAGER, JOB_EXECUTIVE_SUPERVISOR, JOB_EXECUTIVE_SPECIALIST, JOB_SENIOR_EXECUTIVE),\
+								"WY Junior Management" = list(JOB_EXECUTIVE, JOB_JUNIOR_EXECUTIVE, JOB_TRAINEE),\
+								"WY Security Team" = JOB_WY_GOON_LIST,\
+							)
+
+#define DEPARTMENT_WY_PMC_ALL (DEPARTMENT_WY_ALL + DEPARTMENT_PMC_ALL)
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
@@ -255,6 +283,15 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 
 //-------- FORECON --------//
 
+//Platoon version
+#define JOB_SQUAD_TEAM_LEADER_FORECON "FORECON Assistant Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "FORECON Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "FORECON Squad Corpsman"
+#define JOB_SQUAD_RTO "Radio Telephone Operator"
+#define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+//Regular faction
 #define JOB_FORECON_CO "Reconnaissance Commander"
 #define JOB_FORECON_SL "Reconnaissance Squad Leader"
 #define JOB_FORECON_SYN "Reconnaissance Synthetic"
@@ -265,6 +302,16 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
 
 //-------- UPP --------//
+
+//Platoon version
+#define JOB_SQUAD_MARINE_UPP "UPP Rifleman"
+#define JOB_SQUAD_LEADER_UPP "UPP Platoon Sergeant"
+#define JOB_SQUAD_MEDIC_UPP "UPP Sanitar"
+#define JOB_SQUAD_TEAM_LEADER_UPP "UPP Squad Sergeant"
+#define JOB_SQUAD_SMARTGUN_UPP "UPP Machinegunner"
+#define JOB_SO_UPP "UPP Platoon Commander"
+
+//Regular faction version
 #define JOB_UPP "UPP Private"
 #define JOB_UPP_CONSCRIPT "UPP Conscript"
 #define JOB_UPP_ENGI "UPP Korporal Sapper"
@@ -298,6 +345,17 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_UPP_REPRESENTATIVE "UPP Representative"
 
 #define JOB_UPP_CREWMAN "UPP Tank Crewman"
+
+
+#define DEPARTMENT_UPP_ALL list(\
+								"UPP Senior Kommand" = list(JOB_UPP_GENERAL, JOB_UPP_LT_GENERAL, JOB_UPP_MAY_GENERAL, JOB_UPP_KOL_OFFICER, JOB_UPP_LTKOL_OFFICER, JOB_UPP_MAY_OFFICER),\
+								"UPP Kommand" = list(JOB_UPP_KPT_OFFICER, JOB_UPP_SRLT_OFFICER, JOB_UPP_LT_OFFICER),\
+								"UPP Elite" = (UPP_COMMANDO_JOB_LIST + JOB_UPP_COMBAT_SYNTH),\
+								"UPP Support" = list(JOB_UPP_CREWMAN, JOB_UPP_SUPPORT_SYNTH, JOB_UPP_POLICE, JOB_UPP_LT_DOKTOR),\
+								"UPP Kombat" = list(JOB_UPP_LEADER, JOB_UPP_SPECIALIST, JOB_UPP_MEDIC, JOB_UPP_ENGI, JOB_UPP),\
+								"UPP Platoon" = list(JOB_SQUAD_MARINE_UPP, JOB_SQUAD_LEADER_UPP, JOB_SQUAD_MEDIC_UPP, JOB_SQUAD_TEAM_LEADER_UPP, JOB_SQUAD_SMARTGUN_UPP, JOB_SO_UPP),\
+								"UPP Diplomatic" = list(JOB_UPP_REPRESENTATIVE),\
+							)
 
 //-------- CLF --------//
 #define JOB_CLF "CLF Guerilla"
@@ -385,16 +443,17 @@ var/global/list/job_command_roles = JOB_COMMAND_ROLES_LIST
 #define JOB_OBSERVER "Observer"
 #define TIMELOCK_JOB(role_id, hours) new/datum/timelock(role_id, hours, role_id)
 
-//For displaying groups of jobs. Used by new player's latejoin menu and by crew manifest.
-#define FLAG_SHOW_CIC 1
-#define FLAG_SHOW_AUXIL_SUPPORT 2
-#define FLAG_SHOW_MISC 4
-#define FLAG_SHOW_POLICE 8
-#define FLAG_SHOW_ENGINEERING 16
-#define FLAG_SHOW_REQUISITION 32
-#define FLAG_SHOW_MEDICAL 64
-#define FLAG_SHOW_MARINES 128
-#define FLAG_SHOW_ALL_JOBS FLAG_SHOW_CIC|FLAG_SHOW_AUXIL_SUPPORT|FLAG_SHOW_MISC|FLAG_SHOW_POLICE|FLAG_SHOW_ENGINEERING|FLAG_SHOW_REQUISITION|FLAG_SHOW_MEDICAL|FLAG_SHOW_MARINES
+/// Job categories, for the crew manifest and late joining. Replaces the flags that were previously used.
+#define JOB_CATEGORY_OTHER "Other / RP"
+#define JOB_CATEGORY_CIC "Command"
+#define JOB_CATEGORY_SUPPORT "Auxiliary Support"
+#define JOB_CATEGORY_POLICE "Law Enforcement"
+#define JOB_CATEGORY_ENGINEERING "Engineering"
+#define JOB_CATEGORY_REQUISITION "Requisitions"
+#define JOB_CATEGORY_MEDICAL "Medical"
+#define JOB_CATEGORY_COMBAT "Combat"
+//This list allows us to keep all manifest categories in the same order every time, regardless of who spawned when/first/second/third.
+#define JOB_CATEGORY_ALL list(JOB_CATEGORY_CIC, JOB_CATEGORY_SUPPORT, JOB_CATEGORY_POLICE, JOB_CATEGORY_ENGINEERING, JOB_CATEGORY_REQUISITION, JOB_CATEGORY_MEDICAL, JOB_CATEGORY_COMBAT, JOB_CATEGORY_OTHER)
 
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.

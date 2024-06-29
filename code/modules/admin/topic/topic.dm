@@ -777,14 +777,20 @@
 		show_browser(usr, dat, "Change Secret Gamemode", "f_secret")
 
 	else if(href_list["c_mode2"])
-		if(!check_rights(R_ADMIN|R_SERVER)) return
+		if(!check_rights(R_ADMIN|R_SERVER))
+			return FALSE
+
+		if(SSticker.current_state < GAME_STATE_PREGAME)
+			to_chat(usr, SPAN_WARNING("Please wait until the game is ready setting up before changing the mode!"))
+			return FALSE
 
 		GLOB.master_mode = href_list["c_mode2"]
 		message_admins("[key_name_admin(usr)] set the mode as [GLOB.master_mode].")
 		to_world(SPAN_NOTICE("<b><i>The mode is now: [GLOB.master_mode]!</i></b>"))
 		Game() // updates the main game menu
 		SSticker.save_mode(GLOB.master_mode)
-
+		if(SSticker.current_state < GAME_STATE_SETTING_UP)
+			config.pick_mode(GLOB.master_mode)
 
 	else if(href_list["f_secret2"])
 		if(!check_rights(R_ADMIN|R_SERVER)) return

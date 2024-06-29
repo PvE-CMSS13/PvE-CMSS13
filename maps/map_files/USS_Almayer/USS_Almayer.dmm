@@ -49479,11 +49479,11 @@
 	layer = 2.2;
 	name = "\improper Combat Information Center Blast Door"
 	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/comdoor/reinforced{
 	name = "\improper Combat Information Center"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
 	},
 /turf/open/floor/almayer{
 	icon_state = "test_floor4"

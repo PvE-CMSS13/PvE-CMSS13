@@ -11,6 +11,6 @@
 		log_debug("Vent game master submenu has reference atom that is not a vent. Referenced atom: [referenced_atom]")
 		return
 
-	referenced_vent.animate_ventcrawl()
+	referenced_vent.animate_crawl()
 
-	return CALLBACK(referenced_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_ventcrawl_reset))
+	return CALLBACK(referenced_vent, TYPE_PROC_REF(/obj/structure/pipes/vents, animate_crawl_reset))

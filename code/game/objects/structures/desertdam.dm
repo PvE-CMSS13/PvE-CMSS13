@@ -10,6 +10,8 @@
 	unacidable = TRUE // can toggle it off anyway
 	layer = ABOVE_MOB_LAYER
 	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 //loose sand overlay
 /obj/structure/desertdam/decals/loose_sand_overlay
 	name = "loose sand"

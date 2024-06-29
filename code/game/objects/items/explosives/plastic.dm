@@ -348,11 +348,14 @@
 /obj/item/explosive/plastic/breaching_charge/handle_explosion(turf/target_turf, dir, cause_data)
 	var/explosion_target = get_step(target_turf, dir)
 	create_shrapnel(explosion_target, shrapnel_volume, dir, angle,/datum/ammo/bullet/shrapnel/metal, cause_data)
-	addtimer(CALLBACK(src, PROC_REF(trigger_explosion), target_turf, dir, cause_data), 1)
-
-/obj/item/explosive/plastic/breaching_charge/proc/trigger_explosion(turf/target_turf, dir, cause_data)
-	cell_explosion(target_turf, 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data)
-	qdel(src)
+	/*
+	* The timer used to cause a crash later in the stack because the src charge can be qdeleted in prime() through plant_target.ex_act().
+	* Timers aren't meant to run for qdeleted objects, and ex_act() can qdel src before it gets to the timer creation, causing the crash.
+	* A removed comment here stated that shrapnel is created first as the explosion can eat it, hence the timer to spawn the explosion after the shrapnel.
+	* So, instead of calling back for a src proc to trigger the explosion... to then call the explosion, we call the global explosion proc directly.
+	*/
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), target_turf, 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data), 1)
+	qdel(src) /// It was probably qdeleted already, but if not, it will be collected here.
 
 /obj/item/explosive/plastic/breaching_charge/plasma
 	name = "plasma charge"
@@ -377,8 +380,5 @@
 /obj/item/explosive/plastic/breaching_charge/plasma/handle_explosion(turf/target_turf, dir, cause_data)
 	var/explosion_target = get_step(target_turf, dir)
 	create_shrapnel(explosion_target, shrapnel_volume, dir, angle,/datum/ammo/bullet/shrapnel/plasma, cause_data)
-	addtimer(CALLBACK(src, PROC_REF(trigger_explosion), target_turf, dir, cause_data), 1)
-
-/obj/item/explosive/plastic/breaching_charge/plasma/trigger_explosion(turf/target_turf, dir, cause_data)
-	cell_explosion(target_turf, 90, 90, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), target_turf, 90, 90, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data), 1)
 	qdel(src)

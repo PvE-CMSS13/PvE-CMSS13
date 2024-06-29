@@ -1,5 +1,5 @@
 /mob/living/carbon/human/gib(datum/cause_data/cause = create_cause_data("gibbing", src))
-	var/is_a_synth = issynth(src)
+	var/is_a_synth = species.flags & IS_SYNTHETIC
 	for(var/obj/limb/E in limbs)
 		if(istype(E, /obj/limb/chest))
 			continue
@@ -11,8 +11,6 @@
 			E.droplimb(0, 0, cause)
 
 	undefibbable = TRUE
-
-	GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, "*Deceased*")
 
 	if(is_a_synth)
 		spawn_gibs()
@@ -45,10 +43,11 @@
 	GLOB.alive_human_list -= src
 
 	if(!gibbed)
-		if(HAS_TRAIT(src, TRAIT_HARDCORE) || MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA))
-			if(!(species.flags & IS_SYNTHETIC)) // Synths wont perma
-				status_flags |= PERMANENTLY_DEAD
-				should_deathmessage = FALSE
+		if(species.flags & IS_SYNTHETIC) // Synths wont perma.
+			GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, species.manifest_dead) //Send an update right away.
+		else if(HAS_TRAIT(src, TRAIT_HARDCORE) || MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA))
+			status_flags |= PERMANENTLY_DEAD
+			should_deathmessage = FALSE
 		if(HAS_TRAIT(src, TRAIT_INTENT_EYES)) //their eyes need to be 'offline'
 			r_eyes = 0
 			g_eyes = 0

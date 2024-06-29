@@ -4,6 +4,8 @@
 	var/name = "context"
 	/// Storage of scenario values in the context as KV
 	var/list/scenario = list()
+	/// Storage of all possible scenario values. Useful for a frontend interface.
+	var/list/directory = list()
 	/// Config values used internally relevant to context
 	var/list/config = list()
 	/// Scheduler task type

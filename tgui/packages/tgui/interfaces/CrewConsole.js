@@ -67,7 +67,13 @@ const jobToColor = (jobId) => {
   if (jobId >= 130 && jobId < 140) {
     return COLORS.shipDeps.raiders;
   }
-  if (jobId >= 200 && jobId < 230) {
+  if (jobId >= 140 && jobId < 150) {
+    return COLORS.shipDeps.uscm_ground_one;
+  }
+  if (jobId >= 150 && jobId < 160) {
+    return COLORS.shipDeps.uscm_ground_two;
+  }
+  if (jobId >= 300 && jobId < 330) {
     return COLORS.department.centcom;
   }
   return COLORS.department.other;

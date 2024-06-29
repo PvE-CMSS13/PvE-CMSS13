@@ -219,10 +219,8 @@
 
 	prefs.toggle_prefs ^= TOGGLE_AMBIENT_OCCLUSION
 	prefs.save_preferences()
-	var/atom/movable/screen/plane_master/game_world/plane_master = locate() in src.screen
-	if (!plane_master)
-		return
-	plane_master.backdrop(src.mob)
+	var/atom/movable/screen/plane_master/rendering_plate/foreground/plane_master = locate() in src.screen
+	plane_master?.backdrop(src.mob)
 
 /client/verb/toggle_member_publicity()
 	set name = "Toggle Membership Publicity"
@@ -606,7 +604,7 @@
 	set category = "Preferences.Ghost"
 	set desc = "Use to change which HUDs you want to have by default when you become an observer."
 
-	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction RESS HUD", "Faction CLF HUD"))
+	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction CLF HUD"))
 	if(!hud_choice)
 		return
 	prefs.observer_huds[hud_choice] = !prefs.observer_huds[hud_choice]

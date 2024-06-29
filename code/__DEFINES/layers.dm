@@ -130,18 +130,31 @@
 #define ABOVE_XENO_LAYER 4.12
 /// For facehuggers
 #define FACEHUGGER_LAYER 4.13
-/// For WEATHER
-#define WEATHER_LAYER 4.14
+
+#define INTERIOR_DOOR_INSIDE_LAYER 4.15
+#define INTERIOR_WALL_SOUTH_LAYER 4.16
+#define INTERIOR_DOOR_LAYER 4.17
+#define INTERIOR_WALLMOUNT_LAYER 4.18
+
+/// For certain platform facings, so that they properly display when a mob walks near them.
+#define PLATFORM_LAYER 4.2
+/// For decorators, so they show up just above the regular platforms.
+#define PLATFORM_DECORATION_LAYER 4.21
+/// Where the mob is placed when climbing over structures of all kinds.
+#define STRUCTURE_CLIMB_LAYER 4.22
 
 //#define FLY_LAYER 5
+/// Fly layer is used for throwing, explosions, projectiles, and so on. To do: Move more items away from this layer and onto more proper layering.
 
-#define RIPPLE_LAYER 5.1
-#define INTERIOR_DOOR_INSIDE_LAYER 5.19
-#define INTERIOR_WALL_SOUTH_LAYER 5.2
-#define INTERIOR_DOOR_LAYER 5.21
-#define INTERIOR_WALLMOUNT_LAYER 5.3
-#define INTERIOR_ROOF_LAYER 5.5
+/// For objects like cameras and light bulbs that should be placed pretty high, above most things.
+#define CEILING_FIXTURE_LAYER 5.01
 
+///Above other stuff, below weather effects.
+#define BELOW_WEATHER_LAYER 5.1
+/// For weather, but hardly matters as weather effects are drawn on their plane. To do: Remove.
+#define WEATHER_LAYER 5.2
+
+/// Meant to be visible above just about everything else.
 #define ABOVE_FLY_LAYER 6
 
 /// blip from motion detector
@@ -220,10 +233,27 @@
 
 /// Floor plane, self explanatory. Used for Ambient Occlusion filter
 #define FLOOR_PLANE -7
+
+/// The ordering of these planes should generally not change.
+///==========================================================
 /// Game Plane, where most of the game objects reside
+#define RENDER_TARGET_GAME_WORLD "*TARGET_GAME_WORLD"
 #define GAME_PLANE -6
-/// Roof plane, disappearing when entering buildings
-#define ROOF_PLANE -4
+/// This one is the roof plane where visible roofs are drawn; we need this so ghosts can see through roofs, otherwise it would be layered in GAME_PLANE.
+#define RENDER_TARGET_ROOF_VISIBLE "*TARGET_ROOF_VISIBLE_MASK"
+#define ROOF_VISIBLE_PLANE -5
+/// Above the game plane, so it can mask it properly.
+#define RENDER_TARGET_BUILDING_MASK "*TARGET_BUILDING_MASK"
+#define BUILDING_MASK_PLANE - 4
+/// The other roof plane, disappears when entering buildings through relay use, outputted to individual players so usually hidden.
+#define RENDER_TARGET_ROOF_HIDDEN "*TARGET_ROOF_HIDDEN_MASK"
+#define ROOF_HIDDEN_PLANE -3
+/// Weather effects are on this plane, above visible roofs and their effects. They are rendered alongside roofs for better appearance.
+#define RENDER_TARGET_WEATHER "*TARGET_WEATHER_PLANE"
+#define WEATHER_PLANE - 2
+/// Renders the above planes onto this plane to apply a shadow filter, then tranfers them to RENDER_PLANE_GAME to keep proper layering.
+#define RENDER_PLANE_FOREGROUND -1
+///==========================================================
 
 /// To keep from conflicts with SEE_BLACKNESS internals
 #define BLACKNESS_PLANE 0

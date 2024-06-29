@@ -197,7 +197,9 @@ SUBSYSTEM_DEF(weather)
 	icon = 'icons/effects/weather.dmi'
 	invisibility = 0
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	layer = WEATHER_LAYER
+	appearance_flags = KEEP_TOGETHER
+	layer = WEATHER_LAYER /// The layer doesn't really matter as they will be drawn on another plane.
+	plane = WEATHER_PLANE
 
 /obj/effect/weather_vfx_holder/rain
 	icon_state = "strata_storm"

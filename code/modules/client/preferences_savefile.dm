@@ -572,7 +572,6 @@
 	S["organ_data"] >> organ_data
 	S["gear"] >> gear
 	S["origin"] >> origin
-	S["faction"] >> faction
 	S["religion"] >> religion
 	S["traits"] >> traits
 
@@ -651,7 +650,6 @@
 	close_browser(owner, "character_traits")
 
 	if(!origin) origin = ORIGIN_USCM
-	if(!faction)  faction =  "None"
 	if(!religion) religion = RELIGION_AGNOSTICISM
 	if(!preferred_squad) preferred_squad = "None"
 
@@ -729,7 +727,6 @@
 	S["organ_data"] << organ_data
 	S["gear"] << gear
 	S["origin"] << origin
-	S["faction"] << faction
 	S["religion"] << religion
 	S["traits"] << traits
 

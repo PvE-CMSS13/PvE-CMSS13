@@ -291,10 +291,7 @@
 /area/whiskey_outpost/inside/living)
 "aZ" = (
 /obj/structure/cargo_container/watatsumi/rightmid,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "ba" = (
 /obj/structure/machinery/vending/cigarette,
@@ -362,10 +359,7 @@
 /area/whiskey_outpost/inside/hospital)
 "bj" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north/northwest)
 "bl" = (
 /turf/open/jungle,
@@ -1638,10 +1632,7 @@
 /area/whiskey_outpost/inside/living)
 "fU" = (
 /obj/item/lightstick/red/planted,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_north)
 "fV" = (
 /turf/open/floor{
@@ -3044,10 +3035,7 @@
 /area/whiskey_outpost/outside/lane/two_north)
 "kz" = (
 /obj/structure/fence,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "kA" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -3161,10 +3149,7 @@
 /turf/open/floor/prison,
 /area/whiskey_outpost/inside/supply)
 "kV" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "kX" = (
 /obj/structure/machinery/medical_pod/sleeper{
@@ -3446,10 +3431,7 @@
 /turf/open/gm/river,
 /area/whiskey_outpost/outside/lane/four_south)
 "mb" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/very_far)
 "mc" = (
 /obj/structure/machinery/vending/snack,
@@ -3568,10 +3550,7 @@
 /area/whiskey_outpost)
 "mD" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north)
 "mE" = (
 /obj/structure/machinery/autodoc_console{
@@ -4041,10 +4020,7 @@
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost)
 "of" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/four_south)
 "oi" = (
 /obj/structure/sign/poster,
@@ -4065,10 +4041,7 @@
 /area/whiskey_outpost/inside/living)
 "oq" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "or" = (
 /obj/structure/disposalpipe/segment,
@@ -4105,10 +4078,7 @@
 /area/whiskey_outpost/outside/mortar_pit)
 "ox" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_south)
 "oy" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
@@ -6338,10 +6308,7 @@
 	},
 /area/whiskey_outpost/inside/bunker)
 "wv" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/two_south)
 "ww" = (
 /obj/structure/barricade/plasteel/wired{
@@ -6475,10 +6442,7 @@
 	},
 /area/whiskey_outpost/inside/supply)
 "wR" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_north)
 "wS" = (
 /obj/structure/machinery/disposal,
@@ -6628,10 +6592,7 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "xy" = (
 /obj/effect/decal/cleanable/blood/writing,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/very_far)
 "xB" = (
 /obj/structure/surface/rack,
@@ -7188,10 +7149,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/north/beach)
 "zt" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "zu" = (
 /obj/effect/landmark/start/whiskey/engineer,
@@ -7247,10 +7205,7 @@
 /obj/item/clothing/under/shorts/black,
 /obj/item/clothing/under/shorts/black,
 /obj/item/clothing/under/shorts/blue,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north)
 "zG" = (
 /obj/structure/machinery/m56d_hmg/mg_turret{
@@ -7374,10 +7329,7 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "Ad" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "Ae" = (
 /turf/closed/wall/rock/brown,
@@ -7408,10 +7360,7 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 1
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_south)
 "Ar" = (
 /obj/structure/barricade/plasteel/wired{
@@ -7787,10 +7736,7 @@
 /area/whiskey_outpost/outside/north/beach)
 "BM" = (
 /obj/structure/cargo_container/watatsumi/right,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "BN" = (
 /obj/effect/landmark/start/whiskey/marine,
@@ -7825,10 +7771,7 @@
 /area/whiskey_outpost/outside/lane/three_north)
 "BS" = (
 /obj/item/storage/box/m94,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_north)
 "BT" = (
 /turf/open/floor{
@@ -8629,10 +8572,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/outside/north/northeast)
 "EK" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north/northwest)
 "EL" = (
 /obj/structure/machinery/cm_vending/gear/synth,
@@ -8667,10 +8607,7 @@
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/inside/bunker/pillbox/one)
 "EV" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_north)
 "EX" = (
 /obj/structure/platform{
@@ -8863,10 +8800,7 @@
 /turf/open/jungle,
 /area/whiskey_outpost/outside/south/very_far)
 "FL" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_south)
 "FM" = (
 /obj/structure/machinery/cm_vending/clothing/marine/alpha{
@@ -9712,10 +9646,7 @@
 	},
 /area/whiskey_outpost/inside/bunker/pillbox/two)
 "Ji" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/inside/caves/caverns/west)
 "Jk" = (
 /obj/structure/disposalpipe/segment{
@@ -10172,10 +10103,7 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "LG" = (
 /obj/effect/landmark/start/whiskey/marine,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_south)
 "LI" = (
 /obj/structure/barricade/sandbags/wired{
@@ -10372,10 +10300,7 @@
 /area/whiskey_outpost/outside/north/platform)
 "Mw" = (
 /obj/structure/fence,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "Mx" = (
 /turf/open/jungle,
@@ -10471,17 +10396,11 @@
 /area/whiskey_outpost/outside/north/beach)
 "MW" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_north)
 "MX" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/two_north)
 "MY" = (
 /obj/effect/spawner/gibspawner/human,
@@ -10495,10 +10414,7 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "Nc" = (
 /obj/item/lightstick/red/planted,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "Nd" = (
 /obj/structure/sign/poster{
@@ -10636,10 +10552,7 @@
 /area/whiskey_outpost/inside/hospital/triage)
 "ND" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/four_south)
 "NE" = (
 /obj/item/stool,
@@ -10802,10 +10715,7 @@
 /area/whiskey_outpost/outside/lane/two_north)
 "Ot" = (
 /obj/structure/disposalpipe/segment,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_south)
 "Ou" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -11179,10 +11089,7 @@
 /area/whiskey_outpost/inside/hospital/triage)
 "Qn" = (
 /obj/effect/spawner/gibspawner/human,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "Qo" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -11287,10 +11194,7 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 4
 	},
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/very_far)
 "QR" = (
 /turf/open/gm/dirt{
@@ -11865,10 +11769,7 @@
 /area/whiskey_outpost/outside/lane/two_south)
 "Ts" = (
 /obj/effect/decal/cleanable/blood/writing,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south/far)
 "Tt" = (
 /obj/structure/sign/safety/one,
@@ -11912,10 +11813,7 @@
 /area/whiskey_outpost/inside/hospital/triage)
 "TD" = (
 /obj/item/weapon/sword/machete,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north)
 "TE" = (
 /obj/structure/disposalpipe/segment,
@@ -12080,10 +11978,7 @@
 /area/whiskey_outpost/outside/north)
 "Uo" = (
 /obj/item/storage/box/explosive_mines,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_north)
 "Up" = (
 /obj/structure/machinery/light/small{
@@ -12212,10 +12107,7 @@
 /area/whiskey_outpost/outside/north/northwest)
 "UP" = (
 /obj/item/lightstick/red/planted,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/south)
 "UR" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/wo,
@@ -12278,10 +12170,7 @@
 	},
 /area/whiskey_outpost/outside/south/very_far)
 "Vi" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/north)
 "Vj" = (
 /obj/structure/disposalpipe/segment{
@@ -12304,10 +12193,7 @@
 	},
 /area/whiskey_outpost/inside/caves/tunnel)
 "Vo" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/one_south)
 "Vp" = (
 /obj/item/cell/high,
@@ -12383,10 +12269,7 @@
 /area/whiskey_outpost/outside/lane/one_south)
 "VD" = (
 /obj/effect/decal/cleanable/blood/writing,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/four_south)
 "VE" = (
 /obj/effect/decal/cleanable/blood/writing{
@@ -12446,10 +12329,7 @@
 /area/whiskey_outpost/inside/bunker/pillbox/four)
 "VO" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/three_north)
 "VP" = (
 /obj/item/toy/beach_ball/holoball,
@@ -12594,10 +12474,7 @@
 /area/whiskey_outpost/outside/south/very_far)
 "Ws" = (
 /obj/effect/landmark/start/whiskey/marine,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/two_south)
 "Wu" = (
 /obj/structure/disposalpipe/segment,
@@ -12805,10 +12682,7 @@
 	},
 /area/whiskey_outpost/inside/bunker/pillbox/one)
 "Xq" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/shrubs,
 /area/whiskey_outpost/outside/lane/two_north)
 "Xr" = (
 /obj/effect/landmark/start/whiskey/marine,

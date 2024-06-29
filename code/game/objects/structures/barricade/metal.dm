@@ -264,7 +264,7 @@
 
 	. = ..()
 
-/obj/structure/barricade/metal/wired/New()
+/obj/structure/barricade/metal/wired/Initialize()
 	maxhealth += 50
 	update_health(-50)
 	can_wire = FALSE
@@ -275,5 +275,5 @@
 
 /obj/structure/barricade/metal/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
-	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+	flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED

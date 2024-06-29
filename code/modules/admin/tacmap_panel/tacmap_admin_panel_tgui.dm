@@ -17,13 +17,20 @@ GLOBAL_DATUM_INIT(tacmap_admin_panel, /datum/tacmap_admin_panel, new)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		if(!wiki_map_fallback)
-			var/wiki_url = CONFIG_GET(string/wikiurl)
-			var/obj/item/map/current_map/new_map = new
-			if(wiki_url && new_map.html_link)
-				wiki_map_fallback ="[wiki_url]/[new_map.html_link]"
-			else
-				debug_log("Failed to determine fallback wiki map! Attempted '[wiki_url]/[new_map.html_link]'")
-			qdel(new_map)
+			//I had to refactor some other code to make this less atrocious. Spawning in a map item to reference one compile-time variable is very silly. Behold!
+			var/obj/item/map/ground_map = PATH_TO_GROUND_MAP_OBJ
+			if(ground_map)
+				var/html_override = initial(ground_map.html_override) //This is a hack, should not be relied on in the future.
+				var/html_link = initial(ground_map.html_link)
+
+				if(html_override) //Hack, but a necessary one since there is no reliable wiki.
+					wiki_map_fallback = html_link //This should always work, as the address should point to functional image.
+				else
+					var/wiki_url = CONFIG_GET(string/wikiurl)
+					if(wiki_url && html_link)
+						wiki_map_fallback ="[wiki_url]/[html_link]"
+					else
+						debug_log("Failed to determine fallback wiki map! Attempted '[wiki_url]/[html_link]'")
 
 		// Ensure we actually have the latest map images sent (recache can handle older/different faction maps)
 		resend_current_map_png(user)

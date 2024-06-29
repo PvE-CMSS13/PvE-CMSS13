@@ -162,7 +162,6 @@
 
 /// Shakes the vent and creates timers to spawn multiple xenos in succession
 /datum/game_master_submenu/ambush/proc/handle_ambush_spawn(ambush)
-
 	var/datum/callback/stop_animating = shake_spawner()
 
 	playsound(referenced_atom, pick(ambush_sounds), 40, 1)
@@ -191,6 +190,8 @@
 
 /// Actually spawns the xeno at the vent
 /datum/game_master_submenu/ambush/proc/spawn_xeno(spawning_xeno_name)
+	ready_ambush()//Per xeno, because this can change between spawns.
+
 	var/turf/spawn_turf = get_turf(referenced_atom)
 
 	if(!spawn_turf)
@@ -210,6 +211,10 @@
 /// Shakes the spawner via animation and returns a callback to reset the animation
 /datum/game_master_submenu/ambush/proc/shake_spawner()
 	return
+
+/// Check to see if our spawning atom is capable of spawning a xeno; sometimes it may not make sense. Only for normal ambushes. Spawning xenos directly doesn't run this.
+/datum/game_master_submenu/ambush/proc/ready_ambush()
+	return TRUE
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AMBUSH_AI_XENOS

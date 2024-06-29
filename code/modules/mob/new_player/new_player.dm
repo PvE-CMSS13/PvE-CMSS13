@@ -48,15 +48,15 @@
 
 	if(round_start)
 		output += "<p>\[ [ready? "<b>Ready</b>":"<a href='byond://?src=\ref[src];lobby_choice=ready'>Ready</a>"] | [ready? "<a href='byond://?src=\ref[src];lobby_choice=unready'>Not Ready</a>":"<b>Not Ready</b>"] \]</p>"
-		output += "<b>Be Xenomorph:</b> [(client.prefs && (client.prefs.get_job_priority(JOB_XENOMORPH))) ? "Yes" : "No"]"
+		//output += "<b>Be Xenomorph:</b> [(client.prefs && (client.prefs.get_job_priority(JOB_XENOMORPH))) ? "Yes" : "No"]"
 
 	else
 		output += "<a href='byond://?src=\ref[src];lobby_choice=manifest'>View the Crew Manifest</A><br><br>"
-		output += "<a href='byond://?src=\ref[src];lobby_choice=hiveleaders'>View Hive Leaders</A><br><br>"
-		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the USCM!</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_xeno'>Join the Hive!</A></p>"
-		if(SSticker.mode.flags_round_type & MODE_PREDATOR)
-			if(SSticker.mode.check_predator_late_join(src,0)) output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_pred'>Join the Hunt!</A></p>"
+		//output += "<a href='byond://?src=\ref[src];lobby_choice=hiveleaders'>View Hive Leaders</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the action!</A></p>"
+		//output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_xeno'>Join the Hive!</A></p>"
+		//if(SSticker.mode.flags_round_type & MODE_PREDATOR)
+		//	if(SSticker.mode.check_predator_late_join(src,0)) output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_pred'>Join the Hunt!</A></p>"
 
 	output += "<p><a href='byond://?src=\ref[src];lobby_choice=observe'>Observe</A></p>"
 
@@ -115,24 +115,27 @@
 			if(!SSticker || SSticker.current_state == GAME_STATE_STARTUP)
 				to_chat(src, SPAN_WARNING("The game is still setting up, please try again later."))
 				return
-			if(alert(src,"Are you sure you wish to observe? When you observe, you will not be able to join as marine. It might also take some time to become a xeno or responder!","Player Setup","Yes","No") == "Yes")
+			if(alert(src,"Are you sure you wish to observe? When you observe, you may not be able to play this round!","Player Setup","Yes","No") == "Yes")
 				if(!client)
 					return TRUE
+				var/obj/effect/landmark/observer_start/O = SAFEPICK(GLOB.observer_starts)
+				if(!istype(O))
+					to_chat(src, SPAN_DANGER("Could not locate an observer spawn point. Contact a coder!"))
+					log_debug(SPAN_DEBUG("[src] tried spawning as an observer but could not locate an observer spawn point."))
+					return FALSE
+
 				if(!client.prefs?.preview_dummy)
 					client.prefs.update_preview_icon()
-				var/mob/dead/observer/observer = new /mob/dead/observer(get_turf(pick(GLOB.latejoin)), client.prefs.preview_dummy)
+				var/mob/dead/observer/observer = new /mob/dead/observer(get_turf(O), client.prefs.preview_dummy)
 				observer.set_lighting_alpha_from_pref(client)
 				spawning = TRUE
 				observer.started_as_observer = TRUE
 
 				close_spawn_windows()
 
-				var/obj/effect/landmark/observer_start/O = SAFEPICK(GLOB.observer_starts)
-				if(istype(O))
-					to_chat(src, SPAN_NOTICE("Now teleporting."))
-					observer.forceMove(O.loc)
-				else
-					to_chat(src, SPAN_DANGER("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
+				to_chat(src, SPAN_NOTICE("Now teleporting."))
+				observer.forceMove(O.loc)
+
 				observer.icon = 'icons/mob/humans/species/r_human.dmi'
 				observer.icon_state = "anglo_example"
 				observer.alpha = 127
@@ -252,7 +255,8 @@
 		to_chat(character, SPAN_HIGHDANGER("As you stagger out of hypersleep, the sleep bay blares: '[SShijack.evac_status ? "VESSEL UNDERGOING EVACUATION PROCEDURES, SELF DEFENSE KIT PROVIDED" : "VESSEL IN HEIGHTENED ALERT STATUS, SELF DEFENSE KIT PROVIDED"]'."))
 		character.put_in_hands(new /obj/item/storage/box/kit/cryo_self_defense(character.loc))
 
-	GLOB.data_core.manifest_inject(character)
+	if(character.job in GET_MANIFEST_ROLES) //Inject them into the manifest if they are spawning as a role that should be on the manifest/have access to it.
+		GLOB.data_core.manifest_inject(character)
 	SSticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc. //TODO!!!!! ~Carn
 	SSticker.mode.latejoin_tally += RoleAuthority.calculate_role_weight(player_rank)
 
@@ -300,59 +304,33 @@
 			if(EVACUATION_STATUS_INITIATED)
 				dat += "<font color='red'><b>The [MAIN_SHIP_NAME] is being evacuated.</b></font><br>"
 
-	var/positions = FALSE
-	var/position_dat = "Choose from the following open positions:<br>"
-	var/roles_show = FLAG_SHOW_ALL_JOBS
-
+	var/position_dat
+	var/categories_shown[0]
+	var/datum/job/J
+	var/active
+	var/mob/M
+	var/len = 0 // To autosize the latejoin window.
 	for(var/i in RoleAuthority.roles_for_mode)
-		var/datum/job/J = RoleAuthority.roles_for_mode[i]
+		J = RoleAuthority.roles_for_mode[i]
 		if(!RoleAuthority.check_role_entry(src, J, TRUE))
 			continue
-		var/active = 0
+		active = 0
 		// Only players with the job assigned and AFK for less than 10 minutes count as active
-		for(var/mob/M in GLOB.player_list)
+		for(M in GLOB.player_list)
 			if(M.client && M.job == J.title)
 				active++
-		if(roles_show & FLAG_SHOW_CIC && ROLES_CIC.Find(J.title))
-			position_dat += "Command:<br>"
-			roles_show ^= FLAG_SHOW_CIC
 
-		else if(roles_show & FLAG_SHOW_AUXIL_SUPPORT && ROLES_AUXIL_SUPPORT.Find(J.title))
-			position_dat += "<hr>Auxiliary Combat Support:<br>"
-			roles_show ^= FLAG_SHOW_AUXIL_SUPPORT
+		if(!(J.category in categories_shown)) // If it is not found in the list of categories already displayed, display it.
+			position_dat += "[J.category]:<br>"
+			categories_shown += J.category
 
-		else if(roles_show & FLAG_SHOW_MISC && ROLES_MISC.Find(J.title))
-			position_dat += "<hr>Other:<br>"
-			roles_show ^= FLAG_SHOW_MISC
-
-		else if(roles_show & FLAG_SHOW_POLICE && ROLES_POLICE.Find(J.title))
-			position_dat += "<hr>Military Police:<br>"
-			roles_show ^= FLAG_SHOW_POLICE
-
-		else if(roles_show & FLAG_SHOW_ENGINEERING && ROLES_ENGINEERING.Find(J.title))
-			position_dat += "<hr>Engineering:<br>"
-			roles_show ^= FLAG_SHOW_ENGINEERING
-
-		else if(roles_show & FLAG_SHOW_REQUISITION && ROLES_REQUISITION.Find(J.title))
-			position_dat += "<hr>Requisitions:<br>"
-			roles_show ^= FLAG_SHOW_REQUISITION
-
-		else if(roles_show & FLAG_SHOW_MEDICAL && ROLES_MEDICAL.Find(J.title))
-			position_dat += "<hr>Medbay:<br>"
-			roles_show ^= FLAG_SHOW_MEDICAL
-
-		else if(roles_show & FLAG_SHOW_MARINES && ROLES_MARINES.Find(J.title))
-			position_dat += "<hr>Squad Riflemen:<br>"
-			roles_show ^= FLAG_SHOW_MARINES
-
-		positions = TRUE
 		position_dat += "<a href='byond://?src=\ref[src];lobby_choice=SelectedJob;job_selected=[J.title]'>[J.disp_title] ([J.current_positions]) (Active: [active])</a><br>"
+		len++
 
-	dat += positions ? position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
+	dat += position_dat ? "Choose from the following open positions:<br>" + position_dat : "There are no available jobs. This mode has limited slotting per round. Please see the discord for more info and future playtimes: [CONFIG_GET(string/discordurl)]"
 
 	dat += "</center>"
-	show_browser(src, dat, "Late Join", "latechoices", "size=420x700")
-
+	show_browser(src, dat, "Late Join", "latechoices", "size=420x[180 + len * 25]") // Sized to the number of jobs.
 
 /mob/new_player/proc/create_character(is_late_join = FALSE)
 	spawning = TRUE

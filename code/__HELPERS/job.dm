@@ -1,3 +1,5 @@
+#define GET_HUMAN_DEFAULT_ASSIGNMENT(H) (H.assigned_equipment_preset?.assignment || H.wear_id?.assignment || H.job || "Unassigned")
+
 /proc/get_all_jobs_titles()
 	var/all_jobs_titles[] = new
 	var/all_datums[] = typesof(/datum/job) - list(/datum/job)

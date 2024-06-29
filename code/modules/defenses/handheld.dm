@@ -138,6 +138,10 @@
 	icon_state = "UPP uac_sentry_handheld"
 	defense_type = /obj/structure/machinery/defenses/sentry/upp
 
+/obj/item/defenses/handheld/sentry/custom
+	name = "handheld UA 571-C 'Death Blossom' sentry gun"
+	deployment_time = 0.3 SECONDS
+	defense_type = /obj/structure/machinery/defenses/sentry/custom
 // FLAMER BASE AND UPGRADES
 /obj/item/defenses/handheld/sentry/flamer
 	name = "handheld UA 42-F sentry flamer"

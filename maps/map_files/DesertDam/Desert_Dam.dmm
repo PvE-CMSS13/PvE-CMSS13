@@ -3559,10 +3559,7 @@
 /turf/open/desert/rock,
 /area/desert_dam/exterior/valley/valley_crashsite)
 "akW" = (
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/desert_dam/interior/lab_northeast/east_lab_containment)
 "akX" = (
 /obj/structure/surface/table/reinforced,
@@ -61758,10 +61755,7 @@
 /area/desert_dam/exterior/valley/bar_valley_dam)
 "lNN" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/jungle{
-	bushes_spawn = 0;
-	icon_state = "grass_impenetrable"
-	},
+/turf/open/jungle/clear,
 /area/desert_dam/interior/lab_northeast/east_lab_containment)
 "lOM" = (
 /obj/effect/decal/sand_overlay/sand2/corner2,

@@ -64,6 +64,9 @@
 	QDEL_NULL_LIST(limbs)
 	if(hud_used)
 		QDEL_NULL(hud_used)
+
+	// Modify them in the datacore, if they are on it. Rip.
+	GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, species.manifest_dead)
 	. = ..()
 
 	overlays_standing = null
@@ -95,18 +98,21 @@
 	. = ..()
 
 	. += ""
-	. += "Security Level: [uppertext(get_security_level())]"
 
 	if(species?.has_species_tab_items)
 		var/list/species_tab_items = species.get_status_tab_items(src)
 		for(var/tab_item in species_tab_items)
 			. += tab_item
 
-	if(faction == FACTION_MARINE & !isnull(SSticker) && !isnull(SSticker.mode) && !isnull(SSticker.mode.active_lz) && !isnull(SSticker.mode.active_lz.loc) && !isnull(SSticker.mode.active_lz.loc.loc))
-		. += "Primary LZ: [SSticker.mode.active_lz.loc.loc.name]"
+	// Some information should only be available to those who are added to the manifest.
+	var/manifest_roles[] = GET_MANIFEST_ROLES
 
-	if(faction == FACTION_MARINE & !isnull(SSticker) && !isnull(SSticker.mode))
+	if((job in manifest_roles) & !isnull(SSticker) && !isnull(SSticker.mode))
+		. += "Security Level: [uppertext(get_security_level())]"
+		if(!isnull(SSticker.mode.active_lz) && !isnull(SSticker.mode.active_lz.loc) && !isnull(SSticker.mode.active_lz.loc.loc))
+			. += "Primary LZ: [SSticker.mode.active_lz.loc.loc.name]"
 		. += "Operation Name: [round_statistics.round_name]"
+		. += "<a href='?MapView=1'>View Tactical Map</a>"
 
 	if(assigned_squad)
 		if(assigned_squad.overwatch_officer)
@@ -115,9 +121,8 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in ROLES_USCM)
+	if(job in manifest_roles)
 		. += ""
-		. += "<a href='?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
 		. += "Active Order: MOVE"
 	if(protection_aura)
@@ -1076,11 +1081,10 @@
 	set name = "View Crew Manifest"
 	set category = "IC"
 
-	if(job in ROLES_USCM)
-		var/dat = GLOB.data_core.get_manifest()
-		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
+	if(job in GET_MANIFEST_ROLES) //This will prevent mobs that are not part of round start/added manually from viewing the manifest.
+		show_browser(src, GLOB.data_core.get_manifest(), "Crew Manifest", "manifest", "size=400x750")
 	else
-		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
+		to_chat(usr, SPAN_WARNING("You have no access to the crew manifest."))
 
 /mob/living/carbon/human/proc/set_species(new_species, default_colour)
 	if(!new_species)
@@ -1227,7 +1231,10 @@
 		TRACKER_CSL = /datum/squad/marine/charlie,
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
-		TRACKER_FSL = /datum/squad/marine/cryo
+		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_GFSL = /datum/squad/marine/ground_one,
+		TRACKER_GSSL = /datum/squad/marine/ground_two
+
 	)
 	switch(tracker_setting)
 		if(TRACKER_SL)
@@ -1251,9 +1258,15 @@
 		if(TRACKER_CO)
 			H = GLOB.marine_leaders[JOB_CO]
 			tracking_suffix = "_co"
+		if(TRACKER_OCO)
+			H = GLOB.marine_leaders[JOB_USCM_GROUND_CO]
+			tracking_suffix = "_oco"
 		if(TRACKER_XO)
 			H = GLOB.marine_leaders[JOB_XO]
 			tracking_suffix = "_xo"
+		if(TRACKER_AO)
+			H = GLOB.marine_leaders[JOB_USCM_GROUND_AO]
+			tracking_suffix = "_ao"
 		if(TRACKER_PLTCO)
 			H = GLOB.marine_leaders[JOB_SO]
 			tracking_suffix = "_co"

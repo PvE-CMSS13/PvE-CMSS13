@@ -7,7 +7,7 @@
 	icon_state = "light_1"
 	anchored = TRUE
 	density = FALSE
-	layer = FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 
 	// Vars used by vines with seed data.
 	var/age = 0
@@ -107,7 +107,7 @@
 			return
 
 		src.opacity = TRUE
-		layer = FLY_LAYER
+		layer = CEILING_FIXTURE_LAYER
 	else if(!limited_growth)
 		src.icon_state = pick("Hvy1", "Hvy2", "Hvy3")
 		energy = 2

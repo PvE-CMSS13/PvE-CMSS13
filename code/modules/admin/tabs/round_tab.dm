@@ -26,11 +26,11 @@
 	// note: This is a proof of concept. ideally, scenario parameters should all be changeable in the same UI, rather than writing snowflake code everywhere like this
 	if(!SSticker || SSticker.current_state < GAME_STATE_PLAYING || !SSticker.mode)
 		var/enabled = FALSE
-		if(SSnightmare.get_scenario_value("predator_round"))
+		if(SSnightmare.get_scenario_value("predator_round", NIGHTMARE_CTX_GLOBAL))
 			enabled = TRUE
 		var/ret = alert("Nightmare Scenario has the upcoming round being a [(enabled ? "PREDATOR" : "NORMAL")] round. Do you want to toggle this?", "Toggle Predator Round", "Yes", "No")
 		if(ret == "Yes")
-			SSnightmare.set_scenario_value("predator_round", !enabled)
+			SSnightmare.set_scenario_value("predator_round", !enabled, NIGHTMARE_CTX_GLOBAL)
 		return
 
 	var/datum/game_mode/predator_round = SSticker.mode
@@ -79,9 +79,7 @@
 	var/roles[] = new
 	var/datum/job/J
 
-	var/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/active_role_names = GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]

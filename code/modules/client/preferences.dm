@@ -162,7 +162,6 @@ var/const/MAX_SAVE_SLOTS = 10
 
 		//Some faction information.
 	var/origin = ORIGIN_USCM
-	var/faction = "None" //Antag faction/general associated faction.
 	var/religion = RELIGION_AGNOSTICISM  //Religious association.
 
 		//Mob preview
@@ -310,10 +309,9 @@ var/const/MAX_SAVE_SLOTS = 10
 	dat += "<a[current_menu == MENU_XENOMORPH ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_XENOMORPH]\"><b>Xenomorph</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_COMMANDER)
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
-	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-		dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
-	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
-		dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
+	//These do not need to be whitelisted anymore. Commander is unused, and mentor for obvious reasons.
+	dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
+	dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
 	if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_MENTOR)
 		dat += "<a[current_menu == MENU_MENTOR ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_MENTOR]\"><b>Mentor</b></a> - "
 	dat += "<a[current_menu == MENU_SETTINGS ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SETTINGS]\"><b>Settings</b></a> - "
@@ -495,53 +493,54 @@ var/const/MAX_SAVE_SLOTS = 10
 			else
 				dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_SYNTHETIC)
-			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
-				dat += "<div id='column1'>"
-				dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
-				dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
-				dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
-				dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
-				dat += "</div>"
-			else
-				dat += "<b>You do not have the whitelist for this role.</b>"
+			//if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_SYNTHETIC)
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Synthetic Settings:</u></b></h2>"
+			dat += "<b>Synthetic Name:</b> <a href='?_src_=prefs;preference=synth_name;task=input'><b>[synthetic_name]</b></a><br>"
+			dat += "<b>Synthetic Type:</b> <a href='?_src_=prefs;preference=synth_type;task=input'><b>[synthetic_type]</b></a><br>"
+			//dat += "<b>Synthetic Whitelist Status:</b> <a href='?_src_=prefs;preference=synth_status;task=input'><b>[synth_status]</b></a><br>"
+			dat += "</div>"
+			//else
+			//	dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_YAUTJA)
-			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
-				dat += "<div id='column1'>"
-				dat += "<h2><b><u>Yautja Information:</u></b></h2>"
-				dat += "<b>Yautja Name:</b> <a href='?_src_=prefs;preference=pred_name;task=input'><b>[predator_name]</b></a><br>"
-				dat += "<b>Yautja Gender:</b> <a href='?_src_=prefs;preference=pred_gender;task=input'><b>[predator_gender == MALE ? "Male" : "Female"]</b></a><br>"
-				dat += "<b>Yautja Age:</b> <a href='?_src_=prefs;preference=pred_age;task=input'><b>[predator_age]</b></a><br>"
-				dat += "<b>Yautja Quill Style:</b> <a href='?_src_=prefs;preference=pred_hair;task=input'><b>[predator_h_style]</b></a><br>"
-				dat += "<b>Yautja Skin Color:</b> <a href='?_src_=prefs;preference=pred_skin;task=input'><b>[predator_skin_color]</b></a><br>"
-				dat += "<b>Yautja Flavor Text:</b> <a href='?_src_=prefs;preference=pred_flavor_text;task=input'><b>[TextPreview(predator_flavor_text, 15)]</b></a><br>"
-				dat += "<b>Yautja Whitelist Status:</b> <a href='?_src_=prefs;preference=yautja_status;task=input'><b>[yautja_status]</b></a>"
-				dat += "</div>"
+			//if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_PREDATOR)
+			dat += "<div id='column1'>"
+			dat += "<h2><b><u>Yautja Information:</u></b></h2>"
+			dat += "<b>Yautja Name:</b> <a href='?_src_=prefs;preference=pred_name;task=input'><b>[predator_name]</b></a><br>"
+			dat += "<b>Yautja Gender:</b> <a href='?_src_=prefs;preference=pred_gender;task=input'><b>[predator_gender == MALE ? "Male" : "Female"]</b></a><br>"
+			dat += "<b>Yautja Age:</b> <a href='?_src_=prefs;preference=pred_age;task=input'><b>[predator_age]</b></a><br>"
+			dat += "<b>Yautja Quill Style:</b> <a href='?_src_=prefs;preference=pred_hair;task=input'><b>[predator_h_style]</b></a><br>"
+			dat += "<b>Yautja Skin Color:</b> <a href='?_src_=prefs;preference=pred_skin;task=input'><b>[predator_skin_color]</b></a><br>"
+			dat += "<b>Yautja Flavor Text:</b> <a href='?_src_=prefs;preference=pred_flavor_text;task=input'><b>[TextPreview(predator_flavor_text, 15)]</b></a><br>"
+			//dat += "<b>Yautja Whitelist Status:</b> <a href='?_src_=prefs;preference=yautja_status;task=input'><b>[yautja_status]</b></a>"
+			dat += "</div>"
 
-				dat += "<div id='column2'>"
-				dat += "<h2><b><u>Equipment Setup:</u></b></h2>"
-				if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_YAUTJA_LEGACY)
-					dat += "<b>Legacy Gear:</b> <a href='?_src_=prefs;preference=pred_use_legacy;task=input'><b>[predator_use_legacy]</b></a><br>"
-				dat += "<b>Translator Type:</b> <a href='?_src_=prefs;preference=pred_trans_type;task=input'><b>[predator_translator_type]</b></a><br>"
-				dat += "<b>Mask Style:</b> <a href='?_src_=prefs;preference=pred_mask_type;task=input'><b>([predator_mask_type])</b></a><br>"
-				dat += "<b>Armor Style:</b> <a href='?_src_=prefs;preference=pred_armor_type;task=input'><b>([predator_armor_type])</b></a><br>"
-				dat += "<b>Greave Style:</b> <a href='?_src_=prefs;preference=pred_boot_type;task=input'><b>([predator_boot_type])</b></a><br>"
-				dat += "<b>Mask Material:</b> <a href='?_src_=prefs;preference=pred_mask_mat;task=input'><b>[predator_mask_material]</b></a><br>"
-				dat += "<b>Armor Material:</b> <a href='?_src_=prefs;preference=pred_armor_mat;task=input'><b>[predator_armor_material]</b></a><br>"
-				dat += "<b>Greave Material:</b> <a href='?_src_=prefs;preference=pred_greave_mat;task=input'><b>[predator_greave_material]</b></a><br>"
-				dat += "<b>Caster Material:</b> <a href='?_src_=prefs;preference=pred_caster_mat;task=input'><b>[predator_caster_material]</b></a>"
-				dat += "</div>"
+			dat += "<div id='column2'>"
+			dat += "<h2><b><u>Equipment Setup:</u></b></h2>"
+			//My awesome pred armor is staying awesome and exclusive.
+			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_YAUTJA_LEGACY)
+				dat += "<b>Legacy Gear:</b> <a href='?_src_=prefs;preference=pred_use_legacy;task=input'><b>[predator_use_legacy]</b></a><br>"
+			dat += "<b>Translator Type:</b> <a href='?_src_=prefs;preference=pred_trans_type;task=input'><b>[predator_translator_type]</b></a><br>"
+			dat += "<b>Mask Style:</b> <a href='?_src_=prefs;preference=pred_mask_type;task=input'><b>([predator_mask_type])</b></a><br>"
+			dat += "<b>Armor Style:</b> <a href='?_src_=prefs;preference=pred_armor_type;task=input'><b>([predator_armor_type])</b></a><br>"
+			dat += "<b>Greave Style:</b> <a href='?_src_=prefs;preference=pred_boot_type;task=input'><b>([predator_boot_type])</b></a><br>"
+			dat += "<b>Mask Material:</b> <a href='?_src_=prefs;preference=pred_mask_mat;task=input'><b>[predator_mask_material]</b></a><br>"
+			dat += "<b>Armor Material:</b> <a href='?_src_=prefs;preference=pred_armor_mat;task=input'><b>[predator_armor_material]</b></a><br>"
+			dat += "<b>Greave Material:</b> <a href='?_src_=prefs;preference=pred_greave_mat;task=input'><b>[predator_greave_material]</b></a><br>"
+			dat += "<b>Caster Material:</b> <a href='?_src_=prefs;preference=pred_caster_mat;task=input'><b>[predator_caster_material]</b></a>"
+			dat += "</div>"
 
-				dat += "<div id='column3'>"
-				dat += "<h2><b><u>Clothing Setup:</u></b></h2>"
-				dat += "<b>Cape Type:</b> <a href='?_src_=prefs;preference=pred_cape_type;task=input'><b>[capitalize_first_letters(predator_cape_type)]</b></a><br>"
-				dat += "<b>Cape Color:</b> "
-				dat += "<a href='?_src_=prefs;preference=pred_cape_color;task=input'>"
-				dat += "<b>Color</b> <span class='square' style='background-color: [predator_cape_color];'></span>"
-				dat += "</a><br><br>"
-				dat += "<b>Background:</b> <a href ='?_src_=prefs;preference=cycle_bg'><b>Cycle Background</b></a>"
-				dat += "</div>"
-			else
-				dat += "<b>You do not have the whitelist for this role.</b>"
+			dat += "<div id='column3'>"
+			dat += "<h2><b><u>Clothing Setup:</u></b></h2>"
+			dat += "<b>Cape Type:</b> <a href='?_src_=prefs;preference=pred_cape_type;task=input'><b>[capitalize_first_letters(predator_cape_type)]</b></a><br>"
+			dat += "<b>Cape Color:</b> "
+			dat += "<a href='?_src_=prefs;preference=pred_cape_color;task=input'>"
+			dat += "<b>Color</b> <span class='square' style='background-color: [predator_cape_color];'></span>"
+			dat += "</a><br><br>"
+			dat += "<b>Background:</b> <a href ='?_src_=prefs;preference=cycle_bg'><b>Cycle Background</b></a>"
+			dat += "</div>"
+			//else
+			//	dat += "<b>You do not have the whitelist for this role.</b>"
 		if(MENU_MENTOR)
 			if(RoleAuthority.roles_whitelist[user.ckey] & WHITELIST_MENTOR)
 				dat += "<b>Nothing here. For now.</b>"
@@ -647,11 +646,15 @@ var/const/MAX_SAVE_SLOTS = 10
 	show_browser(user, dat, "Preferences", "preferencebrowser")
 	onclose(user, "preferencewindow", src)
 
-//limit - The amount of jobs allowed per column. Defaults to 13 to make it look nice.
+//limit - The amount of jobs allowed per column.
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
 //width - Screen' width.
 //height - Screen's height.
-/datum/preferences/proc/SetChoices(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 480, height = 450)
+#define PREF_COLUMN_LIMIT 20
+#define PREF_WIDTH 600
+#define PREF_HEIGHT_MIN 290 // Minimum height, otherwise things look goofy.
+#define PREF_HEIGHT 550
+/datum/preferences/proc/SetChoices(mob/user, limit = PREF_COLUMN_LIMIT, list/splitJobs = list(JOB_CHIEF_REQUISITION, JOB_WO_CMO), width = PREF_WIDTH, height = PREF_HEIGHT)
 	if(!RoleAuthority)
 		return
 
@@ -669,9 +672,14 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
-	var/list/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
+	var/len_of_roles = length(active_role_names)
+	switch(len_of_roles)
+		if(PREF_COLUMN_LIMIT+1 to INFINITY) // A lot of jobs? Make the window bigger.
+			width = 950
+			height = 750
+		if(1 to PREF_COLUMN_LIMIT) // Adjusts the height of the window based on the number of jobs, to an extent.
+			height = 22 * len_of_roles + PREF_HEIGHT_MIN
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -771,7 +779,7 @@ var/const/MAX_SAVE_SLOTS = 10
 //splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
 //width - Screen' width. Defaults to 550 to make it look nice.
 //height - Screen's height. Defaults to 500 to make it look nice.
-/datum/preferences/proc/set_job_slots(mob/user, limit = 19, list/splitJobs = list(JOB_CHIEF_REQUISITION), width = 950, height = 700)
+/datum/preferences/proc/set_job_slots(mob/user, limit = PREF_COLUMN_LIMIT, list/splitJobs = list(JOB_CHIEF_REQUISITION, JOB_WO_CMO), width = PREF_WIDTH, height = PREF_HEIGHT)
 	if(!RoleAuthority)
 		return
 
@@ -785,9 +793,14 @@ var/const/MAX_SAVE_SLOTS = 10
 
 	//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 
-	var/list/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
-	if(!active_role_names)
-		active_role_names = ROLES_DISTRESS_SIGNAL
+	var/list/active_role_names =  GET_CURRENT_MODE_ROLES || ROLES_DISTRESS_SIGNAL
+	var/len_of_roles = length(active_role_names)
+	switch(len_of_roles)
+		if(PREF_COLUMN_LIMIT+1 to INFINITY) // A lot of jobs? Make the window bigger.
+			width = 950
+			height = 750
+		if(1 to PREF_COLUMN_LIMIT) // Adjusts the height of the window based on the number of jobs, to an extent.
+			height = 22 * len_of_roles + PREF_HEIGHT_MIN
 
 	for(var/role_name as anything in active_role_names)
 		var/datum/job/job = RoleAuthority.roles_by_name[role_name]
@@ -843,6 +856,11 @@ var/const/MAX_SAVE_SLOTS = 10
 	show_browser(user, HTML, "Job Assignment", "job_slots_assignment", "size=[width]x[height]")
 	onclose(user, "job_slots_assignment", user.client, list("_src_" = "prefs", "preference" = "job_slot", "task" = "close"))
 	return
+
+#undef PREF_COLUMN_LIMIT
+#undef PREF_WIDTH
+#undef PREF_HEIGHT_MIN
+#undef PREF_HEIGHT
 
 /datum/preferences/proc/SetRecords(mob/user)
 	var/HTML = "<body onselectstart='return false;'>"
@@ -1639,7 +1657,7 @@ var/const/MAX_SAVE_SLOTS = 10
 						nanotrasen_relation = new_relation
 
 				if("prefsquad")
-					var/new_pref_squad = input(user, "Choose your preferred squad.", "Character Preference")  as null|anything in list("Alpha", "Bravo", "Charlie", "Delta", "None")
+					var/new_pref_squad = input(user, "Choose your preferred squad.", "Character Preference")  as null|anything in list(SQUAD_USCM_GROUND_1, SQUAD_USCM_GROUND_2)
 					if(new_pref_squad)
 						preferred_squad = new_pref_squad
 
@@ -1892,10 +1910,8 @@ var/const/MAX_SAVE_SLOTS = 10
 
 				if("ambientocclusion")
 					toggle_prefs ^= TOGGLE_AMBIENT_OCCLUSION
-					var/atom/movable/screen/plane_master/game_world/plane_master = locate() in user?.client.screen
-					if (!plane_master)
-						return
-					plane_master.backdrop(user?.client.mob)
+					var/atom/movable/screen/plane_master/rendering_plate/foreground/plane_master = locate() in user?.client.screen
+					plane_master?.backdrop(user?.client.mob)
 
 				if("auto_fit_viewport")
 					auto_fit_viewport = !auto_fit_viewport
@@ -2093,7 +2109,6 @@ var/const/MAX_SAVE_SLOTS = 10
 	character.f_style = f_style
 
 	character.origin = origin
-	character.personal_faction = faction
 	character.religion = religion
 
 	// Destroy/cyborgize organs

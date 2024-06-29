@@ -18,6 +18,7 @@
 	var/a_id = null
 	var/temp = null
 	var/printing = null
+	var/factions = list(FACTION_MARINE)
 
 /obj/structure/machinery/computer/med_data/verb/eject_id()
 	set category = "Object"
@@ -73,7 +74,8 @@
 					dat += "<B>Record List</B>:<HR>"
 					if(!isnull(GLOB.data_core.general))
 						for(var/datum/data/record/R in sortRecord(GLOB.data_core.general))
-							dat += text("<A href='?src=\ref[];d_rec=\ref[]'>[]: []<BR>", src, R, R.fields["id"], R.fields["name"])
+							if(R.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+								dat += text("<A href='?src=\ref[];d_rec=\ref[]'>[]: []<BR>", src, R, R.fields["id"], R.fields["name"])
 							//Foreach goto(132)
 					dat += text("<HR><A href='?src=\ref[];screen=1'>Back</A>", src)
 				if(3.0)
@@ -213,10 +215,13 @@
 				src.temp = text("Are you sure you wish to delete all records?<br>\n\t<A href='?src=\ref[];temp=1;del_all2=1'>Yes</A><br>\n\t<A href='?src=\ref[];temp=1'>No</A><br>", src, src)
 
 			if (href_list["del_all2"])
-				for(var/datum/data/record/R as anything in GLOB.data_core.medical)
-					GLOB.data_core.medical -= R
-					qdel(R)
-					//Foreach goto(494)
+				for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+					if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+						for(var/datum/data/record/medical_record as anything in GLOB.data_core.medical)
+							if(general_record.fields["name"] == medical_record.fields["name"] && general_record.fields["id"] == medical_record.fields["id"])
+								GLOB.data_core.medical -= medical_record
+								qdel(medical_record)
+
 				src.temp = "All records deleted."
 
 			if (href_list["field"])
@@ -450,7 +455,7 @@
 					else
 						P.info += "<B>Medical Record Lost!</B><BR>"
 					P.info += "</TT>"
-					P.info += text("<BR><HR><font size = \"1\"><I>This report was printed by [] [].<BR>The [MAIN_SHIP_NAME],[]/[], []</I></font><BR>\n<span class=\"paper_field\"></span>",last_user_rank,last_user_name,time2text(world.timeofday, "MM/DD"),game_year,worldtime2text())
+					P.info += text("<BR><HR><font size = \"1\"><I>This report was printed by [] [].<BR>The governing medical body,[]/[], []</I></font><BR>\n<span class=\"paper_field\"></span>",last_user_rank,last_user_name,time2text(world.timeofday, "MM/DD"),game_year,worldtime2text())
 					src.printing = null
 
 			if(href_list["print_bs"])//Prints latest body scan
@@ -473,7 +478,7 @@
 								break
 							else
 								P.info += "No scan on record."
-					P.info += text("<BR><HR><font size = \"1\"><I>This report was printed by [] [].<BR>The [MAIN_SHIP_NAME],  []/[], []</I></font><BR>\n<span class=\"paper_field\"></span>",last_user_rank,last_user_name,time2text(world.timeofday, "MM/DD"),game_year,worldtime2text())
+					P.info += text("<BR><HR><font size = \"1\"><I>This report was printed by [] [].<BR>The governing medical body,  []/[], []</I></font><BR>\n<span class=\"paper_field\"></span>",last_user_rank,last_user_name,time2text(world.timeofday, "MM/DD"),game_year,worldtime2text())
 					src.printing = null
 
 
@@ -487,27 +492,30 @@
 	if(inoperable())
 		return
 
-	for(var/datum/data/record/R as anything in GLOB.data_core.medical)
-		if(prob(10/severity))
-			switch(rand(1,6))
-				if(1)
-					R.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
-				if(2)
-					R.fields["sex"] = pick("Male", "Female")
-				if(3)
-					R.fields["age"] = rand(5, 85)
-				if(4)
-					R.fields["b_type"] = pick("A-", "B-", "AB-", "O-", "A+", "B+", "AB+", "O+")
-				if(5)
-					R.fields["p_stat"] = pick("*SSD*", "Active", "Physically Unfit", "Disabled")
-				if(6)
-					R.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
-			continue
+	for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+		if(general_record.fields["mob_faction"] in factions)
+			for(var/datum/data/record/medical_record as anything in GLOB.data_core.medical)
+				if (general_record.fields["name"] == medical_record.fields["name"] && general_record.fields["id"] == medical_record.fields["id"])
+					if(prob(10/severity))
+						switch(rand(1,6))
+							if(1)
+								medical_record.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
+							if(2)
+								medical_record.fields["sex"] = pick("Male", "Female")
+							if(3)
+								medical_record.fields["age"] = rand(5, 85)
+							if(4)
+								medical_record.fields["b_type"] = pick("A-", "B-", "AB-", "O-", "A+", "B+", "AB+", "O+")
+							if(5)
+								medical_record.fields["p_stat"] = pick("*SSD*", "Active", "Physically Unfit", "Disabled")
+							if(6)
+								medical_record.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
+						continue
 
-		else if(prob(1))
-			GLOB.data_core.medical -= R
-			qdel(R)
-			continue
+					else if(prob(1))
+						GLOB.data_core.medical -= medical_record
+						qdel(medical_record)
+						continue
 
 
 /obj/structure/machinery/computer/med_data/laptop
@@ -515,3 +523,9 @@
 	desc = "Cheap Weyland-Yutani Laptop."
 	icon_state = "medlaptop"
 	density = FALSE
+
+/obj/structure/machinery/computer/med_data/uscm_ground
+	icon_state = "medlaptop"
+	req_one_access = null
+	req_access = list(ACCESS_USCM_GROUND_MEDICAL)
+	factions = list(FACTION_USCM_GROUND)

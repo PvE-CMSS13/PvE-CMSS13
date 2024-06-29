@@ -56,3 +56,5 @@
 // Other vehicle flags
 /// Vehicle can bypass vehicle blockers, typically going further into maps than intended
 #define VEHICLE_BYPASS_BLOCKERS (1<<5)
+#define VEHICLE_BYPASS_STAIRS (1<<6) //Multi-tile vehicles need this toggled to bypass stairs, otherwise they won't be able to move through them.
+#define VEHICLE_BYPASS_DEEP_WATER (1<<7) //Similar to above. Vehicles should use bridges to get across deep water. Tanks get this for free.

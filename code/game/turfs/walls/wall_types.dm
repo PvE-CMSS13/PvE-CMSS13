@@ -12,7 +12,7 @@
 	damage = 0
 	damage_cap = HEALTH_WALL //Wall will break down to girders if damage reaches this point
 
-	max_temperature = 18000 //K, walls will take damage if they're next to a fire hotter than this
+	max_temperature = MELTPOINT_STEEL //K, walls will take damage if they're next to a fire hotter than this
 
 	opacity = TRUE
 	density = TRUE
@@ -58,6 +58,7 @@
 	desc = "A reinforced metal wall used to separate rooms and make up the ship."
 	damage_cap = HEALTH_WALL_REINFORCED
 	icon_state = "reinforced"
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/almayer/outer
 	name = "outer hull"
@@ -65,6 +66,7 @@
 	icon_state = "hull" //Codersprite to make it more obvious in the map maker what's a hull wall and what's not
 	//icon_state = "testwall0_debug" //Uncomment to check hull in the map editor.
 	walltype = WALL_HULL
+	max_temperature = MELTPOINT_TITANIUM
 	hull = 1 //Impossible to destroy or even damage. Used for outer walls that would breach into space, potentially some special walls
 
 /turf/closed/wall/almayer/no_door_tile
@@ -82,6 +84,7 @@
 	name = "reinforced hull"
 	damage_cap = HEALTH_WALL_REINFORCED
 	icon_state = "reinforced"
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/almayer/white/outer_tile
 	tiles_with = list(/turf/closed/wall/almayer/white,/turf/closed/wall/almayer/outer)
@@ -91,6 +94,7 @@
 	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas"
 	hull = 1
 	icon_state = "hull"
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/almayer/research/can_be_dissolved()
 	return 0
@@ -101,6 +105,7 @@
 	tiles_with = null
 	walltype = null
 	special_icon = 1
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/almayer/research/containment/wall/ex_act(severity, explosion_direction)
 	if(severity <= EXPLOSION_THRESHOLD_MEDIUM) // Wall is resistant to explosives (and also crusher charge)
@@ -204,17 +209,16 @@
 	desc = "A metal wall used to separate rooms on spaceships from the cold void of space."
 	icon = 'icons/turf/walls/walls.dmi'
 	icon_state = "sulaco"
+	max_temperature = MELTPOINT_TITANIUM
 	hull = 0 //Can't be deconstructed
 
 	damage_cap = HEALTH_WALL
-	max_temperature = 28000 //K, walls will take damage if they're next to a fire hotter than this
 	walltype = WALL_SULACO //Changes all the sprites and icons.
 
 /turf/closed/wall/sulaco/hull
 	name = "outer hull"
 	desc = "A reinforced outer hull, probably to prevent breaches"
 	hull = 1
-	max_temperature = 50000 // Nearly impossible to melt
 	walltype = WALL_SULACO
 
 
@@ -222,7 +226,6 @@
 	name = "outer hull"
 	desc = "A reinforced outer hull, probably to prevent breaches"
 	hull = 1
-	max_temperature = 50000 // Nearly impossible to melt
 	walltype = WALL_SULACO
 
 
@@ -293,6 +296,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/stone.dmi'
 	icon_state = "stone"
 	walltype = WALL_STONE
+	flags_turf = TURF_NATURAL
 	var/mineral
 	var/last_event = 0
 	var/active = null
@@ -305,6 +309,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "gold0"
 	walltype = WALL_GOLD
 	mineral = "gold"
+	max_temperature = MELTPOINT_GOLD
 	//var/electro = 1
 	//var/shocked = null
 
@@ -313,6 +318,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A wall with silver plating. Shiny!"
 	mineral = "silver"
 	color = "#e5e5e5"
+	max_temperature = MELTPOINT_SILVER
 	//var/electro = 0.75
 	//var/shocked = null
 
@@ -408,6 +414,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_BONE_RESIN
 	hull = 1
 	desc = "A wall made of molted old resin. This place is more alive than you are."
+	max_temperature = MELTPOINT_BONE
 
 /turf/closed/wall/mineral/bone/is_weedable()
 	return NOT_WEEDABLE
@@ -420,10 +427,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/cult.dmi'
 	icon_state = "cult"
 	walltype = WALL_CULT
+	flags_turf = TURF_NATURAL //Not really natural, but close enough.
 	color = "#3c3434"
-
-/turf/closed/wall/cult/make_girder(destroyed_girder)
-	return
 
 /turf/closed/wall/vault
 	icon_state = "rockvault"
@@ -439,6 +444,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/hangar.dmi'
 	icon_state = "hangar"
 	walltype = WALL_HANGAR
+	max_temperature = MELTPOINT_TITANIUM
 
 //Prison wall
 
@@ -464,6 +470,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "wood"
 	walltype = WALL_WOOD
 	baseturfs = /turf/open/floor/wood
+	max_temperature = MELTPOINT_WOOD
 
 /turf/closed/wall/wood/update_icon()
 	..()
@@ -477,20 +484,32 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 //Colorable rocks. Looks like moonsand.
 
 /turf/closed/wall/rock
-	name = "rock wall"
+	name = "dense rock wall"
 	icon = 'icons/turf/walls/cave.dmi'
 	icon_state = "cavewall"
-	desc = "A rough wall of hardened rock."
+	desc = "Exceptionally rough wall of hardened rock."
 	walltype = WALL_CAVE
+	flags_turf = TURF_NATURAL
 	hull = 1
 	color = "#535963"
 
 /turf/closed/wall/rock/brown
 	color = "#826161"
 
+//Hardcoded and awful, but I don't see a reason to refactor anything at the moment. In case of refactor, see resin walls and jungle walls.
+/turf/closed/wall/rock/brown/destructible
+	name = "rock wall"
+	desc = "A rough wall of rock."
+	icon_state = "cavewall_destructible"
+	damage_cap = HEALTH_WALL_ROCK
+	repair_materials = list()
+	baseturfs = /turf/open/gm/dirt
+	//Originally made it a different color, but I wasn't satisfied with the it. Having different-colored rocks tile together looks odd. Ideally the sprite itself should be a little different, as with metal walls.
+	hull = FALSE
+
 /turf/closed/wall/rock/orange
 	color = "#994a16"
-	desc = "A rough wall of granite and sandstone."
+	desc = "Exceptionally rough wall of granite and sandstone."
 
 /turf/closed/wall/rock/red
 	color = "#822d21"
@@ -502,6 +521,23 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/rock/ice/thin
 	alpha = 166
 
+/turf/closed/wall/rock/underground
+	name = "dense dirt wall"
+	desc = "Exceptionally rough wall of hardened dirt."
+	color = "#675a48"
+
+/turf/closed/wall/rock/destructible
+	name = "rock wall"
+	desc = "A rough wall of rock."
+	icon_state = "cavewall_destructible"
+	damage_cap = HEALTH_WALL_ROCK
+	repair_materials = list()
+	baseturfs = /turf/open/gm/dirt
+	//Originally made it a different color, but I wasn't satisfied with the it. Having different-colored rocks tile together looks odd. Ideally the sprite itself should be a little different, as with metal walls.
+	hull = FALSE
+
+
+
 //Strata New Blendy Ice
 
 /turf/closed/wall/strata_ice
@@ -510,7 +546,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "strata_ice"
 	desc = "An absolutely massive collection of columns made of ice. The longer you stare, the deeper the ice seems to go."
 	walltype = WALL_STRATA_ICE //Not a metal wall
+	flags_turf = TURF_NATURAL
 	hull = 1 //Can't break this ice.
+	max_temperature = MELTPOINT_ICE
 
 /turf/closed/wall/strata_ice/dirty
 	icon_state = "strata_ice_dirty"
@@ -523,7 +561,19 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "jungle_veg"
 	desc = "Exceptionally dense vegetation that you can't see through."
 	walltype = WALL_JUNGLE_UPDATED //Not a metal wall
+	flags_turf = TURF_ORGANIC|TURF_NATURAL
+	max_temperature = MELTPOINT_BIOLOGICAL
 	hull = 1
+
+/turf/closed/wall/strata_ice/jungle/destructible
+	name = "jungle flora"
+	desc = "Dense jungle flora that you can't see through."
+	icon_state = "jungle_veg_destructible"
+	damage_cap = HEALTH_WALL_JUNGLE
+	repair_materials = list()
+	baseturfs = /turf/open/jungle/clear
+	//Had a different color, but it looked off. As with rocks, better to have a slightly different sprite.
+	hull = FALSE
 
 /turf/closed/wall/strata_outpost_ribbed //this guy is our reinforced replacement
 	name = "ribbed outpost walls"
@@ -532,7 +582,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall covered in jagged ribs."
 	walltype = WALL_STRATA_OUTPOST_RIBBED
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 28000
+	max_temperature = MELTPOINT_TUNGSTEN
 
 /turf/closed/wall/strata_outpost
 	name = "bare outpost walls"
@@ -540,6 +590,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "strata_bare_outpost_"
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
 	walltype = WALL_STRATA_OUTPOST_BARE
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/strata_outpost/reinforced
 	name = "ribbed outpost walls"
@@ -547,7 +598,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall covered in jagged ribs."
 	walltype = WALL_STRATA_OUTPOST_RIBBED
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 28000
+	max_temperature = MELTPOINT_TUNGSTEN
 
 /turf/closed/wall/strata_outpost/reinforced/hull
 	hull = 1
@@ -562,13 +613,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "solaris_interior"
 	desc = "Tough looking walls that have been blasted by sand since the day they were erected. A testament to human willpower."
 	walltype = WALL_SOLARIS
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/solaris/reinforced
 	name = "reinforced colony wall"
 	icon_state = "solaris_interior_r"
 	walltype = WALL_SOLARISR
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 28000
+	max_temperature = MELTPOINT_TUNGSTEN
 
 /turf/closed/wall/solaris/reinforced/hull
 	name = "heavy reinforced colony wall"
@@ -582,7 +634,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	name = "rock wall"
 	icon_state = "solaris_rock"
 	walltype = WALL_SOLARIS_ROCK
+	flags_turf = TURF_NATURAL
 	hull = 1
+	max_temperature = MELTPOINT_ROCK
 
 
 
@@ -594,6 +648,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "devwall"
 	desc = "Just like in the orange box!"
 	walltype = WALL_DEVWALL
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/dev/reinforced
 	name = "greybox reinforced wall"
@@ -601,7 +656,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "Just like in the orange box! This one is reinforced"
 	walltype = WALL_DEVWALL_R
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 28000
+	max_temperature = MELTPOINT_TUNGSTEN
 
 /turf/closed/wall/dev/reinforced/hull
 	name = "greybox hull wall"
@@ -616,6 +671,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/kutjevo/kutjevo.dmi'
 	icon_state = "rock"
 	walltype = WALL_KUTJEVO_ROCK
+	flags_turf = TURF_NATURAL
 	hull = 1
 
 /turf/closed/wall/kutjevo/rock/border
@@ -628,6 +684,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "colony"
 	desc = "Dusty worn down walls that were once built to last."
 	walltype = WALL_KUTJEVO_COLONY
+	max_temperature = MELTPOINT_STEEL
 
 /turf/closed/wall/kutjevo/colony/reinforced
 	name = "reinforced colony wall"
@@ -635,7 +692,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "Dusty worn down walls that were once built to last. This one is reinforced"
 	walltype = WALL_KUTJEVO_COLONYR
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 28000
+	max_temperature = MELTPOINT_TITANIUM
 
 /turf/closed/wall/kutjevo/colony/reinforced/hull
 	icon_state = "colonyh"
@@ -652,7 +709,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "shiva_ice"
 	desc = "Slabs on slabs of dirty black ice crusted over ancient rock formations. The permafrost fluctuates between 20in and 12in during the summer months."
 	walltype = WALL_SHIVA_ICE //Not a metal wall
+	flags_turf = TURF_NATURAL
 	hull = 1 //Can't break this ice.
+	max_temperature = MELTPOINT_ICE
 
 /turf/closed/wall/shiva/prefabricated
 	name = "prefabricated structure wall"
@@ -660,6 +719,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "This structure is made of metal support rods and robust poly-kevlon plastics. A derivative of the stuff used in UA ballistics vests, USCM and UPP uniforms. These walls are pulled taught and have been reinforced into a more permanent structure."
 	walltype = WALL_SHIVA_FAB
 	damage_cap = HEALTH_WALL
+	max_temperature = MELTPOINT_PLASTIC
 
 /turf/closed/wall/shiva/prefabricated/reinforced
 	name = "reinforced prefabricated structure wall"
@@ -713,6 +773,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	var/should_track_build = FALSE
 	var/datum/cause_data/construction_data
 	flags_turf = TURF_ORGANIC
+	max_temperature = MELTPOINT_BIOLOGICAL
 
 /turf/closed/wall/resin/Initialize(mapload)
 	. = ..()
@@ -738,9 +799,6 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/resin/proc/set_resin_builder(mob/M)
 	if(istype(M) && should_track_build)
 		construction_data = create_cause_data(initial(name), M)
-
-/turf/closed/wall/resin/make_girder()
-	return
 
 /turf/closed/wall/resin/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
 	take_damage(dam)
@@ -1259,7 +1317,6 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	damage_cap = HEALTH_WALL_XENO_WEAK
 	var/duration = 5 SECONDS
 
-
 /turf/closed/wall/resin/weak/Initialize(mapload, ...)
 	. = ..()
 	if(mapload)
@@ -1278,6 +1335,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "metal"//DMI specific name
 	walltype = WALL_HUNTERSHIP
 	hull = 1
+	max_temperature = MELTPOINT_TUNGSTEN
 
 /turf/closed/wall/huntership/destructible
 	name = "degraded hunter wall"

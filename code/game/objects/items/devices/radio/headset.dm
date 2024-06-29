@@ -32,8 +32,10 @@
 	var/last_multi_broadcast = -999
 	var/multibroadcast_cooldown = HIGH_MULTIBROADCAST_COOLDOWN
 
+	//A lot of this stuff should be converted into flags.
 	var/has_hud = FALSE
 	var/headset_hud_on = FALSE
+	var/squad_headset = FALSE //Self-sets the frequency when marines get placed/transferred into a squad.
 	var/locate_setting = TRACKER_SL
 	var/misc_tracking = FALSE
 	var/hud_type = MOB_HUD_FACTION_USCM
@@ -352,14 +354,15 @@
 	var/z_level = turf_gotten.z
 
 	if(wearer.assigned_equipment_preset.always_minimap_visible == TRUE || wearer.stat == DEAD) //We show to all marines if we have this flag, separated by faction
-		if(hud_type == MOB_HUD_FACTION_USCM)
-			marker_flags = MINIMAP_FLAG_USCM
-		else if(hud_type == MOB_HUD_FACTION_UPP)
-			marker_flags = MINIMAP_FLAG_UPP
-		else if(hud_type == MOB_HUD_FACTION_PMC)
-			marker_flags = MINIMAP_FLAG_PMC
-		else if(hud_type == MOB_HUD_FACTION_CLF)
-			marker_flags = MINIMAP_FLAG_CLF
+		switch(hud_type)
+			if(MOB_HUD_FACTION_USCM)
+				marker_flags = MINIMAP_FLAG_USCM
+			if(MOB_HUD_FACTION_UPP)
+				marker_flags = MINIMAP_FLAG_UPP
+			if(MOB_HUD_FACTION_PMC)
+				marker_flags = MINIMAP_FLAG_PMC
+			if(MOB_HUD_FACTION_CLF)
+				marker_flags = MINIMAP_FLAG_CLF
 
 	if(wearer.undefibbable)
 		set_undefibbable_on_minimap(z_level, marker_flags)
@@ -592,6 +595,7 @@
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
 	frequency = ALPHA_FREQ
+	squad_headset = TRUE
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
@@ -775,6 +779,99 @@
 	initial_keys = list(/obj/item/device/encryptionkey/mortar)
 	volume = RADIO_VOLUME_RAISED
 
+
+//############################## USCM GROUND ###############################
+
+/obj/item/device/radio/headset/uscm_ground
+	name = "outpost radio headset"
+	desc = "A standard military radio headset. Configured for USCM outpost use only."
+	icon_state = "generic_headset"
+	item_state = "headset"
+	frequency = USCM_GROUND_FREQ
+	has_hud = TRUE
+	inbuilt_tracking_options = list(
+		JOB_USCM_GROUND_SQUAD_LEADER = TRACKER_SL,
+		JOB_USCM_GROUND_SQUAD_TEAM_LEADER = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
+//Marine headsets have the hud installed. Also, I got tired of configuring frequencies. So it does that automatically, but only for squad headsets.
+/obj/item/device/radio/headset/uscm_ground/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+
+	if(squad_headset && user.assigned_squad)
+		frequency = user.assigned_squad.radio_freq
+		set_frequency(frequency) //Voila based and awesome.
+		name = "[initial(name)] - [uppertext(user.assigned_squad.name)]"
+
+		if( (user == user.assigned_squad.fireteam_leaders["SQ1"] || user == user.assigned_squad.fireteam_leaders["SQ2"]) && (JOB_USCM_GROUND_SQUAD_LEADER in tracking_options) )
+			locate_setting = tracking_options[JOB_USCM_GROUND_SQUAD_LEADER]
+		else if(((user in user.assigned_squad.fireteams["SQ1"]) || (user in user.assigned_squad.fireteams["SQ2"])) && (JOB_USCM_GROUND_SQUAD_TEAM_LEADER in tracking_options))
+			locate_setting = tracking_options[JOB_USCM_GROUND_SQUAD_TEAM_LEADER]
+
+/obj/item/device/radio/headset/uscm_ground/marine
+	name = "outpost marine radio headset"
+	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	frequency = USCM_GROUND_ONE_FREQ
+	squad_headset = TRUE
+
+/obj/item/device/radio/headset/uscm_ground/marine/lead
+	name = "outpost lead radio headset"
+	desc = "An outpost platoon leader headset. Allows access to: .v - Outpost Command. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	initial_keys = list(/obj/item/device/encryptionkey/public/uscm_ground, /obj/item/device/encryptionkey/squadlead/uscm_ground)
+	volume = RADIO_VOLUME_IMPORTANT
+
+/obj/item/device/radio/headset/uscm_ground/marine/tl
+	name = "outpost team lead radio headset"
+	desc = "An outpost team leader radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	volume = RADIO_VOLUME_RAISED
+
+/obj/item/device/radio/headset/uscm_ground/marine/med
+	name = "outpost corpsman radio headset"
+	desc = "An outpost corpsman radio headset. Allows access to: .m - Outpost Medical. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	initial_keys = list(/obj/item/device/encryptionkey/public/uscm_ground, /obj/item/device/encryptionkey/med/uscm_ground)
+
+//Currently unused.
+/obj/item/device/radio/headset/uscm_ground/marine/engi
+	name = "outpost engineer radio headset"
+	desc = "An outpost engineer radio headset. Allows access to: .n - Outpost Engineering. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
+	initial_keys = list(/obj/item/device/encryptionkey/public/uscm_ground, /obj/item/device/encryptionkey/engi/uscm_ground)
+
+//Command headset should not have a hud.
+/obj/item/device/radio/headset/uscm_ground/cmd
+	name = "outpost command radio headset"
+	desc = "Used by outpost officers, features a non-standard brace. Allows access to all outpost channels: .v - Command, .m - Medical, .n - Engineering, .g - General, .e - First Platoon, .f - Second Platoon."
+	icon_state = "mcom_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/mcom/uscm_ground)
+	volume = RADIO_VOLUME_CRITICAL
+	multibroadcast_cooldown = LOW_MULTIBROADCAST_COOLDOWN
+
+/*
+I can't seem to find a way to properly express this with the preprocessor.
+Doing something like #define space_conc(x,y) x y means the list expects spacing, throwing compile errors..
+Wish I could plug SQUAD_USCM_GROUND_1, PLATOONL into it so that the naming would be set without having
+manually express it. But I don't see how that is possible; not to mention initializing lists outside of
+runtime is pretty bad already.
+Still, just the name of the platoon should make it easy enough to understand what the tracker will point to.
+*/
+
+/obj/item/device/radio/headset/uscm_ground/cmd/synth
+	name = "outpost synth headset"
+	desc = "Issued only to USCM outpost synthetics. Allows access to most outpost radio channels: .v - Command, .m - Medical, .n - Engineering, .g - General."
+	icon_state = "ms_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/cmpcom/synth/uscm_ground)
+	volume = RADIO_VOLUME_RAISED
+	misc_tracking = TRUE
+	locate_setting = TRACKER_OCO
+
+	inbuilt_tracking_options = list(
+		JOB_USCM_GROUND_CO = TRACKER_OCO,
+		JOB_USCM_GROUND_AO = TRACKER_AO,
+		"Landing Zone" = TRACKER_LZ,
+		SQUAD_USCM_GROUND_1 = TRACKER_GFSL,
+		SQUAD_USCM_GROUND_2 = TRACKER_GSSL,
+	)
+
 //*************************************
 //-----SELF SETTING MARINE HEADSET-----
 //*************************************/
@@ -815,7 +912,7 @@
 				icon_state = "alpha_headset"
 				frequency = ALPHA_FREQ
 
-			switch(GET_DEFAULT_ROLE(H.job))
+			switch(GET_SQUAD_ROLE_MAP(H.job))
 				if(JOB_SQUAD_LEADER)
 					name = "marine leader " + name
 					keys += new /obj/item/device/encryptionkey/squadlead(src)

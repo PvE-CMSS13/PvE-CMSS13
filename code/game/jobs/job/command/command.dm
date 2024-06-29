@@ -3,6 +3,7 @@
 	supervisors = "the acting commanding officer"
 	total_positions = 1
 	spawn_positions = 1
+	category = JOB_CATEGORY_CIC
 
 /datum/timelock/command
 	name = "Command Roles"

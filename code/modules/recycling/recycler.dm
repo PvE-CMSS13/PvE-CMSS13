@@ -19,6 +19,10 @@
 /obj/structure/machinery/recycler/whiskey
 	crate_reward = 15000 //  Boosted reward (4 sheets) to make up for workload and the fact you can't sell them
 
+/obj/structure/machinery/recycler/uscm_ground
+	icon_state = "grinder-o1"
+	recycle_dir = WEST
+
 /obj/structure/machinery/recycler/Initialize(mapload, ...)
 	. = ..()
 	update_icon()
@@ -29,7 +33,8 @@
 
 /obj/structure/machinery/recycler/update_icon()
 	. = ..()
-	icon_state = "separator-AO[(inoperable()) ? "0":"1"]"
+	//Copy the text for everything but the end character, and then change icon depending on whether or not the thing is working.
+	icon_state = "[copytext(icon_state, 1, length(icon_state))][!inoperable()]"
 
 /obj/structure/machinery/recycler/Collided(atom/movable/movable)
 	if(inoperable())

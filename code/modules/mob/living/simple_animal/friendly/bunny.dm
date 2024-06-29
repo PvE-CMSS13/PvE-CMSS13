@@ -5,6 +5,7 @@
 	icon_state = "bunny"
 	icon_living = "bunny"
 	icon_dead = "bunny_dead"
+	mob_size = MOB_SIZE_SMALL
 	emote_hear = list("purrs", "hums", "squeaks")
 	emote_see = list("flaps their ears", "sniffs")
 	speak_chance = 1

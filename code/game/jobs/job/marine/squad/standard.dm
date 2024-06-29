@@ -5,6 +5,7 @@
 
 /datum/job/marine/standard
 	title = JOB_SQUAD_MARINE
+	squad_root_title = JOB_SQUAD_MARINE
 	total_positions = -1
 	spawn_positions = -1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
@@ -24,6 +25,16 @@
 		gear_preset = gear_preset_secondary
 	else
 		gear_preset = initial(gear_preset)
+
+/datum/job/marine/standard/uscm_ground
+	title = JOB_USCM_GROUND_SQUAD_MARINE
+	total_positions = 8
+	spawn_positions = 8
+	gear_preset = /datum/equipment_preset/uscm/pfc/uscm_ground
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/uscm_ground/lesser_rank
+
+/datum/job/marine/standard/ai/uscm_ground/set_spawn_positions(count)
+	return spawn_positions
 
 /datum/job/marine/standard/whiskey
 	title = JOB_WO_SQUAD_MARINE
@@ -51,9 +62,14 @@
 	icon_state = "marine_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/uscm_ground
+	name = JOB_USCM_GROUND_SQUAD_MARINE
+	job = /datum/job/marine/standard/uscm_ground
+
 /datum/job/marine/standard/ai
 	total_positions = 4
 	spawn_positions = 4
+	squad_default_path = /datum/squad/marine/alpha
 
 /datum/job/marine/standard/ai/set_spawn_positions(count)
 	return spawn_positions
@@ -62,6 +78,7 @@
 	title = JOB_SQUAD_MARINE_UPP
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
+	squad_default_path = /datum/squad/marine/upp
 
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
@@ -69,13 +86,16 @@
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
+	squad_default_path = /datum/squad/marine/forecon
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
 	spawn_positions = 1
+	squad_root_title = null//Special case.
 	title = JOB_SQUAD_RTO
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
+	squad_default_path = /datum/squad/marine/forecon
 
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP

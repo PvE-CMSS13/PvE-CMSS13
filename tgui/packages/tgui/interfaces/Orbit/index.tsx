@@ -29,7 +29,16 @@ export const Orbit = (props, context) => {
 /** Controls filtering out the list of observables via search */
 const ObservableSearch = (props, context) => {
   const { act, data } = useBackend<OrbitData>(context);
-  const { humans = [], marines = [], survivors = [], xenos = [] } = data;
+  const {
+    humans = [],
+    marines = [],
+    weyland = [],
+    upp = [],
+    clf = [],
+    twe = [],
+    survivors = [],
+    xenos = [],
+  } = data;
 
   let auto_observe = data.auto_observe;
 
@@ -55,7 +64,7 @@ const ObservableSearch = (props, context) => {
       // Sorts descending by orbiters
       sortBy<Observable>((observable) => -(observable.orbiters || 0)),
       // Makes a single Observables list for an easy search
-    ])([humans, marines, survivors, xenos].flat())[0];
+    ])([humans, marines, weyland, upp, clf, twe, survivors, xenos].flat())[0];
     if (mostRelevant !== undefined) {
       act('orbit', {
         ref: mostRelevant.ref,
@@ -115,6 +124,10 @@ const ObservableContent = (props, context) => {
   const {
     humans = [],
     marines = [],
+    weyland = [],
+    upp = [],
+    twe = [],
+    clf = [],
     survivors = [],
     xenos = [],
     ert_members = [],
@@ -132,11 +145,15 @@ const ObservableContent = (props, context) => {
   return (
     <Stack vertical>
       <ObservableSection color="blue" section={marines} title="Marines" />
+      <ObservableSection color="average" section={weyland} title="Wey-Yu" />
+      <ObservableSection color="dark-green" section={upp} title="UPP" />
+      <ObservableSection color="dark-blue" section={twe} title="TWE" />
+      <ObservableSection color="brown" section={clf} title="CLF" />
       <ObservableSection color="teal" section={humans} title="Humans" />
       <ObservableSection color="xeno" section={xenos} title="Xenomorphs" />
       <ObservableSection color="good" section={survivors} title="Survivors" />
       <ObservableSection
-        color="average"
+        color="grey"
         section={ert_members}
         title="ERT Members"
       />

@@ -87,10 +87,9 @@
 
 /obj/structure/barricade/deployable/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
-	if(PF)
-		PF.flags_can_pass_front &= ~PASS_OVER_THROW_MOB
-		PF.flags_can_pass_behind &= ~PASS_OVER_THROW_MOB
-
+	/// Equivalent to a wired cade.
+	flags_can_pass_front_temp &= ~PASS_BARRICADE_FRONT_NOT_WIRED
+	flags_can_pass_behind_temp &= ~PASS_BARRICADE_BEHIND_NOT_WIRED
 
 // Cade in hands
 /obj/item/stack/folding_barricade

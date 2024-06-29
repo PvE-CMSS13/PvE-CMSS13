@@ -51,6 +51,27 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 /obj/structure/machinery/cm_vending/gear/spec/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_spec
 
+//A special...specialist vendor with actual inventory instead of points. We're old school here. Could maybe even rig it for tokens in the future.
+/obj/structure/machinery/cm_vending/sorted/spec
+	name = "\improper ColMarTech Specialist Field Testing Gear Rack"
+	desc = "An automated gear rack for Outpost Weapons Specialists. Has a small selection of equipment meant for field testing or limited use."
+	icon_state = "spec_gear"
+	vend_flags = VEND_TO_HAND|VEND_LIMITED_INVENTORY|VEND_SPECIALIZED_STOCK|VEND_USE_VENDOR_FLAGS
+	vendor_role = list(JOB_SQUAD_SPECIALIST)
+	req_one_access = null
+
+/obj/structure/machinery/cm_vending/sorted/spec/handle_points(mob/living/carbon/human/user)
+	return (user.marine_snowflake_points >= MARINE_TOTAL_SNOWFLAKE_POINTS) && !(user.marine_snowflake_points -= MARINE_TOTAL_SNOWFLAKE_POINTS) //Have to return inverse of the last statement as it will be returning 0 or FALSE.
+
+/obj/structure/machinery/cm_vending/sorted/spec/uscm_ground
+	req_access = list(ACCESS_USCM_GROUND_SPECPREP)
+
+/obj/structure/machinery/cm_vending/sorted/spec/populate_product_list()
+	listed_products = list(
+		list("WEAPONS SPECIALIST SETS", -1, null, null),
+		list("B18 Personal Defense Set", 1, /obj/item/storage/box/spec/B18, VENDOR_ITEM_RECOMMENDED),
+		list("Sapper Custom Turret Set", 1, /obj/item/storage/box/spec/sapper, VENDOR_ITEM_REGULAR),
+	)
 
 //------------CLOTHING VENDOR---------------
 

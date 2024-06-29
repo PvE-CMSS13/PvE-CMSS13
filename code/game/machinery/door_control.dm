@@ -96,11 +96,7 @@
 
 /obj/structure/machinery/door_control/proc/handle_pod()
 	for(var/obj/structure/machinery/door/poddoor/M in machines)
-		if(M.id == id)
-			if(M.density)
-				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/door, open))
-			else
-				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/door, close))
+		M.toggle_pod_door(id)
 
 /obj/structure/machinery/door_control/verb/push_button()
 	set name = "Push Button"

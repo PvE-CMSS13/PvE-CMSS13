@@ -144,7 +144,7 @@
 		ACCESS_MARINE_OT,
 	)
 	assignment = JOB_ORDNANCE_TECH
-	rank = "UPP"
+	rank = "UPP Spy"
 	paygrade = "ME2"
 	role_comm_title = "OT"
 	skills = /datum/skills/spy

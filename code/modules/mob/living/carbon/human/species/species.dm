@@ -44,6 +44,8 @@
 	var/bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/human
 	var/death_sound
 	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
+	var/manifest_alive = "Alive"
+	var/manifest_dead = "*Deceased*"
 
 	var/breath_type = "oxygen"   // Non-oxygen gas breathed, if any.
 	var/poison_type = "phoron"   // Poisonous air.

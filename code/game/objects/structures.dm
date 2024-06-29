@@ -139,10 +139,20 @@
 	user.visible_message(SPAN_WARNING(climb_string))
 
 	var/list/grabbed_things = list()
+
 	for(var/obj/item/grab/grabbing in list(user.l_hand, user.r_hand))
 		grabbed_things += grabbing.grabbed_thing
+
+		if(grabbing.grabbed_thing.layer < STRUCTURE_CLIMB_LAYER)
+			addtimer(VARSET_CALLBACK(grabbing.grabbed_thing, layer, grabbing.grabbed_thing.layer), 0.3 SECONDS)
+			grabbing.grabbed_thing.layer = STRUCTURE_CLIMB_LAYER
+
 		grabbing.grabbed_thing.forceMove(user.loc)
+	if(user.layer < STRUCTURE_CLIMB_LAYER)
+		addtimer(VARSET_CALLBACK(user, layer, user.layer), 0.3 SECONDS)
+		user.layer = STRUCTURE_CLIMB_LAYER
 	user.forceMove(TT)
+
 	for(var/atom/movable/thing as anything in grabbed_things) // grabbed things aren't moved to the tile immediately to: make the animation better, preserve the grab
 		thing.forceMove(TT)
 
@@ -228,3 +238,13 @@
 		return -1
 
 	return 4 SECONDS
+
+//For the GM xeno-spawn submenu, so aliens can animate popping out of these if needed.
+
+/obj/structure/proc/animate_crawl_reset()
+	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
+
+/obj/structure/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
+	animate(src, pixel_x = rand(pixel_x-2,pixel_x+2), pixel_y = rand(pixel_y-2,pixel_y+2), time = speed, loop = loop_amount, easing = JUMP_EASING)
+	for(var/i in 1 to sections)
+		animate(pixel_x = rand(pixel_x-2,pixel_x+2), pixel_y = rand(pixel_y-2,pixel_y+2), time = speed, easing = JUMP_EASING)

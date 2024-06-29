@@ -1,7 +1,7 @@
 ///Atom that manages and controls multiple planes. It's an atom so we can hook into add_filter etc. Multiple controllers can control one plane.
 /atom/movable/plane_master_controller
 	///List of planes in this controllers control. Initially this is a normal list, but becomes an assoc list of plane numbers as strings | plane instance
-	var/list/controlled_planes = list()
+	var/list/controlled_planes
 	///hud that owns this controller
 	var/datum/hud/owner_hud
 
@@ -57,21 +57,31 @@ INITIALIZE_IMMEDIATE(/atom/movable/plane_master_controller)
 		var/atom/movable/screen/plane_master/pm_iterator = controlled_planes[i]
 		pm_iterator.transition_filter(name, time, new_params, easing, loop)
 
-
 /atom/movable/plane_master_controller/game
 	name = PLANE_MASTERS_GAME
+
+/atom/movable/plane_master_controller/game/Initialize(mapload, datum/hud/hud)
 	controlled_planes = list(
-		GAME_PLANE,
 		FLOOR_PLANE,
+		GAME_PLANE,
+		ROOF_VISIBLE_PLANE,
+		BUILDING_MASK_PLANE,
+		ROOF_HIDDEN_PLANE,
+		WEATHER_PLANE,
 		LIGHTING_PLANE,
 		EXTERIOR_LIGHTING_PLANE,
 	)
+	. = ..()
 
 /// Exists for convienience when referencing all non-master render plates.
 /// This is the whole game and the UI, but not the escape menu.
 /atom/movable/plane_master_controller/non_master
 	name = PLANE_MASTERS_NON_MASTER
+
+/atom/movable/plane_master_controller/non_master/Initialize(mapload, datum/hud/hud)
 	controlled_planes = list(
+		RENDER_PLANE_FOREGROUND,
 		RENDER_PLANE_GAME,
 		RENDER_PLANE_NON_GAME,
 	)
+	. = ..()

@@ -80,7 +80,7 @@
 //separated to reduce code duplication. Moved here for ease of reference and to unclutter r_wall/attackby()
 /turf/closed/wall/proc/place_poster(obj/item/poster/P, mob/user)
 
-	if(!istype(src,/turf/closed/wall))
+	if(!istype(src,/turf/closed/wall) || flags_turf & TURF_ORGANIC)
 		to_chat(user, SPAN_DANGER("You can't place this here!"))
 		return
 

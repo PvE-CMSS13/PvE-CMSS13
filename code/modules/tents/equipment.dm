@@ -43,8 +43,19 @@
 	AddComponent(/datum/component/tent_supported_object)
 	return ..()
 
+/obj/structure/machinery/computer/overwatch/uscm_ground/tent
+	icon_state = "dummy" //Sad, sad state.
+	dir = SOUTH
+
+/obj/structure/machinery/computer/overwatch/uscm_ground/tent/Initialize(mapload, ...)
+	AddComponent(/datum/component/tent_supported_object)
+	return ..()
+
 /// Telephone
 /obj/structure/phone_base/tent
+	layer = INTERIOR_WALLMOUNT_LAYER
+
+/obj/structure/phone_base/uscm_ground/tent
 	layer = INTERIOR_WALLMOUNT_LAYER
 
 /obj/structure/phone_base/tent/Initialize(mapload, ...)

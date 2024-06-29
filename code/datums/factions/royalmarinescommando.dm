@@ -1,6 +1,11 @@
 /datum/faction/royal_marines_commando
-	name = "Royal Marines Commando"
+	name = "Three World Empire"
 	faction_tag = FACTION_TWE
+	access_all = ACCESS_LIST_TWE_ALL
+	access_main = ACCESS_LIST_TWE_ALL
+	access_regions = ACCESS_LIST_TWE_REGIONS
+
+//TWE does not currently have a unique department map.
 
 /datum/faction/royal_marines_commando/modify_hud_holder(image/holder, mob/living/carbon/human/H)
 	var/hud_icon_state

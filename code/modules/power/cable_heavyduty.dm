@@ -24,5 +24,9 @@
 	else
 		..()
 
+//Should be fine for decorative cable, so the icon is not overriden.
+/obj/structure/cable/updateicon()
+	alpha = invisibility ? 127 : 255
+
 /obj/structure/cable/heavyduty/cableColor(colorC)
 	return

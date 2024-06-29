@@ -145,6 +145,57 @@
 				ACCESS_MARINE_AI_TEMP,
 			) + get_access(ACCESS_LIST_MARINE_MAIN)
 
+		if(ACCESS_LIST_MARINE_REGIONS)
+			return list(
+				"[MAIN_SHIP_NAME] Security" = list(ACCESS_MARINE_CMP, ACCESS_MARINE_BRIG, ACCESS_MARINE_ARMORY),
+				"[MAIN_SHIP_NAME] Medbay" = list(ACCESS_MARINE_CMO, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY),
+				"[MAIN_SHIP_NAME] Research" = list(ACCESS_MARINE_RESEARCH, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE),
+				"[MAIN_SHIP_NAME] Engineering" = list(ACCESS_MARINE_CE, ACCESS_MARINE_ENGINEERING, ACCESS_MARINE_OT, ACCESS_MARINE_MAINT),
+				"[MAIN_SHIP_NAME] Command" = list(ACCESS_MARINE_SENIOR, ACCESS_MARINE_DATABASE, ACCESS_MARINE_COMMAND, ACCESS_MARINE_RO, ACCESS_MARINE_CARGO, ACCESS_MARINE_SEA, ACCESS_MARINE_SYNTH,),
+				"Marines" = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_ENGPREP, ACCESS_MARINE_SMARTPREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_KITCHEN),
+				"Squads" = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA),
+				"Civilian" = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND),
+			)
+
+		if(ACCESS_LIST_USCM_GROUND_MAIN)
+			return list(
+				ACCESS_USCM_GROUND_GENERAL,
+				ACCESS_USCM_GROUND_MAINT,
+				ACCESS_USCM_GROUND_SYNTH,
+				ACCESS_USCM_GROUND_MEDICAL,
+				ACCESS_USCM_GROUND_ARMORY,
+				ACCESS_USCM_GROUND_GUEST,
+				ACCESS_USCM_GROUND_LOCKDOWN,
+				ACCESS_USCM_GROUND_SMARTPREP,
+				ACCESS_USCM_GROUND_MEDPREP,
+				ACCESS_USCM_GROUND_SPECPREP,
+				ACCESS_USCM_GROUND_TLPREP,
+				ACCESS_USCM_GROUND_PLATOONL,
+				ACCESS_USCM_GROUND_PLATOON_ONE,
+				ACCESS_USCM_GROUND_PLATOON_TWO,
+				ACCESS_USCM_GROUND_COMMAND,
+				ACCESS_USCM_GROUND_WAREHOUSE,
+				ACCESS_USCM_GROUND_CHECKPOINT,
+			)
+
+
+		if(ACCESS_LIST_USCM_GROUND_ALL)
+			return list(
+				ACCESS_USCM_GROUND_CO_OFFICE,
+				ACCESS_USCM_GROUND_CO_QUARTERS,
+				ACCESS_USCM_GROUND_LT,
+			) + get_access(ACCESS_LIST_USCM_GROUND_MAIN)
+
+		if(ACCESS_LIST_USCM_GROUND_REGIONS)
+			return list(
+				"Outpost Command" = list(ACCESS_USCM_GROUND_LOCKDOWN, ACCESS_USCM_GROUND_COMMAND, ACCESS_USCM_GROUND_CO_OFFICE, ACCESS_USCM_GROUND_CO_QUARTERS, ACCESS_USCM_GROUND_LT,),
+				"Outpost Security" = list(ACCESS_USCM_GROUND_ARMORY, ACCESS_USCM_GROUND_CHECKPOINT,),
+				"Outpost Support" = list(ACCESS_USCM_GROUND_MAINT, ACCESS_USCM_GROUND_SYNTH, ACCESS_USCM_GROUND_MEDICAL, ACCESS_USCM_GROUND_WAREHOUSE,),
+				"Outpost Marines" = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_SMARTPREP, ACCESS_USCM_GROUND_MEDPREP, ACCESS_USCM_GROUND_SPECPREP, ACCESS_USCM_GROUND_TLPREP, ACCESS_USCM_GROUND_PLATOONL,),
+				"Outpost Squads" = list(ACCESS_USCM_GROUND_PLATOON_ONE, ACCESS_USCM_GROUND_PLATOON_TWO,),
+				"Outpost Guest" = list(ACCESS_USCM_GROUND_GUEST,),
+			)
+
 		if(ACCESS_LIST_EMERGENCY_RESPONSE)
 			return list(
 				ACCESS_MARINE_MAINT,
@@ -154,7 +205,7 @@
 			)
 
 		if(ACCESS_LIST_UA)
-			return get_access(ACCESS_LIST_MARINE_MAIN) + get_access(ACCESS_LIST_COLONIAL_ALL)
+			return get_access(ACCESS_LIST_MARINE_MAIN) + get_access(ACCESS_LIST_USCM_GROUND_ALL) + get_access(ACCESS_LIST_COLONIAL_ALL)
 
 		if(ACCESS_LIST_MARINE_LIAISON)
 			return list(
@@ -177,6 +228,15 @@
 				ACCESS_CIVILIAN_BRIG,
 				ACCESS_CIVILIAN_MEDBAY,
 				ACCESS_CIVILIAN_COMMAND,
+			)
+
+		if(ACCESS_LIST_COLONIAL_REGIONS)
+			return list(
+				"Civilian Security" = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_PUBLIC),
+				"Civilian Medbay" = list(ACCESS_CIVILIAN_MEDBAY),
+				"Civilian Research" = list(ACCESS_CIVILIAN_RESEARCH),
+				"Civilian Engineering" = list(ACCESS_CIVILIAN_ENGINEERING),
+				"Civilian Command" = list(ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_COMMAND),
 			)
 
 		if(ACCESS_LIST_CIVIL_LIAISON)
@@ -257,6 +317,24 @@
 				ACCESS_WY_FLIGHT,
 			) + get_access(ACCESS_LIST_WY_GOON)
 
+		if(ACCESS_LIST_WY_REGIONS)
+			return list(
+				"WY Security" = list(ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_SECURITY, ACCESS_WY_ARMORY,),
+				"WY Medical" = list(ACCESS_WY_MEDICAL,),
+				"WY Research" = list(ACCESS_WY_RESEARCH,),
+				"WY Engineering" = list(ACCESS_WY_ENGINEERING,),
+				"WY Management" = list(ACCESS_WY_EXEC, ACCESS_WY_SECRETS, ACCESS_WY_LEADERSHIP, ACCESS_WY_SENIOR_LEAD,),
+			)
+
+		if(ACCESS_LIST_PMC_REGIONS)
+			return list(
+				"WY Security" = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_PUBLIC),
+				"WY Medbay" = list(ACCESS_CIVILIAN_MEDBAY),
+				"WY Research" = list(ACCESS_CIVILIAN_RESEARCH),
+				"WY Engineering" = list(ACCESS_CIVILIAN_ENGINEERING),
+				"WY PMC" = list(ACCESS_WY_PMC, ACCESS_WY_ENGINEERING, ACCESS_WY_FLIGHT,),
+			)
+
 		if(ACCESS_LIST_CLF_ALL)
 			return list(
 				ACCESS_CLF_SECURITY,
@@ -271,6 +349,12 @@
 				ACCESS_CLF_MEDICAL,
 				ACCESS_CLF_ENGINEERING,
 			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
+
+		if(ACCESS_LIST_CLF_REGIONS)
+			return list(
+				"CLF Base" = list(ACCESS_CLF_GENERAL, ACCESS_CLF_MEDICAL, ACCESS_CLF_ENGINEERING,),
+				"CLF Leadership" = list(ACCESS_CLF_SECURITY, ACCESS_CLF_ARMORY, ACCESS_CLF_LEADERSHIP, ACCESS_CLF_SENIOR_LEAD,),
+			)
 
 		if(ACCESS_LIST_UPP_ALL)
 			return list(
@@ -298,73 +382,37 @@
 				ACCESS_UPP_MACHINEGUN
 			)
 
-
-/proc/get_region_accesses(code)
-	switch(code)
-		if(0)//Everything
-			return get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_MARINE_MAIN)
-		if(1)//Security
-			return list(ACCESS_MARINE_CMP, ACCESS_MARINE_BRIG, ACCESS_MARINE_ARMORY)
-		if(2)//Medbay
-			return list(ACCESS_MARINE_CMO, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY)
-		if(3)//Research
-			return list(ACCESS_MARINE_RESEARCH, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE)
-		if(4)//Engineering
-			return list(ACCESS_MARINE_CE, ACCESS_MARINE_ENGINEERING, ACCESS_MARINE_OT, ACCESS_MARINE_MAINT)
-		if(5)//Command
+		if(ACCESS_LIST_UPP_REGIONS)
 			return list(
-				ACCESS_MARINE_SENIOR,
-				ACCESS_MARINE_DATABASE,
-				ACCESS_MARINE_COMMAND,
-				ACCESS_MARINE_RO,
-				ACCESS_MARINE_CARGO,
-				ACCESS_MARINE_SEA,
-				ACCESS_MARINE_SYNTH,
-			)
-		if(6)//Marines
-			return list(
-				ACCESS_MARINE_PREP,
-				ACCESS_MARINE_MEDPREP,
-				ACCESS_MARINE_ENGPREP,
-				ACCESS_MARINE_SMARTPREP,
-				ACCESS_MARINE_LEADER,
-				ACCESS_MARINE_SPECPREP,
-				ACCESS_MARINE_TL_PREP,
-				ACCESS_MARINE_KITCHEN,
-			)
-		if(7)//Squads
-			return list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
-		if(8)//Civilian
-			return list(
-				ACCESS_CIVILIAN_PUBLIC,
-				ACCESS_CIVILIAN_RESEARCH,
-				ACCESS_CIVILIAN_ENGINEERING,
-				ACCESS_CIVILIAN_LOGISTICS,
-				ACCESS_CIVILIAN_BRIG,
-				ACCESS_CIVILIAN_MEDBAY,
-				ACCESS_CIVILIAN_COMMAND,
+				"UPP General" = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDICAL, ACCESS_UPP_ENGINEERING, ACCESS_UPP_RESEARCH,),
+				"UPP Kommand" = list(ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_LEADERSHIP,),
+				"UPP Senior Kommand" = list(ACCESS_UPP_SENIOR_LEAD,),
+				"UPP Elite" = list(ACCESS_UPP_COMMANDO,),
 			)
 
-/proc/get_region_accesses_name(code)
-	switch(code)
-		if(0)
-			return "All"
-		if(1)
-			return "[MAIN_SHIP_NAME] Security" // Security
-		if(2)
-			return "[MAIN_SHIP_NAME] Medbay" // Medbay
-		if(3)
-			return "[MAIN_SHIP_NAME] Research" // Research
-		if(4)
-			return "[MAIN_SHIP_NAME] Engineering" // Engineering
-		if(5)
-			return "[MAIN_SHIP_NAME] Command" // Command
-		if(6)
-			return "Marines" // Marine prep
-		if(7)
-			return "Squads" // Squads
-		if(8)
-			return "Civilian" // Civilian
+
+		if(ACCESS_LIST_TWE_ALL)
+			return list(
+				ACCESS_TWE_GENERAL,
+				ACCESS_TWE_MEDICAL,
+				ACCESS_TWE_ENGINEERING,
+				ACCESS_TWE_SECURITY,
+				ACCESS_TWE_ARMORY,
+				ACCESS_TWE_FLIGHT,
+				ACCESS_TWE_RESEARCH,
+				ACCESS_TWE_COMMANDO,
+				ACCESS_TWE_LEADERSHIP,
+				ACCESS_TWE_SENIOR_LEAD,
+			)
+
+		if(ACCESS_LIST_UPP_REGIONS)
+			return list(
+				"TWE Base" = get_access(ACCESS_TWE_GENERAL, ACCESS_TWE_MEDICAL, ACCESS_TWE_ENGINEERING, ACCESS_TWE_RESEARCH,),
+				"TWE Command" = get_access(ACCESS_TWE_SECURITY, ACCESS_TWE_ARMORY, ACCESS_TWE_FLIGHT, ACCESS_TWE_LEADERSHIP,),
+				"TWE Senior Command" = list(ACCESS_TWE_SENIOR_LEAD,),
+				"TWE Elite" = list(ACCESS_TWE_COMMANDO,),
+			)
+
 
 /proc/get_access_desc(A)
 	switch(A)
@@ -459,8 +507,49 @@
 		if(ACCESS_ARES_DEBUG)
 			return "AI Debug"
 
-/proc/get_weyland_access_desc(A)
-	switch(A)
+		//USCM Ground
+		if(ACCESS_USCM_GROUND_GENERAL)
+			return "Outpost General"
+		if(ACCESS_USCM_GROUND_MAINT)
+			return "Outpost Maintenance"
+		if(ACCESS_USCM_GROUND_SYNTH)
+			return "Outpost Synthetic"
+		if(ACCESS_USCM_GROUND_MEDICAL)
+			return "Outpost Sickbay"
+		if(ACCESS_USCM_GROUND_ARMORY)
+			return "Outpost Armory"
+		if(ACCESS_USCM_GROUND_GUEST)
+			return "Outpost Guesthouse"
+		if(ACCESS_USCM_GROUND_LOCKDOWN)
+			return "Outpost Lockdown"
+		if(ACCESS_USCM_GROUND_SMARTPREP)
+			return "Outpost Specialist"
+		if(ACCESS_USCM_GROUND_MEDPREP)
+			return "Outpost Corpsman"
+		if(ACCESS_USCM_GROUND_SPECPREP)
+			return "Outpost Specialist"
+		if(ACCESS_USCM_GROUND_TLPREP)
+			return "Outpost Squad Sergeant"
+		if(ACCESS_USCM_GROUND_PLATOONL)
+			return "Outpost Platoon Sergeant"
+		if(ACCESS_USCM_GROUND_COMMAND)
+			return "Outpost Command"
+		if(ACCESS_USCM_GROUND_CO_OFFICE)
+			return "Outpost Captain's Office"
+		if(ACCESS_USCM_GROUND_CO_QUARTERS)
+			return "Outpost Captain's Quarters"
+		if(ACCESS_USCM_GROUND_LT)
+			return "Outpost Lieutenant's Office"
+		if(ACCESS_USCM_GROUND_WAREHOUSE)
+			return "Outpost Supply Warehouse"
+		if(ACCESS_USCM_GROUND_CHECKPOINT)
+			return "Outpost Security Checkpoint"
+		if(ACCESS_USCM_GROUND_PLATOON_ONE)
+			return "Platoon [SQUAD_USCM_GROUND_1]"
+		if(ACCESS_USCM_GROUND_PLATOON_TWO)
+			return "Platoon [SQUAD_USCM_GROUND_2]"
+
+		//WY
 		if(ACCESS_WY_GENERAL)
 			return "Wey-Yu General"
 		if(ACCESS_WY_COLONIAL)
@@ -489,3 +578,78 @@
 			return "Wey-Yu Leadership"
 		if(ACCESS_WY_SENIOR_LEAD)
 			return "Wey-Yu Senior Leadership"
+
+		//UPP
+		if(ACCESS_UPP_GENERAL)
+			return "UPP Genral"
+		if(ACCESS_UPP_MEDICAL)
+			return "UPP Medical"
+		if(ACCESS_UPP_ENGINEERING)
+			return "UPP Engineering"
+		if(ACCESS_UPP_SECURITY)
+			return "UPP Security"
+		if(ACCESS_UPP_ARMORY)
+			return "UPP Armory"
+		if(ACCESS_UPP_FLIGHT)
+			return "UPP Flight Control"
+		if(ACCESS_UPP_RESEARCH)
+			return "UPP Research"
+		if(ACCESS_UPP_SQUAD_ONE)
+			return "UPP Squad One"
+		if(ACCESS_UPP_SQUAD_TWO)
+			return "UPP Squad Two"
+		if(ACCESS_UPP_COMMANDO)
+			return "UPP Kommando"
+		if(ACCESS_UPP_LEADERSHIP)
+			return "UPP Leadership"
+		if(ACCESS_UPP_SENIOR_LEAD)
+			return "UPP Senior Leadership"
+		if(ACCESS_UPP_MEDPREP)
+			return "UPP Medical Prep"
+		if(ACCESS_UPP_MACHINEGUN)
+			return "UPP Machinegunner Prep"
+		if(ACCESS_UPP_TLPREP)
+			return "UPP Squad Leader Prep"
+
+		//CLF
+		if(ACCESS_CLF_GENERAL)
+			return "CLF General"
+		if(ACCESS_CLF_MEDICAL)
+			return "CLF Medical"
+		if(ACCESS_CLF_ENGINEERING)
+			return "CLF Engineering"
+		if(ACCESS_CLF_SECURITY)
+			return "CLF Security"
+		if(ACCESS_CLF_ARMORY)
+			return "CLF Armory"
+		if(ACCESS_CLF_FLIGHT)
+			return "CLF Flight Control"
+		if(ACCESS_CLF_LEADERSHIP)
+			return "CLF Leadership"
+		if(ACCESS_CLF_SENIOR_LEAD)
+			return "CLF Senior Leadership"
+
+		//TWE
+		if(ACCESS_TWE_GENERAL)
+			return "TWE General"
+		if(ACCESS_TWE_MEDICAL)
+			return "TWE Medical"
+		if(ACCESS_TWE_ENGINEERING)
+			return "TWE Engineering"
+		if(ACCESS_TWE_SECURITY)
+			return "TWE Security"
+		if(ACCESS_TWE_ARMORY)
+			return "TWE Armory"
+		if(ACCESS_TWE_FLIGHT)
+			return "TWE Flight Control"
+		if(ACCESS_TWE_RESEARCH)
+			return "TWE Research"
+		if(ACCESS_TWE_COMMANDO)
+			return "TWE Commando"
+		if(ACCESS_TWE_LEADERSHIP)
+			return "TWE Leadership"
+		if(ACCESS_TWE_SENIOR_LEAD)
+			return "TWE Senior Leadership"
+
+
+

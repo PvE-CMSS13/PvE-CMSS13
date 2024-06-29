@@ -264,6 +264,7 @@
 /turf/open/gm/river/desert/deep
 	icon_state = "deep"
 	icon_overlay = "_deep"
+	block_vehicles = TRUE
 
 /turf/open/gm/river/desert/deep/covered
 	covered = 1

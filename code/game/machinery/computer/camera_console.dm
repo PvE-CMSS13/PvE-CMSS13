@@ -38,8 +38,8 @@
 		var/atom/movable/screen/plane_master/instance = new plane()
 		instance.assigned_map = map_name
 		instance.del_on_map_removal = FALSE
-		if(instance.blend_mode_override)
-			instance.blend_mode = instance.blend_mode_override
+		instance.blend_mode = instance.blend_mode_override || instance.blend_mode
+		instance.render_target = null // This draws the overlays flat one over the other without any relay shenanigans.
 		instance.screen_loc = "[map_name]:CENTER"
 		cam_plane_masters += instance
 
@@ -340,6 +340,36 @@
 
 /obj/structure/machinery/computer/cameras/almayer_network/vehicle
 	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_VEHICLE)
+
+
+/obj/structure/machinery/computer/cameras/bunker
+	desc = "Used to access the various cameras in this facility."
+	colony_camera_mapload = FALSE
+
+/obj/structure/machinery/computer/cameras/bunker/wy
+	name = "\improper Containment Monitor"
+	desc = "Can view the containment camera but also has access to nearby feeds."
+	network = list(CAMERA_NET_WY_BUNKER_CONTAINMENT, CAMERA_NET_WY_BUNKER)
+
+/obj/structure/machinery/computer/cameras/bunker/upp
+	name = "\improper Gulag Security Monitor"
+	network = list(CAMERA_NET_UPP_BUNKER)
+
+/obj/structure/machinery/computer/cameras/uscm_ground
+	desc = "A computer console linked to all outpost camera feeds."
+	network = list(CAMERA_NET_USCM_GROUND, CAMERA_NET_USCM_GROUND_WEST, CAMERA_NET_USCM_GROUND_EAST)
+	req_access = list(ACCESS_USCM_GROUND_COMMAND)
+	colony_camera_mapload = FALSE
+
+/obj/structure/machinery/computer/cameras/uscm_ground/checkpoint
+	name = "checkpoint camera console"
+	desc = "A computer console linked to a security checkpoint feed."
+	dir = EAST
+	network = list(CAMERA_NET_USCM_GROUND_WEST)
+	req_access = list(ACCESS_USCM_GROUND_CHECKPOINT)
+
+/obj/structure/machinery/computer/cameras/uscm_ground/checkpoint/east
+	network = list(CAMERA_NET_USCM_GROUND_EAST)
 
 /obj/structure/machinery/computer/cameras/mortar
 	name = "Mortar Camera Interface"

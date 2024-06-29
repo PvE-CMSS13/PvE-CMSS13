@@ -4,6 +4,7 @@
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "slug_movement"
 	icon_living = "slug_movement"
+	mob_size = MOB_SIZE_SMALL
 	icon_dead = "slug_dead"
 	speak = list("Blurb.","Blub.","BLURP!")
 	speak_emote = list("blurps")

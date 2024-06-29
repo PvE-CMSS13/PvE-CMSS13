@@ -2,6 +2,31 @@
 	name = "United States Colonial Marines"
 	faction_tag = FACTION_MARINE
 
+/datum/faction/uscm/New()
+	. = ..()
+	//Associates extra factions with the marine hud procs.
+	faction_tag_group = FACTION_LIST_MARINE_HUD
+
+/datum/faction/uscm/get_faction_regions(faction_to_check)
+	switch(faction_to_check)
+		if(FACTION_USCM_GROUND)
+			return get_access(ACCESS_LIST_USCM_GROUND_REGIONS)
+		if(FACTION_MARINE)
+			return get_access(ACCESS_LIST_MARINE_REGIONS)
+	return ..()
+
+/datum/faction/uscm/get_faction_access(faction_to_check, all_access = TRUE)
+	switch(faction_to_check)
+		if(FACTION_USCM_GROUND)
+			return get_access(all_access ? ACCESS_LIST_USCM_GROUND_ALL : ACCESS_LIST_USCM_GROUND_MAIN)
+	return  get_access(all_access ? ACCESS_LIST_MARINE_ALL : ACCESS_LIST_MARINE_MAIN) //Fallback to marine access in every other case.
+
+/datum/faction/uscm/get_faction_departments(faction_to_check)
+	switch(faction_to_check)
+		if(FACTION_USCM_GROUND)
+			return DEPARTMENT_USCM_GROUND_ALL
+	return ..()
+
 /datum/faction/uscm/modify_hud_holder(image/holder, mob/living/carbon/human/current_human)
 	var/datum/squad/squad = current_human.assigned_squad
 	if(istype(squad))
@@ -13,7 +38,7 @@
 			_role = current_human.job
 		else if(I)
 			_role = I.rank
-		switch(GET_DEFAULT_ROLE(_role))
+		switch(GET_SQUAD_ROLE_MAP(_role))
 			if(JOB_SQUAD_ENGI) marine_rk = "engi"
 			if(JOB_SQUAD_SPECIALIST) marine_rk = "spec"
 			if(JOB_SQUAD_TEAM_LEADER) marine_rk = "tl"
@@ -42,7 +67,6 @@
 
 		current_human.langchat_color = current_human.assigned_squad.chat_color
 
-		if(!marine_rk) marine_rk = current_human.rank_fallback
 		if(marine_rk)
 			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
 			if(squad_clr)
@@ -69,6 +93,7 @@
 			_role = current_human.job
 		else if(ID)
 			_role = ID.rank
+
 		switch(_role)
 			if(JOB_XO)
 				marine_rk = "xo"
@@ -152,6 +177,7 @@
 				marine_rk = "rmp"
 			if(JOB_RIOT_CHIEF)
 				marine_rk = "crmp"
+
 			// Whiskey Outpost
 			if(JOB_WO_CO)
 				marine_rk = "wo_co"
@@ -175,6 +201,28 @@
 				marine_rk = "wo_ro"
 			if(JOB_WO_PILOT)
 				marine_rk = "wo_mcrew"
+
+			//USCM Ground/Outpost
+			if(JOB_USCM_GROUND_CO)
+				marine_rk = "wo_co"
+			if(JOB_USCM_GROUND_AO)
+				marine_rk = "wo_xo"
+			if(JOB_USCM_GROUND_SYNTH)
+				marine_rk = "syn"
+			if(JOB_USCM_GROUND_CIVILIAN)
+				marine_rk = "wo_civilian"
+
+			if(JOB_USCM_GROUND_SQUAD_LEADER)
+				marine_rk = "leader"
+			if(JOB_USCM_GROUND_SQUAD_TEAM_LEADER)
+				marine_rk = "tl"
+			if(JOB_USCM_GROUND_SQUAD_MEDIC)
+				marine_rk = "med"
+			if(JOB_USCM_GROUND_SQUAD_SPECIALIST)
+				marine_rk = "spec"
+			if(JOB_USCM_GROUND_SQUAD_SMARTGUNNER)
+				marine_rk = "gun"
+
 			// Colonial Marshals
 			if(JOB_CMB_TL)
 				marine_rk = "mar"
@@ -191,6 +239,7 @@
 			if(JOB_CMB_OBS)
 				marine_rk = "obs"
 				icon_prefix = "cmb_"
+
 			// Check squad marines here too, for the unique ones
 			if(JOB_SQUAD_ENGI)
 				marine_rk = "engi"

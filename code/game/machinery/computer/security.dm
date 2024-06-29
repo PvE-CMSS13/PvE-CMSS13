@@ -21,6 +21,7 @@
 	//Sorting Variables
 	var/sortBy = "name"
 	var/order = 1 // -1 = Descending - 1 = Ascending
+	var/factions = list(FACTION_MARINE)
 
 /obj/structure/machinery/computer/secure_data/attackby(obj/item/O as obj, user as mob)
 
@@ -50,9 +51,6 @@
 		to_chat(user, SPAN_WARNING("Access denied."))
 		return
 
-	if(!is_mainship_level(z))
-		to_chat(user, SPAN_DANGER("<b>Unable to establish a connection</b>: \black You're too far away from the station!"))
-		return
 	var/dat
 
 	if (temp)
@@ -81,32 +79,34 @@
 <th>Criminal Status</th>
 </tr>"}
 				if(!isnull(GLOB.data_core.general))
-					for(var/datum/data/record/R in sortRecord(GLOB.data_core.general, sortBy, order))
-						var/crimstat = ""
-						for(var/datum/data/record/E in GLOB.data_core.security)
-							if ((E.fields["name"] == R.fields["name"] && E.fields["id"] == R.fields["id"]))
-								crimstat = E.fields["criminal"]
-						var/background
-						switch(crimstat)
-							if("*Arrest*")
-								background = "'background-color:#990c28;'"
-							if("Incarcerated")
-								background = "'background-color:#a16832;'"
-							if("Released")
-								background = "'background-color:#2981b3;'"
-							if("Suspect")
-								background = "'background-color:#008743;'"
-							if("NJP")
-								background = "'background-color:#faa20a;'"
-							if("None")
-								background = "'background-color:#008743;'"
-							if("")
-								background = "'background-color:#FFFFFF;'"
-								crimstat = "No Record."
-						dat += text("<tr style=[]><td><A href='?src=\ref[];choice=Browse Record;d_rec=\ref[]'>[]</a></td>", background, src, R, R.fields["name"])
-						dat += text("<td>[]</td>", R.fields["id"])
-						dat += text("<td>[]</td>", R.fields["rank"])
-						dat += text("<td>[]</td></tr>", crimstat)
+					for(var/datum/data/record/general_record in sortRecord(GLOB.data_core.general, sortBy, order))
+						if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+							var/crimstat = ""
+							for(var/datum/data/record/security_record as anything in GLOB.data_core.security)
+								if ((general_record.fields["name"] == security_record.fields["name"] && general_record.fields["id"] == security_record.fields["id"]))
+									crimstat = security_record.fields["criminal"]
+							var/background
+							switch(crimstat)
+								if("*Arrest*")
+									background = "'background-color:#990c28;'"
+								if("Incarcerated")
+									background = "'background-color:#a16832;'"
+								if("Released")
+									background = "'background-color:#2981b3;'"
+								if("Suspect")
+									background = "'background-color:#008743;'"
+								if("NJP")
+									background = "'background-color:#faa20a;'"
+								if("None")
+									background = "'background-color:#008743;'"
+								if("")
+									background = "'background-color:#FFFFFF;'"
+									crimstat = "No Record."
+							//This appears to be referencing the general record, not the security record. I am not sure if this is intentional, but not something I am going to troubleshoot right now.
+							dat += text("<tr style=[]><td><A href='?src=\ref[];choice=Browse Record;d_rec=\ref[]'>[]</a></td>", background, src, general_record, general_record.fields["name"])
+							dat += text("<td>[]</td>", general_record.fields["id"])
+							dat += text("<td>[]</td>", general_record.fields["rank"])
+							dat += text("<td>[]</td></tr>", crimstat)
 					dat += "</table><hr width='75%' />"
 				dat += text("<A href='?src=\ref[];choice=Record Maintenance'>Record Maintenance</A><br><br>", src)
 			if(2.0)
@@ -316,6 +316,7 @@ What a mess.*/
 						record1 = active1
 					if ((istype(active2, /datum/data/record) && GLOB.data_core.security.Find(active2)))
 						record2 = active2
+					playsound(loc, 'sound/machines/twobeep.ogg', 15, 1)
 					sleep(50)
 					var/obj/item/paper/P = new /obj/item/paper( loc )
 					P.info = "<CENTER><B>Security Record</B></CENTER><BR>"
@@ -351,9 +352,13 @@ What a mess.*/
 				temp += "<a href='?src=\ref[src];choice=Clear Screen'>No</a>"
 
 			if ("Purge All Records")
-				for(var/datum/data/record/R in GLOB.data_core.security)
-					GLOB.data_core.security -= R
-					qdel(R)
+				for(var/datum/data/record/general_record as anything in GLOB.data_core.general)
+					if(general_record.fields["mob_faction"] in factions) //Only for the faction(s) we want.
+						for(var/datum/data/record/security_record in GLOB.data_core.security)
+							if(general_record.fields["name"] == security_record.fields["name"] && general_record.fields["id"] == security_record.fields["id"])
+								GLOB.data_core.security -= security_record
+								qdel(security_record)
+
 				temp = "All Security records deleted."
 
 			if ("Add Entry")
@@ -401,7 +406,7 @@ What a mess.*/
 					screen = 3
 
 			if ("New Record (General)")
-				active1 = CreateGeneralRecord()
+				active1 = CreateGeneralRecord(factions[1]) //The first entry of our faction list.
 				active2 = null
 
 //FIELD FUNCTIONS
@@ -528,28 +533,37 @@ What a mess.*/
 	if(inoperable())
 		return
 
-	for(var/datum/data/record/R in GLOB.data_core.security)
-		if(prob(10/severity))
-			switch(rand(1,6))
-				if(1)
-					R.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
-				if(2)
-					R.fields["sex"] = pick("Male", "Female")
-				if(3)
-					R.fields["age"] = rand(5, 85)
-				if(4)
-					R.fields["criminal"] = pick("None", "*Arrest*", "Incarcerated", "Released", "Suspect", "NJP")
-				if(5)
-					R.fields["p_stat"] = pick("*Unconcious*", "Active", "Physically Unfit")
-				if(6)
-					R.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
-			continue
+	for(var/datum/data/record/general_record in GLOB.data_core.general)
+		if(general_record.fields["mob_faction"] in factions)
+			for(var/datum/data/record/security_record in GLOB.data_core.security)
+				if(general_record.fields["name"] == security_record.fields["name"] && general_record.fields["id"] == security_record.fields["id"])
+					if(prob(10/severity))
+						switch(rand(1,6))
+							if(1)
+								security_record.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
+							if(2)
+								security_record.fields["sex"] = pick("Male", "Female")
+							if(3)
+								security_record.fields["age"] = rand(5, 85)
+							if(4)
+								security_record.fields["criminal"] = pick("None", "*Arrest*", "Incarcerated", "Released", "Suspect", "NJP")
+							if(5)
+								security_record.fields["p_stat"] = pick("*Unconcious*", "Active", "Physically Unfit")
+							if(6)
+								security_record.fields["m_stat"] = pick("*Insane*", "*Unstable*", "*Watch*", "Stable")
+						continue
 
-		else if(prob(1))
-			GLOB.data_core.security -= R
-			qdel(R)
-			continue
+					else if(prob(1))
+						GLOB.data_core.security -= security_record
+						qdel(security_record)
+						continue
 
 /obj/structure/machinery/computer/secure_data/detective_computer
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "messyfiles"
+
+/obj/structure/machinery/computer/secure_data/uscm_ground
+	dir = EAST
+	req_access = null
+	req_one_access = list(ACCESS_USCM_GROUND_PLATOONL, ACCESS_USCM_GROUND_COMMAND)
+	factions = list(FACTION_USCM_GROUND)

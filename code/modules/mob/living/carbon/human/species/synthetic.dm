@@ -11,6 +11,8 @@
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG)
 	rarity_value = 2
 	insulated = TRUE
+	manifest_alive = "Active"
+	manifest_dead = "*Offline*"
 
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/synthsplatter
 

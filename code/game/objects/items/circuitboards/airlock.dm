@@ -5,12 +5,9 @@
 	icon_state = "door_electronics"
 	w_class = SIZE_SMALL
 	matter = list("metal" = 50,"glass" = 50)
-	req_access = list(ACCESS_CIVILIAN_ENGINEERING)
-	var/list/conf_access = null
-	/// if set to 1, door would receive req_one_access instead of req_access
-	var/one_access = 0
-	var/last_configurator = null
-	var/locked = 1
+	var/list/conf_access
+	/// TRUE to set req_one_access instead of req_access
+	var/one_access = FALSE
 	var/fried = FALSE
 
 /obj/item/circuitboard/airlock/update_icon()
@@ -26,91 +23,85 @@
 	if(H.getBrainLoss() >= 60)
 		return
 
+	var/engineering_skill = user.skills.get_skill_level(SKILL_ENGINEER)
+	if(engineering_skill <= SKILL_UNSKILLED) //No engineering skill or they don't have the datum.
+		to_chat(user, SPAN_WARNING("You have no idea what to do with this."))
+		return
+
+	if(!conf_access) conf_access = list()
+
+	/*
+	I gave this deep thought. How does one know the access codes to configure?
+	The board isn't preconfigured, so it would need to be programmed in by the user.
+	At least for gameplay purposes of constructing new doors, we need to specify the codes.
+	How does the user know which codes to configure then? It wouldn't come from their ID, as ID access
+	can easily change during the game. The user must have the knowledge of access codes,
+	so clearly it would require some mind variable. Ie, the user's memory of what codes they actually
+	know how to program in.
+
+	I decided to simplify that; engineering 1 is for the main faction access codes. Engineering 2 and above
+	is all access codes for the faction. Maybe in the future that can be expanded to be more granular.
+
+	Also, I got rid of the access requirements as they don't really make sense with this system. You're
+	programming a board, not trying to crack some kind of harddrive.
+	*/
+
+	var/datum/faction/user_faction = get_faction(user.faction)
+	var/accesses[] = user_faction.get_faction_access(user.faction, (engineering_skill > SKILL_ENGINEER_TRAINED)) //Retrieves the main or full list. TRUE or FALSE on the second statement.
+	var/unknown_access[] = conf_access - accesses //Gives us a list of access levels we do not know. In case that is true.
+
 	var/t1
+	var/aname
 
+	//These colors are ugly as sin, but it's fine.
+	t1 += "Access requirement is set to "
+	t1 += one_access ? "<a style='color: green' href='?src=\ref[src];command=one_access'>ONE</a><hr>" : "<a style='color: red' href='?src=\ref[src];command=one_access'>ALL</a><hr>"
+	t1 += "<br>"
+	if(length(conf_access))
+		if(length(unknown_access)) t1 += SPAN_RED("Uknown access codes detected.<br>") //Got some unknowns.
+		t1 += "<a href='?src=\ref[src];command=clear_memory;engineering_skill=[engineering_skill]'>Clear Memory</a><hr>" //Can always clear the memory, but it takes a moment.
 
-	if (last_configurator)
-		t1 += "Operator: [last_configurator]<br>"
+	for (var/acc in accesses)
+		aname = get_access_desc(acc)
 
-	if (locked)
-		t1 += "<a href='?src=\ref[src];login=1'>Swipe ID</a><hr>"
-	else
-		t1 += "<a href='?src=\ref[src];logout=1'>Block</a><hr>"
+		if (!(acc in conf_access))
+			t1 += "<a href='?src=\ref[src];command=toggle_access;access=[acc]'>[aname]</a><br>"
+		else t1 += "<a style='color: [one_access? "green" : "red"]' href='?src=\ref[src];command=toggle_access;access=[acc]'>[aname]</a><br>"
 
-		t1 += "Access requirement is set to "
-		t1 += one_access ? "<a style='color: green' href='?src=\ref[src];one_access=1'>ONE</a><hr>" : "<a style='color: red' href='?src=\ref[src];one_access=1'>ALL</a><hr>"
-
-		t1 += conf_access == null ? "<font color=red>All</font><br>" : "<a href='?src=\ref[src];access=all'>All</a><br>"
-
-		t1 += "<br>"
-
-		var/list/accesses = get_access(ACCESS_LIST_MARINE_ALL)
-		for (var/acc in accesses)
-			var/aname = get_access_desc(acc)
-
-			if (!conf_access || !conf_access.len || !(acc in conf_access))
-				t1 += "<a href='?src=\ref[src];access=[acc]'>[aname]</a><br>"
-			else if(one_access)
-				t1 += "<a style='color: green' href='?src=\ref[src];access=[acc]'>[aname]</a><br>"
-			else
-				t1 += "<a style='color: red' href='?src=\ref[src];access=[acc]'>[aname]</a><br>"
-
-	t1 += text("<p><a href='?src=\ref[];close=1'>Close</a></p>\n", src)
+	t1 += text("<p><a href='?src=\ref[];command=close'>Close</a></p>\n", src)
 
 	show_browser(user, t1, "Access Control", "airlock_electronics")
 	onclose(user, "airlock")
-
 
 /obj/item/circuitboard/airlock/Topic(href, href_list)
 	..()
 	if (usr.stat || usr.is_mob_restrained() || (!ishuman(usr) && !istype(usr,/mob/living/silicon)))
 		return
-	if (href_list["close"])
-		close_browser(usr, "airlock")
-		return
 
-	if (href_list["login"])
-		if(istype(usr,/mob/living/silicon))
-			src.locked = 0
-			src.last_configurator = usr.name
-		else
-			var/obj/item/I = usr.get_active_hand()
-			if (I && src.check_access(I))
-				src.locked = 0
-				src.last_configurator = I:registered_name
+	switch(href_list["command"])
+		if("close")
+			close_browser(usr, "airlock_electronics")
+			return
+		if("one_access")
+			one_access = !one_access
 
-	if (locked)
-		return
+		if("toggle_access")
+			toggle_access(href_list["access"])
 
-	if (href_list["logout"])
-		locked = 1
-
-	if (href_list["one_access"])
-		one_access = !one_access
-
-	if (href_list["access"])
-		toggle_access(href_list["access"])
+		if("clear_memory")
+			if(!clear_memory(usr, href_list["engineering_skill"])) return FALSE
 
 	attack_self(usr)
 
-
 /obj/item/circuitboard/airlock/proc/toggle_access(acc)
-	if (acc == "all")
-		conf_access = null
-	else
-		var/req = text2num(acc)
+	var/req = text2num(acc)
+	conf_access = (req in conf_access) ? conf_access - req : conf_access + req
 
-		if (conf_access == null)
-			conf_access = list()
+/obj/item/circuitboard/airlock/proc/clear_memory(mob/living/user, engineering_skill = SKILL_ENGINEER_TRAINED) //Still need to convert later on if it's properly referenced.
+	to_chat(user, SPAN_NOTICE("You will need time to clear the buffer, stand still."))
+	if(!do_after(user, (SKILL_ENGINEER_MAX - text2num(engineering_skill) + 0.5) SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))//3.5 seconds - skill level in seconds.
+		to_chat(user, SPAN_WARNING("You were interrupted!"))
+		return FALSE
 
-		if (!(req in conf_access))
-			conf_access += req
-		else
-			conf_access -= req
-			if (!conf_access.len)
-				conf_access = null
-
-
-/obj/item/circuitboard/airlock/secure
-	name = "secure airlock electronics"
-	desc = "designed to be somewhat more resistant to hacking than standard electronics."
+	conf_access = list() //We'll make a new list.
+	return TRUE

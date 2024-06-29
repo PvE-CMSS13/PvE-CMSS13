@@ -21,3 +21,11 @@
 /datum/map_template/tent/reqs
 	name = "Reqs Tent"
 	map_id = "tent_reqs"
+
+/datum/map_template/tent/supply
+	name = "Supply Tent"
+	map_id = "tent_supply"
+
+/datum/map_template/tent/officer
+	name = "Officer Tent"
+	map_id = "tent_officer"

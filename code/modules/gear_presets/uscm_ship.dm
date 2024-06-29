@@ -1,5 +1,4 @@
 /datum/equipment_preset/uscm_ship
-	name = "USCM (ship roles)"
 	faction = FACTION_MARINE
 	faction_group = FACTION_LIST_MARINE
 	minimum_age = 20
@@ -586,6 +585,7 @@
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	access_list = ACCESS_LIST_UPP_PLATOON
+	rank = JOB_SO_UPP
 
 /datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/command(new_human), WEAR_L_EAR)

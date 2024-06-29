@@ -7,7 +7,7 @@
 	icon_state = "shield"
 	anchored = TRUE
 	density = FALSE
-	layer = RIPPLE_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	mouse_opacity = MOUSE_OPACITY_ICON
 	alpha = 0
 

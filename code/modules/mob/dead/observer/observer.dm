@@ -595,7 +595,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		S.Crossed(src)
 
 	// CRUTCH because ghost don't respect normal movement rules
-	SEND_SIGNAL(new_turf, COMSIG_TURF_ENTERED, src)
 	SEND_SIGNAL(src, COMSIG_GHOST_MOVED, new_turf)
 
 /mob/dead/observer/get_examine_text(mob/user)
@@ -1181,12 +1180,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(alert("Do you want to go DNR?", "Choose to go DNR", "Yes", "No") == "Yes")
 		can_reenter_corpse = FALSE
-		var/ref
 		var/mob/living/carbon/human/H = mind.original
 		if(istype(H))
-			ref = WEAKREF(H)
-		GLOB.data_core.manifest_modify(name, ref, null, null, "*Deceased*")
-
+			GLOB.data_core.manifest_modify(H.real_name, WEAKREF(H), null, null, H.species.manifest_dead)
 
 /mob/dead/observer/verb/view_kill_feed()
 	set category = "Ghost.View"

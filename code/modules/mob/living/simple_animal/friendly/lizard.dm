@@ -6,6 +6,7 @@
 	icon_living = "lizard"
 	icon_dead = "lizard-dead"
 	mob_size = MOB_SIZE_SMALL
+	layer = ABOVE_OBJ_LAYER //Sneaky.
 	speak_emote = list("hisses")
 	health = 5
 	maxHealth = 5

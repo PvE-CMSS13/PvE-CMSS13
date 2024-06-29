@@ -77,8 +77,7 @@ Additional game mode variables.
 	var/latejoin_larva_drop = LATEJOIN_MARINES_PER_LATEJOIN_LARVA //A larva will spawn in once the tally reaches this level. If set to 0, no latejoin larva drop
 
 	//Role Authority set up.
-	/// List of role titles to override to different roles when starting game
-	var/list/role_mappings
+	var/list/role_manifest_blacklist ///This will transfer to RoleAuthority to indicate what roles should not have access to the manifest/injected into it, whether or not they spawn.
 
 	//current amount of survivors by type
 	var/list/survivors_by_type_amounts = list()

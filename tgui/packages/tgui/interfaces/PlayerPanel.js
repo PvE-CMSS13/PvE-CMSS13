@@ -852,6 +852,26 @@ const PhysicalActions = (props, context) => {
             />
           </Stack>
         )}
+        {!!is_human && (
+          <Stack>
+            <Button.Confirm
+              content="Create or Modify Datacore"
+              icon="database"
+              width="100%"
+              color="green"
+              disabled={!hasPermission(data, 'set_datacore')}
+              onClick={() => act('set_datacore')}
+            />
+            <Button.Confirm
+              content="Erase Datacore"
+              icon="eraser"
+              width="100%"
+              color="yellow"
+              disabled={!hasPermission(data, 'erase_datacore')}
+              onClick={() => act('erase_datacore')}
+            />
+          </Stack>
+        )}
         <Stack mt={1}>
           {hasPermission(data, 'set_speed') && (
             <Slider

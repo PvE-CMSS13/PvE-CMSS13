@@ -2,6 +2,7 @@
 	supervisors = "the auxiliary support officer"
 	total_positions = 1
 	spawn_positions = 1
+	category = JOB_CATEGORY_SUPPORT
 
 /datum/timelock/engineer
 	name = "Engineering Roles"

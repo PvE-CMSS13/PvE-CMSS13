@@ -48,6 +48,38 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_SQUAD_ONE 39
 #define ACCESS_SQUAD_TWO 40
 
+//=================================================
+
+/*
+Access codes for USCM ground operations, unique from their ship codes.
+May be necessary to make these unique, but for now they are only used in
+Blackstone Bridge.
+*/
+#define ACCESS_USCM_GROUND_GENERAL 50 //Mostly for armory and barracks access.
+#define ACCESS_USCM_GROUND_MAINT 51 //Maintenance and engineering.
+#define ACCESS_USCM_GROUND_SYNTH 52 //Synth storage.
+#define ACCESS_USCM_GROUND_MEDICAL 53 //Access to the medical bay.
+#define ACCESS_USCM_GROUND_ARMORY 54 //Who can unlock the armory shutters.
+#define ACCESS_USCM_GROUND_GUEST 55 //Civilian access to unlock the guest bedrooms, only officers and guests have this access.
+#define ACCESS_USCM_GROUND_LOCKDOWN  56 //Who can lockdown the base, only officers have this access.
+#define ACCESS_USCM_GROUND_SMARTPREP 57 //Smartgun lockers.
+#define ACCESS_USCM_GROUND_MEDPREP 58 //Corpseman vendor.
+#define ACCESS_USCM_GROUND_SPECPREP 59 //Specialist vendor.
+#define ACCESS_USCM_GROUND_TLPREP 60 //Squad/team leader prep.
+#define ACCESS_USCM_GROUND_PLATOONL 61 //Platoon leader office(s).
+
+#define ACCESS_USCM_GROUND_COMMAND 63 //CIC and other stuff.
+#define ACCESS_USCM_GROUND_CO_OFFICE  64 //Commander's office.
+#define ACCESS_USCM_GROUND_CO_QUARTERS 65 //Commander's personal quarters.
+#define ACCESS_USCM_GROUND_LT  66 //Lieutenant's personal quarters.
+#define ACCESS_USCM_GROUND_WAREHOUSE  67 //Warehouse access.
+#define ACCESS_USCM_GROUND_CHECKPOINT  68 //Checkpoint access.
+
+#define ACCESS_USCM_GROUND_PLATOON_ONE 71 //Two platoons.
+#define ACCESS_USCM_GROUND_PLATOON_TWO 72
+
+//=================================================
+
 // AI Core Accesses
 /// Used in temporary passes
 #define ACCESS_MARINE_AI_TEMP 90
@@ -174,6 +206,16 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_MARINE_MAIN "Almayer (Main)"
 ///All USCM Access levels used on the USS Almayer
 #define ACCESS_LIST_MARINE_ALL "Almayer (ALL)"
+///Pulls up a list of mapped Almayer access regions for the ID changer. A few similar defines in here as well. Works with the faction datums.
+#define ACCESS_LIST_MARINE_REGIONS "Almayer Access Regions"
+
+///Most access outside of certain officer access.
+#define ACCESS_LIST_USCM_GROUND_MAIN "USCM Ground (Main)"
+///All of the ground access for USCM.
+#define ACCESS_LIST_USCM_GROUND_ALL "USCM Ground (ALL)"
+///Regions for the outpost.
+#define ACCESS_LIST_USCM_GROUND_REGIONS "USCM Ground Access Regions"
+
 ///Used by the Wey-Yu - USCM Liaison
 #define ACCESS_LIST_MARINE_LIAISON "Wey-Yu (Liaison)"
 
@@ -192,9 +234,13 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_WY_SENIOR "Wey-Yu (Senior Lead)"
 ///All access levels associated with Weyland Yutani
 #define ACCESS_LIST_WY_ALL "Wey-Yu (ALL)"
+#define ACCESS_LIST_PMC_REGIONS "PMC Access Regions"
+#define ACCESS_LIST_WY_REGIONS "Weyland-Yutani Access Regions"
 
 ///All the access levels in the civillian category, excluding Press.
 #define ACCESS_LIST_COLONIAL_ALL "Colonial (ALL)"
+///Colony access.
+#define ACCESS_LIST_COLONIAL_REGIONS "Colonial Access Regions"
 ///Used by the Wey-Yu - Civil Authority Liaison
 #define ACCESS_LIST_CIVIL_LIAISON "Colonial (Liaison)"
 ///The access used by delivery ERT (Pizza/Souto)
@@ -203,8 +249,14 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///All access levels associated with UPP
 #define ACCESS_LIST_UPP_ALL "UPP (ALL)"
 #define ACCESS_LIST_UPP_PLATOON "UPP (Platoon)"
+#define ACCESS_LIST_UPP_REGIONS "UPP Access Regions"
 
 ///Generic/basic access to CLF stuff
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
+#define ACCESS_LIST_CLF_REGIONS "CLF Access Regions"
+
+//For the Brits.
+#define ACCESS_LIST_TWE_ALL "TWE (ALL)"
+#define ACCESS_LIST_TWE_REGIONS "TWE Access Regions"

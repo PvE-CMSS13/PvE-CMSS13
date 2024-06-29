@@ -171,3 +171,12 @@
 	. = ..()
 	new /obj/item/storage/surgical_tray(src)
 	new /obj/item/roller/surgical(src)
+
+/obj/structure/closet/secure_closet/surgical/full/Initialize()
+	. = ..()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/circular_saw(src)
+	new /obj/item/tool/surgery/bonesetter(src)
+	new /obj/item/tool/surgery/cautery(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)

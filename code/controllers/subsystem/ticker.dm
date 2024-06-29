@@ -180,13 +180,13 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 	if(!mode.can_start(bypass_checks))
 		to_chat(world, "Reverting to pre-game lobby.")
-		QDEL_NULL(mode)
+		mode = null
 		RoleAuthority.reset_roles()
 		return FALSE
 
 	CHECK_TICK
 	if(!mode.pre_setup() && !bypass_checks)
-		QDEL_NULL(mode)
+		mode = null
 		to_chat(world, "<b>Error in pre-setup for [GLOB.master_mode].</b> Reverting to pre-game lobby.")
 		RoleAuthority.reset_roles()
 		return FALSE
@@ -335,15 +335,11 @@ SUBSYSTEM_DEF(ticker)
 	else
 		time_left = newtime
 
-
 /datum/controller/subsystem/ticker/proc/load_mode()
-	var/mode = trim(file2text("data/mode.txt"))
-	if(mode)
-		GLOB.master_mode = SSmapping.configs[GROUND_MAP].force_mode ? SSmapping.configs[GROUND_MAP].force_mode : mode
-	else
-		GLOB.master_mode = "Distress Signal: Lowpop"
+	/// This fires pretty late, pretty much at the very end of the pre-game setup stack. Which means you won't see the mode change until then, if it has been changed from the previous round.
+	GLOB.master_mode = SSmapping.configs[GROUND_MAP].force_mode || trim(file2text("data/mode.txt")) || "Distress Signal: Lowpop"
 	log_game("Saved mode is '[GLOB.master_mode]'")
-
+	config.pick_mode(GLOB.master_mode) /// This will initialize a cached mode to reference for procs and whatnot, which is then transferred to the ticker.
 
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
 	fdel("data/mode.txt")

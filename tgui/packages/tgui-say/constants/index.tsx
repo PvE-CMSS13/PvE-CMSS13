@@ -176,19 +176,19 @@ export const RADIO_PREFIXES = {
   },
   '.m ': {
     id: 'medsci',
-    label: 'MedSci',
+    label: 'OutMed',
   },
   '.n ': {
     id: 'engi',
-    label: 'Engi',
+    label: 'OutEngi',
   },
   '.g ': {
     id: 'ship',
-    label: 'Ship',
+    label: 'Outpost',
   },
   '.v ': {
     id: 'command',
-    label: 'Cmd.',
+    label: 'OutCmd',
   },
   '.a ': {
     id: 'alpha',
@@ -207,12 +207,12 @@ export const RADIO_PREFIXES = {
     label: 'Delta',
   },
   '.e ': {
-    id: 'echo',
-    label: 'Echo',
+    id: 'groundone',
+    label: 'PltOne',
   },
   '.f ': {
-    id: 'foxtrot',
-    label: 'Foxtr.',
+    id: 'groundtwo',
+    label: 'PltTwo',
   },
   '.p ': {
     id: 'security',
@@ -252,19 +252,19 @@ export const RADIO_PREFIXES = {
   },
   '.M ': {
     id: 'medsci',
-    label: 'MedSci',
+    label: 'OutMed',
   },
   '.N ': {
     id: 'engi',
-    label: 'Engi',
+    label: 'OutEngi',
   },
   '.G ': {
     id: 'ship',
-    label: 'Ship',
+    label: 'Outpost',
   },
   '.V ': {
     id: 'command',
-    label: 'Cmd.',
+    label: 'OutCmd',
   },
   '.A ': {
     id: 'alpha',
@@ -283,12 +283,12 @@ export const RADIO_PREFIXES = {
     label: 'Delta',
   },
   '.E ': {
-    id: 'echo',
-    label: 'Echo',
+    id: 'groundone',
+    label: 'PltOne',
   },
   '.F ': {
-    id: 'foxtrot',
-    label: 'Foxtr.',
+    id: 'groundtwo',
+    label: 'PltTwo',
   },
   '.P ': {
     id: 'security',

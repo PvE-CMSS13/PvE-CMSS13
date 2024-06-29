@@ -113,12 +113,37 @@
 	name = "ares core camera"
 	network = list(CAMERA_NET_ALMAYER, CAMERA_NET_ARES)
 
+/obj/structure/machinery/camera/autoname/uscm_ground
+	name = "military-grade camera"
+	network = list(CAMERA_NET_USCM_GROUND)
+	colony_camera_mapload = FALSE
+
+/obj/structure/machinery/camera/autoname/uscm_ground/checkpoint
+	network = list(CAMERA_NET_USCM_GROUND_WEST)
+
+/obj/structure/machinery/camera/autoname/uscm_ground/checkpoint/east
+	network = list(CAMERA_NET_USCM_GROUND_EAST)
+
 /obj/structure/machinery/camera/autoname/golden_arrow
 	name = "military-grade camera"
 	network = list(CAMERA_NET_GOLDEN_ARROW)
 
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
+
+/obj/structure/machinery/camera/autoname/wy_bunker
+	network = list(CAMERA_NET_WY_BUNKER)
+	colony_camera_mapload = FALSE
+
+/obj/structure/machinery/camera/autoname/wy_bunker/containment
+	name = "containment camera"
+	network = list(CAMERA_NET_WY_BUNKER_CONTAINMENT)
+	unslashable = TRUE
+	unacidable = TRUE
+
+/obj/structure/machinery/camera/autoname/upp_bunker
+	network = list(CAMERA_NET_UPP_BUNKER)
+	colony_camera_mapload = FALSE
 
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.

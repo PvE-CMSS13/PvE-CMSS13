@@ -25,23 +25,22 @@
 	icon_state = "platform_stair_alt"
 	dir = 1
 
-
 /obj/structure/platform/Initialize()
 	. = ..()
-	var/image/I = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
+	var/image/overlay_image = image(icon, src, "platform_overlay", LADDER_LAYER, dir)//ladder layer puts us just above weeds.
 	switch(dir)
 		if(SOUTH)
-			layer = ABOVE_MOB_LAYER+0.1
-			I.pixel_y = -16
+			layer = PLATFORM_LAYER // Fixed the climbing animation problem to some degree, but still looks very strange under some circumstances.
+			overlay_image.pixel_y = -16
 		if(NORTH)
-			I.pixel_y = 16
+			overlay_image.pixel_y = 16
 		if(EAST)
-			I.pixel_x = 16
-			layer = ABOVE_MOB_LAYER+0.1
+			overlay_image.pixel_x = 16
+			layer = PLATFORM_LAYER
 		if(WEST)
-			I.pixel_x = -16
-			layer = ABOVE_MOB_LAYER+0.1
-	overlays += I
+			overlay_image.pixel_x = -16
+			layer = PLATFORM_LAYER
+	overlays += overlay_image
 
 /obj/structure/platform/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -52,8 +51,27 @@
 	if(ismob(AM))
 		do_climb(AM)
 	..()
+/*
+/obj/structure/platform/BlockedExitDirs(obj/vehicle/multitile/V, target_dir)
+	to_world(SPAN_DEBUG("Vehicle exit detected."))
+	if(istype(V))
+		//if(REVERSE_DIR(dir) == target_dir)
+		if(dir == target_dir)
+			to_world(SPAN_DEBUG("Directions match, colliding."))
+			return BLOCKED_MOVEMENT
+		else return NO_BLOCKED_MOVEMENT
 
+	return ..()
+*/
 /obj/structure/platform/BlockedPassDirs(atom/movable/mover, target_dir)
+//	if(istype(V))
+//		if()
+
+	var/obj/vehicle/multitile/V = mover
+	if(istype(V) && dir == target_dir)
+		return
+
+
 	var/obj/structure/S = locate(/obj/structure) in get_turf(mover)
 	if(S && S.climbable && !(S.flags_atom & ON_BORDER) && climbable && isliving(mover)) //Climbable objects allow you to universally climb over others
 		return NO_BLOCKED_MOVEMENT
@@ -93,18 +111,13 @@
 	flags_atom = ON_BORDER
 	unacidable = TRUE
 	unslashable = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT /// Don't need to interact with them. They don't do anything.
 
 /obj/structure/platform_decoration/Initialize()
 	. = ..()
 	switch(dir)
-		if (NORTH)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTH)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTHEAST)
-			layer = ABOVE_MOB_LAYER+0.2
-		if (SOUTHWEST)
-			layer = ABOVE_MOB_LAYER+0.2
+		if(NORTH, SOUTH, SOUTHEAST, SOUTHWEST, NORTHEAST, NORTHWEST)
+			layer = PLATFORM_DECORATION_LAYER
 
 /obj/structure/platform_decoration/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()

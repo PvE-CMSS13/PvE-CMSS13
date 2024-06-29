@@ -1,0 +1,757 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"df" = (
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_x = -8
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen{
+	pixel_x = -1;
+	pixel_y = -4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"dA" = (
+/obj/structure/bookcase,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"dF" = (
+/obj/structure/surface/table/woodentable{
+	name = "darkwood table";
+	desc = "A square wood surface made of thick, dark wood.";
+	color = "#3c3434"
+	},
+/obj/item/weapon/gun/revolver/m44/custom/webley{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/revolver/m44/custom/webley{
+	pixel_x = 2;
+	pixel_y = -5
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"dL" = (
+/turf/open/gm/dirt{
+	icon_state = "desert3"
+	},
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"ej" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"eY" = (
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"iL" = (
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"kb" = (
+/obj/item/reagent_container/food/drinks/bottle/wine{
+	pixel_x = -11;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/pwine{
+	pixel_x = -3
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"ki" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/plumphelmet{
+	pixel_x = 10
+	},
+/obj/item/reagent_container/food/snacks/grown/mushroom/plumphelmet{
+	pixel_x = 1;
+	pixel_y = -6
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"kS" = (
+/obj/structure/flora/bush/ausbushes/var3/sunnybush,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"lU" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"ma" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = -4;
+	pixel_x = -7
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"mp" = (
+/obj/effect/decal/sand_overlay/sand5,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"mu" = (
+/obj/structure/prop/brazier/frame/full/torch{
+	pixel_y = 28
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"mQ" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = 6;
+	pixel_x = -7
+	},
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/obj/item/tool/match{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"na" = (
+/obj/structure/flora/bush/ausbushes/pointybush{
+	pixel_y = 11
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"ng" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/eat,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"oU" = (
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"pS" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = -6;
+	pixel_x = 6
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"rK" = (
+/obj/item/toy/deck{
+	pixel_x = -9;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/obj/item/ammo_magazine/shotgun/incendiary{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"sc" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/angel,
+/obj/item/reagent_container/food/snacks/grown/mushroom/plumphelmet{
+	pixel_x = 10
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"sM" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = 12
+	},
+/obj/item/trash/candle{
+	color = "#911D6A";
+	pixel_y = -1;
+	pixel_x = 4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"uJ" = (
+/obj/structure/surface/table/woodentable{
+	name = "darkwood table";
+	desc = "A square wood surface made of thick, dark wood.";
+	color = "#3c3434"
+	},
+/obj/item/clothing/head/cultist_hood{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/storage/fancy/cigar/matchbook/brown,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"vR" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = 4
+	},
+/obj/item/trash/candle{
+	color = "#911D6A";
+	pixel_y = -6
+	},
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = 2
+	},
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = 2
+	},
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = 4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"xg" = (
+/obj/item/clothing/suit/storage/apron/overalls,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"zj" = (
+/turf/closed/wall/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"zq" = (
+/obj/effect/decal/hefa_cult_decals/d32,
+/obj/item/tool/candle{
+	color = "#911D6A"
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"zM" = (
+/turf/open/gm/dirt,
+/area/template_noop)
+"As" = (
+/obj/structure/bed/chair/wood/normal{
+	dir = 1;
+	color = "#3c3434";
+	name = "darkwood chair";
+	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"AS" = (
+/obj/structure/surface/table/woodentable{
+	name = "darkwood table";
+	desc = "A square wood surface made of thick, dark wood.";
+	color = "#3c3434"
+	},
+/obj/item/reagent_container/food/snacks/meat/monkey{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/reagent_container/food/snacks/meat/monkey{
+	pixel_x = -2;
+	pixel_y = 1
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"CS" = (
+/obj/structure/flora/bush/ausbushes/lavendergrass,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"DC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/shoes/laceup,
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = -10;
+	pixel_x = -7
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Fg" = (
+/obj/item/tool/minihoe,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Gt" = (
+/turf/template_noop,
+/area/template_noop)
+"Gx" = (
+/obj/structure/prop/brazier/frame/full/campfire/smolder,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Gy" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/angel,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"GL" = (
+/obj/structure/prop/brazier/frame/full/torch{
+	pixel_y = 28
+	},
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"HO" = (
+/obj/item/prop/magazine/book/borntokill,
+/obj/item/prop/magazine/book/spacebeast{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"IB" = (
+/obj/effect/decal/sand_overlay/sand5{
+	dir = 4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Jl" = (
+/mob/living/simple_animal/bat,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Jx" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = -12
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"JC" = (
+/obj/item/weapon/baseballbat/metal{
+	pixel_x = -7
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Kx" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_y = -4;
+	pixel_x = 8
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"KM" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = 7
+	},
+/obj/item/trash/candle{
+	color = "#911D6A";
+	pixel_y = -1
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Lj" = (
+/obj/item/tool/candle{
+	color = "#911D6A";
+	pixel_x = -12
+	},
+/obj/item/trash/uscm_mre{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/tool/match{
+	pixel_x = 12;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Lu" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"LB" = (
+/obj/item/reagent_container/spray/hydro{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"LH" = (
+/turf/closed/wall/rock/brown/destructible,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"Oy" = (
+/obj/structure/flora/bush/ausbushes/var3/stalkybush,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Pj" = (
+/obj/item/coin/silver{
+	pixel_x = -7;
+	pixel_y = -4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Qw" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/center)
+"Ri" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 1
+	},
+/turf/closed/wall/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Rx" = (
+/obj/effect/decal/hefa_cult_decals/d32{
+	desc = "You think you can make out the iconography of a Xenomorph.";
+	icon_state = "4"
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Tb" = (
+/obj/effect/decal/sand_overlay/sand5,
+/obj/item/trash/candle{
+	color = "#911D6A";
+	pixel_y = -1;
+	pixel_x = 4
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Tq" = (
+/obj/effect/decal/hefa_cult_decals/d96{
+	pixel_x = 20
+	},
+/obj/item/trash/uscm_mre,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"UM" = (
+/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"VP" = (
+/obj/structure/bed/chair/wood/normal{
+	dir = 1;
+	color = "#3c3434";
+	name = "darkwood chair";
+	desc = "A sturdy chair. The craftsmanship is simple but of good quality."
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"WV" = (
+/obj/item/reagent_container/food/snacks/packaged_meal{
+	pixel_x = 9
+	},
+/obj/item/reagent_container/food/snacks/packaged_meal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/trash/uscm_mre{
+	pixel_x = -10;
+	pixel_y = 7
+	},
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"XC" = (
+/obj/effect/decal/hefa_cult_decals/d32,
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/engine/cult,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"YE" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+"Zs" = (
+/obj/item/reagent_container/food/snacks/grown/mushroom/libertycap,
+/obj/item/reagent_container/food/snacks/grown/mushroom/plumphelmet{
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/turf/open/auto_turf/strata_grass/layer1,
+/area/whiskey_outpost/blackstone/underground/western_caves/church)
+
+(1,1,1) = {"
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+na
+kS
+Gt
+Gt
+Gt
+Gt
+"}
+(2,1,1) = {"
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+na
+UM
+YE
+UM
+Gt
+Gt
+Gt
+"}
+(3,1,1) = {"
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+Gt
+na
+kS
+Oy
+LB
+YE
+Gt
+Gt
+"}
+(4,1,1) = {"
+Gt
+Gt
+Gt
+zM
+zj
+zj
+zj
+zj
+zj
+zj
+zj
+zj
+zj
+UM
+Lu
+Fg
+eY
+eY
+"}
+(5,1,1) = {"
+Gt
+Gt
+Gt
+IB
+XC
+JC
+ma
+VP
+VP
+DC
+As
+ej
+zj
+zj
+Lu
+zj
+zj
+eY
+"}
+(6,1,1) = {"
+Gt
+zj
+iL
+iL
+iL
+mQ
+ng
+ej
+As
+iL
+VP
+ej
+zj
+dA
+Lu
+Lj
+zj
+eY
+"}
+(7,1,1) = {"
+Gt
+zj
+vR
+iL
+iL
+iL
+KM
+As
+iL
+ki
+As
+As
+zj
+rK
+iL
+Tq
+zj
+GL
+"}
+(8,1,1) = {"
+Gt
+zj
+iL
+AS
+df
+Gx
+iL
+iL
+Lu
+Lu
+CS
+Jx
+iL
+iL
+iL
+iL
+mp
+eY
+"}
+(9,1,1) = {"
+Gt
+zj
+Lu
+uJ
+iL
+oU
+WV
+Lu
+Gy
+Lu
+sM
+iL
+Jl
+iL
+iL
+iL
+Tb
+eY
+"}
+(10,1,1) = {"
+eY
+Lu
+Lu
+YE
+Lu
+kb
+zq
+As
+As
+iL
+As
+As
+zj
+dA
+HO
+ej
+Ri
+mu
+"}
+(11,1,1) = {"
+eY
+zj
+sc
+Lu
+Kx
+Rx
+iL
+As
+VP
+Pj
+VP
+ej
+zj
+dA
+ej
+dF
+Ri
+Qw
+"}
+(12,1,1) = {"
+eY
+zj
+zj
+zj
+Lu
+iL
+xg
+iL
+VP
+pS
+VP
+VP
+zj
+zj
+zj
+zj
+LH
+Gt
+"}
+(13,1,1) = {"
+eY
+eY
+eY
+zj
+Zs
+Lu
+zj
+zj
+zj
+zj
+zj
+zj
+zj
+Qw
+Qw
+eY
+Gt
+Gt
+"}
+(14,1,1) = {"
+Gt
+Gt
+eY
+eY
+Qw
+Qw
+Qw
+Qw
+Qw
+LH
+LH
+Qw
+lU
+Qw
+eY
+eY
+Gt
+Gt
+"}
+(15,1,1) = {"
+Gt
+Gt
+Gt
+eY
+eY
+eY
+eY
+eY
+eY
+eY
+Qw
+Qw
+Qw
+dL
+eY
+Gt
+Gt
+Gt
+"}

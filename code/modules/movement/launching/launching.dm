@@ -159,6 +159,10 @@
 	if (LM.spin)
 		animation_spin(5, 1 + min(1, LM.range/20))
 
+	var/old_layer
+	if(layer < FLY_LAYER) // Only swap layers if the atom is on a lower layer.
+		old_layer = layer
+		layer = FLY_LAYER
 	var/old_speed = cur_speed
 	cur_speed = Clamp(LM.speed, MIN_SPEED, MAX_SPEED) // Sanity check, also ~1 sec delay between each launch move is not very reasonable
 	var/delay = 10/cur_speed - 0.5 // scales delay back to deciseconds for when sleep is called
@@ -204,6 +208,7 @@
 	if (loc)
 		throwing = FALSE
 		rebounding = FALSE
+		layer = old_layer || layer // If old_layer isn't null, we will use it, or stick with whatever layer is set.
 		cur_speed = old_speed
 		remove_temp_pass_flags(pass_flags)
 		if(length(LM.end_throw_callbacks))
@@ -212,6 +217,7 @@
 					CB.Invoke(src)
 				else
 					CB.Invoke()
+
 	QDEL_NULL(launch_metadata)
 
 /atom/movable/proc/throw_random_direction(range, speed = 0, atom/thrower, spin, launch_type = NORMAL_LAUNCH, pass_flags = NO_FLAGS)

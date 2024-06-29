@@ -1,5 +1,6 @@
 /datum/job/marine/engineer
 	title = JOB_SQUAD_ENGI
+	squad_root_title = JOB_SQUAD_ENGI
 	total_positions = 12
 	spawn_positions = 12
 	allow_additional = 1

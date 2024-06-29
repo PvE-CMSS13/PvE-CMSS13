@@ -178,12 +178,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return
 
 	var/mob/living/carbon/human/human_user = user
-	if(human_user.comm_title)
-		phone_id = "[human_user.comm_title] [human_user]"
-	else if(human_user.job)
-		phone_id = "[human_user.job] [human_user]"
-	else
-		phone_id = "[human_user]"
+	phone_id = "[human_user.comm_title || GET_HUMAN_DEFAULT_ASSIGNMENT(human_user)] [human_user]"
 
 	if(human_user.assigned_squad)
 		phone_id += " ([human_user.assigned_squad.name])"

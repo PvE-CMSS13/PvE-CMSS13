@@ -16,15 +16,16 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
-	if(!isnull(channels[SQUAD_MARINE_1]) && SQUAD_MARINE_1 != GLOB.main_platoon_name)
-		rename_platoon(null, GLOB.main_platoon_name, SQUAD_MARINE_1)
+	//If we have a frequency with the initial name, but that name doesn't match the current name.
+	if(channels[GLOB.main_platoon_initial_name] && GLOB.main_platoon_initial_name != GLOB.main_platoon_name)
+		rename_platoon(null, GLOB.main_platoon_name, GLOB.main_platoon_initial_name)
 
 /obj/item/device/encryptionkey/proc/rename_platoon(datum/source, new_name, old_name)
 	SIGNAL_HANDLER
 
 	var/toggled_channel = channels[old_name]
 
-	if(isnull(toggled_channel))
+	if(!toggled_channel)
 		return
 
 	channels -= old_name
@@ -36,10 +37,10 @@
 
 	var/obj/item/device/radio/headset/current_headset = loc
 
-	var/passed_freq = current_headset.secure_radio_connections[old_name].frequency
-	current_headset.secure_radio_connections -= old_name
-
-	SSradio.remove_object(current_headset, passed_freq)
+	var/datum/radio_frequency/old_freq = current_headset.secure_radio_connections[old_name]
+	if(old_freq)
+		current_headset.secure_radio_connections -= old_name
+		SSradio.remove_object(current_headset, old_freq.frequency)
 
 	current_headset.recalculateChannels()
 
@@ -52,6 +53,10 @@
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_ALMAYER = TRUE)
 	abstract = TRUE
+
+/obj/item/device/encryptionkey/public/uscm_ground
+	name = "Outpost Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND = TRUE)
 
 /obj/item/device/encryptionkey/colony
 	name = "Colony Radio Encryption Key"
@@ -100,6 +105,10 @@
 	icon_state = "cap_key"
 	channels = list(RADIO_CHANNEL_COMMAND = TRUE, SQUAD_MARINE_1 = TRUE, SQUAD_MARINE_2 = TRUE, SQUAD_MARINE_3 = TRUE, SQUAD_MARINE_4 = TRUE, SQUAD_MARINE_5 = TRUE, SQUAD_MARINE_CRYO = TRUE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_JTAC = TRUE, RADIO_CHANNEL_INTEL = TRUE)
 
+/obj/item/device/encryptionkey/mcom/uscm_ground
+	name = "\improper Outpost Command Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND_CMD = TRUE, RADIO_CHANNEL_USCM_GROUND_MED = TRUE, RADIO_CHANNEL_USCM_GROUND_ENGI = TRUE, SQUAD_USCM_GROUND_1 = TRUE, SQUAD_USCM_GROUND_2 = TRUE)
+
 /obj/item/device/encryptionkey/mcom/alt
 	channels = list(RADIO_CHANNEL_COMMAND = TRUE, SQUAD_MARINE_1 = FALSE, SQUAD_MARINE_2 = FALSE, SQUAD_MARINE_3 = FALSE, SQUAD_MARINE_4 = FALSE, SQUAD_MARINE_5 = FALSE, SQUAD_MARINE_CRYO = FALSE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_JTAC = TRUE, RADIO_CHANNEL_INTEL = TRUE)
 
@@ -115,6 +124,10 @@
 	icon_state = "eng_key"
 	channels = list(RADIO_CHANNEL_ENGI = TRUE)
 
+/obj/item/device/encryptionkey/engi/uscm_ground
+	name = "Outpost Engineering Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND_ENGI = TRUE)
+
 // MARINE MEDICAL
 
 /obj/item/device/encryptionkey/cmo
@@ -126,6 +139,10 @@
 	name = "Medical Radio Encryption Key"
 	icon_state = "med_key"
 	channels = list(RADIO_CHANNEL_MEDSCI = TRUE)
+
+/obj/item/device/encryptionkey/med/uscm_ground
+	name = "Outpost Medical Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND_MED = TRUE)
 
 /obj/item/device/encryptionkey/medres
 	name = "Research Radio Encryption Key"
@@ -172,6 +189,10 @@
 	name = "\improper Marine Synth Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_MP = TRUE, SQUAD_MARINE_1 = TRUE, SQUAD_MARINE_2 = TRUE, SQUAD_MARINE_3 = TRUE, SQUAD_MARINE_4 = TRUE, SQUAD_MARINE_5 = TRUE, SQUAD_MARINE_CRYO = TRUE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_JTAC = TRUE, RADIO_CHANNEL_INTEL = TRUE)
 
+/obj/item/device/encryptionkey/cmpcom/synth/uscm_ground
+	name = "\improper Marine Maintenance Synth Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND_CMD = TRUE, RADIO_CHANNEL_USCM_GROUND_MED = TRUE, RADIO_CHANNEL_USCM_GROUND_ENGI = TRUE)
+
 /obj/item/device/encryptionkey/mcom/cl
 	name = "\improper Corporate Liaison radio encryption key"
 	icon_state = "cap_key"
@@ -212,8 +233,9 @@
 	icon_state = "sl_key"
 	channels = list(RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_JTAC = TRUE)
 
-/obj/item/device/encryptionkey/squadlead/acting
-	abstract = TRUE
+/obj/item/device/encryptionkey/squadlead/uscm_ground
+	name = "\improper Outpost Platoon Leader Radio Encryption Key"
+	channels = list(RADIO_CHANNEL_USCM_GROUND_CMD = TRUE)
 
 /obj/item/device/encryptionkey/alpha
 	name = "\improper Alpha Squad Radio Encryption Key"
@@ -244,6 +266,14 @@
 	name = "\improper Foxtrot Squad Radio Encryption Key"
 	icon_state = "cryo_key"
 	channels = list(SQUAD_MARINE_CRYO = TRUE)
+
+/obj/item/device/encryptionkey/uscm_ground_one
+	name = "\improper Outpost First Platoon Radio Encryption Key"
+	channels = list(SQUAD_USCM_GROUND_1 = TRUE)
+
+/obj/item/device/encryptionkey/uscm_ground_two
+	name = "\improper Outpost Second Platoon Radio Encryption Key"
+	channels = list(SQUAD_USCM_GROUND_2 = TRUE)
 
 /obj/item/device/encryptionkey/soc
 	name = "\improper SOF Radio Encryption Key"

@@ -2,6 +2,9 @@
 	//The name of the job
 	var/title = ""  //The internal title for the job, used for the job ban system and so forth. Don't change these, change the disp_title instead.
 	var/disp_title  //Determined on new(). Usually the same as the title, but doesn't have to be. Set this to override what the player sees in the game as their title.
+
+	var/squad_root_title //Only for squad roles, maps their children to a root title for easier reference.
+	var/squad_default_path /// Only for squad roles; it will spawn them into this squad at round start or late joining. Should be a path/type.
 	var/role_ban_alternative // If the roleban title needs to be an extra check, like Xenomorphs = Alien.
 
 	var/total_positions = 0 //How many players can be this job
@@ -12,6 +15,7 @@
 	var/current_positions = 0 //How many players have this job
 	var/supervisors = "" //Supervisors, who this person answers to directly. Should be a string, shown to the player when they enter the game.
 	var/selection_class = "" // Job Selection span class (for background color)
+	var/category = JOB_CATEGORY_OTHER ///What category the job is sorted into for late joining and the crew manifest.
 
 	var/late_joinable = TRUE
 
@@ -145,32 +149,19 @@
 	return return_requirements
 
 /datum/job/proc/get_access()
-	if(!gear_preset)
-		return null
-	if(GLOB.gear_path_presets_list[gear_preset])
-		return GLOB.gear_path_presets_list[gear_preset].access
-	return null
+	return gear_preset && GLOB.gear_path_presets_list[gear_preset]?.access
 
 /datum/job/proc/get_skills()
-	if(!gear_preset)
-		return null
-	if(GLOB.gear_path_presets_list[gear_preset])
-		return GLOB.gear_path_presets_list[gear_preset].skills
-	return null
+	return gear_preset && GLOB.gear_path_presets_list[gear_preset]?.skills
+
+/datum/job/proc/get_assignment()
+	return gear_preset && GLOB.gear_path_presets_list[gear_preset]?.assignment
 
 /datum/job/proc/get_paygrade()
-	if(!gear_preset)
-		return ""
-	if(GLOB.gear_path_presets_list[gear_preset])
-		return GLOB.gear_path_presets_list[gear_preset].paygrade
-	return ""
+	return gear_preset && GLOB.gear_path_presets_list[gear_preset]?.paygrade
 
 /datum/job/proc/get_comm_title()
-	if(!gear_preset)
-		return ""
-	if(GLOB.gear_path_presets_list[gear_preset])
-		return GLOB.gear_path_presets_list[gear_preset].role_comm_title
-	return ""
+	return gear_preset && GLOB.gear_path_presets_list[gear_preset]?.role_comm_title
 
 /datum/job/proc/set_spawn_positions(count)
 	return spawn_positions
@@ -296,10 +287,10 @@
 			announce_entry_message(human, generated_account) //Tell them their spawn info.
 			generate_entry_conditions(human) //Do any other thing that relates to their spawn.
 
-		if(flags_startup_parameters & ROLE_ADD_TO_SQUAD) //Are we a muhreen? Randomize our squad. This should go AFTER IDs. //TODO Robust this later.
-			RoleAuthority.randomize_squad(human)
+		if(flags_startup_parameters & ROLE_ADD_TO_SQUAD) //Are we a muhreen? Randomize our squad. This should go AFTER IDs.
+			RoleAuthority.randomize_squad(human, src)
 
-		if(Check_WO() && job_squad_roles.Find(GET_DEFAULT_ROLE(human.job))) //activates self setting proc for marine headsets for WO
+		if(Check_WO() && job_squad_roles.Find(GET_SQUAD_ROLE_MAP(human.job))) //activates self setting proc for marine headsets for WO
 			var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
 			WO.self_set_headset(human)
 

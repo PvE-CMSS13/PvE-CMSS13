@@ -38,6 +38,8 @@ export const COLORS = {
     echo: '#027d02',
     foxtrot: '#4a4740',
     raiders: '#6e1919',
+    uscm_ground_one: 'ground_one',
+    uscm_ground_two: 'ground_two',
   },
   // Damage type colors
   damageType: {
@@ -74,6 +76,8 @@ export const CSS_COLORS = [
   'bad',
   'label',
   'xeno',
+  'ground_one',
+  'ground_two',
 ];
 
 /* IF YOU CHANGE THIS KEEP IT IN SYNC WITH CHAT CSS */

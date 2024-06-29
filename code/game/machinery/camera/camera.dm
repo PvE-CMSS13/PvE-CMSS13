@@ -6,7 +6,7 @@
 	use_power = USE_POWER_ACTIVE
 	idle_power_usage = 5
 	active_power_usage = 10
-	layer = FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 
 	var/list/network = list(CAMERA_NET_MILITARY)
 	var/c_tag = null

@@ -10,6 +10,10 @@
 	if(!damage_overlays[1]) //list hasn't been populated
 		generate_damage_overlays()
 
+	/*
+	As I've come to learn much, much later, cutting overlays and reapplying them is a pretty faulty system.
+	This entire thing is horrible. Like actually awful.
+	*/
 	overlays.Cut()
 
 	add_cleanable_overlays()
@@ -38,7 +42,7 @@
 		damage_overlay = current_dmg_overlay
 		overlays += damage_overlays[damage_overlay]
 
-		if(current_bulletholes)
+		if(current_bulletholes && !(flags_turf & TURF_ORGANIC)) //No overlays for organic/living walls.
 			if(!bullet_overlay)
 				var/bullethole_state = rand(1, BULLETHOLE_STATES)
 				bullet_overlay = image('icons/effects/bulletholes.dmi', src, "bhole_[bullethole_state]_2")

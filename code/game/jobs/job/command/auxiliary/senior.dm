@@ -3,6 +3,7 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED
 	flags_whitelist = WHITELIST_MENTOR
 	gear_preset = /datum/equipment_preset/uscm_ship/sea
+	category = JOB_CATEGORY_SUPPORT
 
 	job_options = list("Gunnery Sergeant" = "GySGT", "Master Sergeant" = "MSgt", "First Sergeant" = "1Sgt", "Master Gunnery Sergeant" = "MGySgt", "Sergeant Major" = "SgtMaj")
 

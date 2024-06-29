@@ -1,5 +1,6 @@
 /obj/structure/machinery/door/airlock/sandstone/runed
 	name = "\improper Runed Sandstone Airlock"
+	desc = "A runestone slab of stone that appears to slide open under some condition."
 	icon = 'icons/obj/structures/doors/doorrunedsand.dmi'
 	mineral = "runed sandstone"
 	no_panel = TRUE
@@ -220,6 +221,7 @@
 		return FALSE
 
 /obj/structure/machinery/door/airlock/sandstone/runed/destroyable
-	name = "\improper Runed Sandstone Airlock"
+	name = "heavy runed doors"
 	unacidable = FALSE //Destroyable version of the temple doors
 	damage_cap = HEALTH_WALL
+	locked = FALSE //Can't open them normally anyway.

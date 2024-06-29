@@ -1,7 +1,7 @@
 //Some debug variables. Toggle them to 1 in order to see the related debug messages. Helpful when testing out formulas.
-#define DEBUG_HIT_CHANCE 0
-#define DEBUG_HUMAN_DEFENSE 0
-#define DEBUG_XENO_DEFENSE 0
+#define DEBUG_HIT_CHANCE FALSE
+#define DEBUG_HUMAN_DEFENSE FALSE
+#define DEBUG_XENO_DEFENSE FALSE
 
 //The actual bullet objects.
 /obj/projectile
@@ -1004,6 +1004,9 @@
 			else
 				armor = getarmor_organ(organ, ARMOR_ENERGY) //Won't be used, but just in case.
 
+		#if DEBUG_HUMAN_DEFENSE
+		to_world(SPAN_DEBUG("Reducing damage by armor ([P.ammo.damage_type]). raw damage: [damage], armor: [armor], ammo penetration: [P.ammo.penetration]"))
+		#endif
 		damage_result = armor_damage_reduction(GLOB.marine_ranged, damage, armor, P.ammo.penetration)
 
 		if(damage_result <= 5)
@@ -1057,6 +1060,9 @@
 					emote("scream")
 					to_chat(src, SPAN_HIGHDANGER("You scream in pain as the impact sends <B>shrapnel</b> into the wound!"))
 	SEND_SIGNAL(P, COMSIG_POST_BULLET_ACT_HUMAN, src, damage, damage_result)
+	#if DEBUG_HUMAN_DEFENSE
+	to_world(SPAN_DEBUG("([P]) Damage: [damage] | damage_result: [damage_result]"))
+	#endif
 
 //Deal with xeno bullets.
 /mob/living/carbon/xenomorph/bullet_act(obj/projectile/P)
@@ -1138,6 +1144,9 @@
 		updatehealth()
 
 	SEND_SIGNAL(P, COMSIG_BULLET_ACT_XENO, src, damage, damage_result)
+	#if DEBUG_XENO_DEFENSE
+	to_world(SPAN_DEBUG("([P]) Damage: [damage] | damage_result: [damage_result]"))
+	#endif
 
 	return TRUE
 

@@ -535,8 +535,6 @@ Make sure their actual health updates immediately.*/
 	set_stat(UNCONSCIOUS)
 	blinded = TRUE
 	see_in_dark = 5
-	if(layer != initial(layer)) //Unhide
-		layer = initial(layer)
 	recalculate_move_delay = TRUE
 
 	SEND_SIGNAL(src, COMSIG_XENO_HANDLE_CRIT)

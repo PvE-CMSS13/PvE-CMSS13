@@ -74,7 +74,7 @@
 		var/mob/living/carbon/human/H = target
 		if(H.assigned_squad)
 			var/datum/squad/S = H.assigned_squad
-			if(H.job == JOB_SQUAD_SPECIALIST)
+			if(H.job == JOB_SQUAD_SPECIALIST) // Don't care about the squad map here, as this only applies to USCM specialists.
 				//we make the set this specialist took if any available again
 				if(H.skills)
 					var/set_name
@@ -98,22 +98,10 @@
 	SSticker.mode.latejoin_tally-- //Cryoing someone out removes someone from the Marines, blocking further larva spawns until accounted for
 
 	//Handle job slot/tater cleanup.
-	RoleAuthority.free_role(GET_MAPPED_ROLE(target.job), TRUE)
+	RoleAuthority.free_role(RoleAuthority.roles_for_mode[target.job], TRUE)
 
 	//Delete them from datacore.
-	var/target_ref = WEAKREF(target)
-	for(var/datum/data/record/R as anything in GLOB.data_core.medical)
-		if((R.fields["ref"] == target_ref))
-			GLOB.data_core.medical -= R
-			qdel(R)
-	for(var/datum/data/record/T in GLOB.data_core.security)
-		if((T.fields["ref"] == target_ref))
-			GLOB.data_core.security -= T
-			qdel(T)
-	for(var/datum/data/record/G in GLOB.data_core.general)
-		if((G.fields["ref"] == target_ref))
-			GLOB.data_core.general -= G
-			qdel(G)
+	GLOB.data_core.manifest_erase(WEAKREF(target))
 
 	if(target.key)
 		target.ghostize(FALSE)
@@ -225,4 +213,39 @@
 	target.faction_group = list(new_faction)
 
 	message_admins("[key_name_admin(user)][new_faction ? "" : " failed to"] set [key_name_admin(target)]'s faction to [new_faction].")
+	return TRUE
+
+/datum/player_action/set_datacore
+	action_tag = "set_datacore"
+	name = "Set Datacore"
+	permissions_required = R_VAREDIT
+
+/datum/player_action/set_datacore/act(client/user, mob/living/carbon/human/target, list/params)
+
+	var/string = "injected"
+	if(!GLOB.data_core.manifest_inject(target)) /// Try to inject them first.
+		/// If we need to modify the manifest, we need to find out if they have an assignment different from their job/rank.
+		var/assignment = GET_HUMAN_DEFAULT_ASSIGNMENT(target)
+		GLOB.data_core.manifest_modify(target.real_name, WEAKREF(target), assignment, target.job, target.faction) /// Modify the existing record.
+		string = "updated"
+
+	if(!RoleAuthority.manifest_roles[target.job]) /// They aren't a role normally on the manifest.
+		RoleAuthority.manifest_append |= target.job
+
+	message_admins("[key_name_admin(user)] [string] [key_name_admin(target)]'s datacore and manifest information.")
+	return TRUE
+
+/datum/player_action/erase_datacore
+	action_tag = "erase_datacore"
+	name = "Erase Datacore"
+	permissions_required = R_VAREDIT
+
+/datum/player_action/erase_datacore/act(client/user, mob/living/carbon/human/target, list/params)
+
+	var/string = "could not erase"
+	if(GLOB.data_core.manifest_erase(WEAKREF(target)))
+		RoleAuthority.manifest_append -= target.job /// Remove it.
+		string = "erased"
+
+	message_admins("[key_name_admin(user)] [string] [key_name_admin(target)]'s datacore and manifest information.")
 	return TRUE

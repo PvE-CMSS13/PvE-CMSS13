@@ -1,0 +1,86 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"o" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"p" = (
+/turf/open/void,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"w" = (
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"C" = (
+/obj/structure/blocker/invisible_wall,
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"G" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/void,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+C
+G
+G
+G
+a
+"}
+(3,1,1) = {"
+a
+w
+o
+p
+p
+G
+a
+"}
+(4,1,1) = {"
+a
+w
+o
+p
+p
+G
+a
+"}
+(5,1,1) = {"
+a
+w
+o
+p
+p
+G
+a
+"}
+(6,1,1) = {"
+a
+a
+C
+G
+G
+G
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

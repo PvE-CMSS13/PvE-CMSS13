@@ -6,6 +6,7 @@
 	icon_living = "bat"
 	icon_dead = "bat_dead"
 	mob_size = MOB_SIZE_SMALL
+	layer = ABOVE_MOB_LAYER
 	speak = list("screech")
 	speak_emote = list("screeches")
 	emote_hear = list("screeches")

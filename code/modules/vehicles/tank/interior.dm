@@ -9,7 +9,7 @@
 // Props
 /obj/structure/prop/tank
 	name = "tank machinery"
-	mouse_opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	density = TRUE
 
 	unacidable = TRUE

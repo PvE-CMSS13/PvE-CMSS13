@@ -442,6 +442,7 @@
 		H.undefibbable = FALSE
 		H.chestburst = 0
 		H.update_headshot_overlay() //They don't have their brains blown out anymore, if they did.
+		GLOB.data_core.manifest_modify(H.real_name, WEAKREF(H), null, null, H.species.manifest_alive) // To properly bring people back from death on the manifest.
 
 	// fix all of our organs
 	restore_all_organs()

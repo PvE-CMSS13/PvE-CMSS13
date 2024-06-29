@@ -16,12 +16,10 @@
 	can_wire = FALSE
 	metallic = FALSE
 
-/obj/structure/barricade/snow/New(loc, mob/user, direction)
+/obj/structure/barricade/snow/Initialize(loc, mob/user, direction)
 	if(direction)
 		setDir(direction)
-	..(loc, user)
-
-
+	return ..(loc, user)
 
 //Item Attack
 /obj/structure/barricade/snow/attackby(obj/item/W, mob/user)

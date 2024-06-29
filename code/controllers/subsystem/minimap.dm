@@ -493,14 +493,15 @@ SUBSYSTEM_DEF(minimaps)
 		if(!client || !client.mob)
 			continue
 		var/mob/client_mob = client.mob
-		if(client_mob.faction in FACTION_LIST_HUMANOID )
-			faction_clients += client
-		else if(client_mob.faction == FACTION_NEUTRAL && isobserver(client_mob))
-			faction_clients += client
-		else if(isxeno(client_mob))
+
+		if(isxeno(client_mob)) // Aliens won't see the human faction maps, even if their faction is the same.
 			var/mob/living/carbon/xenomorph/xeno = client_mob
 			if(xeno.hivenumber == faction)
 				faction_clients += client
+		else if(client_mob.faction == FACTION_NEUTRAL && isobserver(client_mob))
+			faction_clients += client
+		else if(client_mob.faction == faction)
+			faction_clients += client
 
 	// This may be unnecessary to do this way if the asset url is always the same as the lookup key
 	var/flat_tacmap_key = icon2html(flat_map, faction_clients, keyonly = TRUE)
@@ -510,9 +511,9 @@ SUBSYSTEM_DEF(minimaps)
 	var/flat_tacmap_png = SSassets.transport.get_asset_url(flat_tacmap_key)
 	var/datum/flattened_tacmap/new_flat = new(flat_tacmap_png, flat_tacmap_key)
 
-	if(faction in FACTION_LIST_HUMANOID )
+	if(faction in FACTION_LIST_HUMANOID)
 		GLOB.uscm_unannounced_map = new_flat
-	else //if(faction == XENO_HIVE_NORMAL)
+	else if(faction == XENO_HIVE_NORMAL)
 		GLOB.xeno_unannounced_map = new_flat
 
 	return TRUE
@@ -528,7 +529,7 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/drawing/proc/store_current_svg_coords(faction, svg_coords, ckey)
 	var/datum/svg_overlay/svg_store_overlay = new(svg_coords, ckey)
 
-	if(faction in FACTION_LIST_HUMANOID )
+	if(faction in FACTION_LIST_HUMANOID)
 		GLOB.uscm_svg_tacmap_data += svg_store_overlay
 	else if(faction == XENO_HIVE_NORMAL)
 		GLOB.xeno_svg_tacmap_data += svg_store_overlay
@@ -649,7 +650,8 @@ SUBSYSTEM_DEF(minimaps)
 	/// by default the ground map - this picks the first level matching the trait. if it exists
 	var/targeted_ztrait = ZTRAIT_GROUND
 	var/atom/owner
-
+	/// What faction this particular map belong to. This is set by the object creating the map, if applicable.
+	var/faction_default
 	/// tacmap holder for holding the minimap
 	var/datum/tacmap_holder/map_holder
 
@@ -680,9 +682,10 @@ SUBSYSTEM_DEF(minimaps)
 	/// A temporary lock out time before we can open the new canvas tab to allow the tacmap time to fire
 	var/tacmap_ready_time = 0
 
-/datum/tacmap/New(atom/source, minimap_type)
+/datum/tacmap/New(atom/source, minimap_type, faction)
 	allowed_flags = minimap_type
 	owner = source
+	faction_default = faction
 
 /datum/tacmap/drawing/status_tab_view/New()
 	var/datum/tacmap/drawing/status_tab_view/uscm_tacmap
@@ -721,15 +724,16 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/drawing/tgui_interact(mob/user, datum/tgui/ui)
 	var/mob/living/carbon/xenomorph/xeno = user
 	var/is_xeno = istype(xeno)
-	var/faction = is_xeno ? xeno.hivenumber : user.faction
-	if(faction == FACTION_NEUTRAL && isobserver(user))
+	var/faction = faction_default || (is_xeno ? xeno.hivenumber : user.faction) // Fallback is user.faction.
+
+	if(user.faction == FACTION_NEUTRAL && isobserver(user))
 		faction = allowed_flags == MINIMAP_FLAG_XENO ? XENO_HIVE_NORMAL : FACTION_MARINE
 
 	new_current_map = get_unannounced_tacmap_data_png(faction)
 	old_map = get_tacmap_data_png(faction)
 	current_svg = get_tacmap_data_svg(faction)
 
-	var/use_live_map = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || is_xeno
+	var/use_live_map = is_xeno || skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) // Either a xenomorph or skilled to view the live map.
 
 	if(use_live_map && !map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)
@@ -740,13 +744,20 @@ SUBSYSTEM_DEF(minimaps)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		if(!wiki_map_fallback)
-			var/wiki_url = CONFIG_GET(string/wikiurl)
-			var/obj/item/map/current_map/new_map = new
-			if(wiki_url && new_map.html_link)
-				wiki_map_fallback ="[wiki_url]/[new_map.html_link]"
-			else
-				debug_log("Failed to determine fallback wiki map! Attempted '[wiki_url]/[new_map.html_link]'")
-			qdel(new_map)
+			//I had to refactor some other code to make this less atrocious. Spawning in a map item to reference one compile-time variable is very silly. Behold!
+			var/obj/item/map/ground_map = PATH_TO_GROUND_MAP_OBJ
+			if(ground_map)
+				var/html_override = initial(ground_map.html_override) //This is a hack, should not be relied on in the future.
+				var/html_link = initial(ground_map.html_link)
+
+				if(html_override) //Hack, but a necessary one since there is no reliable wiki.
+					wiki_map_fallback = html_link //This should always work, as the address should point to functional image.
+				else
+					var/wiki_url = CONFIG_GET(string/wikiurl)
+					if(wiki_url && html_link)
+						wiki_map_fallback ="[wiki_url]/[html_link]"
+					else
+						debug_log("Failed to determine fallback wiki map! Attempted '[wiki_url]/[html_link]'")
 
 		// Ensure we actually have the map image sent
 		resend_current_map_png(user)
@@ -795,24 +806,33 @@ SUBSYSTEM_DEF(minimaps)
 	return data
 
 /datum/tacmap/drawing/ui_static_data(mob/user)
+
 	var/list/data = list()
 
 	data["mapRef"] = map_holder?.map_ref
-	data["canDraw"] = FALSE
 	data["mapFallback"] = wiki_map_fallback
 
 	var/mob/living/carbon/xenomorph/xeno = user
-	var/is_xeno = istype(xeno)
-	var/faction = is_xeno ? xeno.hivenumber : user.faction
 
-	data["isXeno"] = is_xeno
-	data["canViewTacmap"] = is_xeno
-	data["canViewCanvas"] = (faction in FACTION_LIST_HUMANOID) || faction == XENO_HIVE_NORMAL
-
-	if(skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || faction == XENO_HIVE_NORMAL && isqueen(user))
-		data["canDraw"] = TRUE
+	if(istype(xeno))
+		data["isXeno"] = TRUE
 		data["canViewTacmap"] = TRUE
-
+		if(xeno.hivenumber == XENO_HIVE_NORMAL)
+			data["canViewCanvas"] = TRUE // Only for the default hive. Should instead expand faction maps, I think.
+			data["canDraw"] = isqueen(xeno) // Only the queen.
+		else // Data has to be FALSE (0) for the tabs not to show up, thus the else case cannot be avoided.
+			data["canViewCanvas"] = FALSE
+			data["canDraw"] = FALSE
+	else
+		var/faction = faction_default || user.faction // User faction should not come into play, but you never now.
+		// Apparently you need the skills to view the tacmap feed. After thinging about it, it does promote actual leadership roles viewing the tacmap.
+		data["canViewTacmap"] = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_TRAINED)
+		if((user.job in GET_MANIFEST_ROLES) && user.faction == faction) // Only manifest roles should be able to draw and update the canvas. And only if the faction matches.
+			data["canViewCanvas"] = TRUE
+			data["canDraw"] = skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) // Should not be able to draw without leadership.
+		else
+			data["canViewCanvas"] = FALSE
+			data["canDraw"] = FALSE
 	return data
 
 /datum/tacmap/drawing/status_tab_view/ui_static_data(mob/user)
@@ -849,8 +869,8 @@ SUBSYSTEM_DEF(minimaps)
 
 	var/mob/user = ui.user
 	var/mob/living/carbon/xenomorph/xeno = user
-	var/faction = istype(xeno) ? xeno.hivenumber : user.faction
-	if(faction == FACTION_NEUTRAL && isobserver(user))
+	var/faction = faction_default || (istype(xeno) ? xeno.hivenumber : user.faction)
+	if(user.faction == FACTION_NEUTRAL && isobserver(user))
 		faction = allowed_flags == MINIMAP_FLAG_XENO ? XENO_HIVE_NORMAL : FACTION_MARINE
 
 	switch (action)
@@ -911,7 +931,8 @@ SUBSYSTEM_DEF(minimaps)
 				COOLDOWN_START(GLOB, uscm_canvas_cooldown, canvas_cooldown_time)
 				var/mob/living/carbon/human/human_leader = user
 				for(var/datum/squad/current_squad in RoleAuthority.squads)
-					current_squad.send_maptext("Tactical map update in progress...", "Tactical Map:")
+					if(current_squad.faction == faction)
+						current_squad.send_maptext("Tactical map update in progress...", "Tactical Map:")
 				human_leader.visible_message(SPAN_BOLDNOTICE("Tactical map update in progress..."))
 				playsound_client(human_leader.client, "sound/effects/sos-morse-code.ogg")
 				notify_ghosts(header = "Tactical Map", message = "The [faction] tactical map has been updated.", ghost_sound = "sound/effects/sos-morse-code.ogg", notify_volume = 80, action = NOTIFY_USCM_TACMAP, enter_link = "uscm_tacmap=1", enter_text = "View", source = owner)
@@ -932,13 +953,13 @@ SUBSYSTEM_DEF(minimaps)
 	if(!(isatom(owner)))
 		return UI_INTERACTIVE
 
-	var/dist = get_dist(owner, user)
-	if(dist <= 1)
-		return UI_INTERACTIVE
-	else if(dist <= 2)
-		return UI_UPDATE
-	else
-		return UI_CLOSE
+	switch(get_dist(owner, user))
+		if(-1 to 1)
+			return UI_INTERACTIVE
+		if(2)
+			return UI_UPDATE
+		else
+			return UI_CLOSE
 
 /datum/tacmap/drawing/xeno/ui_status(mob/user)
 	if(!isxeno(user))
@@ -996,7 +1017,7 @@ SUBSYSTEM_DEF(minimaps)
 	switch(faction)
 		if(XENO_HIVE_NORMAL)
 			return MINIMAP_FLAG_XENO
-		if(FACTION_MARINE)
+		if(FACTION_MARINE, FACTION_USCM_GROUND)
 			return MINIMAP_FLAG_USCM
 		if(FACTION_UPP)
 			return MINIMAP_FLAG_UPP

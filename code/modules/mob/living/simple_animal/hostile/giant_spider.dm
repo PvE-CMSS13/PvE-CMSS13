@@ -11,6 +11,7 @@
 	icon_state = "guard"
 	icon_living = "guard"
 	icon_dead = "guard_dead"
+	mob_size = MOB_SIZE_SMALL /// Giant relative to a regular spider. About the size of a cat.
 	speak_emote = list("chitters")
 	emote_hear = list("chitters")
 	speak_chance = 5

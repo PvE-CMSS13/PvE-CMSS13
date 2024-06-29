@@ -24,7 +24,7 @@
 
 /obj/structure/bed/chair/comfy/vehicle/handle_rotation()
 	if(dir == NORTH)
-		layer = FLY_LAYER
+		layer = ABOVE_MOB_LAYER
 	else
 		layer = BELOW_MOB_LAYER
 	if(buckled_mob)
@@ -332,7 +332,7 @@
 
 /obj/structure/bed/chair/vehicle/handle_rotation()
 	if(dir == NORTH)
-		layer = FLY_LAYER
+		layer = ABOVE_MOB_LAYER
 	else
 		layer = BELOW_MOB_LAYER
 	if(buckled_mob)

@@ -1360,6 +1360,11 @@ GLOBAL_LIST_INIT(apc_wire_descriptions, list(
 	cell_type = /obj/item/cell/apc
 	req_one_access = list(ACCESS_ILLEGAL_PIRATE, ACCESS_UPP_GENERAL, ACCESS_CLF_GENERAL)
 
+/obj/structure/machinery/power/apc/uscm_ground
+	cell_type = /obj/item/cell/high
+	req_access = list(ACCESS_USCM_GROUND_MAINT)
+	req_one_access = null
+
 //------Almayer APCs ------//
 
 /obj/structure/machinery/power/apc/almayer

@@ -4,6 +4,10 @@
 	storage_slots = 10
 	icon_state = "wallet"
 	w_class = SIZE_TINY
+
+	var/obj/item/card/id/front_id = null
+
+/obj/item/storage/wallet/Initialize()
 	can_hold = list(
 		/obj/item/spacecash,
 		/obj/item/card,
@@ -25,10 +29,7 @@
 		/obj/item/tool/screwdriver,
 		/obj/item/tool/stamp,
 	)
-	flags_equip_slot = SLOT_ID
-
-	var/obj/item/card/id/front_id = null
-
+	. = ..()
 
 /obj/item/storage/wallet/_item_removal(obj/item/W as obj, atom/new_location)
 	if(W == front_id)
@@ -43,22 +44,14 @@
 	..()
 
 /obj/item/storage/wallet/update_icon()
-
 	if(front_id)
 		switch(front_id.icon_state)
-			if("id")
+			if("silver", "gold", "centcom")
+				icon_state = "walletid_[front_id.icon_state]"
+			else
 				icon_state = "walletid"
-				return
-			if("silver")
-				icon_state = "walletid_silver"
-				return
-			if("gold")
-				icon_state = "walletid_gold"
-				return
-			if("centcom")
-				icon_state = "walletid_centcom"
-				return
-	icon_state = "wallet"
+	else
+		icon_state = "wallet"
 
 
 /obj/item/storage/wallet/GetID()

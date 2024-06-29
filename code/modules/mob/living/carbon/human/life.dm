@@ -6,8 +6,8 @@
 	if(!loc) //Fixing a null error that occurs when the mob isn't found in the world -- TLE
 		return
 
-	if(undefibbable && stat == DEAD || spawned_corpse)
-		GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, "*Deceased*")
+	if( (undefibbable && stat == DEAD) || spawned_corpse)
+		GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, species.manifest_dead)
 		SShuman.processable_human_list -= src
 		if(hardcore)
 			qdel(src) //We just delete the corpse on WO to keep things simple and lag-free
@@ -63,10 +63,12 @@
 		else //Dead
 			if(!undefibbable)
 				handle_necro_chemicals_in_body(delta_time) //Specifically for chemicals that still work while dead.
-				if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > revive_grace_period) && !issynth(src)) //We are dead beyond revival, or we're junk mobs spawned like the clowns on the clown shuttle
-					undefibbable = TRUE
-					SEND_SIGNAL(src, COMSIG_HUMAN_SET_UNDEFIBBABLE)
-					med_hud_set_status()
+				///Handles this here so next pass the general proc sets them to deceased in the manifest.
+				if(!(species.flags & IS_SYNTHETIC)) ///Synths are not permanently dead unless gibbed. They are set to dead in manifest by the death proc.
+					if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA) || ( life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > revive_grace_period) ) ) //We are dead beyond revival, or we're junk mobs spawned like the clowns on the clown shuttle
+						undefibbable = TRUE
+						SEND_SIGNAL(src, COMSIG_HUMAN_SET_UNDEFIBBABLE)
+						med_hud_set_status()
 
 	else if(stat != DEAD)
 		handle_stasis_bag()

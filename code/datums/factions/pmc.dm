@@ -1,6 +1,29 @@
 /datum/faction/pmc
-	name = "Private Military Company"
-	faction_tag = FACTION_PMC
+	name = "Weyland-Yutani Corporation"
+	faction_tag = FACTION_WY
+	access_all = ACCESS_LIST_WY_ALL
+	access_main = ACCESS_LIST_WY_PMC
+
+//So all of the WY people share the same base faction in the code.
+/datum/faction/pmc/New()
+	. = ..()
+	faction_tag_group = FACTION_LIST_WY
+
+/datum/faction/pmc/get_faction_regions(faction_to_check)
+	switch(faction_to_check)
+		if(FACTION_PMC, FACTION_WY_DEATHSQUAD)
+			return get_access(ACCESS_LIST_PMC_REGIONS)
+		if(FACTION_WY)
+			return get_access(ACCESS_LIST_WY_REGIONS)
+	return ..()
+
+/datum/faction/pmc/get_faction_departments(faction_to_check)
+	switch(faction_to_check)
+		if(FACTION_PMC, FACTION_WY_DEATHSQUAD)
+			return DEPARTMENT_PMC_ALL
+		if(FACTION_WY)
+			return DEPARTMENT_WY_PMC_ALL
+	return ..()
 
 /datum/faction/pmc/modify_hud_holder(image/holder, mob/living/carbon/human/H)
 	var/hud_icon_state

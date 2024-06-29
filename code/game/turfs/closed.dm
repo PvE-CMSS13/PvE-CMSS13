@@ -13,7 +13,7 @@
 	name = "void"
 	icon = 'icons/turf/floors/space.dmi'
 	icon_state = "black"
-	mouse_opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /turf/closed/mineral //mineral deposits
 	name = "Rock"

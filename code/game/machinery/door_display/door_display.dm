@@ -335,7 +335,7 @@
 		if(D.density)
 			continue
 		D.close()
-		D.lock()
+		D.lock(TRUE) //TRUE to force the door to lock; otherwise it will not lock as it's still operating.
 		open = FALSE
 
 	return TRUE

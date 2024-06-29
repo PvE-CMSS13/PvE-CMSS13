@@ -189,7 +189,7 @@
 	name="beam"
 	icon='icons/effects/beam.dmi'
 	icon_state="b_beam"
-	mouse_opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 	var/tmp/atom/BeamSource
 

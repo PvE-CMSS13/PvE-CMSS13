@@ -4,6 +4,10 @@ export type OrbitData = {
   auto_observe: BooleanLike;
   humans: Observable[];
   marines: Observable[];
+  weyland: Observable[];
+  upp: Observable[];
+  twe: Observable[];
+  clf: Observable[];
   survivors: Observable[];
   xenos: Observable[];
   ert_members: Observable[];

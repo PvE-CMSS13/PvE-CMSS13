@@ -336,6 +336,9 @@
 /mob/living/simple_animal/adjustBruteLoss(damage)
 	health = Clamp(health - damage, 0, maxHealth)
 
+/mob/living/simple_animal/adjustFireLoss(damage)
+	health = Clamp(health - damage, 0, maxHealth)
+
 /mob/living/simple_animal/proc/SA_attackable(target_mob)
 	if (isliving(target_mob))
 		var/mob/living/L = target_mob
@@ -386,3 +389,6 @@
 	if(user && error_msg)
 		to_chat(user, SPAN_WARNING("You aren't sure how to inject this animal!"))
 	return FALSE
+
+/mob/living/simple_animal/flamer_fire_act(dam)
+	apply_damage(dam, BURN)

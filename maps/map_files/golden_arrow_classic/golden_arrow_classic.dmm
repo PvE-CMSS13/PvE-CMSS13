@@ -3465,6 +3465,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"uv" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/computer/overwatch/map_specific/golden_arrow{
+	pixel_x = 15;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/golden_arrow/platoon_commander_rooms)
 "uw" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -7289,12 +7299,6 @@
 /area/golden_arrow/squad_one)
 "Qc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/overwatch/almayer{
-	dir = 8;
-	layer = 3.2;
-	pixel_x = -17;
-	pixel_y = 16
-	},
 /obj/structure/phone_base/rotary/no_dnd{
 	name = "Overwatch Telephone";
 	phone_category = "Command";
@@ -20467,7 +20471,7 @@ KO
 hS
 hS
 vb
-bo
+uv
 bo
 hS
 hS

@@ -6,7 +6,7 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	density = TRUE
-	layer = ABOVE_FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	bound_height = 96
 
 /obj/structure/prop/dam
@@ -998,7 +998,7 @@
 //overhead prop sets
 
 /obj/structure/prop/invuln/overhead
-	layer = ABOVE_FLY_LAYER
+	layer = CEILING_FIXTURE_LAYER
 	icon = 'icons/obj/structures/props/overhead_ducting.dmi'
 	icon_state = "flammable_pipe_1"
 
@@ -1122,7 +1122,7 @@
 	icon_state = "intact-scrubbers"
 	projectile_coverage = 0
 	density = FALSE
-	layer = RIPPLE_LAYER
+	layer = CEILING_FIXTURE_LAYER
 
 /obj/structure/prop/invuln/overhead_pipe/Initialize(mapload)
 	. = ..()
@@ -1162,7 +1162,7 @@
 	icon = 'icons/obj/structures/props/smoothlattice.dmi'
 	icon_state = "lattice0"
 	density = FALSE
-	layer = RIPPLE_LAYER
+	layer = CEILING_FIXTURE_LAYER
 
 /obj/structure/prop/wooden_cross
 	name = "wooden cross"

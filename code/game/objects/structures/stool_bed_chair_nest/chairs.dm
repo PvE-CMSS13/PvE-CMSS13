@@ -25,10 +25,11 @@
 	flags_can_pass_all_temp = PASS_OVER
 
 /obj/structure/bed/chair/handle_rotation() //Making this into a separate proc so office chairs can call it on Move()
-	if(src.dir == NORTH)
-		src.layer = FLY_LAYER
-	else
-		src.layer = OBJ_LAYER
+	switch(dir)
+		if(NORTH)
+			layer = ABOVE_MOB_LAYER
+		else
+			layer = BELOW_MOB_LAYER
 	if(buckled_mob)
 		buckled_mob.setDir(dir)
 

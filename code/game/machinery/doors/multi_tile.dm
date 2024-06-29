@@ -1,8 +1,15 @@
 //Terribly sorry for the code doubling, but things go derpy otherwise.
+//Refactored multi_tile/almayer into multi_tile parent, as we did not use the flat doors any more.
+
 /obj/structure/machinery/door/airlock/multi_tile
 	width = 2
-	damage_cap = 650 // Bigger = more endurable
+	damage_cap = HEALTH_DOUBLE_DOOR
 	assembly_type = /obj/structure/airlock_assembly/multi_tile
+	tiles_with = list(
+		/obj/structure/window/framed/almayer, //Tiles with is here FOR SAFETY PURPOSES
+		/obj/structure/machinery/door/airlock,
+	)
+	openspeed = 4 //shorter open animation.
 
 /obj/structure/machinery/door/airlock/multi_tile/close() //Nasty as hell O(n^2) code but unfortunately necessary
 	for(var/turf/turf_tile in locs)
@@ -15,80 +22,26 @@
 	. = ..()
 	update_icon()
 
-/obj/structure/machinery/door/airlock/multi_tile/glass
-	name = "Glass Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1glass.dmi'
-	opacity = FALSE
-	glass = TRUE
-	assembly_type = /obj/structure/airlock_assembly/multi_tile
+/obj/structure/machinery/door/airlock/multi_tile/Initialize()
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/machinery/door/airlock/multi_tile/glass/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
+/obj/structure/machinery/door/airlock/multi_tile/LateInitialize()
+	. = ..()
+	relativewall_neighbours()
 
-/obj/structure/machinery/door/airlock/multi_tile/security
-	name = "Security Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1security.dmi'
-	opacity = FALSE
-	glass = TRUE
+/obj/structure/machinery/door/airlock/multi_tile/take_damage(taken_damage, mob/damaging_mob)
+	var/damage_check = max(0, damage + taken_damage)
+	if(damage_check >= damage_cap && damaging_mob && is_mainship_level(z))
+		SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
+	..()
 
-/obj/structure/machinery/door/airlock/multi_tile/security/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
-
-/obj/structure/machinery/door/airlock/multi_tile/command
-	name = "Command Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1command.dmi'
-	opacity = FALSE
-	glass = TRUE
-
-/obj/structure/machinery/door/airlock/multi_tile/command/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
-
-/obj/structure/machinery/door/airlock/multi_tile/medical
-	name = "Medical Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1medbay.dmi'
-	opacity = FALSE
-	glass = TRUE
-
-/obj/structure/machinery/door/airlock/multi_tile/medical/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_PUBLIC)
-
-/obj/structure/machinery/door/airlock/multi_tile/engineering
-	name = "Engineering Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1engine.dmi'
-	opacity = FALSE
-	glass = TRUE
-
-/obj/structure/machinery/door/airlock/multi_tile/engineering/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS)
-
-/obj/structure/machinery/door/airlock/multi_tile/research
-	name = "Research Airlock"
-	icon = 'icons/obj/structures/doors/Door2x1research.dmi'
-	opacity = FALSE
-	glass = TRUE
-	req_one_access = list(ACCESS_MARINE_RESEARCH, ACCESS_WY_RESEARCH, ACCESS_WY_EXEC)
-
-/obj/structure/machinery/door/airlock/multi_tile/research/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
-
-/obj/structure/machinery/door/airlock/multi_tile/research/reinforced
-	name = "Reinforced Research Airlock"
-	masterkey_resist = TRUE
-
-/obj/structure/machinery/door/airlock/multi_tile/research/reinforced/colony
-	req_access = null
-	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
-
+// LEGACY SUPPORT
 /obj/structure/machinery/door/airlock/multi_tile/secure
 	name = "Secure Airlock"
 	icon = 'icons/obj/structures/doors/Door2x1_secure.dmi'
 	openspeed = 34
+
 /obj/structure/machinery/door/airlock/multi_tile/secure/colony
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
@@ -103,7 +56,6 @@
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
 
-
 /obj/structure/machinery/door/airlock/multi_tile/secure2_glass
 	name = "Secure Airlock"
 	icon = 'icons/obj/structures/doors/Door2x1_secure2_glass.dmi'
@@ -116,40 +68,11 @@
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/obj/structure/machinery/door/airlock/multi_tile/shuttle
-	name = "Shuttle Podlock"
-	icon = 'icons/obj/structures/doors/1x2blast_vert.dmi'
-	icon_state = "pdoor1"
-	opacity = TRUE
-	openspeed = 12
-	req_access = null
-	not_weldable = 1
-
-
 // ALMAYER
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer
 	name = "\improper Airlock"
-	icon = 'icons/obj/structures/doors/comdoor.dmi' //Tiles with is here FOR SAFETY PURPOSES
-	openspeed = 4 //shorter open animation.
-	tiles_with = list(
-		/obj/structure/window/framed/almayer,
-		/obj/structure/machinery/door/airlock,
-	)
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/Initialize()
-	. = ..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/LateInitialize()
-	. = ..()
-	relativewall_neighbours()
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/take_damage(taken_damage, mob/damaging_mob)
-	var/damage_check = max(0, damage + taken_damage)
-	if(damage_check >= damage_cap && damaging_mob && is_mainship_level(z))
-		SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
-	..()
+	icon = 'icons/obj/structures/doors/comdoor.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic
 	name = "\improper Airlock"
@@ -631,3 +554,58 @@
 	opacity = FALSE
 	glass = TRUE
 
+//USCM GROUND OUTPOST
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground
+	icon = 'icons/obj/structures/doors/2x1prepdoor.dmi'
+	dir = EAST
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/general
+	req_one_access = list(ACCESS_USCM_GROUND_GENERAL, ACCESS_USCM_GROUND_GUEST)
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/general/cafeteria
+	icon = 'icons/obj/structures/doors/2x1generic.dmi'
+	dir = NORTH
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory
+	icon = 'icons/obj/structures/doors/2x1almayerdoor.dmi'
+	dir = NORTH
+	req_access = list(ACCESS_USCM_GROUND_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/weapons
+	name = "\improper Weapon Storage"
+	autoname = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/prep
+	name = "\improper Specialized Prep"
+	autoname = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_USCM_GROUND_SMARTPREP, ACCESS_USCM_GROUND_MEDPREP, ACCESS_USCM_GROUND_SPECPREP, ACCESS_USCM_GROUND_TLPREP, ACCESS_USCM_GROUND_ARMORY) //Don't need to be in here if you're not getting prepped.
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/medical
+	icon = 'icons/obj/structures/doors/2x1medidoor.dmi'
+	dir = NORTH
+	req_access = list(ACCESS_USCM_GROUND_MEDICAL)
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/warehouse
+	dir = NORTH
+	icon = 'icons/obj/structures/doors/2x1engidoor.dmi'
+	req_access = list(ACCESS_USCM_GROUND_WAREHOUSE)
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/warehouse/glass
+	icon = 'icons/obj/structures/doors/2x1engidoor_glass.dmi'
+	glass = TRUE
+	opacity = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/civilian
+	icon = 'icons/obj/structures/doors/2x1generic.dmi'
+	glass = TRUE
+	opacity = FALSE
+	req_access = list(ACCESS_USCM_GROUND_GUEST)

@@ -69,9 +69,13 @@
 
 	return TRUE
 
-// We change real name, so we change the voice too if we are humans
-// It also ensures our mind's name gets changed
-/mob/proc/change_real_name(mob/M, new_name)
+/**
+ * Changes the mob's real name, mind name, and voice.
+ *
+ * We change real name, so we change the voice too if we are humans.
+ * It also ensures our mind's name gets changed.
+ */
+/mob/proc/change_real_name(mob/M, new_name) // To do: Clean up all the references to this proc to run from source instead of using mob/M as an argument.
 	if(!new_name)
 		return FALSE
 
@@ -86,22 +90,38 @@
 
 	return TRUE
 
-/mob/proc/change_mind_name(new_mind_name)
-	if(!mind)
-		return FALSE
-	if(!new_mind_name)
-		new_mind_name = "Unknown"
-	mind.name = new_mind_name
-	return TRUE
+/mob/proc/change_mind_name(new_name)
+	if(new_name && mind)
+		mind.name = new_name
+		return TRUE
 
-/mob/proc/change_mob_voice(new_voice_name)
-	if(!ishuman(src))
-		return FALSE
-	if(!new_voice_name)
-		new_voice_name = "Unknown"
-	var/mob/living/carbon/human/H = src
-	H.voice = new_voice_name
-	return TRUE
+/mob/proc/change_mob_voice(new_name)
+	return FALSE
+
+/mob/living/carbon/human/change_mob_voice(new_name)
+	if(new_name)
+		voice = new_name
+		return TRUE
+
+/// More general proc caller to change a mob's name, ususally called through an admin renaming someone.
+/mob/proc/modify_name_and_record(new_name)
+	SHOULD_CALL_PARENT(TRUE) /// Call back to parent required.
+
+	// Sets them up with all of the name changing done.
+	return change_real_name(src, new_name)
+
+/mob/living/carbon/human/modify_name_and_record(new_name)
+	var/previous_name = real_name
+	. = ..()
+
+	// For ease of use, whenever you modify the name it will check for their ID too.
+	if(.)
+		// Modifies their datacore entry based on real name, should they have one. Mostly for humans, but not strictly limited to them. Move to the parent proc if the behavior changes.
+		GLOB.data_core.manifest_modify(new_name, WEAKREF(src))
+		if(wear_id?.registered_name == previous_name) /// They are wearing their own ID.
+			// The following can be done with splicetext and knowing the length of the string, since the position is known. But it's best to search if the position ever changes.
+			wear_id.registered_name = new_name /// Update their name first, so that it's all matched up.
+			wear_id.name = replacetext(wear_id.name, previous_name, new_name) /// Not case sensitive, probably desirable.
 
 /*Changing/updating a mob's client color matrices. These render over the map window and affect most things the player sees, except things like inventory,
 text popups, HUD, and some fullscreens. Code based on atom filter code, since these have similar issues with application order - for ex. if you have
