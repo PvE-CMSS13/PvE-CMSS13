@@ -479,3 +479,8 @@
 		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
 
 	handle_rotation()
+
+/obj/structure/bed/chair/vehicle/white
+	name = "passenger seat"
+	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'

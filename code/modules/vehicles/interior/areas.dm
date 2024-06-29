@@ -35,3 +35,11 @@
 /area/vehicle/van
 	name = "van interior"
 	icon_state = "van"
+
+/area/interior/vehicle/box_van
+	name = "box-van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/pizza_van
+	name = "pizza-van interior"
+	icon_state = "van"
