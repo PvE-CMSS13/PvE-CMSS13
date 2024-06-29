@@ -158,7 +158,7 @@
 	accurate_range = 12
 
 /datum/ammo/bullet/m60
-	name = "M60 bullet"
+	name = "Mk70 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	accuracy = HIT_ACCURACY_TIER_2
