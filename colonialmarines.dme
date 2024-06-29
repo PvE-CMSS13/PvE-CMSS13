@@ -2047,6 +2047,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\castes\Ravager.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Runner.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Sentinel.dm"
+#include "code\modules\mob\living\carbon\xenomorph\castes\Soldier.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Spitter.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Warrior.dm"
 #include "code\modules\mob\living\carbon\xenomorph\items\iff_tag.dm"

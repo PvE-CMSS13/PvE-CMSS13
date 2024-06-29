@@ -3,6 +3,8 @@
 #define GRAB_AGGRESSIVE 1
 #define GRAB_CARRY   2
 #define GRAB_CHOKE   3
+/// Alien-specific grab, somewhat between an aggressive and choke. Limited to AI only for the moment.
+#define GRAB_XENO	 4
 
 //Ammo defines for gun/projectile related things.
 

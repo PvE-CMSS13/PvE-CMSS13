@@ -24,8 +24,11 @@
 
 /obj/item/grab/Destroy()
 	grabbed_thing = null
-	if(ismob(loc))
-		var/mob/M = loc
+	var/mob/M = loc
+	if(istype(M))
+		/// If a mob is qdeleted while grabbing, the stack will call for stop_pulling(), which will call for this item to be deleted on drop.
+		/// But it is already being deleted through previous procs in the stack; so we don't want to call the function again when it is dropped.
+		if(M.gc_destroyed == GC_CURRENTLY_BEING_QDELETED) flags_item &= ~DELONDROP
 		M.grab_level = 0
 		M.stop_pulling()
 	. = ..()

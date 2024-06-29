@@ -94,7 +94,7 @@
 
 	add_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
 
-/mob/living/carbon/xenomorph/runner/stop_pulling()
+/mob/living/carbon/xenomorph/runner/stop_pulling(bumped_movement = FALSE)
 	. = ..()
 
 	remove_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)

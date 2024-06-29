@@ -281,6 +281,11 @@
 				playsound(victim, "acid_sizzle", 25, TRUE)
 				animation_flash_color(victim, "#FF0000") //pain hit flicker
 
+		if(damtype == BRUTE && acid_blood_spatter && prob(splash_chance)) /// Only brute damage makes sense for the spatter.
+			var/turf/acid_loc = pick(get_step(src,rand(0,8)))
+			if(acid_loc && !(locate(/obj/effect/xenomorph/acid) in acid_loc))
+				new /obj/effect/xenomorph/acid/spatter(acid_loc) ///Don't want to double up. It will target barricades first.
+
 /mob/living/carbon/xenomorph/get_target_lock(access_to_check)
 	if(isnull(access_to_check))
 		return

@@ -168,34 +168,34 @@
 
 		var/pull_dir = get_dir(src, pulling)
 
-		if(grab_level >= GRAB_CARRY)
-			switch(grab_level)
-				if(GRAB_CARRY)
-					var/direction_to_face = EAST
+		switch(grab_level)
+			if(GRAB_CARRY)
+				var/direction_to_face = EAST
 
-					if(direct & WEST)
-						direction_to_face = WEST
+				if(direct & WEST)
+					direction_to_face = WEST
 
-					pulling.Move(NewLoc, direction_to_face)
-					var/mob/living/pmob = pulling
-					if(istype(pmob))
-						SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
-				else
-					pulling.Move(NewLoc, direct)
-		else if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
-			var/pulling_dir = get_dir(pulling, T)
-			pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
-			if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
-				stop_pulling()
-			else
+				pulling.Move(NewLoc, direction_to_face)
 				var/mob/living/pmob = pulling
 				if(istype(pmob))
-					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
-				if(!(flags_atom & DIRLOCK))
-					setDir(turn(direct, 180)) //face the pullee
+					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
+			if(GRAB_CHOKE)
+				pulling.Move(NewLoc, direct)
+			else
+				if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
+					var/pulling_dir = get_dir(pulling, T)
+					pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
+					if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
+						stop_pulling()
+					else
+						var/mob/living/pmob = pulling
+						if(istype(pmob))
+							SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
+						if(!(flags_atom & DIRLOCK))
+							setDir(turn(direct, 180)) //face the pullee
 
 	if(pulledby && get_dist(src, pulledby) > 1)//separated from our puller and not in the middle of a diagonal move.
-		pulledby.stop_pulling()
+		pulledby.stop_pulling(TRUE) /// Mob was likely bumped by the pulledby. Can lead to additional checking, if we don't want the victim to get out of jail for free.
 
 	if (s_active && !( s_active in contents ) && get_turf(s_active) != get_turf(src)) //check !( s_active in contents ) first so we hopefully don't have to call get_turf() so much.
 		s_active.storage_close(src)
@@ -207,27 +207,48 @@
 	if(back && (back.flags_item & ITEM_OVERRIDE_NORTHFACE))
 		update_inv_back()
 
-
-
 /mob/proc/resist_grab(moving_resist)
 	return //returning 1 means we successfully broke free
 
 /mob/living/resist_grab(moving_resist)
 	if(!pulledby)
 		return
-	if(pulledby.grab_level)
-		if(prob(50))
-			playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-			visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
-			pulledby.stop_pulling()
-			return 1
-		if(moving_resist && client) //we resisted by trying to move
-			visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
-			client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
-	else
-		pulledby.stop_pulling()
-		return 1
 
+	switch(pulledby.grab_level)
+		if(GRAB_AGGRESSIVE to GRAB_CHOKE)
+			/// Probably could use some refactoring for the CQC skill, traits, and the like.
+			if(prob(50))
+				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
+				pulledby.stop_pulling()
+				return TRUE
+			if(moving_resist && client) //we resisted by trying to move
+				visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
+				client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
+		if(GRAB_XENO) /// Specific to some xenomorphs.
+			if(HAS_TRAIT(src, TRAIT_SUPER_STRONG)) /// Superstrength means you get out of jail for free.
+				. = TRUE
+			else
+				/// If the living mob is skilled in CQC, they will get a bonus to escape the grab, 7% per skill level, or 35% if maxed out.
+				var/skill_bonus = (skills?.get_skill_level(SKILL_CQC)) * 7
+				/// Then we need to determine if they loosen the grip or escape outright, or struggle in vain.
+				if(prob((65 - SKILL_CQC_MAX * 7) + skill_bonus)) /// At most a 65% chance to escape outright.
+					. = TRUE
+				else
+					if(prob((100 - SKILL_CQC_MAX * 7) + skill_bonus)) /// Maximum 100% to loosen the grip.
+						visible_message(SPAN_DANGER("[src] loosens [pulledby]'s grip!"), null, null, 5)
+						pulledby.grab_level = GRAB_PASSIVE /// Loosens the grab into a passive grab, being able to escape on the next go.
+					else
+						visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
+					client.next_movement = world.time + (10 * GRAB_XENO) + client.move_delay /// Grab level may get reset, so we want to keep it at a good delay.
+
+			if(.) /// Our living mob successfully broke away.
+				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
+				pulledby.stop_pulling()
+		else
+			pulledby.stop_pulling()
+			return TRUE
 
 /mob/living/movement_delay()
 	. = ..()

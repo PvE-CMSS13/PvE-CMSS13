@@ -64,7 +64,7 @@
 /mob/living/carbon/xenomorph/warrior/throw_item(atom/target)
 	toggle_throw_mode(THROW_MODE_OFF)
 
-/mob/living/carbon/xenomorph/warrior/stop_pulling()
+/mob/living/carbon/xenomorph/warrior/stop_pulling(bumped_movement = FALSE)
 	if(isliving(pulling) && lunging)
 		lunging = FALSE // To avoid extreme cases of stopping a lunge then quickly pulling and stopping to pull someone else
 		var/mob/living/lunged = pulling

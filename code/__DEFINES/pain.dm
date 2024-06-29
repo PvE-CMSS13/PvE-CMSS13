@@ -15,6 +15,11 @@
 #define PAIN_REDUCTION_FULL 80 //oxycodone, neuraline
 
 // Pain amount supplied by the action
+
+/// How much pain is dealt continually to the mob being dragged by the AI as well as when initially grabbing.
+#define PAIN_XENO_DRAG 10
+/// How much additional pain is dealt when lunging/throat grabbing.
+#define PAIN_XENO_GRAB 15
 #define PAIN_BONE_BREAK 25
 #define PAIN_BONE_BREAK_SPLINTED 15
 #define PAIN_DELIMB 40

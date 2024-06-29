@@ -247,6 +247,8 @@
 	var/evolving = FALSE // Whether the xeno is in the process of evolving
 	/// The damage dealt by a xeno whenever they take damage near someone
 	var/acid_blood_damage = 15
+	/// Does their blood also create an acid object to melt the environment?
+	var/acid_blood_spatter = FALSE
 	var/nocrit = FALSE
 	var/deselect_timer = 0 // Much like Carbon.last_special is a short tick record to prevent accidental deselects of abilities
 	var/got_evolution_message = FALSE

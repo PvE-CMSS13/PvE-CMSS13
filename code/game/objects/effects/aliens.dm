@@ -316,6 +316,12 @@
 	flare_damage = 1875
 	icon_state = "acid_strong"
 
+//Similar to strong acid, just not quite as strong other than barricade damage.
+/obj/effect/xenomorph/acid/spatter
+	acid_delay = 0.6
+	barricade_damage = 100
+	flare_damage = 1000
+
 /obj/effect/xenomorph/acid/Initialize(mapload, atom/target)
 	. = ..()
 	acid_t = target
@@ -327,6 +333,21 @@
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(handle_weather))
 	RegisterSignal(acid_t, COMSIG_PARENT_QDELETING, PROC_REF(cleanup))
 	START_PROCESSING(SSeffects, src)
+
+/obj/effect/xenomorph/acid/spatter/Initialize(mapload, atom/target)
+	. = ..()
+	if(!acid_t)
+		var/obj/structure/barricade/B = locate() in loc
+		if(B && !B.unacidable) acid_t = B
+		else
+			for(var/obj/O in loc) //Find the first thing.
+				if(O.unacidable || istype(O, /obj/effect)) continue //Not unacidable things or effects. Don't want to melt xenogibs.
+				acid_t = O
+				break
+		if(acid_t) layer = acid_t.layer
+		else
+			animate(src, alpha = 0, 1 SECONDS)
+			QDEL_IN(src, 1 SECONDS) //No point in keeping it if it's not melting anything.
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null
@@ -422,8 +443,11 @@
 	else
 		for(var/mob/mob in acid_t)
 			mob.forceMove(loc)
-		qdel(acid_t)
-	qdel(src)
+		animate(acid_t, alpha = 0, 1 SECONDS)
+		QDEL_IN(acid_t, 1 SECONDS)
+
+	animate(src, alpha = 0, 1 SECONDS)
+	QDEL_IN(src, 1 SECONDS)
 
 /obj/effect/xenomorph/boiler_bombard
 	name = "???"

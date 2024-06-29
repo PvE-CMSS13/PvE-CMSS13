@@ -513,7 +513,7 @@
 
 	return do_pull(AM, lunge, no_msg)
 
-/mob/proc/stop_pulling()
+/mob/proc/stop_pulling(bumped_movement = FALSE)
 	if(!pulling)
 		return
 
