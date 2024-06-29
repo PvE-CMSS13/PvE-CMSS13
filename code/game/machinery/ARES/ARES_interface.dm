@@ -1,7 +1,7 @@
 // #################### ARES Interface Console #####################
 /obj/structure/machinery/computer/ares_console
-	name = "ARES Interface"
-	desc = "A console built to interface with ARES, allowing for 1:1 communication."
+	name = "AI Interface"
+	desc = "A console built to interface with the ship AI, allowing for 1:1 communication."
 	icon = 'icons/obj/structures/machinery/ares.dmi'
 	icon_state = "console"
 	exproof = TRUE
@@ -384,7 +384,7 @@
 				return FALSE
 			if(security_level < SEC_LEVEL_RED)
 				set_security_level(SEC_LEVEL_RED, no_sound = TRUE, announce = FALSE)
-			shipwide_ai_announcement("ATTENTION! GENERAL QUARTERS. ALL HANDS, MAN YOUR BATTLESTATIONS.", MAIN_AI_SYSTEM, 'sound/effects/GQfullcall.ogg')
+			shipwide_ai_announcement("GENERAL QUARTERS GENERAL QUARTERS, ALL HANDS TO BATTLE STATIONS. SET CONDITION ZULU THROUGHOUT THE SHIP.", MAIN_AI_SYSTEM, 'sound/effects/GQfullcall.ogg')
 			log_game("[key_name(usr)] has called for general quarters via ARES.")
 			message_admins("[key_name_admin(usr)] has called for general quarters via ARES.")
 			log_ares_security("General Quarters", "[last_login] has called for general quarters via ARES.")
