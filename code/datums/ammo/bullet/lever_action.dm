@@ -50,7 +50,7 @@
 	handful_state = "marksman_lever_action_bullet"
 
 /datum/ammo/bullet/lever_action/xm88
-	name = ".458 SOCOM round"
+	name = "smart heavy rifle bullet"
 
 	damage = 80
 	penetration = ARMOR_PENETRATION_TIER_2

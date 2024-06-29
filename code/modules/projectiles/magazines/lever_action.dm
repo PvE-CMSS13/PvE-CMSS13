@@ -46,8 +46,8 @@ Similar to shotguns.dm but not exactly.
 	handful_state = "tracking_lever_action_bullet"
 
 /obj/item/ammo_magazine/lever_action/xm88
-	name = "box of .458 SOCOM rounds"
-	desc = "A box filled with handfuls of .458 SOCOM rounds, designed for use with the XM88 heavy rifle."
+	name = "box of smart anti-materiel rounds"
+	desc = "A box filled with handfuls of 10x38mm combustible case rounds, designed for use with the XM88A heavy rifle."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "458-box"
 	item_state = "458-box"
@@ -67,7 +67,7 @@ Similar to shotguns.dm but not exactly.
 	chamber_closed = 0
 
 /obj/item/ammo_magazine/internal/lever_action/xm88
-	name = "\improper XM88 heavy rifle tube"
+	name = "\improper XM88A heavy rifle tube"
 	desc = "An internal magazine. It is not supposed to be seen or removed."
 	default_ammo = /datum/ammo/bullet/lever_action/xm88
 	caliber = ".458"
@@ -116,8 +116,8 @@ Handfuls of lever_action rounds. For spawning directly on mobs in roundstart, ER
 	handful_state = "marksman_lever_action_bullet"
 
 /obj/item/ammo_magazine/handful/lever_action/xm88
-	name = "handful of .458 SOCOM rounds (.458)"
-	desc = "A handful of .458 SOCOM rounds, chambered for the XM88 heavy rifle."
+	name = "handful of smart anti-materiel rounds (10x38mm)"
+	desc = "A handful of combustible case 10x38mm rounds, chambered for the XM88A heavy rifle."
 	caliber = ".458"
 	icon_state = "marksman_lever_action_bullet_9"
 	default_ammo = /datum/ammo/bullet/lever_action/xm88

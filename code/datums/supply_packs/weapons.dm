@@ -114,10 +114,10 @@
 		/obj/item/storage/box/guncase/xm88,
 		/obj/item/storage/box/guncase/xm88,
 	)
-	name = "XM88 Heavy Rifle crate (XM88 x2)"
+	name = "XM88A Heavy Rifle crate (XM88A x2)"
 	cost = 40
 	containertype = /obj/structure/closet/crate/weapon
-	containername = "\improper XM88 Heavy Rifle crate"
+	containername = "\improper XM88A Heavy Rifle crate"
 	group = "Weapons"
 
 /* Uncomment me if it's decided to let the m707 be purchasable through req

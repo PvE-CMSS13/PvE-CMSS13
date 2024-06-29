@@ -4,8 +4,8 @@
 //FLAMETHROWER
 
 /obj/item/weapon/gun/flamer
-	name = "\improper M240A1 incinerator unit"
-	desc = "M240A1 incinerator unit has proven to be one of the most effective weapons at clearing out soft-targets. This is a weapon to be feared and respected as it is quite deadly."
+	name = "\improper M240 incinerator unit"
+	desc = "The M240 incinerator is a carbine-length flamethrower. It is fed by a highly pressurized ultra-thick napthal tank. The initial stream is more effective than the ground tiles.\nUnique-Action to toggle the pilot light."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m240"
 	item_state = "m240"
@@ -260,8 +260,8 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 
 /obj/item/weapon/gun/flamer/M240T
-	name = "\improper M240-T incinerator unit"
-	desc = "An improved version of the M240A1 incinerator unit, the M240-T model is capable of dispersing a larger variety of fuel types."
+	name = "\improper M240E1 incinerator unit"
+	desc = "Tmproved version of the M240 incinerator unit, the M240E1 enhancement is capable of dispersing a larger variety of fuel types."
 	icon_state = "m240t"
 	item_state = "m240t"
 	unacidable = TRUE
@@ -372,8 +372,8 @@
 	return FALSE
 
 /obj/item/weapon/gun/flamer/M240T/auto // With NEW advances in science, we've learned how to drain a pyro's tank in 6 seconds, or your money back!
-	name = "\improper M240-T2 incinerator unit"
-	desc = "A prototyped model of the M240-T incinerator unit, it was discontinued after its automatic mode was deemed too expensive to deploy in the field."
+	name = "\improper XM240E1 incinerator unit"
+	desc = "A prototyped model of the M240E1 incinerator unit, it was discontinued after its automatic mode was deemed too expensive to deploy in the field."
 	start_semiauto = FALSE
 	start_automatic = TRUE
 

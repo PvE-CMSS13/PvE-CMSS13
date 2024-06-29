@@ -80,7 +80,7 @@
 
 /obj/item/storage/pouch/flamertank
 	name = "fuel tank strap pouch"
-	desc = "Two ring straps to loop around M240-pattern napalm tanks. Handle with care."
+	desc = "Two ring straps to loop around M240-pattern napthal tanks. Handle with care."
 	storage_slots = 2
 	icon_state = "fueltank_pouch"
 	storage_flags = STORAGE_FLAGS_POUCH

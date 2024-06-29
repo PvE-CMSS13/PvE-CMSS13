@@ -284,8 +284,8 @@
 // end of actions sniper spe can take.
 
 /obj/item/weapon/gun/rifle/sniper/M42A
-	name = "\improper M42A scoped rifle"
-	desc = "A heavy sniper rifle manufactured by Armat Systems. It has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
+	name = "\improper M42A scope rifle"
+	desc = "A scoped 10x28mm semi automatic rifle. The ARMAT M42A can file a complaint up to 3,800 meters, and feeds from 15rnd magazines. Comes with a multiple magnification scope, but is painfully useless up close."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m42a"
 	item_state = "m42a"

@@ -126,8 +126,8 @@
 	supplies = list(/obj/item/weapon/gun/revolver/m44 = 6, /obj/item/weapon/gun/pistol/m4a3 = 12)
 
 /obj/structure/largecrate/supply/weapons/flamers
-	name = "\improper M240A1 incinerator weapons chest (x4)"
-	desc = "A weapons chest containing four M240A1 incinerator units."
+	name = "\improper M240 incinerator weapons chest (x4)"
+	desc = "A weapons chest containing four M240 incinerator units."
 	supplies = list(/obj/item/weapon/gun/flamer = 4)
 
 /obj/structure/largecrate/supply/weapons/hpr

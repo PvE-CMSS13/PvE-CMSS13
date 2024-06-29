@@ -1785,8 +1785,8 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_4
 
 /obj/item/attachable/stock/xm88
-	name = "\improper XM88 padded stock"
-	desc = "A specially made compound polymer stock reinforced with aluminum rods and thick rubber padding to shield the user from recoil. Fitted specifically for the XM88 Heavy Rifle."
+	name = "\improper XM88A padded stock"
+	desc = "A specially made compound polymer stock reinforced with aluminum rods and thick rubber padding to shield the user from recoil. Fitted specifically for the XM88A Heavy Rifle."
 	icon_state = "boomslang-stock"
 	wield_delay_mod = WIELD_DELAY_NORMAL
 	hud_offset_mod = 6
@@ -3096,8 +3096,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/flamer_nozzle
 	name = "XM-VESG-1 flamer nozzle"
-	desc = "A special nozzle designed to alter flamethrowers to be used in a more offense orientated manner. As the inside of the nozzle is coated in a special gel and resin substance that takes the fuel that passes through and hardens it. Upon exiting the barrel, a cluster of burning gel is projected instead of a stream of burning naphtha."
-	desc_lore = "The Experimental Volatile-Exothermic-Sphere-Generator clip-on nozzle attachment for the M240A1 incinerator unit was specifically designed to allow marines to launch fireballs into enemy foxholes and bunkers. Despite the gel and resin coating, the flaming ball of naptha tears apart due the drag caused by launching it through the air, leading marines to use the attachment as a makeshift firework launcher during shore leave."
+	desc = "The Experimental Volatile Exothermic Sphere Generator is a replacement nozzle attachment which allows for the firing of semi-solidified napthal balls instead of a continuous stream."
 	icon_state = "flamer_nozzle"
 	attach_icon = "flamer_nozzle_a_1"
 	w_class = SIZE_MEDIUM

@@ -341,7 +341,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 /obj/item/weapon/gun/lever_action/r4t/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 21, "under_x" = 24, "under_y" = 16, "stock_x" = 15, "stock_y" = 14)
 
-//===================THE XM88===================\\
+//===================THE XM88A===================\\
 
 #define FLOATING_PENETRATION_TIER_0 0
 #define FLOATING_PENETRATION_TIER_1 1
@@ -350,9 +350,8 @@ their unique feature is that a direct hit will buff your damage and firerate
 #define FLOATING_PENETRATION_TIER_4 4
 
 /obj/item/weapon/gun/lever_action/xm88
-	name = "\improper XM88 heavy rifle"
-	desc = "An experimental man-portable anti-material rifle chambered in .458 SOCOM. It must be manually chambered for every shot.\nIt has a special property - when you obtain multiple direct hits in a row, its armor penetration and damage will increase."
-	desc_lore = "Originally developed by ARMAT Battlefield Systems for the government of the state of Greater Brazil for use in the Favela Wars (2161 - Ongoing) against mechanized infantry. The platform features an onboard computerized targeting system, sensor array, and an electronic autoloader; these features work in tandem to reduce and render inert armor on the users target with successive hits. The Almayer was issued a small amount of XM88s while preparing for Operation Swamp Hopper with the USS Nan-Shan."
+	name = "\improper XM88A heavy rifle"
+	desc = "Experimental AMR from ARMAT chambered in 10x38mm combustible case smart anti-materiel rounds, must be manually chambered for every shot. \nOnboard computer modifies targeting to improve ballistic impact by analyzing feedback from successive hits."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi' // overriden with camos anyways
 	icon_state = "boomslang"
 	item_state = "boomslang"

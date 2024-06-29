@@ -184,10 +184,10 @@
 	containername = "M4RA Scout Impact Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
-//M240-T
+//M240E1
 
 /datum/supply_packs/ammo_pyro_mix
-	name = "M240-T Mixed Fuel Tank Crate (extended x1, type-B x1, type-X x1)"
+	name = "M240E1 Mixed Fuel Tank Crate (extended x1, type-B x1, type-X x1)"
 	contains = list(
 		/obj/item/ammo_magazine/flamer_tank/large,
 		/obj/item/ammo_magazine/flamer_tank/large/B,
@@ -195,11 +195,11 @@
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/ammo/alt/flame
-	containername = "\improper M240-T Mixed Fuel Tank Crate"
+	containername = "\improper M240E1 Mixed Fuel Tank Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_pyro_extended
-	name = "M240-T Extended Fuel Tank Crate (extended x3)"
+	name = "M240E1 Extended Fuel Tank Crate (extended x3)"
 	contains = list(
 		/obj/item/ammo_magazine/flamer_tank/large,
 		/obj/item/ammo_magazine/flamer_tank/large,
@@ -207,25 +207,25 @@
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo/alt/flame
-	containername = "M240-T Extended Fuel Tank Crate"
+	containername = "M240E1 Extended Fuel Tank Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_pyro_b
-	name = "M240-T Type-B Fuel Tank Crate (x1)"
+	name = "M240E1 Type-B Fuel Tank Crate (x1)"
 	contains = list(
 		/obj/item/ammo_magazine/flamer_tank/large/B,
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo/alt/flame
-	containername = "M240-T Type-B Fuel Tank Crate"
+	containername = "M240E1 Type-B Fuel Tank Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_pyro_x
-	name = "M240-T Type-X Fuel Tank Crate (x1)"
+	name = "M240E1 Type-X Fuel Tank Crate (x1)"
 	contains = list(
 		/obj/item/ammo_magazine/flamer_tank/large/X,
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/ammo/alt/flame
-	containername = "M240-T Type-X Fuel Tank Crate"
+	containername = "M240E1 Type-X Fuel Tank Crate"
 	group = "Weapons Specialist Ammo"
