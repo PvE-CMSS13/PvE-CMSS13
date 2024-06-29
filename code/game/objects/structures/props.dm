@@ -188,6 +188,20 @@
 		lit = TRUE
 		Update()
 
+/obj/structure/prop/evac
+	name = "EVAC-3F Multirole Fighter"
+	desc = "A state of the art EVAC-3F aerospace fighter used by the USCM. These fighters, in use by the USCM are designed to be modular and fulfil a variety of purposes."
+	icon = 'icons/obj/structures/props/256x256.dmi'
+	icon_state = "evac_uscm"
+	bound_height = 256
+	bound_width = 256
+
+/obj/structure/prop/evac/usaf
+	name = "EVAC-3G Reconnaissance Fighter"
+	desc = "High tech, silver coated EVAC-3G used by the USAF in deep recon mission. The thermal-absorbent paint alone probably costs more than your whole paycheck."
+	icon = 'icons/obj/structures/props/256x256.dmi'
+	icon_state = "evac_usaf"
+
 /obj/structure/prop/dam/gravestone
 	name = "grave marker"
 	desc = "A grave marker, in the traditional Japanese style."
