@@ -203,6 +203,21 @@
 	icon_state = "default"
 	plating_type = /turf/open/floor/plating/almayer
 
+/turf/open/floor/almayer/edge
+	icon_state = "floor_edge"
+
+/turf/open/floor/almayer/edge/smooth
+	icon_state = "floor_edge_smooth"
+
+/turf/open/floor/almayer/edge/smooth/corner
+	icon_state = "floor_edge_smooth_corner"
+
+/turf/open/floor/almayer/edge/smooth/endcap_right
+	icon_state = "floor_edge_smooth2"
+
+/turf/open/floor/almayer/edge/smooth/endcap_left
+	icon_state = "floor_edge_smooth3"
+
 /// Admin level thunderdome floor. Doesn't get damaged by explosions and such for pristine testing
 /turf/open/floor/tdome
 	icon = 'icons/turf/almayer.dmi'

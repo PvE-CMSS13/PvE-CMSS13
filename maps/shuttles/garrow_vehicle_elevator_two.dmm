@@ -1,0 +1,73 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"o" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
+"A" = (
+/turf/open/floor/almayer{
+	icon_state = "plate"
+	},
+/area/space)
+"T" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk,
+/area/space)
+
+(1,1,1) = {"
+a
+a
+a
+a
+o
+"}
+(2,1,1) = {"
+a
+A
+u
+A
+T
+"}
+(3,1,1) = {"
+a
+A
+u
+A
+o
+"}
+(4,1,1) = {"
+T
+u
+A
+A
+o
+"}
+(5,1,1) = {"
+a
+u
+A
+A
+o
+"}
+(6,1,1) = {"
+a
+A
+A
+A
+o
+"}
+(7,1,1) = {"
+a
+a
+a
+o
+o
+"}
