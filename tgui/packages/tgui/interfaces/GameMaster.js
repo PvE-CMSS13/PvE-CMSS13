@@ -76,7 +76,10 @@ export const GameMasterSpawningPanel = (props, context) => {
             </Stack.Item>
             <Stack.Item>
               <Button
-                selected={data.spawn_click_intercept}
+                selected={
+                  data.current_click_intercept_action ===
+                  'spawn_click_intercept_action'
+                }
                 content="Click Spawn"
                 onClick={() => {
                   act('toggle_click_spawn');
@@ -128,7 +131,10 @@ export const GameMasterBehaviorPanel = (props, context) => {
         </Stack.Item>
         <Stack.Item>
           <Button
-            selected={data.behavior_click_intercept}
+            selected={
+              data.current_click_intercept_action ===
+              'behavior_click_intercept_action'
+            }
             content="Click Behavior"
             onClick={() => {
               act('toggle_click_behavior');
@@ -149,7 +155,10 @@ export const GameMasterObjectivePanel = (props, context) => {
         <Stack.Item>
           <Button
             ml={1}
-            selected={data.objective_click_intercept}
+            selected={
+              data.current_click_intercept_action ===
+              'objective_click_intercept_action'
+            }
             content="Click Objective"
             onClick={() => {
               act('toggle_click_objective');

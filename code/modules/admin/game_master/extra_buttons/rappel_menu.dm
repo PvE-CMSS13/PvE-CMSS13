@@ -46,7 +46,6 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 	if(!ui)
 		ui = new(user, src, "GameMasterRappelMenu", "Rappel Menu")
 		ui.open()
-	user.client?.click_intercept = src
 /datum/rappel_menu/ui_status(mob/user, datum/ui_state/state)
 	return UI_INTERACTIVE
 
@@ -90,12 +89,16 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 
 		if("toggle_click_rappel")
 			rappel_click_intercept = !rappel_click_intercept
+
+			if(rappel_click_intercept)
+				LAZYOR(ui.user.client.click_intercepts, src)
+			else
+				LAZYREMOVE(ui.user.client.click_intercepts, src)
+
 			return
 
 /datum/rappel_menu/ui_close(mob/user)
-	var/client/user_client = user.client
-	if(user_client?.click_intercept == src)
-		user_client.click_intercept = null
+	LAZYREMOVE(user.client.click_intercepts, src)
 
 	rappel_click_intercept = FALSE
 

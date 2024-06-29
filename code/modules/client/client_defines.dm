@@ -30,7 +30,8 @@
 	var/donator = FALSE
 	var/adminhelped = 0
 
-	var/datum/click_intercept = null
+	/// Stack of click-intercepting objects for this client.
+	var/list/click_intercepts
 
 	var/atom/movable/screen/click_catcher/void
 

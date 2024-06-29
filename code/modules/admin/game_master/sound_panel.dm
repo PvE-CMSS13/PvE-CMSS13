@@ -52,7 +52,6 @@
 		var/mob/mob = user
 		holder = mob.client
 
-	holder.click_intercept = src
 	tgui_interact(holder.mob)
 
 /datum/sound_panel/proc/get_sounds()
@@ -106,7 +105,7 @@
 	holder = null
 	target_loc = null
 	target_player = null
-	loc_click_intercept = FALSE
+	LAZYREMOVE(user.client.click_intercepts, src)
 	qdel(src)
 
 /datum/sound_panel/ui_state(mob/user)
@@ -222,6 +221,12 @@
 			return TRUE
 		if("toggle_loc_click_intercept")
 			loc_click_intercept = !loc_click_intercept
+
+			if(loc_click_intercept)
+				LAZYOR(ui.user.client.click_intercepts, src)
+			else
+				LAZYREMOVE(ui.user.client.click_intercepts, src)
+
 			return TRUE
 		if("toggle_loc_click_play")
 			loc_click_play = !loc_click_play
