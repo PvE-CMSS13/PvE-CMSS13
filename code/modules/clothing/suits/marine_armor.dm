@@ -385,6 +385,7 @@
 	storage_slots = 2
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+	flags_atom = NO_NAME_OVERRIDE
 	allowed = list(
 		/obj/item/tank/emergency_oxygen,
 		/obj/item/device/flashlight,
@@ -427,7 +428,7 @@
 
 	if(is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
