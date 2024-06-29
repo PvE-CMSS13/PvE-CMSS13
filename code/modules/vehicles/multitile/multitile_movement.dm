@@ -159,7 +159,7 @@
 
 	// Crashed with something that stopped us
 	if(!can_move)
-		move_momentum = Floor(move_momentum/2)
+		move_momentum = trunc(move_momentum/2)
 		update_next_move()
 		interior_crash_effect()
 
@@ -251,10 +251,10 @@
 		return
 
 	// Not enough momentum for anything serious
-	if(abs(move_momentum) <= 1)
+	if(abs(move_momentum) < 1)
 		return
 
-	var/fling_distance = Ceiling(move_momentum/move_max_momentum) * 2
+	var/fling_distance = Ceiling(abs(move_momentum)/move_max_momentum) * 2
 	var/turf/target = interior.get_middle_turf()
 
 	for (var/x in 0 to fling_distance-1)
@@ -272,7 +272,7 @@
 			if(isliving(A))
 				var/mob/living/M = A
 
-				shake_camera(M, 2, Ceiling(move_momentum/move_max_momentum) * 1)
+				shake_camera(M, 2, Ceiling(abs(move_momentum)/move_max_momentum) * 1)
 				if(!M.buckled)
 					M.apply_effect(1, STUN)
 					M.apply_effect(2, WEAKEN)
