@@ -274,7 +274,7 @@
 	if (do_after(user, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		unpair_sentry(sentry)
 		to_chat(user, SPAN_NOTICE("[sentry] has been decrypted."))
-		var/message = "[sentry] removed from from [src]"
+		var/message = "[sentry] removed from [src]"
 		INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**
