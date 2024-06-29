@@ -3,6 +3,57 @@
 	var/title //email title
 	var/entry_text //email content
 
+//emails for the Golden Arrow. Implementation... soon?
+/datum/fluff_email/golden_arrow
+
+/datum/fluff_email/golden_arrow/section_a
+	title = "Section A shore leave???"
+	entry_text = {"<html>
+					LOG//:WEBMASTER/RETRIEVE/EMAIL
+					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
+					swear to god dude this is such bs. fuckin "enhanced readiness" my ass,
+					transfer someone over so we're not workin with half strength platoons out here! god!
+					<br>
+					<br>
+					I can tell even the gunny ain't happy about this shit, the Lt's putting on a smile
+					but we all seen her and that friggin picture of her girlfriend she got in her wallet or whatever.
+					What happened to overtime pay?
+					<html>
+					"}
+
+/datum/fluff_email/golden_arrow/section_a/reply1
+	title = "RE: Section A shore leave???"
+	entry_text = {"<html>
+					LOG//:WEBMASTER/RETRIEVE/EMAIL
+					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
+					{...}
+					<br>
+					<br>
+					Okay, listen, yeah I know it's bullshit but we've got all their support gear to play with and
+					it's at least less fucked in the barracks if we overnight somewhere. Too many stinking bodies is
+					hell on earth, right?
+					Also. C'mon, dude. I know what you really want. You're looking at getting that bet money from Carmen
+					right? :)
+					<html>
+					"}
+
+/datum/fluff_email/golden_arrow/section_a/reply2
+	title = "RE: RE: Section A shore leave???"
+	entry_text = {"<html>
+					LOG//:WEBMASTER/RETRIEVE/EMAIL
+					LOG//:DISPLAY/'Welcome to the secured USS Golden Arrow Intranet.'
+					{...}
+					<br>
+					<br>
+					{...}
+					we've got their support gear to play with but where'd all the ordinance go???? Lt says the
+					ammo supply for the M83A2s is fine, but 'new regulations' require him to store it under
+					the automated quartermaster's supervision??? if that's true, why're the M40s laying out??
+					<br>
+					<br>
+					also fuck you, i earned that shit. the spicy peanut milk fuckin sucked.
+					<html>
+					"}
 
 //emails for the Almayer computers
 /datum/fluff_email/almayer
