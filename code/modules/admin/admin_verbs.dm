@@ -330,6 +330,7 @@ var/list/roundstart_mod_verbs = list(
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
+		add_verb(src, /client/proc/open_resin_panel)
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/game_master_rename_platoon)
@@ -365,6 +366,7 @@ var/list/roundstart_mod_verbs = list(
 		admin_verbs_default,
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
+		/client/proc/open_resin_panel,
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
 		/client/proc/game_master_rename_platoon,

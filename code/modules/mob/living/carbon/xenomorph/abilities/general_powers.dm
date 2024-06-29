@@ -67,7 +67,7 @@
 
 	xeno.visible_message(SPAN_XENONOTICE("\The [xeno] regurgitates a pulsating node and plants it on the ground!"), \
 	SPAN_XENONOTICE("You regurgitate a pulsating node and plant it on the ground!"), null, 5)
-	var/obj/effect/alien/weeds/node/new_node = new node_type(xeno.loc, src, xeno)
+	var/obj/effect/alien/weeds/node/new_node = new node_type(xeno.loc, xeno.hivenumber, xeno)
 
 	if(to_convert)
 		for(var/cur_weed in to_convert)

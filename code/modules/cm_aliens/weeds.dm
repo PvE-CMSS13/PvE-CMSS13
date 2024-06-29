@@ -511,9 +511,9 @@
 	overlay_node = TRUE
 	overlays += staticnode
 
-/obj/effect/alien/weeds/node/Initialize(mapload, obj/effect/alien/weeds/node/node, mob/living/carbon/xenomorph/xeno, datum/hive_status/hive)
-	if (istype(hive))
-		linked_hive = hive
+/obj/effect/alien/weeds/node/Initialize(mapload, hive, mob/living/carbon/xenomorph/xeno)
+	if (hive)
+		linked_hive = GLOB.hive_datum[hive]
 	else if (istype(xeno) && xeno.hive)
 		linked_hive = xeno.hive
 	else
