@@ -48,7 +48,6 @@
 		leader = human
 		leaders++
 		human.client?.prefs.copy_all_to(human, JOB_SQUAD_LEADER, TRUE, TRUE)
-		arm_equipment(human, /datum/equipment_preset/uscm/leader/cryo, mind == null, TRUE)
 		to_chat(human, SPAN_ROLE_HEADER("You are a Squad Leader in the USCM"))
 		to_chat(human, SPAN_ROLE_BODY("You are here to assist in the defence of the [SSmapping.configs[GROUND_MAP].map_name]. Listen to the chain of command."))
 		to_chat(human, SPAN_BOLDWARNING("If you wish to cryo or ghost upon spawning in, you must ahelp and inform staff so you can be replaced."))
@@ -62,7 +61,6 @@
 	else if (medics < max_medics && (!mind || (HAS_FLAG(human.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(human.client, JOB_SQUAD_MEDIC, time_required_for_job))))
 		medics++
 		human.client?.prefs.copy_all_to(human, JOB_SQUAD_MEDIC, TRUE, TRUE)
-		arm_equipment(human, /datum/equipment_preset/uscm/medic/cryo,  mind == null, TRUE)
 		to_chat(human, SPAN_ROLE_HEADER("You are a Hospital Corpsman in the USCM"))
 		to_chat(human, SPAN_ROLE_BODY("You are here to assist in the defence of the [SSmapping.configs[GROUND_MAP].map_name]. Listen to the chain of command."))
 		to_chat(human, SPAN_BOLDWARNING("If you wish to cryo or ghost upon spawning in, you must ahelp and inform staff so you can be replaced."))
@@ -75,7 +73,6 @@
 		to_chat(human, SPAN_BOLDWARNING("If you wish to cryo or ghost upon spawning in, you must ahelp and inform staff so you can be replaced."))
 	else
 		human.client?.prefs.copy_all_to(human, JOB_SQUAD_MARINE, TRUE, TRUE)
-		arm_equipment(human, /datum/equipment_preset/uscm/pfc/cryo,  mind == null, TRUE)
 		to_chat(human, SPAN_ROLE_HEADER("You are a Rifleman in the USCM"))
 		to_chat(human, SPAN_ROLE_BODY("You are here to assist in the defence of the [SSmapping.configs[GROUND_MAP].map_name]. Listen to the chain of command."))
 		to_chat(human, SPAN_BOLDWARNING("If you wish to cryo or ghost upon spawning in, you must ahelp and inform staff so you can be replaced."))
