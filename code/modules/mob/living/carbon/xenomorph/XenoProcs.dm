@@ -240,11 +240,6 @@
 	if(agility)
 		. += caste.agility_speed_increase
 
-	var/obj/effect/alien/weeds/W = locate(/obj/effect/alien/weeds) in loc
-	if (W)
-		if (W.linked_hive.hivenumber == hivenumber)
-			. *= 0.95
-
 	var/obj/effect/alien/resin/sticky/fast/FR = locate(/obj/effect/alien/resin/sticky/fast) in loc
 	if (FR && FR.hivenumber == hivenumber)
 		. *= 0.8
