@@ -485,13 +485,15 @@
 /area/golden_arrow/hangar)
 "en" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/special{
-	pixel_y = 10
-	},
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/storage/box/guncase/shotgun/pump{
+	pixel_y = -3
+	},
+/obj/item/storage/box/guncase/shotgun/pump{
+	pixel_y = 5
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

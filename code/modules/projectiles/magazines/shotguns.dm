@@ -90,12 +90,14 @@ Generic internal magazine. All shotguns will use this or a variation with differ
 Since all shotguns share ammo types, the gun path is going to be the same for all of them. And it
 also doesn't really matter. You can only reload them with handfuls.
 */
+
 /obj/item/ammo_magazine/internal/shotgun
 	name = "shotgun tube"
 	desc = "An internal magazine. It is not supposed to be seen or removed."
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 	caliber = "12g"
-	max_rounds = 9
+	max_rounds = 4
+	current_rounds = 0
 	chamber_closed = 0
 
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
@@ -115,6 +117,10 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/double/twobore //Van Bandolier's superheavy double-barreled hunting rifle.
 	caliber = "2 bore"
 	default_ammo = /datum/ammo/bullet/shotgun/twobore
+
+/obj/item/ammo_magazine/internal/shotgun/combat
+	caliber = "12g"
+	max_rounds = 6
 
 /obj/item/ammo_magazine/internal/shotgun/combat/riot
 	caliber = "20g"
@@ -152,9 +158,6 @@ also doesn't really matter. You can only reload them with handfuls.
 
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
-
-/obj/item/ammo_magazine/internal/shotgun/special
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 
 //-------------------------------------------------------
 

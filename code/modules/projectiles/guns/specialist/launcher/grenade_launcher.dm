@@ -330,7 +330,7 @@
 	icon_state = "m79"
 	item_state = "m79"
 	flags_equip_slot = SLOT_BACK
-	preload = /obj/item/explosive/grenade/slug/baton
+	preload = null
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
 
