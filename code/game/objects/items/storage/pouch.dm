@@ -461,7 +461,7 @@
 
 /obj/item/storage/pouch/magazine/pistol/pmc_mod88/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/pistol/mod88(src)
+		new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
 /obj/item/storage/pouch/magazine/pistol/pmc_vp78/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)

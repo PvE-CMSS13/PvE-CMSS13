@@ -427,7 +427,7 @@
 
 	if(is_type_in_list(equipping_item, smartgun_back))
 		return
-		
+
 	. = COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP
 
 	if(equipping_item.flags_equip_slot == SLOT_BACK)
@@ -1530,7 +1530,7 @@
 
 /obj/item/clothing/suit/storage/CMB
 	name = "\improper CMB Deputy jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's Deputy badge pinned to it. The back is enscribed with the powerful letters of 'DEPUTY' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	desc = "A polyster blue bomber jacket enforced with light ballistic weaving. It has a Marshal's Deputy badge pinned to it. The back is enscribed with the word 'DEPUTY'."
 	icon_state = "CMB_jacket"
 	item_state = "CMB_jacket"
 	blood_overlay_type = "coat"
@@ -1581,7 +1581,7 @@
 
 /obj/item/clothing/suit/storage/CMB/marshal
 	name = "\improper CMB Marshal jacket"
-	desc = "A thick and stylish black leather jacket with a Marshal's badge pinned to it. The back is enscribed with the powerful letters of 'MARSHAL' representing justice, authority, and protection in the outer rim. The laws of the Earth stretch beyond the Sol."
+	desc = "A thick and stylish black leather bomber jacket with a Marshal's badge pinned to it. The back is enscribed with the word 'MARSHAL'."
 	icon_state = "CMB_jacket_marshal"
 	item_state = "CMB_jacket_marshal"
 

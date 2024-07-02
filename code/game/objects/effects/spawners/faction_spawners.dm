@@ -134,7 +134,7 @@
 	mags_min = 1
 	guns = list(
 		/obj/item/weapon/gun/pistol/vp78 = /obj/item/ammo_magazine/pistol/vp78,
-		/obj/item/weapon/gun/pistol/mod88 = /obj/item/ammo_magazine/pistol/mod88
+		/obj/item/weapon/gun/pistol/mod88 = /obj/item/ammo_magazine/pistol/mod88/normalpoint
 	)
 
 /obj/effect/spawner/random/gun/pmc_secondary/lowchance

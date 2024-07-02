@@ -1838,9 +1838,7 @@
 /area/varadero/interior/hall_N)
 "bhU" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
@@ -10520,9 +10518,7 @@
 /area/varadero/interior/security)
 "gRU" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
@@ -13553,9 +13549,7 @@
 /area/varadero/interior/administration)
 "iWX" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/eastbeach)
@@ -19007,9 +19001,7 @@
 /area/varadero/interior/cargo)
 "mtp" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/plating/icefloor{
 	icon_state = "asteroidplating"
@@ -19121,9 +19113,7 @@
 /area/varadero/interior/hall_SE)
 "mvO" = (
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/shiva{
 	dir = 1;
@@ -19646,9 +19636,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/floodlight{
-	name = "Floodlight";
-	unacidable = 0;
-	wrenchable = 1
+	name = "Floodlight"
 	},
 /turf/open/floor/shiva{
 	dir = 1;
@@ -28691,30 +28679,15 @@
 /area/varadero/interior/maintenance/security)
 "syb" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88,
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88{
-	pixel_x = -6;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/pistol/mod88,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
+/obj/item/ammo_magazine/pistol/mod88/normalpoint,
 /obj/structure/machinery/light{
 	dir = 4
 	},

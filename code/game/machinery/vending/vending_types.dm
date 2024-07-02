@@ -222,8 +222,8 @@
 	)
 
 /obj/structure/machinery/vending/security
-	name = "\improper SecTech"
-	desc = "A security equipment vendor."
+	name = "\improper ColMarTech Military Police Vendor"
+	desc = "A USCM Military Police vendor."
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
 	icon_state = "sec"
 	icon_deny = "sec-deny"
@@ -231,26 +231,35 @@
 	products = list(
 		/obj/item/handcuffs = 8,
 		/obj/item/handcuffs/zip = 10,
-		/obj/item/explosive/grenade/flashbang = 4,
 		/obj/item/weapon/gun/energy/taser = 4,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/weapon/baton = 4,
 		/obj/item/device/flashlight = 4,
 		/obj/item/storage/belt/security/MP = 4,
 		/obj/item/device/flash = 5,
-		/obj/item/reagent_container/food/snacks/donut/normal = 12,
 		/obj/item/storage/box/evidence = 6,
-		/obj/item/clothing/head/helmet/marine/MP = 6,
-		/obj/item/clothing/head/beret/marine/mp/mppeaked = 6,
-		/obj/item/clothing/head/beret/marine/mp/mpcap = 6,
+		/obj/item/clothing/head/helmet/marine/MP = 2,
 		/obj/item/clothing/under/marine/mp = 2,
-		/obj/item/storage/belt/security/MP = 6,
-		/obj/item/clothing/head/beret/marine/mp = 6,
-		/obj/item/clothing/glasses/sunglasses/sechud = 3,
-		/obj/item/device/radio/headset = 6,
 		/obj/item/tape/regulation = 5,
 	)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/storage/donut_box = 2)
+
+/obj/structure/machinery/vending/security/colony
+	name = "\improper SecTech Police Vendor"
+	desc = "A generic police vendor."
+	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
+	icon_state = "sec"
+	icon_deny = "sec-deny"
+	req_access = list(ACCESS_MARINE_BRIG)
+	products = list(
+		/obj/item/handcuffs = 8,
+		/obj/item/reagent_container/spray/pepper = 4,
+		/obj/item/device/flashlight = 4,
+		/obj/item/storage/belt/security/MP/CMB = 4,
+		/obj/item/device/flash = 5,
+		/obj/item/storage/box/evidence = 6,
+		/obj/item/tape/regulation = 5,
+	)
 
 /obj/structure/machinery/vending/sea
 	name = "\improper SeaTech"

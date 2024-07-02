@@ -74,13 +74,13 @@
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/pistol/mod88/normalpoint // Unused
-	name = "\improper 88M4 FMJ magazine (9mm)"
+	name = "\improper 88M4 magazine (9mm)"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"
 	ammo_band_color = null
 
 /obj/item/ammo_magazine/pistol/mod88/normalpoint/extended // Unused
-	name = "\improper 88M4 FMJ extended magazine (9mm)"
+	name = "\improper 88M4 extended magazine (9mm)"
 	icon_state = "88m4_mag_ex"
 	default_ammo = /datum/ammo/bullet/pistol
 	caliber = "9mm"

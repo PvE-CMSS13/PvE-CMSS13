@@ -354,12 +354,12 @@
 //-----------------------88M4 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/mod88
-	name = "\improper magazine box (88 Mod 4 AP x 16)"
+	name = "\improper magazine box (88 Mod 4 x 16)"
 	icon_state = "base_mod88"
 	flags_equip_slot = SLOT_BACK
-	overlay_ammo_type = "_ap"
+	overlay_ammo_type = "_reg"
 	overlay_gun_type = "_mod88"
-	overlay_content = "_ap"
+	overlay_content = "_reg"
 	num_of_magazines = 16
 	magazine_type = /obj/item/ammo_magazine/pistol/mod88
 

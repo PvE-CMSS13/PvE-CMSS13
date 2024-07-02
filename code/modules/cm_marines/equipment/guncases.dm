@@ -370,9 +370,9 @@
 /obj/item/storage/box/guncase/mod88/fill_preset_inventory()
 	new /obj/item/attachable/flashlight(src)
 	new /obj/item/weapon/gun/pistol/mod88(src)
-	new /obj/item/ammo_magazine/pistol/mod88(src)
-	new /obj/item/ammo_magazine/pistol/mod88(src)
-	new /obj/item/ammo_magazine/pistol/mod88(src)
+	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
+	new /obj/item/ammo_magazine/pistol/mod88/normalpoint(src)
 
 //M44 Combat Revolver
 /obj/item/storage/box/guncase/m44
