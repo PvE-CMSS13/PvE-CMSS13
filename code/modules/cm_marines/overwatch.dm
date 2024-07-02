@@ -657,11 +657,15 @@
 		user.reset_view(null)
 
 //returns the helmet camera the human is wearing
-/obj/structure/machinery/computer/overwatch/proc/get_camera_from_target(mob/living/carbon/human/H)
+/obj/structure/machinery/computer/overwatch/proc/get_camera_from_target(mob/living/carbon/human/overwatch_target)
 	if(current_squad)
-		if(H && istype(H) && istype(H.head, /obj/item/clothing/head/helmet/marine))
-			var/obj/item/clothing/head/helmet/marine/helm = H.head
+		if(overwatch_target && istype(overwatch_target) && istype(overwatch_target.head, /obj/item/clothing/head/helmet/marine))
+			var/obj/item/clothing/head/helmet/marine/helm = overwatch_target.head
 			return helm.camera
+		if(overwatch_target && istype(overwatch_target) && istype(overwatch_target.glasses, /obj/item/clothing/glasses/night/m56_goggles))
+			var/obj/item/clothing/glasses/night/m56_goggles/glass = overwatch_target.glasses
+			return glass.camera
+
 
 
 // Alerts all groundside marines about the incoming OB

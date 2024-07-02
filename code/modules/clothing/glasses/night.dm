@@ -103,6 +103,7 @@
 
 	var/far_sight = FALSE
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
+	var/obj/structure/machinery/camera/camera
 
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
 	linked_smartgun = null
