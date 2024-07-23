@@ -120,6 +120,21 @@
 /obj/structure/machinery/camera/autoname/golden_arrow/midway
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_MIDWAY)
 
+/obj/structure/machinery/camera/autoname/golden_arrow/cyclone
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_CYCLONE)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TORNADO)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/typhoon
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TYPHOON)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/tripoli
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TRIPOLI)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/cherokee
+	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_CHEROKEE)
+
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.
 /obj/structure/machinery/camera/autoname/lz_camera

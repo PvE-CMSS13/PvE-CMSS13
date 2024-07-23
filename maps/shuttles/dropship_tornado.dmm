@@ -1,0 +1,828 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ag" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "17"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"av" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "75"
+	},
+/area/shuttle/tornado)
+"aw" = (
+/obj/structure/shuttle/part/tornado{
+	icon_state = "5"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"aG" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"bf" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "3"
+	},
+/area/shuttle/tornado)
+"bm" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "64"
+	},
+/area/shuttle/tornado)
+"bL" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "66"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"ck" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "35"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"cX" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"db" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "65"
+	},
+/obj/effect/attach_point/weapon/tornado/right_wing,
+/turf/template_noop,
+/area/shuttle/tornado)
+"dm" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "38"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"dW" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "25"
+	},
+/area/shuttle/tornado)
+"eg" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "27"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"eq" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "4"
+	},
+/area/shuttle/tornado)
+"et" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "20"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"eU" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "23"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"fj" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	id = "aft_door";
+	name = "\improper Tornado cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"fr" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	dir = 1;
+	layer = 3.2
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/computer/dropship_weapons/tornado{
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	icon_state = "cameras";
+	layer = 3.1;
+	pixel_x = -8;
+	pixel_y = 3;
+	density = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"gJ" = (
+/obj/structure/shuttle/part/tornado{
+	icon_state = "2"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"hd" = (
+/obj/structure/shuttle/part/tornado/transparent,
+/turf/template_noop,
+/area/shuttle/tornado)
+"hn" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "33"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"hB" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"hE" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "101"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"jP" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/tornado)
+"kI" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "40";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"lb" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "77"
+	},
+/area/shuttle/tornado)
+"lM" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "15"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"mb" = (
+/obj/effect/attach_point/crew_weapon/tornado,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"mt" = (
+/obj/docking_port/mobile/marine_dropship/tornado,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"pv" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
+/area/shuttle/tornado)
+"qF" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "34"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"rp" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "89";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"sx" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"sM" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "62"
+	},
+/area/shuttle/tornado)
+"uk" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "47"
+	},
+/area/shuttle/tornado)
+"uG" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"uL" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight{
+	icon_state = "cameras_old";
+	pixel_y = 7;
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"vk" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "74"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"vz" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "95"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"vU" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "16"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"vZ" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "21"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"xr" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"xW" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"yQ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "76"
+	},
+/area/shuttle/tornado)
+"yZ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "72"
+	},
+/area/shuttle/tornado)
+"zp" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "26"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"zQ" = (
+/obj/effect/attach_point/crew_weapon/tornado,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"AL" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 30
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Bf" = (
+/obj/structure/shuttle/part/tornado{
+	icon_state = "6"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Bx" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
+	},
+/area/shuttle/tornado)
+"BK" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "61"
+	},
+/obj/effect/attach_point/weapon/tornado/left_wing,
+/turf/template_noop,
+/area/shuttle/tornado)
+"DX" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "28"
+	},
+/obj/effect/attach_point/fuel/tornado{
+	layer = 3.1
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"EQ" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "103"
+	},
+/area/shuttle/tornado)
+"Fv" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "48"
+	},
+/area/shuttle/tornado)
+"FD" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "24"
+	},
+/area/shuttle/tornado)
+"FW" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Gl" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "31"
+	},
+/area/shuttle/tornado)
+"HH" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"HN" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"IN" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"IZ" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "32"
+	},
+/obj/effect/attach_point/fuel/tornado{
+	layer = 3.1
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Jt" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "9"
+	},
+/area/shuttle/tornado)
+"KB" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Mq" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "86";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"Nd" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "41";
+	layer = 4.2;
+	density = 0
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"NY" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "69"
+	},
+/area/shuttle/tornado)
+"Om" = (
+/turf/template_noop,
+/area/space)
+"Pb" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Pi" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Py" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "28"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Qe" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "32"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Qf" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "70"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Qv" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/tornado{
+	pixel_y = 32
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/tornado)
+"Rk" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "99"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"SX" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Tz" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "73"
+	},
+/area/shuttle/tornado)
+"TF" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"TM" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"TN" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "22"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"UF" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "104"
+	},
+/area/shuttle/tornado)
+"Vb" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Vj" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/tornado)
+"Ws" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "97";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"Wt" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "18"
+	},
+/area/shuttle/tornado)
+"Wv" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "29"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Xc" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "39"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"XL" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "83"
+	},
+/area/shuttle/tornado)
+"Yg" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "30"
+	},
+/area/shuttle/tornado)
+"Ym" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "19"
+	},
+/area/shuttle/tornado)
+"Zi" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "67"
+	},
+/area/shuttle/tornado)
+
+(1,1,1) = {"
+Om
+Om
+Om
+Om
+Om
+Om
+Om
+Om
+kI
+qF
+DX
+TN
+et
+Om
+Om
+Om
+Om
+Om
+"}
+(2,1,1) = {"
+Om
+Om
+Om
+Om
+Om
+aG
+bL
+BK
+Nd
+ck
+Wv
+eU
+vZ
+kI
+Py
+TN
+et
+hd
+"}
+(3,1,1) = {"
+Om
+Om
+Om
+kI
+av
+yZ
+Zi
+sM
+Wt
+Wt
+Yg
+FD
+Jt
+Nd
+Wv
+eU
+vZ
+gJ
+"}
+(4,1,1) = {"
+Om
+Om
+Om
+Nd
+yQ
+HN
+xr
+HN
+FW
+HN
+xr
+HN
+uk
+Wt
+Yg
+FD
+EQ
+bf
+"}
+(5,1,1) = {"
+sx
+vz
+Mq
+Wt
+lb
+Qv
+TM
+TM
+TM
+TM
+TM
+pv
+cX
+hB
+IN
+TF
+fj
+Om
+"}
+(6,1,1) = {"
+hE
+Ws
+uL
+fr
+SX
+Vj
+mb
+TF
+mt
+TF
+mb
+Vj
+xW
+TM
+zQ
+TM
+TF
+Om
+"}
+(7,1,1) = {"
+Pi
+Rk
+rp
+Ym
+lb
+jP
+TM
+TM
+TM
+TM
+TM
+Bx
+HH
+Pb
+KB
+TF
+TF
+Om
+"}
+(8,1,1) = {"
+Om
+Om
+Om
+kI
+yQ
+uG
+Vb
+AL
+uG
+uG
+Vb
+uG
+Fv
+Ym
+Gl
+dW
+UF
+eq
+"}
+(9,1,1) = {"
+Om
+Om
+Om
+Nd
+XL
+Tz
+NY
+bm
+Ym
+Ym
+Gl
+dW
+lM
+kI
+Qe
+zp
+vU
+aw
+"}
+(10,1,1) = {"
+Om
+Om
+Om
+Om
+Om
+vk
+Qf
+db
+kI
+dm
+IZ
+zp
+vU
+Nd
+hn
+eg
+ag
+Bf
+"}
+(11,1,1) = {"
+Om
+Om
+Om
+Om
+Om
+Om
+Om
+Om
+Nd
+Xc
+hn
+eg
+ag
+Om
+Om
+Om
+Om
+Om
+"}

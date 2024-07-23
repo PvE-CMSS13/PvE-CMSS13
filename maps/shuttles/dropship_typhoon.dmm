@@ -1,0 +1,898 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aX" = (
+/turf/template_noop,
+/area/space)
+"bs" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "26"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"cg" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "66"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"cH" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"dV" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "75"
+	},
+/area/shuttle/tornado)
+"fJ" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "99"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"gw" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "27"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"gx" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "47"
+	},
+/area/shuttle/tornado)
+"gJ" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/typhoon{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"gN" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "24"
+	},
+/area/shuttle/tornado)
+"gY" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "67"
+	},
+/area/shuttle/tornado)
+"ix" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/tornado)
+"iz" = (
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/tornado)
+"jt" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"kg" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "65"
+	},
+/obj/effect/attach_point/weapon/tornado/right_wing,
+/turf/template_noop,
+/area/shuttle/tornado)
+"lm" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"lA" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "73"
+	},
+/area/shuttle/tornado)
+"lM" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "48"
+	},
+/area/shuttle/tornado)
+"nM" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "64"
+	},
+/area/shuttle/tornado)
+"of" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "25"
+	},
+/area/shuttle/tornado)
+"oo" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/obj/structure/platform{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"oH" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "95"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"qa" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "101"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"rb" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "104"
+	},
+/area/shuttle/tornado)
+"rN" = (
+/obj/structure/bed/portable_surgery{
+	pixel_y = 5
+	},
+/obj/structure/machinery/iv_drip{
+	pixel_y = 26;
+	layer = 2.9
+	},
+/obj/structure/curtain/medical,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"rO" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "72"
+	},
+/area/shuttle/tornado)
+"sC" = (
+/obj/effect/attach_point/crew_weapon/typhoon,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"uS" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "3"
+	},
+/turf/open/space/basic,
+/area/shuttle/tornado)
+"vO" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "61"
+	},
+/obj/effect/attach_point/weapon/tornado/left_wing,
+/turf/template_noop,
+/area/shuttle/tornado)
+"wd" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "36"
+	},
+/area/shuttle/tornado)
+"wI" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "16"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"wN" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin8"
+	},
+/area/shuttle/tornado)
+"wP" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"xq" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "69"
+	},
+/area/shuttle/tornado)
+"yk" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"yE" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "41";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"zS" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "89";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"Au" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "5"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Bf" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Bz" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "23"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "23"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"BO" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "15"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"BP" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "17"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Cl" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "6"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"CE" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "86";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"Dl" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "83"
+	},
+/area/shuttle/tornado)
+"Dv" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "32"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Eh" = (
+/obj/docking_port/mobile/marine_dropship/typhoon,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"FC" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"FO" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Gv" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "70"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Iw" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"IT" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "40";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"IU" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"IX" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "26"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"IZ" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin4"
+	},
+/area/shuttle/tornado)
+"Jb" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "33"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"JT" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "23"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Kp" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2{
+	id = "aft_door";
+	name = "\improper Typhoon cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Kw" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "28"
+	},
+/obj/effect/attach_point/fuel/typhoon{
+	layer = 3.1
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"KX" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "22"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"KY" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/vehicle/toc{
+	dir = 1;
+	pixel_y = 19;
+	pixel_x = 16
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Lj" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "4"
+	},
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "4"
+	},
+/area/shuttle/tornado)
+"MB" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "97";
+	opacity = 0
+	},
+/area/shuttle/tornado)
+"NB" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = -5
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Oh" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "103"
+	},
+/area/shuttle/tornado)
+"Oq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/typhoon{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Or" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "82"
+	},
+/area/shuttle/tornado)
+"Ou" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	dir = 1;
+	layer = 3.2
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/computer/dropship_weapons/tornado{
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	icon_state = "cameras";
+	layer = 3.1;
+	pixel_x = -8;
+	pixel_y = 3;
+	density = 0
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"OQ" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	can_block_movement = 0
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"OV" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "28"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Qi" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "38"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Qs" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/two,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"QF" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "62"
+	},
+/area/shuttle/tornado)
+"Rb" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "29"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Rw" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "31"
+	},
+/area/shuttle/tornado)
+"RB" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "39"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"RH" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "27"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Sc" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "74"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Tc" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "29"
+	},
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "29"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Ts" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "2"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"TF" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = 30
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Uk" = (
+/obj/structure/shuttle/part/typhoon/transparent,
+/turf/template_noop,
+/area/shuttle/tornado)
+"Ut" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/typhoon{
+	pixel_y = 32
+	},
+/obj/structure/surface/table/reinforced/toc/east{
+	pixel_y = -7
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "toc_map";
+	layer = 2.99;
+	name = "Tactical Map Display";
+	pixel_y = 13;
+	pixel_x = -7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/tornado)
+"VM" = (
+/turf/closed/shuttle/dropship2/tornado{
+	icon_state = "9"
+	},
+/area/shuttle/tornado)
+"VV" = (
+/obj/structure/shuttle/part/tornado/transparent{
+	icon_state = "22"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Xv" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight{
+	icon_state = "cameras_old";
+	pixel_y = 7;
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Xw" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "32"
+	},
+/obj/effect/attach_point/fuel/typhoon{
+	layer = 3.1
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"XO" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/surgical_tray/empty,
+/obj/item/reagent_container/hypospray/autoinjector/oxycodone{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"Ym" = (
+/obj/structure/machinery/computer/overwatch/toc{
+	pixel_y = 14
+	},
+/obj/structure/surface/table/reinforced/toc/west{
+	pixel_y = -7
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/toc{
+	pixel_y = 14;
+	pixel_x = 7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/tornado)
+"YW" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "71"
+	},
+/turf/template_noop,
+/area/shuttle/tornado)
+"Zk" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "30"
+	},
+/area/shuttle/tornado)
+"ZD" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/tornado)
+"ZR" = (
+/turf/closed/shuttle/typhoon{
+	icon_state = "37"
+	},
+/area/shuttle/tornado)
+
+(1,1,1) = {"
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+IT
+Qi
+Kw
+KX
+wI
+aX
+aX
+aX
+aX
+aX
+"}
+(2,1,1) = {"
+aX
+aX
+aX
+aX
+aX
+YW
+cg
+vO
+yE
+RB
+Rb
+JT
+BP
+IT
+OV
+VV
+wI
+Uk
+"}
+(3,1,1) = {"
+aX
+aX
+aX
+IT
+dV
+rO
+gY
+QF
+wd
+wd
+Zk
+gN
+VM
+yE
+Tc
+Bz
+BP
+Ts
+"}
+(4,1,1) = {"
+aX
+aX
+aX
+yE
+Or
+Ym
+KY
+cH
+Oq
+IU
+Iw
+IU
+gx
+wd
+Zk
+gN
+Oh
+uS
+"}
+(5,1,1) = {"
+FO
+oH
+CE
+wd
+Or
+Ut
+ZD
+ZD
+ZD
+ZD
+ZD
+IZ
+OQ
+Bf
+NB
+cH
+Kp
+aX
+"}
+(6,1,1) = {"
+qa
+MB
+Xv
+Ou
+Qs
+iz
+cH
+cH
+Eh
+cH
+cH
+iz
+yk
+ZD
+sC
+ZD
+cH
+aX
+"}
+(7,1,1) = {"
+jt
+fJ
+zS
+ZR
+Or
+ix
+ZD
+ZD
+ZD
+ZD
+ZD
+wN
+oo
+gJ
+lm
+cH
+cH
+aX
+"}
+(8,1,1) = {"
+aX
+aX
+aX
+IT
+Or
+rN
+XO
+TF
+cH
+wP
+FC
+wP
+lM
+ZR
+Rw
+of
+rb
+Lj
+"}
+(9,1,1) = {"
+aX
+aX
+aX
+yE
+Dl
+lA
+xq
+nM
+ZR
+ZR
+Rw
+of
+BO
+IT
+Dv
+bs
+wI
+Au
+"}
+(10,1,1) = {"
+aX
+aX
+aX
+aX
+aX
+Sc
+Gv
+kg
+IT
+Qi
+Xw
+IX
+wI
+yE
+Jb
+gw
+BP
+Cl
+"}
+(11,1,1) = {"
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+yE
+RB
+Jb
+RH
+BP
+aX
+aX
+aX
+aX
+aX
+"}

@@ -381,4 +381,24 @@
 	name = "\improper 'Midway' camera controls"
 	network = list(CAMERA_NET_MIDWAY, CAMERA_NET_LASER_TARGETS)
 
+/obj/structure/machinery/computer/cameras/dropship/cyclone
+	name = "\improper 'Cyclone' camera controls"
+	network = list(CAMERA_NET_CYCLONE, CAMERA_NET_LASER_TARGETS)
+
+/obj/structure/machinery/computer/cameras/dropship/tornado
+	name = "\improper 'Tornado' camera controls"
+	network = list(CAMERA_NET_TORNADO, CAMERA_NET_LASER_TARGETS)
+
+/obj/structure/machinery/computer/cameras/dropship/typhoon
+	name = "\improper 'Typhoon' camera controls"
+	network = list(CAMERA_NET_TYPHOON, CAMERA_NET_LASER_TARGETS)
+
+/obj/structure/machinery/computer/cameras/dropship/tripoli
+	name = "\improper 'Tripoli' camera controls"
+	network = list(CAMERA_NET_TRIPOLI, CAMERA_NET_LASER_TARGETS)
+
+/obj/structure/machinery/computer/cameras/dropship/cherokee
+	name = "\improper 'Cherokee' camera controls"
+	network = list(CAMERA_NET_CHEROKEE, CAMERA_NET_LASER_TARGETS)
+
 #undef DEFAULT_MAP_SIZE
