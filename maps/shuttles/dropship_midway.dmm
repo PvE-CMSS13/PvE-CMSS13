@@ -498,15 +498,6 @@
 	icon_state = "72"
 	},
 /area/shuttle/midway)
-"Kp" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
-	dir = 1;
-	id = "starboard_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/midway)
 "Ks" = (
 /obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
 	name = "\improper Midway"
@@ -607,15 +598,6 @@
 	},
 /turf/open/shuttle/dropship{
 	icon_state = "rasputin6"
-	},
-/area/shuttle/midway)
-"SS" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
-	dir = 2;
-	id = "port_door"
-	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
 	},
 /area/shuttle/midway)
 "SZ" = (
@@ -724,8 +706,8 @@ Hj
 Jq
 Vu
 xp
-ME
-SS
+dE
+dE
 QI
 gw
 ls
@@ -844,8 +826,8 @@ wB
 VU
 ym
 Ji
-ME
-Kp
+yB
+yB
 rF
 ul
 BS

@@ -729,6 +729,26 @@
 	name = "\improper 'Midway' weapons controls"
 	shuttle_tag = DROPSHIP_MIDWAY
 
+/obj/structure/machinery/computer/dropship_weapons/cyclone
+	name = "\improper 'Cyclone' weapons controls"
+	shuttle_tag = DROPSHIP_CYCLONE
+
+/obj/structure/machinery/computer/dropship_weapons/tornado
+	name = "\improper 'Tornado' weapons controls"
+	shuttle_tag = DROPSHIP_TORNADO
+
+/obj/structure/machinery/computer/dropship_weapons/typhoon
+	name = "\improper 'Typhoon' weapons controls"
+	shuttle_tag = DROPSHIP_TYPHOON
+
+/obj/structure/machinery/computer/dropship_weapons/tripoli
+	name = "\improper 'Tripoli' weapons controls"
+	shuttle_tag = DROPSHIP_TRIPOLI
+
+/obj/structure/machinery/computer/dropship_weapons/cherokee
+	name = "\improper 'Cherokee' weapons controls"
+	shuttle_tag = DROPSHIP_CHEROKEE
+
 /obj/structure/machinery/computer/dropship_weapons/dropship1
 	name = "\improper 'Alamo' weapons controls"
 	shuttle_tag = DROPSHIP_ALAMO

@@ -150,6 +150,60 @@
 	return TRUE
 
 
+/area/shuttle/tornado
+	name = "command dropship Tornado"
+	icon_state = "shuttlered"
+	base_muffle = MUFFLE_HIGH
+	soundscape_interval = 30
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/shuttle/tornado/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
+/area/shuttle/typhoon
+	name = "heavy-lift dropship Typhoon"
+	icon_state = "shuttlered"
+	base_muffle = MUFFLE_HIGH
+	soundscape_interval = 30
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/shuttle/typhoon/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
+/area/shuttle/tripoli
+	name = "dropship Tripoli"
+	icon_state = "shuttlered"
+	base_muffle = MUFFLE_HIGH
+	soundscape_interval = 30
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/shuttle/tripoli/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
+/area/shuttle/cherokee
+	name = "dropship Cherokee"
+	icon_state = "shuttlered"
+	base_muffle = MUFFLE_HIGH
+	soundscape_interval = 30
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/shuttle/cherokee/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
+
+
 //DISTRESS SHUTTLES
 
 /area/shuttle/distress
