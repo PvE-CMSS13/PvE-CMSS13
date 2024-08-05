@@ -1,0 +1,262 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_4"
+	},
+/area/vehicle/tank)
+"b" = (
+/obj/structure/prop/tank{
+	icon_state = "prop3";
+	pixel_x = 0
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_4"
+	},
+/area/vehicle/tank)
+"c" = (
+/obj/structure/interior_wall/tank{
+	icon_state = "back_2"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"d" = (
+/obj/structure/phone_base{
+	dir = 8;
+	layer = 3.1;
+	name = "Tank Telephone";
+	phone_category = "Vehicles";
+	phone_id = "M34A2 Longstreet Light Tank";
+	pixel_x = 22;
+	pixel_y = -14
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_4"
+	},
+/area/vehicle/tank)
+"h" = (
+/obj/structure/interior_wall/tank{
+	icon_state = "exterior_3";
+	layer = 5.2;
+	pixel_y = 32;
+	alpha = 50
+	},
+/turf/open/void/vehicle,
+/area/space)
+"i" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/tank;
+	name = "back entrance marker";
+	tag = "back"
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_3"
+	},
+/area/vehicle/tank)
+"j" = (
+/obj/structure/interior_wall/tank{
+	icon_state = "exterior_3";
+	layer = 5.2;
+	pixel_y = 32
+	},
+/turf/open/void/vehicle,
+/area/space)
+"k" = (
+/obj/structure/interior_wall/tank{
+	alpha = 50;
+	icon_state = "exterior_1";
+	layer = 5.2;
+	pixel_y = 32
+	},
+/turf/open/void/vehicle,
+/area/space)
+"m" = (
+/obj/structure/interior_wall/tank{
+	layer = 2
+	},
+/turf/open/void/vehicle,
+/area/vehicle/tank)
+"n" = (
+/obj/structure/interior_wall/tank{
+	layer = 2
+	},
+/turf/open/space/basic,
+/area/vehicle/tank)
+"r" = (
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_3"
+	},
+/area/vehicle/tank)
+"s" = (
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop6";
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop8_extra";
+	layer = 4.12;
+	pixel_x = 0
+	},
+/obj/structure/prop/tank{
+	density = 0;
+	icon_state = "prop4";
+	layer = 3;
+	pixel_x = 0
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_7"
+	},
+/area/vehicle/tank)
+"t" = (
+/obj/structure/machinery/prop/almayer/CICmap{
+	icon_state = "smallmaptable";
+	pixel_y = 28;
+	name = "wall map";
+	density = 0
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_4"
+	},
+/area/vehicle/tank)
+"x" = (
+/obj/structure/vehicle_locker/tank{
+	pixel_y = 11
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/lifeboat{
+	name = "Vehicle NanoMed";
+	pixel_x = -5;
+	pixel_y = 31
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_x = 9;
+	pixel_y = 31
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_1_3"
+	},
+/area/vehicle/tank)
+"z" = (
+/obj/structure/interior_wall/tank{
+	icon_state = "back_3"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"A" = (
+/obj/structure/interior_wall/tank{
+	alpha = 50;
+	icon_state = "exterior_2";
+	layer = 5.2;
+	pixel_y = 32
+	},
+/turf/open/void/vehicle,
+/area/space)
+"J" = (
+/obj/structure/machinery/computer/overwatch/almayer{
+	dir = 8;
+	layer = 3;
+	icon = 'icons/obj/vehicles/interiors/tank.dmi';
+	icon_state = "prop0";
+	name = "Tank Overwatch Console"
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_7"
+	},
+/area/vehicle/tank)
+"L" = (
+/turf/open/void/vehicle,
+/area/space)
+"T" = (
+/obj/structure/prop/tank{
+	icon_state = "prop5";
+	pixel_x = 0
+	},
+/obj/structure/prop/tank{
+	icon_state = "prop7";
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_8"
+	},
+/area/vehicle/tank)
+"V" = (
+/obj/structure/prop/tank{
+	icon_state = "prop1";
+	pixel_x = 0
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_9"
+	},
+/area/vehicle/tank)
+"W" = (
+/obj/structure/interior_wall/tank{
+	icon_state = "back_1"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"X" = (
+/obj/structure/prop/tank{
+	icon_state = "prop2";
+	layer = 3;
+	pixel_x = 0
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	layer = 2;
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 10;
+	layer = 3.2;
+	pixel_x = 12;
+	pixel_y = 58
+	},
+/turf/open/shuttle/vehicle{
+	icon_state = "floor_3_3"
+	},
+/area/vehicle/tank)
+
+(1,1,1) = {"
+z
+c
+c
+W
+L
+"}
+(2,1,1) = {"
+m
+x
+i
+r
+k
+"}
+(3,1,1) = {"
+n
+t
+d
+a
+h
+"}
+(4,1,1) = {"
+m
+s
+X
+J
+A
+"}
+(5,1,1) = {"
+m
+T
+b
+V
+j
+"}

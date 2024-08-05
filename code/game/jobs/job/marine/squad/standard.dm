@@ -77,6 +77,12 @@
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
 
+/datum/job/marine/standard/ai/vaipo
+	title = JOB_SQUAD_MARINE_VAIPO
+	total_positions = 3
+	spawn_positions = 3
+	gear_preset = /datum/equipment_preset/uscm/pfc/vaipo
+
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
 	squad = SQUAD_UPP
@@ -91,6 +97,11 @@
 	name = JOB_SQUAD_RTO
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/standard/ai/rto
+
+/obj/effect/landmark/start/marine/vaipo
+	name = JOB_SQUAD_MARINE_VAIPO
+	squad = SQUAD_VAIPO
+	job = /datum/job/marine/standard/ai/vaipo
 
 #undef PVT_VARIANT
 #undef PFC_VARIANT

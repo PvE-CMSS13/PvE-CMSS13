@@ -23,6 +23,13 @@
 	icon_state = "cl_spawn"
 	job = /datum/job/civilian/liaison
 
+/datum/job/civilian/liaison/ai
+	gear_preset = /datum/equipment_preset/uscm_ship/liaison/ai
+	entry_message_body = "You are a <a href='"+WIKI_PLACEHOLDER+"'>, assigned to USS Stalwart by Weyland-Yutani's Operations Director Joseph Johnson to protect Company interests during marine deployment. And these damn fools made you work in a cleaning supplies closet... You will receive your mission via fax."
+
+/obj/effect/landmark/start/liaison/ai
+	job = /datum/job/civilian/liaison/ai
+
 AddTimelock(/datum/job/civilian/liaison, list(
 	JOB_HUMAN_ROLES = 10 HOURS,
 ))

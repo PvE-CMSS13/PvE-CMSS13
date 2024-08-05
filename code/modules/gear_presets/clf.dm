@@ -1,6 +1,6 @@
 /datum/equipment_preset/clf
 	name = FACTION_CLF
-	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
+	languages = list(LANGUAGE_ENGLISH)
 	assignment = JOB_CLF
 	rank = FACTION_CLF
 	faction = FACTION_CLF
@@ -18,18 +18,18 @@
 	var/last_name
 	//gender checks
 	if(new_human.gender == MALE)
-		if(prob(40))
+		if(prob(10))
 			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
 		else
 			first_name = "[pick(first_names_male_clf)]"
 		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
 	else
-		if(prob(40))
+		if(prob(10))
 			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
 		else
 			first_name = "[pick(first_names_female_clf)]"
 	//surname
-	if(prob(35))
+	if(prob(10))
 		last_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))]"
 	else
 		last_name = "[pick(last_names_clf)]"
@@ -146,7 +146,90 @@
 		list("Webbing", 10, /obj/item/clothing/accessory/storage/webbing, null, VENDOR_ITEM_REGULAR)
 	)
 
+/datum/equipment_preset/clf/soldier/snow
+	name = "CLF Soldier (Snow)"
 
+/datum/equipment_preset/clf/soldier/snow/spawn_rebel_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/storage/militia/snow,
+		/obj/item/clothing/suit/storage/militia/vest/snow,
+		/obj/item/clothing/suit/storage/militia/partial/snow,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+
+/datum/equipment_preset/clf/soldier/snow/spawn_rebel_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/helmetpath = /obj/item/clothing/head/militia/snow
+	if(prob(75))
+		helmetpath = /obj/item/clothing/head/militia/bucket/snow
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
+/datum/equipment_preset/clf/soldier/snow/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_suit(new_human)
+	spawn_rebel_helmet(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/gray(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp(new_human), WEAR_WAIST)
+	var/gun = pick("pps43", "bolt", "mp27")
+	switch(gun)
+		if("pps43")
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43/extended_mag(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43(new_human), WEAR_IN_BELT)
+		if("bolt")
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction/infantry(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+		if("mp27")
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/mp27(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp27(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
+
+/datum/equipment_preset/clf/soldier/snow/sniper
+	name = "CLF Sniper (Snow)"
+
+/datum/equipment_preset/clf/soldier/snow/sniper/spawn_rebel_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/militia/snow, WEAR_HEAD)
+
+/datum/equipment_preset/clf/soldier/snow/sniper/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/colonist/clf/jumpsuit = new()
+	var/obj/item/clothing/accessory/storage/webbing/W = new()
+	jumpsuit.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(jumpsuit, WEAR_BODY)
+	spawn_rebel_suit(new_human)
+	spawn_rebel_helmet(new_human)
+	spawn_rebel_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/gray(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction/sniper(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/boltaction(new_human), WEAR_J_STORE)
 
 //*****************************************************************************************************/
 
@@ -188,6 +271,7 @@
 
 	spawn_rebel_weapon(new_human)
 	spawn_rebel_weapon(new_human,1)
+
 
 /datum/equipment_preset/clf/engineer/get_antag_clothing_equipment()
 	return list(

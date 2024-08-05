@@ -3,8 +3,8 @@
 #define GET_DEFAULT_ROLE(title) (RoleAuthority?.default_roles[title] ? RoleAuthority.default_roles[title] : title)
 
 // Squad name defines
-#define SQUAD_MARINE_1 "Sun Riders"
-#define SQUAD_MARINE_2 "Bravo"
+#define SQUAD_MARINE_1 "Iron Heads"
+#define SQUAD_MARINE_2 "Storm Breakers"
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
@@ -14,6 +14,7 @@
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_VAIPO "Venelli-Aegis Inc."
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -39,6 +40,13 @@
 #define JOB_SQUAD_RTO "Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "FORECON Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "FORECON Smartgunner"
+
+#define JOB_SQUAD_LEADER_VAIPO "VAIPO Team Leader"
+#define JOB_SQUAD_MARKSMAN_VAIPO  "VAIPO Marksman"
+#define JOB_SQUAD_MEDIC_VAIPO "VAIPO Medic"
+#define JOB_SQUAD_MARINE_VAIPO "VAIPO Contractor"
+#define JOB_SQUAD_SMARTGUN_VAIPO "VAIPO Automatic Rifleman"
+
 
 var/global/list/job_squad_roles = JOB_SQUAD_ROLES_LIST
 

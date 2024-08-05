@@ -683,10 +683,22 @@
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
+/obj/item/clothing/head/militia/snow
+	desc = "A large hood in service with some militias, meant for obscurity on the frontier. This one is white."
+	icon_state = "snow_rebel_hood"
+
 /obj/item/clothing/head/militia/bucket
 	name = "bucket"
 	desc = "This metal bucket appears to have been modified with padding and chin-straps, plus an eye-slit carved into the \"front\". Presumably, it is intended to be worn on the head, possibly for protection."
 	icon_state = "bucket"
+
+/obj/item/clothing/head/militia/bucket/snow
+	icon_state = "snow_bucket"
+
+/obj/item/clothing/head/militia/helmet
+	name = "helmet"
+	desc = "This is a rather well-made helmet... for some reason painted in CLF colors. Huh."
+	icon_state = "clf_helmet"
 
 /obj/item/clothing/head/general
 	name = "\improper armored General cap"

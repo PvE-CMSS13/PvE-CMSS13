@@ -255,6 +255,11 @@
 	if(!QDELETED(src))
 		disarm()
 
+/obj/item/explosive/mine/bullet_act(obj/projectile/P) //adding mine explosions
+	cause_data = P.weapon_cause_data
+	prime()
+	if(!QDELETED(src))
+		disarm()
 
 /obj/effect/mine_tripwire
 	name = "claymore tripwire"

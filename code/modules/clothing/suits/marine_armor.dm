@@ -130,6 +130,33 @@
 
 	light_holder = new(src)
 
+/obj/item/clothing/suit/storage/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	if(type != expected_type)
+		return
+
+	var/new_icon_state
+	var/new_protection
+	var/new_item_state
+	if(override_icon_state && override_icon_state.len)
+		new_icon_state = override_icon_state[SSmapping.configs[GROUND_MAP].map_name]
+	if(override_protection && override_protection.len)
+		new_protection = override_protection[SSmapping.configs[GROUND_MAP].map_name]
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			icon_state = new_icon_state ? new_icon_state : "s_" + icon_state
+			item_state = new_item_state ? new_item_state : "s_" + item_state
+		if("desert")
+			icon_state = new_icon_state ? new_icon_state : "d_" + icon_state
+			item_state = new_item_state ? new_item_state : "d_" + item_state
+		if("urban")
+			icon_state = new_icon_state ? new_icon_state : "u_" + icon_state
+			item_state = new_item_state ? new_item_state : "u_" + item_state
+		if("classic")
+			icon_state = new_icon_state ? new_icon_state : "c_" + icon_state
+			item_state = new_item_state ? new_item_state : "c_" + item_state
+	if(new_protection)
+		min_cold_protection_temperature = new_protection
+
 /obj/item/clothing/suit/storage/marine/Destroy()
 	QDEL_NULL(light_holder)
 	return ..()
@@ -1496,6 +1523,10 @@
 	)
 	pockets.max_storage_space = 8
 
+/obj/item/clothing/suit/storage/militia/snow
+	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates.  This one is painted in white, marking it's wearer as a member of \"Sabrin's Snowfoxes\"."
+	icon_state = "snow_rebel_armor"
+
 /obj/item/clothing/suit/storage/militia/vest
 	name = "colonial militia vest"
 	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives the wearer almost perfect mobility, which suits the needs of the local colonists. It is also quick to don, easy to hide, and cheap to produce in large workshops. This extremely light variant protects only the chest and abdomen."
@@ -1504,6 +1535,10 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	slowdown = 0.2
 	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/storage/militia/vest/snow
+	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates.  This one is painted in white, marking it's wearer as a member of \"Sabrin's Snowfoxes\". This extremely light variant protects only the chest and abdomen."
+	icon_state = "snow_rebel_armor_vest"
 
 /obj/item/clothing/suit/storage/militia/brace
 	name = "colonial militia brace"
@@ -1521,6 +1556,10 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	slowdown = 0.2
+
+/obj/item/clothing/suit/storage/militia/partial/snow
+	desc = "The hauberk of a colonist militia member, created from boiled leather and some modern armored plates.  This one is painted in white, marking it's wearer as a member of \"Sabrin's Snowfoxes\". This even lighter variant has some of the arm pieces removed."
+	icon_state = "snow_rebel_armor_part"
 
 /obj/item/clothing/suit/storage/militia/smartgun
 	name = "colonial militia harness"

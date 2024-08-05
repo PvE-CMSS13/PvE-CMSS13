@@ -567,9 +567,11 @@
 //the parent has a blueish tint, making it look best for civilian usage (colonies, marshals). this one has a black tint on its metal, making it best for military groups like VAIPO, elite mercs, etc.
 // black tinted magazines also included
 /obj/item/weapon/gun/pistol/highpower/black
+	name = "\improper MK-44 SOCOM Automagnum"
+	desc = "Originally designed as a replacement for the USCM's M44 combat revolver, it was rejected at the last minute by a committee, citing its need to be cocked after every loaded magazine to be too cumbersone and antiquated. The design has recently been purchased by the Henjin-Garcia company and sold to the Colonial Marshals and other various unscrupulous armed groups. This one has a sleek, dark design."
 	current_mag = /obj/item/ammo_magazine/pistol/highpower/black
-	icon_state = "highpower_b"
-	item_state = "highpower_b"
+	icon_state = "highpower_tac"
+	item_state = "highpower_tac"
 
 //unimplemented
 /obj/item/weapon/gun/pistol/highpower/tactical

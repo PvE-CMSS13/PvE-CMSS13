@@ -34,6 +34,7 @@
 		// primaries
 		/obj/item/hardpoint/primary/flamer,
 		/obj/item/hardpoint/primary/cannon,
+		/obj/item/hardpoint/primary/cannon/custom,
 		/obj/item/hardpoint/primary/minigun,
 		/obj/item/hardpoint/primary/autocannon,
 		// secondaries

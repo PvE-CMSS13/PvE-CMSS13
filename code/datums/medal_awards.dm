@@ -2,6 +2,7 @@
 #define MARINE_BRONZE_HEART_MEDAL "bronze heart medal"
 #define MARINE_VALOR_MEDAL "medal of valor"
 #define MARINE_HEROISM_MEDAL "medal of exceptional heroism"
+#define MARINE_ODOLLA_CAMPAIGN_MEDAL "Odolla's Cradle campaign medal"
 
 #define ALL_MARINE_MEDALS list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL, MARINE_VALOR_MEDAL, MARINE_HEROISM_MEDAL)
 
@@ -148,6 +149,8 @@ GLOBAL_LIST_EMPTY(jelly_awards)
 				medal = new /obj/item/clothing/accessory/medal/silver/valor(medal_location)
 			if(MARINE_HEROISM_MEDAL)
 				medal = new /obj/item/clothing/accessory/medal/gold/heroism(medal_location)
+			if(MARINE_ODOLLA_CAMPAIGN_MEDAL)
+				medal = new /obj/item/clothing/accessory/medal/gold/odolla(medal_location)
 			else
 				return FALSE
 		medal.recipient_name = chosen_recipient

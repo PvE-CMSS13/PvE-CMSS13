@@ -368,3 +368,11 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/skully
+	name = "Skully"
+	shuttle_id = "dropship_skully"
+
+/datum/map_template/shuttle/wrecker
+	name = "Wrecker"
+	shuttle_id = "dropship_wrecker"

@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE), \
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE, /datum/job/civilian/synthetic/ai = JOB_SYNTH, /datum/job/civilian/liaison/ai = JOB_CORPORATE_LIAISON), \
 		/datum/squad/marine/upp = list(/datum/job/command/bridge/ai/upp = JOB_SO,\
 		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
@@ -97,8 +97,20 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN)))
+		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN),\
+		/datum/squad/marine/bravo = list(/datum/job/command/bridge/ai = JOB_SO,\
+		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE),\
+		/datum/squad/marine/vaipo = list(/datum/job/marine/standard/ai/vaipo = JOB_SQUAD_MARINE,\
+		/datum/job/marine/specialist/vaipo = JOB_SQUAD_SPECIALIST,\
+		/datum/job/marine/leader/ai/vaipo = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/vaipo = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/vaipo = JOB_SQUAD_SMARTGUN)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON, /datum/squad/marine/bravo = list(JOB_SO, JOB_SQUAD_LEADER, JOB_SQUAD_MEDIC, JOB_SQUAD_TEAM_LEADER, JOB_SQUAD_SMARTGUN, JOB_SQUAD_MARINE),\
+												/datum/squad/marine/vaipo = ROLES_AI_VAIPO))

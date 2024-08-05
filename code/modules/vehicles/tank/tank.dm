@@ -164,6 +164,13 @@
 
 	return TRUE
 
+/obj/vehicle/multitile/tank/custom
+	name = "M34A3-C Longstreet Command Tank"
+	icon_state = "tank_custom_base"
+	nickname = "Six Feet Thunder"
+
+	interior_map = /datum/map_template/interior/tank_custom
+
 /*
 ** PRESETS SPAWNERS
 */
@@ -271,3 +278,21 @@
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
 		TT.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
 		break
+
+/obj/effect/vehicle_spawner/tank/fixed/custom/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads/robust)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/custom)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		break
+
+/obj/effect/vehicle_spawner/tank/fixed/custom/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/custom/TANK = new (loc)
+
+	load_misc(TANK)
+	handle_direction(TANK)
+	load_hardpoints(TANK)
+	TANK.update_icon()

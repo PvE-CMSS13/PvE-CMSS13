@@ -282,12 +282,29 @@
 /turf/closed/shuttle/midway/transparent
 	opacity = FALSE
 
+/turf/closed/shuttle/skully
+	name = "\improper Skully"
+	icon = 'icons/turf/dropship.dmi'
+	icon_state = "1"
+
+
+/turf/closed/shuttle/skully/transparent
+	opacity = FALSE
+
 /turf/closed/shuttle/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
 	icon_state = "1"
 
 /turf/closed/shuttle/cyclone/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/wrecker
+	name = "\improper Wrecker"
+	icon = 'icons/turf/dropship2.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/wrecker/transparent
 	opacity = FALSE
 
 /turf/closed/shuttle/twe_dropship

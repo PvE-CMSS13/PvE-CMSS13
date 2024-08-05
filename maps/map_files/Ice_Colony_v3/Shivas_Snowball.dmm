@@ -113,10 +113,6 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/cp_lz2)
 "aat" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/caves/left_spiders)
@@ -9277,10 +9273,6 @@
 	},
 /area/shiva/interior/aerodrome)
 "dCY" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/auto_turf/ice/layer2,
 /area/shiva/interior/caves/left_spiders)
@@ -11254,13 +11246,6 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/auto_turf/ice/layer2,
 /area/shiva/interior/colony/research_hab)
-"gaT" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer2,
-/area/shiva/interior/caves/right_spiders)
 "gbC" = (
 /obj/structure/machinery/smartfridge,
 /turf/open/floor/prison{
@@ -14722,13 +14707,6 @@
 /obj/item/lightstick/variant/planted,
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/exterior/cp_lz2)
-"jRI" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer1,
-/area/shiva/exterior/lz2_fortress)
 "jSb" = (
 /obj/item/weapon/gun/boltaction{
 	pixel_x = 12;
@@ -19238,15 +19216,6 @@
 	icon_state = "multi_tiles"
 	},
 /area/shiva/interior/colony/research_hab)
-"oHI" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/floor/shiva{
-	dir = 1
-	},
-/area/shiva/exterior/lz2_fortress)
 "oIh" = (
 /obj/item/frame/air_alarm,
 /turf/open/floor/shiva{
@@ -21711,13 +21680,6 @@
 	icon_state = "bluefull"
 	},
 /area/shiva/interior/colony/s_admin)
-"rpE" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer2,
-/area/shiva/interior/caves/left_spiders)
 "rpL" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -22372,13 +22334,6 @@
 "sgX" = (
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/exterior/telecomm/lz2_northeast)
-"shx" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer0,
-/area/shiva/interior/caves/s_lz2)
 "shO" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_18"
@@ -23018,13 +22973,6 @@
 "sUE" = (
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/exterior/telecomm/lz2_southeast)
-"sVJ" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer1,
-/area/shiva/interior/caves/s_lz2)
 "sVV" = (
 /obj/structure/flora/pottedplant,
 /turf/open/floor/shiva{
@@ -23849,13 +23797,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/exterior/cp_colony_grounds)
-"tMR" = (
-/obj/structure/ice/thin/single{
-	opacity = 1;
-	unacidable = 0
-	},
-/turf/open/auto_turf/ice/layer1,
-/area/shiva/interior/caves/right_spiders)
 "tMS" = (
 /obj/structure/machinery/microwave{
 	pixel_y = 6
@@ -29567,7 +29508,7 @@ aac
 aac
 vUR
 lnR
-shx
+eET
 vty
 ocv
 fEU
@@ -29729,7 +29670,7 @@ aac
 aac
 pch
 qRb
-sVJ
+fEU
 fEU
 lrt
 tTi
@@ -29791,7 +29732,7 @@ aav
 clK
 aav
 aav
-rpE
+hsu
 clK
 aav
 aaP
@@ -29891,9 +29832,9 @@ mFm
 mFm
 mFm
 uzM
-jRI
-jRI
-oHI
+xYx
+xYx
+mFm
 caS
 caS
 caS
@@ -29953,7 +29894,7 @@ clK
 aav
 hsu
 aav
-rpE
+hsu
 clK
 aav
 clK
@@ -31250,7 +31191,7 @@ aav
 hsu
 hsu
 abD
-rpE
+hsu
 hsu
 hsu
 uoZ
@@ -31412,7 +31353,7 @@ clK
 aau
 clK
 uoZ
-rpE
+hsu
 aav
 aav
 clK
@@ -31558,9 +31499,9 @@ puZ
 puZ
 puZ
 puZ
-rpE
-rpE
-rpE
+hsu
+hsu
+hsu
 dRb
 dRb
 dRb
@@ -31574,7 +31515,7 @@ aaE
 aav
 aau
 clK
-rpE
+hsu
 aav
 aaP
 aav
@@ -31736,7 +31677,7 @@ hsu
 clK
 clK
 aav
-rpE
+hsu
 clK
 aav
 clK
@@ -31898,7 +31839,7 @@ uoZ
 clK
 aav
 clK
-rpE
+hsu
 aav
 clK
 uoZ
@@ -32540,9 +32481,9 @@ wMh
 eFI
 wMh
 dRb
-rpE
-rpE
-rpE
+hsu
+hsu
+hsu
 dRb
 dRb
 dRb
@@ -55991,9 +55932,9 @@ ecj
 ecj
 ecj
 ecj
-gaT
-gaT
-gaT
+dxS
+dxS
+dxS
 ecj
 ecj
 ecj
@@ -56955,7 +56896,7 @@ lwo
 arX
 bjv
 bjv
-tMR
+gkv
 gkv
 ewb
 kng
@@ -57117,7 +57058,7 @@ lwo
 arX
 arX
 bjv
-tMR
+gkv
 imk
 gkv
 kng
@@ -57616,7 +57557,7 @@ kng
 kng
 kng
 acf
-gaT
+dxS
 mIL
 mIL
 mIL
@@ -57778,7 +57719,7 @@ kng
 gkv
 gkv
 kng
-gaT
+dxS
 mIL
 mIL
 iMb
@@ -57940,7 +57881,7 @@ ecj
 ecj
 lWL
 gkv
-gaT
+dxS
 mIL
 iMb
 iMb
@@ -58255,8 +58196,8 @@ ecj
 ecj
 ecj
 ecj
-gaT
-gaT
+dxS
+dxS
 ecj
 ecj
 ecj
@@ -60205,9 +60146,9 @@ puZ
 puZ
 puZ
 puZ
-gaT
-gaT
-gaT
+dxS
+dxS
+dxS
 ecj
 ecj
 jAN
@@ -61032,9 +60973,9 @@ ecj
 abb
 imk
 ecj
-gaT
-gaT
-tMR
+dxS
+dxS
+gkv
 puZ
 ood
 ood

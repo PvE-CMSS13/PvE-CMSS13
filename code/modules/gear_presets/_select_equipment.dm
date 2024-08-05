@@ -340,6 +340,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 				given_medal = new /obj/item/clothing/accessory/medal/silver/valor(closet_to_spawn_in)
 			if(MARINE_HEROISM_MEDAL)
 				given_medal = new /obj/item/clothing/accessory/medal/gold/heroism(closet_to_spawn_in)
+			if(MARINE_ODOLLA_CAMPAIGN_MEDAL)
+				given_medal = new /obj/item/clothing/accessory/medal/gold/odolla(closet_to_spawn_in)
 			else
 				return FALSE
 		given_medal.recipient_name = medal.recipient_name
@@ -402,8 +404,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/suit/storage/militia/vest,
 		/obj/item/clothing/suit/storage/militia/brace,
 		/obj/item/clothing/suit/storage/militia/partial,
-		/obj/item/clothing/suit/armor/bulletproof,
-		/obj/item/clothing/suit/armor/vest,
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 
@@ -413,15 +413,8 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	var/helmetpath = pick(
 		/obj/item/clothing/head/militia,
 		/obj/item/clothing/head/militia/bucket,
-		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/head/militia/helmet,
 		/obj/item/clothing/head/helmet/skullcap,
-		/obj/item/clothing/head/helmet/swat,
-		/obj/item/clothing/head/hardhat,
-		/obj/item/clothing/head/welding,
-		/obj/item/clothing/head/bandana,
-		/obj/item/clothing/head/headband/red,
-		/obj/item/clothing/head/headband/rebel,
-		/obj/item/clothing/head/headband/rambo,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
@@ -445,7 +438,6 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/swat,
 		/obj/item/clothing/gloves/combat,
-		/obj/item/clothing/gloves/botanic_leather,
 		)
 	new_human.equip_to_slot_or_del(new glovespath, WEAR_HANDS)
 

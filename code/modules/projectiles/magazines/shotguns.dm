@@ -124,6 +124,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 
+/obj/item/ammo_magazine/internal/shotgun/merc/special
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
 /obj/item/ammo_magazine/internal/shotgun/buckshot
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
 

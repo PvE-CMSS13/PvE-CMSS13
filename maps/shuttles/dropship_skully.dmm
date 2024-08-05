@@ -1,0 +1,909 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cf" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"cn" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/skully)
+"cL" = (
+/obj/effect/attach_point/fuel/midway{
+	pixel_x = -32;
+	ship_tag = "dropship_skully"
+	},
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "33"
+	},
+/area/shuttle/skully)
+"dC" = (
+/obj/structure/shuttle/part/dropship1/transparent/upper_left_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"ed" = (
+/obj/structure/shuttle/part/dropship1/left_inner_wing_connector{
+	name = "\improper Skully"
+	},
+/turf/open/space/basic,
+/area/shuttle/skully)
+"eN" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"eT" = (
+/turf/closed/shuttle/skully{
+	icon_state = "48"
+	},
+/area/shuttle/skully)
+"fm" = (
+/obj/structure/shuttle/part/dropship1/transparent/left_outer_bottom_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"fE" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23;
+	network = list("Golden Arrow","Skully")
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"gJ" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"hk" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "floor8"
+	},
+/area/shuttle/skully)
+"hm" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"hD" = (
+/turf/closed/shuttle/skully{
+	icon_state = "62"
+	},
+/area/shuttle/skully)
+"hK" = (
+/obj/structure/shuttle/part/dropship1/transparent/middle_left_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"id" = (
+/turf/closed/shuttle/skully{
+	icon_state = "92"
+	},
+/area/shuttle/skully)
+"ik" = (
+/turf/closed/shuttle/skully{
+	icon_state = "75"
+	},
+/area/shuttle/skully)
+"iJ" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "80"
+	},
+/area/shuttle/skully)
+"iZ" = (
+/turf/closed/shuttle/skully{
+	icon_state = "77"
+	},
+/area/shuttle/skully)
+"jv" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"jV" = (
+/turf/closed/shuttle/skully{
+	icon_state = "64"
+	},
+/area/shuttle/skully)
+"lg" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "27"
+	},
+/area/shuttle/skully)
+"lz" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16;
+	network = list("Golden Arrow","Skully");
+	dir = 1
+	},
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin2"
+	},
+/area/shuttle/skully)
+"mD" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"ni" = (
+/turf/closed/shuttle/skully{
+	icon_state = "30"
+	},
+/area/shuttle/skully)
+"nt" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23;
+	network = list("Golden Arrow","Skully")
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"nJ" = (
+/turf/closed/shuttle/skully{
+	icon_state = "104"
+	},
+/area/shuttle/skully)
+"oy" = (
+/obj/structure/shuttle/part/dropship1/transparent/upper_right_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"oP" = (
+/obj/structure/shuttle/part/dropship1/transparent/lower_right_wing{
+	name = "\improper Skully"
+	},
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"pa" = (
+/turf/closed/shuttle/skully{
+	icon_state = "103"
+	},
+/area/shuttle/skully)
+"pG" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -30
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"qX" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Skully";
+	icon_state = "skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"ro" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
+	dir = 2;
+	id = "port_door";
+	name = "\improper Skully crew hatch"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"ru" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin2"
+	},
+/area/shuttle/skully)
+"rE" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	network = list("Skully","Laser Targets");
+	name = "\improper 'Skully' camera controls"
+	},
+/obj/effect/decal/remains/human{
+	pixel_y = 19;
+	layer = 6;
+	plane = -6;
+	name = "human skull";
+	desc_lore = "This is a skull of some poor CLF bastard that got flattened by Skully, only head showing from under her hood. Some crazy fuck cleaned said head off skin and meat and put the skull on the control panel. Fucked up, right?"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"sb" = (
+/obj/structure/shuttle/part/dropship1/transparent/lower_left_wing{
+	name = "\improper Skully"
+	},
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"sy" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"tM" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "29"
+	},
+/area/shuttle/skully)
+"wO" = (
+/obj/structure/shuttle/part/dropship1/lower_left_wall{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"xi" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "26"
+	},
+/area/shuttle/skully)
+"xn" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds1{
+	id = "aft_door";
+	name = "\improper Skully cargo door"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"xq" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"xE" = (
+/obj/structure/shuttle/part/dropship1/transparent/middle_right_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"xH" = (
+/turf/closed/shuttle/skully{
+	icon_state = "31"
+	},
+/area/shuttle/skully)
+"xO" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"yK" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_left_cap{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"yT" = (
+/turf/closed/shuttle/skully{
+	icon_state = "25"
+	},
+/area/shuttle/skully)
+"zc" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "38"
+	},
+/area/shuttle/skully)
+"zx" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "32"
+	},
+/area/shuttle/skully)
+"AI" = (
+/obj/effect/attach_point/crew_weapon/midway,
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"BV" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "89"
+	},
+/area/shuttle/skully)
+"Cb" = (
+/obj/structure/phone_base/rotary{
+	name = "Skully Telephone";
+	phone_category = "Dropship";
+	phone_id = "Skully";
+	pixel_x = 11;
+	pixel_y = 16
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	name = "\improper 'Skully' weapons controls";
+	shuttle_tag = "dropship_skully"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"CO" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/skully)
+"Dh" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "86"
+	},
+/area/shuttle/skully)
+"EM" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = 30
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"ET" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "97"
+	},
+/area/shuttle/skully)
+"EX" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_right{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"FQ" = (
+/obj/structure/shuttle/part/dropship1/transparent/right_inner_bottom_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"GF" = (
+/turf/template_noop,
+/area/space)
+"Hd" = (
+/obj/structure/shuttle/part/dropship1/right_inner_wing_connector{
+	name = "\improper Skully"
+	},
+/turf/open/space/basic,
+/area/shuttle/skully)
+"HT" = (
+/obj/structure/shuttle/part/dropship1/nose_front_left{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"HY" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"Is" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit,
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"Iw" = (
+/obj/structure/shuttle/part/dropship1/nose_front_right{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"Jv" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"JA" = (
+/turf/open/shuttle/dropship,
+/area/shuttle/skully)
+"JT" = (
+/turf/closed/shuttle/skully{
+	icon_state = "73"
+	},
+/area/shuttle/skully)
+"JX" = (
+/obj/structure/shuttle/part/dropship1/transparent/outer_right_weapons{
+	name = "\improper Skully"
+	},
+/obj/effect/attach_point/weapon/midway/right_fore{
+	ship_tag = "dropship_skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"Ke" = (
+/obj/structure/machinery/door_control{
+	id = "dropship_midway";
+	name = "Dropship Lockdown";
+	normaldoorcontrol = 3;
+	pixel_y = -19;
+	req_one_access_txt = "3;22"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"Kv" = (
+/obj/structure/shuttle/part/dropship2/transparent/engine_right_cap{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"KM" = (
+/turf/closed/shuttle/skully{
+	icon_state = "24"
+	},
+/area/shuttle/skully)
+"Ln" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_top_left{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"Me" = (
+/turf/closed/shuttle/skully{
+	icon_state = "67"
+	},
+/area/shuttle/skully)
+"Mi" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"Mk" = (
+/obj/effect/attach_point/fuel/midway{
+	ship_tag = "dropship_skully"
+	},
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/skully)
+"Mm" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin14"
+	},
+/area/shuttle/skully)
+"Ms" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin7"
+	},
+/area/shuttle/skully)
+"NH" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "35"
+	},
+/area/shuttle/skully)
+"NL" = (
+/obj/structure/shuttle/part/dropship1/transparent/right_outer_bottom_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"OK" = (
+/obj/structure/shuttle/part/dropship1/transparent/left_inner_bottom_wing{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"PH" = (
+/obj/docking_port/mobile/marine_dropship/midway{
+	name = "Skully";
+	id = "dropship_skully"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"PQ" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/skully)
+"PT" = (
+/turf/closed/shuttle/skully{
+	icon_state = "94"
+	},
+/area/shuttle/skully)
+"Rl" = (
+/turf/closed/shuttle/skully{
+	icon_state = "81"
+	},
+/area/shuttle/skully)
+"Rt" = (
+/obj/structure/shuttle/part/dropship1/transparent/nose_center{
+	name = "\improper Skully";
+	icon_state = "105"
+	},
+/obj/effect/attach_point/electronics/midway{
+	ship_tag = "dropship_skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"RS" = (
+/obj/structure/shuttle/part/dropship1/right_outer_wing_connector{
+	name = "\improper Skully"
+	},
+/turf/open/space/basic,
+/area/shuttle/skully)
+"RW" = (
+/turf/closed/shuttle/skully{
+	icon_state = "69"
+	},
+/area/shuttle/skully)
+"Sv" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway{
+	dir = 1;
+	id = "starboard_door";
+	name = "\improper Skully crew hatch"
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin15"
+	},
+/area/shuttle/skully)
+"Ta" = (
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_x = 12
+	},
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "78"
+	},
+/area/shuttle/skully)
+"TH" = (
+/obj/structure/shuttle/part/dropship1/lower_right_wall{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"UT" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "98"
+	},
+/area/shuttle/skully)
+"UY" = (
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/skully)
+"Va" = (
+/turf/closed/shuttle/skully{
+	icon_state = "42"
+	},
+/area/shuttle/skully)
+"Vt" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "39"
+	},
+/area/shuttle/skully)
+"Vw" = (
+/turf/closed/shuttle/skully{
+	icon_state = "47"
+	},
+/area/shuttle/skully)
+"VD" = (
+/obj/structure/shuttle/part/dropship1/transparent/outer_left_weapons{
+	name = "\improper Skully"
+	},
+/obj/effect/attach_point/weapon/midway/left_fore{
+	ship_tag = "dropship_skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"WV" = (
+/turf/closed/shuttle/skully{
+	icon_state = "54"
+	},
+/area/shuttle/skully)
+"Xg" = (
+/turf/closed/shuttle/skully{
+	icon_state = "83"
+	},
+/area/shuttle/skully)
+"Yb" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust{
+	name = "\improper Skully"
+	},
+/turf/template_noop,
+/area/shuttle/skully)
+"Yg" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "96"
+	},
+/area/shuttle/skully)
+"Yu" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin6"
+	},
+/area/shuttle/skully)
+"Yw" = (
+/turf/closed/shuttle/skully/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/skully)
+"Yz" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/skully)
+"YO" = (
+/turf/closed/shuttle/skully{
+	icon_state = "72"
+	},
+/area/shuttle/skully)
+"ZP" = (
+/obj/structure/shuttle/part/dropship1/left_outer_wing_connector{
+	name = "\improper Skully"
+	},
+/turf/open/space/basic,
+/area/shuttle/skully)
+
+(1,1,1) = {"
+GF
+GF
+GF
+GF
+GF
+dC
+hK
+sb
+GF
+GF
+GF
+yK
+Yw
+Mk
+cn
+gJ
+GF
+OK
+"}
+(2,1,1) = {"
+GF
+GF
+GF
+VD
+ik
+YO
+Me
+hD
+Mi
+ro
+wO
+Kv
+NH
+tM
+PQ
+Yb
+GF
+fm
+"}
+(3,1,1) = {"
+Ln
+HT
+id
+Dh
+Rl
+HY
+pG
+hm
+Mi
+Ke
+Vw
+Va
+Va
+ni
+KM
+pa
+ed
+ZP
+"}
+(4,1,1) = {"
+Rt
+Yg
+rE
+ru
+Ta
+Mm
+UY
+Jv
+Jv
+Jv
+xq
+Yu
+Jv
+fE
+Yz
+xn
+GF
+GF
+"}
+(5,1,1) = {"
+qX
+ET
+mD
+xO
+Is
+Jv
+JA
+jv
+Mi
+PH
+cf
+hk
+Mi
+Mi
+Mi
+Mi
+GF
+GF
+"}
+(6,1,1) = {"
+Rt
+UT
+Cb
+lz
+iJ
+Mm
+Ms
+Jv
+Jv
+Jv
+eN
+CO
+EM
+Jv
+sy
+Mi
+GF
+GF
+"}
+(7,1,1) = {"
+EX
+Iw
+PT
+BV
+iZ
+HY
+nt
+AI
+Mi
+Ke
+eT
+WV
+WV
+xH
+yT
+nJ
+Hd
+RS
+"}
+(8,1,1) = {"
+GF
+GF
+GF
+JX
+Xg
+JT
+RW
+jV
+Mi
+Sv
+TH
+yK
+zc
+zx
+xi
+gJ
+GF
+FQ
+"}
+(9,1,1) = {"
+GF
+GF
+GF
+GF
+GF
+oy
+xE
+oP
+GF
+GF
+GF
+Kv
+Vt
+cL
+lg
+Yb
+GF
+NL
+"}

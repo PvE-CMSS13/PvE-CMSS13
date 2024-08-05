@@ -31,7 +31,7 @@
 	power_light = FALSE
 	power_equip = FALSE
 	power_environ = FALSE
-	temperature = ICE_COLONY_TEMPERATURE
+	temperature = 375
 
 /*
  * Exterior - Surface

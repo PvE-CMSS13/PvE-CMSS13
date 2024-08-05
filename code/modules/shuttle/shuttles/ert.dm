@@ -177,6 +177,10 @@
 	if(!starboard_door)
 		WARNING("No starboard door found for [src]")
 
+/obj/docking_port/mobile/emergency_response/big/vaipo
+	name = "USCSS Montero"
+	id = "vaipo_boarding_shuttle"
+
 // Generic ERT Dock
 /obj/docking_port/stationary/emergency_response
 	width  = 7
@@ -331,3 +335,22 @@
 /datum/map_template/shuttle/big_ert
 	name = "Boarding Shuttle"
 	shuttle_id = "ert_shuttle_big"
+
+/datum/map_template/shuttle/big_vaipo
+	name = "USCSS Montero"
+	shuttle_id = "vaipo_shuttle_big"
+
+/obj/docking_port/stationary/emergency_response/vaipo
+	name = "VAIPO Orbit"
+	dir = SOUTH
+	id = "vaipo_shuttle_start"
+	width  = 17
+	height = 29
+	roundstart_template = /datum/map_template/shuttle/big_vaipo
+
+/obj/docking_port/stationary/emergency_response/vaipo_lz1
+	name = "Landing Zone 1"
+	dir = SOUTH
+	id = "vaipo_lz_1"
+	width  = 17
+	height = 29

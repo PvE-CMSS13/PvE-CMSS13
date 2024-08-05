@@ -116,6 +116,11 @@
 			)
 	return ..()
 
+/obj/vehicle/multitile/apc/movie/custom
+	icon_state = "apc_base_custom"
+	nickname = "Pit Stop"
+	interior_map = /datum/map_template/interior/apc_custom
+	honk_sound = 'sound/vehicles/horn_custom.ogg'
 /*
 ** PRESETS SPAWNERS
 */
@@ -166,3 +171,10 @@
 	V.add_hardpoint(new /obj/item/hardpoint/secondary/frontalcannon)
 	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+
+/obj/effect/vehicle_spawner/apc_movie/fixed/custom/spawn_vehicle()
+	var/obj/vehicle/multitile/apc/movie/custom/APC = new (loc)
+	load_misc(APC)
+	load_hardpoints(APC)
+	handle_direction(APC)
+	APC.update_icon()

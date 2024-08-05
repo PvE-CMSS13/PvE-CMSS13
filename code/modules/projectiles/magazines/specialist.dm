@@ -237,6 +237,8 @@
 	default_ammo = /datum/ammo/rocket/wp
 	desc = "Rocket tube loaded with WP warhead. Has two damaging factors. On hit disperses X-Variant Napthal (blue flames) in a 4-meter radius circle, ignoring cover, while simultaneously bursting into highly heated shrapnel that ignites targets within slightly bigger area."
 
+/obj/item/ammo_magazine/rocket/ap/anti_wall
+
 /obj/item/ammo_magazine/rocket/custom
 	name = "\improper 84mm custom rocket"
 	desc = "An 84mm custom rocket."
@@ -342,6 +344,9 @@
 	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_tank
 	reload_delay = 100
 
+/obj/item/ammo_magazine/rocket/anti_tank/pve
+	gun_type = /obj/item/weapon/gun/launcher/rocket
+	reload_delay = 50
 
 //-------------------------------------------------------
 //UPP Rockets
