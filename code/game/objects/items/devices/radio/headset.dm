@@ -405,7 +405,7 @@
 	icon_state = "generic_headset"
 	item_state = "headset"
 	frequency = PUB_FREQ
-	has_hud = TRUE
+	has_hud = FALSE
 
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
