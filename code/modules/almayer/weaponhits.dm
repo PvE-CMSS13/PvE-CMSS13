@@ -62,7 +62,9 @@
 		if(WEAPON_RAILGUN)
 			var/datum/cause_data/antishiprailgun_cause_data = create_cause_data("Railgun shot")
 			var/hitchance = HIT_CHANCE_CHEAT
-			if(point_defense == TRUE)
+			if(point_defense == TRUE && point_defense_custom == TRUE)
+				hitchance = HIT_CHANCE_CHEAT - point_defense_chance
+			else if(point_defense == TRUE)
 				hitchance = HIT_CHANCE_STANDARD
 			if(salvo == TRUE)
 				var/confirmedhit
@@ -115,7 +117,7 @@
 					if(!is_mainship_level(current_mob.z))
 						continue
 					playsound_client (current_mob.client, 'sound/effects/railgun_miss.ogg', 60)
-					to_chat(current_mob.client, SPAN_DANGER("You hear railgun shots barely missing the hull!"))
+					to_chat(current_mob.client, SPAN_DANGER("You hear railgun bursts barely missing the hull!"))
 //REMOVE THIS WHEN WE USE THESE DEFS SOMEWHERE ELSE OR ELSE IT STRAIGHT UP WON'T WORK.
 #undef WEAPON_MISSILE
 #undef WEAPON_RAILGUN
