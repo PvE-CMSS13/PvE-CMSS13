@@ -737,6 +737,7 @@
 	. = ..()
 	reagents.add_reagent("meatprotein", 2)
 	reagents.add_reagent("bread", 2)
+	reagents.add_reagent("cheese", 1)
 
 /obj/item/reagent_container/food/snacks/donkpocket/proc/cooltime() //Not working, derp?
 	if(warm)
@@ -745,6 +746,35 @@
 				warm = 0
 				reagents.del_reagent("tricordrazine")
 				name = "donk-pocket"
+
+/obj/item/reagent_container/food/snacks/donkpocket/old
+	name = "questionable donkpocket"
+	desc = "Oh god, are those mushrooms growing out from one end?"
+
+/obj/item/reagent_container/food/snacks/donkpocket/old/Initialize()
+	. = ..()
+	reagents.add_reagent("meatprotein", 2)
+	reagents.add_reagent("bread", 2)
+	reagents.add_reagent("cheese", 1)
+	reagents.add_reagent("egg", 2)
+	reagents.add_reagent("psilocybin", 2)
+
+/obj/item/reagent_container/food/snacks/donkpocket/ancient
+	name = "moldy donkpocket"
+	desc = "Eating this is... probably a bad idea. It's decidedly rotten."
+
+/obj/item/reagent_container/food/snacks/donkpocket/ancient/Initialize()
+	. = ..()
+	reagents.add_reagent("meatprotein", 1)
+	reagents.add_reagent("bread", 2)
+	reagents.add_reagent("cheese", 1)
+	reagents.add_reagent("mold", 5)
+
+/obj/item/reagent_container/food/snacks/donkpocket/ancient/Initialize()
+	. = ..()
+	reagents.add_reagent("meatprotein", 2)
+	reagents.add_reagent("bread", 2)
+	reagents.add_reagent("cheese", 1)
 
 /obj/item/reagent_container/food/snacks/brainburger
 	name = "brainburger"

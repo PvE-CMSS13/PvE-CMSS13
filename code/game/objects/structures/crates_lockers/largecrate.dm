@@ -146,26 +146,65 @@
 // CM largecrates
 /obj/structure/largecrate/random
 	name = "supply crate"
+	desc = "A partially filled small shipping crate."
 	fill_from_loc = FALSE
 	var/num_things = 0
-	var/list/stuff = list(/obj/item/cell/high,
-						/obj/item/storage/belt/utility/full,
+	var/list/stuff = list(
+						//tools
+						/obj/item/tool/mop,
 						/obj/item/device/multitool,
 						/obj/item/tool/crowbar,
 						/obj/item/device/flashlight,
-						/obj/item/reagent_container/food/snacks/donkpocket,
-						/obj/item/explosive/grenade/smokebomb,
-						/obj/item/circuitboard/airlock,
-						/obj/item/device/assembly/igniter,
 						/obj/item/tool/weldingtool,
+						/obj/item/tool/screwdriver,
+						/obj/item/tool/wrench,
 						/obj/item/tool/wirecutters,
 						/obj/item/device/analyzer,
-						/obj/item/clothing/under/marine,
-						/obj/item/clothing/shoes/marine)
+						/obj/item/tool/extinguisher,
+						/obj/item/tool/hand_labeler,
+						//components
+						/obj/item/circuitboard/airlock,
+						/obj/item/device/assembly/igniter,
+						/obj/item/circuitboard/machine/autolathe,
+						/obj/item/cell/high,
+						//misc
+						/obj/item/device/radio,
+						/obj/item/bedsheet,
+						/obj/item/facepaint,
+						//random food items
+						/obj/item/reagent_container/food/snacks/donkpocket,
+						/obj/item/reagent_container/food/snacks/donkpocket/old,
+						/obj/item/reagent_container/food/snacks/donkpocket/ancient,
+						/obj/item/reagent_container/food/drinks/cans/classcola,
+						/obj/item/reagent_container/food/drinks/cans/space_mountain_wind,
+						/obj/item/reagent_container/food/snacks/wy_chips/pepper,
+						/obj/item/reagent_container/food/snacks/candy
+						/obj/item/reagent_container/food/snacks/chocolatebar
+						//useless items
+						/obj/item/toy/plush,
+						/obj/item/toy/inflatable_duck,
+						/obj/item/toy/prize,
+						/obj/item/toy/crossbow,
+						/obj/item/toy/crossbow_ammo,
+						/obj/item/toy/sword,
+						/obj/item/toy/katana,
+						/obj/item/toy/deck,
+						/datum/playing_card,
+						/obj/item/toy/deck/uno,
+						/obj/item/tool/wet_sign,
+						/obj/item/tool/warning_cone,
+						/obj/item/tool/soap,
+						/obj/item/tool/soap/old,
+						/obj/item/tool/pickaxe,
+						/obj/item/reagent_container/food/condiment,
+						/obj/item/book,
+						/obj/item/reagent_container/blood/empty,
+						/obj/item/facepaint/lipstick,
+						)
 
 /obj/structure/largecrate/random/Initialize()
 	. = ..()
-	if(!num_things) num_things = rand(0,3)
+	if(!num_things) num_things = rand(1,10)
 
 	for(var/i in 1 to num_things)
 		var/obj/item/thing = pick(stuff)
