@@ -272,22 +272,30 @@
 	name = "generic Boots! magazine"
 	desc = "The only official USCM magazine!"
 
-/obj/item/prop/magazine/boots/n117
-	name = "Boots!: Issue No.117"
-	desc = "The only official USCM magazine, the headline reads 'STOP CANNING' the short paragraph further explains the dangers of marines throwing CN-20 Nerve gas into bathrooms as a prank."
-
-/obj/item/prop/magazine/boots/n150
-	name = "Boots!: Issue No.150"
-	desc = "The only official USCM magazine, the headline reads 'UPP Rations, The truth.' the short paragraph further explains UPP field rations aren't standardized and are produced at a local level. Because of this, captured and confiscated UPP rations have included some odd choices such as duck liver, century eggs, lutefisk, pickled pig snout, canned tripe, and dehydrated candied radish snacks."
-
-/obj/item/prop/magazine/boots/n160
-	name = "Boots!: Issue No.160"
-	desc = "The only official USCM magazine, the headline reads 'Corporate Liaison 'emotionally exhausted' from screwing so many people over.'"
-
 /obj/item/prop/magazine/boots/n054
-	name = "Boots!: Issue No.54"
-	desc = "The only official USCM magazine, the headline reads 'ARMAT strikes back against litigants in M41A-MK2 self cleaning case'"
+	name = "Boots!: Issue No.54, ARMAT Strikes Back"
+	desc = "This edition's about the old lawsuit over the M41A being billed as being self-cleaning, supposedly. Specifically, ARMAT's response to the allegations."
 
 /obj/item/prop/magazine/boots/n055
-	name = "Boots!: Issue No.55"
-	desc = "The only official USCM magazine, the headline reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.'"
+	name = "Boots!: Issue No.55, Veteran Pilot Tips"
+	desc = "The subtitle reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.' Flipping through it quickly, most are baloney. The rest of the issue isn't that interesting either, except for a neat M3 Armor trick for improved comfort."
+
+/obj/item/prop/magazine/boots/n056
+	name = "Boots!: Issue No.56, Smart Smartgunning"
+	desc = "This issue is somewhat infamous. Unfortunately, it's one of the reprints, which have had the offending 'Pancake Scandal' pages removed and replaced with an advisory for smartgun care."
+
+/obj/item/prop/magazine/boots/n067
+	name = "Boots!: Issue No.67, Make The Best Of It"
+	desc= "Number 57's one of the issues where the Marine Corps really laid it on a little too thick. It's completely filled with advice on how to make the best of situations on the Frontier."
+
+/obj/item/prop/magazine/boots/n117
+	name = "Boots!: Issue No.117, STOP CANNING"
+	desc = "A rapidly printed issue in the wake of the canning incident, with several pages dedicated to the dangers of marines throwing CN-20 Nerve Gas into bathrooms as a prank. It lists some other alternatives, which are all for wimps."
+
+/obj/item/prop/magazine/boots/n150
+	name = "Boots!: Issue No.150, UPP Rations, The Truth"
+	desc = "The short paragraph further explains UPP field rations aren't standardized and are produced at a local level. Because of this, captured and confiscated UPP rations have included some odd choices such as duck liver, century eggs, lutefisk, pickled pig snout, canned tripe, and dehydrated candied radish snacks."
+
+/obj/item/prop/magazine/boots/n160
+	name = "Boots!: Issue No.160, Corporate Liason, Ten Years On"
+	desc = "Featuring an interview with a Weyland Yutani corporate liason, after ten years with a marine unit. An insert features a redeemable survey card for... a fifty dollar MCX gift card."
