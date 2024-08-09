@@ -613,7 +613,7 @@
 /area/golden_arrow/prep_hallway)
 "cV" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/pumpshotgun/special,
+/obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4989,7 +4989,7 @@
 	name = "spent snailshot";
 	layer = 2.7
 	},
-/obj/item/storage/box/guncase/pumpshotgun/special,
+/obj/item/storage/box/guncase/shotguncombat,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -6236,7 +6236,6 @@
 "Kp" = (
 /obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case";
 	pixel_y = 10;
 	pixel_x = 3
 	},
@@ -7126,9 +7125,7 @@
 	},
 /area/golden_arrow/cryo_cells)
 "Pm" = (
-/obj/structure/largecrate/supply/explosives/grenades/less{
-	icon_state = "case"
-	},
+/obj/structure/largecrate/supply/explosives/grenades/less,
 /obj/structure/largecrate/supply/motiondetectors{
 	pixel_y = 10
 	},

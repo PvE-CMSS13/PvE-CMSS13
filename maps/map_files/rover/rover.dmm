@@ -485,13 +485,13 @@
 /area/golden_arrow/hangar)
 "en" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/shotgun/pump/special{
-	pixel_y = 10
-	},
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/storage/box/guncase/shotguncombat,
+/obj/item/storage/box/guncase/shotguncombat{
+	pixel_y = 6
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1136,6 +1136,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/item/weapon/gun/rifle/m4ra/pve,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -4707,7 +4708,6 @@
 /area/golden_arrow/dorms)
 "Uc" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m4ra/pve,
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},

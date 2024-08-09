@@ -11,27 +11,29 @@
 	name = "shotgun slug"
 	handful_state = "slug_shell"
 
-	accurate_range = 6
-	max_range = 8
-	damage = 70
-	penetration = ARMOR_PENETRATION_TIER_4
+	accurate_range = 7
+	max_range = 14
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_6
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
 	handful_state = "slug_shell"
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 6)
+	knockback(M, P, 8)
 
 /datum/ammo/bullet/shotgun/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
-		target.Stun(0.5)
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(3, SLOW)
+		target.apply_effect(3.5, WEAKEN)
+		target.apply_effect(4, SUPERSLOW)
+		target.apply_effect(6, SLOW)
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(3.5, WEAKEN)
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
@@ -127,18 +129,35 @@
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_5
-	accurate_range = 4
-	max_range = 4
-	damage = 65
-	damage_var_low = PROJECTILE_VARIANCE_TIER_8
-	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	accurate_range = 7
+	max_range = 9
+	damage = 50
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	penetration = ARMOR_PENETRATION_TIER_1
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_7
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 	handful_state = "buckshot_shell"
 	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.apply_effect(2.5, WEAKEN)
+		target.apply_effect(2, SUPERSLOW)
+		target.apply_effect(5, SLOW)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(2, WEAKEN)
+			living_mob.apply_effect(2, SLOW)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary
 	name = "incendiary buckshot shell"
@@ -178,8 +197,8 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 4
-	max_range = 4
-	damage = 65
+	max_range = 6
+	damage = 50
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -190,6 +209,23 @@
 
 /datum/ammo/bullet/shotgun/spread/masterkey
 	damage = 20
+
+/datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 4)
+/datum/ammo/bullet/shotgun/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.apply_effect(2, WEAKEN)
+		target.apply_effect(2, SUPERSLOW)
+		target.apply_effect(5, SLOW)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.apply_effect(2, WEAKEN)
+			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(2, SLOW)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/spread/special
 	name = "additional buckshot, USCM special type"
@@ -209,21 +245,35 @@
 	handful_state = "heavy_buckshot"
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
-	accurate_range = 3
-	max_range = 3
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
+	accurate_range = 8
+	max_range = 10
 	damage = 75
-	penetration = 0
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+	knockback(M,P,5)
+/datum/ammo/bullet/shotgun/heavy/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.apply_effect(4, WEAKEN)
+		target.apply_effect(1, SUPERSLOW)
+		target.apply_effect(2, SLOW)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(3, WEAKEN)
+			living_mob.apply_effect(2, SLOW)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	name = "additional heavy buckshot"
-	max_range = 4
+	max_range = 7
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
 
@@ -274,25 +324,25 @@
 	handful_state = "heavy_slug"
 
 	accurate_range = 7
-	max_range = 8
-	damage = 90 //ouch.
-	penetration = ARMOR_PENETRATION_TIER_6
+	max_range = 17
+	damage = 120 //ouch.
+	penetration = ARMOR_PENETRATION_TIER_9
 	damage_armor_punch = 2
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 7)
+	knockback(M, P, 8)
 
 /datum/ammo/bullet/shotgun/heavy/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // If you ask me the KD should be left out, but players like their visual cues
-		target.Stun(0.5)
-		target.apply_effect(2, SUPERSLOW)
-		target.apply_effect(5, SLOW)
+		target.apply_effect(6, WEAKEN)
+		target.apply_effect(4, SUPERSLOW)
+		target.apply_effect(10, SLOW)
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.apply_effect(1, SUPERSLOW)
+			living_mob.apply_effect(3.5, WEAKEN)
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
