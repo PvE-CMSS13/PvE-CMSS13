@@ -140,3 +140,7 @@
 #define ESCAPE_SHUTTLE_SOUTH_PREFIX "escape_shuttle_s"
 
 #define ESCAPE_SHUTTLE_DOCK_PREFIX "almayer-hangar-escape-shuttle-"
+
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE "garrow_vehicle_elevator_one"
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO "garrow_vehicle_elevator_two"
+#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO "garrow_cargo_elevator"
