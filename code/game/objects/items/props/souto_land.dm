@@ -26,4 +26,12 @@
 	icon_state = "post"
 	layer = ABOVE_MOB_LAYER
 
+// Diner
+
+/obj/structure/prop/souto_land/streamer/blue
+	name = "blue streamers"
+	icon_state = "streamers_blue"
+
+/obj/structure/prop/souto_land/pole/blue
+	icon_state = "post_blue"
 

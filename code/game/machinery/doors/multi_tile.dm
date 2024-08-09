@@ -634,3 +634,8 @@
 	opacity = FALSE
 	glass = TRUE
 
+/obj/structure/machinery/door/airlock/multi_tile/diner
+	name = "\improper Diner Airlock"
+	icon = 'icons/obj/structures/doors/2x1diner_door.dmi'
+	opacity = FALSE
+	glass = TRUE

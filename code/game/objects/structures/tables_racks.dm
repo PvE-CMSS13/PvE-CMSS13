@@ -625,6 +625,22 @@
 	icon_state = "clothtable"
 	table_prefix = "cloth"
 
+//Diner
+
+/obj/structure/surface/table/reinforced/diner_white
+	name = "white diner table"
+	desc = "A smooth white table, bolted to the floor. The industry standard for a diner."
+	icon_state = "wdinertable"
+	table_prefix = "wdiner"
+
+/obj/structure/surface/table/reinforced/diner_red
+	name = "red diner table"
+	desc = "A smooth white table, bolted to the floor. The industry standard for a diner."
+	icon_state = "rdinertable"
+	table_prefix = "rdiner"
+
+// TOC tables
+
 /obj/structure/surface/table/reinforced/toc
 	name = "operations table"
 	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
