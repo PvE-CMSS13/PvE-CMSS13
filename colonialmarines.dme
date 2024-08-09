@@ -2315,6 +2315,7 @@
 #include "code\modules\shuttle\computers\trijent_elevator_control.dm"
 #include "code\modules\shuttle\shuttles\dropship.dm"
 #include "code\modules\shuttle\shuttles\ert.dm"
+#include "code\modules\shuttle\shuttles\shipmap_elevator.dm"
 #include "code\modules\shuttle\shuttles\trijent_elevator.dm"
 #include "code\modules\shuttle\shuttles\crashable\crashable.dm"
 #include "code\modules\shuttle\shuttles\crashable\escape_shuttle.dm"

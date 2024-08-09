@@ -43,6 +43,7 @@
 
 /area/shuttle/vehicle_elevator
 	name = "Vehicle ASRS"
+	base_lighting_alpha = 0
 
 /area/shuttle/ert
 	icon = 'icons/turf/area_almayer.dmi'

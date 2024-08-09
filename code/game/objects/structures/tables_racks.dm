@@ -625,6 +625,14 @@
 	icon_state = "clothtable"
 	table_prefix = "cloth"
 
+/obj/structure/surface/table/reinforced/aicore
+	name = "AI interface table"
+	desc = "A rather fancy looking table for the ship's AI core."
+	icon_state = "aicoretable"
+
+/obj/structure/surface/table/reinforced/aicore/update_icon()
+	return
+
 /obj/structure/surface/table/reinforced/toc
 	name = "operations table"
 	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
