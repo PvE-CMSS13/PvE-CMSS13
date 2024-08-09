@@ -50,7 +50,6 @@ list( \
 		var/mob/mob = user
 		holder = mob.client
 
-	holder.click_intercept = src
 	tgui_interact(holder.mob)
 
 /datum/resin_panel/proc/get_structures()
@@ -101,7 +100,7 @@ list( \
 
 /datum/resin_panel/ui_close(mob/user)
 	holder = null
-	build_click_intercept = FALSE
+	LAZYREMOVE(user.client.click_intercepts, src)
 	qdel(src)
 
 /datum/resin_panel/ui_state(mob/user)
@@ -172,6 +171,10 @@ list( \
 			return TRUE
 		if("toggle_build_click_intercept")
 			build_click_intercept = !build_click_intercept
+			if(build_click_intercept)
+				LAZYOR(ui.user.client.click_intercepts, src)
+			else
+				LAZYREMOVE(ui.user.client.click_intercepts, src)
 			return TRUE
 
 #undef RESIN_PANEL_STRUCTURES

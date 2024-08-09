@@ -249,7 +249,8 @@
 
 	var/list/important_radio_channels = list()
 
-	var/datum/click_intercept
+	/// Stack of click-intercepting objects for this mob.
+	var/list/click_intercepts
 
 	/// Used for tracking last uses of emotes for cooldown purposes
 	var/list/emotes_used

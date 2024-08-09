@@ -62,12 +62,12 @@
 		A.clicked(src, mods)
 		return
 
-	if(client && client.click_intercept)
+	if(client && LAZYLEN(client.click_intercepts) > 0)
 		if(istype(A, /atom/movable/screen/buildmode))
 			A.clicked(src, mods)
 			return
 
-	if(check_click_intercept(params,A))
+	if(check_click_intercepts(params,A))
 		return
 
 	// Click handled elsewhere. (These clicks are not affected by the next_move cooldown)
@@ -164,15 +164,15 @@
 			next_move += 4
 		UnarmedAttack(A, 1, mods)
 
-/mob/proc/check_click_intercept(params,A)
-	//Client level intercept
-	if(client?.click_intercept)
-		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
+/mob/proc/check_click_intercepts(params,A)
+	//Client level intercepts
+	if(client && LAZYLEN(client.click_intercepts) > 0)
+		if(call(client.click_intercepts[length(client.click_intercepts)], "InterceptClickOn")(src, params, A))
 			return TRUE
 
-	//Mob level intercept
-	if(click_intercept)
-		if(call(click_intercept, "InterceptClickOn")(src, params, A))
+	//Mob level intercepts
+	if(LAZYLEN(click_intercepts) > 0)
+		if(call(click_intercepts[length(click_intercepts)], "InterceptClickOn")(src, params, A))
 			return TRUE
 
 	return FALSE

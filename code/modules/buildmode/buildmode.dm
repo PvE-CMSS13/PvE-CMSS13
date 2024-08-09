@@ -32,13 +32,13 @@
 	holder.show_popup_menus = FALSE
 	create_buttons()
 	holder.add_to_screen(buttons)
-	holder.click_intercept = src
+	LAZYOR(holder.click_intercepts, src)
 	mode.enter_mode(src)
 
 /datum/buildmode/proc/quit()
 	mode.exit_mode(src)
 	holder.remove_from_screen(buttons)
-	holder.click_intercept = null
+	LAZYREMOVE(holder.click_intercepts, src)
 	holder.show_popup_menus = TRUE
 	qdel(src)
 
@@ -142,20 +142,22 @@
 	mode.when_clicked(user.client, params, object)
 	return TRUE // no doing underlying actions
 
-/proc/togglebuildmode(mob/M as mob in GLOB.player_list)
+/proc/togglebuildmode(mob/builder as mob in GLOB.player_list)
 	set name = "Toggle Build Mode"
 	set category = "Admin.Events"
 
-	if(M.client)
-		if(istype(M.client.click_intercept, /datum/buildmode))
-			var/datum/buildmode/B = M.client.click_intercept
-			B.quit()
-			message_admins("[key_name(usr)] has left build mode.")
-			log_admin("[key_name(usr)] has left build mode.")
-		else
-			new /datum/buildmode(M.client)
-			message_admins("[key_name_admin(usr)] has entered build mode.")
-			log_admin("[key_name(usr)] has entered build mode.")
+	if(!builder.client)
+		return
+
+	var/datum/buildmode/bmode = locate() in builder.client?.click_intercepts
+	if(bmode)
+		bmode.quit()
+		message_admins("[key_name(builder)] has left build mode.")
+		log_admin("[key_name(builder)] has left build mode.")
+	else
+		new /datum/buildmode(builder.client)
+		message_admins("[key_name_admin(builder)] has entered build mode.")
+		log_admin("[key_name(builder)] has entered build mode.")
 
 #undef BM_SWITCHSTATE_NONE
 #undef BM_SWITCHSTATE_MODE

@@ -82,23 +82,14 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// If the spawned xeno is an AI in the spawn section
 	var/spawn_ai = TRUE
 
-	/// If we are currently using the click intercept for the spawn section
-	var/spawn_click_intercept = FALSE
-
 
 	// Behavior stuff
 
 	/// The current behavior to add when clicking with behavior_click_intercept on
 	var/selected_behavior = DEFAULT_BEHAVIOR_STRING
 
-	/// If we are currently using click intercept for the behavior section
-	var/behavior_click_intercept = FALSE
-
 
 	// Objective stuff
-
-	/// If we are currently using the click intercept for the objective section
-	var/objective_click_intercept = FALSE
 
 
 	// Communication stuff
@@ -118,8 +109,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	game_master_phone = new(null)
 	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
-
-	game_master_client.click_intercept = src
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images += override.behavior_image
@@ -142,19 +131,18 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 	var/list/data = list()
 
+	data["current_click_intercept_action"] = current_click_intercept_action
+
 	// Spawn stuff
 	data["selected_xeno"] = selected_xeno
 	data["selected_hive"] = selected_hive
 	data["spawn_ai"] = spawn_ai
-	data["spawn_click_intercept"] = spawn_click_intercept
 	data["xeno_spawn_count"] = xeno_spawn_count
 
 	// Behavior stuff
 	data["selected_behavior"] = selected_behavior
-	data["behavior_click_intercept"] = behavior_click_intercept
 
 	// Objective stuff
-	data["objective_click_intercept"] = objective_click_intercept
 	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
 
 	// Communication stuff
@@ -205,13 +193,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return
 
 		if("toggle_click_spawn")
-			if(spawn_click_intercept)
-				reset_click_overrides()
-				return
-
-			reset_click_overrides()
-			spawn_click_intercept = TRUE
-			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
+			set_click_intercept_action(SPAWN_CLICK_INTERCEPT_ACTION)
 			return
 
 		if("delete_all_xenos")
@@ -238,24 +220,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			return
 
 		if("toggle_click_behavior")
-			if(behavior_click_intercept)
-				reset_click_overrides()
-				return
-
-			reset_click_overrides()
-			behavior_click_intercept = TRUE
-			current_click_intercept_action = BEHAVIOR_CLICK_INTERCEPT_ACTION
+			set_click_intercept_action(BEHAVIOR_CLICK_INTERCEPT_ACTION)
 			return
+
 
 		//Objective Section
 		if("toggle_click_objective")
-			if(objective_click_intercept)
-				reset_click_overrides()
-				return
-
-			reset_click_overrides()
-			objective_click_intercept = TRUE
-			current_click_intercept_action = OBJECTIVE_CLICK_INTERCEPT_ACTION
+			set_click_intercept_action(OBJECTIVE_CLICK_INTERCEPT_ACTION)
 			return
 
 		if("jump_to")
@@ -305,14 +276,8 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 /datum/game_master/ui_close(mob/user)
 	. = ..()
 
-	var/client/user_client = user.client
-	if(user_client?.click_intercept == src)
-		user_client.click_intercept = null
-
-	spawn_click_intercept = FALSE
-	objective_click_intercept = FALSE
-	behavior_click_intercept = FALSE
 	current_click_intercept_action = null
+	LAZYREMOVE(user.client?.click_intercepts, src)
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
@@ -325,8 +290,6 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(!ui)
 		ui = new(user, src, "GameMaster", "Game Master Menu")
 		ui.open()
-
-	user.client?.click_intercept = src
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images |= override.behavior_image
@@ -437,11 +400,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 				return TRUE
 
-/datum/game_master/proc/reset_click_overrides()
-	spawn_click_intercept = FALSE
-	objective_click_intercept = FALSE
-	behavior_click_intercept = FALSE
-	current_click_intercept_action = null
+/datum/game_master/proc/set_click_intercept_action(action)
+	if(current_click_intercept_action == action)
+		current_click_intercept_action = null
+		LAZYREMOVE(game_master_client.click_intercepts, src)
+	else
+		current_click_intercept_action = action
+		LAZYOR(game_master_client.click_intercepts, src)
 
 /datum/game_master/proc/is_objective(atom/checked_object)
 	for(var/list/cycled_objective in GLOB.game_master_objectives)
