@@ -525,9 +525,28 @@
 				var/obj/item/clothing/under/U = w_uniform
 				if(!LAZYLEN(U.accessories))
 					return FALSE
-				var/obj/item/clothing/accessory/A = LAZYACCESS(U.accessories, 1)
+				var/obj/item/clothing/accessory/A
+				var/list/removables = list()
+				var/list/choice_to_accessory = list()
+
+				for(var/obj/item/clothing/accessory/ass in U.accessories)
+					if(!ass.removable)
+						continue
+					var/capitalized_name = capitalize_first_letters(ass.name)
+					removables[capitalized_name] = image(icon = ass.icon, icon_state = ass.icon_state)
+					choice_to_accessory[capitalized_name] = ass
+
 				if(LAZYLEN(U.accessories) > 1)
-					A = tgui_input_list(usr, "Select an accessory to remove from [U]", "Remove accessory", U.accessories)
+					var/use_radials = usr.client.prefs?.no_radials_preference ? FALSE : TRUE
+					var/choice = use_radials ? show_radial_menu(usr, src, removables, require_near = TRUE) : tgui_input_list(usr, "Select an accessory to remove from [src]", "Remove accessory", removables)
+					A = choice_to_accessory[choice]
+				else
+					A = choice_to_accessory[removables[1]]
+
+				if(!usr.Adjacent(src))
+					to_chat(usr, SPAN_WARNING("You're too far away!"))
+					return
+
 				if(!istype(A))
 					return
 				attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their accessory ([A]) removed by [key_name(usr)]</font>")
