@@ -510,6 +510,16 @@
 /obj/item/clothing/suit/storage/marine/medium
 	armor_variation = 6
 
+/obj/item/clothing/suit/storage/marine/medium/ghillie //doesnt have sniper spec shit associated with it
+	name = "\improper M45 pattern ghillie armor"
+	desc = "A lightweight ghillie camouflage suit, used by USCM snipers on recon missions. Very lightweight, but doesn't protect much."
+	icon_state = "ghillie_armor"
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	specialty = "M45 pattern ghillie"
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
+
 /obj/item/clothing/suit/storage/marine/light
 	name = "\improper M3-L pattern light armor"
 	desc = "A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed."
