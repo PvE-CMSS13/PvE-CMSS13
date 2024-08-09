@@ -675,6 +675,7 @@
 #include "code\datums\weather\weather_map_holder.dm"
 #include "code\datums\weather\weather_events\big_red.dm"
 #include "code\datums\weather\weather_events\faction_clash.dm"
+#include "code\datums\weather\weather_events\long.dm"
 #include "code\datums\weather\weather_events\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_events\lv624.dm"
 #include "code\datums\weather\weather_events\new_varadero.dm"

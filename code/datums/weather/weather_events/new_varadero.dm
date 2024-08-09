@@ -1,4 +1,4 @@
-/datum/weather_event/light_rain
+/datum/weather_event/light_rain/varadero
 	name = "Tropical Storm"
 	display_name = "Tropical Storm"
 	length = 4 MINUTES
