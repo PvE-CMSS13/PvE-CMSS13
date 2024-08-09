@@ -471,7 +471,7 @@
 		GUN_FIREMODE_AUTOMATIC,
 	)
 	/// A multiplier for how slow this gun should fire in automatic as opposed to burst. 1 is normal, 1.2 is 20% slower, 0.8 is 20% faster, etc.
-	var/autofire_slow_mult = 1
+	var/autofire_slow_mult = 0.7
 	/// If the gun is currently burst firing
 	VAR_PROTECTED/burst_firing = FALSE
 	/// If the gun should display its ammo count

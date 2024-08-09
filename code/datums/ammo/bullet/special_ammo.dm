@@ -104,9 +104,9 @@
 	icon_state = "bullet" // Keeping it bog standard with the turret but allows it to be changed
 
 	accurate_range = 12
-	damage = 35
+	damage = 40
 	penetration= ARMOR_PENETRATION_TIER_10 //Bumped the penetration to serve a different role from sentries, MGs are a bit more offensive
-	accuracy = HIT_ACCURACY_TIER_3
+	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/machinegun/set_bullet_traits()
 	. = ..()
