@@ -504,6 +504,17 @@
 	item_state = "lead_uniform"
 	worn_state = "lead_uniform"
 
+/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa
+	name = "\improper WY corporate security uniform"
+	icon = 'icons/mob/humans/onmob/contained/hybrisa_goons.dmi'
+	icon_state = "hybrisa_uniform"
+	worn_state = "hybrisa_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead
+	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by the lead of the 'goonsquad', as they are colloquially known."
+	icon_state = "lead_hybrisa_uniform"
+	worn_state = "lead_hybrisa_uniform"
+
 //=========================//UPP\\================================\\
 
 /obj/item/clothing/under/marine/veteran/bear
@@ -829,6 +840,22 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/hybrisa/cmb_officer
+	name = "\improper Colonial Marshal uniform"
+	desc = "A pair of grey slacks and a blue button-down shirt with a black tie; a non-standard uniform of the Colonial Marshals, specific to more urbanized colonies, resembling a uniform worn by more traditional policing forces on Earth."
+	icon = 'icons/mob/humans/onmob/contained/hybrisa_survivors.dmi'
+	icon_state = "police_uniform"
+	worn_state = "police_uniform"
+	contained_sprite = TRUE
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_LOW
 
 /obj/item/clothing/under/liaison_suit
 	name = "liaison's tan suit"

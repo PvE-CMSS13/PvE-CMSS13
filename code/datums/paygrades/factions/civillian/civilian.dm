@@ -28,3 +28,9 @@
 	name = "Representative"
 	prefix = "Rep."
 	pay_multiplier = 1
+
+/datum/paygrade/civilian/paramedic
+	paygrade = "CPARA"
+	name = "Paramedic"
+	prefix = "EMT-P"
+	pay_multiplier = 0.6

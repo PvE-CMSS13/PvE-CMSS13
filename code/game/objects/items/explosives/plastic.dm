@@ -382,3 +382,8 @@
 /obj/item/explosive/plastic/breaching_charge/plasma/trigger_explosion(turf/target_turf, dir, cause_data)
 	cell_explosion(target_turf, 90, 90, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data)
 	qdel(src)
+
+/obj/item/explosive/plastic/hybrisa/mining
+	var/id = 1
+	anchored = TRUE
+	unacidable = TRUE

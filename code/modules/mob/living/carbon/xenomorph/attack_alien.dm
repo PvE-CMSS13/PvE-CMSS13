@@ -499,6 +499,11 @@
 	healthcheck()
 	return XENO_ATTACK_ACTION
 
+/obj/structure/fence/electrified/attack_alien(mob/living/carbon/xenomorph/M)
+	if(electrified && !cut)
+		electrocute_mob(M, get_area(breaker_switch), src, 0.75)
+	return ..()
+
 //Slashin mirrors
 /obj/structure/mirror/attack_alien(mob/living/carbon/xenomorph/M)
 	M.animation_attack_on(src)
@@ -840,7 +845,7 @@
 	return attack_hand(M)
 
 /obj/structure/machinery/colony_floodlight/attack_alien(mob/living/carbon/xenomorph/M)
-	if(!is_lit)
+	if(!is_on)
 		to_chat(M, "Why bother? It's just some weird metal thing.")
 		return XENO_NO_DELAY_ACTION
 	if(damaged)
@@ -852,7 +857,7 @@
 	if(!health)
 		playsound(src, "glassbreak", 70, 1)
 		damaged = TRUE
-		if(is_lit)
+		if(is_on)
 			set_light(0)
 		update_icon()
 	else

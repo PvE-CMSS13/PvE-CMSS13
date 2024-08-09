@@ -176,3 +176,9 @@
 
 	for(var/i in 1 to inserted_list.len - 1)
 		inserted_list.Swap(i, rand(i, inserted_list.len))
+
+/proc/is_path_in_list(needle, list/path_list)
+	for(var/path in path_list)
+		if(ispath(needle, path))
+			return TRUE
+	return FALSE

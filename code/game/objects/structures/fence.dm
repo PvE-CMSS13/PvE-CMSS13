@@ -14,6 +14,7 @@
 	var/cut = 0 //Cut fences can be passed through
 	var/junction = 0 //Because everything is terrible, I'm making this a fence-level var
 	var/basestate = "fence"
+	var/forms_junctions = TRUE
 
 /obj/structure/fence/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -211,8 +212,9 @@
 /obj/structure/fence/proc/update_nearby_icons()
 	update_icon()
 	for(var/direction in cardinal)
-		for(var/obj/structure/fence/W in get_step(src, direction))
-			W.update_icon()
+		for(var/obj/structure/fence/fence in get_step(src, direction))
+			if(fence.forms_junctions)
+				fence.update_icon()
 
 //merges adjacent full-tile windows into one (blatant ripoff from game/smoothwall.dm)
 /obj/structure/fence/update_icon()
@@ -220,10 +222,13 @@
 	//this way it will only update full-tile ones
 	//This spawn is here so windows get properly updated when one gets deleted.
 	spawn(2)
-		if(!src) return
-		for(var/obj/structure/fence/W in orange(src, 1))
-			if(abs(x - W.x) - abs(y - W.y)) //Doesn't count grilles, placed diagonally to src
-				junction |= get_dir(src, W)
+		if(!src)
+			return
+		for(var/obj/structure/fence/fence in orange(src, 1))
+			if(!fence.forms_junctions)
+				continue
+			if(abs(x - fence.x) - abs(y - fence.y)) //Doesn't count grilles, placed diagonally to src
+				junction |= get_dir(src, fence)
 		if(cut)
 			icon_state = "broken[basestate][junction]"
 		else
@@ -234,3 +239,74 @@
 		health -= round(exposed_volume / 100)
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()
+
+GLOBAL_LIST_INIT(all_electric_fences, list())
+
+// Hybrisa Electric Fence
+/obj/structure/fence/electrified
+	name = "electrified fence"
+	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
+	icon_state = "highvoltagegrille_off"
+	basestate = "highvoltagegrille"
+	throwpass = TRUE
+	unacidable = TRUE
+	forms_junctions = FALSE
+	var/electrified = FALSE
+	var/obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch/breaker_switch = null
+
+/obj/structure/fence/electrified/hitby(atom/movable/AM)
+	visible_message(SPAN_DANGER("[src] was hit by [AM]."))
+	var/tforce = 0
+	if(ismob(AM))
+		if(electrified && !cut)
+			electrocute_mob(AM, get_area(breaker_switch), src, 0.75)
+		else
+			tforce = 40
+	else if(isobj(AM))
+		var/obj/item/zapped_item = AM
+		tforce = zapped_item.throwforce
+	health = max(0, health - tforce)
+	healthcheck()
+
+/obj/structure/fence/electrified/update_nearby_icons()
+	return
+
+/obj/structure/fence/electrified/update_icon()
+	if(cut)
+		icon_state = "[basestate]_broken"
+	else
+		if(electrified)
+			icon_state = "[basestate]"
+		else
+			icon_state = "[basestate]_off"
+
+/obj/structure/fence/electrified/proc/toggle_power()
+	electrified = !electrified
+	update_icon()
+
+/obj/structure/fence/electrified/Initialize()
+	. = ..()
+	GLOB.all_electric_fences += src
+
+/obj/structure/fence/electrified/Destroy()
+	GLOB.all_electric_fences -= src
+	return ..()
+
+/obj/structure/fence/electrified/attackby(obj/item/W, mob/user)
+	if(electrified && !cut)
+		electrocute_mob(user, get_area(breaker_switch), src, 0.75)
+	return ..()
+
+/obj/structure/fence/electrified/ex_act(severity)
+	health -= severity/2
+	healthcheck(make_hit_sound = FALSE, create_debris = TRUE)
+
+/obj/structure/fence/dark
+	name = "fence"
+	desc = "A large metal mesh strewn between two poles. Intended as a cheap way to separate areas, while allowing one to see through it."
+	icon = 'icons/obj/structures/props/dark_fence.dmi'
+
+/obj/structure/fence/dark/warning
+	name = "fence"
+	desc = "A large metal mesh strewn between two poles. Intended as a cheap way to separate areas, while allowing one to see through it."
+	icon = 'icons/obj/structures/props/electric_fence.dmi'
