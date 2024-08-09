@@ -1,6 +1,7 @@
 /mob/living/carbon/xenomorph
 	// AI stuff
 	var/atom/movable/current_target
+	var/list/patrol_points = list()
 
 	var/next_path_generation = 0
 	var/list/current_path
@@ -11,6 +12,7 @@
 	var/no_path_found = FALSE
 	var/ai_range = 16
 	var/max_travel_distance = 24
+	var/min_travel_distance = 1
 
 	var/ai_timeout_time = 0
 	var/ai_timeout_period = 2 SECONDS
@@ -74,7 +76,8 @@
 		current_path = null
 		return TRUE
 
-	if(QDELETED(current_target) || !current_target.ai_check_stat() || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
+	var/target_distance = get_dist(current_target, src)
+	if(QDELETED(current_target) || !current_target.ai_check_stat() || target_distance > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
 		COOLDOWN_START(src, forced_retarget_cooldown, forced_retarget_time)
 		if(QDELETED(src))
@@ -87,9 +90,25 @@
 
 	a_intent = INTENT_HARM
 
+	var/patrol_length = length(patrol_points)
+	if(patrol_length == 1)
+		ai_move_patrol(delta_time)
+		return TRUE
+
 	if(!current_target)
+		if(patrol_length)
+			ai_move_patrol(delta_time)
+			return TRUE
+
 		ai_move_idle(delta_time)
 		return TRUE
+
+	if(GLOB.ai_capture_crit && ishuman(current_target))
+		var/mob/living/carbon/human/human_target = current_target
+		if(human_target.stat != CONSCIOUS && target_distance <= 1)
+			ai_start_pulling(human_target)
+			ai_move_hive(delta_time)
+			return TRUE
 
 	if(ai_move_target(delta_time))
 		return TRUE
@@ -132,13 +151,25 @@
 		CRASH("No valid movement handler for [src]!")
 	return ai_movement_handler.ai_move_target(delta_time)
 
+/** Controls movement towards next patrol point. Called by process_ai */
+/mob/living/carbon/xenomorph/proc/ai_move_patrol(delta_time)
+	if(!ai_movement_handler)
+		CRASH("No valid movement handler for [src]!")
+	return ai_movement_handler.ai_move_patrol(delta_time)
+
+/** Controls movement towards nearest hive. Called by process_ai */
+/mob/living/carbon/xenomorph/proc/ai_move_hive(delta_time)
+	if(!ai_movement_handler)
+		CRASH("No valid movement handler for [src]!")
+	return ai_movement_handler.ai_move_hive(delta_time)
+
 /atom/proc/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
 	if(get_turf(src) == target)
 		return 0
 	return INFINITY
 
 /atom/proc/ai_check_stat()
-	return TRUE // So we aren't trying to find a new target on attack override
+	return TRUE // TRUE so attack override can work as intended
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
 // and now it is considered a valid path.
@@ -414,3 +445,11 @@
 				if(cycled_turf.x == min_x_value)
 					min_x_turfs += cycled_turf
 			return min_x_turfs
+
+/mob/living/carbon/xenomorph/proc/ai_start_pulling(atom/movable/target)
+	if(pulling)
+		return
+
+	INVOKE_ASYNC(src, PROC_REF(start_pulling), target)
+	face_atom(target)
+	swap_hand()

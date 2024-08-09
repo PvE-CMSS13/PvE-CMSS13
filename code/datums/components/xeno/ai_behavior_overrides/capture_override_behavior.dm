@@ -64,16 +64,13 @@
 	if(processing_xeno.get_active_hand())
 		processing_xeno.swap_hand()
 
-	var/datum/xeno_ai_movement/processing_xeno_movement = processing_xeno.ai_movement_handler
 	if(processing_xeno.pulling == parent)
-		processing_xeno_movement.ai_move_hive(delta_time)
+		processing_xeno.ai_move_hive(delta_time)
 		return TRUE
 
 	var/atom/movable/target = processing_xeno.current_target
 	if(get_dist(processing_xeno, target) <= 1)
-		INVOKE_ASYNC(processing_xeno, TYPE_PROC_REF(/mob, start_pulling), target)
-		processing_xeno.face_atom(target)
-		processing_xeno.swap_hand()
+		processing_xeno.ai_start_pulling(target)
 
 	processing_xeno.ai_move_target(delta_time)
 	return TRUE

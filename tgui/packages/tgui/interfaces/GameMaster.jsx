@@ -132,14 +132,30 @@ export const GameMasterBehaviorPanel = (props, context) => {
     <Section title="Special Behaviors">
       <Stack direction="column">
         <Stack.Item>
-          <Dropdown
-            ml={1}
-            options={data.selectable_behaviors}
-            selected={data.selected_behavior}
-            onSelected={(new_behavior) => {
-              act('set_selected_behavior', { new_behavior });
-            }}
-          />
+          <Stack>
+            <Stack.Item>
+              <Dropdown
+                ml={1}
+                options={data.selectable_behaviors}
+                selected={data.selected_behavior}
+                onSelected={(new_behavior) => {
+                  act('set_selected_behavior', { new_behavior });
+                }}
+              />
+            </Stack.Item>
+            <Stack.Item>
+              <Button.Input
+                ml={1}
+                minWidth={3.0}
+                minHeight={1.5}
+                content={data.behavior_lifespan}
+                currentValue={data.behavior_lifespan}
+                onCommit={(e, lifespan_value) => {
+                  act('set_behavior_lifespan', { lifespan_value });
+                }}
+              />
+            </Stack.Item>
+          </Stack>
         </Stack.Item>
         <Stack.Item>
           <Button

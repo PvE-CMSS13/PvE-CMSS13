@@ -19,6 +19,7 @@
 	parent = null
 	return ..()
 
+/// TLDR: Find suitable weeds, go to them. If too close - rest ///
 /datum/xeno_ai_movement/proc/ai_move_idle(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/idle_xeno = parent
@@ -49,14 +50,15 @@
 	else
 		home_turf = null
 
+/// TLDR: Go to current_target, run around it. If can't - forget about target ///
 /datum/xeno_ai_movement/proc/ai_move_target(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
-	var/mob/living/carbon/xenomorph/X = parent
-	if(X.throwing)
+	var/mob/living/carbon/xenomorph/angry_xeno = parent
+	if(angry_xeno.throwing)
 		return
 
-	var/turf/T = get_turf(X.current_target)
-	if(get_dist(X, X.current_target) <= 1)
+	var/turf/T = get_turf(angry_xeno.current_target)
+	if(get_dist(angry_xeno, angry_xeno.current_target) <= 1)
 		var/list/turfs = RANGE_TURFS(1, T)
 		while(length(turfs))
 			T = pick(turfs)
@@ -64,23 +66,51 @@
 			if(!T.density)
 				break
 
-			if(T == get_turf(X.current_target))
+			if(T == get_turf(angry_xeno.current_target))
 				break
 
-	if(!X.move_to_next_turf(T))
-		X.current_target = null
+	if(!angry_xeno.move_to_next_turf(T))
+		angry_xeno.current_target = null
 		return TRUE
 
+/datum/xeno_ai_movement/proc/ai_move_patrol(delta_time)
+	SHOULD_NOT_SLEEP(TRUE)
+	var/mob/living/carbon/xenomorph/moving_xeno = parent
+	if(moving_xeno.throwing)
+		return
+
+	moving_xeno.set_resting(FALSE)
+
+	var/list/patrol_points = moving_xeno.patrol_points
+	var/atom/move_target = patrol_points[1]
+
+	if(get_dist(move_target, moving_xeno) <= moving_xeno.min_travel_distance)
+		var/patrol_length = length(patrol_points)
+		if(patrol_length < 2)
+			/// Less than two means it's just a "oneway" move order
+			patrol_points -= move_target
+			return
+
+		/// Simple sequence of swaps to move our first point to the end of list
+		patrol_points.Swap(1, 2)
+		patrol_points.Swap(2, patrol_length)
+
+		move_target = patrol_points[1]
+
+	if(moving_xeno.move_to_next_turf(move_target, INFINITY))
+		return TRUE
+
+/// TLDR: Find hive and go to it, if near one - ai_strap_host() ///
 /datum/xeno_ai_movement/proc/ai_move_hive(delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/retreating_xeno = parent
-
 	if(retreating_xeno.throwing)
 		return
 
 	var/shortest_distance = INFINITY
-	var/turf/closest_hive
 	var/hive_radius
+
+	var/turf/closest_hive
 	for(var/datum/component/ai_behavior_override/hive/hive_component as anything in GLOB.ai_hives)
 		var/turf/potential_hive = hive_component.parent
 		hive_radius = hive_component.hive_radius
@@ -102,13 +132,13 @@
 		return ai_strap_host(closest_hive, hive_radius, delta_time)
 
 	var/turf/hive_turf = get_turf(closest_hive)
-	if(retreating_xeno.move_to_next_turf(hive_turf, world.maxx))
+	if(retreating_xeno.move_to_next_turf(hive_turf, INFINITY))
 		return TRUE
 
+/// TLDR: Find suitable wall around hive, click on it with grabbed marine ///
 /datum/xeno_ai_movement/proc/ai_strap_host(turf/closest_hive, hive_radius, delta_time)
 	SHOULD_NOT_SLEEP(TRUE)
 	var/mob/living/carbon/xenomorph/capping_xeno = parent
-
 	if(capping_xeno.throwing)
 		return
 
@@ -132,29 +162,30 @@
 			continue
 
 		var/turf/potential_weeded_wall
-		for(var/turf/closed/touching_turf in orange(1, potential_nest))
-			if(!touching_turf.weeds)
+		for(var/turf/closed/adjacent_turf in RANGE_TURFS(1, potential_nest) - potential_nest)
+			if(get_dir(potential_nest, adjacent_turf) in diagonals)
 				continue
 
-			if(istype(touching_turf, /turf/closed/shuttle))
+			if(istype(adjacent_turf, /turf/closed/shuttle))
 				continue
 
-			if(get_dir(potential_nest, touching_turf) in diagonals)
+			var/obj/effect/alien/weeds/adjacent_weeds = adjacent_turf.weeds
+			if(!adjacent_weeds || !IS_SAME_HIVENUMBER(adjacent_weeds, capping_xeno))
 				continue
 
-			potential_weeded_wall = touching_turf
+			potential_weeded_wall = adjacent_turf
 			break
 
 		if(!potential_weeded_wall)
 			continue
 
-		var/xeno_to_potential_nest_distance = get_dist(capping_xeno, potential_nest)
-		if(xeno_to_potential_nest_distance > shortest_distance)
+		var/xeno_potential_nest_distance = get_dist(capping_xeno, potential_nest)
+		if(xeno_potential_nest_distance > shortest_distance)
 			continue
 
 		nest_turf = potential_nest
 		weeded_wall = potential_weeded_wall
-		shortest_distance = xeno_to_potential_nest_distance
+		shortest_distance = xeno_potential_nest_distance
 
 	if(!nest_turf)
 		return
@@ -162,6 +193,7 @@
 	if(get_dist(capping_xeno, nest_turf) < 1)
 		if(capping_xeno.get_inactive_hand())
 			capping_xeno.swap_hand()
+
 		INVOKE_ASYNC(capping_xeno, TYPE_PROC_REF(/mob, do_click), weeded_wall, "", list())
 		return TRUE
 

@@ -1405,6 +1405,7 @@
 #include "code\modules\admin\game_master\sound_panel.dm"
 #include "code\modules\admin\game_master\extra_buttons\rappel_menu.dm"
 #include "code\modules\admin\game_master\extra_buttons\rename_platoon.dm"
+#include "code\modules\admin\game_master\extra_buttons\toggle_capture_crit.dm"
 #include "code\modules\admin\game_master\extra_buttons\toggle_join_xeno.dm"
 #include "code\modules\admin\game_master\extra_buttons\toggle_vehicle_blockers.dm"
 #include "code\modules\admin\game_master\game_master_submenu\ambush.dm"

@@ -778,6 +778,9 @@
 	if(!applicable_nest.buckle_mob(host_to_nest, src))
 		qdel(applicable_nest)
 
+	/// AI stuff
+	current_target = null
+
 /mob/living/carbon/xenomorph/proc/update_minimap_icon()
 	if(istype(caste, /datum/caste_datum/queen))
 		return
