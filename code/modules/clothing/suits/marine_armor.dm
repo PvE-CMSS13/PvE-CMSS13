@@ -441,6 +441,10 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/suit/storage/marine/smartgunner/black
+	flags_atom = NO_SNOW_TYPE
+	icon_state = "8fancy"
+
 /obj/item/clothing/suit/storage/marine/smartgunner/upp
 	name = "\improper UH7-I heavy plated harness"
 	desc = "An experimental set of heavy armor with additional harnesses designed to support QYJ-72-I smartmachinegun. Heavy plates along with harnesses make wearing backpacks extremely uncomfortable and borderline impossible."
