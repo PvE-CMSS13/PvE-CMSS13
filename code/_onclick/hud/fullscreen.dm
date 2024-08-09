@@ -187,20 +187,20 @@
 
 //Weather overlays//
 
-/atom/movable/screen/fullscreen/weather
+///atom/movable/screen/fullscreen/weather
 	icon_state = "initialize this"
 	layer = FULLSCREEN_WEATHER_LAYER
 	appearance_flags = NONE
 	show_when_dead = TRUE
 
 
-/atom/movable/screen/fullscreen/weather/low
+///atom/movable/screen/fullscreen/weather/low
 	icon_state = "impairedoverlay1"
 
-/atom/movable/screen/fullscreen/weather/medium
+///atom/movable/screen/fullscreen/weather/medium
 	icon_state = "impairedoverlay2"
 
-/atom/movable/screen/fullscreen/weather/high
+///atom/movable/screen/fullscreen/weather/high
 	icon_state = "impairedoverlay3"
 
 /atom/movable/screen/fullscreen/lighting_backdrop

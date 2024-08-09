@@ -11,7 +11,7 @@
 	var/length = 0 // Length of the event
 
 	//// Optional vars
-	var/fullscreen_type = null  // If this is set, display a fullscreen type to mobs
+	//var///fullscreen_type = null  // If this is set, display a fullscreen type to mobs
 	var/turf_overlay_icon_state // The icon to set on the VFX holder instanced into every turf at round start
 	var/turf_overlay_alpha = 255
 

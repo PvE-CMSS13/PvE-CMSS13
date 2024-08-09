@@ -2,7 +2,7 @@
 	name = "Rainstorm"
 	display_name = "Rainstorm"
 	length = INFINITY
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/low
+	//fullscreen_type = /atom/movable/screen/fullscreen/weather/low
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 80

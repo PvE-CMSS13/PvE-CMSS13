@@ -2,7 +2,7 @@
 	name = "Tropical Storm"
 	display_name = "Tropical Storm"
 	length = 4 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/low
+	//fullscreen_type = /atom/movable/screen/fullscreen/weather/low
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 40
@@ -21,7 +21,7 @@
 	name = "Monsoon Warning"
 	display_name = "Monsoon Warning"
 	length = 6 MINUTES
-	fullscreen_type = /atom/movable/screen/fullscreen/weather/high
+	//fullscreen_type = /atom/movable/screen/fullscreen/weather/high
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 115

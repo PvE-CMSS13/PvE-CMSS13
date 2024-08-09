@@ -213,10 +213,7 @@
 		SSweather.weather_event_instance.process_mob_effect(src, delta_time)
 
 	if(current_weather_effect_type != starting_weather_type)
-		if(current_weather_effect_type)
-			overlay_fullscreen("weather", SSweather.weather_event_instance.fullscreen_type)
-		else
-			clear_fullscreen("weather")
+		clear_fullscreen("weather")
 
 /mob/living/handle_flamer_fire(obj/flamer_fire/fire, damage, delta_time)
 	. = ..()
