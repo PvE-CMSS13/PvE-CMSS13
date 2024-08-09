@@ -187,7 +187,7 @@
 
 /obj/item/storage/large_holster/fuelpack
 	name = "\improper Broiler-T flexible refueling system"
-	desc = "A specialized back harness that carries the Broiler-T flexible refueling system. Designed by and for USCM Pyrotechnicians."
+	desc = "Reinforced backpack tank complex for the M240E1 Incinerator, used by some USCMC units making more aggressive use of the M240 Incinerator."
 	icon = 'icons/obj/items/clothing/backpacks.dmi'
 	icon_state = "flamethrower_broiler"
 	flags_atom = FPRINT|CONDUCT
@@ -263,7 +263,7 @@
 
 	var/obj/item/weapon/gun/flamer/M240T/flamer = user.get_active_hand()
 	if(!istype(flamer))
-		to_chat(user, "You must be holding the M240-T incinerator unit to use [src]")
+		to_chat(user, "You must be holding the M240E1 incinerator unit to use [src]")
 		return
 
 	if(!active_fuel)
@@ -337,7 +337,7 @@
 /obj/item/storage/large_holster/fuelpack/get_examine_text(mob/user)
 	. = ..()
 	if(contents.len)
-		. += "It is storing a M240-T incinerator unit."
+		. += "It is storing a M240E1 incinerator unit."
 	if (get_dist(user, src) <= 1)
 		if(fuel)
 			. += "The [fuel.caliber] currently contains: [round(fuel.get_ammo_percent())]% fuel."

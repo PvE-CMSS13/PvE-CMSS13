@@ -37,11 +37,11 @@
 	group = "Ammo"
 
 /datum/supply_packs/ammo_rounds_box_xm88
-	name = ".458 bullets box crate (x300 rounds)"
+	name = "smart anti-materiel bullets box crate (x300 rounds)"
 	contains = list(/obj/item/ammo_box/magazine/lever_action/xm88)
 	cost = 40
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "\improper .458 bullets crate"
+	containername = "\improper smart anti-materiel bullets crate"
 	group = "Ammo"
 
 //------------------------Magazine Boxes crates----------------

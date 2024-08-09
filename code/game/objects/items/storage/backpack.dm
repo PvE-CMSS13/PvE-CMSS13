@@ -901,7 +901,7 @@
 // Pyrotechnician Spec backpack fuel tank
 /obj/item/storage/backpack/marine/engineerpack/flamethrower
 	name = "\improper USCM Pyrotechnician G6-2 fueltank"
-	desc = "A specialized fueltank worn by USCM Pyrotechnicians for use with the M240-T incinerator unit. A small general storage compartment is installed."
+	desc = "A specialized tank pack for the M240E1 incinerator unit. A small general storage compartment is installed."
 	icon_state = "flamethrower_tank"
 	max_fuel = 500
 	fuel_type = "utnapthal"

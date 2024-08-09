@@ -825,8 +825,8 @@
 		return ..()
 
 /obj/item/storage/belt/shotgun/xm88
-	name = "\improper M300 pattern .458 SOCOM loading rig"
-	desc = "An ammunition belt designed to hold the large .458 SOCOM caliber bullets for the XM88 heavy rifle."
+	name = "\improper M300 pattern XM88A loading rig"
+	desc = "An ammunition belt designed to hold the massive 10x38mm combustible case bullets for the XM88A heavy rifle."
 	icon_state = "boomslang-belt"
 	item_state = "marinebelt"
 	w_class = SIZE_LARGE

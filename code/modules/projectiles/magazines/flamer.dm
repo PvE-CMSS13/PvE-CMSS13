@@ -4,7 +4,7 @@
 
 /obj/item/ammo_magazine/flamer_tank
 	name = "incinerator tank"
-	desc = "A fuel tank used to store fuel for use in the M240 incinerator unit. Handle with care."
+	desc = "A fuel tank used to store the M240 incinerator unit's UT-Napthal. Handle with care."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "flametank_custom"
 	item_state = "flametank"
@@ -147,7 +147,7 @@
 
 /obj/item/ammo_magazine/flamer_tank/EX
 	name = "incinerator tank (EX)"
-	desc = "A fuel tank of Ultra Thick Napthal Fuel type EX, a sticky combustible liquid chemical that burns so hot it melts straight through flame-resistant material, for use in the M240-T incinerator unit. Handle with care."
+	desc = "A fuel tank of Ultra Thick Napthal Fuel type EX, a sticky combustible liquid chemical that burns so hot it melts straight through flame-resistant material, for use in the M240E1 incinerator unit. Handle with care."
 	caliber = "Napalm EX"
 	flamer_chem = "napalmex"
 
@@ -185,7 +185,7 @@
 // Pyro regular flamer tank just bigger than the base flamer tank.
 /obj/item/ammo_magazine/flamer_tank/large
 	name = "large incinerator tank"
-	desc = "A large fuel tank used to store fuel for use in the M240-T incinerator unit. Handle with care."
+	desc = "A large fuel tank used to store fuel for use in the M240E1 incinerator unit. Handle with care."
 	icon_state = "flametank_large_custom"
 	item_state = "flametank_large"
 	max_rounds = 250
@@ -202,8 +202,8 @@
 
 // This is the green flamer fuel for the pyro.
 /obj/item/ammo_magazine/flamer_tank/large/B
-	name = "large incinerator tank (B)"
-	desc = "A large fuel tank of Ultra Thick Napthal Fuel type B, a special variant of napalm that is easily extinguished, but disperses over a wide area while burning slowly. The composition reacts with inorganic materials to break them down, causing severe damage. For use in the M240-T incinerator unit. Handle with care."
+	name = "large incinerator tank (Grn)"
+	desc = "A large tank of Chemically Reactive Antistructure, M240E1 compatible. Reacts aggressively with inorganic compounds, for use against protected structures or protected personnel. Easier to extinguish, and thermal effect is lessened."
 	caliber = "Napalm B"
 	flamer_chem = "napalmb"
 
@@ -212,7 +212,7 @@
 // This is the blue flamer fuel for the pyro.
 /obj/item/ammo_magazine/flamer_tank/large/X
 	name = "large incinerator tank (X)"
-	desc = "A large fuel tank of Ultra Thick Napthal Fuel type X, a sticky combustible liquid chemical that burns extremely hot, for use in the M240-T incinerator unit. Handle with care."
+	desc = "A large tank of U-T Napthal-X, M240E1 compatible. Intended to cause maximum thermal damage to hit targets."
 	caliber = "Napalm X"
 	flamer_chem = "napalmx"
 
@@ -220,7 +220,7 @@
 
 /obj/item/ammo_magazine/flamer_tank/large/EX
 	name = "large incinerator tank (EX)"
-	desc = "A large fuel tank of Ultra Thick Napthal Fuel type EX, a sticky combustible liquid chemical that burns so hot it melts straight through flame-resistant material, for use in the M240-T incinerator unit. Handle with care."
+	desc = "A large tank of U-T Napthal-EX, M240E1 compatible. Formulated for maximum temperature and capable of reacting with nearly any substance."
 	caliber = "Napalm EX"
 	flamer_chem = "napalmex"
 
@@ -229,7 +229,7 @@
 //Custom pyro tanks
 /obj/item/ammo_magazine/flamer_tank/custom/large
 	name = "large custom incinerator tank"
-	desc = "A large fuel tank for use in the M240-T incinerator unit. This one has been modified with a pressure regulator and a large internal propellant tank. Must be manually attached."
+	desc = "A large fuel tank for use in the M240E1 incinerator unit. This one has been modified with a pressure regulator and a large internal propellant tank. Must be manually attached."
 	gun_type = /obj/item/weapon/gun/flamer/M240T
 	max_rounds = 250
 

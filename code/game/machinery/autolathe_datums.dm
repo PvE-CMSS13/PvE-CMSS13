@@ -322,12 +322,12 @@
 	category = AUTOLATHE_CATEGORY_EXPLOSIVES
 
 /datum/autolathe/recipe/armylathe/flamer_tank
-	name = "Custom M240A1 Fuel Tank"
+	name = "Custom M240 Fuel Tank"
 	path = /obj/item/ammo_magazine/flamer_tank/custom
 	category = AUTOLATHE_CATEGORY_EXPLOSIVES
 
 /datum/autolathe/recipe/armylathe/large_flamer_tank
-	name = "Custom M240-T Fuel Tank"
+	name = "Custom M240E1 Fuel Tank"
 	path = /obj/item/ammo_magazine/flamer_tank/custom/large
 	category = AUTOLATHE_CATEGORY_EXPLOSIVES
 
