@@ -139,7 +139,7 @@
 		if(welded)
 			to_chat(usr, SPAN_WARNING("You cannot release gas from a welded vent."))
 			return FALSE
-		var/list/options = list(VENT_GAS_SMOKE, VENT_GAS_CN20, VENT_GAS_CN20_XENO, VENT_GAS_LSD)
+		var/list/options = list(VENT_GAS_SMOKE, VENT_GAS_SLEEP, VENT_GAS_CN20, VENT_GAS_CN20_XENO, VENT_GAS_LSD)
 		var/gas_choice = tgui_input_list(user, "What gas do you wish to use?", "Gas Choice", options, 20 SECONDS)
 		if(!gas_choice)
 			return FALSE
@@ -162,6 +162,8 @@
 	switch(gas_type)
 		if(VENT_GAS_SMOKE)
 			spreader = new /datum/effect_system/smoke_spread/bad
+		if(VENT_GAS_SLEEP)
+			spreader = new /datum/effect_system/smoke_spread/sleepy
 		if(VENT_GAS_CN20)
 			spreader = new /datum/effect_system/smoke_spread/cn20
 		if(VENT_GAS_CN20_XENO)

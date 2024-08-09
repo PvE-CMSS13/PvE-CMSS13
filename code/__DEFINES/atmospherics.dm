@@ -42,6 +42,7 @@ var/MAX_EXPLOSION_RANGE = 14
 
 /// Used in /obj/structure/pipes/vents/proc/create_gas
 #define VENT_GAS_SMOKE "Smoke"
+#define VENT_GAS_SLEEP "Sleep Gas"
 #define VENT_GAS_CN20 "CN20 Nerve Gas"
 #define VENT_GAS_CN20_XENO "CN20-X Nerve Gas"
 #define VENT_GAS_LSD "ALD-91 LSD Gas"

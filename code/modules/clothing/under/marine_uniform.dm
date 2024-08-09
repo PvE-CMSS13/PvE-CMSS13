@@ -486,6 +486,7 @@
 	desc = "An armored uniform worn by Weyland-Yutani elite commandos. It is well protected while remaining light and comfortable."
 	icon_state = "commando_jumpsuit"
 	worn_state = "commando_jumpsuit"
+	flags_inventory = BLOCKGASEFFECT
 
 /obj/item/clothing/under/marine/veteran/pmc/corporate
 	name = "\improper WY corporate security uniform"
@@ -1053,6 +1054,7 @@
 	desc = "M2 MOPP suits are purpose built to defend the wearer against biological and radioactive contaminants, from nerve gas to nuclear fallout."
 	desc_lore = "The several-paragraph long expository pamphlet that usually comes with these is missing."
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = BLOCKGASEFFECT
 	flags_jumpsuit = NO_FLAGS
 	icon_state = "cbrn"
 	worn_state = "cbrn"
@@ -1067,6 +1069,7 @@
 	desc = "M3 MOPP suits are specially designed and engineered to protect the wearer from unshielded exposure to any Chemical, Biological, Radiological, or Nuclear (CBRN) threats in the field. Despite somewhat resembling commonplace synthetic rubber HAZMAT suits, the Venlar composition provides a significantly more dense and durable baseline material, allowing for modifications without the loss of its air-tight nature. The wearer’s comfort has been significantly taken into consideration, with the suit providing sufficient freedom of movement for even delicate maneuvers and movements once it is donned. As the sealed environment retains many issues from the past, measures have been taken to significantly reduce the suit's passive heat absorption and increase internal absorbance through linings, as well as the capability to fully integrate with external cooling, air cycling, and other life support systems. Strips of M11 detector paper are included with each suit, designed to be slotted into the dominant arm of the wearer’s protective suit, the non-dominant wrist, and then back to the knee, providing at-a-glance warning signs across alternating sides of the body while working. The arm and knee markers are intended to be on the user's dominant The papers change color upon contact with harmful chemical agents, displaying a clear white initially and turning red when activated. The suit has a recommended lifespan of twenty-four hours once contact with a toxic environment is made, but depending on the severity this can be shortened to eight hours or less. Beyond that point, the accuracy of the detector papers deteriorates significantly, as does the protection of the suit itself."
 	desc_lore = "Since the outbreak of the New Earth Plague in 2157 and the subsequent Interstellar Commerce Commission (ICC) sanctioned decontamination of the colony and its 40 million inhabitants, the abandoned colony has been left under a strict quarantine blockade to prevent any potential scavengers from spreading what’s left of the highly-durable airborne flesh-eating bacteria. Following those events, the three major superpowers have been investing heavily in the development and procurement of CBRN equipment, in no small part due to the extensive damage that the plague and other similar bioweapons could do. The \"Marine 70\" upgrade package and the launch of the M3 pattern armor series saw the first M3-M prototypes approved for CBRN usage."
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = BLOCKGASEFFECT
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 	flags_jumpsuit = NO_FLAGS
