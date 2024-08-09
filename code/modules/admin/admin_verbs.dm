@@ -333,6 +333,7 @@ var/list/roundstart_mod_verbs = list(
 		add_verb(src, /client/proc/open_resin_panel)
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
+		add_verb(src, /client/proc/admin_marine_announcement)
 		add_verb(src, /client/proc/game_master_rename_platoon)
 		add_verb(src, /client/proc/toggle_vehicle_blockers)
 		add_verb(src, /client/proc/toggle_rappel_menu)
