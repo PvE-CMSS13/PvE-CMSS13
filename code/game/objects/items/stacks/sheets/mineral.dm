@@ -324,3 +324,11 @@ GLOBAL_LIST_INIT(iron_recipes, list ( \
 	perunit = 2000
 	stack_id = "chitin"
 	black_market_value = 35
+
+/obj/item/stack/sheet/mineral/chitin/metal
+	name = "unknown metal"
+	desc = "An unknown, dark metal."
+	singular_name = "unknown metal sheet"
+	icon_state = "sheet-chitin"
+	sheettype = "unknownmetal"
+	stack_id = "unknownmetal"

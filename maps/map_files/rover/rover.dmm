@@ -177,8 +177,8 @@
 	},
 /obj/structure/gun_rack/m41/recon/unloaded,
 /obj/item/attachable/attached_gun/grenade/mk1{
-	pixel_y = 15;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 15
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
@@ -338,9 +338,6 @@
 /area/golden_arrow/cryo_cells)
 "dv" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0
-	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -1296,8 +1293,8 @@
 	pixel_y = 8
 	},
 /obj/item/attachable/attached_gun/grenade/mk1{
-	pixel_y = -1;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /turf/open/floor/almayer{
 	icon_state = "plate"

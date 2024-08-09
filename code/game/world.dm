@@ -292,9 +292,10 @@ var/world_topic_spam_protect_time = world.timeofday
 	join_motd = file2text("config/motd.txt")
 
 /world/proc/load_tm_message()
-	var/datum/getrev/revdata = GLOB.revdata
-	if(revdata.testmerge.len)
-		current_tms = revdata.GetTestMergeInfo()
+	//var/datum/getrev/revdata = GLOB.revdata
+	//if(revdata.testmerge.len)
+	//	current_tms = revdata.GetTestMergeInfo()
+	return
 
 /world/proc/update_status()
 	//Note: Hub content is limited to 254 characters, including limited HTML/CSS.

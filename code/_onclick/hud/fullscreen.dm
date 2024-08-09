@@ -4,6 +4,11 @@
 	var/list/fullscreens = list()
 
 /mob/proc/overlay_fullscreen(category, type, severity)
+	if(ishuman(src))
+		var/mob/living/carbon/human/human_mob = src
+		if(human_mob.in_cutscene && (category != "simulacrum_ko"))
+			return
+
 	var/atom/movable/screen/fullscreen/screen = fullscreens[category]
 	if (!screen || screen.type != type)
 		// needs to be recreated

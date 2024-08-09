@@ -19,7 +19,7 @@
 
 /// Check validity of spawning this
 /obj/effect/landmark/structure_spawner/proc/validate()
-	return (mode_flags & SSticker.mode?.flags_round_type)
+	return TRUE
 
 /// Return effective location to spawn at
 /obj/effect/landmark/structure_spawner/proc/get_spawn_location()

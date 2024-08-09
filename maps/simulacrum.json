@@ -1,0 +1,17 @@
+{
+    "map_name": "Unknown Signal",
+    "map_path": "map_files/simulacrum",
+    "map_file": "simulacrum.dmm",
+    "webmap_url": "WhiskeyOutpost",
+    "map_item_type": "/obj/item/map/whiskey_outpost_map",
+    "nightmare_path": "maps/Nightmare/maps/Whiskey_Outpost_v3/",
+    "camouflage": "desert",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ],
+    "weather_holder": "/datum/weather_ss_map_holder/big_red"
+}

@@ -157,7 +157,7 @@
 
 #define PYLON_COVERAGE_MULT 1.5
 
-#define WEED_BASE_GROW_SPEED (5 SECONDS)
+#define WEED_BASE_GROW_SPEED 1 // We gave the weeds plant food
 #define WEED_BASE_DECAY_SPEED (10 SECONDS)
 
 /// The time you must be dead to join as a xeno larva
