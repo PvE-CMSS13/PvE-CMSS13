@@ -91,6 +91,11 @@
 	desc = "D'aaawwww"
 	icon_state = "cat2"
 
+/obj/item/holder/lizard
+	name = "Lizard"
+	desc = "A cute tiny lizard."
+	icon_state = "lizard"
+
 /obj/item/holder/mouse
 	name = "mouse"
 	desc = "It's a small mouse."

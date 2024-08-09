@@ -144,6 +144,10 @@
 		return
 	..()
 
+/mob/living/simple_animal/cat/can_ventcrawl()
+	return TRUE
+
+
 //RUNTIME IS ALIVE! SQUEEEEEEEE~
 /mob/living/simple_animal/cat/Runtime
 	name = "Runtime"

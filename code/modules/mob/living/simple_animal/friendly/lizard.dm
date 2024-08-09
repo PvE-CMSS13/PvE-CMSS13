@@ -19,3 +19,20 @@
 	black_market_value = 50
 	dead_black_market_value = 0
 	squeeze_under = TRUE
+	holder_type = /obj/item/holder/lizard
+
+/mob/living/simple_animal/lizard/MouseDrop(atom/over_object)
+	if(!CAN_PICKUP(usr, src))
+		return ..()
+	var/mob/living/carbon/H = over_object
+	if(!istype(H) || !Adjacent(H) || H != usr) return ..()
+
+	if(H.a_intent == INTENT_HELP)
+		get_scooped(H)
+		return
+	else
+		return ..()
+
+/mob/living/simple_animal/lizard/can_ventcrawl()
+	return TRUE
+
