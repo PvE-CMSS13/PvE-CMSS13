@@ -457,10 +457,10 @@
 			if(80 to 82)
 				crate = new /obj/structure/closet/crate/ammo(T)
 				choosemax = rand(2, 3)
-				randomitems = list(/obj/item/ammo_magazine/rifle/lmg/holo_target,
-								/obj/item/ammo_magazine/rifle/lmg/holo_target,
-								/obj/item/ammo_magazine/rifle/lmg,
-								/obj/item/ammo_magazine/rifle/lmg,
+				randomitems = list(/obj/item/ammo_magazine/hpr_box/holo_target,
+								/obj/item/ammo_magazine/hpr_box/holo_target,
+								/obj/item/ammo_magazine/hpr_box,
+								/obj/item/ammo_magazine/hpr_box,
 				)
 
 			if(83 to 86)

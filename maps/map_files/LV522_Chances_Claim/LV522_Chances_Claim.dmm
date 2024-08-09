@@ -50725,7 +50725,7 @@
 	dir = 4
 	},
 /obj/structure/closet/crate/ammo,
-/obj/item/ammo_magazine/rifle/lmg/holo_target,
+/obj/item/ammo_magazine/hpr_box/holo_target,
 /obj/item/weapon/gun/rifle/lmg{
 	current_mag = null
 	},

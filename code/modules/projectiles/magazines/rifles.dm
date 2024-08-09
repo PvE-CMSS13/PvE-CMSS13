@@ -295,34 +295,6 @@
 	w_class = SIZE_MEDIUM
 
 //-------------------------------------------------------
-//M41AE2 HEAVY PULSE RIFLE
-
-/obj/item/ammo_magazine/rifle/lmg
-	name = "\improper M41AE2 ammo box (10x24mm)"
-	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle."
-	icon_state = "m41ae2"
-	max_rounds = 300
-	gun_type = /obj/item/weapon/gun/rifle/lmg
-	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS|AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
-	ammo_band_icon = "+m41ae2_band"
-	ammo_band_icon_empty = "+m41ae2_band_e"
-
-/obj/item/ammo_magazine/rifle/lmg/holo_target
-	name = "\improper M41AE2 ammo box (10x24mm holo-target)"
-	desc = "A semi-rectangular box of holo-target rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/holo_target
-	max_rounds = 200
-	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
-
-/obj/item/ammo_magazine/rifle/lmg/heap
-	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
-	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle. This one contains the standard Armor-Piercing explosive tipped round of the USCM."
-	default_ammo = /datum/ammo/bullet/rifle/heap
-	max_rounds = 300
-	gun_type = /obj/item/weapon/gun/rifle/lmg
-	ammo_band_color = AMMO_BAND_COLOR_HEAP
-
-//-------------------------------------------------------
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
