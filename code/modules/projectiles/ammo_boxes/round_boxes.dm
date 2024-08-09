@@ -4,7 +4,7 @@
 
 /obj/item/ammo_box/rounds/ap
 	name = "\improper rifle ammunition box (10x24mm AP)"
-	desc = "A 10x24mm armor-piercing ammunition box. Used to refill M41A MK2, and M4RA AP magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm armor-piercing ammunition box. Used to refill M41A and M4RA AP magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_ap"
 	default_ammo = /datum/ammo/bullet/rifle/ap
 
@@ -13,7 +13,7 @@
 
 /obj/item/ammo_box/rounds/le
 	name = "\improper rifle ammunition box (10x24mm LE)"
-	desc = "A 10x24mm armor-shredding ammunition box. Used to refill M41A MK2 LE magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm armor-shredding ammunition box. Used to refill M41A LE magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_le"
 	default_ammo = /datum/ammo/bullet/rifle/le
 
@@ -22,7 +22,7 @@
 
 /obj/item/ammo_box/rounds/incen
 	name = "\improper rifle ammunition box (10x24mm Incen)"
-	desc = "A 10x24mm incendiary ammunition box. Used to refill M41A MK2 and M4RA incendiary magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm incendiary ammunition box. Used to refill M41A and M4RA incendiary magazines. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_incen"
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	bullet_amount = 400 //Incen is OP
