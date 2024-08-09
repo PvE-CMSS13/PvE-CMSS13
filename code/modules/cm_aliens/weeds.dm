@@ -372,26 +372,29 @@
 	if(QDELETED(attacking_item) || QDELETED(user) || (attacking_item.flags_item & NOBLUDGEON))
 		return 0
 
-	if(istype(src, /obj/effect/alien/weeds/node)) //The pain is real
-		to_chat(user, SPAN_WARNING("You hit \the [src] with \the [attacking_item]."))
-	else
-		to_chat(user, SPAN_WARNING("You cut \the [src] away with \the [attacking_item]."))
-
-	var/damage = attacking_item.force / 3
-	playsound(loc, "alien_resin_break", 25)
-
 	if(iswelder(attacking_item))
 		var/obj/item/tool/weldingtool/WT = attacking_item
 		if(WT.remove_fuel(2))
-			damage = WEED_HEALTH_STANDARD
+			if(istype(src, /obj/effect/alien/weeds/node))
+				to_chat(user, SPAN_WARNING("You hit \the [src] with \the [attacking_item]."))
+			else
+				to_chat(user, SPAN_WARNING("You cut \the [src] away with \the [attacking_item]."))
+			playsound(loc, "alien_resin_break", 25)
 			playsound(loc, 'sound/items/Welder.ogg', 25, 1)
+			user.animation_attack_on(src)
+			take_damage(WEED_HEALTH_STANDARD)
 	else
+		if(!attacking_item.force)
+			to_chat(user, SPAN_WARNING("You scrape ineffectively at \the [src] with \the [attacking_item]."))
+			return
+		to_chat(user, SPAN_NOTICE("You start clearing \the [src] away with \the [attacking_item]..."))
+		var/duration = (20 SECONDS) * (health / attacking_item.force) //effectively applying attack damage to weed's health spread over 20 seconds
+		if(!do_after(user, duration, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			return
 		playsound(loc, "alien_resin_break", 25)
+		user.animation_attack_on(src)
+		take_damage(health)
 
-
-	user.animation_attack_on(src)
-
-	take_damage(damage)
 	return TRUE //don't call afterattack
 
 /obj/effect/alien/weeds/proc/take_damage(damage)
