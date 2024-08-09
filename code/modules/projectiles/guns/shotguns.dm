@@ -374,14 +374,18 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/bayonet, // Muzzle
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
@@ -421,7 +425,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	)
 	random_under_chance = 40
 	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/shotgun/type23/breacher/slug
@@ -444,7 +448,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	random_under_chance = 100
 	random_spawn_under = list(
 		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 	)
 
 /obj/item/weapon/gun/shotgun/type23/dragon
@@ -470,10 +474,13 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/beanbag
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, //Rail
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/verticalgrip, //Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/stock/type23, //Stock
 	)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG

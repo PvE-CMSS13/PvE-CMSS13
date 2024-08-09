@@ -474,6 +474,7 @@
 		/obj/item/attachable/bayonet/upp,
 		//Under,
 		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/bipod,
 		//Integrated,
 		/obj/item/attachable/type88_barrel,
