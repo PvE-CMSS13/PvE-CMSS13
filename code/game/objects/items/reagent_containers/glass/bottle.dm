@@ -7,9 +7,9 @@
 	icon_state = null
 	item_state = "atoxinbottle"
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5, 10, 15, 25, 30, 40, 60)
+	possible_transfer_amounts = list(5, 10, 15, 25, 30, 40, 150)
 	flags_atom = FPRINT|OPENCONTAINER
-	volume = 60
+	volume = 150
 	attack_speed = 4
 
 /obj/item/reagent_container/glass/bottle/on_reagent_change()
@@ -57,47 +57,47 @@
 
 /obj/item/reagent_container/glass/bottle/inaprovaline
 	name = "\improper Inaprovaline bottle"
-	desc = "A small bottle. Contains inaprovaline - used to stabilize patients."
+	desc = "A small glossy bottle of inaprovaline, a drug that artificially stimulates the respiratory reflex."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle19"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/inaprovaline/Initialize()
 	. = ..()
-	reagents.add_reagent("inaprovaline", 60)
+	reagents.add_reagent("inaprovaline", 150)
 
 /obj/item/reagent_container/glass/bottle/kelotane
 	name = "\improper Kelotane bottle"
-	desc = "A small bottle. Contains kelotane - used to treat burned areas."
+	desc = "A small glossy bottle filled with kelotane, a burn regrowth drug."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle16"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/kelotane/Initialize()
 	. = ..()
-	reagents.add_reagent("kelotane", 60)
+	reagents.add_reagent("kelotane", 150)
 
 /obj/item/reagent_container/glass/bottle/dexalin
 	name = "\improper Dexalin bottle"
-	desc = "A small bottle. Contains dexalin - used to treat oxygen deprivation."
+	desc = "A small glossy bottle filled with dexalin. Microcapsules slowly release oxygen into the bloodstream, offsetting the effects of O2 deprivation."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle10"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/dexalin/Initialize()
 	. = ..()
-	reagents.add_reagent("dexalin", 60)
+	reagents.add_reagent("dexalin", 150)
 
 /obj/item/reagent_container/glass/bottle/spaceacillin
 	name = "\improper Spaceacillin bottle"
 	desc = "A small bottle. Contains spaceacillin - used to treat infected wounds."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle8"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/spaceacillin/Initialize()
 	. = ..()
-	reagents.add_reagent("spaceacillin", 60)
+	reagents.add_reagent("spaceacillin", 150)
 
 /obj/item/reagent_container/glass/bottle/toxin
 	name = "toxin bottle"
@@ -107,7 +107,7 @@
 
 /obj/item/reagent_container/glass/bottle/toxin/Initialize()
 	. = ..()
-	reagents.add_reagent("toxin", 60)
+	reagents.add_reagent("toxin", 150)
 
 /obj/item/reagent_container/glass/bottle/cyanide
 	name = "cyanide bottle"
@@ -117,18 +117,18 @@
 
 /obj/item/reagent_container/glass/bottle/cyanide/Initialize()
 	. = ..()
-	reagents.add_reagent("cyanide", 60)
+	reagents.add_reagent("cyanide", 150)
 
 /obj/item/reagent_container/glass/bottle/stoxin
 	name = "Soporific bottle"
 	desc = "A small bottle of soporific. Just the fumes make you sleepy."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle20"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/stoxin/Initialize()
 	. = ..()
-	reagents.add_reagent("stoxin", 60)
+	reagents.add_reagent("stoxin", 150)
 
 /obj/item/reagent_container/glass/bottle/chloralhydrate
 	name = "chloral hydrate bottle"
@@ -142,14 +142,14 @@
 
 /obj/item/reagent_container/glass/bottle/antitoxin
 	name = "\improper Dylovene bottle"
-	desc = "A small bottle of dylovene. Counters poisons, and repairs toxin damage. A wonder drug."
+	desc = "A small glossy bottle of dylovene, the new broadspectrum antitoxic."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle7"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/antitoxin/Initialize()
 	. = ..()
-	reagents.add_reagent("anti_toxin", 60)
+	reagents.add_reagent("anti_toxin", 150)
 
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"
@@ -159,7 +159,7 @@
 
 /obj/item/reagent_container/glass/bottle/mutagen/Initialize()
 	. = ..()
-	reagents.add_reagent("mutagen", 60)
+	reagents.add_reagent("mutagen", 150)
 
 /obj/item/reagent_container/glass/bottle/ammonia
 	name = "ammonia bottle"
@@ -169,7 +169,7 @@
 
 /obj/item/reagent_container/glass/bottle/ammonia/Initialize()
 	. = ..()
-	reagents.add_reagent("ammonia", 60)
+	reagents.add_reagent("ammonia", 150)
 
 /obj/item/reagent_container/glass/bottle/diethylamine
 	name = "diethylamine bottle"
@@ -179,7 +179,7 @@
 
 /obj/item/reagent_container/glass/bottle/diethylamine/Initialize()
 	. = ..()
-	reagents.add_reagent("diethylamine", 60)
+	reagents.add_reagent("diethylamine", 150)
 
 /obj/item/reagent_container/glass/bottle/flu_virion
 	name = "flu virion culture bottle"
@@ -339,7 +339,7 @@
 
 /obj/item/reagent_container/glass/bottle/pacid/Initialize()
 	. = ..()
-	reagents.add_reagent("pacid", 60)
+	reagents.add_reagent("pacid", 150)
 
 /obj/item/reagent_container/glass/bottle/adminordrazine
 	name = "\improper Adminordrazine bottle"
@@ -349,7 +349,7 @@
 
 /obj/item/reagent_container/glass/bottle/adminordrazine/Initialize()
 	. = ..()
-	reagents.add_reagent("adminordrazine", 60)
+	reagents.add_reagent("adminordrazine", 150)
 
 /obj/item/reagent_container/glass/bottle/capsaicin
 	name = "\improper Capsaicin bottle"
@@ -359,7 +359,7 @@
 
 /obj/item/reagent_container/glass/bottle/capsaicin/Initialize()
 	. = ..()
-	reagents.add_reagent("capsaicin", 60)
+	reagents.add_reagent("capsaicin", 150)
 
 /obj/item/reagent_container/glass/bottle/frostoil
 	name = "\improper Frost Oil bottle"
@@ -369,62 +369,62 @@
 
 /obj/item/reagent_container/glass/bottle/frostoil/Initialize()
 	. = ..()
-	reagents.add_reagent("frostoil", 60)
+	reagents.add_reagent("frostoil", 150)
 
 /obj/item/reagent_container/glass/bottle/bicaridine
 	name = "\improper Bicaridine bottle"
-	desc = "A small bottle. Contains Bicaridine - Used to treat brute damage."
+	desc = "A small glossy bottle full of bicaridine, a substance that stimulates regeneration of brute damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle17"
-	amount_per_transfer_from_this = 60
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/bicaridine/Initialize()
 	. = ..()
-	reagents.add_reagent("bicaridine", 60)
+	reagents.add_reagent("bicaridine", 150)
 
 /obj/item/reagent_container/glass/bottle/peridaxon
 	name = "\improper Peridaxon bottle"
-	desc = "A small bottle. Contains Peridaxon - Used by lazy doctors to temporarily halt the effects of internal organ damage."
+	desc = "A small glossy bottle full of Peridaxon, the novel blend of drugs that TEMPORARILY halts the symptoms of organ damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle4"
-	volume = 60
-	amount_per_transfer_from_this = 60
+	volume = 150
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/peridaxon/Initialize()
 	. = ..()
-	reagents.add_reagent("peridaxon", 60)
+	reagents.add_reagent("peridaxon", 150)
 
 /obj/item/reagent_container/glass/bottle/tramadol
 	name = "\improper Tramadol bottle"
-	desc = "A small bottle. Contains Tramadol - Used as a basic painkiller."
+	desc = "A small glossy bottle full of tramadol, an OTC synthetic analgesic.."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle1"
-	volume = 60
-	amount_per_transfer_from_this = 60
+	volume = 150
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/tramadol/Initialize()
 	. = ..()
-	reagents.add_reagent("tramadol", 60)
+	reagents.add_reagent("tramadol", 150)
 
 /obj/item/reagent_container/glass/bottle/oxycodone
 	name = "\improper Oxycodone bottle"
-	desc = "A small bottle. Contains Oxycodone - Used as an Extreme Painkiller.  ILLEGAL TO DISTRIBUTE."
+	desc = "A small glossy bottle full of oxycodone, an aggressive analgesic. May be habit forming."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle2"
-	volume = 60
-	amount_per_transfer_from_this = 60
+	volume = 150
+	amount_per_transfer_from_this = 150
 
 /obj/item/reagent_container/glass/bottle/oxycodone/Initialize()
 	. = ..()
-	reagents.add_reagent("oxycodone", 60)
+	reagents.add_reagent("oxycodone", 150)
 
 /obj/item/reagent_container/glass/bottle/tricordrazine
 	name = "\improper Tricordrazine bottle"
-	desc = "A small bottle. Contains tricordrazine - A weak but catch-all medicine for treating all sorts of damage."
+	desc = "A small glossy bottle full of tricordrazine, a drug that slowly treats brute and burn damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle18"
-	volume = 60
+	volume = 150
 
 /obj/item/reagent_container/glass/bottle/tricordrazine/Initialize()
 	. = ..()
-	reagents.add_reagent("tricordrazine", 60)
+	reagents.add_reagent("tricordrazine", 150)

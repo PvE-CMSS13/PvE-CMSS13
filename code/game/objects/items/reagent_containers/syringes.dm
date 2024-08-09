@@ -82,13 +82,12 @@
 		syringestab(target, user)
 		return
 
-	var/injection_time = 2 SECONDS
+	var/injection_time = 10 SECONDS
 	if(user.skills)
-		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You aren't trained to use syringes..."))
-			return
+		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
+			to_chat(user, SPAN_WARNING("You aren't trained to use syringes... better go slow."))
 		else
-			injection_time = (injection_time*user.get_skill_duration_multiplier(SKILL_MEDICAL))
+			injection_time = ((injection_time/5)*user.get_skill_duration_multiplier(SKILL_MEDICAL))
 
 
 	switch(mode)
