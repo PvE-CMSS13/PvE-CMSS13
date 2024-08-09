@@ -426,6 +426,18 @@
 		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
 		update_icon()
 
+/obj/item/clothing/accessory/poncho/on_attached(obj/item/clothing/suit/storage/marine/S, mob/living/user, silent)
+	. =..()
+	if(.)
+		S.armor_overlays["poncho"] = src
+
+/obj/item/clothing/accessory/poncho/on_removed(mob/living/user, obj/item/clothing/C)
+	if(!has_suit)
+		return
+	var/obj/item/clothing/suit/storage/marine/suit = has_suit
+	S.armor_overlays -= "poncho"
+	. = ..()
+
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
 	has_variation = FALSE

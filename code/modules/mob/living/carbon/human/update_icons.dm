@@ -541,9 +541,20 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 					K = marine_armor.armor_overlays[i]
 					if(K)
 						if(!IMG)
-							IMG = image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+							if(istype(K, /obj/item/clothing/accessory))
+								var/obj/item/clothing/accessory/A = K
+								IMG = A.get_mob_overlay(src, WEAR_JACKET)
+								IMG.layer = -SUIT_GARB_LAYER
+							else
+								IMG = image(K.icon,src,K.icon_state, -SUIT_GARB_LAYER)
 						else
-							IMG.overlays += image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+							if(istype(K, /obj/item/clothing/accessory))
+								var/obj/item/clothing/accessory/A = K
+								var/image/I2 = A.get_mob_overlay(src, WEAR_JACKET)
+								I2.layer = -SUIT_GARB_LAYER
+								IMG.overlays += I2
+							else
+								IMG.overlays += image(K.icon,src,K.icon_state, -SUIT_GARB_LAYER)
 				if(IMG)
 					overlays_standing[SUIT_GARB_LAYER] = IMG
 					apply_overlay(SUIT_GARB_LAYER)
