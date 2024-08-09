@@ -385,6 +385,7 @@
 	storage_slots = 2
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+	flags_atom = NO_NAME_OVERRIDE
 	allowed = list(
 		/obj/item/tank/emergency_oxygen,
 		/obj/item/device/flashlight,
