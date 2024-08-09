@@ -893,17 +893,17 @@
 		return FALSE
 
 /obj/item/storage/belt/grenade
-	name="\improper M276 pattern M40 Grenade rig"
-	desc="The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
+	name="\improper M2172 MARIE Loadbearing Rig"
+	desc="The M2172 Marine All-puRpose Individual loading Equipment, besides being a horrifically tortured backronym, is also a reasonably comfortable customizable loadbearing vest, compatible with most pouches."
 	icon_state = "grenadebelt" // temp
 	item_state = "grenadebelt"
 	item_state_slots = list(
 		WEAR_L_HAND = "s_marinebelt",
 		WEAR_R_HAND = "s_marinebelt")
 	w_class = SIZE_LARGE
-	storage_slots = 12
+	storage_slots = 0
 	max_w_class = SIZE_MEDIUM
-	max_storage_space = 24
+	max_storage_space = 0
 	can_hold = list(/obj/item/explosive/grenade)
 
 
@@ -920,8 +920,77 @@
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)
+	if(istype(W, /obj/item/storage/pouch/magazine))
+		var/obj/item/ammo
 	else
 		return ..()
+
+/obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/ammo_magazine/lever_action))
+		var/obj/item/ammo_magazine/lever_action/M = W
+		dump_ammo_to(M, user, M.transfer_handful_amount)
+
+	if(istype(W, /obj/item/storage/belt/gun/m44/lever_action/attach_holster))
+		if(length(contents) || length(W.contents))
+			to_chat(user, SPAN_WARNING("Both holster and belt need to be empty to attach the holster!"))
+			return
+		to_chat(user, SPAN_NOTICE("You attach the holster to the belt, reducing total storage capacity but allowing it to fit the M44 revolver and its speedloaders."))
+		var/obj/item/storage/belt/gun/m44/lever_action/new_belt = new /obj/item/storage/belt/gun/m44/lever_action
+		qdel(W)
+		qdel(src)
+		user.put_in_hands(new_belt)
+		update_icon(user)
+	else
+		return ..()
+
+	can_hold = list(
+		/obj/item/ammo_magazine/handful,
+		/obj/item/weapon/gun/revolver,
+		/obj/item/ammo_magazine/revolver,
+	)
+	flap = FALSE
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = 10,
+			"icon_y" = 3))
+
+/obj/item/storage/belt/gun/m44/lever_action/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/ammo_magazine/lever_action))
+		var/obj/item/ammo_magazine/lever_action/M = W
+		dump_ammo_to(M,user, M.transfer_handful_amount)
+	else
+		return ..()
+
+
+/obj/item/storage/belt/gun/m44/lever_action/verb/detach_holster()
+	set category = "Object"
+	set name = "Detach revolver holster"
+	set src in usr
+	if(ishuman(usr))
+		if(contents.len)
+			to_chat(usr, SPAN_WARNING("The belt needs to be fully empty to remove the holster!"))
+			return
+		to_chat(usr, SPAN_NOTICE("You detach the holster from the belt."))
+		var/obj/item/storage/belt/shotgun/lever_action/new_belt = new /obj/item/storage/belt/shotgun/lever_action
+		var/obj/item/storage/belt/gun/m44/lever_action/attach_holster/new_holster = new /obj/item/storage/belt/gun/m44/lever_action/attach_holster
+		qdel(src)
+		usr.put_in_hands(new_belt)
+		usr.put_in_hands(new_holster)
+		update_icon(usr)
+	else
+		return
+
+/obj/item/storage/belt/gun/m44/lever_action/attach_holster
+	name = "\improper M276 revolver holster attachment"
+	desc = "This holster can be instantly attached to an empty M276 45-70 rig, giving up some storage space in exchange for holding a sidearm. You could also clip it to your belt standalone if you really wanted to."
+	icon_state = "r4t-attach-holster"
+	item_state = "r4t-attach-holster"
+	w_class = SIZE_LARGE
+	storage_slots = 1
+	max_storage_space = 1
+	can_hold = list(
+		/obj/item/weapon/gun/revolver,
+	)
 
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
