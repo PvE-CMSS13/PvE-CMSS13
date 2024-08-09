@@ -22,7 +22,7 @@
 	if(isfacehugger(checked_xeno))
 		return FALSE
 
-	var/mob/parent_mob = parent
+	var/mob/living/parent_mob = parent
 
 	var/captee_stat = parent_mob.stat
 	var/mob/pulledby = parent_mob.pulledby
@@ -45,7 +45,7 @@
 	if(distance > 10)
 		return FALSE
 
-	if(captee_stat == CONSCIOUS)
+	if(captee_stat == CONSCIOUS && !(locate(/datum/effects/crit) in parent_mob.effects_list))
 		return FALSE
 
 	if(isxeno(pulledby) && pulledby != checked_xeno)
