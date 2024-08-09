@@ -129,6 +129,27 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
 	return stat == CONSCIOUS
 
+/mob/living/ai_can_target(mob/living/carbon/xenomorph/X)
+	if(!ai_check_stat(X))
+		return FALSE
+
+	if(X.can_not_harm(src))
+		return FALSE
+
+	if(alpha <= 45 && get_dist(X, src) > 2)
+		return FALSE
+
+	if(isfacehugger(X))
+		if(status_flags & XENO_HOST)
+			return FALSE
+
+		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
+			return FALSE
+
+	else if(HAS_TRAIT(src, TRAIT_NESTED))
+		return FALSE
+
+	return TRUE
 
 /////////////////////////////
 //         HUMANS         //
