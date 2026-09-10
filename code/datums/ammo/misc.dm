@@ -502,5 +502,5 @@
 /datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
 	return
 
-/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
-	return
+// /datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
+// 	return

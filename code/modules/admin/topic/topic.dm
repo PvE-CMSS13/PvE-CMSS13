@@ -1168,6 +1168,28 @@
 		GLOB.orbital_cannon_cancellation["[cancel_token]"] = null
 		message_admins("[src.owner] has cancelled the orbital strike.")
 
+	else if(href_list["adminacceptantiair"])
+		if(!check_rights(R_MOD)) return
+		var/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/rocket = locate(href_list["rocket_anti_air"])
+		var/turf/sound_turf = locate(href_list["turf"])
+		var/missile_name = locate(href_list["missile_name"])
+		if(!rocket)
+			return
+		var/template_choice = tgui_input_list(usr, "Do you want to allow the missile to hit its target?", "AA Missile", list("Yes - Crash", "Yes - Damage", "Random - 20% Crash / 40% Dmg / 40% Miss", "No - Miss"))
+		if(!template_choice)
+			return
+		var/choice
+		if(template_choice == "Yes - Crash")
+			choice = "crash"
+		if(template_choice == "Yes - Damage")
+			choice = "damage"
+		if(template_choice == "No - Miss") // maybe theres a better way to do this but I needed to access a "miss" outcome for the random choice
+			choice = "miss"
+		if(template_choice == "Random - 20% Crash / 40% Dmg / 40% Miss")
+			// weighted at 20% crash, 40% damage, 40% miss
+			choice = pick_weight(list("crash"= 20, "damage"= 40, "miss"= 40))
+		rocket.hit_announce(sound_turf, choice, missile_name)
+
 	else if(href_list["admincancelpredsd"])
 		if (!check_rights(R_MOD)) return
 		var/obj/item/clothing/gloves/yautja/hunter/bracer = locate(href_list["bracer"])

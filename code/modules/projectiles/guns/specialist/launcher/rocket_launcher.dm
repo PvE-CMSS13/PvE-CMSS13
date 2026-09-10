@@ -413,6 +413,22 @@
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
 	))
 
+// ===== STOLEN SPNKR SOUND ====== \\
+
+/datum/looping_sound/antiair_locking
+	start_sound = list('sound/weapons/fire_support/spnkr_aa_startlocking.ogg' = 1)
+	start_length = 0.2 SECONDS
+	mid_sounds = list('sound/weapons/fire_support/spnkr_aa_locking.ogg' = 1)
+	mid_length = 0.35 SECONDS
+	volume = 40
+	extra_range = 14
+
+/datum/looping_sound/antiair_lockon
+	mid_sounds = list('sound/weapons/fire_support/spnkr_aa_lockon.ogg' = 1)
+	mid_length = 0.35 SECONDS
+	volume = 40
+	extra_range = 14
+
 /obj/item/weapon/gun/launcher/rocket/anti_air
 	name = "\improper anti-air missile launcher"
 	desc = "What crackhead modified an M5 to fire AA missiles? Truly deranged."
@@ -425,13 +441,26 @@
 	var/is_outside = FALSE //Whether the user is firing from inside an unsuitable location or not
 	var/missile_message_time = 1.5 SECONDS
 
+	var/datum/looping_sound/antiair_lockon/lockon
+	var/datum/looping_sound/antiair_locking/locking
+	COOLDOWN_DECLARE(aa_cooldown)
+	var/aa_cooldown_time = 7 SECONDS
+	var/cancel_sounds
+
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_bullet_traits()
 	return
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/Initialize(mapload, ...)
 	. = ..()
+	locking = new(src)
+	lockon = new(src)
 	smoke = new()
 	smoke.attach(src)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/Destroy()
+	QDEL_NULL(locking)
+	QDEL_NULL(lockon)
+	. = ..()
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_gun_config_values()
 	..()
@@ -456,33 +485,95 @@
 	icon_state = launcher_sprite
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/proc/missile_launch(mob/living/user)
-	user.visible_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SPAN_WARNING("The missile arcs up into the air!"), ,10)
-	message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
-	log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
+	update_icon()
+	message_admins(FONT_SIZE_XL("[user] launched an anti-air missile from their [src]!"), user.x, user.y, user.z)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/hit_announce(sound_turf, hit_type, missile_name)
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(sound_turf, 20))
+		if(!hit_type)
+			to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] miss its target!"))
+		else
+			if(hit_type == "damage")
+				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc into the target and explode, damaging the aircraft!"))
+				if(current_mob.client)
+					playsound_client(current_mob.client, 'sound/weapons/fire_support/spnkr_aa_damage.ogg', src, 25)
+			if(hit_type == "crash")
+				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc directly into the aircraft, hitting it with a powerful explosion and sending it crashing down!"))
+				if(current_mob.client)
+					playsound_client(current_mob.client, 'sound/weapons/fire_support/spnkr_aa_crash.ogg', src, 25)
+			if(hit_type == "miss") // redudant but i wasn't sure how best to get the random choice to work
+				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc towards the target, but the shuttle fires off countermeasures and the missile misses its target!"))
+
+//
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/get_firing_dir(mob/user)
+	var/firing_dir
+	switch(user.dir)
+		if(NORTH)
+			firing_dir = 0
+		if(EAST)
+			firing_dir = 90
+		if(SOUTH)
+			firing_dir = 180
+		if(WEST)
+			firing_dir = 270
+	return firing_dir
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/stop_locking()
+	locking.stop()
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/play_lockon()
+	if(cancel_sounds)
+		return
+	lockon.start()
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/stop_loops()
+	lockon.stop()
+	locking.stop()
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/able_to_fire(mob/living/user)
 	..()
 	if(!current_mag.current_rounds > 0)
+		to_chat(user, SPAN_DANGER("You don't have any missiles left to fire!"))
 		return FALSE
 	if(targeting_air)
-		var/turf/user_turf = get_turf(user)
-		var/area/targ_area = get_area(user)
-		if(!istype(user_turf))
-			return FALSE
-		switch(targ_area.ceiling)
-			if(CEILING_NONE)
-				is_outside = TRUE
-			if(CEILING_GLASS)
-				is_outside = TRUE
-		if(protected_by_pylon(TURF_PROTECTION_CAS, user_turf))
-			is_outside = FALSE
-		if(!is_outside)
-			to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
-			return FALSE
-		else
-			ammo = /datum/ammo/anti_air
-			addtimer(CALLBACK(src, PROC_REF(missile_launch), user), missile_message_time)
-			return TRUE
+		user = get_gun_user()
+		var/area/current_area = get_area(user)
+		cancel_sounds = FALSE// In case the user moves while while locking on
+		if(current_area.ceiling >= CEILING_PROTECTION_TIER_1)
+			to_chat(user, SPAN_DANGER("There's a ceiling above you...bad idea."))
+			playsound(user, 'sound/weapons/fire_support/spnkr_aa_fail.ogg')
+			return
+		var/obj/item/weapon/twohanded/offhand/off_hand = user.get_inactive_hand()
+		if(!off_hand || !istype(off_hand))
+			to_chat(user, SPAN_DANGER("You need to wield the [src] with both hands!"))
+			return
+		if(!COOLDOWN_FINISHED(src, aa_cooldown))
+			to_chat(user, SPAN_DANGER("You need to wait before attempting to fire again."))
+			return
+		COOLDOWN_START(src, aa_cooldown, aa_cooldown_time)
+		user.visible_message(SPAN_DANGER("[user] gets down on a knee and aims [user.p_their()] [src] into the air!"), SPAN_DANGER("You get down on a knee and aim your [src] into the air!"))
+		locking.start()
+		message_admins(FONT_SIZE_XL("[user] is attempting to launch an anti-air missile from their [src]!"), user.x, user.y, user.z)
+		addtimer(CALLBACK(src, PROC_REF(stop_locking)), 3 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_lockon)), 3 SECONDS)
+		if(!do_after(user, 5 SECONDS, show_busy_icon = BUSY_ICON_HOSTILE))
+			stop_loops()
+			playsound(user, 'sound/weapons/fire_support/spnkr_aa_fail.ogg')
+			to_chat(user, SPAN_WARNING("You interrupt the lockon sequence."))
+			cancel_sounds = TRUE
+			return
+		var/missile_name = current_mag.name
+		user.visible_message(FONT_SIZE_LARGE(SPAN_DANGER("[user] fires [user.p_their()] [src] into the air, launching a [missile_name] from the tube!")), FONT_SIZE_LARGE(SPAN_DANGER("You fire the [src] into the air, launching a [missile_name] from the tube!")))
+		locking.stop()
+		lockon.stop()
+		muzzle_flash(get_firing_dir(user))
+		playsound(user, fire_sound, firesound_volume)
+		ammo = /datum/ammo/anti_air
+		var/sound_turf = get_turf(user)
+		message_admins(FONT_SIZE_XL("<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminacceptantiair=1;rocket_anti_air=\ref[src];turf=\ref[sound_turf];missile_name=\ref[missile_name]'>CLICK TO SUCCEED/FAIL MISSILE LAUNCH</a>"))
+		addtimer(CALLBACK(src, PROC_REF(missile_launch), user), missile_message_time)
+		return TRUE
 	else
 		. = ..()
 
