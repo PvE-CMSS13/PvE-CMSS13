@@ -85,27 +85,22 @@
 	if(checked_weeds && IS_SAME_HIVENUMBER(checked_weeds, parent))
 		return FALSE
 
-	if(checked_turf.is_weedable() < FULLY_WEEDABLE)
+	if(checked_turf.is_weedable() != FULLY_WEEDABLE)
 		return FALSE
 
-	var/obj/effect/alien/weeds/found_weeds = locate(/obj/effect/alien/weeds/node) in range(3, checked_turf)
-	if(found_weeds && IS_SAME_HIVENUMBER(found_weeds, parent))
-		return FALSE
+	for(var/turf/weeding_turf as anything in ORANGE_TURFS(3, checked_turf))
+		if(!weeding_turf.weeds)
+			continue
+		if(!istype(weeding_turf.weeds, /obj/effect/alien/weeds/node))
+			continue
+		if(weeding_turf.weeds && IS_SAME_HIVENUMBER(weeding_turf.weeds, parent))
+			return FALSE
 
 	if(checked_turf.density)
 		return FALSE
 
-	var/blocked = FALSE
 	for(var/atom/potential_blocker as anything in checked_turf)
 		if(parent != potential_blocker && (potential_blocker.density || potential_blocker.can_block_movement))
-			blocked = TRUE
-			break
-
-	if(blocked)
-		return FALSE
-
-	for(var/obj/structure/struct in checked_turf)
-		if(struct.density && !(struct.flags_atom & ON_BORDER))
 			return FALSE
 
 	return TRUE

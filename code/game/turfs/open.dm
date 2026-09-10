@@ -645,6 +645,9 @@
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
 
+/turf/open/gm/river/check_ai_special_blockers()
+	return TRUE
+
 /turf/open/gm/river/pool
 	fishing_allowed = 0
 

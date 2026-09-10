@@ -6,15 +6,17 @@
 #define ASTAR_COST_FUNCTION(n) (abs(n.x - target.x)+abs(n.y - target.y))
 
 #define OPEN_TURF_PENALTY 1
-#define DOOR_PENALTY 3
-#define HUMAN_PENALTY 4
+#define DOOR_PENALTY 2
+#define ADJACENT_WALL_PENALTY 5
+#define HUMAN_PENALTY 6
+#define WINDOW_FRAME_PENALTY 15
 #define XENO_PENALTY 20
-#define OBJECT_PENALTY 20
-#define FIRE_PENALTY 25
 #define SENTRY_PENALTY 25
 #define VEHICLE_PENALTY 25
-#define LOCKED_DOOR_PENALTY 25
-#define WINDOW_FRAME_PENALTY 25
+#define WINDOW_PENALTY 35
+#define OBJECT_PENALTY 40
+#define LOCKED_DOOR_PENALTY 43
+#define FIRE_PENALTY 45
 #define BARRICADE_PENALTY 50
 #define WALL_PENALTY 100
 
@@ -89,9 +91,6 @@ PROBABILITY CALCULATIONS ARE HERE
 #define PRAETORIAN_SPIT 80
 #define PRAETORIAN_SPRAY 80
 
-
-/// Special blockers for pathfinding or obstacle handling
-#define AI_SPECIAL_BLOCKERS list(/obj/flamer_fire, /mob/living, /obj/vehicle/multitile, /turf/open/space, /turf/open/gm/river)
 
 // Friend-or-foe universal check
 #define IS_SAME_HIVENUMBER(A,B) (A.hivenumber == B.hivenumber)

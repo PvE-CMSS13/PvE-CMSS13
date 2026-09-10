@@ -15,14 +15,14 @@
 
 	if(ismob(current_target) && current_target?:is_mob_incapacitated())
 		if(distance != gun_data.minimum_range)
-			return 10
+			return ACTION_WEIGHT_KEEP_DISTANCE
 
 	else if(brain.in_cover)
 		if(distance < gun_data.minimum_range)
-			return 10
+			return ACTION_WEIGHT_KEEP_DISTANCE
 
 	else if(distance != gun_data.optimal_range)
-		return 10
+		return ACTION_WEIGHT_KEEP_DISTANCE
 
 	return 0
 

@@ -26,7 +26,7 @@
 	if(!density)
 		return 0
 
-	return OBJECT_PENALTY
+	return INFINITY
 
 /obj/structure/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
 	if(climbable)
@@ -101,23 +101,34 @@
 	if(!.)
 		return
 
-	if(locked || welded || isElectrified() || (stat & NOPOWER))
+	if(locked || welded || (isElectrified() && !iszombie(ai_human)) || !arePowerSystemsOn() || panel_open)
 		return LOCKED_DOOR_PENALTY
 
-	if(!check_access(ai_human.get_active_hand()) && !check_access(ai_human.wear_id))
+	if(!check_access(ai_human.get_active_hand()) && !check_access(ai_human.wear_id) && !iszombie(ai_human))
 		return LOCKED_DOOR_PENALTY
 
 	return DOOR_PENALTY
 
 /obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if(locked || welded || isElectrified())
+	if((welded || locked || isElectrified()) && !iszombie(ai_human))
 		return ..()
 
-	if(!(stat & NOPOWER))
+	if(!(arePowerSystemsOn() || !panel_open))
+		return
+
+	if(layer == DOOR_OPEN_LAYER)
+		return
+
+	if(iszombie(ai_human))
+		ai_human.a_intent_change(INTENT_DISARM)
+		ai_human.do_click(src, "", list())
 		return
 
 	brain.holster_primary()
 	var/obj/item/crowbar = brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR)
+	if(!crowbar)
+		return
+	brain.holster_primary()
 	brain.equip_item_from_equipment_map(HUMAN_AI_TOOLS, crowbar)
 	ai_human.do_click(src, "", list())
 	brain.store_item(crowbar, brain.storage_has_room(crowbar), HUMAN_AI_TOOLS)
@@ -137,10 +148,11 @@
 		return TRUE
 
 	if(brain.faction_check(src))
-		var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
-		ai_human.a_intent = random_intent
-		if(get_ai_brain())
-			a_intent = random_intent
+		if(!iszombie(ai_human))
+			var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
+			ai_human.a_intent = random_intent
+			if(get_ai_brain())
+				a_intent = random_intent
 		return TRUE
 
 	if((body_position == LYING_DOWN) && (brain.current_target != src))
@@ -186,6 +198,24 @@
 	return SENTRY_PENALTY
 
 /////////////////////////////
+//      WINDOW FRAME       //
+/////////////////////////////
+
+/obj/structure/window_frame/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return WINDOW_FRAME_PENALTY
+
+/obj/structure/window/framed/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return WINDOW_PENALTY
+
+/////////////////////////////
 //       BARRICADES        //
 /////////////////////////////
 /obj/structure/barricade/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
@@ -204,6 +234,8 @@
 	return BARRICADE_PENALTY
 
 /obj/structure/barricade/plasteel/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	if(iszombie(ai_human))
+		return ..()
 	if(!closed) // this means it's closed
 		ai_human.do_click(src, "", list())
 	else
@@ -226,6 +258,9 @@
 	. = ..()
 	if(!.)
 		return
+
+	if(iszombie(ai_human))
+		return OPEN_TURF_PENALTY
 
 	if(ai_human.on_fire)
 		return FIRE_PENALTY

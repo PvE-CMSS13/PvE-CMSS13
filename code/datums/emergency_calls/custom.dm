@@ -12,7 +12,7 @@
 
 	ert_message = "Several characters have been offered up to be played by the admins"
 
-/datum/emergency_call/custom/create_member(datum/mind/M, turf/override_spawn_loc)
+/datum/emergency_call/custom/create_member(datum/mind/M, turf/override_spawn_loc, use_player_slot = FALSE)
 	set waitfor = 0
 	var/turf/spawn_loc = override_spawn_loc ? override_spawn_loc : get_spawn_point()
 
@@ -27,6 +27,10 @@
 	if(!H) // Something went wrong
 		return
 
+	if(use_player_slot)
+		M.current.client.prefs.copy_all_to(H)
+		H.update_body()
+		H.update_hair()
 	M.transfer_to(H, TRUE)
 
 	players_to_offer -= H

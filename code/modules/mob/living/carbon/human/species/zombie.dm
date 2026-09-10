@@ -1,12 +1,16 @@
 // DEFINES
 ///Time until a zombie rises from the dead
-#define ZOMBIE_REVIVE_TIME 3 MINUTES
+#define ZOMBIE_REVIVE_TIME 1.5 MINUTES
+///Amount of Heart + Brain Damage that will stop a zombie rising again
+#define ZOMBIE_ORGAN_DAMAGE_THRESHOLD 80 //Will usually reach delimbing before getting here. Usually.
+///Base time until Zombies rise again. RNGed later to give it variation.
+#define ZOMBIE_CLEAN_UP_TIME 90 SECONDS
 
 /datum/species/zombie
 	group = SPECIES_HUMAN
 	name = SPECIES_ZOMBIE
 	name_plural = "Zombies"
-	slowdown = 0.75
+	slowdown = -0.25 //Zombies don't care about shoes now. shoes is usually -1. So if they lose a foot they're not eating a 1 slowdown.
 	blood_color = BLOOD_COLOR_ZOMBIE
 	icobase = 'icons/mob/humans/species/r_goo_zed.dmi'
 	deform = 'icons/mob/humans/species/r_goo_zed.dmi'
@@ -16,9 +20,9 @@
 	death_message = "seizes up and falls limp..."
 	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL
 	mob_inherent_traits = list(TRAIT_FOREIGN_BIO)
-	brute_mod = 0.6 //Minor bullet resistance
+	brute_mod = 0.5 //Minor bullet resistance
 	burn_mod = 0.8 //Lowered burn damage since it would 1-shot zombies from 2 to 0.8.
-	speech_chance  = 5
+	speech_chance = 5
 	cold_level_1 = -1  //zombies don't mind the cold
 	cold_level_2 = -1
 	cold_level_3 = -1
@@ -27,7 +31,7 @@
 	knock_down_reduction = 10
 	stun_reduction = 10
 	knock_out_reduction = 5
-	has_organ = list()
+	has_organ = list("brain" = /datum/internal_organ/brain, "heart" = /datum/internal_organ/heart)
 
 	has_species_tab_items = TRUE
 
@@ -47,7 +51,6 @@
 
 	if(zombie.l_hand) zombie.drop_inv_item_on_ground(zombie.l_hand, FALSE, TRUE)
 	if(zombie.r_hand) zombie.drop_inv_item_on_ground(zombie.r_hand, FALSE, TRUE)
-	if(zombie.wear_id) qdel(zombie.wear_id)
 	if(zombie.gloves) zombie.drop_inv_item_on_ground(zombie.gloves, FALSE, TRUE)
 	if(zombie.head) zombie.drop_inv_item_on_ground(zombie.head, FALSE, TRUE)
 	if(zombie.glasses) zombie.drop_inv_item_on_ground(zombie.glasses, FALSE, TRUE)
@@ -93,19 +96,17 @@
 
 	if(zombie)
 		var/obj/limb/head/head = zombie.get_limb("head")
-		if(!QDELETED(head) && !(head.status & LIMB_DESTROYED))
+		if(!QDELETED(head) && (can_rise_again(zombie)))
 			if(zombie.client)
 				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You will rise again in three minutes.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(zombie, SPAN_XENOWARNING("You fall... but your body is slowly regenerating itself."))
 			var/weak_ref = WEAKREF(zombie)
 			to_revive[weak_ref] = addtimer(CALLBACK(src, PROC_REF(revive_from_death), zombie, "[REF(zombie)]"), ZOMBIE_REVIVE_TIME, TIMER_STOPPABLE|TIMER_OVERRIDE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
-			revive_times[weak_ref] = world.time + 3 MINUTES
+			revive_times[weak_ref] = world.time + ZOMBIE_REVIVE_TIME
 		else
 			if(zombie.client)
-				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You lost your head. No reviving for you.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
-			to_chat(zombie, SPAN_XENOWARNING("You fall... headless, you will no longer rise."))
-			zombie.undefibbable = TRUE // really only for weed_food
-			SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
+				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>No reviving for you.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
+			to_chat(zombie, SPAN_XENOWARNING("You fall... too damaged, you will no longer rise."))
 
 /datum/species/zombie/handle_dead_death(mob/living/carbon/human/zombie, gibbed)
 	if(gibbed)
@@ -113,16 +114,18 @@
 
 /datum/species/zombie/proc/revive_from_death(mob/living/carbon/human/zombie)
 	if(zombie && zombie.loc && zombie.stat == DEAD)
-		zombie.revive(TRUE)
-		zombie.apply_effect(4, STUN)
+		if(can_rise_again(zombie))
+			zombie.visible_message(SPAN_WARNING("[zombie] rises from the ground!"))
+			zombie.revive(TRUE, TRUE)
+			zombie.apply_effect(4, STUN)
 
-		zombie.make_jittery(500)
-		zombie.visible_message(SPAN_WARNING("[zombie] rises from the ground!"))
+			zombie.make_jittery(500)
+
+			handle_alert_ghost(zombie)
+
+			addtimer(CALLBACK(zombie, TYPE_PROC_REF(/mob, remove_jittery)), 3 SECONDS)
+			zombie.update_layer() //Band-aid to stop zombies being in LYING_DEAD_MOB_LAYER whilst they're actually just alive crawling around.
 		remove_from_revive(zombie)
-
-		handle_alert_ghost(zombie)
-
-		addtimer(CALLBACK(zombie, TYPE_PROC_REF(/mob, remove_jittery)), 3 SECONDS)
 
 /datum/species/zombie/proc/handle_alert_ghost(mob/living/carbon/human/zombie)
 	var/mob/dead/observer/ghost = zombie.get_ghost()
@@ -149,7 +152,7 @@
 
 /datum/species/zombie/handle_head_loss(mob/living/carbon/human/zombie)
 	if(!zombie.undefibbable)
-		zombie.undefibbable = TRUE // really only for weed_food
+		handle_perma_dead(zombie)
 		SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
 	if(WEAKREF(zombie) in to_revive)
 		remove_from_revive(zombie)
@@ -160,3 +163,50 @@
 		if(receiving_client)
 			receiving_client.mob.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>Beheaded...</u></span><br>Your corpse will no longer rise.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
+
+///Check if the zombie can be revived, if not: calls handle_perma_dead
+/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie)
+	if(!zombie.undefibbable)
+		var/accumalated_organ_damage = 0
+		accumalated_organ_damage += zombie.getBrainLoss()
+
+		var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
+		accumalated_organ_damage += heart.damage
+
+		var/obj/limb/hand/r_hand/right_hand	= zombie.get_limb("r_hand")
+		var/obj/limb/hand/l_hand/left_hand = zombie.get_limb("l_hand")
+		var/obj/limb/head/head = zombie.get_limb("head")
+
+		if(accumalated_organ_damage > ZOMBIE_ORGAN_DAMAGE_THRESHOLD || ((right_hand.status & LIMB_DESTROYED) && (left_hand.status & LIMB_DESTROYED)) || (head.status & LIMB_DESTROYED))
+			if(zombie.stat == DEAD)
+				handle_perma_dead(zombie)
+			return FALSE
+		else
+			return TRUE
+	return FALSE
+
+/datum/species/zombie/proc/handle_perma_dead(mob/living/carbon/human/zombie)
+	if(!zombie.undefibbable)
+		zombie.undefibbable = TRUE
+		SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
+		var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-41,41) SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(clean_up_zombie), zombie), time_til_clean)
+
+/datum/species/zombie/proc/clean_up_zombie(mob/living/carbon/human/zombie)
+	if(!zombie.zombie_disable_auto_clean)
+		if(zombie.loc)
+			if(prob(25))
+				zombie.visible_message("[zombie.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+			if(prob(15))
+				playsound(zombie, 'sound/effects/blood_squirt.ogg', 30, TRUE)
+			zombie.add_splatter_floor(zombie.loc)
+			zombie.add_splatter_floor(zombie.loc)
+			zombie.add_splatter_floor(zombie.loc)
+			zombie.add_splatter_floor(zombie.loc)
+
+			new /obj/effect/decal/cleanable/blood/gibs/zombie(zombie.loc)
+
+		qdel(zombie)
+		return TRUE
+	else
+		return FALSE

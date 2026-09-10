@@ -24,7 +24,7 @@
 	if(brain.healing_someone)
 		return 0
 
-	return 12
+	return ACTION_WEIGHT_SNIPER_NEST
 
 /datum/ai_action/sniper_nest/Added()
 	initial_view = brain.view_distance
@@ -86,6 +86,10 @@
 	)
 
 	if(!check_rights(R_DEBUG))
+		return
+
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
 		return
 
 	if(tgui_input_list(usr, "Press Enter to select the home turf of the sniper.", "Home Turf", list("Enter", "Cancel")) != "Enter")

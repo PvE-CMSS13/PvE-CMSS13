@@ -247,6 +247,11 @@ directive is properly returned.
 			found += A.search_contents_for(path,filter_path)
 	return found
 
+/// Used by the AI pathfinding subsystem to check for obstacles in a mobs path.
+/// More lightweight than typechecking atoms in a tiles contents against a blockers list
+/atom/proc/check_ai_special_blockers()
+	return FALSE
+
 /atom/proc/examine(mob/user)
 	var/list/examine_strings = get_examine_text(user)
 	if(!examine_strings)

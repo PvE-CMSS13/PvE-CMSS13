@@ -20,7 +20,7 @@
 		if(get_dist(brain.tied_human, current_order.current_waypoint) <= 1)
 			return 0
 
-	return 4
+	return ACTION_WEIGHT_PATROL_WAYPOINTS
 
 /datum/ai_action/patrol_waypoints/trigger_action()
 	. = ..()

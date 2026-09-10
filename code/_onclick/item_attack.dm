@@ -55,9 +55,9 @@
 		return FALSE
 
 	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(!H.melee_allowed)
-			to_chat(H, SPAN_DANGER("You are currently unable to attack."))
+		var/mob/living/carbon/human/human_user = user
+		if(!human_user.melee_allowed)
+			to_chat(human_user, SPAN_DANGER("You are currently unable to attack."))
 			return FALSE
 
 	var/showname = "."
@@ -81,76 +81,103 @@
 		var/mob/living/carbon/human/human_user = user
 		if(force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
 			if(!user.get_target_lock(target.faction_group))
-				if(human_target.pulledby == human_user)
-					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN || human_target.handcuffed)
-						if(target.stat == DEAD)
-							to_chat(target, SPAN_WARNING("They're already dead. What's the point?"))
-							return FALSE
-						user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
-						to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
+				if(target.stat != DEAD)
+					if(!user.action_busy)
+						if(!HAS_TRAIT_FROM(target, TRAIT_FLOORED, THROATSLIT_TRAIT))
+							if(human_target.pulledby == human_user)
+								if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN || human_target.handcuffed)
 
-						throat_slit_stun(target, user)
-						switch(get_dir(user, target))
-							if(NORTH)
-								human_target.pixel_y -= 12
-							if(EAST)
-								human_target.pixel_x -= 12
-							if(SOUTH)
-								human_target.pixel_y += 12
-							if(WEST)
-								human_target.pixel_x += 12
-							if(NORTHEAST)
-								human_target.pixel_x -= 12
-								human_target.pixel_y -= 12
-							if(NORTHWEST)
-								human_target.pixel_y -= 12
-								human_target.pixel_x += 12
-							if(SOUTHEAST)
-								human_target.pixel_y += 12
-								human_target.pixel_x -= 12
-							if(SOUTHWEST)
-								human_target.pixel_y += 12
-								human_target.pixel_x += 12
 
-						if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
-							remove_throat_slit_stun(target)
-							human_target.pixel_y = 0
-							human_target.pixel_x = 0
-							return FALSE
+									user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
+									to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
 
-						target.visible_message(SPAN_DANGER("[user] slit open [target]'s throat! They made quite a bloody mess!"), SPAN_HIGHDANGER("[user] slits your throat! Oh god!"))
-						to_chat(user, SPAN_DANGER("You slit open their throat. No getting up from that."))
-						playsound(target, 'sound/weapons/slice.ogg', 25, 1)
-						target.apply_damage(100, BRUTE, "head")
-						target.apply_damage(300, OXYLOSS)
+									throat_slit_stun(target, user)
+									human_target.reset_pixel_shift()
+									human_user.pixel_shift_target_mob(target, 12)
 
-						var/obj/limb/head/head = human_target.get_limb("head")
-						ADD_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
-						human_target.spray_blood(rand(0,181), head)
-						human_target.pixel_y = 0
-						human_target.pixel_x = 0
+									if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
+										remove_throat_slit_stun(target)
+										human_target.reset_pixel_shift()
+										to_chat(user, SPAN_WARNING("You were interrupted!"))
+										return FALSE
+									ADD_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
 
-						if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
-							target.death(create_cause_data("throat slit"))
-							REMOVE_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
-							human_target.spray_blood(rand(0,181), head)
+									target.visible_message(SPAN_DANGER("[user] slit open [target]'s throat! They made quite a bloody mess!"), SPAN_HIGHDANGER("[user] slits your throat! Oh god!"))
+									to_chat(user, SPAN_DANGER("You slit open their throat. No getting up from that."))
+									playsound(target, 'sound/weapons/slice.ogg', 25, 1)
+									target.apply_damage(100, BRUTE, "head")
+									target.apply_damage(300, OXYLOSS)
 
-						remove_throat_slit_stun(target)
-						return TRUE
+									var/obj/limb/head/head = human_target.get_limb("head")
+									human_target.spray_blood(rand(0,181), head)
+									human_target.reset_pixel_shift()
 
+									if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
+										target.death(create_cause_data("throat slit"))
+										REMOVE_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
+										human_target.spray_blood(rand(0,181), head)
+
+									remove_throat_slit_stun(target)
+									return TRUE
+								else
+									to_chat(user, SPAN_WARNING("You must be directly behind your target! Or they must be on the ground or restrained!"))
+							else
+								to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
+						else
+							to_chat(user, SPAN_WARNING("It's already done. They're as good as dead."))
 					else
-						to_chat(user, SPAN_WARNING("You must be directly behind your target! Or they must be on the ground or restrained!"))
-						return FALSE
+						to_chat(user, SPAN_WARNING("You are busy doing something else!"))
 				else
-					to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
-					return FALSE
+					to_chat(user, SPAN_WARNING("They're already dead. What's the point?"))
 			else
 				to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you? They're on your side!"))
-				return FALSE
 		else
 			to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
-			return FALSE
+		return FALSE
 
+	if(ishuman(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
+		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
+			if(!user.action_busy)
+				if(target.pulledby != user || (target.pulledby?.grab_level < GRAB_AGGRESSIVE && !iszombie(target)))
+					to_chat(user, SPAN_NOTICE(iszombie(target) ? "You need to grab hold to do this!" : "You need to get a secure grip to do this!"))
+					return FALSE
+
+				var/mob/living/carbon/human/human_target = target
+				var/mob/living/carbon/human/human_user = user
+				var/obj/limb/limb = human_target.get_limb("head")
+				if(limb.status & LIMB_DESTROYED)
+					to_chat(user, SPAN_NOTICE("What head?"))
+					return FALSE
+				var/time_to_decap = HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC)
+				if(iszombie(target))
+					time_to_decap /= 2
+				human_target.reset_pixel_shift()
+				human_user.pixel_shift_target_mob(target, 12)
+
+				to_chat(user, SPAN_WARNING(iszombie(target) ? "Your [src.name] easily starts to cut through [target]'s neck!" : "You start to cut off [target]'s head!"))
+				human_target.add_splatter_floor()
+				playsound(human_target, 'sound/effects/blood_squirt.ogg', 40, TRUE)
+
+				if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED ) && target.stat == DEAD)
+					human_target.add_splatter_floor()
+					playsound(human_target, 'sound/effects/bone_break2.ogg', 25, TRUE)
+
+					if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED) && target.stat == DEAD)
+						user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
+						human_target.spray_blood(rand(0, 181), limb)
+						limb.droplimb(0,0, user)
+						human_target.reset_pixel_shift()
+						if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
+							human_target.spray_blood(rand(0, 181), limb)
+						return TRUE
+				human_target.reset_pixel_shift()
+				to_chat(user, SPAN_WARNING("You were interrupted!"))
+			else
+				to_chat(user, SPAN_WARNING("You are busy doing something else!"))
+			return FALSE
+		else
+			to_chat(user, SPAN_NOTICE("You hack away uselessly at [target]."))
+			to_chat(user, SPAN_HELPFUL("You should find a better weapon."))
 	/////////////////////////
 	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(target)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
 	target.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by  [key_name(user)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"

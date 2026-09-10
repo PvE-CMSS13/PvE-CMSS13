@@ -12,7 +12,7 @@
 	if(brain.primary_weapon?.ai_can_use(brain.tied_human, brain))
 		return 0
 
-	return 12
+	return ACTION_WEIGHT_SELECT_PRIMARY
 
 /datum/ai_action/select_primary/trigger_action()
 	. = ..()

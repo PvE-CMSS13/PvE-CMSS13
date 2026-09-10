@@ -27,6 +27,9 @@
 	if(!istype(src, /turf/open/space/transit))
 		icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
+/turf/open/space/check_ai_special_blockers()
+	return TRUE
+
 /turf/open/space/attack_hand(mob/user)
 	if ((user.is_mob_restrained() || !( user.pulling )))
 		return

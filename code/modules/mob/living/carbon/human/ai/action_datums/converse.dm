@@ -14,7 +14,7 @@
 	if(!prob(brain.conversation_start_prob))
 		return 0
 
-	return 1
+	return ACTION_WEIGHT_CONVERSE
 
 /datum/ai_action/converse/trigger_action()
 	. = ..()

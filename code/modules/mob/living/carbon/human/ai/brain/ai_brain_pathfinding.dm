@@ -17,6 +17,7 @@
 	var/no_path_found_amount = 0
 	///
 	var/ai_timeout_time = 0
+	var/target_deviations = 0
 
 	/// The time interval between calculating new paths if we cannot find a path
 	var/no_path_found_period = (2.5 SECONDS)
@@ -43,12 +44,10 @@
 
 	if(no_path_found)
 		if(no_path_found_amount > 0)
-			COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period)
+			COOLDOWN_START(src, no_path_found_cooldown, no_path_found_period * min(3, no_path_found_amount))
 		no_path_found = FALSE
 		no_path_found_amount++
 		return FALSE
-
-	no_path_found_amount = 0
 
 	if((!current_path || (next_path_generation < world.time && current_path_target != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
 		if(!CALCULATING_PATH(tied_human) || current_path_target != T)
@@ -82,6 +81,8 @@
 	L += SSpathfinding.check_special_blockers(tied_human, next_turf)
 	for(var/a in L)
 		var/atom/A = a
+		if(ishuman_strict(A) && A.density)
+			return FALSE
 		if(A.human_ai_obstacle(tied_human, src, get_dir(tied_human.loc, next_turf)) == INFINITY)
 			return FALSE
 		INVOKE_ASYNC(A, TYPE_PROC_REF(/atom, human_ai_act), tied_human, src)
@@ -92,7 +93,51 @@
 
 	return TRUE
 
+/datum/human_ai_brain/proc/update_path_to_target(turf/updated_target_turf)
+	if(!updated_target_turf)	// the missile doesnt know where it is
+		return FALSE
+
+	if(CALCULATING_PATH(tied_human))	// the missile is thinking...
+		return
+
+	if(!current_path && next_path_generation < world.time && !CALCULATING_PATH(tied_human))
+		SSpathfinding.calculate_path(tied_human, updated_target_turf, max_travel_distance, tied_human, CALLBACK(src, PROC_REF(set_path)), list(tied_human, current_target))
+		current_path_target = updated_target_turf
+		next_path_generation = world.time + path_update_period
+		return TRUE
+
+	if(!current_path)
+		return TRUE
+
+	for(var/index in 1 to min(length(current_path), 5))	// is the turf where the missile isnt, somewhere it will be
+		if(current_path[index] == updated_target_turf)
+			current_path.Cut(1, index)
+			current_path_target = updated_target_turf
+			return TRUE
+
+	var/distance = length(current_path)
+	var/pathed_distance = distance - target_deviations
+	if(distance <= 3)	// pitbull!!
+		current_path.Insert(1, updated_target_turf)
+		current_path_target = updated_target_turf
+		target_deviations++
+		return TRUE
+	if(pathed_distance <= 7 || (pathed_distance > 7 && pathed_distance < target_deviations))	// fox 3!!
+		var/turf/anchor_point = listgetindex(current_path, 2)
+		SSpathfinding.calculate_path(anchor_point, updated_target_turf, max_travel_distance, tied_human, CALLBACK(src, PROC_REF(append_path)), list(tied_human, current_target))
+		current_path.Cut(1, distance - 1)
+		target_deviations = 0
+		return TRUE
+
 /datum/human_ai_brain/proc/set_path(list/path)
 	current_path = path
+	if(!path)
+		no_path_found = TRUE
+		return
+	no_path_found_amount = 0
+
+/datum/human_ai_brain/proc/append_path(list/path)
+	current_path.Insert(1, path)
+	current_path_target = current_path[1]
 	if(!path)
 		no_path_found = TRUE

@@ -2229,6 +2229,10 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					I.mechassist()
 				else if(status == "mechanical")
 					I.mechanize()
+	//hair dye is far above
+	for(var/trait_path as anything in traits)
+		var/datum/character_trait/trait_to_give = new trait_path()
+		trait_to_give.apply_trait(character)
 
 	sanitize_inlist(underwear, gender == MALE ? GLOB.underwear_m : GLOB.underwear_f, initial(underwear)) //I'm sure this is 100% unnecessary, but I'm paranoid... sue me. //HAH NOW NO MORE MAGIC CLONING UNDIES
 	sanitize_inlist(undershirt, gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f, initial(undershirt))
