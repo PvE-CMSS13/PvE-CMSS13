@@ -339,7 +339,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 	if(!.)
 		return
 
-	return INFINITY
+	return OPEN_TURF_PENALTY+1
 
 
 /////////////////////////////

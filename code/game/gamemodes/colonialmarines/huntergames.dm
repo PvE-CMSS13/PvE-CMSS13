@@ -275,7 +275,7 @@
 			if(prob(75))
 				M.equip_to_slot_or_del(new /obj/item/clothing/shoes/leather(M), WEAR_FEET)
 			else
-				M.equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots(M), WEAR_FEET)
+				M.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/magboots(M), WEAR_FEET)
 		if(6)//BEARS!!
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/bear(H), WEAR_BODY)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(H), WEAR_FEET)

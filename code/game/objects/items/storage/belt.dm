@@ -111,12 +111,43 @@
 		/obj/item/device/analyzer,
 		/obj/item/explosive/plastic,
 		/obj/item/device/lightreplacer,
+		/obj/item/tank/emergency_oxygen,
 	)
+	cant_hold = list(/obj/item/tank/emergency_oxygen/double)
 	bypass_w_limit = list(
 		/obj/item/tool/shovel/etool,
 		/obj/item/device/lightreplacer,
 	)
 	storage_slots = 10
+
+	//Keep a track of how many tanks are inside the belt.
+	var/tanks = 0
+
+#define MAXIMUM_TANK_COUNT 1
+
+/obj/item/storage/belt/utility/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(tanks >= MAXIMUM_TANK_COUNT && istype(item, /obj/item/tank/emergency_oxygen/engi))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more air tanks."))
+		return FALSE
+
+/obj/item/storage/belt/utility/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks++
+
+/obj/item/storage/belt/utility/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/utility/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks--
+
+#undef MAXIMUM_TANK_COUNT
 
 /obj/item/storage/belt/utility/full/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
@@ -239,6 +270,21 @@
 /obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer/soul(src)
 
+/obj/item/storage/belt/medical/full/liquid/fill_preset_inventory()
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/dexalin(src)
+	new /obj/item/reagent_container/glass/bottle/antitoxin(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/glass/bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
 /obj/item/storage/belt/medical/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
@@ -354,6 +400,27 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
+/obj/item/storage/belt/medical/lifesaver/full/liquid/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/dexalin(src)
+	new /obj/item/reagent_container/glass/bottle/antitoxin(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/reagent_container/glass/bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/tricordrazine(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
 /obj/item/storage/belt/medical/lifesaver/full/dutch/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -428,6 +495,26 @@
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
+/obj/item/storage/belt/medical/lifesaver/upp/full/liquid/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/dexalin(src)
+	new /obj/item/reagent_container/glass/bottle/antitoxin(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/reagent_container/glass/bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/tricordrazine(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+
 /obj/item/storage/belt/medical/lifesaver/upp/partial/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -440,6 +527,19 @@
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/partial/liquid/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/synth/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -502,11 +602,43 @@
 		/obj/item/ammo_magazine/handful,
 		/obj/item/weapon/baton,
 		/obj/item/weapon/classic_baton,
+		/obj/item/weapon/baseballbat,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/device/flashlight,
 		/obj/item/device/clue_scanner,
-		/obj/item/notepad/blue,
+		/obj/item/tool/crowbar,
+		/obj/item/notepad,
+		/obj/item/tool/pen,
+		/obj/item/paper,
+		/obj/item/clipboard,
 	)
+/obj/item/storage/belt/security/_item_insertion(obj/item/W, prevent_warning = FALSE)
+	update_tools_itemstate()
+	..()
+
+/obj/item/storage/belt/security/_item_removal(obj/item/W, atom/new_location)
+	INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/storage/belt/security, update_tools_itemstate))
+	..()
+
+/obj/item/storage/belt/security/on_stored_atom_del(atom/movable/AM)
+	update_tools_itemstate()
+
+/obj/item/storage/belt/security/proc/update_tools_itemstate()
+	for(var/obj/item/thing in contents) //one at a time, ladies
+		if(istype(thing, /obj/item/weapon/baton))
+			item_state = "security_baton"
+		else if(istype(thing, /obj/item/weapon/baseballbat/metal))
+			item_state = "security_metalbat"
+		else if(istype(thing, /obj/item/weapon/baseballbat))
+			item_state = "security_woodbat"
+		else
+			item_state = "security"
+	if(!contents.len)
+		item_state = "security"
+	if(istype(loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/wearer = loc
+		wearer.update_inv_belt()
+
 
 /obj/item/storage/belt/security/full/fill_preset_inventory()
 	new /obj/item/weapon/baton(src)
@@ -593,6 +725,15 @@
 
 /obj/item/storage/belt/security/MP/colonist/fill_preset_inventory()
 	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/notepad/black(src)
+
+/obj/item/storage/belt/security/MP/colonist/seegson
+	storage_slots = 6
+
+/obj/item/storage/belt/security/MP/colonist/seegson/fill_preset_inventory()
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/pen(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/notepad/black(src)
 
@@ -1333,6 +1474,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol(src)
 
+/obj/item/storage/belt/gun/m4a3/full/ap/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3/ap())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/ap(src)
+
 /obj/item/storage/belt/gun/m4a3/commander/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3/custom())
 	new /obj/item/ammo_magazine/pistol/ap(src)
@@ -1577,6 +1723,16 @@
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44/mp())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/marksman(src)
+
+/obj/item/storage/belt/gun/m44/spearhead/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/spearhead(src)
+
+/obj/item/storage/belt/gun/m44/spearhead/hollowpoint/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/hollowpoint())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/spearhead/hollowpoint(src)
 
 /obj/item/storage/belt/gun/m44/gunslinger
 	name = "custom-tooled gunslinger's belt"
@@ -2161,6 +2317,12 @@
 	storage_slots = 9
 	icon_state = "combatutility"
 	item_state= "utility"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi'
+	)
+	item_state_slots = list(
+		WEAR_J_STORE = "utility")
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
 		/obj/item/weapon/gun/revolver,
@@ -2184,6 +2346,7 @@
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,
 	)
+	cant_hold = list(/obj/item/tank/emergency_oxygen/double)
 	bypass_w_limit = list(
 		/obj/item/tool/shovel/etool,
 		/obj/item/device/lightreplacer,
@@ -2192,6 +2355,35 @@
 		"1" = list(
 			"icon_x" = -9,
 			"icon_y" = -6))
+
+	//Keep a track of how many tanks are inside the belt.
+	var/tanks = 0
+
+#define MAXIMUM_TANK_COUNT 1
+
+/obj/item/storage/belt/utility/gun/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(tanks >= MAXIMUM_TANK_COUNT && istype(item, /obj/item/tank/emergency_oxygen/engi))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more air tanks."))
+		return FALSE
+
+/obj/item/storage/belt/utility/gun/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks++
+
+/obj/item/storage/belt/utility/gun/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/utility/gun/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/tank/emergency_oxygen/engi))
+		tanks--
+
+#undef MAXIMUM_TANK_COUNT
 
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()

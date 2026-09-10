@@ -40,6 +40,7 @@
 	var/datum/shape/rectangle/square/range_bounds
 	var/long_range_locked = FALSE //only long-range MD
 	var/ping_overlay
+	var/idle_sound_volume = 60
 
 	/// Handles our cooldowns regarding pings
 	COOLDOWN_DECLARE(ping_cooldown)
@@ -253,7 +254,7 @@
 	if(ping_count > 0)
 		playsound(loc, pick('sound/items/detector_ping_1.ogg', 'sound/items/detector_ping_2.ogg', 'sound/items/detector_ping_3.ogg', 'sound/items/detector_ping_4.ogg'), 60, 0, 7, 2)
 	else
-		playsound(loc, 'sound/items/detector.ogg', 60, 0, 7, 2)
+		playsound(loc, 'sound/items/detector.ogg', idle_sound_volume, 0, 7, 2)
 
 	update_icon()
 	scanning = FALSE

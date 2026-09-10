@@ -69,4 +69,3 @@
 		for(var/turf/T as anything in block(get_turf(cornerA),get_turf(cornerB)))
 			storedarea.contents.Add(T)
 		log_admin("Build Mode: [key_name(c)] set the area of the region from [AREACOORD(cornerA)] through [AREACOORD(cornerB)] to [storedarea].")
-

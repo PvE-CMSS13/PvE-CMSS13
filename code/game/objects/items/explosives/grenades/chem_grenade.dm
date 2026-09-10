@@ -78,6 +78,29 @@
 	containers += B2
 	update_icon()
 
+/obj/item/explosive/grenade/custom/incendiary_plus
+	name = "incendiary grenade"
+	desc = "Used for clearing rooms of living things."
+	assembly_stage = ASSEMBLY_LOCKED
+	has_blast_wave_dampener = FALSE
+
+/obj/item/explosive/grenade/custom/incendiary_plus/Initialize()
+	. = ..()
+	var/obj/item/reagent_container/glass/beaker/B1 = new(src)
+	var/obj/item/reagent_container/glass/beaker/B2 = new(src)
+
+	B1.reagents.add_reagent("hexamine", 15)
+	B1.reagents.add_reagent("pacid",15)
+	B2.reagents.add_reagent("phoron", 45)
+	B2.reagents.add_reagent("paraformaldehyde", 15)
+	B1.reagents.add_reagent("ammonium_nitrate",15)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
+
+	containers += B1
+	containers += B2
+	update_icon()
+
 /obj/item/explosive/grenade/custom/flare
 	name = "\improper M40-F flare grenade"
 	desc = "Chemical flare in a grenade form, designed for compatibility with most standard issue launchers."
@@ -189,6 +212,31 @@
 	B1.reagents.add_reagent("iron", 40)
 	B2.reagents.add_reagent("water", 20)
 	B2.reagents.add_reagent("iron", 40)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src, 2) //~4 second timer
+
+	containers += B1
+	containers += B2
+
+	update_icon()
+
+/obj/item/explosive/grenade/custom/large/ied_he
+	name = "improvised high explosive device"
+	desc = "An improvised chemical explosive grenade. Designed to kill through overpressure."
+	assembly_stage = ASSEMBLY_LOCKED
+	has_blast_wave_dampener = FALSE
+	reaction_limits = list("max_ex_power" = 175, "base_ex_falloff" = 35, "max_ex_shards" = 32,
+									"max_fire_rad" = 5, "max_fire_int" = 20, "max_fire_dur" = 24,
+									"min_fire_rad" = 1, "min_fire_int" = 3, "min_fire_dur" = 3
+	)
+
+/obj/item/explosive/grenade/custom/large/ied_he/Initialize()
+	. = ..()
+	var/obj/item/reagent_container/glass/beaker/large/B1 = new(src)
+	var/obj/item/reagent_container/glass/beaker/large/B2 = new(src)
+
+	B1.reagents.add_reagent("potassium", 100)
+	B2.reagents.add_reagent("water", 100)
 
 	detonator = new/obj/item/device/assembly_holder/timer_igniter(src, 2) //~4 second timer
 

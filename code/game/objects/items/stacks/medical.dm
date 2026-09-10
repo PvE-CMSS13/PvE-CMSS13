@@ -39,12 +39,14 @@
 
 	if(affecting.display_name == "head")
 		if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
-			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.head]!"))
-			return 1
+			if (!(H.head.flags_inventory & BYPASSFORINJECTOR))
+				to_chat(user, SPAN_WARNING("You can't apply [src] through [H.head]!"))
+				return 1
 	else
 		if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
-			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.wear_suit]!"))
-			return 1
+			if (!(H.wear_suit.flags_inventory & BYPASSFORINJECTOR)) //spacesuits with injection port allows most medical
+				to_chat(user, SPAN_WARNING("You can't apply [src] through [H.wear_suit]!"))
+				return 1
 
 	if(affecting.status & (LIMB_ROBOT|LIMB_SYNTHSKIN))
 		to_chat(user, SPAN_WARNING("This isn't useful at all on a robotic limb."))

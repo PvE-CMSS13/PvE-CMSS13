@@ -31,6 +31,11 @@
 	if(HAS_TRAIT(M, TRAIT_CANNOT_EAT))
 		to_chat(user, SPAN_DANGER("[user == M ? "You are" : "[M] is"] unable to drink!"))
 		return FALSE
+	if(istype(M, /mob/living/carbon/human) )
+		var/mob/living/carbon/human/H = M
+		if(H.helmet_blocking_mouth())
+			to_chat(user, SPAN_WARNING("You can't make [user == M ? "yourself" : "[M]"] drink the [src], the [H.head] is in the way!."))
+			return
 
 	if(M == user)
 		to_chat(M, SPAN_NOTICE(" You swallow a gulp from \the [src]."))

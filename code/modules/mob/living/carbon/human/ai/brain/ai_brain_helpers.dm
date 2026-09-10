@@ -104,7 +104,9 @@
 	var/cur_hand = tied_human.get_active_hand()
 	if(cur_hand)
 		tied_human.drop_held_item(cur_hand)
-
+	if(istype(primary_weapon.loc, /obj/item/storage))
+		var/obj/item/storage/holster = primary_weapon.loc
+		holster._item_removal(primary_weapon, cur_hand)
 	tied_human.u_equip(primary_weapon)
 	tied_human.put_in_active_hand(primary_weapon)
 

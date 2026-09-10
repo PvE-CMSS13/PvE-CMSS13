@@ -37,8 +37,9 @@
 
 		//UNCONSCIOUS. NO-ONE IS HOME
 		if(regular_update && ((getOxyLoss() > 50)))
-			KnockDown(3)
-			Stun(3)
+			if(prob(50))
+				KnockDown(3)
+				Stun(3)
 
 		if((src.species.flags & HAS_HARDCRIT) && HEALTH_THRESHOLD_CRIT > health)
 			var/already_in_crit = FALSE

@@ -62,6 +62,9 @@
 	///Reference to atom being orbited
 	var/atom/orbit_target
 
+	///Holder for inertial_drift callback
+	var/inertia_callback
+
 	///Default pixel x shifting for the atom's icon.
 	var/base_pixel_x = 0
 	///Default pixel y shifting for the atom's icon.

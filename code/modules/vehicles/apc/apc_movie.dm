@@ -154,7 +154,7 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
 
 //PRESET: default hardpoints, destroyed
-/obj/effect/vehicle_spawner/apc_movie/decrepit/spawn_vehicle()
+/obj/effect/vehicle_spawner/apc_movie/decrepit/spawn_vehicle	()
 	var/obj/vehicle/multitile/apc/movie/APC = new (loc)
 
 	load_misc(APC)

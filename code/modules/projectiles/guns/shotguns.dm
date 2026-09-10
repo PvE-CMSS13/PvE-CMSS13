@@ -1273,6 +1273,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/sling,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
@@ -1299,6 +1300,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/slug
+	starting_attachment_types = list(/obj/item/attachable/stock/hg3712, /obj/item/attachable/sling)
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717
 	name = "\improper M37-17 pump shotgun"

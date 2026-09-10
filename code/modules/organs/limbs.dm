@@ -1132,6 +1132,11 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 			owner.pain.apply_pain(PAIN_BONE_BREAK)
 			broken_description = pick("broken","fracture","hairline fracture")
 			perma_injury = min_broken_damage
+			// check for space suit supporting limbs
+			if(!owner.wear_suit) return
+			if(!istype(owner.wear_suit,/obj/item/clothing/suit/space)) return
+			var/obj/item/clothing/suit/space/space_suit = owner.wear_suit
+			addtimer(CALLBACK(space_suit, TYPE_PROC_REF(/obj/item/clothing/suit/space, check_limb_support), FALSE, owner), 0)
 	else
 		owner.visible_message(\
 			SPAN_WARNING("[owner] seems to withstand the blow!"),

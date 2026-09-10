@@ -19,6 +19,12 @@
 		to_chat(user, SPAN_DANGER("The [src.name] is empty!"))
 		return FALSE
 
+	if(istype(M, /mob/living/carbon/human) )
+		var/mob/living/carbon/human/H = M
+		if(H.helmet_blocking_mouth())
+			to_chat(user, SPAN_WARNING("You can't make [user == M ? "yourself" : "[M]"] drink the [src], the [H.head] is in the way!."))
+			return
+
 	if(M == user)
 		to_chat(M, SPAN_NOTICE("You swallow some of contents of [src]."))
 

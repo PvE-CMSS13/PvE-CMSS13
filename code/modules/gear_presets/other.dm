@@ -919,3 +919,629 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+
+/datum/equipment_preset/other/seegson
+	name = "Seegson Employee"
+
+	assignment = "Freelancer"
+	rank = FACTION_FREELANCER
+	idtype = /obj/item/card/id/guest
+	faction = FACTION_FREELANCER
+	faction_group = list(FACTION_COLONIST, FACTION_FREELANCER)
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/civilian
+	assignment = "Seegson Employee"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/other/seegson/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE, ACCESS_CIVILIAN_PUBLIC, ACCESS_LIST_COLONIAL_ALL) //ACCESS_COME_BACK_TO_ME
+
+/datum/equipment_preset/other/seegson/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+
+	var/dress_under_cloth = pick(
+		/obj/item/clothing/under/liaison_suit/black,
+		/obj/item/clothing/under/liaison_suit/blue,
+		/obj/item/clothing/under/liaison_suit/brown,
+		/obj/item/clothing/under/liaison_suit/corporate_formal,
+		/obj/item/clothing/under/liaison_suit,
+		/obj/item/clothing/under/liaison_suit/charcoal,
+		/obj/item/clothing/under/liaison_suit/formal,
+		/obj/item/clothing/under/liaison_suit/blazer,
+		/obj/item/clothing/under/liaison_suit/suspenders,
+		/obj/item/clothing/under/suit_jacket/trainee,
+		/obj/item/clothing/under/liaison_suit/ivy,
+		/obj/item/clothing/under/liaison_suit/orange,
+		/obj/item/clothing/under/liaison_suit/field,
+		/obj/item/clothing/under/colonist/workwear,
+		/obj/item/clothing/under/colonist/workwear/khaki,
+		/obj/item/clothing/under/colonist/workwear/pink,
+		/obj/item/clothing/under/colonist/workwear/green,
+	)
+	var/dress_over_cloth = pick(
+		/obj/item/clothing/suit/storage/jacket/marine/corporate/black,
+		/obj/item/clothing/suit/storage/jacket/marine/corporate,
+		/obj/item/clothing/suit/storage/jacket/marine/corporate/brown,
+		/obj/item/clothing/suit/storage/jacket/marine/corporate/blue,
+		/obj/item/clothing/suit/storage/jacket/marine/corporate/black,
+		/obj/item/clothing/suit/storage/jacket/marine/bomber/grey,
+		/obj/item/clothing/suit/storage/jacket/marine/bomber/red,
+		/obj/item/clothing/suit/storage/jacket/marine/bomber,
+		/obj/item/clothing/suit/storage/bomber,
+		/obj/item/clothing/suit/storage/bomber/alt,
+		/obj/item/clothing/suit/storage/snow_suit/liaison,
+		/obj/item/clothing/suit/storage/labcoat,
+		/obj/item/clothing/suit/storage/jacket/marine/vest/grey,
+		/obj/item/clothing/suit/storage/jacket/marine/vest,
+		/obj/item/clothing/suit/storage/jacket/marine/vest/tan,
+		/obj/item/clothing/suit/storage/webbing,
+	)
+	var/dress_extra_cloth = pick(
+		/obj/item/clothing/glasses/sunglasses/big,
+		/obj/item/clothing/glasses/sunglasses/aviator,
+		/obj/item/clothing/glasses/sunglasses,
+		/obj/item/clothing/glasses/sunglasses/prescription,
+		/obj/item/clothing/glasses/regular/hipster,
+	)
+	var/dress_shoes_cloth = pick(
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/shoes/laceup/brown,
+		/obj/item/clothing/shoes/black,
+		/obj/item/clothing/shoes/marine/civilian,
+	)
+	var/dress_hat_cloth = pick(
+		/obj/item/clothing/head/fedora,
+		/obj/item/clothing/head/beret/cm/black/civilian,
+		/obj/item/clothing/head/beret/cm/white/civilian,
+		/obj/item/clothing/head/bowler,
+		/obj/item/clothing/head/flatcap,
+		/obj/item/clothing/head/beanie,
+	)
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/cans/soylent, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(pick(new dress_under_cloth), WEAR_BODY)
+	//jacket
+	if(prob(80))
+		new_human.equip_to_slot_or_del(new dress_over_cloth, WEAR_JACKET)
+	//head
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new dress_hat_cloth, WEAR_HEAD)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new dress_extra_cloth, WEAR_EYES)
+	//limbS
+	new_human.equip_to_slot_or_del(new dress_shoes_cloth, WEAR_FEET)
+	if(prob(80))
+		add_tie(new_human)
+
+//*****************************************************************************************************/
+#define PAY_SHORT_SEG "SEG"
+/datum/paygrade/misc/seegson
+	name = "Seegson Private Security"
+	prefix = "SEG"
+	paygrade = PAY_SHORT_SEG
+/datum/equipment_preset/other/seegson/standard
+	name = "Seegson Private Security (SMG, EVA)"
+	skills = /datum/skills/private_sec
+	assignment = "Seegson Private Security"
+	paygrades = list(PAY_SHORT_SEG = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/other/seegson/standard/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/seegson/ap, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
+	if(prob(50))
+		add_uscm_cover(new_human)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	var/random_suit = rand(1,2)
+	switch(random_suit)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout(new_human), WEAR_JACKET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
+	var/random_webbing = rand(1,6)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral(new_human), WEAR_ACCESSORY)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg/hp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/seegson/standard/battlerifle
+	name = "Seegson Private Security (M49A, EVA)"
+
+/datum/equipment_preset/other/seegson/standard/battlerifle/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	var/random_suit = rand(1,2)
+	switch(random_suit)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout(new_human), WEAR_JACKET)
+	var/random_webbing = rand(1,6)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/flaregun/full(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/seegson/heavy
+	name = "Seegson Private Security (Machine Gun, EVA)"
+	skills = /datum/skills/private_sec
+	paygrades = list(PAY_SHORT_SEG = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/other/seegson/heavy/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg/tactical/sling, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/heavy(new_human), WEAR_HEAD)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
+	var/random_webbing = rand(1,6)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral(new_human), WEAR_ACCESSORY)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/seegson/light_buck
+	name = "Seegson Private Security (16G Shotgun, EVA)"
+	skills = /datum/skills/private_sec
+
+/datum/equipment_preset/other/seegson/light_buck/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/xm51/withstock, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/spent_buckshot(new_human), WEAR_IN_HELMET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/spent_slug(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/light, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/xm51, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/xm51, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/xm51, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/seegson/heavy/shotgun
+	name = "Seegson Private Security (Slug Shotgun, EVA)"
+	skills = /datum/skills/private_sec
+
+/datum/equipment_preset/other/seegson/heavy/shotgun/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/heavy(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/spent_buckshot(new_human), WEAR_IN_HELMET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/spent_slug(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/beanbag, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/slug, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/slug, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/slug, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/slug, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/beanbag, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/other/seegson/heavy/grenade
+	name = "Seegson Private Security (Canister M92, EVA)"
+	skills = /datum/skills/private_sec
+
+/datum/equipment_preset/other/seegson/heavy/grenade/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/heavy(new_human), WEAR_HEAD)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40/frag_smoke(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/frag(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BELT)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat(new_human), WEAR_IN_BELT)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/baseballbat/metal(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+#define PAY_SHORT_SEG_MED "SEG-MED"
+/datum/paygrade/misc/seegson/med
+	name = "Seegson Hazardous Medical Technician"
+	prefix = "SEG-MED"
+	paygrade = PAY_SHORT_SEG_MED
+
+/datum/equipment_preset/other/seegson/standard/support
+	name = "Seegson Private Security (Medic, EVA)"
+	skills = /datum/skills/private_sec_support
+	assignment = "Seegson Hazardous Medical Technician"
+	paygrades = list(PAY_SHORT_SEG_MED = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/other/seegson/standard/support/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/chestrig, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/water, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver, WEAR_R_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/wrapped/booniebars(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout/medic_armband(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/seegson, WEAR_J_STORE)
+	var/random_webbing = rand(1,4)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral(new_human), WEAR_ACCESSORY)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/liquid(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg/hp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/scalpel, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/surgery/roller, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+#define PAY_SHORT_SEG_TEC "SEG-TEC"
+/datum/paygrade/misc/seegson/tech
+	name = "Seegson Hazardous Engineering Technician"
+	prefix = "SEG-TEC"
+	paygrade = PAY_SHORT_SEG_TEC
+
+/datum/equipment_preset/other/seegson/standard/support/engineer
+	name = "Seegson Private Security (Engineer, EVA)"
+	skills = /datum/skills/private_sec_support
+	assignment = "Seegson Hazardous Engineering Technician"
+	paygrades = list(PAY_SHORT_SEG_TEC = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/other/seegson/standard/support/engineer/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/chestrig, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/analyzer, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/shotgun/buckshot, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/syringe, WEAR_IN_HELMET)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_IN_HELMET)
+	//uniform
+	add_boilersuit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout/engie_armband(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/tactical/sling_masterkey_shotgun, WEAR_J_STORE)
+	var/random_webbing = rand(1,4)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral(new_human), WEAR_ACCESSORY)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/circuitboard/apc, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/cell, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_ACCESSORY)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)
+

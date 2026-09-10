@@ -56,6 +56,21 @@
 	desc = "Colonist - Bluecollar worker, unarmed, japanese"
 	path = /datum/equipment_preset/colonist/bluecollar/japanese
 
+/datum/human_ai_equipment_preset/colonist/bluecollar/eva
+	name = "Colonist - Bluecollar"
+	desc = "Colonist - Bluecollar worker, unarmed. Limited air supply"
+	path = /datum/equipment_preset/colonist/bluecollar/eva
+
+/datum/human_ai_equipment_preset/colonist/bluecollar/eva/japanese
+	name = "TWE Colonist - Emergency Space Suit"
+	desc = "Colonist - Bluecollar worker, unarmed. Limited air supply"
+	path = /datum/equipment_preset/colonist/bluecollar/eva/japanese
+
+/datum/human_ai_equipment_preset/colonist/bluecollar/eva/spanish
+	name = "Latam Colonist - Emergency Space suit"
+	desc = "Colonist - Bluecollar worker, unarmed. Limited air supply"
+	path = /datum/equipment_preset/colonist/bluecollar/eva/spanish
+
 /datum/human_ai_equipment_preset/colonist/miner
 	name = "Colonist - Miner"
 	desc = "Colonist - Unarmed miner"

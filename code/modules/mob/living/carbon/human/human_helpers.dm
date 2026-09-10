@@ -186,10 +186,10 @@
 
 	switch(target_zone)
 		if("head")
-			if(head && head.flags_inventory & NOPRESSUREDMAGE)
+			if(head && head.flags_inventory & NOPRESSUREDMAGE & !(BYPASSFORINJECTOR))
 				. = 0
 		else
-			if(wear_suit && wear_suit.flags_inventory & NOPRESSUREDMAGE)
+			if(wear_suit && wear_suit.flags_inventory & NOPRESSUREDMAGE & !(BYPASSFORINJECTOR))
 				. = 0
 	if(!. && error_msg && user)
 		// Might need re-wording.
@@ -406,6 +406,12 @@ f
 
 /mob/living/carbon/human/proc/has_item_in_ears(item)
 	return (item == wear_l_ear) || (item == wear_r_ear)
+
+/mob/living/carbon/human/proc/helmet_blocking_mouth()
+	if((head && head.flags_inventory & (COVERMOUTH | NOPRESSUREDMAGE)) == (COVERMOUTH | NOPRESSUREDMAGE))
+		return head
+	else
+		return FALSE
 
 /mob/living/carbon/human/can_be_pulled_by(mob/M)
 	var/ignores_stripdrag_flag = FALSE

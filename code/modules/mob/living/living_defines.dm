@@ -54,6 +54,7 @@
 	var/on_fire = FALSE //The "Are we on fire?" var
 	var/fire_stacks = 0 //Tracks how many stacks of fire we have on, max is
 	var/datum/reagent/fire_reagent
+	var/ignore_weather_effects = FALSE //Damage from blizzards and such. Stops the flavour message too.
 
 	var/is_being_hugged = 0 //Is there a hugger humping our face?
 	var/chestburst = 0 // 0: normal, 1: bursting, 2: bursted.
@@ -63,6 +64,8 @@
 	var/list/icon/pipes_shown = list()
 	var/last_played_vent
 	var/is_ventcrawling = 0
+
+	var/can_spacewalk = 1
 
 	var/pull_speed = 0 //How much slower or faster this mob drags as a base
 

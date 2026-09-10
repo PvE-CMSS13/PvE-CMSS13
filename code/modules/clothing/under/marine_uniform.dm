@@ -1097,6 +1097,7 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = BLOCKGASEFFECT
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 
@@ -1114,6 +1115,7 @@
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_LOW

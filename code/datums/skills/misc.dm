@@ -87,3 +87,19 @@ MISCELLANEOUS
 		SKILL_EXECUTION = SKILL_EXECUTION_MAX,
 		SKILL_INTEL = SKILL_INTEL_MAX,
 	)
+
+/datum/skills/private_sec
+	name = "Private Security"
+	skills = list(
+		SKILL_POLICE = SKILL_POLICE_FLASH,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_WEAK,
+	)
+
+/datum/skills/private_sec_support
+	name = "Private Security - Support"
+	skills = list(
+		SKILL_POLICE = SKILL_POLICE_FLASH,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_WEAK,
+		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
+		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
+	)

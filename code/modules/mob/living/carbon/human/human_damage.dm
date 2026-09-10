@@ -479,8 +479,11 @@ This function restores all limbs.
 
 	// Will set our damageoverlay icon to the next level, which will then be set back to the normal level the next mob.Life().
 	updatehealth()
+	// Spacesuit puncturing from external damage/weapons hitting human
+	var/damagetype_copy = damagetype
+	if(firer || used_weapon || (damagetype = "fire") || edge)
+		handle_suit_punctures(damagetype_copy, damage, def_zone)
 	return TRUE
-
 // Heal or damage internal organs
 // Organ has to be either an internal organ by string or a limb with internal organs in.
 /mob/living/carbon/human/apply_internal_damage(damage = 0, organ)

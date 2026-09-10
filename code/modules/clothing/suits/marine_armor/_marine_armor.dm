@@ -754,7 +754,7 @@
 	else armor_overlays["lamp"] = null
 	if(user) user.update_inv_wear_suit()
 
-/obj/item/clothing/suit/marine/MouseDrop(obj/over_object as obj)
+/obj/item/clothing/MouseDrop(obj/over_object as obj)
 	if (ishuman(usr))
 		//makes sure that the clothing is equipped so that we can't drag it into our hand from miles away.
 		if ((flags_item & NODROP) || loc != usr)

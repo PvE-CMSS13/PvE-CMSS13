@@ -17,13 +17,7 @@
 	if(!primary_weapon)
 		return FALSE
 
-	if(primary_weapon.in_chamber)
-		return FALSE
-
-	if(!primary_weapon.current_mag)
-		return TRUE
-
-	if(primary_weapon.current_mag.current_rounds > 0)
+	if(primary_weapon.has_ammunition())
 		return FALSE
 
 	return TRUE

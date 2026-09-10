@@ -154,6 +154,12 @@
 	else if(W.flags_item & CAN_DIG_SHRAPNEL && W.dig_out_shrapnel_check(src, user))
 		return TRUE
 
+	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		//Address the integrated tank on Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/pressure/tank_to_replace = wear_suit
+		if((istype(wear_suit, /obj/item/clothing/suit/space/pressure)))
+			if(tank_to_replace.attackby(W, user))
+				return
 	. = ..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
@@ -377,22 +383,20 @@
 			return
 		visible_message(SPAN_WARNING("[src] has thrown [thrown_thing]."), null, null, 5)
 
-		if(!lastarea)
-			lastarea = get_area(src.loc)
-		if(istype(loc, /turf/open/space))
-			inertia_dir = get_dir(target, src)
-			step(src, inertia_dir)
-
 		if(throw_type == THROW_MODE_HIGH)
 			to_chat(src, SPAN_NOTICE("You prepare to perform a high toss."))
 			if(!do_after(src, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				to_chat(src, SPAN_WARNING("You need to set up the high toss!"))
 				return
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH))
 		else
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw))
+		lastarea = get_area(src.loc)
+		if(!lastarea.gravity)
+			inertia_dir = get_dir(target, src)
+			step(src, inertia_dir)
 
 /mob/living/carbon/fire_act(exposed_temperature, exposed_volume)
 	..()

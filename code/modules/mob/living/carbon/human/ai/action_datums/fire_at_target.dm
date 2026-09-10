@@ -192,6 +192,14 @@
 		stop_firing(brain)
 		return
 
+	if(istype(brain.primary_weapon, /obj/item/weapon/gun/flamer))
+		currently_firing = FALSE
+		COOLDOWN_START(brain, stop_fire_cooldown, fired.get_fire_delay()*3)
+		addtimer(CALLBACK(fired, TYPE_PROC_REF(/obj/item/weapon/gun, start_fire), tied_human), fired.get_fire_delay()*3)
+		stop_firing(brain)
+		qdel(src)
+		return
+
 	if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun))
 		currently_firing = FALSE
 		if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun/pump))

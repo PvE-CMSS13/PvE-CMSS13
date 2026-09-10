@@ -211,7 +211,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	gun_types = list(
 		/obj/item/weapon/gun/flamer,
 	)
-	primary_weight = 7
+	primary_weight = 8
 
 /datum/firearm_appraisal/rpg
 	minimum_range = 2
@@ -227,6 +227,14 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/launcher/rocket,
 	)
 	disposable = FALSE
+
+/datum/firearm_appraisal/grenade_launcher
+	minimum_range = 3
+	optimal_range = 6
+	gun_types = list(
+		/obj/item/weapon/gun/launcher/grenade,
+	)
+	primary_weight = 15
 
 /datum/firearm_appraisal/pistol
 	maximum_range = 9

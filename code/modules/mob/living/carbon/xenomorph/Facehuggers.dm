@@ -4,6 +4,22 @@
 #define MIN_ACTIVE_TIME 5 SECONDS //Time between being dropped and going idle
 #define MAX_ACTIVE_TIME 15 SECONDS
 
+/obj/item/tank/facehugger_airsack
+	name = "strange bladder"
+	desc = "Some sort of weird airsack."
+	icon = 'icons/obj/items/organs.dmi'
+	icon_state = "heart_t1"
+	distribute_pressure = ONE_ATMOSPHERE*2
+	w_class = SIZE_MEDIUM
+	icon
+	ignore_by_auto_toggle = TRUE
+
+/obj/item/tank/facehugger_airsack/get_examine_text(mob/user)
+	. += desc
+	return .
+
+
+
 /obj/item/clothing/mask/facehugger
 	name = "facehugger"
 	desc = "It has some sort of a tube at the end of its tail."
@@ -13,6 +29,8 @@
 	w_class = SIZE_TINY //Note: can be picked up by aliens unlike most other items of w_class below 4
 	flags_inventory = COVEREYES|ALLOWINTERNALS|COVERMOUTH|ALLOWREBREATH|CANTSTRIP
 	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_EYES
+	flags_cold_protection = BODY_FLAG_FACE|BODY_FLAG_EYES|BODY_FLAG_HEAD
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	flags_atom = NO_FLAGS
 	flags_item = NOBLUDGEON
 	throw_range = 1
@@ -27,6 +45,7 @@
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/flags_embryo = NO_FLAGS
 	var/impregnated = FALSE
+	var/obj/item/tank/facehugger_airsack/airsack
 
 	/// The timer for the hugger to jump
 	/// at the nearest human
@@ -46,8 +65,9 @@
 
 /obj/item/clothing/mask/facehugger/Initialize(mapload, hive)
 	. = ..()
+	airsack = new /obj/item/tank/facehugger_airsack(src)
 	var/new_icon = icon_xeno
-	if (hive)
+	if(hive)
 		hivenumber = hive
 
 		var/datum/hive_status/hive_s = GLOB.hive_datum[hivenumber]
@@ -288,10 +308,12 @@
 
 	forceMove(human)
 	icon_state = initial(icon_state)
+	flags_inventory |= ALLOWINTERNALS
 	human.equip_to_slot(src, WEAR_FACE)
+	human.internal = airsack
 	human.update_inv_wear_mask()
-	human.disable_lights()
-	human.disable_special_items()
+	//human.disable_lights()
+	//human.disable_special_items()
 	if(ishuman_strict(human))
 		playsound(loc, human.gender == "male" ? 'sound/misc/facehugged_male.ogg' : 'sound/misc/facehugged_female.ogg' , 25, 0)
 	else if(isyautja(human))
@@ -433,12 +455,15 @@
 	if(!impregnated)
 		icon_state = "[initial(icon_state)]_dead"
 	stat = DEAD
+	flags_inventory &= ~ALLOWINTERNALS
 	flags_inventory &= ~CANTSTRIP
 	visible_message("[icon2html(src, viewers(src))] <span class='danger'>\The [src] curls up into a ball!</span>")
 	playsound(src.loc, 'sound/voice/alien_facehugger_dies.ogg', 25, 1)
 
 	if(ismob(loc)) //Make it fall off the person so we can update their icons. Won't update if they're in containers thou
 		var/mob/holder_mob = loc
+		if(holder_mob.internal == airsack)
+			holder_mob.internal = null
 		holder_mob.drop_inv_item_on_ground(src)
 
 	layer = TURF_LAYER //so dead hugger appears below live hugger if stacked on same tile. (and below nested hosts)

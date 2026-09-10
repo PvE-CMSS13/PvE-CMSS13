@@ -290,6 +290,13 @@
 
 	SEND_SIGNAL(src, COMSIG_TURF_ENTERED, A)
 	SEND_SIGNAL(A, COMSIG_MOVABLE_TURF_ENTERED, src)
+	var/area/check_grav = get_area(src)
+	if(!check_grav.gravity)
+		inertial_drift(A)
+	else
+		if(istype(A, /mob))
+			var/mob/creature = A
+			creature.stop_floating()
 
 	// Let explosions know that the atom entered
 	for(var/datum/automata_cell/explosion/E in autocells)
@@ -315,19 +322,27 @@
 /turf/proc/inertial_drift(atom/movable/A as mob|obj)
 	if(A.anchored)
 		return
+	/*if(istype(A, /obj/item))
+		if(!istype(A.loc, /mob/living))
+			var/obj/item/AB = A
+			if(AB.is_drifting == FALSE)
+				addtimer(CALLBACK(AB, TYPE_PROC_REF(/obj/item, spacemove), get_step(A, A.last_move_dir)), GLOB.spacesuit_config.movement_delay_while_drifting/2)
+				AB.is_drifting = TRUE
+			return*/
 	if(!(A.last_move_dir)) return
 	if((istype(A, /mob/) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
 		var/mob/M = A
 		if(M.Process_Spacemove(1))
-			M.inertia_dir  = 0
-			return
-		spawn(5)
+			if(!M.inertia_dir)
+				return
+		spawn(GLOB.spacesuit_config.movement_delay_while_drifting)
 			if((M && !(M.anchored) && !(M.pulledby) && (M.loc == src)))
-				if(M.inertia_dir)
+				if(!M.Check_Dense_Object())
+					if(M.inertia_dir)
+						step(M, M.inertia_dir)
+						return
+					M.inertia_dir = M.last_move_dir
 					step(M, M.inertia_dir)
-					return
-				M.inertia_dir = M.last_move_dir
-				step(M, M.inertia_dir)
 	return
 
 /turf/proc/levelupdate()

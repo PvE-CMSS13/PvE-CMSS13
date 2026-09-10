@@ -105,6 +105,8 @@
 		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/jungle/suit_slot.dmi'
 	)
 
+/obj/item/weapon/gun/smg/m39/ap
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
 
@@ -802,3 +804,76 @@
 	item_state = "tnailgun"
 	w_class = SIZE_SMALL
 	material_per_repair = 2
+
+/obj/item/weapon/gun/smg/seegson
+
+	name = "\improper pan fed submachinegun"
+	desc = "A pan fed submachinegun with a folding wire stock. Chambered in 9x19mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "sieg_smg"
+	item_state = "sieg_smg"
+	fire_sound = "gun_seig_smg"
+	flags_equip_slot = SLOT_BACK
+	current_mag = /obj/item/ammo_magazine/sieg_smg
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
+	random_spawn_chance = 38
+	random_spawn_under = list(
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/bipod,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/extended_barrel,
+	)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/stock/smg/collapsible/seegson,
+		/obj/item/attachable/stock/smg,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/gyro,
+	)
+
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible/seegson, /obj/item/attachable/sling)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/smg/seegson/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 23, "rail_y" = 18, "under_x" = 22, "under_y" = 15, "stock_x" = 34, "stock_y" = 6, "side_rail_x" = 25, "side_rail_y" = 19)
+
+/obj/item/weapon/gun/smg/seegson/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_3
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
+
+/obj/item/weapon/gun/smg/seegson/ap
+	current_mag = /obj/item/ammo_magazine/sieg_smg/ap

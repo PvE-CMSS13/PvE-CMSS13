@@ -124,6 +124,10 @@
 	display_maptext = TRUE
 	maptext_label = "Ad"
 
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated/New(loc, ...)
+	. = ..()
+	new /obj/item/device/helmet_visor/medical/advanced(loc)
+
 /obj/item/reagent_container/hypospray/autoinjector/dexalinp
 	name = "dexalin plus autoinjector"
 	chemname = "dexalinp"
@@ -236,6 +240,22 @@
 	volume = (HIGH_REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
 	display_maptext = TRUE
 	maptext_label = "In"
+
+/obj/item/reagent_container/hypospray/autoinjector/dexalin
+	name = "stablization autoinjector"
+	chemname = "dexalinp"
+	volume = 60
+	amount_per_transfer_from_this = 20
+	desc = "An autoinjector loaded with 3 uses of Dexalin and Inaprovaline, designed to gradually oxygenate the entire body."
+	display_maptext = TRUE
+	maptext_label = "Dx"
+	mixed_chem = TRUE
+
+/obj/item/reagent_container/hypospray/autoinjector/dexalin/Initialize()
+	. = ..()
+	reagents.add_reagent("dexalin", 30)
+	reagents.add_reagent("inaprovaline", 30)
+	update_icon()
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency
 	name = "emergency autoinjector (CAUTION)"
@@ -364,6 +384,14 @@
 	icon_state = "emptyskill"
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
+
+/obj/item/reagent_container/hypospray/autoinjector/nutriment
+	name = "nutriment autoinjector"
+	chemname = "nutriment"
+	desc = "An autoinjector loaded with 3 uses of a nutrition replacement mix. Not as efficient as eating real food."
+	amount_per_transfer_from_this = 10
+	volume = 10 * INJECTOR_USES
+
 
 /obj/item/reagent_container/hypospray/autoinjector/empty
 	name = "autoinjector (C-T)"

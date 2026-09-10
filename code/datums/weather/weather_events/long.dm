@@ -46,3 +46,45 @@
 /datum/weather_event/blizzard/infinite
 	name = "Blizzard (Infinite)"
 	length = INFINITY
+
+/datum/weather_event/blizzard/infinite/slow
+	name = "GM slow snow"
+	length = INFINITY
+	turf_overlay_icon_state = "msnow"
+	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
+	lightning_chance = 0
+
+/datum/weather_event/blizzard/infinite/medium
+	name = "GM medium snow"
+	length = INFINITY
+	turf_overlay_icon_state = "fsnow"
+	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
+	lightning_chance = 5
+
+/datum/weather_event/blizzard/infinite/fast
+	name = "GM fast snow"
+	length = INFINITY
+	turf_overlay_icon_state = "bsnow"
+	lightning_chance = 10
+
+/datum/weather_event/blizzard/infinite/fog
+	name = "GM fog"
+	length = INFINITY
+	turf_overlay_icon_state = "fog"
+	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
+	lightning_chance = 5
+	turf_overlay_alpha = 200
+
+/datum/weather_event/blizzard/infinite/rain
+	name = "GM smooth rain"
+	length = INFINITY
+	turf_overlay_icon_state = "rain"
+	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
+	lightning_chance = 5
+
+/datum/weather_event/blizzard/infinite/rain_drops
+	name = "GM rain drops"
+	length = INFINITY
+	turf_overlay_icon_state = "splash"
+	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
+	lightning_chance = 5

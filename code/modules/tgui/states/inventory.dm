@@ -12,7 +12,8 @@
 
 GLOBAL_DATUM_INIT(inventory_state, /datum/ui_state/inventory_state, new)
 
-/datum/ui_state/inventory_state/can_use_topic(src_object, mob/user)
+/datum/ui_state/inventory_state/can_use_topic(src_object, mob/user, keep_open_if_within_distance)
 	if(!(src_object in user))
-		return UI_CLOSE
+		if(!(keep_open_if_within_distance && (get_dist(get_turf(src_object), get_turf(user)) <= keep_open_if_within_distance )))
+			return UI_CLOSE
 	return user.shared_ui_interaction(src_object)

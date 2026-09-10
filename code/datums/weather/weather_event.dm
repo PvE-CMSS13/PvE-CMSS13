@@ -12,6 +12,7 @@
 
 	//// Optional vars
 	var/turf_overlay_icon_state // The icon to set on the VFX holder instanced into every turf at round start
+	var/turf_overlay_icon = 'icons/effects/weather.dmi'
 	var/turf_overlay_alpha = 255
 
 	var/effect_message = "tell a coder to fix this | WEATHER EVENT EFFECT MESSAGE"
@@ -41,8 +42,17 @@
 
 /datum/weather_event/proc/process_mob_effect(mob/living/carbon/affected_mob, delta_time = 1)
 	if(effect_message && prob(WEATHER_MESSAGE_PROB))
-		to_chat(affected_mob, SPAN_WARNING(effect_message))
-	if(damage_per_tick)
-		var/calculated_damage = (isxeno(affected_mob) ? damage_per_tick * 3 : damage_per_tick) * delta_time
-		affected_mob.apply_damage(calculated_damage, damage_type)
-		affected_mob.last_damage_data = create_cause_data("Exposure")
+		if(affected_mob.ignore_weather_effects)
+			return
+		if(ishuman(affected_mob))
+			var/mob/living/carbon/human/affected_human = affected_mob
+			if(affected_human.check_for_weather_protection())
+				if(prob(50))
+					to_chat(affected_mob, SPAN_DANGER(pick("Your equipment protects you from the weather conditions","Your suit buffers the harmful weather.", "The extreme weather beats against your protective clothing")))
+				return
+			to_chat(affected_mob, SPAN_DANGER(effect_message))
+			if(damage_per_tick)
+				var/calculated_damage = (isxeno(affected_mob) ? damage_per_tick * 3 : damage_per_tick) * delta_time
+				affected_mob.apply_damage(calculated_damage, damage_type)
+				affected_mob.last_damage_data = create_cause_data("Exposure")
+

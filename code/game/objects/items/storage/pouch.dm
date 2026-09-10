@@ -465,6 +465,10 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
 
+/obj/item/storage/pouch/magazine/pistol/large/vp70/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
+
 /obj/item/storage/pouch/magazine/pistol/large/vp78/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
@@ -695,6 +699,12 @@
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+
+/obj/item/storage/pouch/medical/full/surgery/roller/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/roller(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
 /obj/item/storage/pouch/medical/socmed
@@ -1313,7 +1323,9 @@
 		/obj/item/device/analyzer,
 		/obj/item/explosive/plastic,
 		/obj/item/device/lightreplacer,
+		/obj/item/tank/emergency_oxygen,
 	)
+	cant_hold = list(/obj/item/tank/emergency_oxygen/double, /obj/item/tank/emergency_oxygen/engi)
 	bypass_w_limit = list(
 		/obj/item/tool/shovel/etool,
 		/obj/item/device/lightreplacer,

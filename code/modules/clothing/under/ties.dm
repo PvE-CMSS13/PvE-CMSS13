@@ -1713,6 +1713,16 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/small/space
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/space
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/space/fill_preset_inventory()
+	new /obj/item/tank/emergency_oxygen/engi(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalin(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/nutriment(src)
+
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
@@ -1740,6 +1750,17 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
+/obj/item/clothing/accessory/storage/webbing/m3/m40/frag_smoke
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/frag_smoke
+
+/obj/item/storage/internal/accessory/black_vest/m3grenade/frag_smoke/fill_preset_inventory()
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
 	name = "\improper M3-R Pattern Magazine Webbing"
@@ -1903,6 +1924,9 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/space
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/space
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"

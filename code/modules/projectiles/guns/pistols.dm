@@ -86,6 +86,9 @@
 /obj/item/weapon/gun/pistol/m4a3/training
 	current_mag = /obj/item/ammo_magazine/pistol/rubber
 
+/obj/item/weapon/gun/pistol/m4a3/ap
+	current_mag = /obj/item/ammo_magazine/pistol/ap
+
 /obj/item/weapon/gun/pistol/m4a3/unloaded
 	current_mag = null
 

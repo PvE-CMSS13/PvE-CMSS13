@@ -957,6 +957,82 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 	return TRUE
 
+/datum/equipment_preset/proc/add_colonist_eva_suit_set(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/random_colour = rand(1,6)
+	var/helmetpath
+	var/suitpath
+	switch(random_colour)
+		if(1)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure
+			suitpath = /obj/item/clothing/suit/space/pressure
+		if(2)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure/cyan
+			suitpath = /obj/item/clothing/suit/space/pressure/cyan
+		if(3)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure/orange
+			suitpath = /obj/item/clothing/suit/space/pressure/orange
+		if(4)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure/red
+			suitpath = /obj/item/clothing/suit/space/pressure/red
+		if(5)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure/yellow
+			suitpath = /obj/item/clothing/suit/space/pressure/yellow
+		if(6)
+			helmetpath = /obj/item/clothing/head/helmet/marine/pressure
+			suitpath = /obj/item/clothing/suit/space/pressure/dark
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+/datum/equipment_preset/proc/add_rebel_eva_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/helmet/marine/pressure,
+		/obj/item/clothing/head/helmet/marine/pressure/cyan,
+		/obj/item/clothing/head/helmet/marine/pressure/orange,
+		/obj/item/clothing/head/helmet/marine/pressure/red,
+		/obj/item/clothing/head/helmet/marine/pressure/yellow,
+		/obj/item/clothing/head/helmet/space,
+		/obj/item/clothing/head/helmet/space/odyssey)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+	if(prob(80))
+		spawn_army_fluff_items(new_human)
+
+/datum/equipment_preset/proc/add_rebel_eva_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/space/pressure,
+		/obj/item/clothing/suit/space/pressure/cyan,
+		/obj/item/clothing/suit/space/pressure/dark,
+		/obj/item/clothing/suit/space/pressure/orange,
+		/obj/item/clothing/suit/space/pressure/red,
+		/obj/item/clothing/suit/space/pressure/yellow,
+
+		)
+	var/obj/item/clothing/suit/spacesuit = new suitpath
+	new_human.equip_to_slot_or_del(spacesuit, WEAR_JACKET)
+	var/random_paint = rand(1,3)
+	switch(random_paint)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint/usflag(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint/uaflag(new_human), WEAR_ACCESSORY)
+			//You get nothing, good day sir
+	if(prob(50))
+		var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
+		var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
+		spacesuit.attach_accessory(src, new new_band)
+
+/datum/equipment_preset/proc/add_eva_suit_accessory(mob/living/carbon/human/new_human)
+	if(prob(40))
+		var/list/possible_paints = subtypesof(/obj/item/clothing/accessory/paint)
+		var/obj/item/clothing/accessory/armband/new_paint = pick(possible_paints)
+		new_human.equip_to_slot_or_del(new new_paint, WEAR_ACCESSORY)
+	var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
+	var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
+	new_human.equip_to_slot_or_del(new new_band, WEAR_ACCESSORY)
+
+
 //*****************************************************************************************************/
 
 //MERC SHIT

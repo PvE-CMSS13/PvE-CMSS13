@@ -229,6 +229,19 @@
 		var/mob/living/carbon/human/human = target
 		var/obj/limb/limb = human.get_limb(user.zone_selected)
 
+		//Repair Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/suit_to_repair = human.wear_suit
+		if((istype(human.wear_suit, /obj/item/clothing/suit/space)))
+			if(user.a_intent == INTENT_HELP)
+				if(suit_to_repair.can_breach && suit_to_repair.damage > 0)
+					if(!do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+						return
+					suit_to_repair.attackby(src, target)
+					return
+				else
+					to_chat(user, SPAN_NOTICE("The [suit_to_repair] is already patched!"))
+
+
 		if (!limb) return
 		if(!(limb.status & (LIMB_ROBOT|LIMB_SYNTHSKIN)) || user.a_intent != INTENT_HELP)
 			return ..()

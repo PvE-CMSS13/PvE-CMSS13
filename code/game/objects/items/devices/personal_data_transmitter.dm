@@ -56,32 +56,45 @@
 			overlays += image('icons/obj/items/devices.dmi', "+pdt_locator_tube_overlay_bracelet_unlinked")
 
 /obj/item/device/pdt_locator_tube/attackby(obj/item/W, mob/user)
+	if(!can_insert_battery(user, W, battery))
+		return ..()
+	else
+		battery = W
+		update_icon()
+
+/obj/item/device/pdt_locator_tube/attack_hand(mob/user)
+	if(!can_remove_battery(user, battery, TRUE))
+		return ..()
+	else
+		battery = null
+		update_icon()
+
+/obj/item/proc/can_remove_battery(mob/user, obj/item/cell/battery, needs_to_be_in_hand = TRUE)
+	if(needs_to_be_in_hand)
+		if(user.get_inactive_hand() != src)
+			return FALSE
+	if(!battery)
+		to_chat(user, SPAN_WARNING("\The [src] doesn't have a battery installed."))
+		return FALSE
+	battery.update_icon()
+	user.put_in_hands(battery)
+	to_chat(user, SPAN_NOTICE("You pull \the [battery] out of \the [src]."))
+	playsound(src, 'sound/machines/pda_button1.ogg', 15, TRUE)
+	return TRUE
+
+/obj/item/proc/can_insert_battery(mob/user, obj/item/W, obj/item/cell/battery)
 	if(istype(W, /obj/item/cell/crap))
 		if(battery)
 			to_chat(user, SPAN_WARNING("\The [src] already has a battery installed."))
-			return
+			return FALSE
 		user.drop_inv_item_to_loc(W, src)
 		battery = W
 		to_chat(user, SPAN_NOTICE("You insert \the [battery] into \the [src]."))
 		playsound(src, 'sound/machines/pda_button2.ogg', 15, TRUE)
-		update_icon()
+		return TRUE
 	else if(istype(W, /obj/item/cell))
 		to_chat(user, SPAN_NOTICE("That industrial-sized battery is WAY too big for the tiny battery slot."))
-	return ..()
-
-/obj/item/device/pdt_locator_tube/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src)
-		if(!battery)
-			to_chat(user, SPAN_WARNING("\The [src] doesn't have a battery installed."))
-			return
-		battery.update_icon()
-		user.put_in_hands(battery)
-		to_chat(user, SPAN_NOTICE("You pull \the [battery] out of \the [src]."))
-		battery = null
-		playsound(src, 'sound/machines/pda_button1.ogg', 15, TRUE)
-		update_icon()
-		return
-	return ..()
+		return FALSE
 
 /obj/item/device/pdt_locator_tube/attack_self(mob/user)
 	..()

@@ -25,6 +25,11 @@
 
 	// Convert it to an edible form, yum yum.
 	if(!robotic && user.a_intent == INTENT_HELP && user.zone_selected == "mouth")
+		if(istype(user, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = user
+			if(H.helmet_blocking_mouth())
+				to_chat(H, SPAN_DANGER("Your [H.head] stops you from eating the [src]."))
+				return
 		bitten(user)
 		return
 

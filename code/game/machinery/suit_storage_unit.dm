@@ -302,28 +302,28 @@
 	starting_suit_type = /obj/item/clothing/suit/space/odyssey
 	starting_helmet_type = /obj/item/clothing/head/helmet/space/odyssey
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen
+	starting_tank_type = /obj/item/tank/emergency_oxygen/engi
 
 /obj/structure/machinery/suit_storage_unit/standard_unit
 	starting_suit_type = /obj/item/clothing/suit/space
 	starting_helmet_type = /obj/item/clothing/head/helmet/space
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen
+	starting_tank_type = /obj/item/tank/emergency_oxygen/double
 
 /obj/structure/machinery/suit_storage_unit/pressure_suit
 	starting_suit_type = /obj/item/clothing/suit/space/pressure
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure
+	starting_helmet_type = /obj/item/clothing/head/helmet/marine/pressure
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen
+	starting_tank_type = /obj/item/tank/emergency_oxygen/double
 
 /obj/structure/machinery/suit_storage_unit/pressure_suit/uscm
 	starting_suit_type = /obj/item/clothing/suit/space/pressure/uscm
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/uscm
+	starting_helmet_type = /obj/item/clothing/head/helmet/marine/pressure/uscm
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen/yellow
+	starting_tank_type = /obj/item/tank/emergency_oxygen/double
 
 /obj/structure/machinery/suit_storage_unit/pressure_suit/upp
 	starting_suit_type = /obj/item/clothing/suit/space/pressure/upp
-	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/upp
+	starting_helmet_type = /obj/item/clothing/head/helmet/marine/pressure/upp
 	starting_mask_type = /obj/item/clothing/mask/breath
-	starting_tank_type = /obj/item/tank/oxygen/yellow
+	starting_tank_type = /obj/item/tank/emergency_oxygen/double

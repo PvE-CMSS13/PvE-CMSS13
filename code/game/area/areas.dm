@@ -8,7 +8,7 @@
 /area
 	var/atmosalm = 0
 	var/poweralm = 1
-
+	var/gravity = 1
 	level = null
 	name = "Unknown"
 	icon = 'icons/turf/areas.dmi'
@@ -389,7 +389,12 @@
 //atmos related procs
 
 /area/return_air()
-	return list(gas_type, temperature, pressure)
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = O2STANDARD
+	else if(gas_type == GAS_TYPE_OXYGEN || gas_type == GAS_TYPE_N2O)
+		proportion_is_oxygen = TRUE
+	return list(gas_type, temperature, 0.1, proportion_is_oxygen, pressure)
 
 /area/return_pressure()
 	return pressure

@@ -40,6 +40,17 @@
 		var/obj/item/clothing/mask/new_mask = pick(possible_masks)
 		new_human.equip_to_slot_or_del(new new_mask, WEAR_FACE)
 
+/datum/equipment_preset/proc/spawn_army_fluff_items(mob/living/carbon/human/new_human)
+	var/obj/item/helmet_accessory = pick(GLOB.allowed_helmet_items)
+	new_human.equip_to_slot_or_del(new helmet_accessory, WEAR_IN_HELMET)
+	if(prob(50))
+		var/obj/item/helmet_accessory_two = pick(GLOB.allowed_helmet_items)
+		new_human.equip_to_slot_or_del(new helmet_accessory_two, WEAR_IN_HELMET)
+	var/list/possible_masks = subtypesof(/obj/item/clothing/mask/rebreather) + subtypesof(/obj/item/clothing/mask/tornscarf)
+	if(prob(50))
+		var/obj/item/clothing/mask/new_mask = pick(possible_masks)
+		new_human.equip_to_slot_or_del(new new_mask, WEAR_FACE)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/usa/trooper

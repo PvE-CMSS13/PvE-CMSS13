@@ -29,6 +29,40 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	key = STRIPPABLE_ITEM_HEAD
 	item_slot = SLOT_HEAD
 
+/datum/strippable_item/mob_item_slot/head/get_alternate_action(atom/source, mob/user)
+	if (!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if (sourcehuman.check_for_oxygen_mask())
+		return "toggle_internals"
+	return
+
+/datum/strippable_item/mob_item_slot/head/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) && (sourcehuman.stat == DEAD || sourcehuman.health < HEALTH_THRESHOLD_CRIT) && !sourcehuman.get_target_lock(user.faction_group))
+		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
+		return
+
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
+
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
+		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
+
+
 /datum/strippable_item/mob_item_slot/back
 	key = STRIPPABLE_ITEM_BACK
 	item_slot = SLOT_BACK
@@ -38,17 +72,10 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	item_slot = SLOT_FACE
 
 /datum/strippable_item/mob_item_slot/mask/get_alternate_action(atom/source, mob/user)
-	var/obj/item/clothing/mask = get_item(source)
-	if (!istype(mask))
-		return
 	if (!ishuman(source))
 		return
 	var/mob/living/carbon/human/sourcehuman = source
-	if (istype(sourcehuman.s_store, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.back, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.belt, /obj/item/tank))
+	if (sourcehuman.check_for_oxygen_mask())
 		return "toggle_internals"
 	return
 
@@ -62,37 +89,23 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
 		return
 
-	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
-	if(sourcehuman.internal)
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to disable [sourcehuman]'s internals</B>"), null, null, 3)
-	else
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to enable [sourcehuman]'s internals.</B>"), null, null, 3)
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
 
-	if(!do_after(user, POCKET_STRIP_DELAY, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
 		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
+	//sourcehuman.toggle_internals(user, tank_choice)
 
-	if(sourcehuman.internal)
-		sourcehuman.internal.add_fingerprint(user)
-		sourcehuman.internal = null
-		sourcehuman.visible_message("[sourcehuman] is no longer running on internals.", max_distance = 1)
-		return
 
-	if(!istype(sourcehuman.wear_mask, /obj/item/clothing/mask))
-		return
-
-	if(istype(sourcehuman.back, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.back
-	else if(istype(sourcehuman.s_store, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.s_store
-	else if(istype(sourcehuman.belt, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.belt
-
-	if(!sourcehuman.internal)
-		return
-
-	sourcehuman.visible_message(SPAN_NOTICE("[sourcehuman] is now running on internals."), max_distance = 1)
-	sourcehuman.internal.add_fingerprint(user)
 
 /datum/strippable_item/mob_item_slot/eyes
 	key = STRIPPABLE_ITEM_EYES

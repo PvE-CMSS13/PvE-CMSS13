@@ -956,6 +956,76 @@
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space
+	name = "\improper ColMarTech Automated EVA Equipment"
+	desc = "An automated supply rack hooked up to a small storage of various utilities and tools, specifically for use in space enviroments.."
+	req_access = list()
+	req_one_access = list()
+	hackable = TRUE
+	icon_state = "spec_gear"
+	vend_x_offset = 2
+	vend_y_offset = 1
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space/populate_product_list(scale)
+	listed_products = list(
+		list("FOOD", -1, null, null),
+		list("Nutrition Autoinjector", floor(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/nutriment, VENDOR_ITEM_RECOMMENDED),
+
+		list("MEDICAL", -1, null, null),
+		list("Dexalin and Inaprovaline Injector", round(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/dexalin, VENDOR_ITEM_REGULAR),
+
+		list("SUIT REPAIR", -1, null, null),
+		list("Welding Tool", round(scale * 3), /obj/item/tool/weldingtool, VENDOR_ITEM_RECOMMENDED),
+		list("Cable Coil", round(scale * 4), /obj/item/stack/cable_coil, VENDOR_ITEM_RECOMMENDED),
+
+		list("ADDITIONAL EQUIPMENT", -1, null, null),
+		list("Folded Emergency Spacesuit", round(scale * 12), /obj/item/prop/folded_emergency_spacesuit, VENDOR_ITEM_REGULAR),
+		list("Magnetic Boots", round(scale * 3), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
+		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
+		list("M40 MFHS Metal Foam Grenade", round(scale * 5), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
+
+		list("TOOLBELTS", -1, null, null),
+		list("M276 Pattern Toolbelt Rig", 2, /obj/item/storage/belt/utility/full, VENDOR_ITEM_REGULAR),
+
+		list("AIR SUPPLY", -1, null, null),
+		list("Breath Mask", round(scale * 5), /obj/item/clothing/mask/breath, VENDOR_ITEM_REGULAR),
+		list("Medium Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/double, VENDOR_ITEM_RECOMMENDED),
+		list("Small Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/engi, VENDOR_ITEM_REGULAR),
+		list("Emergency Oxygen Tank", round(scale * 10), /obj/item/tank/emergency_oxygen, VENDOR_ITEM_REGULAR),
+//		list("Jetpack (Oxygen Internals)", round(scale * 2), /obj/item/tank/jetpack/oxygen, VENDOR_ITEM_REGULAR),
+
+		list("FLARE AND LIGHT", -1, null, null),
+		list("Combat Flashlight", round(scale * 2), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
+		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
+		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 2), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null),
+		list("Extinguisher", round(scale * 2), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
+		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
+		list("Spare Magnetic Boots/PDT Batteries.", round(scale * 4), /obj/item/cell/crap, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Gas Analyzer", round(scale * 5), /obj/item/device/analyzer, VENDOR_ITEM_REGULAR),
+		list("Inflatable Barrier Case", round(scale * 1), /obj/item/storage/briefcase/inflatable, VENDOR_ITEM_REGULAR),
+
+		list("SUIT ARMBANDS", -1, null, null),
+		list("Red Armband", round(scale * 12), /obj/item/clothing/accessory/armband, VENDOR_ITEM_REGULAR),
+		list("Dark Red Armband", round(scale * 12), /obj/item/clothing/accessory/armband/nurse, VENDOR_ITEM_REGULAR),
+		list("Brown Armband", round(scale * 12), /obj/item/clothing/accessory/armband/cargo, VENDOR_ITEM_REGULAR),
+		list("Orange Armband", round(scale * 12),  /obj/item/clothing/accessory/armband/engine, VENDOR_ITEM_REGULAR),
+		list("Purple Armband", round(scale * 12), /obj/item/clothing/accessory/armband/science, VENDOR_ITEM_REGULAR),
+		list("Green Armband", round(scale * 12), /obj/item/clothing/accessory/armband/hydro, VENDOR_ITEM_REGULAR),
+		list("White Armband", round(scale * 12), /obj/item/clothing/accessory/armband/med, VENDOR_ITEM_REGULAR),
+		list("White and Green Armband", round(scale * 12), /obj/item/clothing/accessory/armband/medgreen, VENDOR_ITEM_REGULAR),
+		list("Solar Devils Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/devils, VENDOR_ITEM_REGULAR),
+		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
+		)
+
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/rmc
 	name = "\improper WeyTech Automated Utilities Section Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Royal Marine."
@@ -1007,7 +1077,6 @@
 		list("Two-point Sling", round(scale * 2), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
-
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 

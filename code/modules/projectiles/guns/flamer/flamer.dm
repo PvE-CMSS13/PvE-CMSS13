@@ -425,10 +425,6 @@
 /obj/item/weapon/gun/flamer/weak
 	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
 
-/obj/item/weapon/gun/flamer/weak/set_gun_config_values()
-	. = ..()
-	set_fire_delay(FIRE_DELAY_TIER_5) // less full auto
-
 /obj/item/weapon/gun/flamer/M240T
 	name = "\improper M240-T incinerator unit"
 	desc = "An improved version of the M240A1 incinerator unit, the M240-T model is capable of dispersing a larger variety of fuel types."
