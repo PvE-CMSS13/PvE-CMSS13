@@ -126,8 +126,8 @@
 	title = JOB_PMCPLAT_SMALL_STANDARD
 	gear_preset = /datum/equipment_preset/uscm/pmc
 	job_options = null
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 
 /obj/effect/landmark/start/marine/pmc/small
 	name = JOB_PMCPLAT_SMALL_STANDARD

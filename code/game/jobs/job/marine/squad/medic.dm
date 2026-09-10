@@ -137,7 +137,8 @@
 
 /datum/job/marine/medic/ai/pmc/small
 	title = JOB_PMCPLAT_SMALL_MEDIC
-	gear_preset = /datum/equipment_preset/uscm/pmc/med
+	entry_message_body = "You tend the wounds of your fellow corporate military contractors and make sure they are healthy and combat-capable. You may be a fully-fledged doctor, but the Hippocratic Oath is easily set aside for a tempting enough salary.<br><b>You remember that you've stored your personal gear and uniform are located in your medical office.</b>"
+	gear_preset = /datum/equipment_preset/uscm/pmc/med/small
 	job_options = null
 
 /obj/effect/landmark/start/marine/medic/pmc/small

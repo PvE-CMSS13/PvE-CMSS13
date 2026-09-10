@@ -33,6 +33,9 @@
 /atom/movable/screen/text/screen_text/picture/azure
 	image_to_play = "azure_15"
 
+/atom/movable/screen/text/screen_text/picture/azure_small
+	image_to_play = "azure_16"
+
 /atom/movable/screen/text/screen_text/picture/snake_eater
 	image_to_play = "snake_eater"
 

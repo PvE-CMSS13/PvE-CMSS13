@@ -505,8 +505,11 @@
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56A3 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56A3 Smartgun System. Ruggedized electronics and a slightly lighter frame are the only differences between this and the standard UA-issue A2 model.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	flags_equip_slot = SLOT_BACK|SLOT_BLOCK_SUIT_STORE
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	drain = 30	//Slightly more power effictient than the basic model
+	aim_slowdown = SLOWDOWN_AMT_GREENFIRE //Jank, but it saves making a new define for a marginal decrease in slowdown
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
 	. = ..()

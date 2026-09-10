@@ -32,6 +32,7 @@
 		var/squad_clr = H.assigned_squad.equipment_color
 		switch(GET_DEFAULT_ROLE(_role))
 			if(JOB_SQUAD_MEDIC) hud_icon_state = "med"
+			if(JOB_SQUAD_ENGI) hud_icon_state = "engi"
 			if(JOB_SQUAD_SMARTGUN) hud_icon_state = "gun"
 			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
 			if(JOB_SQUAD_LEADER) hud_icon_state = "leader_a"

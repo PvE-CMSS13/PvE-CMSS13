@@ -484,6 +484,20 @@
 	new /obj/item/tool/surgery/retractor(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 
+/obj/item/storage/firstaid/softpack/surgical/pmc
+	name = "field surgery pack"
+	desc = "A soft first-aid pack containing tools and equipment necessary for surgically tending to major wounds in the field."
+
+/obj/item/storage/firstaid/softpack/surgical/pmc/fill_preset_inventory()
+	new /obj/item/tool/surgery/cautery(src)
+	new /obj/item/tool/surgery/bonegel(src)
+	new /obj/item/tool/surgery/bonegel(src)
+	new /obj/item/tool/surgery/bonesetter(src)
+	new /obj/item/tool/surgery/FixOVein(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+
 /obj/item/storage/firstaid/softpack/surgical/upp
 	icon_state = "softpack_gray_upp"
 	open_state = "softpack_empty_upp"

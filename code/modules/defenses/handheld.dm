@@ -153,6 +153,11 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/mini/wy
 	deployment_time = 2 SECONDS
 
+/obj/item/defenses/handheld/sentry/wy/mini/strikeforce
+	name = "handheld WY 14-GRA3 mini sentry"
+	defense_type = /obj/structure/machinery/defenses/sentry/mini/wy/strikeforce
+	deployment_time = 1 SECONDS
+
 /obj/item/defenses/handheld/sentry/wy/heavy
 	name = "handheld WY 2-ADT-A3 heavy sentry"
 	icon = 'icons/obj/structures/machinery/defenses/wy_heavy.dmi'

@@ -73,6 +73,18 @@
 /datum/job/marine/engineer/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
 
+/datum/job/marine/engineer/ai/pmc/small
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_PMCPLAT_SMALL_ENGI
+	gear_preset = /datum/equipment_preset/uscm/pmc/eng
+	job_options = null
+
+/obj/effect/landmark/start/marine/engineer/ai/pmc/small
+	name = JOB_PMCPLAT_SMALL_ENGI
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/engineer/ai/pmc/small
+
 /datum/job/marine/engineer/ai/rmc
 	total_positions = 1
 	spawn_positions = 1

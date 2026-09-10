@@ -978,6 +978,17 @@
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
 
+/obj/structure/machinery/defenses/sentry/mini/wy/strikeforce
+	name = "WY 14-GRA3 Mini Sentry"
+	fire_delay = 0.1 SECONDS
+	damage_mult = 0.8
+	disassemble_time = 1 SECONDS
+	handheld_type = /obj/item/defenses/handheld/sentry/wy/mini/strikeforce
+	ammo = new /obj/item/ammo_magazine/sentry/wy/mini
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
 /obj/structure/machinery/defenses/sentry/dmr/wy
 	name = "WY 2-ADT-A3 Heavy Sentry"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities used by the PMC."

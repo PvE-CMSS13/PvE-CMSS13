@@ -408,12 +408,16 @@
 
 /datum/squad/marine/pmc/secondary
 	name = SQUAD_PMCPLT_2
+	equipment_color = "#67d692"
 	chat_color = "#0fc777"
 	minimap_color = MINIMAP_SQUAD_ECHO
 	usable = FALSE
 
 /datum/squad/marine/pmc/small
 	name = SQUAD_PMCPLT_SMALL
+	equipment_color = "#4148c8"
+	chat_color = "#828cff"
+	minimap_color = MINIMAP_SQUAD_DELTA
 
 /datum/squad/marine/pmc/New()
 	. = ..()

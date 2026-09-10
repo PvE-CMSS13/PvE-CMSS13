@@ -53,3 +53,20 @@
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_MEDIC
 	skills = /datum/skills/combat_medic_pve
+
+/datum/equipment_preset/uscm/pmc/med/small
+	name = "Trauma Surgeon"
+	paygrades = list("PMC-DOC" = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "DOC"
+	assignment = JOB_PMCPLAT_SMALL_MEDIC
+	skills = /datum/skills/pmc/doctor
+
+/datum/equipment_preset/uscm/pmc/eng
+	name = "Technical Specialist"
+	paygrades = list("PMC-TEC" = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "TEC"
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING)
+	assignment = JOB_PMCPLAT_SMALL_ENGI
+	idtype = /obj/item/card/id/pmc
+	rank = JOB_SQUAD_ENGI
+	skills = /datum/skills/combat_engineer
