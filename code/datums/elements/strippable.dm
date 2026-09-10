@@ -188,6 +188,30 @@
 /// `has_alternate_action` needs to be TRUE.
 /datum/strippable_item/proc/alternate_action(atom/source, mob/user)
 
+/datum/strippable_item/proc/get_storage_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return null
+	return "open_storage"
+
+/datum/strippable_item/proc/storage_action(atom/source, mob/user)
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	if(!ishuman(source))
+		return
+	var/open_timer = 3 SECONDS
+	var/mob/living/carbon/human/sourcehuman = source
+	if(sourcehuman.is_mob_incapacitated())
+		open_timer = 1 SECONDS
+	var/mob/living/carbon/human/human = user
+	var/obj/item/storage/storage = get_item(source)
+	if(!user.action_busy) //Not doing any timed actions?
+		user.visible_message(SPAN_WARNING("[user] tries to open [sourcehuman]'s [storage]."), SPAN_NOTICE("You try to open [sourcehuman]'s [storage]."))
+		if(!do_after(user, open_timer, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+			to_chat(human, SPAN_WARNING("You were interrupted!"))
+			return
+	storage.open(user)
+
 /// Returns whether or not this item should show.
 /datum/strippable_item/proc/should_show(atom/source, mob/user)
 	return TRUE
@@ -379,7 +403,7 @@
 		result["icon"] = icon2base64(icon(item.icon, item.icon_state, frame = 1))
 		result["name"] = item.name
 		result["alternate"] = item_data.get_alternate_action(owner, user)
-
+		result["storage"] = item_data.get_storage_action(owner, user)
 		items[strippable_key] = result
 
 	data["items"] = items
@@ -516,6 +540,24 @@
 
 			LAZYREMOVEASSOC(interactions, user, key)
 
+		if ("storage")
+			var/key = params["key"]
+			var/datum/strippable_item/strippable_item = strippable.items[key]
+
+			if (isnull(strippable_item))
+				return
+			if (!strippable_item.should_show(owner, user))
+				return
+			if (strippable_item.get_obscuring(owner) == STRIPPABLE_OBSCURING_COMPLETELY)
+				return
+			var/obj/item/item = strippable_item.get_item(owner)
+			if (isnull(item))
+				return
+			if (isnull(strippable_item.get_storage_action(owner, user)))
+				return
+			LAZYORASSOCLIST(interactions, user, key)
+			strippable_item.storage_action(owner, user)
+			LAZYREMOVEASSOC(interactions, user, key)
 /datum/strip_menu/ui_host(mob/user)
 	return owner
 

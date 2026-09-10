@@ -64,3 +64,9 @@ $background-color: rgba(0, 0, 0, 0.33) !default;
   right: 0;
   z-index: 2;
 }
+.StripMenu__storageaction {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
