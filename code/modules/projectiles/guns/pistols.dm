@@ -86,6 +86,9 @@
 /obj/item/weapon/gun/pistol/m4a3/training
 	current_mag = /obj/item/ammo_magazine/pistol/rubber
 
+/obj/item/weapon/gun/pistol/m4a3/ap
+	current_mag = /obj/item/ammo_magazine/pistol/ap
+
 /obj/item/weapon/gun/pistol/m4a3/unloaded
 	current_mag = null
 
@@ -648,6 +651,14 @@
 /obj/item/weapon/gun/pistol/vp78/rmc/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/pistol/vp78/whiteout
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
+	starting_attachment_types = list(/obj/item/attachable/heavy_barrel, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/vp78/commando
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
+	starting_attachment_types = list(/obj/item/attachable/reflex)
+
 //-------------------------------------------------------
 /*
 Auto 9 The gun RoboCop uses. A better version of the VP78, with more rounds per magazine. Probably the best pistol around, but takes no attachments.
@@ -719,6 +730,11 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 /obj/item/weapon/gun/pistol/b92fs/modded
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
 
+/obj/item/weapon/gun/pistol/vp78/army
+	starting_attachment_types = list(/obj/item/attachable/extended_barrel, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/vp78/army/heap
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/heap
 
 //-------------------------------------------------------
 //DEAGLE //This one is obvious.

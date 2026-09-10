@@ -134,6 +134,7 @@
 
 /datum/behavior_delegate/hellhound_base
 	name = "Base Hellhound Behavior Delegate"
+	var/mob/pred_owner = ""
 
 /datum/behavior_delegate/hellhound_base/melee_attack_additional_effects_self()
 	..()
@@ -141,3 +142,9 @@
 	var/datum/action/xeno_action/onclick/xenohide/hide = get_action(bound_xeno, /datum/action/xeno_action/onclick/xenohide)
 	if(hide)
 		hide.post_attack()
+
+/datum/behavior_delegate/hellhound_base/append_to_stat()
+	if(!pred_owner)
+		. += "You have no owner, try to listen to any other yautja..."
+	else
+		. += "Your owner is [pred_owner.real_name]"

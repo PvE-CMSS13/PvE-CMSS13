@@ -11,6 +11,8 @@
 	ai_human = parent
 	if(!istype(ai_human))
 		return COMPONENT_INCOMPATIBLE
+	if(!SSticker.mode)
+		return
 
 	if(!human_ai_has_spawned && !(SSticker.mode.toggleable_flags & MODE_HUMAN_AI_TWEAKS))
 		human_ai_has_spawned = TRUE

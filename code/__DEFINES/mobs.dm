@@ -19,8 +19,8 @@
 #define HEAT_DAMAGE_LEVEL_3 8 //Amount of damage applied when your body temperature passes the 1000K point
 
 #define COLD_DAMAGE_LEVEL_1 0.2 //Amount of damage applied when your body temperature just passes the 260.15k safety point
-#define COLD_DAMAGE_LEVEL_2 1 //Amount of damage applied when your body temperature passes the 200K point
-#define COLD_DAMAGE_LEVEL_3 2 //Amount of damage applied when your body temperature passes the 120K point
+#define COLD_DAMAGE_LEVEL_2 3 //Amount of damage applied when your body temperature passes the 200K point
+#define COLD_DAMAGE_LEVEL_3 9 //Amount of damage applied when your body temperature passes the 120K point
 
 //Note that gas heat damage is only applied once every FOUR ticks.
 #define HEAT_GAS_DAMAGE_LEVEL_1 2 //Amount of damage applied when the current breath's temperature just passes the 360.15k safety point
@@ -113,6 +113,7 @@
 #define CANROOT (1<<6)
 #define GODMODE (1<<12)
 #define FAKEDEATH (1<<13) //Replaces stuff like changeling.changeling_fakedeath
+#define RECENTSPAWN (1<<14) // Temporarily invincible via GODMODE
 //#define DISFIGURED (1<<14) //unused
 #define XENO_HOST (1<<15) //Tracks whether we're gonna be a baby alien's mummy.
 #define IMMOBILE_ACTION (1<<16) // If you are performing an action that prevents you from being pushed by your own people.
@@ -131,6 +132,7 @@
 #define XENO_HIVE_BRAVO "xeno_hive_bravo"
 #define XENO_HIVE_CHARLIE "xeno_hive_charlie"
 #define XENO_HIVE_DELTA "xeno_hive_delta"
+#define XENO_HIVE_K_SERIES "xeno_hive_k_series"
 #define XENO_HIVE_FERAL "xeno_hive_feral"
 #define XENO_HIVE_TAMED "xeno_hive_tamed"
 #define XENO_HIVE_MUTATED "xeno_hive_mutated"
@@ -138,9 +140,11 @@
 #define XENO_HIVE_YAUTJA "xeno_hive_yautja"
 #define XENO_HIVE_RENEGADE "xeno_hive_renegade"
 
+#define XENO_HIVE_PATHOGEN "xeno_hive_pathogen"
+
 #define XENO_HIVE_TUTORIAL "xeno_hive_tutorial"
 
-#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL)
+#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_K_SERIES, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL, XENO_HIVE_PATHOGEN)
 
 //=================================================
 
@@ -191,6 +195,7 @@
 #define GIVING (1<<5) // Is currently trying to give an item to someone
 #define NOBIOSCAN (1<<6)
 #define AI_CONTROLLED (1<<7)
+#define BLOOD_BURSTING (1<<8) // Being chestburst by a bloodburster.
 
 //=================================================
 

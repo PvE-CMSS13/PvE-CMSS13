@@ -252,7 +252,7 @@
 	desc = "An advanced compact defibrillator that trades capacity for strong immediate power. Ignores armor and heals strongly and quickly, at the cost of very low charge. It does not damage the heart."
 	icon = 'icons/obj/items/experimental_tools.dmi'
 	icon_state = "compact_defib"
-	item_state = "defib"
+	item_state = "adv_defib"
 	w_class = SIZE_MEDIUM
 	blocked_by_suit = FALSE
 	min_heart_damage_dealt = 0
@@ -265,6 +265,6 @@
 	desc ="This particular defibrillator has halved charge capacity compared to the standard emergency defibrillator, but can fit in your pocket."
 	icon = 'icons/obj/items/experimental_tools.dmi'
 	icon_state = "compact_defib"
-	item_state = "defib"
+	item_state = "adv_defib"
 	w_class = SIZE_SMALL
 	charge_cost = 99

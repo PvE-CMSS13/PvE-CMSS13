@@ -44,6 +44,7 @@
 	var/metallic = TRUE
 	/// Lower limit of damage beyond which the barricade cannot be fixed by welder. Compared to damage_state. If null it can be repaired at any damage_state.
 	var/welder_lower_damage_limit = null
+	var/do_not_adjust = FALSE
 
 /obj/structure/barricade/Initialize(mapload, mob/user)
 	. = ..()
@@ -87,19 +88,22 @@
 			icon_state = "[barricade_type]"
 		switch(dir)
 			if(SOUTH)
-				layer = ABOVE_MOB_LAYER
+				if(!do_not_adjust)
+					layer = ABOVE_MOB_LAYER
 			if(NORTH)
-				layer = initial(layer) - 0.01
+				if(!do_not_adjust)
+					layer = initial(layer) - 0.01
 			else
 				layer = initial(layer)
 		if(!anchored)
 			layer = initial(layer)
 	else
+		if(!do_not_adjust)
+			layer = OBJ_LAYER
 		if(can_change_dmg_state)
 			icon_state = "[barricade_type]_closed_[damage_state]"
 		else
 			icon_state = "[barricade_type]_closed"
-		layer = OBJ_LAYER
 
 	if(upgraded)
 		switch(upgraded)

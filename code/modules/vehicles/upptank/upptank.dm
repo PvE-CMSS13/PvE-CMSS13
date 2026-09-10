@@ -46,7 +46,6 @@
 /obj/vehicle/multitile/tank/upptank/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
 
-
 /obj/vehicle/multitile/tank/upptank/command
 	name = "Cheetah 2B Light Command Tank"
 	desc = "A giant piece of state-approved armor with a big gun and enhanced comms equipment, you know what to do. Entrance in the back."

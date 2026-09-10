@@ -97,6 +97,7 @@
 	name = "electrostatic pistol bullet"
 	sound_override = null
 	damage = 15
+	stamina_damage = 35
 
 /datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
 	slowdown(entity, bullet)
@@ -116,6 +117,10 @@
 	shell_speed = AMMO_SPEED_TIER_5
 	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special/New()
+	..()
+	RegisterSignal(src, COMSIG_AMMO_POINT_BLANK, PROC_REF(handle_battlefield_execution))
 
 /datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()
@@ -249,6 +254,19 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/pistol/squash/heap
+	name = "high-explosive armor-piercing pistol bullet"
+
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_10
+/datum/ammo/bullet/pistol/squash/rubber
+	name = "rubber squash-head pistol bullet"
+	damage_type = BURN
+	shrapnel_chance = 0
+	sound_override = 'sound/weapons/gun_c99.ogg'
+	damage = 2
+	stamina_damage = 40
 
 /datum/ammo/bullet/pistol/mankey
 	name = "live monkey"

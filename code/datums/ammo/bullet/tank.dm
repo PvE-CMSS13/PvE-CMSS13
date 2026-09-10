@@ -40,6 +40,41 @@
 	burst(get_turf(T),P,damage_type, 2 , 5)
 	burst(get_turf(T),P,damage_type, 1 , 3 , 0)
 
+//LIGHT AUTOCANNON AMMO//
+/datum/ammo/bullet/tank/flak/light
+	name = "light flak autocannon bullet"
+	icon_state = "autocannon"
+	sound_hit  = 'sound/weapons/sting_boom_small1.ogg'
+	damage_falloff = 0
+	flags_ammo_behavior = AMMO_BALLISTIC
+	accurate_range_min = 3
+
+	accuracy = HIT_ACCURACY_TIER_8
+	scatter = 0
+	damage = 120
+	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	penetration = ARMOR_PENETRATION_TIER_5
+	accurate_range = 32
+	max_range = 32
+	shell_speed = AMMO_SPEED_TIER_7
+
+/datum/ammo/bullet/tank/flak/light/on_hit_mob(mob/M,obj/projectile/P)
+	burst(get_turf(M),P,damage_type, 1 , 3)
+	burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/tank/flak/light/on_near_target(turf/T, obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 3)
+	burst(get_turf(T),P,damage_type, 1 , 2, 0)
+	return 1
+
+/datum/ammo/bullet/tank/flak/light/on_hit_obj(obj/O,obj/projectile/P)
+	burst(get_turf(P),P,damage_type, 1 , 3)
+	burst(get_turf(P),P,damage_type, 1 , 2, 0)
+
+/datum/ammo/bullet/tank/flak/light/on_hit_turf(turf/T,obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 3)
+	burst(get_turf(T),P,damage_type, 1 , 2, 0)
+
 /datum/ammo/bullet/tank/dualcannon
 	name = "dualcannon bullet"
 	icon_state = "autocannon"

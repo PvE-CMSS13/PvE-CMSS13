@@ -23,9 +23,9 @@
 		return 0
 
 	if(!brain.primary_weapon)
-		return 16
+		return ACTION_WEIGHT_PRIORITY_ITEM_PICKUP
 
-	return 11
+	return ACTION_WEIGHT_ITEM_PICKUP
 
 /datum/ai_action/item_pickup/Added()
 	// If we already have a primary weapon, don't set to_pickup and action will be killed immideately

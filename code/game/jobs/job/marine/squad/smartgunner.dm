@@ -122,6 +122,21 @@
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
 
+/datum/job/marine/smartgunner/ai/upp/forecon
+	title = JOB_SQUAD_SMARTGUN_FORECON_UPP
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/sg/upp/forecon
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/forecon/junior_sergeant
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/forecon/corporal
+	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/forecon/senior_private
+	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+
+/obj/effect/landmark/start/marine/smartgunner/upp/forecon
+	name = JOB_SQUAD_SMARTGUN_FORECON_UPP
+	job = JOB_SQUAD_SMARTGUN_FORECON_UPP
+	squad = SQUAD_SISSI
+
 /datum/job/marine/smartgunner/ai/pmc
 	title = JOB_PMCPLAT_SG
 	gear_preset = /datum/equipment_preset/uscm/pmc/sg

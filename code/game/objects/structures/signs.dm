@@ -5,13 +5,14 @@
 	density = FALSE
 	unslashable = TRUE
 	layer = WALL_OBJ_LAYER
+	var/deconstructable = TRUE
 
 /obj/structure/sign/ex_act(severity)
 	deconstruct(FALSE)
 	return
 
 /obj/structure/sign/attackby(obj/item/tool as obj, mob/user as mob) //deconstruction
-	if(HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double))
+	if(deconstructable && HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double) && !QDELETED(src))
 		to_chat(user, "You unfasten the sign with your [tool].")
 		var/obj/item/sign/S = new(src.loc)
 		S.name = name
@@ -91,6 +92,24 @@
 /obj/structure/sign/double/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
 
+/obj/structure/sign/uacqs
+	name = "\improper UACQS Plaque"
+	desc = "A UACQS sign."
+	icon_state = "roplaque"
+	deconstructable = FALSE
+
+/obj/structure/sign/uacqs/New(loc, ...)
+	. = ..()
+	desc = "1) These premises are under the operation of the United Americas Commission for Quality and Standards.<br>2) Access to these premises are regulated by UACQS personnel, or the regulating authority of the region.<br>[SPAN_RED("3) In accordance with Civil Law, firearms are not permitted in these premises.")]"
+
+/obj/structure/sign/minefield
+	name = "\improper MINEFIELD WARNING"
+	desc = "A warning sign indicating the presence of a minefield!"
+	icon_state = "minefield"
+
+/obj/structure/sign/minefield/alt
+	icon_state = "mines_warning"
+
 //============//
 //  Banners  //
 //==========//
@@ -112,10 +131,12 @@
 	name = "\improper United Americas flag"
 	desc = "A flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag"
+
 /obj/structure/sign/banners/united_americas_worn
 	name = "\improper United Americas flag"
 	desc = "A very worn flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag_worn"
+
 //============//
 //  Flags    //
 //==========//
@@ -168,6 +189,14 @@
 	name = "\improper Worn Brazil flag"
 	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
 	icon_state = "brazilflag_worn"
+/obj/structure/sign/banners/clf_flag
+	name = "\improper Colonial Liberation Front flag"
+	desc = "A flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag"
+/obj/structure/sign/banners/clf_worn
+	name = "\improper Worn Colonial Liberation Front flag"
+	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
@@ -707,3 +736,74 @@
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
 	icon = 'icons/obj/structures/props/catclock.dmi'
 	icon_state = "cat_clock_motion"
+
+
+//===================//
+//      Calendar     //
+//=================//
+
+/obj/structure/sign/calendar
+	name = "wall calendar"
+	desc = "Classic office decoration and a place to stare at maniacally."
+	icon_state = "calendar_civ"
+	var/calendar_faction
+
+/obj/structure/sign/catclock/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("The [src] reads: [worldtime2text()]")
+
+/obj/structure/sign/calendar/upp
+	icon_state = "calendar_upp"
+	desc = "Classic office decoration with a spot to stare at maniacally. Features a UPP logo, written in Russian."
+	calendar_faction = FACTION_UPP
+
+/obj/structure/sign/calendar/wy
+	icon_state = "calendar_wy"
+	desc = "Classic office decoration and a place to stare at maniacally, produced by Weyland-Yutani."
+	calendar_faction = FACTION_WY
+
+/obj/structure/sign/calendar/twe
+	icon_state = "calendar_twe"
+	desc = "Classic office decoration and a place to stare at maniacally, has a pattern resembling a Union Jack on it."
+	calendar_faction = FACTION_TWE
+
+/obj/structure/sign/calendar/ua
+	icon_state = "calendar_ua"
+	desc = "Classic office decoration and a place to stare at maniacally, has a vertically placed UA flag and some army symbolics."
+	calendar_faction = FACTION_MARINE
+
+//===================//
+//      Con-Am Faction Symbol     //
+//=================//
+
+/obj/structure/sign/conam
+	name = "\improper Con-Am Poster"
+	desc = "A symbol of the Con-Am corporation. Oozes a proud confidence of Con-Am, despite its mounting real world troubles."
+	icon_state = "conam_symbol"
+
+/obj/structure/sign/conam/variant1
+	icon_state = "conam_logo_1"
+
+/obj/structure/sign/conam/variant1/damage1
+	icon_state = "conam_logo_1_damage"
+
+/obj/structure/sign/conam/variant1/damage2
+	icon_state = "conam_logo_1_damage_1"
+
+/obj/structure/sign/conam/variant2
+	icon_state = "conam_logo_2"
+
+/obj/structure/sign/conam/variant2/damage1
+	icon_state = "conam_logo_2_damage"
+
+/obj/structure/sign/conam/variant2/damage2
+	icon_state = "conam_logo_2_damage_1"
+
+/obj/structure/sign/conam/variant3
+	icon_state = "conam_logo_3"
+
+/obj/structure/sign/conam/variant3/damage1
+	icon_state = "conam_logo_3_damage"
+
+/obj/structure/sign/conam/variant3/damage2
+	icon_state = "conam_logo_3_damage_1"

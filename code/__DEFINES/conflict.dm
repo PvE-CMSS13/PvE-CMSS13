@@ -251,6 +251,7 @@
 //Health of various items
 #define HEALTH_WALL 3000
 #define HEALTH_WALL_REINFORCED 9000
+#define HEALTH_WALL_ULTRA_REINFORCED 12000
 #define HEALTH_WALL_XENO 900
 #define HEALTH_WALL_XENO_WEAK 100
 #define HEALTH_WALL_XENO_THICK 1350
@@ -305,3 +306,6 @@
 #define DMG_ORGAN_DAM_PROB_MULT (2/9)
 /// The multiplier to existing brute damage when calculating organ damage probability
 #define BRUTE_ORGAN_DAM_PROB_MULT (0.05)
+
+///The Zombie specifc multiplier to damage when calculating organ damage probability
+#define ZOMBIE_ORGAN_DAM_PROB_MULT 0.5

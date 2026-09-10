@@ -214,6 +214,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, flatten_numeric_alist(alist(
 /datum/mob_hud/faction/wy
 	faction_to_check = FACTION_WY
 
+/datum/mob_hud/faction/hyperdyne
+	faction_to_check = FACTION_HYPERDYNE
+
+/datum/mob_hud/faction/conam
+	faction_to_check = FACTION_CONAM
+
 /datum/mob_hud/faction/twe
 	faction_to_check = FACTION_TWE
 
@@ -446,8 +452,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, flatten_numeric_alist(alist(
 			holder2.icon_state = "hudxeno"//Observer and admin HUD only
 			holder2_set = 1
 			var/obj/item/alien_embryo/E = locate(/obj/item/alien_embryo) in src
+			var/base_state = "infected"
 			if(E)
-				holder3.icon_state = "infected[E.stage]"
+				if(E.hivenumber == XENO_HIVE_PATHOGEN)
+					holder2.icon_state = "hudpathogen"
+					base_state = "spored"
+				holder3.icon_state = "[base_state][E.stage]"
 				var/datum/hive_status/hive = GLOB.hive_datum[E.hivenumber]
 
 				if(hive && hive.color)

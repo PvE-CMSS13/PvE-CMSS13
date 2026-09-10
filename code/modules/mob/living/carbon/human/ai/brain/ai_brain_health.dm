@@ -25,7 +25,7 @@
 
 	/// What items the AI considers when trying to heal toxin damage
 	var/static/list/tox_heal_items = list(
-		/obj/item/reagent_container/hypospray/autoinjector/dylovene,
+		/obj/item/reagent_container/hypospray/autoinjector/antitoxin,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
 		/obj/item/storage/pill_bottle/antitox,
 		/obj/item/storage/pill_bottle/tricord,

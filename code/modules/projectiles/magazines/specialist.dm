@@ -17,7 +17,7 @@
 
 /obj/item/ammo_magazine/sniper/basic
 	name = "\improper M42A magazine (10x28mm)"
-	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will deal higher damage."
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
@@ -189,6 +189,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/tracer
 	gun_type = /obj/item/weapon/gun/smartgun
 
+/obj/item/ammo_magazine/smartgun/empty
+	current_rounds = 0
+
 /obj/item/ammo_magazine/smartgun/dirty
 	name = "irradiated smartgun drum"
 	desc = "What at first glance appears to be a standard 500 round M56 Smartgun drum, is actually a drum loaded with irradiated rounds, providing an extra 'oomph' to to its bullets. The magazine itself is slightly modified to only fit in M56T smartguns, and is marked with a red X."
@@ -226,9 +229,9 @@
 //M5 RPG
 
 /obj/item/ammo_magazine/rocket
-	name = "\improper 84mm high explosive rocket"
+	name = "\improper 60mm hypervelocity high explosive rocket"
 	desc = "A rocket tube loaded with a HE warhead. Deals high damage to soft targets on direct hit and stuns most targets in a 5-meter-wide area for a short time. Has decreased effect on heavily armored targets."
-	caliber = "rocket"
+	caliber = "60mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "rocket"
 
@@ -301,9 +304,9 @@
 
 /obj/item/ammo_magazine/rocket/update_icon()
 	if(current_rounds <= 0)
-		name = "\improper 84mm spent rocket tube"
+		name = "\improper [caliber] spent rocket tube"
 		icon_state = "rocket_e"
-		desc = "Spent rocket tube for M5 RPG rocket launcher. Activate in hand to disassemble for metal."
+		desc = "Spent rocket tube from a launcher. Activate in hand to disassemble for metal."
 		add_to_garbage(src)
 	else
 		icon_state = initial(icon_state)
@@ -323,20 +326,26 @@
 		icon_state = initial(icon_state)
 
 /obj/item/ammo_magazine/rocket/ap
-	name = "\improper 84mm anti-armor rocket"
+	name = "\improper 60mm hypervelocity anti-armor rocket"
 	icon_state = "ap_rocket"
 	default_ammo = /datum/ammo/rocket/ap
 	desc = "A rocket tube loaded with an AP warhead. Capable of piercing heavily armored targets. Deals very little to no splash damage. Inflicts guaranteed stun to most targets. Has high accuracy within 7 meters."
 
 /obj/item/ammo_magazine/rocket/wp
-	name = "\improper 84mm white-phosphorus rocket"
+	name = "\improper 60mm hypervelocity white-phosphorus rocket"
 	icon_state = "wp_rocket"
 	default_ammo = /datum/ammo/rocket/wp
-	desc = "Rocket tube loaded with WP warhead. Has two damaging factors. On hit disperses X-Variant Napthal (blue flames) in a 4-meter radius circle, ignoring cover, while simultaneously bursting into highly heated shrapnel that ignites targets within slightly bigger area."
+	desc = "Rocket tube loaded with a white-phosphorus warhead. Has two damaging factors. On hit disperses X-Variant Napthal (blue flames) in a 4-meter radius circle, ignoring cover, while simultaneously bursting into highly heated shrapnel that ignites targets within slightly bigger area."
+
+/obj/item/ammo_magazine/rocket/smoke
+	name = "\improper 60mm hypervelocity smoke-screen rocket"
+	icon_state = "at_rocket"
+	default_ammo = /datum/ammo/rocket/smoke
+	desc = "Rocket tube loaded with a smoke producing warhead."
 
 /obj/item/ammo_magazine/rocket/custom
-	name = "\improper 84mm custom rocket"
-	desc = "An 84mm custom rocket."
+	name = "\improper 60mm custom rocket"
+	desc = "A 60mm custom rocket."
 	icon_state = "custom_rocket"
 	default_ammo = /datum/ammo/rocket/custom
 	matter = list("metal" = 7500) //2 sheets
@@ -411,7 +420,7 @@
 //M5 RPG'S MEAN FUCKING COUSIN
 
 /obj/item/ammo_magazine/rocket/m57a4
-	name = "\improper 84mm thermobaric rocket array"
+	name = "\improper 70mm thermobaric rocket array"
 	desc = "A thermobaric rocket tube for an M57-A4 quad launcher with 4 warheads."
 	caliber = "rocket array"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/event.dmi'
@@ -425,7 +434,7 @@
 /obj/item/ammo_magazine/rocket/m57a4/update_icon()
 	..()
 	if(current_rounds <= 0)
-		name = "\improper 84mm spent rocket array"
+		name = "\improper 70mm spent rocket array"
 		desc = "A spent rocket tube assembly for the M57-A4 quad launcher. Activate in hand to disassemble for metal."
 		icon_state = "quad_rocket_e"
 
@@ -435,7 +444,7 @@
 /obj/item/ammo_magazine/rocket/anti_tank
 	name = "\improper 84mm Anti-Tank Rocket"
 	desc = "An anti-armor rocket specifically modified for penetration of armored vehicle hulls."
-	caliber = "rocket"
+	caliber = "84mm"
 	icon_state = "at_rocket"
 
 	max_rounds = 1
@@ -531,16 +540,17 @@
 	icon_state = "xm99a_cell"
 	w_class = SIZE_MEDIUM
 	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
-	max_rounds = 4
+	max_rounds = 8
 	default_ammo = /datum/ammo/energy/plasma
 	gun_type = /obj/item/weapon/gun/XM99
+
 
 // The "round-remover" power/fuel cell for the XM99
 /obj/item/ammo_magazine/plasma/gibber
 	name = "\improper XM99A1 lithium battery drum"
 	desc = "A hybrid battery cell and LiTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture, put in a microwave, submerge in water or look at funny. Highly volatile."
 	icon_state = "xm99a_lcell"
-	max_rounds = 2
+	max_rounds = 4
 	default_ammo = /datum/ammo/energy/plasma/heavy
 
 //-------------------------------------------------------
@@ -548,24 +558,31 @@
 
 /obj/item/ammo_magazine/rifle/sharp
 	name = "sharp rifle magazine"
-	icon_state = "sharprifle"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
+	icon_state = "sharp_explosive_mag"
 	item_state = "sharprifle"
 
+	caliber = "Dart"
 	w_class = SIZE_MEDIUM
 	max_rounds = 10
 	default_ammo = /datum/ammo/rifle/sharp/explosive
 	gun_type = /obj/item/weapon/gun/rifle/sharp
-	flags_magazine = NO_FLAGS
-
+	transfer_handful_amount = 5
 	description_ammo = "darts"
 
 /obj/item/ammo_magazine/rifle/sharp/explosive
 	name = "\improper 9X-E sticky explosive dart magazine"
-	desc = "A specialized sticky explosive dart magazine."
+	desc = "A specialized sticky explosive dart magazine for the SHARP rifle."
+
+/obj/item/ammo_magazine/rifle/sharp/incendiary
+	name = "\improper 9X-I sticky incendiary dart magazine"
+	desc = "A specialized incendiary dart magazine for the SHARP rifle."
+	icon_state = "sharp_incendiary_mag"
+	default_ammo = /datum/ammo/rifle/sharp/incendiary
 
 /obj/item/ammo_magazine/rifle/sharp/track
 	name = "\improper 9X-T sticky tracking dart magazine"
-	desc = "A specialized tracking dart magazine."
+	desc = "A specialized tracking dart magazine for the SHARP rifle."
 	icon_state = "sharprifle_tracker"
 	default_ammo = /datum/ammo/rifle/sharp/track
 
@@ -574,6 +591,6 @@
 
 /obj/item/ammo_magazine/rifle/sharp/flechette
 	name = "\improper 9X-F flechette dart magazine"
-	desc = "A specialized flechette dart magazine."
-	icon_state = "sharprifle_flechette"
+	desc = "A specialized flechette dart magazine for the SHARP rifle."
+	icon_state = "sharp_flechette_mag"
 	default_ammo = /datum/ammo/rifle/sharp/flechette

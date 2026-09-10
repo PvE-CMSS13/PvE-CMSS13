@@ -29,6 +29,40 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	key = STRIPPABLE_ITEM_HEAD
 	item_slot = SLOT_HEAD
 
+/datum/strippable_item/mob_item_slot/head/get_alternate_action(atom/source, mob/user)
+	if (!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if (sourcehuman.check_for_oxygen_mask())
+		return "toggle_internals"
+	return
+
+/datum/strippable_item/mob_item_slot/head/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) && (sourcehuman.stat == DEAD || sourcehuman.health < HEALTH_THRESHOLD_CRIT) && !sourcehuman.get_target_lock(user.faction_group))
+		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
+		return
+
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
+
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
+		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
+
+
 /datum/strippable_item/mob_item_slot/back
 	key = STRIPPABLE_ITEM_BACK
 	item_slot = SLOT_BACK
@@ -38,17 +72,10 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	item_slot = SLOT_FACE
 
 /datum/strippable_item/mob_item_slot/mask/get_alternate_action(atom/source, mob/user)
-	var/obj/item/clothing/mask = get_item(source)
-	if (!istype(mask))
-		return
 	if (!ishuman(source))
 		return
 	var/mob/living/carbon/human/sourcehuman = source
-	if (istype(sourcehuman.s_store, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.back, /obj/item/tank))
-		return "toggle_internals"
-	if (istype(sourcehuman.belt, /obj/item/tank))
+	if (sourcehuman.check_for_oxygen_mask())
 		return "toggle_internals"
 	return
 
@@ -62,37 +89,23 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
 		return
 
-	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
-	if(sourcehuman.internal)
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to disable [sourcehuman]'s internals</B>"), null, null, 3)
-	else
-		user.visible_message(SPAN_DANGER("<B>[user] is trying to enable [sourcehuman]'s internals.</B>"), null, null, 3)
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
 
-	if(!do_after(user, POCKET_STRIP_DELAY, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
 		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
+	//sourcehuman.toggle_internals(user, tank_choice)
 
-	if(sourcehuman.internal)
-		sourcehuman.internal.add_fingerprint(user)
-		sourcehuman.internal = null
-		sourcehuman.visible_message("[sourcehuman] is no longer running on internals.", max_distance = 1)
-		return
 
-	if(!istype(sourcehuman.wear_mask, /obj/item/clothing/mask))
-		return
-
-	if(istype(sourcehuman.back, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.back
-	else if(istype(sourcehuman.s_store, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.s_store
-	else if(istype(sourcehuman.belt, /obj/item/tank))
-		sourcehuman.internal = sourcehuman.belt
-
-	if(!sourcehuman.internal)
-		return
-
-	sourcehuman.visible_message(SPAN_NOTICE("[sourcehuman] is now running on internals."), max_distance = 1)
-	sourcehuman.internal.add_fingerprint(user)
 
 /datum/strippable_item/mob_item_slot/eyes
 	key = STRIPPABLE_ITEM_EYES
@@ -156,6 +169,36 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 
 	uniform.remove_accessory(user, accessory)
 
+/datum/strippable_item/mob_item_slot/jumpsuit/get_storage_action(atom/source, mob/user)
+	var/obj/item/clothing/under/uniform = get_item(source)
+	if (!istype(uniform))
+		return null
+	var/obj/item/clothing/accessory/storage/storage = locate() in uniform.accessories
+	if(!storage)
+		return null
+	return "open_storage"
+
+/datum/strippable_item/mob_item_slot/jumpsuit/storage_action(atom/source, mob/user)
+	var/mob/living/carbon/human/sourcemob = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	var/mob/living/carbon/human/H = user
+	if(!sourcemob.w_uniform || !istype(sourcemob.w_uniform, /obj/item/clothing))
+		return
+	var/open_timer = 3 SECONDS
+	if(sourcemob.is_mob_incapacitated())
+		open_timer = 1 SECONDS
+	var/obj/item/clothing/under/uniform = sourcemob.w_uniform
+	var/obj/item/clothing/accessory/storage/storage = locate() in uniform.accessories
+	if(!storage)
+		return
+	if(!user.action_busy) //Not doing any timed actions?
+		user.visible_message(SPAN_WARNING("[user] tries to open [sourcemob]'s [storage]."), SPAN_NOTICE("You try to open [sourcemob]'s [storage]."))
+		if(!do_after(user, open_timer, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+			to_chat(H, SPAN_WARNING("You were interrupted!"))
+			return
+	storage.hold.open(user)
+
 /datum/strippable_item/mob_item_slot/suit
 	key = STRIPPABLE_ITEM_SUIT
 	item_slot = SLOT_OCLOTHING
@@ -185,6 +228,47 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	sourcemob.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their splints removed by [key_name(user)]</font>")
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to remove [key_name(sourcemob)]'s' splints </font>")
 	sourcemob.remove_splints(user)
+
+
+/datum/strippable_item/mob_item_slot/suit/get_storage_action(atom/source, mob/user)
+	var/obj/item/clothing/suit/suit = get_item(source)
+	if (!istype(suit))
+		return null
+	var/obj/item/clothing/accessory/storage/storage = locate() in suit.accessories
+	if(storage)
+		return "open_storage"
+	if(istype(suit, /obj/item/clothing/suit/storage))
+		return "open_storage"
+
+/datum/strippable_item/mob_item_slot/suit/storage_action(atom/source, mob/user)
+	var/mob/living/carbon/human/sourcemob = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	var/mob/living/carbon/human/H = user
+	if(!sourcemob.wear_suit || !istype(sourcemob.wear_suit, /obj/item/clothing))
+		return
+	var/open_timer = 3 SECONDS
+	if(sourcemob.is_mob_incapacitated())
+		open_timer = 1 SECONDS
+	var/obj/item/clothing/suit/suit = sourcemob.wear_suit
+	if(istype(suit, /obj/item/clothing/suit/storage))
+		var/obj/item/clothing/suit/storage/storage_suit = suit
+		if(!user.action_busy) //Not doing any timed actions?
+			user.visible_message(SPAN_WARNING("[user] tries to open [sourcemob]'s [storage_suit]."), SPAN_NOTICE("You try to open [sourcemob]'s [storage_suit]."))
+			if(!do_after(user, open_timer, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+				to_chat(H, SPAN_WARNING("You were interrupted!"))
+				return
+		storage_suit.pockets.open(user)
+		return
+	var/obj/item/clothing/accessory/storage/storage = locate() in suit.accessories
+	if(!storage)
+		return
+	if(!user.action_busy) //Not doing any timed actions?
+		user.visible_message(SPAN_WARNING("[user] tries to open [sourcemob]'s [storage]."), SPAN_NOTICE("You try to open [sourcemob]'s [storage]."))
+		if(!do_after(user, open_timer, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+			to_chat(H, SPAN_WARNING("You were interrupted!"))
+			return
+	storage.hold.open(user)
 
 /datum/strippable_item/mob_item_slot/gloves
 	key = STRIPPABLE_ITEM_GLOVES
@@ -242,12 +326,28 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	newtag.fallen_blood_types = list(tag.blood_type)
 	user.put_in_hands(newtag)
 
-
-
 /datum/strippable_item/mob_item_slot/belt
 	key = STRIPPABLE_ITEM_BELT
 	item_slot = SLOT_WAIST
+/*
+/datum/strippable_item/mob_item_slot/belt/get_storage_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return null
+	return "open_storage"
 
+/datum/strippable_item/mob_item_slot/belt/storage_action(atom/source, mob/user)
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+	var/mob/living/carbon/human/H = user
+	var/obj/item/storage/storage = get_item(source)
+	if(!user.action_busy) //Not doing any timed actions?
+		to_chat(H, SPAN_NOTICE("You begin to open [storage], so you can check its contents."))
+		if(!do_after(user, 5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+			to_chat(H, SPAN_WARNING("You were interrupted!"))
+			return
+	storage.open(user)
+*/
 /datum/strippable_item/mob_item_slot/pocket/left
 	key = STRIPPABLE_ITEM_LPOCKET
 	item_slot = SLOT_STORE

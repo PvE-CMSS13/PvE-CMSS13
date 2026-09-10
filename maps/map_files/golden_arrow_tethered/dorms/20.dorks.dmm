@@ -1,0 +1,970 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cq" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"cD" = (
+/obj/structure/curtain/red,
+/obj/structure/window/framed/almayer,
+/turf/open/floor/plating,
+/area/golden_arrow/dorms)
+"dc" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"dg" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"dh" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12;
+	pixel_x = 27
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"ds" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"dG" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/item/trash/popcorn{
+	layer = 3.03;
+	pixel_y = 3;
+	pixel_x = 8
+	},
+/obj/item/reagent_container/food/snacks/protein_pack{
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/snacks/protein_pack{
+	pixel_y = 18
+	},
+/obj/item/reagent_container/food/snacks/protein_pack{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/reagent_container/food/drinks/h_chocolate{
+	pixel_y = 3;
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"ep" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"eE" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/curtain/red,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"ft" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/prop{
+	desc = "A small computer hooked up into the ship's computer network. The screen is absolutely shattered in what looks to be a fit of rage.";
+	icon = 'icons/obj/structures/machinery/computer.dmi';
+	icon_state = "terminal1b";
+	dir = 4;
+	name = "personal desktop";
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"fG" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/recharger{
+	pixel_y = -14
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 9;
+	pixel_y = 6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 5;
+	pixel_x = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 15;
+	pixel_x = -4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"hf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/magazine/book/bladerunner,
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"ho" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"hD" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"iL" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"iP" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/bedsheetbin{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/edge/southeast,
+/area/golden_arrow/dorms)
+"jy" = (
+/obj/item/trash/eat{
+	pixel_x = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"kv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/dorms)
+"mf" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/northeast,
+/area/golden_arrow/dorms)
+"mj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -29
+	},
+/obj/structure/machinery/power/apc/almayer/west,
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"mm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/atm{
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"mu" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"nD" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"nP" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	dir = 4;
+	layer = 3.2;
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/dorms)
+"oc" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"oo" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/prize/apc{
+	pixel_x = 6;
+	pixel_y = 19;
+	layer = 3.03
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/casings.dmi';
+	icon_state = "casing";
+	desc = "Empty and useless now. Or it was, until someone made them a stand in for their characters.";
+	pixel_x = 8;
+	pixel_y = 2;
+	name = "spent casing"
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/casings.dmi';
+	icon_state = "casing";
+	desc = "Empty and useless now. Or it was, until someone made them a stand in for their characters.";
+	pixel_y = 4;
+	name = "spent casing"
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/casings.dmi';
+	icon_state = "casing";
+	desc = "Empty and useless now. Or it was, until someone made them a stand in for their characters.";
+	name = "spent casing";
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/casings.dmi';
+	icon_state = "casing";
+	desc = "Empty and useless now. Or it was, until someone made them a stand in for their characters.";
+	name = "spent casing";
+	pixel_x = 1;
+	pixel_y = -5
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"oM" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"qe" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"qJ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"rZ" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"sO" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/curtain/red,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"tq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/obj/structure/pipes/vents/pump,
+/obj/item/trash/uscm_mre{
+	pixel_y = 14;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"tz" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"ui" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/obj/structure/curtain/red,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"uW" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper/colonial_grunts{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/toy/deck{
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"vr" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/dorms)
+"vF" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"we" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/disposalpipe/segment,
+/obj/item/clothing/glasses/regular/hipster{
+	pixel_y = 10
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/casings.dmi';
+	icon_state = "casing";
+	desc = "Empty and useless now. Or it was, until someone made them a stand in for their characters.";
+	pixel_x = 8;
+	pixel_y = 2;
+	name = "spent casing"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"wo" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"xm" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"xM" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"yw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/vending/walkman{
+	pixel_y = 21;
+	pixel_x = 10;
+	density = 0
+	},
+/obj/item/trash/kepler{
+	pixel_x = 8;
+	pixel_y = 44
+	},
+/obj/item/trash/barcardine,
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"zg" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"AU" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"BJ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"BX" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/edge/northeast,
+/area/golden_arrow/dorms)
+"CR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"CT" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/trash/cigbutt{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/obj/item/trash/eat{
+	pixel_x = 10
+	},
+/obj/item/prop/magazine/dirty/torn/alt,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"DC" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/southeast,
+/area/golden_arrow/dorms)
+"Eb" = (
+/obj/item/prop/magazine/book/starshiptroopers{
+	layer = 4.1;
+	pixel_y = 47
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Es" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Gi" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"Hv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/trash/crushed_cup{
+	pixel_y = -10;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"IO" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Nt" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/dorms)
+"Nu" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"NK" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Dorms";
+	dir = 1
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/dorms)
+"NN" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/suit/storage/jacket/marine/service{
+	pixel_x = 11
+	},
+/obj/item/prop/magazine/dirty/torn{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"OV" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin{
+	pixel_x = -1;
+	pixel_y = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"PA" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"QV" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"Sh" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 22
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"SL" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"SM" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/curtain/red,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/dorms)
+"To" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/clothing/under/marine/officer/boiler,
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Wu" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"XT" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"XU" = (
+/obj/structure/largecrate/random/secure,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/prop/magazine/book/starshiptroopers{
+	pixel_y = 9
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"ZE" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+
+(1,1,1) = {"
+yw
+Nu
+vF
+Gi
+mj
+dh
+ft
+XU
+vF
+"}
+(2,1,1) = {"
+mm
+fG
+nP
+CT
+CR
+SM
+dc
+oc
+QV
+"}
+(3,1,1) = {"
+tq
+BJ
+AU
+ho
+cq
+eE
+uW
+oo
+hf
+"}
+(4,1,1) = {"
+Es
+tz
+hD
+ep
+zg
+ui
+OV
+we
+dG
+"}
+(5,1,1) = {"
+rZ
+Eb
+kv
+xm
+oM
+sO
+xM
+iL
+mu
+"}
+(6,1,1) = {"
+Sh
+qe
+dg
+XT
+ds
+PA
+SL
+Nt
+jy
+"}
+(7,1,1) = {"
+nD
+xm
+IO
+xm
+ZE
+vF
+To
+xm
+NN
+"}
+(8,1,1) = {"
+mf
+qJ
+Wu
+wo
+DC
+vF
+BX
+Hv
+iP
+"}
+(9,1,1) = {"
+vF
+vF
+vr
+NK
+vF
+vF
+vF
+cD
+vF
+"}

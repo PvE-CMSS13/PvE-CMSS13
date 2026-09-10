@@ -27,7 +27,7 @@
 	if(get_dist(brain.tied_human, squad_leader) <= (1 + length(squad.ai_in_squad) / 2))
 		return 0
 
-	return 5
+	return ACTION_WEIGHT_FOLLOW_LEADER
 
 /datum/ai_action/follow_leader/Added()
 	if(!brain.squad_id)

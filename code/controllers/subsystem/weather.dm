@@ -142,7 +142,7 @@ SUBSYSTEM_DEF(weather)
 		message_admins(SPAN_BLUE("Weather Event of type [weather_event_instance.display_name] starting with duration of [DisplayTimeText(weather_event_instance.length)]."))
 	else
 		message_admins(SPAN_BLUE("Weather Event of unknown type [weather_event_type] starting with duration of [DisplayTimeText(weather_event_instance.length)]."))
-
+	curr_master_turf_overlay.icon = weather_event_instance.turf_overlay_icon
 	curr_master_turf_overlay.icon_state = weather_event_instance.turf_overlay_icon_state
 	curr_master_turf_overlay.alpha = weather_event_instance.turf_overlay_alpha
 	for(var/area/area as anything in weather_areas)
@@ -166,6 +166,8 @@ SUBSYSTEM_DEF(weather)
 		message_admins(SPAN_BLUE("Weather Event of type [weather_event_instance.display_name] ending after [DisplayTimeText(world.time - current_event_start_time)]."))
 	else
 		message_admins(SPAN_BLUE("Weather Event of unknown type [weather_event_type] ending after [DisplayTimeText(world.time - current_event_start_time)]."))
+
+	weather_event_instance.end_weather_event()
 
 	for(var/area/area as anything in weather_areas)
 		area.overlays -= curr_master_turf_overlay
@@ -201,4 +203,8 @@ SUBSYSTEM_DEF(weather)
 
 /obj/effect/weather_vfx_holder/rain
 	icon_state = "strata_storm"
+	alpha = 50
+
+/obj/effect/weather_vfx_holder/hybrisa_rain
+	icon_state = "hybrisa_rain"
 	alpha = 50

@@ -9,10 +9,12 @@
 	health = 200
 	health_max = 200
 
-	firing_sound = null
+	burst = 2
+	burst_fire_delay = 2
+	firing_sound = 'sound/weapons/gun_flamethrower3.ogg'
 
 	choice_categories = list(
-		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE),
 		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
 	)
 
@@ -25,10 +27,11 @@
 	switch(level)
 		if(ROF_SINGLE)
 			accuracy_mult = 1
-			fire_delay = 4
-		if(ROF_FULL_AUTO)
+			fire_delay = 12
+		if(ROF_BURST)
+			burst = 2
 			accuracy_mult = 0.1
-			fire_delay = 0.5
+			fire_delay = 16
 
 /obj/structure/machinery/defenses/sentry/flamer/actual_fire(atom/A)
 	var/obj/projectile/P = new(create_cause_data(initial(name), owner_mob))

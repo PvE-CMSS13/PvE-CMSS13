@@ -24,6 +24,9 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 			var/datum/sprite_accessory/undershirt/snow_datum = new undershirt_type
 			snow_datum.generate_non_conforming("s")
 			undershirt_list[snow_datum.name] = snow_datum
+			var/datum/sprite_accessory/undershirt/urban_datum = new undershirt_type
+			snow_datum.generate_non_conforming("u")
+			undershirt_list[urban_datum.name] = urban_datum
 		else
 			undershirt_list[undershirt_datum.name] = undershirt_datum
 	return undershirt_list
@@ -45,6 +48,8 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 				selected_icon_state = "d_" + selected_icon_state
 			if("snow")
 				selected_icon_state = "s_" + selected_icon_state
+			if("urban")
+				selected_icon_state = "u_" + selected_icon_state
 
 	if(gender == PLURAL)
 		selected_icon_state += mob_gender == MALE ? "_m" : "_f"
@@ -62,6 +67,8 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 			name += " (Desert)"
 		if("s")
 			name += " (Snow)"
+		if("u")
+			name += " (Urban)"
 
 // Plural
 /datum/sprite_accessory/undershirt/undershirt
@@ -132,7 +139,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
-	icon_state = "telnyashka_blue"
+	icon_state = "telnyashka_black"
 	gender = NEUTER
 	restricted = TRUE
 
@@ -145,6 +152,12 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 /datum/sprite_accessory/undershirt/telnyashka/interior
 	name = "Interior Forces Telnyashka"
 	icon_state = "telnyashka_red"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/telnyashka/paratrooper
+	name = "Airborne Telnyashka"
+	icon_state = "telnyashka_blue"
 	gender = NEUTER
 	restricted = TRUE
 

@@ -6,7 +6,7 @@
 	name = "\improper rocket launcher"
 	desc = "Modelled after the iconic Carl Gustaf recoilless rifle, this heavy piece of kit can still kill things just as well as its forefather could hundreds of years ago."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "m5"
+	icon_state = "m5_old"
 	item_state = "m5"
 	unacidable = TRUE
 	indestructible = 1
@@ -21,7 +21,7 @@
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	attachable_allowed = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
 
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG|GUN_UNUSUAL_DESIGN
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
@@ -38,12 +38,13 @@
 	return ..()
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = -6, "stock_y" = 16)
 
 /obj/item/weapon/gun/launcher/rocket/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 150, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_config_values()
@@ -212,10 +213,17 @@
 //Marine M5 RPG, comes with baked in scope unlike the colony-made launcher
 /obj/item/weapon/gun/launcher/rocket/marine
 	name = "\improper M5 RPG"
-	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses depending on the type of munitions loaded."
+	icon_state = "m5"
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()
+	var/obj/item/attachable/rpg_baffle/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachables()
+
 	var/obj/item/attachable/scope/mini/army/scope = new(src)
 	scope.hidden = TRUE
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
@@ -275,7 +283,7 @@
 /obj/item/weapon/gun/launcher/rocket/anti_tank/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 200, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 250, GLOB.damage_boost_vehicles)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable //single shot and disposable
@@ -410,7 +418,8 @@
 /obj/item/weapon/gun/launcher/rocket/upp/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 100, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/anti_air

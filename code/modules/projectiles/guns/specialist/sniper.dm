@@ -638,7 +638,8 @@
 
 /obj/item/weapon/gun/rifle/sniper/rmc
 	name = "\improper L64A3 designated marksman rifle"
-	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Designed to provide commandos with responsive long range reach past what the old F903 could manage. A continuous-charge HESH payload removes the requirement for traditional armor piercing steel core ammunition, and improves damage retention at extended range. Faster cycle rate of the breech and a light trigger gives fast and precise followup shots even at thousand meter distances."
+	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Comes with a toggleable trigger-interlock safety to minimize friendly fire accidents."
+	desc_lore = "Designed to provide commandos with responsive long range reach past what the old F903 could manage. A continuous-charge HESH payload removes the requirement for traditional armor piercing steel core ammunition, and improves damage retention at extended range. Faster cycle rate of the breech and a light trigger gives fast and precise followup shots even at thousand meter distances."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "rmcdmr"
 	item_state = "rmcdmr"
@@ -659,6 +660,11 @@
 	map_specific_decoration = FALSE
 	flags_item = TWOHANDED
 	loud = FALSE
+	var/iff_enabled = TRUE
+
+/obj/item/weapon/gun/rifle/sniper/rmc/Initialize(mapload, ...)
+	LAZYADD(actions_types, /datum/action/item_action/rmcdmr/toggle_lethal_mode)
+	. = ..()
 
 /obj/item/weapon/gun/rifle/sniper/rmc/handle_starting_attachment()
 	..()
@@ -678,3 +684,55 @@
 	scatter = SCATTER_AMOUNT_TIER_9
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/rifle/sniper/rmc/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff)
+	))
+	AddComponent(/datum/component/iff_fire_prevention)
+
+//---ability actions--\\
+
+/datum/action/item_action/rmcdmr/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/rifle/sniper/rmc/smartrifle = holder_item
+	if(!ishuman(owner))
+		return
+	var/mob/living/carbon/human/user = owner
+	if(user.is_mob_incapacitated() || smartrifle.get_active_firearm(user, FALSE) != holder_item)
+		return
+
+/datum/action/item_action/rmcdmr/update_button_icon()
+	return
+
+/datum/action/item_action/rmcdmr/toggle_lethal_mode/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle IFF"
+	action_icon_state = "iff_toggle_on"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/rmcdmr/toggle_lethal_mode/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/rifle/sniper/rmc/smartrifle = holder_item
+	smartrifle.toggle_iff(usr)
+	if(smartrifle.iff_enabled)
+		action_icon_state = "iff_toggle_on"
+	else
+		action_icon_state = "iff_toggle_off"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+// -- ability actions procs -- \\
+
+/obj/item/weapon/gun/rifle/sniper/rmc/proc/toggle_iff(mob/user)
+	iff_enabled = !iff_enabled
+	to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You [iff_enabled? "enable": "disable"] the IFF on [src]."))
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+
+	if(iff_enabled)
+		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
+	else
+		remove_bullet_trait("iff")
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)

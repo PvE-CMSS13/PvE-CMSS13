@@ -10,7 +10,13 @@
 	var/list/fingerprintshidden
 	var/fingerprintslast = null
 
+	/// determines whether or not the object can be destroyed by xeno acid
 	var/unacidable = FALSE
+	/// determines whether or not the object can be destroyed by an explosion
+	var/explo_proof = FALSE
+	/// determines whether or not the object can be affected by EMPs
+	var/emp_proof = FALSE
+
 	var/last_bumped = 0
 
 	// The cached datum for the permanent pass flags for any given atom
@@ -61,6 +67,9 @@
 
 	///Reference to atom being orbited
 	var/atom/orbit_target
+
+	///Holder for inertial_drift callback
+	var/inertia_callback
 
 	///Default pixel x shifting for the atom's icon.
 	var/base_pixel_x = 0
@@ -212,6 +221,9 @@ directive is properly returned.
 /atom/proc/emp_act(severity)
 	SHOULD_CALL_PARENT(TRUE)
 
+	if(emp_proof)
+		return FALSE
+
 	SEND_SIGNAL(src, COMSIG_ATOM_EMP_ACT, severity)
 
 /atom/proc/in_contents_of(container)//can take class or object instance as argument
@@ -247,6 +259,11 @@ directive is properly returned.
 			found += A.search_contents_for(path,filter_path)
 	return found
 
+/// Used by the AI pathfinding subsystem to check for obstacles in a mobs path.
+/// More lightweight than typechecking atoms in a tiles contents against a blockers list
+/atom/proc/check_ai_special_blockers()
+	return FALSE
+
 /atom/proc/examine(mob/user)
 	var/list/examine_strings = get_examine_text(user)
 	if(!examine_strings)
@@ -273,6 +290,9 @@ directive is properly returned.
 		A.ex_act(severity)
 
 /atom/proc/ex_act(severity)
+	if(explo_proof)
+		return
+
 	contents_explosion(severity)
 
 /atom/proc/fire_act()
@@ -416,16 +436,41 @@ Parameters are passed from New.
 	var/proj_x = 0
 	var/proj_y = 0
 	var/proj_z = 0
+	var/obj/effect/projector/proj = null
 
-/atom/proc/create_clone(shift_x, shift_y, shift_z) //NOTE: Use only for turfs, otherwise use create_clone_movable
+/atom/proc/create_clone(obj/effect/projector/P) //NOTE: Use only for turfs, otherwise use create_clone_movable
 	var/turf/T = null
-	T = locate(src.x + shift_x, src.y + shift_y, src.z + shift_z)
+	T = locate(src.x + P.vector_x, src.y + P.vector_y, src.z + P.vector_z)
 
-	T.appearance = src.appearance
-	T.setDir(src.dir)
+	if(P.modify_turf)
+		T.appearance = src.appearance
+		T.setDir(src.dir)
 
-	GLOB.clones_t.Add(src)
-	src.clone = T
+		if(P.mask_layer)
+			T.layer = ((P.mask_layer-0.5)+(src.layer/10))
+
+		GLOB.clones_t.Add(src)
+		src.clone = T
+	else
+		var/atom/movable/clone/facsimile_T = new /atom/movable/clone(T)
+
+		facsimile_T.appearance = src.appearance
+
+		// we don't want a projected lighting underlay (especially when this generates at roundstart) to duplicate over the real turf's lighting (not a very sound way of doing it, but the only one plausible it seems like.)
+		facsimile_T.underlays -= facsimile_T.underlays[1]
+		// spider webs and etcetra may be an issue
+		facsimile_T.overlays = list()
+
+		facsimile_T.setDir(src.dir)
+		if(P.mask_layer)
+			facsimile_T.layer = ((P.mask_layer-0.5)+(src.layer/10))
+		facsimile_T.plane = -7
+		facsimile_T.opacity = P.projected_opacity
+
+		GLOB.clones_t.Add(src)
+		src.clone = facsimile_T
+		facsimile_T.mstr = src
+		facsimile_T.proj = P
 
 // EFFECTS
 /atom/proc/extinguish_acid()

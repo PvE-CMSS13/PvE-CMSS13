@@ -247,6 +247,17 @@
 	light_range = 5 //slightly higher
 	specialty = "M4 pattern marine"
 
+/obj/item/clothing/suit/storage/marine/medium/rto/army
+	name = "\improper Personal Body Armor System"
+	desc = "The Personnel Body Armor System is the standard issue armor of the US Army, adopted over the M4 series pattern armor during field trials. Surprisingly uncomfortable, but offering far superior protection to the M3 or M4 series armor. At four times the price."
+	icon_state = "army_armor"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
+	)
+	specialty = "Personal Body Armor System"
+	storage_slots = 3
+
 /obj/item/clothing/suit/storage/marine/MP
 	name = "\improper M2 pattern MP armor"
 	desc = "A standard Colonial Marines M2 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage."
@@ -474,6 +485,23 @@
 	icon_state = "c_VL_syn_camo"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/storage/marine/light/synvest/army
+	name = "\improper Synthetic Body Armor System"
+	desc = "This is a variant of the Personnel Body Armor System, it has been modified extensively to be used by US Army Synthetics. It offers light protection, maximum mobility and more internal storage than its USCM counterpart. The cost of this item could outfit an entire squad of USCM Marines, but you are worth this cost."
+	icon_state = "VL_syn_army"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/UA.dmi'
+	)
+	flags_atom = NO_NAME_OVERRIDE
+	armor_melee = CLOTHING_ARMOR_VERYLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_VERYLOW
+	armor_bomb = CLOTHING_ARMOR_VERYLOW
+	armor_bio = CLOTHING_ARMOR_VERYLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMLOW
+	storage_slots = 4
+
 /obj/item/clothing/suit/storage/marine/light/recon
 	name = "M3-R pattern light armor"
 	desc = "Special issue light armor for forward reconnaissance Marines. Offers similar protection as M3 armor but none of the slowdown."
@@ -565,7 +593,7 @@
 
 /obj/item/clothing/suit/storage/marine/M3G
 	name = "\improper M3-G4 grenadier armor"
-	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM Grenadiers."
+	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM marines handling copious quantities of explosive material."
 	icon_state = "grenadier"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
@@ -574,7 +602,7 @@
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
@@ -754,7 +782,7 @@
 	else armor_overlays["lamp"] = null
 	if(user) user.update_inv_wear_suit()
 
-/obj/item/clothing/suit/marine/MouseDrop(obj/over_object as obj)
+/obj/item/clothing/MouseDrop(obj/over_object as obj)
 	if (ishuman(usr))
 		//makes sure that the clothing is equipped so that we can't drag it into our hand from miles away.
 		if ((flags_item & NODROP) || loc != usr)
@@ -949,6 +977,113 @@
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
 
+//Specialist custom-armors\\
+
+/obj/item/clothing/suit/marine/M3G
+	name = "\improper M3-G4 grenadier armor"
+	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM forces who handle copious quantities of explosive material in the field."
+	icon_state = "grenadier"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_item = NO_CRYO_STORE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	specialty = "M3-G4 grenadier"
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	unacidable = TRUE
+	light_range = 5
+
+/obj/item/clothing/suit/marine/specialist
+	name = "\improper B18 defensive armor"
+	desc = "A heavy, power-assisted set of armor plates for when you really, really need to not die horribly. Slows you down though, even moreso when the internal power cell runs out.\nComes with two vials of potent medication in the arm-guards that can be injected as needed. It can't mount supplementary webbing due to the sheer bulk, however."
+	contained_sprite = TRUE
+	item_state = "xarmor"
+	icon_state = "xarmor"
+	icon = 'icons/mob/humans/onmob/contained/b18_armor.dmi'
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	light_range = 4
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_PAINT)
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	unacidable = TRUE
+	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/b18_armor/inject_chemicals)
+	var/injections = 2
+	/// 1 means the player overdosed with OD_OFF mode. 2 means the plate adjusted the chemicals injected.
+	var/warning_type = FALSE
+	var/list/chemicals_to_inject = list(
+		"oxycodone" = 20,
+		"bicaridine" = 30,
+		"kelotane" = 30,
+		"meralyne" = 15,
+		"dermaline" = 15,
+		"inaprovaline" = 30,
+	)
+
+//Action buttons
+/datum/action/item_action/specialist/b18_armor/inject_chemicals
+	ability_primacy = SPEC_PRIMARY_ACTION_1
+
+/datum/action/item_action/specialist/b18_armor/inject_chemicals/New(Target, obj/item/holder)
+	. = ..()
+	name = "Inject Emergency Vial"
+	action_icon_state = "plate_research"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/obj/items/items.dmi', button, action_icon_state)
+
+/datum/action/item_action/specialist/b18_armor/inject_chemicals/action_activate()
+	. = ..()
+	var/obj/item/clothing/suit/marine/specialist/b18 = holder_item
+	b18.inject_chemicals()
+
+/obj/item/clothing/suit/marine/specialist/verb/inject_chemicals()
+	set name = "Inject Emergency Vial"
+	set desc = "Use the internal vials of medication to dose yourself."
+	set category = "Object"
+	set src in usr
+
+	if(!ishuman(usr))
+		return
+	var/mob/living/carbon/human/wearer = usr
+	if(wearer.wear_suit != src)
+		to_chat(wearer, SPAN_WARNING("You must be wearing the B18 defensive armor to activate the injector system!"))
+		return
+
+	var/current_injections = injections
+	if(injections <= 0)
+		to_chat(wearer, SPAN_DANGER("[src]'s inner reserve is empty, it can't provide you anymore medication!"))
+		return
+	for(var/chemical in chemicals_to_inject)
+		var/datum/reagent/reag = GLOB.chemical_reagents_list[chemical]
+		if(wearer.reagents.get_reagent_amount(chemical) + chemicals_to_inject[chemical] > reag.overdose)
+			to_chat(wearer, SPAN_DANGER("You hold the two buttons, but the bracer buzzes and refuses to inject, indicating the potential overdose!"))
+			return
+		wearer.reagents.add_reagent(chemical, chemicals_to_inject[chemical])
+	playsound(loc, "sound/items/air_release.ogg", 100, TRUE)
+	to_chat(wearer, SPAN_DANGER("You hold the two buttons and feel something cool flood into your arm!"))
+	injections = (current_injections - 1)
+
 //Army & USASF custom-armors\\
 
 /obj/item/clothing/suit/marine/medium/rto/navy
@@ -1028,3 +1163,46 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	time_to_unequip = 10
 	time_to_equip = 10
+
+/obj/item/clothing/suit/marine/snowman
+	name = "\improper Snowsuit"
+	desc = "A standard snow suit. It can protect the wearer from extreme cold."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc/snowman
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+
+/obj/item/clothing/suit/marine/snowman/canc
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/snowman/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/armoured_rad
+	name = "Radiation suit"
+	desc = "A suit that protects against radiation. Label: Made with lead, do not eat insulation."
+	icon_state = "rad"
+	item_state = "rad_suit"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/armoured_rad/canc
+
+/obj/item/clothing/suit/marine/armoured_rad/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)

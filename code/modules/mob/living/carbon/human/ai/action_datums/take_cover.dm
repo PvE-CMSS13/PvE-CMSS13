@@ -12,7 +12,7 @@
 	if(brain.in_cover && !(get_dist(brain.tied_human, brain.current_target) > brain?.gun_data?.minimum_range))
 		return 0
 
-	return 15
+	return ACTION_WEIGHT_TAKE_COVER
 
 /datum/ai_action/take_cover/trigger_action()
 	. = ..()

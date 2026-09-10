@@ -113,3 +113,7 @@
 /obj/effect/decal/siding/wood_siding
 	name = "wood siding"
 	icon_state = "wood_siding1"
+
+/obj/effect/decal/grass_overlay/grass1/dark
+
+	icon_state = "grass_outercorner_dark"

@@ -309,6 +309,18 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
+		//Repair Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/suit_to_repair = H.wear_suit
+		if((istype(H.wear_suit, /obj/item/clothing/suit/space)))
+			if(suit_to_repair.can_breach && user.a_intent == INTENT_HELP && suit_to_repair.damage > 0)
+				if(!do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+					return
+				suit_to_repair.attackby(src, M)
+				return
+			else
+				to_chat(user, SPAN_NOTICE("The [suit_to_repair] is already patched!"))
+
+
 		var/obj/limb/S = H.get_limb(user.zone_selected)
 		if(!(S.status & (LIMB_ROBOT|LIMB_SYNTHSKIN)) || user.a_intent != INTENT_HELP)
 			return ..()

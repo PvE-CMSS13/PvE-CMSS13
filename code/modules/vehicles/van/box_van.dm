@@ -57,6 +57,16 @@
 
 	mob_size_required_to_hit = MOB_SIZE_XENO
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 5,
+		"slash" = 3.5,
+		"bullet" = 3.5,
+		"explosive" = 3,
+		"blunt" = 3.5,
+		"abstract" = 1,
+	)
+
 	var/overdrive_next = 0
 	var/overdrive_cooldown = 15 SECONDS
 	var/overdrive_duration = 3 SECONDS

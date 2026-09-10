@@ -258,6 +258,10 @@
 	icon_state = "binary_key"
 	channels = list(SQUAD_SOF = TRUE)
 
+/obj/item/device/encryptionkey/soc/army
+	name = "\improper Army Radio Encryption Key"
+	channels = list(SQUAD_SOF = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
 //ERT, PMC
 
 /obj/item/device/encryptionkey/dutch
@@ -326,6 +330,11 @@
 /obj/item/device/encryptionkey/upp/command
 	name = "\improper UPP Command Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_UPP_CMD = TRUE, RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_ENGI = TRUE, RADIO_CHANNEL_UPP_MED = TRUE, RADIO_CHANNEL_UPP_CCT = TRUE)
+
+/obj/item/device/encryptionkey/upp/forecon
+	name = "\improper UPP Recon Radio Encryption Key"
+	icon_state = "upp_key"
+	channels = list(RADIO_CHANNEL_UPP_RCN = TRUE)
 //---------------------------------------------------
 //CLF Keys
 /obj/item/device/encryptionkey/clf

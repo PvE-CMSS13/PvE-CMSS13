@@ -40,6 +40,7 @@
 	var/datum/shape/rectangle/square/range_bounds
 	var/long_range_locked = FALSE //only long-range MD
 	var/ping_overlay
+	var/idle_sound_volume = 60
 
 	/// Handles our cooldowns regarding pings
 	COOLDOWN_DECLARE(ping_cooldown)
@@ -253,7 +254,7 @@
 	if(ping_count > 0)
 		playsound(loc, pick('sound/items/detector_ping_1.ogg', 'sound/items/detector_ping_2.ogg', 'sound/items/detector_ping_3.ogg', 'sound/items/detector_ping_4.ogg'), 60, 0, 7, 2)
 	else
-		playsound(loc, 'sound/items/detector.ogg', 60, 0, 7, 2)
+		playsound(loc, 'sound/items/detector.ogg', idle_sound_volume, 0, 7, 2)
 
 	update_icon()
 	scanning = FALSE
@@ -329,6 +330,11 @@
 	name = "hacked M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-UPP movement instead. Fight fire with fire!"
 	iff_signal = FACTION_UPP
+
+/obj/item/device/motiondetector/hacked/clf
+	name = "hacked motion detector"
+	desc = "A device that usually picks up non-USCM signals, but this one's been reprogrammed to detect all non-CLF movement instead."
+	iff_signal = FACTION_CLF
 
 /obj/item/device/motiondetector/hacked/elite_merc
 	name = "hacked M314 motion detector"

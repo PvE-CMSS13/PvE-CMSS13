@@ -82,6 +82,7 @@
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
+	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
 
@@ -93,3 +94,7 @@
 
 /mob/living/carbon/xenomorph/drone/init_movement_handler()
 	return new /datum/xeno_ai_movement/drone(src)
+
+/mob/living/carbon/xenomorph/drone/Initialize()
+	. = ..()
+	AddComponent(/datum/component/footstep, 1 , 20, 12, 4, "alien_footstep_small")

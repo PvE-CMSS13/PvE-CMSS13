@@ -41,6 +41,14 @@
 	name = "van interior"
 	icon_state = "van"
 
+/area/interior/vehicle/white_van
+	name = "WY van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/clf_van
+	name = "CLF van interior"
+	icon_state = "van"
+
 /area/interior/vehicle/box_van
 	name = "box-van interior"
 	icon_state = "van"
@@ -92,3 +100,19 @@
 /area/interior/vehicle/uppvan/prisoner
 	name = "\improper UPP van prisoner interior"
 	icon_state = "upp_van_prisoner"
+
+/area/interior/vehicle/twe_tank
+	name = "\improper TWE tank interior"
+	icon_state = "tank"
+
+/area/interior/vehicle/twe_apc
+	name = "\improper TWE APC interior"
+	icon_state = "apc"
+
+/area/interior/vehicle/twe_apc/command
+	name = "\improper TWE Command APC interior"
+	icon_state = "apc"
+
+/area/interior/vehicle/uppvan/ridgeway
+	name = "\improper Ridgeway interior"
+	icon_state = "ridgeway"

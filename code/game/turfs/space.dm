@@ -27,6 +27,9 @@
 	if(!istype(src, /turf/open/space/transit))
 		icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
+/turf/open/space/check_ai_special_blockers()
+	return TRUE
+
 /turf/open/space/attack_hand(mob/user)
 	if ((user.is_mob_restrained() || !( user.pulling )))
 		return
@@ -79,10 +82,7 @@
 	..()
 	if ((!(A) || src != A.loc)) return
 
-	inertial_drift(A)
-
 	if(SSticker.mode)
-
 
 		// Okay, so let's make it so that people can travel z levels but not nuke disks!
 		// if(ticker.mode.name == "nuclear emergency") return

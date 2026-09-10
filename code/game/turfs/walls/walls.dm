@@ -175,7 +175,7 @@
 		acided_hole.expand_hole(user) //This proc applies the attack delay itself.
 		return XENO_NO_DELAY_ACTION
 
-	if(!hull && user.claw_type >= claws_minimum)
+	if(!hull && user.claw_type >= claws_minimum && user.a_intent == INTENT_HARM)
 		if(acided_hole)
 			acided_hole.attack_alien(user)
 			return XENO_NO_DELAY_ACTION

@@ -426,4 +426,8 @@
 	name = "\improper 'Tripoli' camera controls"
 	network = list(CAMERA_NET_TRIPOLI, CAMERA_NET_LASER_TARGETS)
 
+/obj/structure/machinery/computer/cameras/dropship/korobka
+	name = "\improper 'Korobka' camera controls"
+	network = list(CAMERA_NET_KOROBKA, CAMERA_NET_LASER_TARGETS)
+
 #undef DEFAULT_MAP_SIZE

@@ -94,13 +94,13 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/heavy)
 	))
 
 /datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
 	if(M.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/L = M
-		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
+		L.apply_armoured_damage(damage*2.2, ARMOR_ENERGY, BURN, null, penetration)
 	burst(get_turf(M),P,damage_type, 1 , 5)
 	new /obj/effect/overlay/temp/plasma_impact(M)
 

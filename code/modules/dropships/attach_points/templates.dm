@@ -400,6 +400,13 @@
 /obj/effect/attach_point/crew_weapon/gibraltar/floor
 	plane = FLOOR_PLANE
 
+/obj/effect/attach_point/crew_weapon/korobka
+	ship_tag = DROPSHIP_KOROBKA
+	attach_id = 7
+
+/obj/effect/attach_point/crew_weapon/korobka/floor
+	plane = FLOOR_PLANE
+
 /obj/effect/attach_point/electronics
 	name = "electronic system attach point"
 	base_category = DROPSHIP_ELECTRONICS

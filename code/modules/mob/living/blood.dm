@@ -211,6 +211,8 @@
 /mob/living/carbon/xenomorph/get_blood_id()
 	if(special_blood)
 		return special_blood
+	if(caste.pathogen_creature)
+		return BLOOD_BLIGHT
 	if(caste.royal_caste)
 		return "xenobloodroyal"
 	else
@@ -301,7 +303,8 @@
 
 
 /mob/living/carbon/human/add_splatter_floor(turf/T, small_drip, b_color)
-	b_color = species.blood_color
+	if(isnull(b_color))
+		b_color = species.blood_color
 
 	..()
 

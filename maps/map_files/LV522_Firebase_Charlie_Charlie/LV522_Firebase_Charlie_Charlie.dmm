@@ -1,0 +1,20350 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/microwave,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ab" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"ac" = (
+/obj/structure/flag/plantable/usa,
+/obj/structure/flag/plantable/ua{
+	pixel_y = 17;
+	pixel_x = -7;
+	layer = 4.11
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"ad" = (
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"ae" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/lightstick/red/planted,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"af" = (
+/obj/item/ammo_box/magazine/mk1/large{
+	layer = 2.98;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
+"ag" = (
+/turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/platoonarmory)
+"ah" = (
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 18
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
+"ai" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"aj" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"ak" = (
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = -8;
+	pixel_y = -2
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"al" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"am" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"an" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"ao" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"ap" = (
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"aq" = (
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"ar" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"as" = (
+/obj/structure/cargo_container/lockmart/right{
+	color = "#aeaeae"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"at" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"au" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/fence,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"av" = (
+/obj/structure/cargo_container/kelland/left,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"aw" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"ax" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"ay" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = -26;
+	pixel_y = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"az" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"aA" = (
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"aC" = (
+/obj/structure/machinery/floodlight/landing{
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	light_range = 3
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"aD" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/shuttle/escapepod/floor0,
+/area/firebase_zulu/inside/dorms)
+"aJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/obj/structure/phone_base{
+	pixel_x = 24;
+	phone_id = "Overwatch";
+	name = "overwatch receiver";
+	phone_category = "Overwatch";
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"aO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty/north_west,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"aQ" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522/outdoors/w_rockies)
+"aT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/engineering)
+"aW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"ba" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522/outdoors/w_rockies)
+"bf" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/recharger{
+	pixel_y = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"bl" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"bm" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"bn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;40";
+	req_one_access = list();
+	name = "squad two smartgunner locker"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"by" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = -26;
+	pixel_y = 8
+	},
+/turf/open/asphalt/cement/cement15,
+/area/lv522/outdoors/w_rockies)
+"bz" = (
+/turf/open/floor/prison/cell_stripe,
+/area/lv522/outdoors/w_rockies)
+"bK" = (
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"bS" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"co" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522/outdoors/w_rockies)
+"cv" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"cD" = (
+/obj/structure/cargo_container/horizontal/blue/middle,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"cK" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"cM" = (
+/obj/structure/bed/chair/comfy/bench/south,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"cW" = (
+/obj/item/lightstick/red/planted,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"db" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Equipment Locker";
+	id = "squadarmory"
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
+"dj" = (
+/obj/structure/machinery/cryopod/big{
+	dir = 4;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_x = -18
+	},
+/turf/open/shuttle/escapepod/floor4,
+/area/firebase_zulu/inside/dorms)
+"dn" = (
+/obj/structure/cargo_container/kelland/left,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"dE" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"dG" = (
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/canteen)
+"dJ" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"dK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	layer = 3.33;
+	pixel_x = 2
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"dV" = (
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/asphalt/cement/cement2,
+/area/lv522/outdoors/w_rockies)
+"dY" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"dZ" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"ea" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_y = 12;
+	pixel_x = -10
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_x = 12;
+	pixel_y = 18
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 18;
+	pixel_x = 2
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"ec" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 5;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/machinery/light/double,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"ee" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"ei" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ej" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"en" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_one_access_txt = "8;12;39;40";
+	req_access = list();
+	hacked = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"eu" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"ex" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/landmark/start/marine/medic/alpha,
+/obj/effect/landmark/start/marine/leader/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"eA" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"eF" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"eH" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"eI" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/stair_cut,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"eJ" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"eM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"eO" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"eP" = (
+/obj/structure/machinery/photocopier,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"eQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = -1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"eY" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet/medical{
+	pixel_x = -9
+	},
+/obj/structure/filingcabinet/medical{
+	pixel_x = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"fa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty/north_south,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/engineering)
+"fe" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"ff" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/flashlight/pen{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"fr" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"fv" = (
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"fB" = (
+/obj/structure/machinery/vending/cola{
+	pixel_x = -6;
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"fF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/item/clothing/accessory/patch{
+	pixel_x = 29
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"fI" = (
+/obj/structure/cargo_container/horizontal/blue/bottom,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"fM" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"fW" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"fZ" = (
+/obj/structure/machinery/medical_pod/bodyscanner{
+	pixel_y = 6
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"gh" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"gl" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"gs" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"gt" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"gA" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"gC" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement14,
+/area/lv522/outdoors/w_rockies)
+"gH" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"gI" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"gW" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"hc" = (
+/obj/structure/cargo_container/lockmart/mid{
+	color = "#aeaeae"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"hd" = (
+/obj/structure/bed/chair/comfy/bench/north,
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"he" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 8;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"hh" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"hk" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"hq" = (
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/outdoors/w_rockies)
+"hs" = (
+/obj/structure/cargo_container/lockmart/mid{
+	color = "#aeaeae"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ht" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"hu" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"hw" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"hy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty/north_east,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"hA" = (
+/obj/structure/fence,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"hB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"hO" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/true_random{
+	pixel_y = 8
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"hT" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"hU" = (
+/obj/structure/surface/table/almayer,
+/obj/item/weapon/dart,
+/obj/item/weapon/dart{
+	pixel_y = 5
+	},
+/obj/item/weapon/dart{
+	pixel_x = -15
+	},
+/obj/item/weapon/dart{
+	pixel_y = 9;
+	pixel_x = -15
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"hX" = (
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"id" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"in" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"ip" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"is" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"it" = (
+/obj/structure/sink{
+	pixel_y = 26
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"iu" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/dorms)
+"ix" = (
+/turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/canteen)
+"iy" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"iz" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonprep)
+"iI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522/outdoors/w_rockies)
+"iL" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"iN" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"iR" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"iU" = (
+/obj/structure/cargo_container/kelland/right,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"jb" = (
+/obj/structure/cargo_container/kelland/right,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"jd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"jh" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"ji" = (
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
+	},
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"jj" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"jq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"jw" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"jz" = (
+/obj/structure/cargo_container/horizontal/blue/top,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"jC" = (
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"jD" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"jR" = (
+/obj/structure/machinery/floodlight/landing{
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	light_range = 3
+	},
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522/outdoors/w_rockies)
+"jY" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ka" = (
+/obj/structure/machinery/door/airlock/almayer/secure,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"kf" = (
+/turf/open/shuttle/escapepod/floor0,
+/area/firebase_zulu/inside/dorms)
+"kj" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"km" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"ky" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"kD" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"kK" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "vent4";
+	pixel_x = -2;
+	pixel_y = -29
+	},
+/turf/open/shuttle/escapepod/floor0/west,
+/area/firebase_zulu/inside/dorms)
+"kL" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"kN" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"kP" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"kR" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"kT" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"kW" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -16
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"kX" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -8;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"la" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"ll" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"ls" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"lu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/office/light{
+	dir = 1;
+	pixel_y = 5;
+	buckling_y = 5
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"lv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"lM" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/bed/roller,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"lN" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"mj" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"mn" = (
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	layer = 3.2
+	},
+/obj/structure/machinery/telecomms/relay/preset/ice_colony,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"mt" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"mu" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"mx" = (
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"mz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/clipboard{
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/prop/magazine{
+	icon_state = "poster8";
+	name = "Soldier Of Fortune: Issue March 2182";
+	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized imagine of a motion tracker in use, with the headline 'Combat Awareness in the 22nd Century'. The article covers the advancement in sensor technology that has made combat between peer nations like the UA and UPP increasingly lethal to those on the ground. Flipping through the magazine you see article titles such as 'Arsenal: The M2C Heavy Machinegun', and 'The Future War: advancements in Cyberdyne Systems combat AI'. At the back of the magazine is an extensive list of advertisements for private contractors and wares.";
+	pixel_y = 3;
+	pixel_x = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"mD" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"mG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_y = 1;
+	pixel_x = -6
+	},
+/obj/item/paper_bin/wy{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/item/tool/pen/red/clicky{
+	pixel_y = 3;
+	pixel_x = 7
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_y = 5;
+	pixel_x = 7
+	},
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"mQ" = (
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage"
+	},
+/obj/item/storage/box/powderedmilk,
+/obj/item/reagent_container/food/condiment/juice/egg,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"mT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"mU" = (
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/dorms)
+"mY" = (
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"nb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ng" = (
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 9
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 21
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"nj" = (
+/obj/structure/window/framed/strata/reinforced,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonprep)
+"nl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"nA" = (
+/turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/platoonprep)
+"nC" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"nF" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"nG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/vending/walkman,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"nH" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement2,
+/area/lv522/outdoors/w_rockies)
+"nK" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/tray{
+	pixel_y = 23;
+	pixel_x = 16
+	},
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = 16;
+	pixel_y = 22;
+	layer = 3.5
+	},
+/obj/item/ashtray/glass{
+	pixel_y = 16;
+	pixel_x = 7
+	},
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"nM" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"nT" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"og" = (
+/obj/structure/cargo_container/hd/mid/alt,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"oq" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"os" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"oD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonprep)
+"oE" = (
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonprep)
+"oM" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"oV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"pj" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#BB3F3F"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"pk" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 22;
+	pixel_x = 1;
+	layer = 3.2
+	},
+/obj/item/ammo_box/rounds/smartgun,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 10
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"pr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"ps" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"pt" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonprep)
+"px" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"pD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	layer = 3.33;
+	pixel_x = 2
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"pE" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"pG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522/outdoors/w_rockies)
+"pI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/glass{
+	pixel_y = 5;
+	pixel_x = -6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"pN" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"pS" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"pX" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement15,
+/area/lv522/outdoors/w_rockies)
+"qb" = (
+/obj/structure/cargo_container/kelland/left,
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"qc" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"qd" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/glass{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/obj/item/notepad/black{
+	pixel_x = -8;
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = -2;
+	pixel_x = 6;
+	id = "squadarmory";
+	name = "gear lockers door-control"
+	},
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"qg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"qi" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"qj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 22
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 22
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"qo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"qs" = (
+/obj/structure/machinery/light/double,
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"qy" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/asphalt/cement/cement12,
+/area/lv522/outdoors/w_rockies)
+"qz" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 5;
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"qC" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"qD" = (
+/obj/structure/cable/heavyduty/north_south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"qK" = (
+/obj/structure/closet/secure_closet/fridge/dry,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"qS" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"qZ" = (
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"rl" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"rm" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"ro" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"rr" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"rs" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"rJ" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"rN" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"rQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/dorms)
+"rR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"rU" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 8;
+	pixel_y = 22
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"sd" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras/wooden_tv{
+	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
+	name = "Television set";
+	network = null;
+	pixel_y = 6;
+	pixel_x = -1
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_y = 18;
+	pixel_x = -4
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"se" = (
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"sm" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -9
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"st" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"sz" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/firebase_zulu/inside/dorms)
+"sB" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/reagentgrinder{
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"sE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 18
+	},
+/obj/effect/landmark/personal_weapon,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"sH" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/softpack/burn{
+	pixel_y = 9;
+	pixel_x = -9;
+	layer = 3.01
+	},
+/obj/item/storage/firstaid/softpack{
+	pixel_y = 11;
+	pixel_x = 5
+	},
+/obj/item/storage/firstaid/softpack/brute,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"sI" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"sJ" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"sL" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"sM" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/bridge,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"sS" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"sV" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"te" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/nade_box,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"tf" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"ti" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"tj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/dartboard{
+	pixel_x = 29
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"tq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/bench/south,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"tt" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/tl/alpha,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"tv" = (
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/dorms)
+"tz" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"tI" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"tJ" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_y = 8;
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/obj/structure/curtain/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"tN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/trashcart,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"tT" = (
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/platoonprep)
+"tV" = (
+/obj/structure/machinery/computer/telecomms/server{
+	pixel_y = 16
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"ud" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"ug" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = -26;
+	pixel_y = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"uk" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "\improper Equipment Locker";
+	id = "squadarmory"
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
+"ul" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"um" = (
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"ut" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/engineering)
+"uK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	light_color = "#BB3F3F";
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"uL" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"uO" = (
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"va" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/asphalt/cement/cement15,
+/area/lv522/outdoors/w_rockies)
+"vj" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/shotgun{
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/shotgun/buckshot,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"vm" = (
+/obj/structure/platform/stair_cut,
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"vn" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8;
+	layer = 2.9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"vq" = (
+/obj/structure/cargo_container/hd/left/alt,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"vy" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"vA" = (
+/turf/open/floor/prison/cell_stripe/east,
+/area/firebase_zulu/inside/dorms)
+"vC" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"vH" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"vI" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/obj/structure/largecrate/random,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"vT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"wc" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"wd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	network = list("Golden Arrow","Vehicle","Midway");
+	pixel_y = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"wh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"wk" = (
+/obj/structure/machinery/cm_vending/sorted/medical,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"wl" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"wn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/glass{
+	pixel_y = -4;
+	pixel_x = -6
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
+	name = "Midway Remote Control Console";
+	shuttleId = "dropship_midway";
+	icon_state = "cameras_old";
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"wp" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonarmory)
+"wu" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"wx" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"wD" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"wI" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/firebase_zulu/inside/engineering)
+"wS" = (
+/obj/structure/platform/strata/metal,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"wW" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/bodybags{
+	pixel_y = 11;
+	pixel_x = -5
+	},
+/obj/item/storage/box/bodybags{
+	pixel_y = 3;
+	pixel_x = -2
+	},
+/obj/structure/machinery/light/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"xa" = (
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"xc" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 9;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/machinery/light/double,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"xi" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"xj" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"xm" = (
+/obj/structure/cargo_container/kelland/right,
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"xs" = (
+/obj/structure/cargo_container/uscm/mid,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"xv" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"xJ" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"xN" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"xS" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"xU" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"xZ" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"yc" = (
+/obj/structure/machinery/floodlight/landing{
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	light_range = 3
+	},
+/turf/open/floor/prison/bright_clean,
+/area/lv522/outdoors/w_rockies)
+"yk" = (
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"yp" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/largecrate/random{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"yq" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/structure/machinery/chem_dispenser/soda{
+	pixel_y = 8;
+	layer = 3.3
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"yr" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"yy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/prop/server_equipment/yutani_server{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"yz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522/outdoors/w_rockies)
+"yA" = (
+/obj/structure/machinery/cm_vending/clothing/medic{
+	density = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"yB" = (
+/obj/structure/closet/crate/freezer{
+	name = "blood cooler crate";
+	pixel_y = 7
+	},
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = -5
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = 7
+	},
+/obj/item/reagent_container/blood/OMinus,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"yE" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"yH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/structure/fence,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"yI" = (
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522/outdoors/w_rockies)
+"yJ" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"yM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe/west,
+/area/lv522/outdoors/w_rockies)
+"yQ" = (
+/turf/open/floor/prison/cell_stripe/east,
+/area/lv522/outdoors/w_rockies)
+"yV" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/obj/item/ashtray/glass{
+	pixel_y = 6;
+	pixel_x = 7
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"yY" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"za" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"zc" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"zf" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"zi" = (
+/obj/structure/bed/stool,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"zr" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"zt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"zy" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/turf/open/asphalt/cement/cement9,
+/area/lv522/outdoors/w_rockies)
+"zH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonprep)
+"zI" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"zN" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -10;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"zX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"zZ" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Ab" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Ai" = (
+/obj/structure/cargo_container/uscm/mid,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Aq" = (
+/obj/effect/landmark/hunter_secondary,
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"As" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"Au" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"AC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = 7;
+	pixel_y = 19;
+	layer = 3.6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"AD" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"AG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/dorms)
+"AI" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -10;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"AK" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement14,
+/area/lv522/outdoors/w_rockies)
+"AV" = (
+/obj/structure/surface/table/almayer,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Bi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 14
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"Bj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522/outdoors/w_rockies)
+"Bp" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Bs" = (
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Bv" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"BJ" = (
+/obj/item/weapon/twohanded/folded_metal_chair,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"BK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"BN" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"BO" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"BP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/recharger{
+	pixel_y = 11
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/lv522/outdoors/w_rockies)
+"BR" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"BZ" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Cb" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_y = 8;
+	pixel_x = 1
+	},
+/obj/structure/curtain/red,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"Ce" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"Ci" = (
+/obj/structure/cable/heavyduty/north_south,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"Cm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Cp" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/engineering)
+"Ct" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"CI" = (
+/obj/structure/largecrate,
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"CO" = (
+/obj/structure/largecrate,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"CP" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"CV" = (
+/obj/structure/window/framed/strata/reinforced,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"CY" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"Da" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonprep)
+"Db" = (
+/obj/structure/closet/crate/ammo/alt{
+	name = "secure container";
+	desc = "A sealed container for transporting or storing various things."
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Dg" = (
+/obj/structure/closet/secure_closet/fridge/organic,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Dj" = (
+/turf/closed/wall/strata_ice/dirty,
+/area/lv522/outdoors/w_rockies)
+"Dm" = (
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/outdoors/w_rockies)
+"DC" = (
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -5;
+	pixel_y = -2;
+	dir = 8
+	},
+/turf/open/shuttle/escapepod/floor4,
+/area/firebase_zulu/inside/dorms)
+"DK" = (
+/obj/structure/platform_decoration/strata/metal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement2,
+/area/lv522/outdoors/w_rockies)
+"DL" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/roller{
+	pixel_y = 5;
+	pixel_x = 3
+	},
+/obj/item/roller{
+	pixel_y = 13;
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"DS" = (
+/obj/structure/cargo_container/lockmart/left{
+	color = "#aeaeae"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"DU" = (
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"DZ" = (
+/obj/structure/fence,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"Ee" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/vending/dinnerware,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Eg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"En" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Eq" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"ED" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"ES" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522/outdoors/w_rockies)
+"EY" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Fa" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 10;
+	pixel_y = 5
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Ft" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement9,
+/area/lv522/outdoors/w_rockies)
+"FA" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"FC" = (
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"FD" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"FE" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"FQ" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"FY" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"Ga" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Ge" = (
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Gn" = (
+/obj/effect/landmark/observer_start,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Gq" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"GB" = (
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = 6;
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"GE" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"GM" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"GN" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"GO" = (
+/obj/structure/cable/heavyduty/north_south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/fence,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"GS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/mk1{
+	layer = 3.1;
+	pixel_y = 2;
+	pixel_x = 3
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"GX" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Hi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Hk" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/machinery/iv_drip{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Hp" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Hq" = (
+/obj/structure/cargo_container/uscm/chinook/left,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Hu" = (
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = 6;
+	dir = 8
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"HH" = (
+/obj/structure/closet/crate,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"HN" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"HZ" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Ib" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Ik" = (
+/obj/structure/cargo_container/hd/right/alt,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Il" = (
+/obj/structure/machinery/medical_pod/sleeper{
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"Io" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/bench/mid,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Ip" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Iq" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_y = 8;
+	pixel_x = 1
+	},
+/obj/structure/curtain/red,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"Ir" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/obj/structure/largecrate/random,
+/turf/open/asphalt/cement/cement14,
+/area/lv522/outdoors/w_rockies)
+"Is" = (
+/obj/structure/barricade/deployable{
+	dir = 1
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Iv" = (
+/obj/structure/largecrate,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Iw" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Iy" = (
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"IA" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"IB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine{
+	pixel_y = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/item/newspaper{
+	pixel_x = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"IJ" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"IO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"IR" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement9,
+/area/lv522/outdoors/w_rockies)
+"IT" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"IY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/stack/sheet/mineral/phoron/medium_stack,
+/obj/item/stack/sheet/mineral/phoron/medium_stack{
+	pixel_y = 10
+	},
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Jc" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Jd" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"Jf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/circuitboard/apc,
+/obj/item/circuitboard/apc,
+/obj/item/circuitboard/apc,
+/obj/item/circuitboard/apc,
+/obj/item/circuitboard/apc,
+/obj/item/device/multitool{
+	pixel_y = 18;
+	layer = 3.5
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Jg" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Jm" = (
+/obj/structure/fence,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"Ju" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"JB" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	req_access = null
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"JC" = (
+/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/unloaded{
+	pixel_y = 27;
+	layer = 3.1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"JL" = (
+/obj/structure/largecrate/random/barrel/true_random{
+	layer = 3.1
+	},
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"JR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"JT" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"JV" = (
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"JX" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
+"JY" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Kh" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/largecrate{
+	pixel_x = -6;
+	pixel_y = -7
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Ki" = (
+/obj/structure/cargo_container/lockmart/left{
+	color = "#aeaeae"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Kj" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"Km" = (
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"Kn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy/bench/north,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Kp" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/cable/heavyduty/north_south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"Ku" = (
+/obj/structure/machinery/cryopod/big{
+	dir = 4;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/turf/open/shuttle/escapepod/floor4,
+/area/firebase_zulu/inside/dorms)
+"Kv" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/filingcabinet{
+	pixel_x = 8;
+	layer = 2.9
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -8;
+	layer = 2.9
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"KB" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"KM" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"KO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"KY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"KZ" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Lg" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Lj" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Lp" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Lr" = (
+/obj/structure/largecrate,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Lt" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/lv522/outdoors/w_rockies)
+"Lv" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Lx" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"LG" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"LH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"LM" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"LQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"LR" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"LS" = (
+/obj/structure/machinery/vending/snack{
+	pixel_x = -18;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 3;
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"LZ" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	name = "\improper Hypersleep Airlock"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/firebase_zulu/inside/dorms)
+"Ma" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ashtray/glass{
+	pixel_y = 9;
+	pixel_x = -6
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Me" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Ml" = (
+/obj/structure/closet/secure_closet/fridge/groceries,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Mt" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"Mw" = (
+/obj/structure/largecrate/random/case/small{
+	layer = 3.1
+	},
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"MC" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"MO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"MW" = (
+/obj/structure/target,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"MX" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/obj/item/ammo_box/magazine/misc/power_cell{
+	pixel_y = 18
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Na" = (
+/obj/structure/machinery/space_heater,
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/lv522/outdoors/w_rockies)
+"Nd" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"Nh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"Nt" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	name = "Hangar Bay Aft";
+	id = "golden arrow lz2";
+	roundstart_template = null
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"Nu" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Nv" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"Nz" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"NA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"NB" = (
+/obj/structure/machinery/autodoc_console{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"NI" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 12;
+	pixel_y = 16
+	},
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"NL" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/surgical_case/regular{
+	pixel_y = 13
+	},
+/obj/item/roller{
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"NN" = (
+/turf/open/shuttle/escapepod/floor1,
+/area/firebase_zulu/inside/dorms)
+"NP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/engineering_electrical,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"OJ" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"OK" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"OP" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/obj/item/paper_bin/wy{
+	pixel_x = -4;
+	pixel_y = 19
+	},
+/obj/item/tool/pen/red/clicky{
+	pixel_y = 10;
+	pixel_x = -17
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"OQ" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
+	req_one_access_txt = "8;12;39;40";
+	req_one_access = list();
+	hacked = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"OS" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonprep)
+"OV" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 16
+	},
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Pd" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Pe" = (
+/turf/closed/wall/solaris/reinforced/hull/lv522,
+/area/lv522/outdoors/w_rockies)
+"Pf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag{
+	pixel_x = 1;
+	pixel_y = 16;
+	layer = 5.4
+	},
+/obj/structure/machinery/computer/overwatch/almayer{
+	pixel_y = -1
+	},
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"Pl" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	dir = 6;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"Ps" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/ceramic_plate,
+/obj/item/trash/ceramic_plate{
+	pixel_y = 3
+	},
+/obj/item/trash/ceramic_plate{
+	pixel_y = 6
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Pv" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"PK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"PN" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice12";
+	pixel_x = -26;
+	pixel_y = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"PR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/turf/open/floor/strata/white_cyan2/west,
+/area/firebase_zulu/inside/dorms)
+"PT" = (
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522/outdoors/w_rockies)
+"Qh" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Ql" = (
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Qm" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Qq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/storage/belt/utility/full{
+	pixel_y = 12
+	},
+/obj/item/storage/belt/utility/full{
+	pixel_y = 2;
+	pixel_x = 2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Qt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Qx" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"QJ" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = -2;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"QP" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"QR" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"QS" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"QY" = (
+/obj/structure/platform/stair_cut,
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522/outdoors/w_rockies)
+"Rf" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/dorms)
+"Rj" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/structure/flora/pottedplant{
+	desc = "It is made of Fiberbush(tm). It contains asbestos. Studies say that greenery calms the mind due to some sort evolved mechanism in the brain. This plant is not calming.";
+	icon_state = "pottedplant_21";
+	layer = 5.3;
+	name = "synthethic potted plant";
+	pixel_y = 12;
+	pixel_x = -10
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"Rn" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"Ru" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/handrail,
+/turf/open/floor/prison/cell_stripe,
+/area/lv522/outdoors/w_rockies)
+"RB" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/rollingpin{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"RG" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"RH" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"RI" = (
+/obj/structure/bed/chair,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"RL" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/east,
+/area/firebase_zulu/inside/platoonprep)
+"RM" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/surface/table/reinforced/prison,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"RN" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"RT" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"RW" = (
+/obj/structure/machinery/power/apc/power/east,
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;39";
+	req_one_access = list();
+	name = "squad one smartgunner locker"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"Sb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Sj" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"Sk" = (
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
+"St" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"SB" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"SK" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"SM" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"SO" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"ST" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"Tf" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Ti" = (
+/turf/open/auto_turf/shale/layer2,
+/area/lv522/outdoors/w_rockies)
+"Ty" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"TD" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement12,
+/area/lv522/outdoors/w_rockies)
+"TI" = (
+/turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/dorms)
+"TP" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"TR" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"TS" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/cell_charger,
+/obj/effect/spawner/random/powercell,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"TU" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"TX" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"Ua" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Ud" = (
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Uf" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"Ug" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"Uq" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Us" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Ut" = (
+/obj/structure/stairs/perspective{
+	dir = 6;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/sign/safety/medical{
+	pixel_x = 11;
+	pixel_y = 29
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Uu" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/canteen)
+"Uv" = (
+/obj/structure/gun_rack/mk221{
+	pixel_x = -11
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"Uw" = (
+/obj/structure/cargo_container/lockmart/right{
+	color = "#aeaeae"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Uz" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"UF" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/platoonprep)
+"UK" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"UP" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/knife,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"UU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet{
+	pixel_x = 8
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonprep)
+"Vd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/kitchen,
+/area/firebase_zulu/inside/canteen)
+"Ve" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Vj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"Vn" = (
+/turf/closed/wall/strata_outpost,
+/area/lv522/indoors/lone_buildings/storage_blocks)
+"Vp" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"Vs" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Vx" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Vy" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/ashtray/plastic{
+	pixel_y = 3;
+	pixel_x = -10
+	},
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_y = 14;
+	pixel_x = -7
+	},
+/obj/item/paper_bin/uscm{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/tool/pen{
+	pixel_x = -2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"VH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/tunnel/maint_tunnel/no_xeno_desc{
+	pixel_y = 6
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"VT" = (
+/mob/living/simple_animal/bat{
+	name = "Firebase Charlie Charlie"
+	},
+/turf/closed/wall/strata_ice/dirty,
+/area/lv522/outdoors/w_rockies)
+"VW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"VZ" = (
+/obj/structure/cargo_container/uscm/right,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Wc" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Wg" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/lv522/outdoors/w_rockies)
+"Wo" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/dorms)
+"Wq" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Wu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"WB" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement2,
+/area/lv522/outdoors/w_rockies)
+"WE" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_y = 6;
+	pixel_x = -7;
+	layer = 2.98
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/mk1{
+	pixel_y = 10;
+	pixel_x = -2
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"WG" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"WH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"WQ" = (
+/obj/structure/cable/heavyduty/north_south,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/engineering)
+"WU" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 8;
+	pixel_y = 3
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"WW" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/asphalt/cement/cement1,
+/area/lv522/outdoors/w_rockies)
+"WY" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/lv522/outdoors/w_rockies)
+"Xg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"Xh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/firebase_zulu/inside/platoonprep)
+"Xm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"Xn" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"Xo" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Xr" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Xz" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"XB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty/east_south,
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"XI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"XJ" = (
+/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/structure/gun_rack/m41/unloaded{
+	pixel_y = 27;
+	layer = 3.1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"XS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/autolathe,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/engineering)
+"Yb" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/processor{
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"Yc" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/dorms)
+"Yd" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/platoonprep)
+"Ye" = (
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Yf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"Yj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/firebase_zulu/inside/canteen)
+"Yl" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 9;
+	icon_state = "p_stair_full"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+"Yn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/filingcabinet/medical{
+	pixel_x = -9
+	},
+/obj/structure/filingcabinet/medical{
+	pixel_x = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Yr" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"Yx" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3.3;
+	pixel_y = 4
+	},
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3
+	},
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/tl/alpha,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"YA" = (
+/obj/structure/cable/heavyduty/north_south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/plating,
+/area/lv522/outdoors/w_rockies)
+"YC" = (
+/obj/structure/machinery/computer/arcade{
+	layer = 3.6;
+	pixel_y = 16;
+	density = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
+"YJ" = (
+/obj/structure/bed/chair/comfy/bench/mid,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"YL" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B"
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonprep)
+"YR" = (
+/obj/structure/closet/secure_closet/platoon_sergeant,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"YS" = (
+/obj/structure/largecrate/random/case/double{
+	layer = 3.1
+	},
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"YT" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/firebase_zulu/inside/engineering)
+"Zd" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/structure/stairs/perspective{
+	dir = 9;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Zh" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464D4B"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464D4B"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"Zp" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"Zq" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical{
+	density = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"Zs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4
+	},
+/obj/structure/fence,
+/turf/open/floor/prison/floor_plate,
+/area/lv522/outdoors/w_rockies)
+"Zu" = (
+/obj/structure/platform/mineral{
+	color = "#464D4B";
+	dir = 8
+	},
+/obj/structure/machinery/medical_pod/autodoc{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/dorms)
+"ZC" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#BB3F3F"
+	},
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"ZI" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/snacks/sliceable/bread{
+	pixel_y = 8
+	},
+/obj/item/reagent_container/food/snacks/sliceable/bread{
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/snacks/sliceable/bread,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/canteen)
+"ZS" = (
+/obj/structure/cargo_container/uscm/chinook/left,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522/outdoors/w_rockies)
+"ZU" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/turf/open/asphalt/cement/cement4,
+/area/lv522/outdoors/w_rockies)
+
+(1,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(2,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(3,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+mY
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(4,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ti
+Ql
+mY
+Ql
+mY
+Ql
+Ql
+Ti
+CP
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(5,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+Ti
+Ql
+mY
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+mY
+Ql
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(6,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+mY
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(7,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ti
+Ti
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(8,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Fa
+Ql
+Ql
+Ql
+Ql
+mY
+he
+mY
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(9,1,1) = {"
+Dj
+Dj
+Dj
+Pe
+Dj
+Ql
+Pe
+Ql
+mY
+Pe
+mY
+mY
+Pe
+jC
+Ql
+Ql
+Ql
+Ql
+Pe
+jC
+jC
+Pe
+mY
+mY
+Pe
+mY
+mY
+Pe
+mY
+mY
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+cW
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(10,1,1) = {"
+Dj
+Dj
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+jC
+Ql
+Ql
+Ql
+Ql
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(11,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+Ql
+Ql
+Pe
+mY
+mY
+Pe
+mY
+mY
+Pe
+rU
+jC
+Ql
+Ql
+WU
+Pe
+Wc
+Ti
+Pe
+Ti
+mY
+Pe
+Ti
+mY
+Pe
+Lj
+Lj
+Pe
+Pe
+Pe
+hA
+hA
+hA
+hA
+hA
+hA
+hA
+au
+yH
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(12,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+ZS
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Lj
+Sj
+Pe
+jz
+cD
+fI
+Lr
+mY
+ej
+AD
+mY
+DS
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(13,1,1) = {"
+Dj
+Dj
+Pe
+Ti
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+xs
+Ti
+mY
+mY
+mY
+nH
+RT
+Bv
+Bv
+Bv
+Bv
+RT
+RT
+RT
+gC
+Ti
+Ti
+Pe
+mY
+mY
+mY
+mY
+mY
+Lj
+ej
+mY
+hc
+DZ
+Ti
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(14,1,1) = {"
+Dj
+Dj
+Pe
+Ti
+Ql
+Ti
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+VZ
+Ti
+mY
+mY
+nH
+ee
+ix
+ix
+ix
+ix
+ix
+ix
+ix
+ix
+yY
+ul
+Pe
+Pe
+Pe
+Ti
+Ti
+mY
+mY
+mY
+Lj
+mY
+Uw
+DZ
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(15,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+Ql
+LG
+Jg
+Jg
+Jg
+ls
+Jg
+Jg
+Xo
+mY
+Ti
+mY
+mY
+mY
+xj
+ix
+ix
+nG
+Bp
+ix
+ix
+mQ
+ji
+ix
+ix
+Lp
+TP
+Pe
+Ti
+mY
+mY
+Hq
+mY
+mY
+mY
+mY
+Lr
+DZ
+Ti
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(16,1,1) = {"
+Dj
+Dj
+Pe
+Lj
+Ib
+eu
+TI
+TI
+TI
+TI
+TI
+TI
+pE
+Xo
+mY
+mY
+mY
+WB
+xS
+ix
+pI
+ll
+yk
+ix
+yq
+jq
+ll
+sB
+ix
+Lp
+JY
+Pe
+mY
+mY
+mY
+Ai
+Lr
+mY
+mY
+mY
+Lr
+DZ
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(17,1,1) = {"
+Dj
+Dj
+Pe
+xi
+bm
+iu
+TI
+NL
+ff
+sH
+yJ
+TI
+TI
+OV
+ax
+ax
+ax
+kW
+ix
+ix
+kT
+Nd
+yk
+zi
+UP
+Xm
+Ty
+ea
+ix
+Lp
+Pe
+Pe
+Pe
+mY
+mY
+VZ
+Lr
+mY
+mY
+mY
+CI
+DZ
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(18,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+gI
+TI
+yA
+xa
+mx
+MC
+ab
+yB
+TI
+JL
+mY
+mY
+mY
+Xn
+mu
+CV
+Tf
+nK
+yk
+zi
+Rn
+qo
+Nh
+Ml
+ix
+Lp
+JY
+Pe
+Lj
+mY
+mY
+Lr
+mY
+mY
+mY
+mY
+Ti
+DZ
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(19,1,1) = {"
+Dj
+Dj
+Pe
+rl
+Mt
+TI
+Zq
+xa
+mx
+rR
+ab
+wk
+TI
+Qh
+mY
+mY
+mY
+sJ
+vC
+CV
+Tf
+hw
+yk
+zi
+Rn
+qo
+Nh
+Dg
+ix
+Lp
+um
+Pe
+Lj
+Lj
+mY
+mY
+mY
+mY
+mY
+mY
+qc
+DZ
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Ti
+Ql
+Ql
+Ql
+xJ
+Ql
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(20,1,1) = {"
+Dj
+Dj
+Pe
+jC
+Mt
+TI
+TI
+EY
+lu
+rR
+Yn
+TI
+TI
+sL
+mY
+mY
+mY
+xj
+ix
+ix
+eH
+dE
+yk
+zi
+Rn
+zr
+Nh
+qK
+ix
+QR
+Pe
+Pe
+Pe
+Lj
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+qg
+zN
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(21,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+gI
+TI
+TI
+Vy
+ab
+ab
+eY
+TI
+TI
+qb
+jC
+mY
+mY
+Vp
+TU
+CV
+Ge
+yk
+yk
+zi
+NI
+qo
+Nh
+RB
+ix
+QR
+um
+Pe
+dn
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+qg
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(22,1,1) = {"
+Dj
+Dj
+Pe
+jC
+gI
+TI
+TI
+TI
+jj
+jj
+TI
+TI
+TI
+xm
+mY
+mY
+mY
+sJ
+HZ
+CV
+Ge
+yk
+yk
+zi
+ZI
+qo
+LH
+Yb
+ix
+QR
+um
+Pe
+jb
+mY
+vq
+Lr
+mY
+Ql
+Ql
+Ql
+Ql
+qg
+nT
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(23,1,1) = {"
+Dj
+Dj
+Pe
+jC
+LM
+TI
+TI
+TI
+eI
+za
+TI
+TI
+TI
+Qh
+mY
+mY
+mY
+xj
+ix
+ix
+Eq
+Nd
+yk
+Vd
+ix
+ng
+Xm
+Yj
+ix
+QR
+Pe
+Pe
+Pe
+mY
+og
+Lr
+mY
+Ql
+Ql
+mY
+kX
+DZ
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+CP
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(24,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+LM
+TI
+TI
+Hk
+ky
+rN
+RM
+TI
+TI
+BR
+mY
+mY
+mY
+Xn
+mu
+CV
+Tf
+nK
+yk
+oV
+ix
+ix
+it
+Ug
+ix
+QR
+JY
+Pe
+ej
+mY
+Ik
+mY
+Ql
+Ql
+mY
+mY
+mY
+DZ
+jC
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(25,1,1) = {"
+Dj
+Dj
+Pe
+Ti
+LM
+TI
+Zu
+lM
+KY
+mx
+lN
+DL
+TI
+Ye
+mY
+mY
+mY
+wc
+vC
+CV
+Tf
+hw
+yk
+yk
+Qt
+ix
+ix
+ka
+ix
+Lp
+JY
+Pe
+ej
+ej
+mY
+mY
+Ql
+Ql
+mY
+mY
+jC
+DZ
+jC
+jC
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(26,1,1) = {"
+Dj
+Dj
+Pe
+mY
+LM
+TI
+NB
+ab
+IO
+mx
+rR
+AG
+jw
+yr
+mY
+mY
+mY
+KM
+ix
+ix
+eH
+dE
+yk
+yk
+oV
+ll
+Ge
+Uu
+ix
+Lp
+Pe
+Pe
+Pe
+ej
+mY
+mY
+Ql
+mY
+mY
+mY
+jC
+DZ
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(27,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+gI
+TI
+ab
+ab
+Yf
+jd
+Wu
+rQ
+FC
+yr
+mY
+mY
+jC
+Vp
+TU
+CV
+Ge
+yk
+yk
+yk
+Nd
+Nd
+yk
+Ge
+ix
+Lp
+JY
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+DZ
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+CP
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(28,1,1) = {"
+Dj
+Dj
+Pe
+SK
+gI
+TI
+Uf
+ab
+xa
+xa
+ab
+wW
+TI
+Ut
+mY
+mY
+jC
+wc
+HZ
+CV
+Ge
+yk
+yk
+RI
+hw
+hw
+BN
+Ge
+ix
+QR
+um
+Pe
+mY
+mY
+Lr
+Lr
+mY
+mY
+jC
+jC
+hT
+DZ
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(29,1,1) = {"
+Dj
+Dj
+Pe
+ej
+gI
+TI
+TX
+xa
+Hu
+xa
+GB
+bf
+TI
+Mw
+mY
+jC
+jC
+KM
+ix
+ix
+FQ
+Nd
+yk
+RI
+hw
+nK
+BN
+ll
+ix
+QR
+Pe
+Pe
+Pe
+Lr
+Lr
+Pe
+mY
+mY
+Pe
+hT
+hT
+Pe
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Ql
+mY
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(30,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+gI
+TI
+TI
+nM
+fZ
+xa
+Il
+TI
+TI
+YS
+mY
+jC
+jC
+Xn
+mu
+CV
+Tf
+nK
+yk
+RI
+hw
+hw
+BN
+ll
+ix
+Lp
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(31,1,1) = {"
+Dj
+Dj
+Pe
+ej
+nC
+oq
+TI
+TI
+TI
+TI
+TI
+TI
+vy
+tz
+mY
+jC
+jC
+sJ
+vC
+CV
+Tf
+hw
+yk
+RI
+hw
+hw
+LQ
+Qt
+ix
+Lp
+Pe
+Pe
+Pe
+TP
+um
+Pe
+JY
+JY
+Pe
+JY
+VW
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ql
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(32,1,1) = {"
+Dj
+Dj
+Pe
+AD
+Ql
+nC
+eJ
+eJ
+iy
+iy
+iy
+iy
+tz
+mY
+mY
+Ti
+jC
+xj
+ix
+ix
+kD
+dE
+yk
+yk
+dE
+Pv
+tN
+ix
+ix
+Zh
+GM
+um
+xU
+is
+is
+gs
+gs
+is
+is
+Xz
+VW
+VW
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+xJ
+Ql
+Ql
+Ql
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(33,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+Ql
+Ib
+gl
+Jg
+Jg
+Jg
+Jg
+Jg
+Jg
+Xo
+mY
+Ti
+Ti
+Vp
+TU
+CV
+ll
+oV
+yk
+yk
+Ge
+Ee
+nA
+nA
+nA
+nA
+Zh
+gs
+xS
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+yY
+Xz
+VW
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(34,1,1) = {"
+Dj
+Dj
+Pe
+mY
+mY
+LM
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+Qh
+mY
+mY
+Ti
+wc
+HZ
+CV
+ll
+oV
+yk
+yk
+Ge
+nA
+nA
+nA
+nA
+nA
+nA
+nA
+nA
+nA
+yy
+oD
+Yd
+qZ
+nA
+nA
+QR
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(35,1,1) = {"
+Dj
+Dj
+Pe
+mY
+mY
+LM
+sz
+DC
+Ku
+dj
+Ku
+Ku
+sz
+Qh
+mY
+mY
+mY
+KM
+ix
+ix
+rr
+Ce
+yk
+yk
+ps
+nA
+nA
+Kn
+Io
+tq
+nA
+nA
+qj
+mT
+Hi
+iz
+Yd
+Ud
+kN
+nA
+Lp
+um
+Pe
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(36,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+mY
+LM
+sz
+aD
+kf
+kf
+NN
+kK
+sz
+Qh
+mY
+mY
+mY
+Xn
+mu
+CV
+GX
+nK
+yk
+yk
+dG
+OS
+zH
+mT
+uO
+Ud
+UF
+OS
+pt
+Jd
+bl
+rs
+uO
+uO
+mT
+nA
+Lp
+JY
+Pe
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(37,1,1) = {"
+VT
+Dj
+Pe
+mY
+mY
+LM
+sz
+sz
+sz
+LZ
+sz
+sz
+sz
+qC
+mY
+mY
+mY
+sJ
+vC
+CV
+Tf
+hw
+yk
+yk
+dG
+oE
+Yd
+uO
+uO
+uO
+tT
+oE
+pt
+yV
+uL
+YL
+rm
+As
+mT
+nA
+Lp
+Pe
+Pe
+Pe
+Ti
+mY
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(38,1,1) = {"
+Dj
+Dj
+Pe
+mY
+mY
+Vx
+iy
+iy
+RG
+Lt
+Lt
+Lt
+Lt
+dY
+Ql
+mY
+mY
+xj
+ix
+ix
+Pv
+Pv
+yk
+yk
+ai
+nA
+fB
+uO
+uO
+uO
+VH
+nA
+ad
+Rj
+OP
+YL
+qd
+mG
+mT
+nA
+QR
+JY
+Pe
+Ti
+Ti
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(39,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+mY
+mY
+Ti
+mY
+Vx
+iy
+iy
+iy
+iy
+ud
+Ql
+mY
+jC
+IR
+hh
+ix
+ix
+YC
+Ge
+oV
+ll
+nA
+LS
+uO
+uO
+Jd
+Jd
+nA
+AC
+uO
+uO
+YL
+Pf
+Xh
+aJ
+nA
+Lp
+JY
+Pe
+Ti
+ac
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(40,1,1) = {"
+Dj
+Pe
+Pe
+Pe
+Ql
+mY
+Ti
+mY
+mY
+mY
+Pe
+mY
+mY
+Ql
+Ql
+mY
+jC
+jC
+Ft
+dJ
+ix
+ix
+lv
+lv
+lv
+nA
+id
+hu
+pS
+RL
+RL
+nA
+wd
+eM
+uO
+Lg
+eQ
+fF
+nA
+nA
+Lp
+Pe
+Pe
+Pe
+OJ
+Ql
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(41,1,1) = {"
+Dj
+Dj
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+mY
+Ql
+mY
+mY
+mY
+jC
+jC
+Ft
+dJ
+ix
+ix
+ix
+ix
+nA
+wh
+wh
+nA
+oE
+Da
+nA
+IB
+wn
+UU
+Kv
+nA
+nA
+nA
+cK
+pX
+AI
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(42,1,1) = {"
+Dj
+Dj
+Dj
+Pe
+Dj
+Dj
+mY
+mY
+mY
+mY
+Pe
+Pe
+Pe
+Lr
+AV
+mY
+mY
+mY
+jC
+jC
+IR
+TR
+hh
+ix
+ix
+nA
+nj
+nj
+nA
+QY
+Dm
+nA
+nj
+nj
+nA
+nA
+nA
+cK
+TR
+pX
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(43,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+mY
+Wc
+AV
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+Ft
+Uz
+UK
+nA
+vm
+mt
+nA
+QR
+IJ
+nA
+Lp
+eA
+nA
+PN
+TR
+pX
+Ti
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(44,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+Ti
+Pe
+Ql
+mY
+vq
+AV
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ft
+Uz
+km
+WW
+RH
+km
+ST
+yE
+fM
+WW
+TR
+by
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(45,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ti
+Pe
+Pe
+Pe
+mY
+og
+Wc
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Gn
+mY
+mY
+mY
+mY
+mY
+ug
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(46,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ti
+Pe
+Ql
+mY
+Ik
+Wc
+mY
+mY
+mY
+nH
+RT
+iR
+an
+RT
+iR
+an
+Bv
+ul
+an
+RT
+iR
+an
+Bv
+ul
+an
+ay
+iR
+Nv
+Bv
+gC
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(47,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ti
+Pe
+Iv
+mY
+mY
+mY
+Is
+mY
+nH
+QP
+TI
+Zh
+QP
+TI
+Zh
+qi
+TI
+yY
+QP
+TI
+Zh
+qi
+TI
+yY
+QP
+TI
+Zh
+QP
+TI
+yY
+gC
+Ql
+Ql
+Ql
+Ql
+al
+Kh
+Kh
+Zd
+hk
+FE
+Jg
+Jg
+kj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(48,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+mY
+mY
+mY
+mY
+Pe
+Pe
+Pe
+MW
+mY
+mY
+Is
+mY
+hO
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TD
+OJ
+Ql
+Ql
+Ql
+gI
+wI
+wI
+wI
+Cp
+wI
+wI
+wI
+Pd
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(49,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ql
+mY
+mY
+Ti
+Ti
+mY
+mY
+Pe
+MW
+mY
+mY
+mY
+Is
+mY
+xj
+TI
+TI
+TI
+hd
+YJ
+cM
+TI
+TI
+TI
+gt
+WH
+tt
+ED
+ex
+ED
+TI
+TI
+Xg
+Xg
+TI
+TI
+Lp
+Pe
+Pe
+Pe
+zN
+LM
+wI
+IY
+Jf
+aT
+Bs
+NP
+wI
+Pd
+mY
+mY
+mY
+jC
+SB
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Zp
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(50,1,1) = {"
+Dj
+Dj
+Dj
+Ql
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+Pe
+Lr
+jz
+cD
+fI
+mY
+mY
+xc
+TI
+TI
+GE
+Me
+Me
+rR
+NA
+TI
+Sb
+sV
+rR
+oM
+vA
+wl
+mx
+HH
+TI
+zt
+BK
+tJ
+TI
+Lp
+JY
+Pe
+Ti
+mY
+LM
+wI
+Qq
+fa
+WQ
+WQ
+XS
+wI
+vn
+OK
+OK
+kR
+kR
+kR
+kR
+kR
+kR
+kR
+kR
+jC
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(51,1,1) = {"
+Dj
+Dj
+Dj
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+ZU
+jw
+Yc
+mx
+sd
+Ma
+gW
+AG
+jw
+Yc
+mx
+tv
+Ci
+Ci
+Wo
+mx
+Ua
+TI
+hB
+fv
+Cb
+TI
+QR
+zX
+Pe
+Ti
+Ti
+LM
+wI
+MX
+WQ
+WQ
+fa
+ro
+wI
+Kp
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+hy
+BO
+jC
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(52,1,1) = {"
+Dj
+Dj
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+DU
+mY
+mY
+mY
+mY
+mY
+ZU
+FC
+Yc
+rR
+hU
+Ps
+gW
+tv
+FC
+Wo
+mx
+tv
+Ci
+Ci
+Wo
+rR
+AG
+JB
+PR
+PK
+Cb
+TI
+QR
+Pe
+Pe
+Pe
+Ti
+LM
+wI
+wI
+fr
+nl
+nl
+wI
+wI
+ht
+Ve
+tI
+tI
+tI
+tI
+tI
+tI
+tI
+Yr
+pr
+BO
+jC
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(53,1,1) = {"
+Dj
+Dj
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+vH
+mY
+mY
+mY
+mY
+mY
+ec
+TI
+TI
+tj
+mx
+mx
+mx
+qs
+TI
+HN
+sV
+mx
+oM
+mU
+Ga
+rR
+JR
+TI
+pD
+dK
+Iq
+TI
+QR
+um
+Pe
+mY
+mY
+Vx
+Gq
+wI
+wI
+wI
+wI
+wI
+nF
+jD
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+kP
+pr
+BO
+jC
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(54,1,1) = {"
+Dj
+Dj
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+Pe
+Pe
+Wc
+mY
+mY
+mY
+mY
+xj
+TI
+TI
+TI
+mx
+mx
+mx
+TI
+TI
+TI
+sS
+nM
+Yx
+nM
+sM
+Eg
+TI
+TI
+XI
+XI
+TI
+TI
+QR
+um
+Pe
+mY
+mY
+mY
+xN
+iy
+iy
+iy
+Vs
+Vs
+RN
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+kP
+pr
+BO
+jC
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(55,1,1) = {"
+Dj
+Dj
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+dn
+xj
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+TI
+Lp
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+kP
+pr
+BO
+jC
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(56,1,1) = {"
+Dj
+Dj
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+Ti
+mY
+mY
+mY
+jb
+Ft
+UK
+TI
+cK
+dZ
+TI
+cK
+dZ
+TI
+cK
+dZ
+TI
+jh
+UK
+TI
+cK
+UK
+TI
+cK
+dZ
+TI
+jh
+Wq
+Lv
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+kP
+pr
+BO
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(57,1,1) = {"
+Dj
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Pe
+Pe
+Pe
+Ti
+mY
+mY
+mY
+mY
+Ti
+Xn
+QS
+KZ
+st
+QS
+Wq
+zI
+QS
+KZ
+st
+QS
+KZ
+st
+fW
+Wq
+st
+QS
+KZ
+st
+fW
+Wq
+um
+um
+Pe
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+kP
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(58,1,1) = {"
+Dj
+Ql
+Ib
+Jg
+Zd
+hk
+hk
+FE
+Jg
+Xo
+mY
+Pe
+mY
+mY
+mY
+mY
+Ti
+nH
+Bv
+gs
+is
+is
+Xz
+ae
+Pe
+Pe
+Pe
+Lv
+Lv
+Pe
+um
+um
+Pe
+um
+um
+Pe
+um
+um
+Pe
+JY
+Lv
+Pe
+Pe
+Pe
+mY
+mY
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+mY
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+Zp
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(59,1,1) = {"
+Dj
+Ql
+LM
+TI
+TI
+FC
+Kj
+TI
+TI
+Qh
+mY
+Pe
+mY
+mY
+mY
+mY
+nH
+qi
+ag
+ag
+ag
+ag
+yY
+GM
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(60,1,1) = {"
+Dj
+Ql
+LM
+TI
+TI
+Rf
+mU
+TI
+TI
+Qh
+Pe
+Pe
+Pe
+mY
+mY
+mY
+xj
+ag
+ag
+vj
+te
+ag
+ag
+QR
+Pe
+Pe
+Pe
+Ql
+Ql
+Pe
+Ql
+mY
+Pe
+mY
+mY
+Pe
+mY
+mY
+Pe
+mY
+mY
+Pe
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(61,1,1) = {"
+Dj
+Ql
+LM
+TI
+Us
+rR
+mx
+Xr
+TI
+Qh
+mY
+Pe
+mY
+mY
+mY
+mY
+xj
+ag
+XJ
+Sk
+Sk
+YR
+ag
+QR
+VW
+Pe
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(62,1,1) = {"
+Dj
+Ql
+LM
+TI
+Cm
+Yc
+tv
+xv
+TI
+Qh
+mY
+Pe
+Ti
+mY
+mY
+mY
+KM
+ag
+JC
+Sk
+af
+ag
+ag
+QR
+CO
+Pe
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(63,1,1) = {"
+Dj
+Ql
+LM
+TI
+aW
+Yc
+tv
+xv
+TI
+Qh
+Pe
+Pe
+Pe
+Ti
+mY
+mY
+KM
+ag
+Uv
+Sk
+Sk
+en
+ag
+QR
+Pe
+Pe
+Pe
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(64,1,1) = {"
+Dj
+Ql
+LM
+TI
+KO
+Wo
+tv
+Ab
+TI
+Qh
+Ti
+Pe
+mY
+mY
+mY
+mY
+Yl
+ag
+ag
+JT
+hX
+ag
+ag
+QR
+JY
+Pe
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(65,1,1) = {"
+Dj
+Ql
+LM
+TI
+ak
+aq
+aq
+ak
+TI
+Qh
+Ti
+Pe
+Lr
+mY
+mY
+mY
+St
+uk
+wp
+Sk
+Sk
+OQ
+ag
+Lp
+JY
+Pe
+Ql
+Ql
+Ql
+Ql
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ql
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(66,1,1) = {"
+Dj
+Ql
+aA
+TI
+ak
+aq
+aq
+ak
+TI
+Qh
+Pe
+Pe
+Pe
+Iv
+mY
+mY
+St
+db
+wp
+Sk
+Sk
+OQ
+ag
+Lp
+Pe
+Pe
+Pe
+Ql
+Ql
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ib
+gl
+GN
+GN
+GN
+GN
+GN
+GN
+Qm
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+mY
+mY
+mY
+Ip
+pr
+ip
+Zp
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(67,1,1) = {"
+Dj
+Ql
+aA
+TI
+ak
+Wo
+tv
+ak
+TI
+Qh
+mY
+Pe
+Ql
+Ql
+mY
+mY
+qz
+ag
+ag
+JT
+hX
+ag
+ag
+QR
+um
+Pe
+Ql
+Ql
+mY
+mY
+mY
+mY
+jC
+jC
+Ti
+jC
+jC
+mY
+LR
+GN
+fe
+jR
+yI
+yI
+yI
+yI
+yI
+jR
+eF
+gl
+Qm
+jC
+mY
+mY
+mY
+mY
+mY
+jC
+mY
+mY
+Ql
+OK
+Qx
+pr
+ip
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(68,1,1) = {"
+Dj
+Ql
+aA
+TI
+ak
+aq
+aq
+ak
+TI
+Qh
+mY
+Pe
+Ql
+mY
+mY
+mY
+xj
+ag
+sE
+Sk
+Sk
+en
+ag
+QR
+um
+Pe
+Ql
+mY
+mY
+mY
+mY
+jC
+mY
+mY
+Ti
+Ti
+Ti
+al
+fe
+se
+se
+se
+se
+kL
+se
+se
+se
+se
+se
+se
+eF
+Qm
+jC
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+XB
+qD
+aO
+ip
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(69,1,1) = {"
+Dj
+Ql
+aA
+TI
+Cm
+aq
+aq
+Ab
+TI
+Qh
+Pe
+Pe
+Pe
+ax
+ax
+ax
+kW
+ag
+Bi
+ah
+Sk
+ag
+ag
+Lp
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ib
+GN
+fe
+se
+se
+se
+se
+se
+se
+se
+se
+Ki
+BJ
+se
+se
+se
+SO
+GN
+gh
+jC
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+Iw
+Ve
+Ql
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(70,1,1) = {"
+Dj
+Ql
+aA
+TI
+Cm
+Wo
+tv
+Ab
+TI
+Qh
+mY
+Pe
+mY
+mY
+mY
+mY
+KM
+ag
+pk
+Sk
+JX
+mz
+ag
+Lp
+JY
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ib
+gl
+fe
+se
+se
+se
+Db
+se
+kL
+kL
+se
+se
+se
+hs
+av
+se
+BJ
+se
+se
+se
+SO
+GN
+gh
+jC
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(71,1,1) = {"
+Dj
+Ql
+aA
+TI
+bK
+Wo
+tv
+wx
+TI
+Qh
+mY
+Pe
+Lj
+mY
+mY
+mY
+xj
+ag
+WE
+hX
+Vj
+GS
+ag
+QR
+JY
+Pe
+mY
+mY
+mY
+mY
+mY
+jC
+Ib
+fe
+se
+se
+se
+Db
+se
+se
+se
+se
+se
+se
+se
+se
+as
+iU
+se
+BJ
+Jc
+Jc
+se
+se
+se
+SO
+gh
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(72,1,1) = {"
+Dj
+Ql
+aA
+TI
+bK
+Wo
+tv
+Ab
+TI
+Qh
+Pe
+Pe
+Pe
+mY
+mY
+jC
+xj
+ag
+ag
+RW
+bn
+ag
+ag
+QR
+Pe
+Pe
+Pe
+mY
+mY
+mY
+jC
+LR
+pN
+se
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+Aq
+FA
+WY
+IT
+ei
+FA
+se
+SO
+gh
+jC
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(73,1,1) = {"
+Dj
+Dj
+aA
+TI
+bK
+aq
+aq
+Ab
+TI
+Qh
+mY
+Pe
+mY
+mY
+mY
+jC
+IR
+dZ
+ag
+ag
+ag
+ag
+jh
+KZ
+JY
+Pe
+mY
+mY
+mY
+jC
+jC
+Au
+aC
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+aC
+sL
+jC
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(74,1,1) = {"
+Dj
+Dj
+aA
+TI
+bK
+aq
+aq
+Ab
+TI
+Qh
+mY
+Pe
+Ti
+nT
+mY
+jC
+jC
+Ft
+fW
+fW
+QS
+fW
+Wq
+JY
+zX
+Pe
+mY
+mY
+mY
+jC
+jC
+Au
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+WG
+jC
+al
+iL
+MO
+KB
+Xo
+mY
+mY
+mY
+mY
+Dj
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(75,1,1) = {"
+Dj
+Dj
+aA
+TI
+bK
+Wo
+tv
+am
+TI
+Qh
+Pe
+Pe
+Pe
+Ti
+mY
+jC
+jC
+sm
+Pe
+JY
+JY
+Pe
+Lv
+JY
+Pe
+Pe
+Pe
+mY
+mY
+mY
+jC
+Au
+aQ
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+bz
+mD
+jC
+Vx
+sI
+hq
+gA
+tz
+Zp
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(76,1,1) = {"
+Dj
+Dj
+aA
+TI
+vT
+Wo
+AG
+am
+TI
+Qh
+Ti
+Pe
+Pe
+mY
+mY
+mY
+jC
+jC
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+Pe
+mY
+mY
+mY
+mY
+mY
+Au
+aQ
+eO
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+iN
+bz
+mD
+jC
+mY
+tf
+hq
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(77,1,1) = {"
+Dj
+Dj
+aA
+TI
+aw
+rR
+rR
+ao
+TI
+Qh
+Ti
+Ti
+Pe
+nT
+mY
+mY
+mY
+wu
+Pe
+mY
+mY
+Pe
+Ti
+Ti
+Pe
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+bz
+dY
+jC
+mY
+tf
+hq
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(78,1,1) = {"
+Dj
+Dj
+aA
+TI
+TI
+at
+ar
+TI
+TI
+Qh
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+zc
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+dY
+Ql
+mY
+tf
+hq
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(79,1,1) = {"
+Dj
+Dj
+Vx
+az
+TI
+TI
+TI
+TI
+aj
+tz
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+bz
+mD
+Ql
+mY
+tf
+hq
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(80,1,1) = {"
+Dj
+Dj
+mY
+Vx
+ap
+ap
+ap
+ap
+tz
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+eO
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+iN
+bz
+mD
+jC
+jC
+tf
+hq
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(81,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+bz
+mD
+jC
+LR
+wD
+hq
+BZ
+Xo
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(82,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+LM
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+Pl
+jC
+IA
+Wg
+in
+qS
+RN
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(83,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Au
+aC
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+aC
+sL
+jC
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(84,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+nC
+oq
+se
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+se
+SM
+rJ
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(85,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+nC
+oq
+se
+se
+se
+zZ
+eP
+bS
+se
+Db
+se
+Db
+se
+Ct
+Ct
+se
+se
+Iy
+zZ
+zZ
+se
+se
+se
+SM
+rJ
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(86,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+nC
+eJ
+CY
+se
+se
+se
+bS
+se
+Db
+se
+Db
+se
+aa
+Ct
+se
+se
+zZ
+se
+se
+se
+Uq
+eJ
+rJ
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(87,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+IA
+os
+CY
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+SM
+os
+ud
+Ql
+jC
+jC
+jC
+Ql
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(88,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+mY
+Dj
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+mY
+jC
+IA
+CY
+se
+se
+se
+se
+Iy
+se
+se
+se
+se
+se
+se
+SM
+rJ
+Ql
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(89,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ti
+Dj
+Ti
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+IA
+os
+CY
+yc
+yQ
+yQ
+yQ
+yQ
+yQ
+yc
+SM
+os
+rJ
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+Ti
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(90,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Dj
+Ti
+Ti
+Dj
+Dj
+Dj
+Dj
+jC
+jC
+jC
+jC
+jC
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+mY
+mY
+jC
+IA
+os
+os
+os
+os
+os
+os
+os
+rJ
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+Ti
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(91,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(92,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+jC
+jC
+jC
+jC
+jC
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(93,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(94,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(95,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+la
+pr
+ip
+Zp
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(96,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ip
+XB
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+qD
+aO
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(97,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ti
+Ti
+mY
+mY
+Ql
+mY
+mY
+Ip
+pr
+Iw
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(98,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ti
+mY
+mY
+mY
+Ti
+Ti
+mY
+Ql
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Zp
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(99,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+Ql
+mY
+mY
+Ip
+pr
+ip
+Zp
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ib
+gl
+GN
+GN
+GN
+GN
+GN
+GN
+Qm
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(100,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+jC
+jC
+Ti
+jC
+jC
+mY
+LR
+GN
+fe
+jR
+yI
+yI
+yI
+yI
+yI
+jR
+eF
+gl
+Qm
+jC
+mY
+mY
+mY
+mY
+mY
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(101,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+jC
+mY
+mY
+Ti
+Ti
+Ti
+al
+fe
+se
+se
+se
+se
+kL
+se
+se
+se
+se
+se
+se
+eF
+Qm
+jC
+Ti
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(102,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+Ql
+Ql
+Ib
+GN
+fe
+se
+se
+se
+se
+se
+se
+se
+se
+Ki
+BJ
+se
+se
+se
+SO
+GN
+gh
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(103,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ql
+Ql
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+Ql
+Ib
+gl
+fe
+se
+se
+se
+Db
+se
+kL
+kL
+se
+se
+se
+hs
+av
+se
+BJ
+se
+se
+se
+SO
+GN
+gh
+jC
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(104,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+Ql
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+jC
+Ib
+fe
+se
+se
+se
+Db
+se
+se
+se
+se
+se
+se
+se
+se
+as
+iU
+se
+BJ
+Jc
+Jc
+se
+se
+se
+SO
+gh
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(105,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+DZ
+Ti
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+LR
+pN
+se
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+ei
+FA
+WY
+IT
+Aq
+FA
+WY
+IT
+ei
+FA
+se
+SO
+gh
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(106,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+DZ
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+Au
+aC
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+aC
+sL
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(107,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ql
+Ql
+Ql
+DZ
+mY
+mY
+mY
+mY
+mY
+jC
+Dj
+Dj
+Dj
+Ti
+Dj
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+Au
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+WG
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(108,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ql
+Ql
+Ql
+Ql
+Ti
+DZ
+mY
+Ti
+mY
+mY
+mY
+jC
+jC
+jC
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+Au
+aQ
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+bz
+mD
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(109,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+DZ
+mY
+Ti
+Ti
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+Au
+aQ
+eO
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+iN
+bz
+mD
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(110,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+mY
+DZ
+mY
+mY
+Ti
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+LM
+aQ
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+bz
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(111,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+LM
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Nt
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+dY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(112,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+mY
+mY
+Ip
+pr
+ip
+mY
+LM
+aQ
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+bz
+mD
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(113,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+Ti
+mY
+Ip
+pr
+ip
+mY
+LM
+aQ
+eO
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+iN
+bz
+mD
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(114,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Dj
+Dj
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Dj
+Dj
+Dj
+Ti
+Ip
+pr
+ip
+mY
+LM
+aQ
+jY
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+En
+bz
+mD
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(115,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Dj
+Ti
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+Ti
+mY
+Ip
+pr
+ip
+Zp
+LM
+aQ
+Hp
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+px
+bz
+Pl
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(116,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Ti
+mY
+mY
+mY
+DZ
+mY
+mY
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+Au
+aC
+xZ
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+mj
+aC
+sL
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(117,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+nC
+oq
+se
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+cv
+zf
+FD
+ti
+se
+SM
+rJ
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(118,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+Dj
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+Ti
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+jC
+nC
+oq
+se
+se
+se
+zZ
+eP
+bS
+se
+Db
+se
+Db
+se
+Ct
+Ct
+se
+se
+Iy
+zZ
+zZ
+se
+se
+se
+SM
+rJ
+jC
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(119,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+Ip
+pr
+ip
+mY
+jC
+jC
+nC
+eJ
+CY
+se
+se
+se
+bS
+se
+Db
+se
+Db
+se
+aa
+Ct
+se
+se
+zZ
+se
+se
+se
+Uq
+eJ
+rJ
+jC
+jC
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(120,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+Ti
+Ti
+mY
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+jC
+jC
+jC
+IA
+os
+CY
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+se
+SM
+os
+ud
+Ql
+jC
+jC
+jC
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(121,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+Ti
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+jC
+jC
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+jC
+jC
+mY
+jC
+IA
+CY
+se
+se
+se
+se
+Iy
+se
+se
+se
+se
+se
+se
+SM
+rJ
+Ql
+jC
+jC
+jC
+jC
+mY
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(122,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+IA
+os
+CY
+yc
+yQ
+yQ
+yQ
+yQ
+yQ
+yc
+SM
+os
+rJ
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(123,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+mY
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+Ti
+mY
+mY
+mY
+mY
+jC
+jC
+mY
+mY
+jC
+IA
+os
+os
+os
+os
+os
+os
+os
+rJ
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(124,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+jC
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(125,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ti
+Ti
+Ti
+Ti
+Ql
+mY
+mY
+mY
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(126,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+DK
+FY
+FY
+FY
+Ir
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ti
+Ti
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(127,1,1) = {"
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+dV
+Nz
+yM
+yM
+ba
+vI
+Ir
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Ti
+mY
+mY
+Ip
+pr
+ip
+mY
+mY
+Dj
+Dj
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+Ql
+Ti
+Ql
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(128,1,1) = {"
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+dV
+gH
+pG
+Ju
+DU
+se
+PT
+yp
+AK
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Ti
+mY
+Ip
+pr
+ip
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(129,1,1) = {"
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+wS
+Na
+uK
+hq
+DU
+hq
+uK
+Ru
+qy
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+Jm
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+la
+pr
+ip
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(130,1,1) = {"
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+wS
+ES
+Ju
+hq
+mn
+hq
+Ju
+iI
+qy
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+GO
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+aO
+ip
+Zp
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(131,1,1) = {"
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+wS
+Bj
+nb
+hq
+DU
+hq
+TS
+BP
+qy
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Zs
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ve
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(132,1,1) = {"
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+zy
+Lx
+PT
+tV
+DU
+Ju
+PT
+Nu
+va
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+QJ
+mY
+mY
+mY
+mY
+mY
+mY
+Zp
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(133,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+zy
+pj
+co
+yz
+yz
+ZC
+va
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+qg
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(134,1,1) = {"
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+mY
+mY
+mY
+zy
+Km
+Km
+Km
+va
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(135,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+DZ
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+Ti
+mY
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(136,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Ti
+mY
+mY
+Ti
+Ti
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(137,1,1) = {"
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(138,1,1) = {"
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(139,1,1) = {"
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(140,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+DZ
+mY
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(141,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+jC
+jC
+DZ
+jC
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(142,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ti
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+jC
+jC
+DZ
+jC
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Ti
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+Dj
+mY
+mY
+Dj
+mY
+Ql
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(143,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+jC
+jC
+jC
+DZ
+jC
+jC
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+mY
+mY
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ql
+Dj
+Dj
+Ql
+Ql
+mY
+Dj
+mY
+mY
+Dj
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(144,1,1) = {"
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+jC
+jC
+jC
+DZ
+jC
+jC
+mY
+mY
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ql
+Ql
+Dj
+Dj
+Ql
+Dj
+Dj
+mY
+mY
+Dj
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(145,1,1) = {"
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Ti
+Dj
+Dj
+jC
+jC
+Dj
+jC
+Dj
+Dj
+jC
+jC
+Dj
+Dj
+mY
+mY
+Ti
+Ql
+mY
+Ti
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+Ti
+Dj
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(146,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Dj
+Ql
+mY
+Ti
+Ti
+Ti
+Ti
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+Dj
+Dj
+Ti
+Dj
+Dj
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(147,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Dj
+Dj
+Ti
+Ti
+mY
+Ql
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(148,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ti
+Ti
+Ti
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Dj
+Ql
+Ql
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(149,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(150,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(151,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(152,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+mY
+Ql
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(153,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ql
+Ql
+mY
+mY
+mY
+mY
+Ql
+Ti
+Ql
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(154,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+Ql
+mY
+mY
+mY
+Ql
+Ql
+mY
+mY
+Ql
+Ql
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(155,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+Ql
+mY
+mY
+mY
+Ql
+mY
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Ti
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(156,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ql
+mY
+mY
+mY
+Ql
+Ql
+Ti
+mY
+mY
+mY
+Ql
+Ql
+Ql
+Ti
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(157,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ql
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(158,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+Ql
+Ql
+Ql
+mY
+mY
+Ql
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(159,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+mY
+mY
+mY
+mY
+Ti
+Ql
+Ql
+Ql
+Ql
+Ti
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(160,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+Ti
+Ti
+mY
+Ql
+Ql
+Ql
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(161,1,1) = {"
+Dj
+ut
+ut
+ut
+ut
+ut
+ut
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ti
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+mY
+Ti
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(162,1,1) = {"
+Dj
+ut
+ut
+ut
+ut
+ut
+ut
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+mY
+mY
+mY
+mY
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(163,1,1) = {"
+Dj
+ut
+ut
+YT
+ut
+ut
+ut
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Ti
+Ti
+Ti
+mY
+mY
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(164,1,1) = {"
+Dj
+ut
+ut
+ut
+ut
+ut
+ut
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(165,1,1) = {"
+Dj
+ut
+ut
+ut
+ut
+ut
+ut
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}
+(166,1,1) = {"
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+"}

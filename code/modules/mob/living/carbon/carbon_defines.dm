@@ -30,6 +30,8 @@
 	//Taken from update_icons
 	var/list/overlays_standing[TOTAL_LAYERS]
 
+	can_spacewalk = 0
+
 /mob/living/carbon/vv_get_dropdown()
 	. = ..()
 	VV_DROPDOWN_OPTION("", "-----CARBON-----")

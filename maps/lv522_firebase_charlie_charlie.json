@@ -1,0 +1,8 @@
+{
+    "map_name": "LV522_Firebase_Charlie_Charlie",
+    "map_path": "map_files/LV522_Firebase_Charlie_Charlie",
+    "map_file": "LV522_Firebase_Charlie_Charlie.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}

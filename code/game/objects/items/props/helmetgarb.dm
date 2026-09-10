@@ -313,7 +313,7 @@
 
 	user.add_client_color_matrix("nvg", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
 	user.overlay_fullscreen("nvg", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
+	//user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
 	playsound(user, 'sound/handling/toggle_nv1.ogg', 25)
 	nightvision = TRUE
 	user.update_sight()
@@ -343,7 +343,7 @@
 	if(nightvision)
 		attached_mob.remove_client_color_matrix("nvg", 1 SECONDS)
 		attached_mob.clear_fullscreen("nvg", 0.5 SECONDS)
-		attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
+		//attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
 		playsound(attached_mob, 'sound/handling/toggle_nv2.ogg', 25)
 		nightvision = FALSE
 
@@ -406,9 +406,11 @@
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] when they are hidden."))
 		return
 
+/*
 	if(user.client.view > 7 && shape != NVG_SHAPE_COSMETIC)
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] while using optics."))
 		return
+*/
 
 	activated = !activated
 
@@ -438,7 +440,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/proc/change_view(mob/M, new_size)
 	SIGNAL_HANDLER
 
-	if(new_size > 7) // cannot use binos with NVG
+	if(new_size > 20)
 		toggle_nods(M)
 
 /obj/item/prop/helmetgarb/helmet_nvg/proc/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno) //xenos can break NVG if aim head
@@ -627,3 +629,15 @@
 	user.visible_message(SPAN_NOTICE("[user] squeezes a few drops into their eye."), SPAN_NOTICE("You squeeze a few drops into your eye."))
 	user.apply_effect(5, EYE_BLUR)
 	COOLDOWN_START(src, last_eye_drops, 2.5 SECONDS)
+
+/obj/item/prop/helmetgarb/rmc_platemask
+	name = "RMC 12 pattern platemask"
+	desc = "The complimentary, but not necessary platemask, attachable to Mk10 open combat helmets. Useful against shrapnel or just in the cold enviroment, but with enough force it will easily be ripped off."
+	icon_state = "rmc_platemask"
+	flags_obj = OBJ_NO_HELMET_BAND
+
+/obj/item/prop/helmetgarb/rmc_goggles
+	name = "RMC 14 pattern goggles"
+	desc = "The complimentary, but not necessary googles, attachable to Mk10 open combat helmets. An additional protection to the eyes, be it a cold wind, or a spit from a rioting civilian. It's a true talent to be able to see through them easily, without HUD visor."
+	icon_state = "rmc_goggles"
+	flags_obj = OBJ_NO_HELMET_BAND

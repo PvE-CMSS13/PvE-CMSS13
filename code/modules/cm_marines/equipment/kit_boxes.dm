@@ -6,7 +6,7 @@
 	icon_state = "kit_case"
 	var/kit_overlay = null
 	w_class = SIZE_HUGE
-	storage_slots = 14
+	storage_slots = 17
 	slowdown = 1
 	can_hold = list() //Nada. Once you take the stuff out it doesn't fit back in.
 	max_w_class = 0
@@ -23,7 +23,7 @@
 
 /obj/item/storage/box/spec/rocketeer
 	name = "\improper Rocketeer equipment case"
-	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M10-R bombardier helmet, three spare 84mm rockets, loader equipment and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a heavy-duty anti-tank M5 RPG rocket launcher, M10-R bombardier helmet, three spare 60mm rockets, loader equipment and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/rocketeer/fill_preset_inventory()
@@ -60,18 +60,18 @@
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
+	new /obj/item/ammo_magazine/rocket/smoke(src)
 	// skills
 	new /obj/item/pamphlet/skill/loader(src)
 
 /obj/item/storage/box/spec/sniper
 	name = "\improper Scout-Sniper (Shooter) equipment case"
-	desc = "A large case containing your very own long-range M42A sniper rifle, M45 ghillie armor and helmet, M3 day/night goggles, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing your very own long-range M42A sniper rifle, set of M3 armor with a UDEP thermal poncho, M3 day/night goggles, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "sniper"
 
 /obj/item/storage/box/spec/sniper/fill_preset_inventory()
 	// sniper
-	new /obj/item/clothing/suit/storage/marine/ghillie(src)
-	new /obj/item/clothing/head/helmet/marine/ghillie(src)
+	new /obj/item/clothing/suit/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
 	new /obj/item/ammo_magazine/sniper(src)
 	new /obj/item/ammo_magazine/sniper(src)
@@ -79,16 +79,14 @@
 	new /obj/item/ammo_magazine/sniper/incendiary(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
-	new /obj/item/storage/backpack/marine/smock(src)
 	new /obj/item/weapon/gun/rifle/sniper/M42A(src)
 	new /obj/item/facepaint/sniper(src)
 
 /obj/item/storage/box/spec/sniper/anti_materiel/fill_preset_inventory()
 	name = "\improper Scout-Sniper (AMR Shooter) equipment case"
-	desc = "A large case containing an experimental XM43E1, a set of M45 ghillie armor and helmet, M3 day/night gogglest, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing an experimental XM43E1, a set of set of M3 armor with a UDEP thermal poncho, M3 day/night gogglest, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "amr"
-	new /obj/item/clothing/suit/storage/marine/ghillie(src)
-	new /obj/item/clothing/head/helmet/marine/ghillie(src)
+	new /obj/item/clothing/suit/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
 	new /obj/item/weapon/gun/rifle/sniper/XM43E1(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
@@ -96,17 +94,15 @@
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
-	new /obj/item/storage/backpack/marine/smock(src)
 	new /obj/item/facepaint/sniper(src)
 
 /obj/item/storage/box/spec/spotter
 	name = "\improper Scout-Sniper (Spotter) equipment case"
-	desc = "A large case containing a customised M49A5 battle rifle, a set of M45 ghillie armor and helmet, M49A battle sight, V3 reactive thermal tarp, spotter laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a customised M49A5 battle rifle, a set of set of M3 armor with a UDEP thermal poncho, M49A battle sight, V3 reactive thermal tarp, spotter laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "spotter"
 
 /obj/item/storage/box/spec/spotter/fill_preset_inventory()
-	new /obj/item/clothing/suit/storage/marine/ghillie(src)
-	new /obj/item/clothing/head/helmet/marine/ghillie(src)
+	new /obj/item/clothing/suit/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/M49A(src)
 	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
 	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
@@ -121,7 +117,6 @@
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/device/encryptionkey/jtac(src)
 	new /obj/item/device/binoculars/range/designator/spotter(src)
-	new /obj/item/storage/backpack/marine/smock(src)
 
 
 /obj/item/storage/box/spec/pyro
@@ -130,7 +125,7 @@
 	kit_overlay = "pyro"
 
 /obj/item/storage/box/spec/pyro/fill_preset_inventory()
-	new /obj/item/clothing/suit/storage/marine/M35(src)
+	new /obj/item/clothing/suit/marine/M35(src)
 	new /obj/item/clothing/head/helmet/marine/pyro(src)
 	new /obj/item/storage/large_holster/fuelpack(src)
 	new /obj/item/weapon/gun/flamer/M240T(src)
@@ -145,14 +140,18 @@
 	kit_overlay = "grenadier"
 
 /obj/item/storage/box/spec/heavy_grenadier/fill_preset_inventory()
-	new /obj/item/weapon/gun/launcher/grenade/m92(src)
+	new /obj/item/weapon/gun/launcher/grenade/m92/scoped(src)
 	new /obj/item/storage/belt/grenade/large/full(src)
 	new /obj/item/storage/backpack/marine/grenadepack(src)
 	new /obj/item/storage/box/packet/phosphorus(src)
+	new /obj/item/storage/box/packet/bfab(src)
+	new /obj/item/storage/box/packet/high_explosive(src)
+	new /obj/item/storage/box/packet/incendiary(src)
 	new /obj/item/storage/box/packet/heap(src)
 	new /obj/item/storage/box/packet/canister(src)
+	new /obj/item/storage/box/packet/flare(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/clothing/suit/storage/marine/M3G(src)
+	new /obj/item/clothing/suit/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
 
 /obj/item/storage/box/spec/sharp_operator
@@ -166,23 +165,29 @@
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
+	new /obj/item/storage/belt/marine/sharp(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/clothing/suit/storage/marine/M3G(src)
+	new /obj/item/clothing/suit/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
+	new /obj/item/device/multitool(src)
 
 //maybe put in req for later use?
 /obj/item/storage/box/spec/B18
-	name = "\improper B18 heavy armor case"
-	desc = "A large case containing the experimental B18 armor platform. Handle with care, it's more expensive than all of Delta combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	name = "\improper Future Warrior equipment case"
+	desc = "A large case containing the flagship components of the 'Future Warrior' program; a set of superheavy power-assisted armor, and an experimental rifle with fire-control-system. Handle with care, they're each individually more expensive than a platoon's worth of M41A rifles.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "b18"
 
 /obj/item/storage/box/spec/B18/fill_preset_inventory()
 	new /obj/item/clothing/gloves/marine/specialist(src)
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
-	new /obj/item/clothing/suit/storage/marine/specialist(src)
+	new /obj/item/clothing/suit/marine/specialist(src)
+	new /obj/item/weapon/gun/rifle/m46c(src)
 
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm

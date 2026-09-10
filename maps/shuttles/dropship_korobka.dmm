@@ -1,0 +1,635 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ay" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
+	},
+/area/shuttle/korobka)
+"bh" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp3"
+	},
+/area/shuttle/korobka)
+"cf" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
+	},
+/area/shuttle/korobka)
+"cl" = (
+/turf/closed/shuttle/dropship1/transparent{
+	name = "wall";
+	icon = 'icons/turf/ert_shuttle.dmi';
+	icon_state = "upp27"
+	},
+/area/shuttle/korobka)
+"cR" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/computer/dropship_weapons/korobka,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"dL" = (
+/obj/docking_port/mobile/marine_dropship/korobka,
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/shuttle/korobka)
+"ed" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp8"
+	},
+/area/shuttle/korobka)
+"eG" = (
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"go" = (
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"ht" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T151"
+	},
+/area/shuttle/korobka)
+"ie" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp251"
+	},
+/area/shuttle/korobka)
+"iz" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "starboard_door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"jP" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"kV" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"lk" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp5"
+	},
+/area/shuttle/korobka)
+"lo" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp1"
+	},
+/area/shuttle/korobka)
+"mz" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_11";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+"mL" = (
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14;
+	light_power = 0.8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"nj" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847";
+	climbable = 0
+	},
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"oI" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464847";
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"oV" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp21"
+	},
+/area/shuttle/korobka)
+"qm" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"qs" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"sM" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14;
+	light_power = 0.8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"ue" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "port_door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"vp" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"wF" = (
+/turf/template_noop,
+/area/space)
+"wQ" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14;
+	light_power = 0.8
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/korobka)
+"xs" = (
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"BK" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp9"
+	},
+/area/shuttle/korobka)
+"Cy" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 22;
+	light_power = 0.8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"ED" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1;
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"EH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1;
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"EO" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"Fo" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = 30
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"Gq" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+"Hd" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"Im" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/obj/structure/platform/mineral{
+	color = "#464847"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"JN" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14;
+	light_power = 0.8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"Ki" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = -30
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"Ky" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp/korobka,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"KX" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14;
+	light_power = 0.8
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/korobka)
+"Mg" = (
+/obj/structure/blocker/invisible_wall,
+/obj/item/frame/camera{
+	pixel_x = 12;
+	pixel_y = 17;
+	name = "broken dashcam";
+	desc = "Welp, no more funny crash vids..."
+	},
+/obj/structure/machinery/computer/cameras/dropship/korobka,
+/obj/structure/phone_base{
+	pixel_y = 32;
+	name = "Korobka Telephone";
+	phone_category = "Dropship";
+	phone_id = "Korobka";
+	networks_receive = list("UPP");
+	networks_transmit = list("UPP")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"Mp" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"Oa" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+"Om" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T61"
+	},
+/area/shuttle/korobka)
+"Pv" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847";
+	climbable = 0
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"PO" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"QA" = (
+/obj/effect/attach_point/crew_weapon/korobka,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"QQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"Rs" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847";
+	climbable = 0
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/korobka,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"Rt" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7;
+	dir = 1
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7;
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/korobka)
+"RS" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_leftengine"
+	},
+/area/shuttle/korobka)
+"Tp" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp4"
+	},
+/area/shuttle/korobka)
+"Tq" = (
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/shuttle/korobka)
+"UK" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_11";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+"UP" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+"Vb" = (
+/obj/structure/platform_decoration/mineral{
+	color = "#464847"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/korobka)
+"WE" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/obj/structure/platform/mineral{
+	color = "#464847"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"YF" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14;
+	light_power = 0.8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/korobka)
+"Zl" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/shuttle/korobka)
+
+(1,1,1) = {"
+wF
+wF
+wF
+wF
+wF
+Om
+RS
+Gq
+mz
+wF
+wF
+wF
+wF
+"}
+(2,1,1) = {"
+wF
+wF
+wF
+cf
+ue
+Tp
+Tp
+Tp
+Tp
+RS
+Gq
+Oa
+mz
+"}
+(3,1,1) = {"
+cf
+Tp
+Tp
+oV
+ED
+Ki
+YF
+EO
+WE
+ed
+Tp
+Tp
+lo
+"}
+(4,1,1) = {"
+oV
+Mg
+KX
+cl
+Cy
+qm
+Rt
+nj
+oI
+xs
+mL
+go
+Ky
+"}
+(5,1,1) = {"
+cl
+Mp
+qs
+kV
+eG
+Tq
+dL
+Rs
+QA
+jP
+jP
+QQ
+eG
+"}
+(6,1,1) = {"
+cl
+cR
+wQ
+cl
+Cy
+qm
+Rt
+Pv
+Vb
+vp
+JN
+Hd
+eG
+"}
+(7,1,1) = {"
+ie
+lk
+lk
+oV
+EH
+Fo
+sM
+PO
+Im
+BK
+lk
+lk
+bh
+"}
+(8,1,1) = {"
+wF
+wF
+wF
+ie
+iz
+lk
+lk
+lk
+lk
+ay
+Zl
+UP
+UK
+"}
+(9,1,1) = {"
+wF
+wF
+wF
+wF
+wF
+ht
+ay
+Zl
+UK
+wF
+wF
+wF
+wF
+"}

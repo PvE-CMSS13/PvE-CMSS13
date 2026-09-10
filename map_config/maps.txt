@@ -62,6 +62,19 @@ endmap
 map lv522_chances_claim_forecon
 endmap
 
+map tyrargo_rift
+endmap
+
+map lv759_hybrisa_prospera
+	minplayers 130
+endmap
+
+map lv759_hybrisa_prospera_repaired
+endmap
+
+map cocytus_dam
+endmap
+
 map new_varadero
 endmap
 
@@ -71,7 +84,23 @@ endmap
 map derelict_almayer
 endmap
 
+map white_antre_research_facility
+endmap
+
+map conam_81_abyssal
+	maxplayers 85
+endmap
+
+map cape_river
+endmap
+
 map whiskey_outpost_v2
+endmap
+
+map lv522_chances_claim_lukes_landing
+endmap
+
+map lv522_lukes_landing
 endmap
 
 map lv295_blacksite
@@ -81,6 +110,12 @@ map si391_sekhmet_swamp
 endmap
 
 map bmg290_otogi_egress_point
+endmap
+
+map navalis_platform_13
+endmap
+
+map navalis_platform_13_singlez
 endmap
 
 map canyon_32b
@@ -104,8 +139,48 @@ endmap
 map oread_garrison
 endmap
 
+map lv818_featureless_jungle
+endmap
+
+map featureless_space
+endmap
+
+map lv295_featureless_arctic
+endmap
+
+map lv818_featureless_desert
+endmap
+
+map lv522_featureless_barrens
+endmap
+
 map redemption_valley
 endmap
 
 map binhai_supply_station
+endmap
+
+map lv624_lazarus_landing
+
+endmap
+
+map lv671
+endmap
+
+map oil_depot
+endmap
+
+map derelict_almayer_infested
+endmap
+
+map badayaga_ground
+endmap
+
+map jungle_delta
+endmap
+
+map prospector_canyon
+endmap
+
+map arctic_valley
 endmap

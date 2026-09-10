@@ -26,6 +26,9 @@
 		* Passing through in this case ignores anything with the throwpass flag, such as tables, racks, and morgue trays.
 */
 /turf/Adjacent(atom/neighbor, atom/target = null, list/ignore_list)
+	if(neighbor.z && (z != neighbor.z))
+		return FALSE
+
 	var/turf/T0 = get_turf(neighbor)
 	if(T0 == src)
 		return TRUE
@@ -97,14 +100,20 @@ Quick adjacency (to turf):
 
 	// Internal storages have special relationships with the object they are connected to and we still want two depth adjacency for storages
 	if(istype(loc?.loc, /obj/item/storage/internal) && recurse > 0)
+		if(istype(loc?.loc?.loc, /mob/living/carbon/human)) // For strip menu storage interactions
+			return loc.loc.loc.Adjacent(neighbor, recurse)
 		return loc.loc.Adjacent(neighbor, recurse)
 
 	if(issurface(loc))
 		return loc.Adjacent(neighbor, recurse) //Surfaces don't count as storage depth.
 	else if(istype(loc, /obj/item))
+		if(istype(loc?.loc, /mob/living/carbon/human)) // For strip menu storage interactions
+			return loc.loc.Adjacent(neighbor, recurse)
 		if(recurse > 0)
 			return loc.Adjacent(neighbor, recurse - 1)
 		return FALSE
+	else if(ishuman(loc)) // For strip menu storage interactions
+		return loc.Adjacent(neighbor, recurse)
 	else if(isxeno(loc)) //Xenos don't count as storage depth.
 		return loc.Adjacent(neighbor, recurse)
 	return ..()

@@ -138,6 +138,12 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	icon_state = "cryo_defense_kit"
 	content_type = /obj/item/explosive/grenade/phosphorus/upp
 
+/obj/item/storage/box/packet/hefa
+	name = "HEFA grenade packet"
+	desc = "It contains five HEFA grenades."
+	packet_icon = "hefa-p"
+	content_type = /obj/item/explosive/grenade/high_explosive/frag
+
 /obj/item/storage/box/packet/hefa/toy
 	name = "toy HEFA grenade packet"
 	desc = "These little packets of joy were distributed in the 100th (Season 2) Issue of the Boots! magazine as commemorative rewards for subscribers. Nobody knows how anyone, at any point, never asked 'wait, is this a terrible idea?' during the process."

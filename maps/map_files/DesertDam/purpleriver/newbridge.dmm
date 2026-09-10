@@ -3,170 +3,138 @@
 /turf/open/desert/dirt,
 /area/desert_dam/exterior/valley/valley_medical)
 "af" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer/north,
+/obj/structure/platform/metal/almayer/east,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "an" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer/east,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "aq" = (
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/valley/valley_medical)
 "aB" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "aI" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river/riverside_south)
 "aJ" = (
 /turf/closed/wall/rock/orange,
 /area/desert_dam/exterior/rock)
 "aK" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "aM" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform_decoration,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform_decoration/metal/almayer,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "aN" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "aP" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "aQ" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/obj/structure/platform,
+/obj/structure/platform/metal/almayer/east,
+/obj/structure/platform/metal/almayer,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "aR" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "aS" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/deep/covered,
 /area/desert_dam/exterior/river/riverside_south)
 "aT" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_corner/covered,
 /area/desert_dam/exterior/river/riverside_south)
 "ba" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/north,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "bb" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 1
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/north,
 /turf/open/gm/river/desert/shallow_corner,
 /area/desert_dam/exterior/river/riverside_south)
 "bd" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 1
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/north,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "be" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/deep,
 /area/desert_dam/exterior/river/riverside_south)
 "bi" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/covered,
 /area/desert_dam/exterior/river/riverside_south)
 "bk" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "bl" = (
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/river/riverside_south)
 "bn" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge,
 /area/desert_dam/exterior/river/riverside_south)
 "bp" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/desert/desert_shore/shore_corner2,
 /area/desert_dam/exterior/river/riverside_south)
 "bq" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "bs" = (
-/obj/structure/platform,
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/structure/platform/metal/almayer,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/desert/desert_shore/shore_edge1,
 /area/desert_dam/exterior/river/riverside_south)
 "bt" = (
-/obj/structure/platform,
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/structure/platform/metal/almayer,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "bu" = (
-/obj/structure/platform,
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "bA" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer/west,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/desert_shore1,
 /area/desert_dam/exterior/river/riverside_south)
 "bB" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/shore_corner2,
 /area/desert_dam/exterior/river/riverside_south)
 "cH" = (
@@ -187,9 +155,7 @@
 /area/desert_dam/exterior/valley/valley_medical)
 "fQ" = (
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/structure/platform/metal/almayer/west,
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_medical)
 "fS" = (
@@ -199,7 +165,7 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/valley/valley_medical)
 "fY" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/shore_edge1/east,
 /area/desert_dam/exterior/river/riverside_south)
 "gN" = (
@@ -207,14 +173,12 @@
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_cargo)
 "in" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/northeast,
 /area/desert_dam/exterior/river/riverside_south)
 "jA" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/shallow_edge/southwest,
 /area/desert_dam/exterior/river/riverside_south)
 "kE" = (
@@ -224,7 +188,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/desert_dam/exterior/valley/valley_medical)
 "kZ" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/east,
 /area/desert_dam/exterior/river/riverside_south)
 "lN" = (
@@ -237,21 +201,17 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached9,
 /area/desert_dam/exterior/valley/valley_medical)
 "lQ" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/shore_corner2/west,
 /area/desert_dam/exterior/river/riverside_south)
 "lV" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform_decoration/metal/almayer/west,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "pg" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer/north,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/shore_corner2/west,
 /area/desert_dam/exterior/river/riverside_south)
 "qm" = (
@@ -264,7 +224,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/exterior/river/riverside_south)
 "rc" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/desert_shore1/east,
 /area/desert_dam/exterior/river/riverside_south)
 "tw" = (
@@ -277,22 +237,20 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached4,
 /area/desert_dam/exterior/valley/valley_medical)
 "vr" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 8
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/west,
 /turf/open/gm/river/desert/shallow_corner/west,
 /area/desert_dam/exterior/river/riverside_south)
 "xR" = (
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/exterior/valley/valley_medical)
 "yy" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform,
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer,
 /turf/open/gm/river/desert/shallow_edge/east,
 /area/desert_dam/exterior/river/riverside_south)
 "yG" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/southwest,
 /area/desert_dam/exterior/river/riverside_south)
 "yW" = (
@@ -302,20 +260,16 @@
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_medical)
 "zc" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
+/obj/structure/platform_decoration/metal/almayer/west,
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/valley/valley_medical)
 "zn" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 1
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/north,
 /turf/open/gm/river/desert/shallow_edge/northeast,
 /area/desert_dam/exterior/river/riverside_south)
 "zE" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/covered/northeast,
 /area/desert_dam/exterior/river/riverside_south)
 "AY" = (
@@ -328,20 +282,16 @@
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_medical)
 "DT" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/structure/platform/metal/almayer/north,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/valley/valley_medical)
 "EC" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_corner/west,
 /area/desert_dam/exterior/river/riverside_south)
 "FL" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/covered/east,
 /area/desert_dam/exterior/river/riverside_south)
 "Gr" = (
@@ -351,10 +301,8 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached15,
 /area/desert_dam/exterior/valley/valley_medical)
 "Hs" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform/metal/almayer/north,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/desert/desert_shore/shore_edge1/east,
 /area/desert_dam/exterior/river/riverside_south)
 "Hw" = (
@@ -364,35 +312,27 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/valley/valley_medical)
 "IB" = (
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/structure/platform/metal/almayer/east,
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/valley/valley_medical)
 "LG" = (
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/desert_dam/exterior/river/riverside_south)
 "NA" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/gm/river/desert/shallow_edge/southwest,
 /area/desert_dam/exterior/river/riverside_south)
 "NQ" = (
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/desert_dam/exterior/valley/valley_medical)
 "Oo" = (
-/obj/effect/blocker/toxic_water/Group_1,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/effect/blocker/water/toxic/Group_1,
+/obj/structure/platform/metal/almayer/east,
 /turf/open/gm/river/desert/shallow_corner/west,
 /area/desert_dam/exterior/river/riverside_south)
 "OT" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
+/obj/structure/platform_decoration/metal/almayer/east,
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/valley/valley_medical)
 "Su" = (
@@ -402,7 +342,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/exterior/valley/valley_medical)
 "SX" = (
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow_edge/north,
 /area/desert_dam/exterior/river/riverside_south)
 "Tv" = (
@@ -412,17 +352,13 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/desert_dam/exterior/valley/valley_medical)
 "UO" = (
-/obj/structure/platform_decoration{
-	dir = 1
-	},
-/obj/effect/blocker/toxic_water/Group_1,
+/obj/structure/platform_decoration/metal/almayer/north,
+/obj/effect/blocker/water/toxic/Group_1,
 /turf/open/gm/river/desert/shallow,
 /area/desert_dam/exterior/river/riverside_south)
 "Vh" = (
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 4
-	},
+/obj/structure/platform/metal/almayer/east,
 /turf/open/asphalt/tile,
 /area/desert_dam/exterior/valley/valley_medical)
 "Ym" = (

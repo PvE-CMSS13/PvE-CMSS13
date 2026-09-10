@@ -1,0 +1,8 @@
+{
+    "map_name": "LV818 Firebase Zulu",
+    "map_path": "map_files/LV_818_Firebase_Zulu",
+    "map_file": "LV_818_Firebase_Zulu.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}

@@ -243,6 +243,10 @@
 	bonus_overlay = "mac15_ext"
 	max_rounds = 50
 
+/obj/item/ammo_magazine/smg/mac15/extended/terror
+	name = "\improper MAC-15 cursed magazine (9mm)"
+	default_ammo = /datum/ammo/xeno_container
+
 //-------------------------------------------------------
 // the real UZI
 
@@ -252,7 +256,7 @@
 /obj/item/ammo_magazine/smg/uzi
 	name = "\improper UZI magazine (9x21mm)"
 	desc = "A magazine for the UZI. Seems pretty small, huh? Anything larger caused feeding errors."
-	caliber = "9x12mm"
+	caliber = "9x21mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "uzi"
 	max_rounds = 25
@@ -297,3 +301,57 @@
 	w_class = SIZE_SMALL
 	max_rounds = 48
 	gun_type = /obj/item/weapon/gun/smg/nailgun
+
+
+/obj/item/ammo_magazine/sieg_smg
+	name = "\improper pan magazine (9mm)"
+	desc = "A 9mm submachinegun pan magazine. The shape prevents it from fitting into magazine webbings."
+	caliber = "9mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "sieg_smg"
+	max_rounds = 86
+	reload_delay = 10
+	w_class = SIZE_MEDIUM
+	gun_type = /obj/item/weapon/gun/smg/seegson
+	default_ammo = /datum/ammo/bullet/pistol
+	ammo_band_icon = "+sieg_smg_band"
+	ammo_band_icon_empty = "+sieg_smg_band_e"
+
+/obj/item/ammo_magazine/sieg_smg/ap
+	name = "\improper pan AP magazine (9mm)"
+	desc = "A 9mm armor-piercing submachinegun pan magazine. The shape prevents it from fitting into magazine webbings."
+	default_ammo = /datum/ammo/bullet/pistol/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/sieg_smg/hp
+	name = "\improper pan hollowpoint magazine (9mm)"
+	desc = "A 9mm hollowpoint submachinegun pan magazine. The shape prevents it from fitting into magazine webbings."
+	default_ammo = /datum/ammo/bullet/pistol/hollow
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+//-------------------------------------------------------
+//P90, a classic SMG.
+
+/obj/item/ammo_magazine/smg/p90
+	name = "\improper FN P90 magazine (5.7×28mm)"
+	desc = "A 5.7×28mm magazine for the FN P90."
+	default_ammo = /datum/ammo/bullet/smg/p90
+	caliber = "5.7×28mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "p90"
+	w_class = SIZE_MEDIUM
+	gun_type = /obj/item/weapon/gun/smg/p90
+	max_rounds = 50
+//-------------------------------------------------------
+//P90, a classic SMG.(TWE version)
+
+/obj/item/ammo_magazine/smg/p90/twe
+	name = "\improper FN-TWE P90 AP magazine (5.7×28mm)"
+	desc = "A 5.7×28mm (AP) magazine for the FN-TWE P90."
+	default_ammo = /datum/ammo/bullet/smg/p90/twe_ap
+	caliber = "5.7×28mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "p90_twe"
+	w_class = SIZE_MEDIUM
+	gun_type = /obj/item/weapon/gun/smg/p90/twe
+	max_rounds = 50

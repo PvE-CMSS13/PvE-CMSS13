@@ -13,7 +13,7 @@
 	if(!brain.should_reload())
 		return 0
 
-	return 15
+	return ACTION_WEIGHT_RELOAD
 
 /datum/ai_action/reload/Destroy(force, ...)
 	currently_reloading = FALSE

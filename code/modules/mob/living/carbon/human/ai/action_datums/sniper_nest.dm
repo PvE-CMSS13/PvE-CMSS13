@@ -24,7 +24,7 @@
 	if(brain.healing_someone)
 		return 0
 
-	return 12
+	return ACTION_WEIGHT_SNIPER_NEST
 
 /datum/ai_action/sniper_nest/Added()
 	initial_view = brain.view_distance
@@ -75,9 +75,17 @@
 		/datum/equipment_preset/clf/soldier/bolt::name = /datum/equipment_preset/clf/soldier/bolt,
 		/datum/equipment_preset/clf/soldier/svd::name = /datum/equipment_preset/clf/soldier/svd,
 		/datum/equipment_preset/rebel/sniper::name = /datum/equipment_preset/rebel/sniper,
+		/datum/equipment_preset/rebel/sniper/eva::name = /datum/equipment_preset/rebel/sniper/eva,
 		/datum/equipment_preset/canc/remnant/marksman::name = /datum/equipment_preset/canc/remnant/marksman,
+		/datum/equipment_preset/canc/remnant/marksman/snowman::name = /datum/equipment_preset/canc/remnant/marksman/snowman,
+		/datum/equipment_preset/canc/remnant/marksman/type88::name = /datum/equipment_preset/canc/remnant/marksman/type88,
+		/datum/equipment_preset/canc/remnant/marksman/type88/snowman::name = /datum/equipment_preset/canc/remnant/marksman/type88/snowman,
 		/datum/equipment_preset/pmc/sniper::name = /datum/equipment_preset/pmc/sniper,
 		/datum/equipment_preset/upp/sniper::name = /datum/equipment_preset/upp/sniper,
+		/datum/equipment_preset/upp/rifleman/eva/sniper::name = /datum/equipment_preset/upp/rifleman/eva/sniper,
+		/datum/equipment_preset/uscm/private_equipped/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/battlerifle,
+		/datum/equipment_preset/uscm/private_equipped/eva/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/eva/battlerifle,
+		/datum/equipment_preset/other/seegson/standard/battlerifle::name = /datum/equipment_preset/other/seegson/standard/battlerifle,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
 		/datum/equipment_preset/royal_marine/sniper::name = /datum/equipment_preset/royal_marine/sniper/ai,
@@ -86,6 +94,10 @@
 	)
 
 	if(!check_rights(R_DEBUG))
+		return
+
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
 		return
 
 	if(tgui_input_list(usr, "Press Enter to select the home turf of the sniper.", "Home Turf", list("Enter", "Cancel")) != "Enter")

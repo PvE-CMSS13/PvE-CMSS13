@@ -16,7 +16,7 @@
  *
  * return UI_state The state of the UI.
  */
-/datum/proc/ui_status(mob/user, datum/ui_state/state)
+/datum/proc/ui_status(mob/user, datum/ui_state/state, keep_open_if_within_distance)
 	var/src_object = ui_host(user)
 	. = UI_CLOSE
 	if(!state)
@@ -34,7 +34,7 @@
 				. = max(., UI_UPDATE)
 
 	// Check if the state allows interaction
-	var/result = state.can_use_topic(src_object, user)
+	var/result = state.can_use_topic(src_object, user, keep_open_if_within_distance)
 	. = max(., result)
 
 /**
@@ -48,7 +48,7 @@
  *
  * return UI_state The state of the UI.
  */
-/datum/ui_state/proc/can_use_topic(src_object, mob/user)
+/datum/ui_state/proc/can_use_topic(src_object, mob/user, keep_open_if_within_distance)
 	// Don't allow interaction by default.
 	return UI_CLOSE
 

@@ -13,6 +13,12 @@
 	switch(_role)
 		if(JOB_NAVY_CREWMAN)
 			hud_icon_state = "crew"
+		if(JOB_NAVY_MP)
+			hud_icon_state = "mp"
+		if(JOB_NAVY_SF)
+			hud_icon_state = "sf"
+		if(JOB_NAVY_SFL)
+			hud_icon_state = "sfl"
 		if(JOB_NAVY_MEDIC)
 			hud_icon_state = "doc"
 		if(JOB_NAVY_ENGI)
@@ -22,7 +28,11 @@
 		if(JOB_NAVY_JTAC)
 			hud_icon_state = "jfo"
 		if(JOB_NAVY_PARA_TECH)
-			hud_icon_state = "para"
+			hud_icon_state = "parat"
+		if(JOB_NAVY_PARA_MED)
+			hud_icon_state = "param"
+		if(JOB_NAVY_PARA_LEAD)
+			hud_icon_state = "paral"
 		if(JOB_NAVY_SYNTH)
 			hud_icon_state = "syn"
 		if(JOB_NAVY_PILOT)

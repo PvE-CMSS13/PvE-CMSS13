@@ -177,6 +177,7 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_PMC,
+		FACTION_COLONIST,
 	)
 	neutral_factions = list(
 		FACTION_CONTRACTOR,

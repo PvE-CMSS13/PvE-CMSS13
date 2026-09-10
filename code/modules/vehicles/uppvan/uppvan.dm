@@ -46,6 +46,16 @@
 
 	move_max_momentum = 3
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 4,
+		"slash" = 3,
+		"bullet" = 1.9,
+		"explosive" = 1.6,
+		"blunt" = 1.6,
+		"abstract" = 1,
+	)
+
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/van_wheels/upp,
 	)

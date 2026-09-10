@@ -1,0 +1,8 @@
+{
+    "map_name": "LV818 Firebase Juliet_forecon",
+    "map_path": "map_files/LV_818_Firebase_Juliet_forecon",
+    "map_file": "LV_818_Firebase_Juliet_forecon.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/forecon"
+}

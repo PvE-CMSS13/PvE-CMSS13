@@ -19,6 +19,16 @@
 	max_rounds = 99999
 	current_rounds = 99999
 
+/obj/item/ammo_magazine/sentry/premade/lowammo
+	max_rounds = 500
+	current_rounds = 500
+
+/obj/item/ammo_magazine/sentry/premade/dumb
+	default_ammo = /datum/ammo/bullet/turret/dumb
+
+/obj/item/ammo_magazine/sentry/premade/lowammo/dumb
+	default_ammo = /datum/ammo/bullet/turret/dumb
+
 /obj/item/ammo_magazine/sentry/upp
 	name = "AK-500 ammo drum (10x31mm Caseless)"
 	desc = "An ammo drum of 10x31mm caseless rounds for the UPPA 32-H sentry. Just feed it into the sentry gun's ammo port when its ammo is depleted."

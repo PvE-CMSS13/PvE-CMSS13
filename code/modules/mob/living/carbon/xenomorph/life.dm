@@ -107,18 +107,18 @@
 						phero_center = Q.observed_xeno
 					if(!phero_center || !phero_center.loc)
 						return
-					if(phero_center.loc.z == Q.loc.z)//Only same Z-level
+					if(SSmapping.same_z_map(phero_center.loc.z, Q.loc.z))//Only same map
 						use_current_aura = TRUE
 						aura_center = phero_center
 				else
 					use_current_aura = TRUE
 
-		if(leader_current_aura && hive && hive.living_xeno_queen && hive.living_xeno_queen.loc.z == loc.z) //Same Z-level as the Queen!
+		if(leader_current_aura && hive && hive.living_xeno_queen && SSmapping.same_z_map(hive.living_xeno_queen.loc.z, loc.z)) //Same map as the Queen!
 			use_leader_aura = TRUE
 
 		if(use_current_aura || use_leader_aura)
 			for(var/mob/living/carbon/xenomorph/Z as anything in GLOB.living_xeno_list)
-				if(Z.ignores_pheromones || Z.ignore_aura == current_aura || Z.ignore_aura == leader_current_aura || Z.z != z || get_dist(aura_center, Z) > floor(6 + aura_strength * 2) || !HIVE_ALLIED_TO_HIVE(Z.hivenumber, hivenumber))
+				if(Z.ignores_pheromones || Z.ignore_aura == current_aura || Z.ignore_aura == leader_current_aura || !SSmapping.same_z_map(Z.z, z) || get_dist(aura_center, Z) > floor(6 + aura_strength * 2) || !HIVE_ALLIED_TO_HIVE(Z.hivenumber, hivenumber))
 					continue
 				if(use_leader_aura)
 					Z.affected_by_pheromones(leader_current_aura, leader_aura_strength)
@@ -564,6 +564,6 @@ Make sure their actual health updates immediately.*/
 		return TRUE //weeds, yes!
 	if(need_weeds)
 		return FALSE //needs weeds, doesn't have any
-	if(hive && hive.living_xeno_queen && !is_mainship_level(hive.living_xeno_queen.loc.z) && is_mainship_level(loc.z))
+	if((hive && !hive.allow_no_queen_actions) && hive.living_xeno_queen && (!is_mainship_level(hive.living_xeno_queen.loc.z) && is_mainship_level(loc.z)))
 		return FALSE //We are on the ship, but the Queen isn't
 	return TRUE //we have off-weed healing, and either we're on Almayer with the Queen, or we're on non-Almayer, or the Queen is dead, good enough!

@@ -68,7 +68,7 @@
 			if(prob(max(4*(100*getBruteLoss()/maxHealth - 75),0))) //4% at 24% health, 80% at 5% health
 				last_damage_data = create_cause_data("chestbursting", user)
 				gib(last_damage_data)
-	else if(!chestburst && (status_flags & XENO_HOST) && islarva(user))
+	else if(!chestburst && (status_flags & XENO_HOST) && (islarva(user)) || is_pathogen_creature(user))
 		var/mob/living/carbon/xenomorph/larva/L = user
 		L.chest_burst(src)
 
@@ -154,6 +154,12 @@
 	else if(W.flags_item & CAN_DIG_SHRAPNEL && W.dig_out_shrapnel_check(src, user))
 		return TRUE
 
+	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+		//Address the integrated tank on Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/pressure/tank_to_replace = wear_suit
+		if((istype(wear_suit, /obj/item/clothing/suit/space/pressure)))
+			if(tank_to_replace.attackby(W, user))
+				return
 	. = ..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
@@ -377,22 +383,20 @@
 			return
 		visible_message(SPAN_WARNING("[src] has thrown [thrown_thing]."), null, null, 5)
 
-		if(!lastarea)
-			lastarea = get_area(src.loc)
-		if(istype(loc, /turf/open/space))
-			inertia_dir = get_dir(target, src)
-			step(src, inertia_dir)
-
 		if(throw_type == THROW_MODE_HIGH)
 			to_chat(src, SPAN_NOTICE("You prepare to perform a high toss."))
 			if(!do_after(src, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				to_chat(src, SPAN_WARNING("You need to set up the high toss!"))
 				return
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH))
 		else
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw))
+		lastarea = get_area(src.loc)
+		if(!lastarea.gravity)
+			inertia_dir = get_dir(target, src)
+			step(src, inertia_dir)
 
 /mob/living/carbon/fire_act(exposed_temperature, exposed_volume)
 	..()
@@ -543,3 +547,33 @@
 		set_lying_angle(pick(90, 270))
 	else
 		set_lying_angle(new_lying_angle)
+
+///Used for shifting a target mob to the user. Use positive values. Proc will handle the direction. If no pixel_amount_y is given it will use pixel_amount_x
+/mob/living/carbon/proc/pixel_shift_target_mob(mob/target, pixel_amount_x, pixel_amount_y = null)
+	if(pixel_amount_y == null)
+		pixel_amount_y = pixel_amount_x
+	switch(get_dir(src, target))
+		if(NORTH)
+			target.pixel_y -= pixel_amount_y
+		if(EAST)
+			target.pixel_x -= pixel_amount_x
+		if(SOUTH)
+			target.pixel_y += pixel_amount_y
+		if(WEST)
+			target.pixel_x += pixel_amount_x
+		if(NORTHEAST)
+			target.pixel_x -= pixel_amount_x
+			target.pixel_y -= pixel_amount_y
+		if(NORTHWEST)
+			target.pixel_y -= pixel_amount_y
+			target.pixel_x += pixel_amount_x
+		if(SOUTHEAST)
+			target.pixel_y += pixel_amount_y
+			target.pixel_x -= pixel_amount_x
+		if(SOUTHWEST)
+			target.pixel_y += pixel_amount_y
+			target.pixel_x += pixel_amount_x
+
+/mob/living/carbon/proc/reset_pixel_shift()
+	src.pixel_y = 0
+	src.pixel_x = 0

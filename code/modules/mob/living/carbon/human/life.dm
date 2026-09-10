@@ -8,6 +8,9 @@
 
 	if(undefibbable && stat == DEAD || spawned_corpse)
 		GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, "*Deceased*")
+		if(on_fire && iszombie(src))
+			var/datum/species/zombie/zombie_corpse = src.species
+			zombie_corpse.clean_up_zombie(src)
 		SShuman.processable_human_list -= src
 		if(hardcore)
 			qdel(src) //We just delete the corpse on WO to keep things simple and lag-free

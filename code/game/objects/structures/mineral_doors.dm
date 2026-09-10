@@ -7,6 +7,7 @@
 	anchored = TRUE
 	opacity = TRUE
 	health = HEALTH_DOOR
+	tiles_with = list(/turf/closed/wall/mineral)
 
 	icon = 'icons/obj/structures/doors/mineral_doors.dmi'
 	icon_state = "metal"
@@ -205,8 +206,11 @@
 	hardness = 10
 
 /obj/structure/mineral_door/wood
+	name = "wooden door"
+	icon_state = "wood"
 	mineralType = "wood"
 	hardness = 1
+	tiles_with = list(/turf/closed/wall/mineral, /turf/closed/wall/wood)
 
 /obj/structure/mineral_door/wood/open()
 	isSwitchingStates = TRUE

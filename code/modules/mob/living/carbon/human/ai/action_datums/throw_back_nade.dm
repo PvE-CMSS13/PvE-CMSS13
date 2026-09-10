@@ -13,7 +13,7 @@
 	if(get_dist(brain.tied_human, brain.active_grenade_found) > 4)
 		return 0
 
-	return 50
+	return ACTION_WEIGHT_THROW_BACK_GRENADE
 
 /datum/ai_action/throw_back_nade/Destroy(force, ...)
 	brain.active_grenade_found = null // Mr. Grenade is not our friend now

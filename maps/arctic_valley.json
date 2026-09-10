@@ -1,0 +1,17 @@
+{
+	"map_name": "Arctic Valley",
+    "map_path": "map_files/arctic_valley",
+    "map_file": "arctic_valley.dmm",
+    "webmap_url": "ArcticValley",
+
+    "environment_traits": {
+        "COLD": true
+    },
+
+	"weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "snow"
+}

@@ -5,9 +5,10 @@
 #define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell", "Willy-Pete Shell", "Smoke Shell")
-#define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")
+#define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell", "Cryogenic Neon OB")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "25mm Multipurpose Strike", "25mm Armorpiercing Strike")
-#define THROWABLES_ORDNANCE list("HE", "HE - UPP", "HE - RMC", "Frag", "Incendiary", "Molotov", "Incendiary - RMC", "Smoke - White", "Smoke - Green", "Smoke - Red", "Smoke - UPP", "WP", "WP - UPP", "Ball-Breakers", "Nerve Gas", "LSD", "Tear Gas", "Metal Foam", "Flare", "Flare - UPP", "Flare - Signal")
+#define THROWABLES_ORDNANCE list("HE", "HE - UPP", "HE - RMC", "Frag", "Incendiary", "Molotov", "Incendiary - RMC", "Smoke - White", "Smoke - Green", "Smoke - Red", "Smoke - UPP", "WP", "WP - UPP", "Ball-Breakers", "Nerve Gas", "LSD", "Tear Gas", "Cryogenic Neon", "Metal Foam", "Flare", "Flare - UPP", "Flare - Signal")
+#define FLYBY_ORDNANCE list("Cheyenne Flyby", "Cheyenne Hover", "Krokodil Flyby", "Krokodil Hover")
 
 /client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -24,6 +25,10 @@
 	///Mortar to fire the abstract shells.
 	var/obj/structure/mortar/abstract_mortar = new()
 	var/client/holder
+	//flyby stuff
+	var/flyby_effect = /obj/effect/temp_visual/dropship_flyby
+	var/flyby_sound = 'sound/weapons/dropship_sonic_boom.ogg'
+	var/flyby_cooldown = FALSE
 
 /datum/fire_support_menu/New(user)
 	if(isclient(user))
@@ -60,6 +65,7 @@
 	data["chemical_ordnance_options"] = CHEMICAL_ORDNANCE
 	data["misc_ordnance_options"] = MISC_ORDNANCE
 	data["throwables_ordnance_options"] = THROWABLES_ORDNANCE
+	data["flyby_ordnance_options"] = FLYBY_ORDNANCE
 
 	return data
 
@@ -251,6 +257,12 @@
 
 				return TRUE
 
+			if("Cryogenic Neon OB")
+				var/obj/structure/ob_ammo/warhead/cryo/ammo  = new()
+				handle_orbital_ordnance(target_turf, ammo)
+
+				return TRUE
+
 			//Mortar Shelling
 			if("High Explosive Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
@@ -409,6 +421,12 @@
 
 				return TRUE
 
+			if("Cryogenic Neon")
+				var/obj/item/explosive/grenade/cryo/ammo = new (target_turf)
+				ammo.activate()
+
+				return TRUE
+
 			if("Metal Foam")
 				var/obj/item/explosive/grenade/metal_foam/ammo = new (target_turf)
 				ammo.activate()
@@ -433,6 +451,51 @@
 
 				return TRUE
 
+			//Flyby Effects (no actual ordnance, just the visual and sound effects of a dropship flying over or hovering)
+			if("Cheyenne Flyby")
+				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
+				flyby_effect = /obj/effect/temp_visual/dropship_flyby
+				flyby_sound = 'sound/weapons/dropship_sonic_boom.ogg'
+
+				handle_flyby_initiate(target_turf)
+
+				QDEL_IN(target_lase, 1 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
+			if("Cheyenne Hover")
+				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
+				flyby_effect = /obj/effect/temp_visual/dropship_hover
+				flyby_sound = 'sound/weapons/fire_support/dropship_hover.ogg'
+
+				handle_flyby_initiate(target_turf)
+
+				QDEL_IN(target_lase, 1 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
+			if("Krokodil Flyby")
+				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
+				flyby_effect = /obj/effect/temp_visual/dropship_flyby/krokodil
+				flyby_sound = 'sound/weapons/dropship_sonic_boom.ogg'
+
+				handle_flyby_initiate(target_turf)
+
+				QDEL_IN(target_lase, 1 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
+			if("Krokodil Hover")
+				var/obj/effect/overlay/temp/blinking_laser/invis/target_lase = new(target_turf)
+				flyby_effect = /obj/effect/temp_visual/dropship_hover/krokodil
+				flyby_sound = 'sound/weapons/fire_support/dropship_hover.ogg'
+
+				handle_flyby_initiate(target_turf)
+
+				QDEL_IN(target_lase, 1 SECONDS)  //to stop "unused var" warnings
+
+				return TRUE
+
 			else
 				to_chat(user, SPAN_ANNOUNCEMENT_HEADER_ADMIN("Invalid ordnance selection! If this appears, yell at a coder!"))
 				return TRUE
@@ -442,6 +505,17 @@
 	if(!sound_cooldown)
 		playsound(target_turf, 'sound/weapons/dropship_sonic_boom.ogg', 100, 1, 60)
 		sound_cooldown = TRUE
+		addtimer(VARSET_CALLBACK(src, sound_cooldown, FALSE), 10 SECONDS)
+
+/datum/fire_support_menu/proc/handle_flyby_initiate(turf/target_turf)
+	if(!flyby_cooldown)
+		if(flyby_effect)
+			new flyby_effect(target_turf)
+		if(flyby_sound)
+			playsound(target_turf, flyby_sound, 100, 1, 60)
+		sound_cooldown = TRUE
+		flyby_cooldown = TRUE
+		addtimer(VARSET_CALLBACK(src, flyby_cooldown, FALSE), 10 SECONDS)
 		addtimer(VARSET_CALLBACK(src, sound_cooldown, FALSE), 10 SECONDS)
 
 ///Handles the noises and actual detonation of dropship ammo. Mainly it doesnt play the warning sound for ammo of the ship_ammo/heavygun/ type.
@@ -461,4 +535,5 @@
 #undef MISC_ORDNANCE
 #undef CHEMICAL_ORDNANCE
 #undef THROWABLES_ORDNANCE
+#undef FLYBY_ORDNANCE
 #undef FIRE_SUPPORT_CLICK_INTERCEPT_ACTION

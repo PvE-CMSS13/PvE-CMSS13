@@ -31,19 +31,32 @@
 			if(JOB_DROPSHIP_CREW_CHIEF) marine_rk = "dcc"
 			if(JOB_SQUAD_RTO) marine_rk = "rto"
 			if(JOB_MARINE_RAIDER) marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED) marine_rk = "socmed"
 			if(JOB_MARINE_RAIDER_SL) marine_rk = "soctl"
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
 			if(JOB_SQUAD_TECH) marine_rk = "tech"
 
 			if(JOB_FORECON_SL) marine_rk = "leader"
 			if(JOB_FORECON_SNIPER) marine_rk = "spec"
+			if(JOB_FORECON_SPOTTER) marine_rk = "ass"
+			if(JOB_FORECON_RTO) marine_rk = "rto"
+			if(JOB_FORECON_CORPSMAN) marine_rk = "med"
+			if(JOB_FORECON_XO) marine_rk = "xo"
 			if(JOB_FORECON_SYN) marine_rk = "syn"
 			if(JOB_FORECON_SUPPORT) marine_rk = "tech"
 			if(JOB_FORECON_SMARTGUNNER) marine_rk = "gun"
-			if(JOB_FORECON_MARKSMAN) marine_rk = "ass"
+			if(JOB_FORECON_MARKSMAN) marine_rk = "soc"
 			if(JOB_FORECON_RIFLEMAN) marine_rk = null
 			if(JOB_FORECON_CO) marine_rk = "co"
 
+			if(JOB_ARMY_TROOPER) marine_rk = "trpr"
+			if(JOB_ARMY_ENGI) marine_rk = "cet"
+			if(JOB_ARMY_MEDIC) marine_rk = "cmt"
+			if(JOB_ARMY_MARKSMAN) marine_rk = "snpr"
+			if(JOB_ARMY_SMARTGUNNER) marine_rk = "mmg"
+			if(JOB_ARMY_SNCO) marine_rk = "sl_army"
+			if(JOB_ARMY_CO) marine_rk = "co_army"
+			if(JOB_ARMY_SYN) marine_rk = "syn_army"
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
 				if("Section") marine_rk = "leader_a"
@@ -111,6 +124,22 @@
 				marine_rk = "leader"
 			if(JOB_SQUAD_TECH)
 				marine_rk = "tech"
+			if(JOB_ARMY_TROOPER)
+				marine_rk = "trpr"
+			if(JOB_ARMY_MEDIC)
+				marine_rk = "cmt"
+			if(JOB_ARMY_ENGI)
+				marine_rk = "cet"
+			if(JOB_ARMY_MARKSMAN)
+				marine_rk = "snpr"
+			if(JOB_ARMY_SMARTGUNNER)
+				marine_rk = "mmg"
+			if(JOB_ARMY_SNCO)
+				marine_rk = "sl_army"
+			if(JOB_ARMY_CO)
+				marine_rk = "co_army"
+			if(JOB_ARMY_SYN)
+				marine_rk = "syn_army"
 			if(JOB_INTEL)
 				marine_rk = "io"
 			if(JOB_CAS_PILOT)
@@ -233,9 +262,28 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
+			if(JOB_SQUAD_RTO)
+				marine_rk = "rto"
+			// MARSOC stuff
+			if(JOB_MARINE_RAIDER)
+				marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED)
+				marine_rk = "socmed"
+			if(JOB_MARINE_RAIDER_SL)
+				marine_rk = "soctl"
+			if(JOB_MARINE_RAIDER_CMD)
+				marine_rk = "soccmd"
 			// FORECON surv specific stuff
 			if(JOB_FORECON_SL)
 				marine_rk = "leader"
+			if(JOB_FORECON_CORPSMAN)
+				marine_rk = "med"
+			if(JOB_FORECON_SPOTTER)
+				marine_rk = "ass"
+			if(JOB_FORECON_RTO)
+				marine_rk = "rto"
+			if(JOB_FORECON_XO)
+				marine_rk = "xo"
 			if(JOB_FORECON_SNIPER)
 				marine_rk = "spec"
 			if(JOB_FORECON_SYN)

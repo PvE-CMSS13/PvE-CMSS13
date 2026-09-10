@@ -2,8 +2,8 @@
 	name = "medical pack"
 	singular_name = "medical pack"
 	icon = 'icons/obj/items/items.dmi'
-	amount = 10
-	max_amount = 10
+	amount = 20
+	max_amount = 20
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
@@ -39,12 +39,14 @@
 
 	if(affecting.display_name == "head")
 		if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
-			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.head]!"))
-			return 1
+			if (!(H.head.flags_inventory & BYPASSFORINJECTOR))
+				to_chat(user, SPAN_WARNING("You can't apply [src] through [H.head]!"))
+				return 1
 	else
 		if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
-			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.wear_suit]!"))
-			return 1
+			if (!(H.wear_suit.flags_inventory & BYPASSFORINJECTOR)) //spacesuits with injection port allows most medical
+				to_chat(user, SPAN_WARNING("You can't apply [src] through [H.wear_suit]!"))
+				return 1
 
 	if(affecting.status & (LIMB_ROBOT|LIMB_SYNTHSKIN))
 		to_chat(user, SPAN_WARNING("This isn't useful at all on a robotic limb."))
@@ -126,6 +128,13 @@
 			attack(target, user)
 			sleep(ai_brain.short_action_delay)
 
+/obj/item/stack/medical/bruise_pack/random_amount
+
+/obj/item/stack/medical/bruise_pack/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
+
 /obj/item/stack/medical/bruise_pack/two
 	amount = 2
 
@@ -174,6 +183,13 @@
 			else
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
+
+/obj/item/stack/medical/ointment/random_amount
+
+/obj/item/stack/medical/ointment/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
 
 /obj/item/stack/medical/advanced/bruise_pack
 	name = "trauma kit"
@@ -383,8 +399,8 @@
 	singular_name = "medical splint"
 	desc = "A collection of different splints and securing gauze. What, did you think we only broke legs out here?"
 	icon_state = "splint"
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 	stack_id = "splint"
 
 	var/indestructible_splints = FALSE
@@ -447,3 +463,10 @@
 			attack(target, user)
 			sleep(ai_brain.short_action_delay)
 			continue
+
+/obj/item/stack/medical/splint/random_amount
+
+/obj/item/stack/medical/splint/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(2,5)
+	update_icon()

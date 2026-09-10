@@ -214,6 +214,7 @@
 	hunter.set_languages(list(LANGUAGE_YAUTJA))
 	give_action(hunter, /datum/action/predator_action/claim_equipment)
 	give_action(hunter, /datum/action/yautja_emote_panel)
+	give_action(hunter, /datum/action/predator_action/leap)
 	give_action(hunter, /datum/action/predator_action/mark_for_hunt)
 	give_action(hunter, /datum/action/predator_action/mark_panel)
 	return ..()

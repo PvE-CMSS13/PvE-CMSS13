@@ -53,3 +53,27 @@
 	)
 
 	scatter = 2
+
+
+/obj/item/hardpoint/secondary/m56cupola/twe_tank
+	name = "\improper L98 10x28mm Hull General Purpose Machine Gun"
+	desc = "Imperial implementation of a hull machine gun in a powered cupola. Compact with integrated liquid cooling, and armored hull proofed to small arms. However, its angle of horizontal traverse is limited to the front arc, and its vertical no more than 23 degrees. The mounted weapon is a heavy barreled variant of the regular 10x28mm pulse-action general purpose machine gun. It is built under license from Armat by Weyland Yutani."
+	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
+	disp_icon_state = "mounted_cupola"
+	icon_state = "mounted_cupola"
+
+	allowed_seat = VEHICLE_DRIVER
+
+	firing_arc = 75
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank
+	max_clips = 5
+
+	muzzle_flash_pos = list(
+		"1" = list(8, -1),
+		"2" = list(-8, -21),
+		"4" = list(13, -10),
+		"8" = list(-11, 1)
+	)
+
+	scatter = 2

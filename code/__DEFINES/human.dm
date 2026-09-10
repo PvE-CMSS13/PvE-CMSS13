@@ -1,7 +1,7 @@
 //Life variables
 
 /// Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
-#define HUMAN_MAX_OXYLOSS 1
+#define HUMAN_MAX_OXYLOSS 6
 /// The amount of damage you'll get when in critical condition. We want this to be a 5 minute deal = 300s. There are 50HP to get through, so (1/6)*last_tick_duration per second. Breaths however only happen every 3 ticks.
 #define HUMAN_CRIT_MAX_OXYLOSS 1
 
@@ -13,6 +13,7 @@
 
 #define HUMAN_STRIP_DELAY 5
 #define POCKET_STRIP_DELAY 5
+#define HUMAN_DEAD_DECAP_DELAY 8 SECONDS
 
 ///////////////////LIMB FLAGS///////////////////
 
@@ -183,13 +184,15 @@
 #define SYNTH_COLONY "Third Generation Colonial Synthetic"
 #define SYNTH_COLONY_GEN_TWO "Second Generation Colonial Synthetic"
 #define SYNTH_COLONY_GEN_ONE "First Generation Colonial Synthetic"
-#define SYNTH_COMBAT "Combat Synthetic"
+#define SYNTH_COMBAT "WY Combat Android"
 #define SYNTH_INFILTRATOR "Infiltrator Synthetic"
 #define SYNTH_WORKING_JOE "Working Joe"
 #define SYNTH_HAZARD_JOE "Hazard Joe"
+#define SYNTH_UPP_JOE "Dzho Automaton"
 #define SYNTH_GEN_ONE "First Generation Synthetic"
 #define SYNTH_GEN_TWO "Second Generation Synthetic"
 #define SYNTH_GEN_THREE "Third Generation Synthetic"
+#define SCARY_SKELETON "Scary Skeleton"
 
 #define PLAYER_SYNTHS list(SYNTH_GEN_ONE, SYNTH_GEN_TWO, SYNTH_GEN_THREE)
 #define SYNTH_TYPES list(SYNTH_COLONY, SYNTH_COLONY_GEN_ONE, SYNTH_COLONY_GEN_TWO, SYNTH_COMBAT, SYNTH_INFILTRATOR, SYNTH_WORKING_JOE, SYNTH_GEN_ONE, SYNTH_GEN_TWO, SYNTH_GEN_THREE)

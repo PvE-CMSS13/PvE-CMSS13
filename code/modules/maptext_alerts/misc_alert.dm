@@ -30,6 +30,9 @@
 /atom/movable/screen/text/screen_text/picture/red_dawn
 	image_to_play = "red_dawn"
 
+/atom/movable/screen/text/screen_text/picture/fox_stalkers
+	image_to_play = "fox_stalkers"
+
 /atom/movable/screen/text/screen_text/picture/azure
 	image_to_play = "azure_15"
 

@@ -201,6 +201,9 @@
 		interior = new(src)
 		INVOKE_ASYNC(src, PROC_REF(do_create_interior))
 
+/obj/vehicle/multitile/check_ai_special_blockers()
+	return TRUE
+
 /obj/vehicle/multitile/proc/do_create_interior()
 	interior.create_interior(interior_map)
 

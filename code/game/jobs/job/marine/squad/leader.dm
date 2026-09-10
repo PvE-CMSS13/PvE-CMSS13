@@ -86,6 +86,16 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
 
+/datum/job/marine/leader/ai/upp/forecon
+	title = JOB_SQUAD_LEADER_FORECON_UPP
+	gear_preset = /datum/equipment_preset/uscm/leader/upp/forecon
+	job_options = list(SGTMJR_VARIANT = "SGTMJR")
+
+/obj/effect/landmark/start/marine/leader/upp/forecon
+	name = JOB_SQUAD_LEADER_FORECON_UPP
+	squad = SQUAD_SISSI
+	job = /datum/job/marine/leader/ai/upp/forecon
+
 /datum/job/marine/leader/ai/pmc
 	title = JOB_PMCPLAT_LEADER
 	gear_preset = /datum/equipment_preset/uscm/pmc/sl

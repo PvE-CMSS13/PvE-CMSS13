@@ -1,0 +1,11 @@
+{
+	"map_name": "LV295_Featureless_Arctic",
+    "short_name": "LV295_Featureless_Arctic",
+	"map_path": "map_files/LV295_Featureless_Arctic",
+	"map_file": "LV295_Featureless_Arctic.dmm",
+    "webmap_url": "LV552",
+    "map_item_type": "/obj/item/map/lv522_map",
+    "weather_holder": "/datum/weather_ss_map_holder/lv295_blacksite",
+
+    "camouflage": "snow"
+}

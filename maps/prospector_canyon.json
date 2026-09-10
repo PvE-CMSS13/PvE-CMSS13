@@ -1,0 +1,14 @@
+{
+    "map_name": "Prospector Canyon",
+    "map_path": "map_files/prospector_canyon",
+    "map_file": "prospector_canyon.dmm",
+    "webmap_url": "Solaris",
+
+    "weather_holder": "/datum/weather_ss_map_holder/calliope_highway",
+    "map_item_type": "/obj/item/map/big_red_map",
+
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "desert"
+
+}

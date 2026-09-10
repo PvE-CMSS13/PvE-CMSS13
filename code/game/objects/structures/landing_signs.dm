@@ -19,6 +19,12 @@
 	desc = "A large sign reading 'Lazarus Landing' the rest of it is smeared in blood."
 	icon_state = "laz_sign_d"
 
+/obj/structure/lz_sign/lazarus_sign/clean
+	name = "Lazarus Landing Sign"
+	desc = "A large sign reading 'lazarus landing por-' the rest of it is smeared in blood."
+	icon = 'icons/obj/structures/props/landing_signs.dmi'
+	icon_state = "laz_sign_clean"
+
 /obj/structure/lz_sign/solaris_sign
 	name = "Solaris Ridge Sign"
 	desc = "A large sign that reads 'Solaris Ridge -', the rest of it is scraped away."
@@ -81,3 +87,57 @@
 	name = "Otogi Egress Point - Keppitz Hangar - Landing Zone two sign"
 	desc = "A large sign that reads Keppitz Hangar, it has clear markings of Weyland Yutani along with warnings about trespassing and lethal force."
 	icon_state = "otogi_sign_2"
+
+/obj/structure/lz_sign/hybrisa_sign
+	name = "Hybrisa Prospera welcome sign"
+	desc = "A large sign that reads 'Welcome to Hybrisa Prospera', The Weyland Yutani 'Wings' and logo adorn the sign, as well as some information about the colony."
+	icon = 'icons/obj/structures/props/landing_signs.dmi'
+	icon_state = "hybrisa_sign"
+
+/obj/structure/lz_sign/hybrisa_sign/damaged
+	name = "Hybrisa Prospera Welcome sign"
+	desc = "A large sign that reads 'Welcome to Hybrisa Prospera', The Weyland Yutani corporate 'Wings' and logo adorn the sign, as well as some information about the colony."
+	icon_state = "hybrisa_sign_d"
+
+/obj/structure/lz_sign/hybrisa_sign/medical
+	name = "Hybrisa Prospera - Emergency Medical Landing Zone one sign"
+	desc = "A large sign that reads 'Emergency Medical - HBP - LZ - 01'."
+	icon_state = "hybrisamedical_sign"
+
+/obj/structure/lz_sign/hybrisa_sign/mining
+	name = "Hybrisa Prospera - Weyland-Yutani Kelland Mining - Landing Zone two sign"
+	desc = "A large sign that reads 'WY - KMCC Mining - HBP - LZ - 01' The Kelland Mining logo is adorns the sign."
+	icon_state = "hybrisamining_sign"
+
+/obj/structure/lz_sign/tyrargo_sign
+	name = "Tyrargo Rift - Firebase Charlie Landing Zone one sign"
+	desc = "A medium sized sign, illuminated by red lights, designating this area as firebase charlie."
+	icon_state = "tyrargo_sign_1"
+
+/obj/structure/lz_sign/tyrargo_sign/lz2
+	name = "Tyrargo Rift - USASF Airbase Anderson Landing Zone two sign"
+	desc = "A large sign that designates this area as being a USASF airbase."
+	icon_state = "tyrargo_sign_2"
+
+/obj/structure/lz_sign/tyrargo_sign/lz2/alt
+	icon_state = "tyrargo_sign_3"
+
+/obj/structure/lz_sign/tyrargo_sign/city
+	name = "Tyrargo Rift - city limit sign"
+	desc = "A large sign designating the city limit of Tyrargo Rift."
+	icon_state = "tyrargo_sign_4"
+
+/obj/structure/lz_sign/antre_sign
+	name = "White Antre - Supply Depot Landing Pad"
+	desc = "A medium sized sign, illuminated by red lights, designating this area as a supply depot landing zone for a nearby facility."
+	icon_state = "antre_sign_1"
+
+/obj/structure/lz_sign/antre_sign/town
+	name = "Fort McNair sign"
+	desc = "A small sized sign, indicating that this road leads to a location called 'Fort McNair'."
+	icon_state = "antre_sign_2"
+
+/obj/structure/lz_sign/antre_sign/facility
+	name = "White Antre Research Facility"
+	desc = "A medium sized sign, designating this area as the White Antre Research Facility."
+	icon_state = "antre_sign_3"

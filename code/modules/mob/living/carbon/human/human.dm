@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")
@@ -1180,7 +1180,15 @@
 		TRACKER_CSL = /datum/squad/marine/charlie,
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
-		TRACKER_FSL = /datum/squad/marine/cryo
+		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_RSL = /datum/squad/marine/forecon,
+		TRACKER_R2SL = /datum/squad/marine/sof/forecon,
+		TRACKER_RMCSL = /datum/squad/marine/rmc,
+		TRACKER_PSL = /datum/squad/marine/pmc,
+		TRACKER_P2SL = /datum/squad/marine/pmc/secondary,
+		TRACKER_PSSL = /datum/squad/marine/pmc/small,
+		TRACKER_UPPSL = /datum/squad/marine/upp,
+		TRACKER_UPP2SL = /datum/squad/marine/upp/secondary
 	)
 	switch(tracker_setting)
 		if(TRACKER_SL)
@@ -1454,7 +1462,7 @@
 		visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 			SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
 
-	if(istype(get_turf(src), /turf/open/gm/river))
+	if(istype(get_turf(src), /turf/open/gm/river) || (/obj/effect/blocker/water in loc))
 		ExtinguishMob()
 
 	if(fire_stacks > 0)
@@ -1695,7 +1703,10 @@
 				platoon = "3rd Bat. 'Solar Devils"
 		if(FACTION_UPP)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/upp
-			platoon = "Red Dawn"
+			if(assigned_squad && assigned_squad.name == SQUAD_SISSI)
+				platoon = "Fox Stalkers"
+			else
+				platoon = "Red Dawn"
 		if(FACTION_PMC)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
 			platoon = "Azure-15"
@@ -1703,6 +1714,35 @@
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
 			platoon = "Gamma Troop"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
+
+/mob/living/carbon/human/verb/important_action(msg as text)
+	set category = "IC"
+	set name = "Important Action"
+
+	do_important_action(msg)
+
+/mob/living/carbon/human/proc/do_important_action(msg)
+
+	msg = strip_html(msg)
+	if(!msg) return
+	usr.manual_emote("<u>[msg]</u>")
+	if(usr.client)
+		if(usr.client.prefs.muted & MUTE_PRAY)
+			to_chat(usr, SPAN_DANGER("You cannot use important action (muted)."))
+			return
+		if(src.client.handle_spam_prevention(msg,MUTE_PRAY))
+			return
+
+	var/prefix = SPAN_PURPLE("IMPORTANT ACTION: ")
+
+	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)] [ADMIN_PP(src)]: [msg]")
+	log_admin(msg)
+	for(var/client/admin in GLOB.admins)
+		if(AHOLD_IS_MOD(admin.admin_holder))
+			to_chat(admin, SPAN_STAFF_IC(msg))
+			if(admin.prefs.toggles_sound & SOUND_ARES_MESSAGE)
+				admin << 'sound/machines/terminal_alert.ogg'
+
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
@@ -1726,3 +1766,23 @@
 
 	return .
 
+/mob/living/carbon/human/onZImpact(turf/impact_turf, height)
+	if(isyautja(src))
+		return
+
+	. = ..()
+
+	KnockDown(height * 5)
+	Stun(height * 5)
+
+	var/total_damage = (20 * height) ** 1.3
+	apply_damage(total_damage / 2, BRUTE, "r_leg")
+	apply_damage(total_damage / 2, BRUTE, "l_leg")
+
+	var/obj/limb/leg/found_rleg = locate(/obj/limb/leg/l_leg) in limbs
+	var/obj/limb/leg/found_lleg = locate(/obj/limb/leg/r_leg) in limbs
+
+	found_rleg?.fracture(100)
+	found_lleg?.fracture(100)
+
+	playsound(impact_turf.loc, "slam", 50, 1)

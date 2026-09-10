@@ -1,20 +1,20 @@
 /obj/structure/machinery/door/airlock/sandstone/runed
 	name = "\improper Runed Sandstone Airlock"
-	icon = 'icons/obj/structures/doors/doorrunedsand.dmi'
+	icon = 'icons/obj/structures/doors/hunter/ancient_temple_door.dmi'
 	mineral = "runed sandstone"
 	no_panel = TRUE
 	not_weldable = TRUE
-	use_power = FALSE
+	use_power = USE_POWER_NONE
 	autoclose = FALSE
 	locked = TRUE
 	icon_state = "door_locked"
 	stat = 0
 	heavy = TRUE
 	masterkey_resist = TRUE
-	openspeed = 4 SECONDS
+	openspeed = 2 SECONDS
 	unacidable = TRUE//Walls can still be melted or blown up.
 	damage_cap = HEALTH_WALL_REINFORCED//Strong, but only available to Hunters so no abuse from marines.
-	color = "#b29082"
+	color = null
 
 /obj/structure/machinery/door/airlock/sandstone/runed/proc/can_use(mob/user as mob, loud = 0)
 	if(!in_range(src, user))
@@ -251,3 +251,7 @@
 	name = "\improper Runed Sandstone Airlock"
 	unacidable = FALSE //Destroyable version of the temple doors
 	damage_cap = HEALTH_WALL
+
+/obj/structure/machinery/door/airlock/sandstone/runed/dark
+	icon = 'icons/obj/structures/doors/hunter/colorable_ancient_temple_door.dmi'
+	color = "#4a4641"

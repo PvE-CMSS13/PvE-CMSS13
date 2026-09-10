@@ -27,6 +27,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/invismin,
 	/client/proc/set_explosive_antigrief,
 	/client/proc/check_explosive_antigrief,
+	/client/proc/set_dropship_airlock,
 	/client/proc/dsay,
 	/client/proc/chem_panel, /*chem panel, allows viewing, editing and creation of reagent and chemical_reaction datums*/
 	/client/proc/player_panel_new, /*shows an interface for all players, with links to various panels*/
@@ -77,6 +78,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
 	/datum/admins/proc/create_human_ai_patrol,
+	/client/proc/toggle_human_ai_breathe_space,
 	/client/proc/open_human_ai_management_panel,
 	/client/proc/open_human_faction_management_panel,
 	/client/proc/open_human_defense_creator_panel,
@@ -164,6 +166,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_hardcore_perma,
 	/client/proc/toggle_bypass_joe_restriction,
 	/client/proc/toggle_joe_respawns,
+	/client/proc/toggle_all_human_breathe_space,
 	/datum/admins/proc/open_shuttlepanel
 ))
 
@@ -192,7 +195,8 @@ GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/datum/admins/proc/spawn_atom,
 	/client/proc/game_panel,
 	/client/proc/create_humans,
-	/client/proc/create_xenos
+	/client/proc/create_xenos,
+	/client/proc/create_pathogen_creatures,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_server, list(
@@ -377,6 +381,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
+		add_verb(src, /client/proc/gm_shipmap_lighting)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -498,7 +503,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		else
 			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [MAX_WARNS-P.warning_count] strikes remaining.")
 
-/client/proc/give_disease(mob/T as mob in GLOB.mob_list) // -- Giacom
+/client/proc/give_disease(mob/target as mob in GLOB.mob_list) // -- Giacom
 	set category = "Admin.Fun"
 	set name = "Give Disease (old)"
 	set desc = "Gives a (tg-style) Disease to a mob."
@@ -508,10 +513,17 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	var/datum/disease/D = tgui_input_list(usr, "Choose the disease to give to that guy", "ACHOO", disease_names)
 	if(!D) return
 	var/path = text2path("/datum/disease/[D]")
-	T.contract_disease(new path, 1)
+	target.contract_disease(new path, 1)
 
-	message_admins("[key_name_admin(usr)] gave [key_name(T)] the disease [D].")
+	message_admins("[key_name_admin(usr)] gave [key_name(target)] the disease [D].")
 
+/client/proc/remove_all_disease(mob/target as mob in GLOB.mob_list)
+	set category = "Admin.Fun"
+	set name = "Remove All Diseases"
+	set desc = "Removes All Diseases from a mob."
+	QDEL_LIST(target.viruses)
+
+	message_admins("[key_name_admin(usr)] removed all disease from [key_name(target)].")
 
 /client/proc/object_talk(msg as text) // -- TLE
 	set category = "Admin.Events"

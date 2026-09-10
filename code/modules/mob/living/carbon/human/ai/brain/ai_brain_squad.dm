@@ -62,7 +62,7 @@
 	if(squad_leader)
 		new_leader.is_squad_leader = TRUE
 
-/datum/human_ai_squad/proc/on_squad_member_death(mob/living/carbon/human/dead_mob)
+/datum/human_ai_squad/proc/on_squad_member_death(mob/living/carbon/human/dead_mob, gibbed, datum/cause_data/cause_data)
 	SIGNAL_HANDLER
 
 	var/datum/human_ai_brain/brain = dead_mob.get_ai_brain()
@@ -76,7 +76,7 @@
 		if(squaddie.tied_human.is_mob_incapacitated())
 			continue
 
-		squaddie.on_squad_member_death(dead_mob)
+		squaddie.on_squad_member_death(dead_mob, cause_data)
 
 /datum/human_ai_squad/proc/on_squad_member_delete(datum/human_ai_brain/deleting)
 	SIGNAL_HANDLER

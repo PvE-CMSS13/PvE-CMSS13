@@ -89,6 +89,7 @@
 	draw_oxygen(ui_datum)
 	draw_healths(ui_datum)
 	draw_bodytemp(ui_datum)
+	draw_important_action(ui_datum, ui_alpha, ui_color)
 
 	draw_status_effects(ui_datum)
 

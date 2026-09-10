@@ -26,6 +26,7 @@
 	var/ui_acti = "EAST-2:26,1:5"
 	var/ui_movi = "EAST-3:24,1:5"
 	var/ui_zonesel = "EAST-1:28,1:5"
+	var/ui_important_action = "WEST:6,4:11"
 
 	//Gun buttons
 	var/ui_gun1 = "EAST-2:26,3:7"

@@ -368,6 +368,10 @@
 		healthcheck(0) //Don't make hit sounds, it's dumb with fire/heat
 	..()
 
+/obj/structure/window/colorable
+	icon_state = "colorable_window"
+	basestate = "colorable_window"
+
 /obj/structure/window/phoronbasic
 	name = "phoron window"
 	desc = "A phoron-glass alloy window. It looks insanely tough to break. It appears it's also insanely tough to burn through."
@@ -414,6 +418,10 @@
 	health = 40
 	reinf = 1
 
+/obj/structure/window/reinforced/colorable
+	icon_state = "colorable_rwindow"
+	basestate = "colorable_rwindow"
+
 /obj/structure/window/reinforced/toughened
 	name = "safety glass"
 	desc = "A very tough looking window reinforced with tempered glass and bracing rods, probably bullet proof."
@@ -422,7 +430,9 @@
 	health = 300
 	reinf = 1
 
-
+/obj/structure/window/reinforced/toughened/colorable
+	icon_state = "colorable_rwindow"
+	basestate = "colorable_rwindow"
 
 /obj/structure/window/reinforced/tinted
 	name = "tinted window"
@@ -431,12 +441,20 @@
 	basestate = "twindow"
 	opacity = TRUE
 
+/obj/structure/window/reinforced/tinted/colorable
+	icon_state = "colorable_twindow"
+	basestate = "colorable_twindow"
+
 /obj/structure/window/reinforced/tinted/frosted
 	name = "privacy window"
 	desc = "A glass privacy window. Looks like it might take a few less hits than a normal reinforced window."
 	icon_state = "fwindow"
 	basestate = "fwindow"
 	health = 30
+
+/obj/structure/window/reinforced/tinted/frosted/colorable
+	icon_state = "colorable_fwindow"
+	basestate = "colorable_fwindow"
 
 /obj/structure/window/reinforced/ultra
 	name = "ultra-reinforced window"
@@ -447,6 +465,10 @@
 	not_deconstructable = TRUE
 	unslashable = TRUE
 	unacidable = TRUE
+
+/obj/structure/window/reinforced/ultra/colorable
+	icon_state = "colorable_fwindow"
+	basestate = "colorable_fwindow"
 
 /obj/structure/window/reinforced/ultra/initialize_pass_flags(datum/pass_flags_container/PF)
 	. = ..()
@@ -749,6 +771,56 @@
 	basestate = "wood_rwindow"
 	window_frame = /obj/structure/window_frame/wood
 
+/obj/structure/window/framed/wood/plain
+	icon_state = "wood_plain_window0"
+	basestate = "wood_plain_window"
+	window_frame = /obj/structure/window_frame/wood/plain
+
+/obj/structure/window/framed/wood/reinforced/plain
+	icon_state = "wood_plain_rwindow0"
+	basestate = "wood_plain_rwindow"
+	window_frame = /obj/structure/window_frame/wood/plain
+
+/obj/structure/window/framed/wood/blue
+	icon_state = "wood_blue_window0"
+	basestate = "wood_blue_window"
+	window_frame = /obj/structure/window_frame/wood/blue
+
+/obj/structure/window/framed/wood/reinforced/blue
+	icon_state = "wood_blue_rwindow0"
+	basestate = "wood_blue_rwindow"
+	window_frame = /obj/structure/window_frame/wood/blue
+
+/obj/structure/window/framed/wood/green
+	icon_state = "wood_green_window0"
+	basestate = "wood_green_window"
+	window_frame = /obj/structure/window_frame/wood/green
+
+/obj/structure/window/framed/wood/reinforced/green
+	icon_state = "wood_green_rwindow0"
+	basestate = "wood_green_rwindow"
+	window_frame = /obj/structure/window_frame/wood/green
+
+/obj/structure/window/framed/wood/purple
+	icon_state = "wood_purple_window0"
+	basestate = "wood_purple_window"
+	window_frame = /obj/structure/window_frame/wood/purple
+
+/obj/structure/window/framed/wood/reinforced/purple
+	icon_state = "wood_purple_rwindow0"
+	basestate = "wood_purple_rwindow"
+	window_frame = /obj/structure/window_frame/wood/purple
+
+/obj/structure/window/framed/wood/teal
+	icon_state = "wood_teal_window0"
+	basestate = "wood_teal_window"
+	window_frame = /obj/structure/window_frame/wood/teal
+
+/obj/structure/window/framed/wood/reinforced/teal
+	icon_state = "wood_teal_rwindow0"
+	basestate = "wood_teal_rwindow"
+	window_frame = /obj/structure/window_frame/wood/teal
+
 //Strata windows
 
 /obj/structure/window/framed/strata
@@ -778,6 +850,62 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	health = 1000000
+
+//LV windows
+
+/obj/structure/window/framed/lv_colony
+	name = "window"
+	icon = 'icons/turf/walls/lv_colony_windows.dmi'
+	icon_state = "uppwall_window0"
+	basestate = "uppwall_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/lv_colony
+
+/obj/structure/window/framed/lv_colony/reinforced
+	name = "reinforced window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = 1
+	window_frame = /obj/structure/window_frame/lv_colony/reinforced
+
+/obj/structure/window/framed/lv_colony/hull
+	name = "hull window"
+	desc = "A glass window with a special rod matrix inside a wall frame. This one was made out of exotic materials to prevent hull breaches. No way to get through here."
+	//	icon_state = "upp_rwindow0"
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+	window_frame = /obj/structure/window_frame/lv_colony/hull
+
+/obj/structure/window/framed/lv_colony/white
+	name = "window"
+	icon = 'icons/turf/walls/white_lv_colony_windows.dmi'
+	icon_state = "uppwall_window0"
+	basestate = "uppwall_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/lv_colony
+
+/obj/structure/window/framed/lv_colony/white/reinforced
+	name = "reinforced window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = 1
+	window_frame = /obj/structure/window_frame/lv_colony/white/reinforced
+
+/obj/structure/window/framed/lv_colony/white/hull
+	name = "hull window"
+	desc = "A glass window with a special rod matrix inside a wall frame. This one was made out of exotic materials to prevent hull breaches. No way to get through here."
+	//	icon_state = "upp_rwindow0"
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+	window_frame = /obj/structure/window_frame/lv_colony/white/hull
 
 //Kutjevo Windows
 
@@ -1051,6 +1179,233 @@
 	basestate = "paddedsec_rwindow"
 	window_frame = /obj/structure/window_frame/corsat/security
 
+// Hybrisa Windows
+
+// Colony
+/obj/structure/window/framed/hybrisa/colony
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_colony_window.dmi'
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/hybrisa/colony
+
+/obj/structure/window/framed/hybrisa/colony/reinforced
+	name = "reinforced window"
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/hybrisa/colony/reinforced
+
+/obj/structure/window/framed/hybrisa/colony/hull
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+/obj/structure/window/framed/hybrisa/colony/hull/blastdoor
+	name = "hull window"
+	desc = "A glass window with a special rod matrix inside a wall frame. This one has an automatic shutter system to prevent any flooding breach."
+	health = 200
+	//icon_state = "rwindow0_debug"
+	not_damageable = FALSE
+	unslashable = FALSE
+	unacidable = FALSE
+	var/triggered = FALSE //indicates if the shutters have already been triggered
+
+/obj/structure/window/framed/hybrisa/colony/hull/blastdoor/Destroy(force)
+	if(force)
+		return ..()
+	spawn_shutters()
+	. = ..()
+
+/obj/structure/window/framed/hybrisa/colony/hull/blastdoor/proc/spawn_shutters(from_dir = 0)
+	if(triggered)
+		return
+
+	triggered = TRUE
+	for(var/direction in GLOB.cardinals)
+		if(direction == from_dir)
+			continue //doesn't check backwards
+		for(var/obj/structure/window/framed/hybrisa/colony/hull/blastdoor/W in get_step(src,direction) )
+			W.spawn_shutters(turn(direction,180))
+	var/obj/structure/machinery/door/poddoor/shutters/almayer/pressure/pressure_door = new(get_turf(src))
+	switch(junction)
+		if(4,5,8,9,12)
+			pressure_door.setDir(SOUTH)
+		else
+			pressure_door.setDir(EAST)
+	pressure_door.close()
+
+// Research
+/obj/structure/window/framed/hybrisa/research
+	name = "window"
+	icon = 'icons/turf/walls/hybrisaresearchbrown_windows.dmi'
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/hybrisa/research
+
+/obj/structure/window/framed/hybrisa/research/reinforced
+	name = "reinforced window"
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/hybrisa/research/reinforced
+
+/obj/structure/window/framed/hybrisa/research/hull
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+// Marshalls
+
+/obj/structure/window/framed/hybrisa/marshalls
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_marshalls_windows.dmi'
+	icon_state = "prison_window0"
+	basestate = "prison_window"
+	window_frame = /obj/structure/window_frame/hybrisa/marshalls
+/obj/structure/window/framed/hybrisa/marshalls/reinforced
+	name = "reinforced window"
+	desc = "A glass window with a special rod matrix inside a wall frame. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	window_frame = /obj/structure/window_frame/hybrisa/marshalls/reinforced
+/obj/structure/window/framed/hybrisa/marshalls/cell
+	name = "cell window"
+	icon_state = "prison_cellwindow0"
+	basestate = "prison_cellwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame."
+
+// Hospital
+
+/obj/structure/window/framed/hybrisa/colony/hospital
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_hospital_colonywindows.dmi'
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/hybrisa/colony/hospital
+
+/obj/structure/window/framed/hybrisa/colony/hospital/reinforced
+	name = "reinforced window"
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/hybrisa/colony/hospital/reinforced
+
+/obj/structure/window/framed/hybrisa/colony/hospital/hull
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+// Office
+
+/obj/structure/window/framed/hybrisa/colony/office
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_offices_windows.dmi'
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/hybrisa/colony/office
+
+/obj/structure/window/framed/hybrisa/colony/office/reinforced
+	name = "reinforced window"
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/hybrisa/colony/office/reinforced
+
+/obj/structure/window/framed/hybrisa/colony/office/hull
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+// Engineering
+
+/obj/structure/window/framed/hybrisa/colony/engineering
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_engineering_windows.dmi'
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window inside a wall frame."
+	health = 40
+	window_frame = /obj/structure/window_frame/hybrisa/colony/engineering
+
+/obj/structure/window/framed/hybrisa/colony/engineering/reinforced
+	name = "reinforced window"
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/hybrisa/colony/engineering/reinforced
+
+/obj/structure/window/framed/hybrisa/colony/engineering/hull
+	icon_state = "strata_window0"
+	basestate = "strata_window"
+	desc = "A glass window. Something tells you this one is somehow indestructible."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000
+
+// Space-Port
+
+/obj/structure/window/framed/hybrisa/spaceport
+	name = "window"
+	icon = 'icons/turf/walls/hybrisa_spaceport_windows.dmi'
+	icon_state = "prison_window0"
+	basestate = "prison_window"
+	window_frame = /obj/structure/window_frame/hybrisa/spaceport
+/obj/structure/window/framed/hybrisa/spaceport/reinforced
+	name = "reinforced window"
+	desc = "A glass window with a special rod matrix inside a wall frame. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	window_frame = /obj/structure/window_frame/hybrisa/spaceport/reinforced
+/obj/structure/window/framed/hybrisa/spaceport/cell
+	name = "window"
+	icon_state = "prison_cellwindow0"
+	basestate = "prison_cellwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame."
 /obj/structure/window/framed/upp
 	name = "military grade window"
 	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
@@ -1068,3 +1423,121 @@
 	icon_state = "uppwall_window0"
 	basestate = "uppwall_window"
 	window_frame = /obj/structure/window_frame/upp/grey
+
+// Abyssal Windows \\
+
+// Standard
+
+/obj/structure/window/framed/abyssal/standard
+	name = "window"
+	icon = 'icons/turf/walls/abyssal_windows_blank.dmi'
+	icon_state = "prison_window0"
+	basestate = "prison_window"
+	desc = "A glass window inside a wall frame."
+	health = 15
+	window_frame = /obj/structure/window_frame/abyssal/standard
+
+/obj/structure/window/framed/abyssal/standard/reinforced
+	name = "reinforced window"
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/abyssal/standard/reinforced
+
+/obj/structure/window/framed/abyssal/standard/hull
+	name = "hull window"
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame. This one has an automatic shutter system to prevent any atmospheric breach."
+	health = 200
+	var/triggered = FALSE
+
+/obj/structure/window/framed/abyssal/standard/hull/Destroy(force)
+	if(force)
+		return ..()
+	spawn_shutters()
+	. = ..()
+
+/obj/structure/window/framed/abyssal/standard/hull/proc/spawn_shutters(from_dir = 0)
+	if(triggered)
+		return
+
+	triggered = TRUE
+	for(var/direction in GLOB.cardinals)
+		if(direction == from_dir)
+			continue //doesn't check backwards
+		for(var/obj/structure/window/framed/abyssal/standard/hull/W in get_step(src,direction) )
+			W.spawn_shutters(turn(direction,180))
+	var/obj/structure/machinery/door/poddoor/shutters/almayer/pressure/pressure_door = new(get_turf(src))
+	switch(junction)
+		if(4,5,8,9,12)
+			pressure_door.setDir(SOUTH)
+		else
+			pressure_door.setDir(EAST)
+	pressure_door.close()
+
+/obj/structure/window/framed/abyssal/standard/cell
+	name = "cell window"
+	icon_state = "prison_cellwindow0"
+	basestate = "prison_cellwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame."
+
+// Blue
+
+/obj/structure/window/framed/abyssal/blue
+	name = "window"
+	icon = 'icons/turf/walls/abyssal_windows_blue.dmi'
+	icon_state = "prison_window0"
+	basestate = "prison_window"
+	desc = "A glass window inside a wall frame."
+	health = 15
+	window_frame = /obj/structure/window_frame/abyssal/blue
+
+/obj/structure/window/framed/abyssal/blue/reinforced
+	name = "reinforced window"
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	desc = "A glass window. Light refracts incorrectly when looking through. It looks rather strong. Might take a few good hits to shatter it."
+	health = 100
+	reinf = TRUE
+	window_frame = /obj/structure/window_frame/abyssal/blue/reinforced
+
+/obj/structure/window/framed/abyssal/blue/hull
+	name = "hull window"
+	icon_state = "prison_rwindow0"
+	basestate = "prison_rwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame. This one has an automatic shutter system to prevent any atmospheric breach."
+	health = 200
+	var/triggered = FALSE
+
+/obj/structure/window/framed/abyssal/blue/hull/Destroy(force)
+	if(force)
+		return ..()
+	spawn_shutters()
+	. = ..()
+
+/obj/structure/window/framed/abyssal/blue/hull/proc/spawn_shutters(from_dir = 0)
+	if(triggered)
+		return
+
+	triggered = TRUE
+	for(var/direction in GLOB.cardinals)
+		if(direction == from_dir)
+			continue //doesn't check backwards
+		for(var/obj/structure/window/framed/abyssal/blue/hull/W in get_step(src,direction) )
+			W.spawn_shutters(turn(direction,180))
+	var/obj/structure/machinery/door/poddoor/shutters/almayer/pressure/pressure_door = new(get_turf(src))
+	switch(junction)
+		if(4,5,8,9,12)
+			pressure_door.setDir(SOUTH)
+		else
+			pressure_door.setDir(EAST)
+	pressure_door.close()
+
+/obj/structure/window/framed/abyssal/blue/cell
+	name = "cell window"
+	icon_state = "prison_cellwindow0"
+	basestate = "prison_cellwindow"
+	desc = "A glass window with a special rod matrix inside a wall frame."

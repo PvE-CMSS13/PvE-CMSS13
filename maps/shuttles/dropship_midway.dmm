@@ -1,4 +1,37 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"ab" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"ac" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
+"ad" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/midway)
 "af" = (
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "34"
@@ -155,16 +188,6 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
-"oB" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/structure/machinery/light/double{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "oG" = (
 /obj/structure/shuttle/part/midway/gunpod_prop,
 /turf/template_noop,
@@ -204,15 +227,6 @@
 	icon_state = "6"
 	},
 /turf/template_noop,
-/area/shuttle/midway)
-"tT" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
 "ul" = (
 /obj/structure/shuttle/part/midway/transparent{
@@ -311,12 +325,6 @@
 	icon_state = "23"
 	},
 /area/shuttle/midway)
-"zG" = (
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "Aa" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/structure/machinery/door/airlock/hatch/cockpit/four,
@@ -382,16 +390,6 @@
 	},
 /turf/template_noop,
 /area/shuttle/midway)
-"DO" = (
-/obj/structure/machinery/light{
-	dir = 4;
-	pixel_x = 14
-	},
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
-/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "Ed" = (
 /turf/closed/shuttle/midway{
 	icon_state = "25"
@@ -443,9 +441,9 @@
 	},
 /area/shuttle/midway)
 "Jn" = (
-/obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -665,8 +663,8 @@ Kw
 Mw
 Yr
 Gk
+ac
 mA
-tT
 mA
 BI
 dE
@@ -689,7 +687,7 @@ CX
 NK
 XS
 Jn
-zG
+XS
 us
 Kw
 Kw
@@ -723,9 +721,9 @@ XS
 dd
 aP
 NK
+ab
+aa
 XS
-XS
-DO
 WF
 Kw
 Kw
@@ -737,8 +735,8 @@ Kw
 UI
 rq
 kL
+ad
 PW
-oB
 PW
 Lr
 yB

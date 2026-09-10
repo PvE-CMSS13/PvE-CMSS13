@@ -918,11 +918,12 @@
 
 /datum/chem_property/positive/cardiostabilizing/process_overdose(mob/living/M, potency = 1, delta_time)
 	M.make_jittery(5) //Overdose causes a spasm
-	M.apply_effect(20, PARALYZE)
+	M.make_dizzy(20)
+	M.EyeBlur(3)
 
 /datum/chem_property/positive/cardiostabilizing/process_critical(mob/living/M, potency = 1, delta_time)
-	M.drowsyness = max(M.drowsyness, 20)
-	if(!ishuman(M)) //Critical overdose causes total blackout and heart damage. Too much stimulant
+	M.adjust_effect(3, STUN)
+	if(!ishuman(M)) //Critical overdose causes total body lockup and heart damage. Too much stimulant. Causes stomach upset too.
 		return
 	M.apply_internal_damage(0.25 * delta_time, "heart")
 	if(prob(5 * delta_time))

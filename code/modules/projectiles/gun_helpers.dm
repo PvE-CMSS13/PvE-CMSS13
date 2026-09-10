@@ -186,7 +186,7 @@ DEFINES in setup.dm, referenced here.
 /obj/item/weapon/gun/proc/retrieval_check(mob/living/carbon/human/user, retrieval_slot)
 	if(retrieval_slot == WEAR_J_STORE)
 		var/obj/item/suit = user.wear_suit
-		if(!(istype(suit, /obj/item/clothing/suit/marine) || istype(suit, /obj/item/clothing/suit/storage/marine)))
+		if(!(istype(suit, /obj/item/clothing/suit/marine) || istype(suit, /obj/item/clothing/suit/storage/marine) || istype(suit, /obj/item/clothing/suit/space)))
 			return FALSE
 	return TRUE
 

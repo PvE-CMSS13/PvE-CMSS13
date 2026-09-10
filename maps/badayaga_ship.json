@@ -1,0 +1,10 @@
+{
+	"map_name": "GJ1232 - Badayaga",
+    "short_name": "Badayaga",
+	"map_path": "map_files/badayaga",
+	"map_file": "GJ1232_badayaga.dmm",
+    "webmap_url": "LV552",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}
+

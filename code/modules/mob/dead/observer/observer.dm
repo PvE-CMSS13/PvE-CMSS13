@@ -647,6 +647,25 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	forceMove(tree.entrance)
 
+/mob/dead/observer/verb/teleport_z_up()
+	set category = "Ghost.Movement"
+	set name = "Move Up"
+	set desc = "Move up a z level"
+
+	var/turf/above = SSmapping.get_turf_above(get_turf(src))
+
+	if(above)
+		usr.forceMove(above)
+
+/mob/dead/observer/verb/teleport_z_down()
+	set category = "Ghost.Movement"
+	set name = "Move Down"
+	set desc = "Move down a z level"
+
+	var/turf/below = SSmapping.get_turf_below(get_turf(src))
+
+	if(below)
+		usr.forceMove(below)
 
 /mob/dead/observer/verb/dead_teleport_area()
 	set category = "Ghost"
@@ -966,6 +985,21 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(SSticker.mode.check_xeno_late_join(src))
 		SSticker.mode.attempt_to_join_as_lesser_drone(src)
+
+/mob/dead/verb/join_as_popper()
+	set category = "Ghost.Join"
+	set name = "Join as a Pathogen Popper"
+	set desc = "Try joining as a Pathogen Popper to support the confluence."
+
+	if (!client)
+		return
+
+	if(SSticker.current_state < GAME_STATE_PLAYING || !SSticker.mode)
+		to_chat(src, SPAN_WARNING("The game hasn't started yet!"))
+		return
+
+	if(SSticker.mode.check_xeno_late_join(src))
+		SSticker.mode.attempt_to_join_as_pathogen_popper(src)
 
 /mob/dead/verb/join_as_zombie() //Adapted from join as hellhoud
 	set category = "Ghost.Join"

@@ -420,7 +420,7 @@
 /turf/open/floor/platingdmg1,
 /area/lv624/lazarus/hydroponics)
 "Np" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth{
+/obj/item/clothing/suit/marine/veteran/pmc/light/synth{
 	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind. This set seems damaged...";
 	name = "damaged M4 Synthetic PMC armor";
 	pixel_x = -5;

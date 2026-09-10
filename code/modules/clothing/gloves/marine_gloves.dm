@@ -20,6 +20,10 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
+/obj/item/clothing/gloves/marine/army
+	name = "army combat gloves"
+	desc = "Standard issue army tactical gloves. It reads: 'knit by Army Widows Association'."
+
 /obj/item/clothing/gloves/marine/fingerless
 	name = "fingerless combat gloves"
 	desc = "A pair of black combat gloves with the finger coverings cut off. No longer insulated from electrical shocks, nor wholly capable of protecting from shrapnel, at least your hands won't be quiet as sweaty all the time now though."
@@ -67,7 +71,7 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 
 /obj/item/clothing/gloves/marine/pve_mopp
 	name = "\improper M2 MOPP gloves"
@@ -75,11 +79,50 @@
 	icon_state = "cbrn"
 	item_state = "cbrn"
 
+/obj/item/clothing/gloves/marine/veteran/pmc
+	name = "\improper WY PMC gloves"
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division."
+	icon_state = "pmc"
+	item_state = "pmc"
+
+/obj/item/clothing/gloves/marine/veteran/pmc/black
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division. These are colored in black."
+	icon_state = "veteran"
+	item_state = "veteran"
+
 /obj/item/clothing/gloves/marine/veteran/pmc/commando
+	name = "\improper W-Y Commando gloves"
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani Commandos."
+	icon_state = "pmc_elite"
+	item_state = "pmc_elite"
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/gloves/marine/veteran/pmc/commando/leader
+	icon_state = "pmc_elite_leader"
+	item_state = "pmc_elite_leader"
+
+/obj/item/clothing/gloves/marine/veteran/pmc/apesuit
 	name = "\improper M5X gauntlets"
-	desc = "A pair of heavily armored gloves made to complete the M5X exoskeleton armor"
+	desc = "A pair of heavily armored gloves made to pair up the M5X Apesuit system."
 	icon_state = "gauntlets"
-	item_state = "bgloves"
+	item_state = "gauntlets"
+	siemens_coefficient = 0
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_VERYHIGH
+	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/veteran/pmc/combat_droid
+	name = "\improper M7X gauntlets"
+	desc = "A pair of heavily armored gloves made to pair up the M7X Apesuit system."
+	icon_state = "combat_android_gloves"
+	item_state = "black"
+	item_state_slots = list(WEAR_HANDS = "black")
 	siemens_coefficient = 0
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
@@ -129,6 +172,30 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/veteran/cbrn
+	name = "\improper M3 MOPP gloves"
+	desc = "M3 MOPP gloves are made of treated venlar designed to protect the user’s hands against contamination whilst working in CBRN environments. Special care has been taken to give the user’s hands enough dexterity to fully service a rifle or utilize most handheld tools, while circular adhesive patterns on the fingers provide the user with enhanced grips. Standard CBRN protocol dictates that the gloves are expected to have a lifespan of maximum effectiveness of around twenty-four hours once exposed to moderate levels of contamination and that users are recommended to discard and replace them afterwards."
+	icon_state = "cbrn"
+	item_state = "cbrn"
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+
+
+//=ROYAL MARINES=\\
+
+/obj/item/clothing/gloves/marine/veteran/royal_marine
+	name = "\improper L6 pattern combat gloves"
+	desc = "Standard issue tactical gloves used by the royal marines."
+	icon_state = "rmc_gloves"
+	flags_atom = NO_NAME_OVERRIDE
+
+/obj/item/clothing/gloves/marine/veteran/royal_marine/medical
+	name = "\improper L6 pattern combat medic gloves"
+	desc = "Standard issue tactical gloves used by the royal marines combat medics. Sterile and still efficient for combat use."
+	icon_state = "latex"
+	item_state = "latex"
+	armor_bio = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/clothing/gloves/marine/veteran/cbrn
 	name = "\improper M3 MOPP gloves"

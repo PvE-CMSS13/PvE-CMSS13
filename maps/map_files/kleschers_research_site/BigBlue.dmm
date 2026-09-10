@@ -1967,7 +1967,7 @@
 	},
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lead,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate/lead,
 /turf/open/floor/vault2/north,
 /area/kleschers/int_reg/admin)
 "aUW" = (
@@ -2952,8 +2952,8 @@
 /obj/item/ammo_magazine/pistol/vp70/toxin,
 /obj/item/weapon/gun/smg/m39,
 /obj/item/ammo_magazine/smg/m39,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
 /turf/open/floor/shiva/purplefull/east,
 /area/kleschers/int_heavy/lambda_north_wing)
 "bwW" = (
@@ -3063,11 +3063,11 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate{
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate{
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate{
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate{
 	pixel_x = -6;
 	pixel_y = -9
 	},
@@ -35694,7 +35694,7 @@
 /area/kleschers/int_reg/dorms)
 "sJd" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/clothing/gloves/marine/veteran/pmc/commando{
+/obj/item/clothing/gloves/marine/veteran/pmc/apesuit{
 	name = "M4X gauntlets prototype";
 	desc = "A somewhat old model of the M4X exoskeleton armor series originally used by private military contractors in the Tientsin Campaign.";
 	anchored = 1

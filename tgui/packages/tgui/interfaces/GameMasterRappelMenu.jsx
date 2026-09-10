@@ -32,6 +32,15 @@ export const GameMasterRappelPanel = (props, context) => {
           >
             Click Rappel
           </Button>
+          <Button
+            ml={1}
+            selected={data.rappel_upp_click_intercept}
+            onClick={() => {
+              act('toggle_click_rappel_upp');
+            }}
+          >
+            Click Rappel (UPP)
+          </Button>
         </Stack.Item>
         {data.game_master_rappels && (
           <Stack.Item>

@@ -581,6 +581,22 @@
 	desc = "A mining lantern."
 	light_range = 6 // luminosity when on
 
+/obj/item/device/flashlight/lantern/on
+	on = TRUE
+
+/obj/item/device/flashlight/lantern/yautja
+	name = "lantern"
+	icon_state = "yautja"
+	item_state = ""
+	light_range = 6 // luminosity when on
+	desc = "A rugged alien lantern with a metallic frame, emitting a steady red glow. Its light has an unsettling, otherworldly aura."
+	light_color = "#f03939"
+
+/obj/item/device/flashlight/lantern/yautja/on
+	name = "lantern"
+	desc = "A rugged alien lantern with a metallic frame, emitting a steady red glow. Its light has an unsettling, otherworldly aura."
+	on = TRUE
+
 //Signal Flare
 /obj/item/device/flashlight/flare/signal
 	name = "signal flare"
@@ -655,6 +671,8 @@
 /obj/effect/landmark/rappel
 	name = "Rappel Point"
 	var/datum/cas_signal/signal
+	var/datum/cas_signal/signal_faction = FACTION_MARINE
+
 	invisibility_value = SEE_INVISIBLE_OBSERVER
 	icon_state = "o_green"
 
@@ -664,14 +682,17 @@
 	signal.target_id = ++GLOB.cas_tracking_id_increment
 	name = "Rappel Point #[signal.target_id]"
 	signal.name = name
-	GLOB.cas_groups[FACTION_MARINE].add_signal(signal)
+	GLOB.cas_groups[signal_faction].add_signal(signal)
 
 /obj/effect/landmark/rappel/Destroy()
 	if(signal)
-		GLOB.cas_groups[FACTION_MARINE].remove_signal(signal)
+		GLOB.cas_groups[signal_faction].remove_signal(signal)
 		QDEL_NULL(signal)
 	return ..()
 
+/obj/effect/landmark/rappel/upp
+	signal_faction = FACTION_UPP
+	icon_state = "o_red"
 
 /// Signal flares deployed by a flare gun
 /obj/item/device/flashlight/flare/signal/gun

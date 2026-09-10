@@ -51,12 +51,12 @@
 
 	/// action list is configurable for all subtypes, this is just an example
 	choice_categories = list(
-		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN, FACTION_UPP),
 	)
 
 	selected_categories = list(
-		// SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_FULL_AUTO,
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
@@ -75,6 +75,9 @@
 
 	/// Delay sending no ammo messages
 	COOLDOWN_DECLARE(no_ammo_message_cooldown)
+
+	/// Delay sending the hAI-only target tracking messages
+	COOLDOWN_DECLARE(tracking_notice_cooldown)
 
 	/// Delay for the beep before firing after not firing for a while
 	COOLDOWN_DECLARE(beep_fire_sound_cooldown)
@@ -155,6 +158,8 @@
 	else
 		overlays += "[defense_type] [sentry_type]"
 
+	if(COOLDOWN_TIMELEFT(src, tracking_notice_cooldown) >= 14 SECONDS)
+		overlays+=new/obj/effect/overlay/danger
 
 /obj/structure/machinery/defenses/sentry/attack_hand_checks(mob/user)
 	if(immobile)
@@ -192,7 +197,7 @@
 		if(ROF_FULL_AUTO)
 			burst = 1
 			accuracy_mult = 0.5
-			fire_delay = 0.5
+			fire_delay = 1
 
 /obj/structure/machinery/defenses/sentry/get_examine_text(mob/user)
 	. = ..()
@@ -275,6 +280,7 @@
 
 	if(O.force)
 		update_health(O.force/2)
+		playsound(loc, 'sound/effects/metalhit.ogg', 25, 1)
 	return ..()
 
 /obj/structure/machinery/defenses/sentry/destroyed_action()
@@ -309,13 +315,20 @@
 		return
 
 	last_fired = world.time
-	COOLDOWN_START(src, beep_fire_sound_cooldown, (30 SECONDS))
+	COOLDOWN_START(src, beep_fire_sound_cooldown, (10 SECONDS))
 
 	if(QDELETED(owner_mob))
 		owner_mob = src
 
 	if(omni_directional)
 		setDir(get_dir(src, A))
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS) && COOLDOWN_FINISHED(src, tracking_notice_cooldown)) //Checks if hAI tweaks are on and if we haven't already pinged an alert recently
+		visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] emits a beep & begins turning to face it's target!")]")
+		COOLDOWN_START(src, tracking_notice_cooldown, (15 SECONDS))
+		update_icon() //Pop the warning overlay atop the sentry sprite itself
+		sleep(12) //A short delay for unlucky doorkickers to back out of the danger zone
+		update_icon() //Again, to remove the warning overlay
 
 	actual_fire(A, burst, FALSE)
 
@@ -613,6 +626,25 @@
 	fire_delay = 5
 	burst = 1
 
+/obj/structure/machinery/defenses/sentry/premade/lowammo
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/lowammo/random
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
 /obj/structure/machinery/defenses/sentry/premade/Initialize()
 	. = ..()
 	if(selected_categories[SENTRY_CATEGORY_IFF])
@@ -640,6 +672,23 @@
 	faction_group = null
 	ammo = new /obj/item/ammo_magazine/sentry
 
+/obj/structure/machinery/defenses/sentry/premade/antre_wy
+	name = "\improper Static UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "premade"
+	sentry_type = "wy_sentry"
+	faction_group = list(FACTION_LIST_WY, FACTION_COLONIST, FACTION_SURVIVOR)
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random/Initialize()
+	. = ..()
+	ammo.current_rounds = rand(40,60)
+
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
 	name = "\improper UA-633 Static Gauss Turret"
@@ -657,26 +706,22 @@
 	. = ..()
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR)
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_NSPA)
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy
 	name = "WY 5-GSE3 Static Turret"
-	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
+	desc = "A state-of-the-art, high-tech static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
 	icon = 'icons/obj/structures/machinery/defenses/wy_static.dmi'
 	defense_type = "Static"
 	sentry_type = "wy_sentry"
-	health = 350
-	health_max = 350
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY)
-	fire_delay = 0.6 SECONDS
-	damage_mult = 2
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY, FACTION_NSPA)
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy/Initialize()
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY

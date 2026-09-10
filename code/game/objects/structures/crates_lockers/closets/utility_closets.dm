@@ -21,45 +21,44 @@
 
 /obj/structure/closet/emcloset/Initialize()
 	. = ..()
-
 #ifndef UNIT_TESTS
-	switch (pick_weight(list("small" = 55, "aid" = 25, "tank" = 10, "both" = 10, "nothing" = 1, "delete" = 1)))
+	switch (pick_weight(list("extra_suit" = 20, "aid" = 30, "both" = 40, "nothing" = 5, "delete" = 5)))
 #else
 	var/test = "both"
 	switch (test) // We don't want randomness in tests
 #endif
-		if ("small")
+		if ("extra_suit")
+			new /obj/item/clothing/suit/space/emergency(src)
+			new /obj/item/clothing/head/helmet/space(src)
 			new /obj/item/tank/emergency_oxygen(src)
 			new /obj/item/tank/emergency_oxygen(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/item/clothing/mask/breath(src)
 			new /obj/item/clothing/mask/gas(src)
-			new /obj/item/clothing/mask/gas(src)
+			new /obj/item/clothing/suit/space(src)
+			new /obj/item/storage/toolbox/emergency(src)
+			new /obj/item/clothing/head/helmet/space(src)
+			new /obj/item/tank/emergency_oxygen/engi(src)
 		if ("aid")
+			new /obj/item/clothing/suit/space/emergency(src)
+			new /obj/item/clothing/head/helmet/space(src)
+			new /obj/item/tank/emergency_oxygen/engi(src)
 			new /obj/item/tank/emergency_oxygen(src)
-			new /obj/item/storage/toolbox/emergency(src)
-			new /obj/item/storage/firstaid/o2(src)
-			new /obj/item/clothing/mask/gas(src)
-		if ("tank")
-			new /obj/item/tank/emergency_oxygen/engi(src)
+			new /obj/item/tank/emergency_oxygen(src)
 			new /obj/item/clothing/mask/breath(src)
-			new /obj/item/tank/emergency_oxygen/engi(src)
-			new /obj/item/clothing/mask/gas(src)
-		if ("both")
-			new /obj/item/storage/toolbox/emergency(src)
-			new /obj/item/tank/emergency_oxygen/engi(src)
-			new /obj/item/clothing/mask/gas(src)
 			new /obj/item/clothing/mask/gas(src)
 			new /obj/item/storage/firstaid/o2(src)
-
+		if ("both")
+			new /obj/item/clothing/suit/space/emergency(src)
+			new /obj/item/clothing/head/helmet/space(src)
+			new /obj/item/tank/emergency_oxygen(src)
+			new /obj/item/tank/emergency_oxygen(src)
+			new /obj/item/clothing/mask/breath(src)
+			new /obj/item/clothing/mask/gas(src)
+			new /obj/item/storage/firstaid/o2(src)
+			new /obj/item/storage/toolbox/emergency(src)
 		// teehee - Ah, tg coders...
 		if ("delete")
 			return INITIALIZE_HINT_QDEL
-
-		//If you want to re-add fire, just add "fire" = 15 to the pick list.
-		/*if ("fire")
-			new /obj/structure/closet/firecloset(src.loc)
-			return INITIALIZE_HINT_QDEL*/
 
 /obj/structure/closet/emcloset/legacy/Initialize()
 	. = ..()
@@ -80,7 +79,7 @@
 	. = ..()
 
 	new /obj/item/clothing/suit/fire/firefighter(src)
-	new /obj/item/reagent_container/glass/canister/oxygen(src)
+	new /obj/item/tank/oxygen/yellow(src)
 	new /obj/item/tool/extinguisher(src)
 	new /obj/item/clothing/head/hardhat/red(src)
 

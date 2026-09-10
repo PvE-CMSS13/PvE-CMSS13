@@ -232,3 +232,19 @@
 		return -1
 
 	return 4 SECONDS
+
+//For the GM xeno-spawn submenu, so aliens can animate popping out of these if needed.
+
+/obj/structure/proc/animate_crawl_reset()
+	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
+
+/obj/structure/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
+	animate(src, pixel_x = rand(pixel_x-2,pixel_x+2), pixel_y = rand(pixel_y-2,pixel_y+2), time = speed, loop = loop_amount, easing = JUMP_EASING)
+	for(var/i in 1 to sections)
+		animate(pixel_x = rand(pixel_x-2,pixel_x+2), pixel_y = rand(pixel_y-2,pixel_y+2), time = speed, easing = JUMP_EASING)
+
+
+/obj/structure/Collided(atom/movable/AM)
+	..()
+	// NOTE: We aren't requiring a parent call to ensure this signal is sent
+	SEND_SIGNAL(src, COMSIG_STRUCTURE_COLLIDED, AM)

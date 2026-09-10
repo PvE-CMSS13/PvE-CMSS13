@@ -8323,7 +8323,7 @@
 	pixel_x = -6;
 	pixel_y = 8
 	},
-/obj/item/clothing/head/det_hat,
+/obj/item/clothing/head/fedora/brown,
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,

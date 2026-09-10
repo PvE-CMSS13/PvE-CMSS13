@@ -188,9 +188,10 @@
 	var/welding = 0
 	/// The max amount of fuel the welder can hold
 	var/max_fuel = 40
+	/// Adding this line of code to determine whether a welder should have fuel when created or not.
+	var/starting_fuel = TRUE
 	/// Used to slowly deplete the fuel when the tool is left on.
 	var/weld_tick = 0
-
 	/// Whether you need welding protection to use without eye damage, if it has a welding screen you do not take eye damage
 	var/has_welding_screen = TRUE
 	preferred_storage = list(/obj/item/clothing/accessory/storage/tool_webbing = WEAR_ACCESSORY)
@@ -199,7 +200,9 @@
 /obj/item/tool/weldingtool/Initialize()
 	. = ..()
 	create_reagents(max_fuel)
-	reagents.add_reagent("fuel", max_fuel)
+	if (starting_fuel)
+		reagents.add_reagent("fuel", max_fuel)
+
 	base_icon_state = initial(icon_state)
 	return
 
@@ -228,6 +231,19 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/human = target
 		var/obj/limb/limb = human.get_limb(user.zone_selected)
+
+		//Repair Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/suit_to_repair = human.wear_suit
+		if((istype(human.wear_suit, /obj/item/clothing/suit/space)))
+			if(user.a_intent == INTENT_HELP)
+				if(suit_to_repair.can_breach && suit_to_repair.damage > 0)
+					if(!do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+						return
+					suit_to_repair.attackby(src, target)
+					return
+				else
+					to_chat(user, SPAN_NOTICE("The [suit_to_repair] is already patched!"))
+
 
 		if (!limb) return
 		if(!(limb.status & (LIMB_ROBOT|LIMB_SYNTHSKIN)) || user.a_intent != INTENT_HELP)
@@ -456,6 +472,9 @@
 
 	if(welding)
 		toggle(FALSE)
+
+/obj/item/tool/weldingtool/empty
+	starting_fuel = FALSE
 
 /obj/item/tool/weldingtool/largetank
 	name = "industrial blowtorch"

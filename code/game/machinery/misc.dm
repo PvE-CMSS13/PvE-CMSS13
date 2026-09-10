@@ -107,3 +107,11 @@
 	icon_state = "mecha"
 	req_one_access = list(ACCESS_MARINE_ENGINEERING, ACCESS_CIVILIAN_ENGINEERING)
 	circuit = /obj/item/circuitboard/computer/mecha_control
+
+/obj/structure/machinery/computer/disk_reader
+	name = "universal disk reader"
+	desc = "A console able to read any format of disk known to man."
+	var/obj/item/disk/objective/disk
+	icon_state = "medlaptop"
+	unslashable = TRUE
+	unacidable = TRUE

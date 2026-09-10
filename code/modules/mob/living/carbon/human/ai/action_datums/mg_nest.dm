@@ -24,7 +24,7 @@
 	if(brain.healing_someone)
 		return 0
 
-	return 12
+	return ACTION_WEIGHT_MG_NEST
 
 /datum/ai_action/machinegunner_nest/Added()
 	initial_view = brain.view_distance
@@ -74,8 +74,12 @@
 	var/static/list/machinegunner_equipment_presets = list(
 		/datum/equipment_preset/rebel/soldier::name = /datum/equipment_preset/rebel/soldier,
 		/datum/equipment_preset/clf/soldier::name = /datum/equipment_preset/clf/soldier,
+		/datum/equipment_preset/canc/remnant::name = /datum/equipment_preset/canc/remnant,
+		/datum/equipment_preset/canc/remnant/snowman::name = /datum/equipment_preset/canc/remnant/snowman,
 		/datum/equipment_preset/canc/newblood_machinegunner::name = /datum/equipment_preset/canc/newblood_machinegunner,
 		/datum/equipment_preset/canc/machinegunner::name = /datum/equipment_preset/canc/machinegunner,
+		/datum/equipment_preset/canc/remnant/snowman::name = /datum/equipment_preset/canc/remnant/snowman,
+		/datum/equipment_preset/canc/machinegunner/snowman::name = /datum/equipment_preset/canc/machinegunner/snowman,
 		/datum/equipment_preset/upp/machinegunner::name = /datum/equipment_preset/upp/machinegunner,
 		/datum/equipment_preset/contractor/duty/heavy::name = /datum/equipment_preset/contractor/duty/heavy,
 		/datum/equipment_preset/pmc/gunner::name = /datum/equipment_preset/pmc/gunner,
@@ -87,10 +91,16 @@
 		/datum/equipment_preset/other/freelancer/machinegunner::name = /datum/equipment_preset/other/freelancer/machinegunner,
 		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,
 		/datum/equipment_preset/rebel/soldier/machinegunner::name = /datum/equipment_preset/rebel/soldier/machinegunner,
+		/datum/equipment_preset/rebel/soldier/eva/machine_gun::name = /datum/equipment_preset/rebel/soldier/eva/machine_gun,
+		/datum/equipment_preset/other/seegson/heavy::name = /datum/equipment_preset/other/seegson/heavy::name,
 		/datum/equipment_preset/clf/soldier/machinegunner::name = /datum/equipment_preset/clf/soldier/machinegunner,
 	)
 
 	if(!check_rights(R_DEBUG))
+		return
+
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
 		return
 
 	if(tgui_input_list(usr, "Press Enter to select the home turf of the machinegunner.", "Home Turf", list("Enter", "Cancel")) != "Enter")

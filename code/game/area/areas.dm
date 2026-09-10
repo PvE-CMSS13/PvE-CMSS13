@@ -8,7 +8,7 @@
 /area
 	var/atmosalm = 0
 	var/poweralm = 1
-
+	var/gravity = 1
 	level = null
 	name = "Unknown"
 	icon = 'icons/turf/areas.dmi'
@@ -103,8 +103,8 @@
 	GLOB.active_areas += src
 	GLOB.all_areas += src
 	reg_in_areas_in_z()
-	if(is_mainship_level(z))
-		GLOB.ship_areas += src
+	GLOB.ship_areas += src
+	if(is_mainship_level(z) && (ceiling > CEILING_GLASS))
 		daytime_affected = FALSE
 	if(ceiling > CEILING_GLASS)
 		daytime_affected = FALSE
@@ -389,7 +389,12 @@
 //atmos related procs
 
 /area/return_air()
-	return list(gas_type, temperature, pressure)
+	var/proportion_is_oxygen = 0
+	if(gas_type == GAS_TYPE_AIR)
+		proportion_is_oxygen = O2STANDARD
+	else if(gas_type == GAS_TYPE_OXYGEN || gas_type == GAS_TYPE_N2O)
+		proportion_is_oxygen = TRUE
+	return list(gas_type, temperature, 0.1, proportion_is_oxygen, pressure)
 
 /area/return_pressure()
 	return pressure
@@ -424,3 +429,7 @@
 		areas_in_z["[z]"] = list()
 	areas_in_z["[z]"] += src
 
+/area/sky
+	name = "Sky"
+	icon_state = "lv-626"
+	flags_area = AREA_UNWEEDABLE

@@ -57,7 +57,6 @@
 
 
 //*****************************************************************************************************/
-
 /datum/equipment_preset/clf/guerilla
 	name = "TWE Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -99,6 +98,53 @@
 	if(prob(95))
 		add_civilian_jacket(new_human)
 	//waist
+	//limbs
+	add_civilian_shoe(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+//*****************************************************************************************************/
+
+/datum/equipment_preset/clf/guerilla_eva
+	name = "TWE Rebel, Guerilla(EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id/lanyard
+
+/datum/equipment_preset/clf/guerilla_eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	var/random_pistol = rand(0,2)
+	switch(random_pistol)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human.back), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_BACK)
+
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp70(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_WAIST)
 	//limbs
 	add_civilian_shoe(new_human)
 	//pockets
@@ -629,3 +675,4 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun, WEAR_IN_R_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
+

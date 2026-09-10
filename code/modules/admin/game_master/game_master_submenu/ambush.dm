@@ -1,6 +1,6 @@
 
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AMBUSH_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AMBUSH_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_WARRIOR_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_FACEHUGGER, XENO_CASTE_SENTINEL, XENO_CASTE_SPITTER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
@@ -191,6 +191,7 @@
 
 /// Actually spawns the xeno at the vent
 /datum/game_master_submenu/ambush/proc/spawn_xeno(spawning_xeno_name)
+	ready_ambush()//Per xeno, because this can change between spawns.
 	var/turf/spawn_turf = get_turf(referenced_atom)
 
 	if(!spawn_turf)
@@ -210,6 +211,10 @@
 /// Shakes the spawner via animation and returns a callback to reset the animation
 /datum/game_master_submenu/ambush/proc/shake_spawner()
 	return
+
+/// Check to see if our spawning atom is capable of spawning a xeno; sometimes it may not make sense. Only for normal ambushes. Spawning xenos directly doesn't run this.
+/datum/game_master_submenu/ambush/proc/ready_ambush()
+	return TRUE
 
 #undef DEFAULT_SPAWN_XENO_STRING
 #undef GAME_MASTER_AMBUSH_AI_XENOS

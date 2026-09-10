@@ -9,7 +9,7 @@
 	if(brain.hold_position)
 		return 0
 
-	return INFINITY
+	return ACTION_WEIGHT_HIGHEST_PRIORITY
 
 /datum/ai_action/quick_approach/Destroy(force, ...)
 	brain.quick_approach = null

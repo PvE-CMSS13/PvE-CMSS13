@@ -54,6 +54,7 @@
 	var/on_fire = FALSE //The "Are we on fire?" var
 	var/fire_stacks = 0 //Tracks how many stacks of fire we have on, max is
 	var/datum/reagent/fire_reagent
+	var/ignore_weather_effects = FALSE //Damage from blizzards and such. Stops the flavour message too.
 
 	var/is_being_hugged = 0 //Is there a hugger humping our face?
 	var/chestburst = 0 // 0: normal, 1: bursting, 2: bursted.
@@ -63,6 +64,8 @@
 	var/list/icon/pipes_shown = list()
 	var/last_played_vent
 	var/is_ventcrawling = 0
+
+	var/can_spacewalk = 1
 
 	var/pull_speed = 0 //How much slower or faster this mob drags as a base
 
@@ -136,8 +139,16 @@
 
 	/// icon for weed_food states
 	var/weed_food_icon = 'icons/mob/xenos/weeds.dmi'
+	var/mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds.dmi'
 	/// icon_states for weed_food (needs to be the same length as weed_food_states_flipped)
 	var/list/weed_food_states = list("human_1","human_2","human_3","human_4","human_5")
 	/// flipped icon_states for weed_food (needs to be the same length as weed_food_states)
 	var/list/weed_food_states_flipped = list("human_1_f","human_2_f","human_3_f","human_4_f","human_5_f")
 
+	// for multiz looking up
+	var/atom/observed_atom
+	//Zombies Stuff
+	/// Multiplier applied to chance to delimb. Specifically for zombies. Less than 1 for harder. More than 1 for easier.
+	var/zombie_delimb_chance_multi = null
+	/// Bool for self-cleaning zombies to qdel their bodies and limbs or not. Disabled by default.
+	var/zombie_disable_auto_clean = FALSE

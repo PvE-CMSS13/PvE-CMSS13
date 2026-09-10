@@ -170,11 +170,11 @@
 	anchored = TRUE
 	name = "foamed metal"
 	desc = "A lightweight foamed metal wall."
-	health = 45
+	health = 50
 
 /obj/structure/foamed_metal/iron
 	icon_state = "ironfoam"
-	health = 70
+	health = 100
 	name = "foamed iron"
 	desc = "A slightly stronger lightweight foamed iron wall."
 

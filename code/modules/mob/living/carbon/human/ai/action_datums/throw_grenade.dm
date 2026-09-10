@@ -19,10 +19,10 @@
 		return 0
 
 	if(!brain.primary_weapon)
-		return 10
+		return ACTION_WEIGHT_THROW_GRENADE
 
 	if(locate(/turf/closed) in get_line(brain.tied_human, target_turf))
-		return 10
+		return ACTION_WEIGHT_THROW_GRENADE
 
 	return 0
 

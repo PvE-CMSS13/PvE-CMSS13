@@ -12,6 +12,7 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 
 /datum/rappel_menu
 	var/rappel_click_intercept = FALSE
+	var/rappel_upp_click_intercept = FALSE
 
 /datum/rappel_menu/ui_data(mob/user)
 	. = ..()
@@ -20,6 +21,7 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 
 	data["game_master_rappels"] = length(GLOB.game_master_rappels) ? GLOB.game_master_rappels : ""
 	data["rappel_click_intercept"] = rappel_click_intercept
+	data["rappel_upp_click_intercept"] = rappel_upp_click_intercept
 	return data
 
 /datum/rappel_menu/proc/InterceptClickOn(mob/user, params, atom/object)
@@ -33,6 +35,23 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 			return TRUE
 
 		var/obj/effect/landmark/rappel/rappel = new(object_turf)
+		var/rappel_ref = REF(rappel)
+		GLOB.game_master_rappels += list(list(
+			"rappel" = rappel,
+			"rappel_name" = rappel.name,
+			"rappel_ref" = rappel_ref,
+			))
+		return TRUE
+
+	if(rappel_upp_click_intercept)
+		var/turf/object_turf = get_turf(object)
+		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+			for(var/obj/effect/landmark/rappel/upp/R in object_turf)
+				GLOB.game_master_rappels -= R
+				QDEL_NULL(R)
+			return TRUE
+
+		var/obj/effect/landmark/rappel/upp/rappel = new(object_turf)
 		var/rappel_ref = REF(rappel)
 		GLOB.game_master_rappels += list(list(
 			"rappel" = rappel,
@@ -90,6 +109,10 @@ GLOBAL_DATUM_INIT(rappel_panel, /datum/rappel_menu, new)
 
 		if("toggle_click_rappel")
 			rappel_click_intercept = !rappel_click_intercept
+			return
+
+		if("toggle_click_rappel_upp")
+			rappel_upp_click_intercept = !rappel_upp_click_intercept
 			return
 
 /datum/rappel_menu/ui_close(mob/user)

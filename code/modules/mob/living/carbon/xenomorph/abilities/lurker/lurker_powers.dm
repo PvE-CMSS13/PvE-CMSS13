@@ -328,13 +328,12 @@
 
 	if(xeno.can_not_harm(target_carbon))
 		return
+	var/do_after_time = 0.8 SECONDS
+	if(!locate(/datum/effects/crit) in target_carbon.effects_list) //called knocked out because for some reason .stat seems to have a delay .
+		do_after_time = 3 SECONDS
 
 	if(!xeno.Adjacent(target_carbon))
-		to_chat(xeno, SPAN_XENOHIGHDANGER("We can only headbite an unconscious, adjacent target!"))
-		return
-
-	if(!(HAS_TRAIT(target_carbon, TRAIT_KNOCKEDOUT) || target_carbon.stat == UNCONSCIOUS || (locate(/datum/effects/crit) in target_carbon.effects_list))) //called knocked out because for some reason .stat seems to have a delay .
-		to_chat(xeno, SPAN_XENOHIGHDANGER("We can only headbite an unconscious, adjacent target!"))
+		to_chat(xeno, SPAN_XENOHIGHDANGER("We can only headbite an adjacent target!"))
 		return
 
 	if(xeno.stat == UNCONSCIOUS)
@@ -355,7 +354,7 @@
 	xeno.visible_message(SPAN_DANGER("[xeno] grabs [target_carbon]’s head aggressively."), \
 	SPAN_XENOWARNING("We grab [target_carbon]’s head aggressively."))
 
-	if(!do_after(xeno, 0.8 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE, numticks = 2)) // would be 0.75 but that doesn't really work with numticks
+	if(!do_after(xeno, do_after_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE, numticks = 2)) // would be 0.75 but that doesn't really work with numticks
 		return
 
 	// To make sure that the headbite does nothing if the target is moved away.
@@ -376,7 +375,6 @@
 	target_carbon.death(create_cause_data("headbite execution", xeno), FALSE)
 	xeno.gain_health(150)
 	xeno.xeno_jitter(1 SECONDS)
-	xeno.flick_heal_overlay(3 SECONDS, "#00B800")
 	xeno.emote("roar")
 	log_attack("[key_name(xeno)] was executed by [key_name(target_carbon)] with a headbite!")
 	apply_cooldown()

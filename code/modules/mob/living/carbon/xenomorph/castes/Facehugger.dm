@@ -67,6 +67,7 @@
 	ai_range = 24
 
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
+	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_48x48.dmi'
 	weed_food_states = list("Facehugger_1","Facehugger_2","Facehugger_3")
 	weed_food_states_flipped = list("Facehugger_1","Facehugger_2","Facehugger_3")
 

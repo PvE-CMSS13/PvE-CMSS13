@@ -64,6 +64,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/magnetic_harness,
@@ -105,6 +106,8 @@
 		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/jungle/suit_slot.dmi'
 	)
 
+/obj/item/weapon/gun/smg/m39/ap
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
 
@@ -117,6 +120,12 @@
 /obj/item/weapon/gun/smg/m39/tactical/ap
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+
+/obj/item/weapon/gun/smg/m39/army
+	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/reflex, /obj/item/attachable/extended_barrel, /obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/smg/m39/army/heap
+	current_mag = /obj/item/ammo_magazine/smg/m39/heap
 
 //-------------------------------------------------------
 
@@ -134,11 +143,10 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/magnetic_harness,
 	)
 	random_spawn_under = list(
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/verticalgrip,
 	)
 	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
@@ -146,7 +154,7 @@
 	)
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 	)
 
@@ -169,14 +177,14 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/verticalgrip)
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash
 	random_spawn_chance = 0
 
 /obj/item/weapon/gun/smg/m39/elite/rmc/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SMG2)
-	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_delay(FIRE_DELAY_TIER_SG)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
@@ -192,6 +200,16 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/pve
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
+
+/obj/item/weapon/gun/smg/m39/elite/compact
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+	random_spawn_under = null
+
+/obj/item/weapon/gun/smg/m39/elite/compact/heap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/smg/m39/heap
+	random_spawn_under = null
 
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
@@ -214,6 +232,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
@@ -273,6 +292,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
@@ -802,3 +822,163 @@
 	item_state = "tnailgun"
 	w_class = SIZE_SMALL
 	material_per_repair = 2
+
+/obj/item/weapon/gun/smg/seegson
+
+	name = "\improper pan fed submachinegun"
+	desc = "A pan fed submachinegun with a folding wire stock. Chambered in 9x19mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "sieg_smg"
+	item_state = "sieg_smg"
+	fire_sound = "gun_seig_smg"
+	flags_equip_slot = SLOT_BACK
+	current_mag = /obj/item/ammo_magazine/sieg_smg
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
+	random_spawn_chance = 38
+	random_spawn_under = list(
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/bipod,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/extended_barrel,
+	)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/stock/smg/collapsible/seegson,
+		/obj/item/attachable/stock/smg,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/gyro,
+	)
+
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible/seegson, /obj/item/attachable/sling)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/smg/seegson/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 23, "rail_y" = 18, "under_x" = 22, "under_y" = 15, "stock_x" = 34, "stock_y" = 6, "side_rail_x" = 25, "side_rail_y" = 19)
+
+/obj/item/weapon/gun/smg/seegson/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_3
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
+
+/obj/item/weapon/gun/smg/seegson/ap
+	current_mag = /obj/item/ammo_magazine/sieg_smg/ap
+
+
+//-------------------------------------------------------
+
+//P90, a classic SMG.
+
+/obj/item/weapon/gun/smg/p90
+	name = "\improper FN P90 submachinegun"
+	desc = "The FN P90 submachine gun. An archaic design, but still widely used by corporate and mercenary groups, sometimes seen in the hands of civilian populations. This weapon only accepts 5.7×28mm rounds."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "p90"
+	item_state = "p90"
+
+	fire_sound = 'sound/weapons/p90.ogg'
+	current_mag = /obj/item/ammo_magazine/smg/p90
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor, // Barrel
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/mini,
+		)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+
+/obj/item/weapon/gun/smg/p90/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+
+/obj/item/weapon/gun/smg/p90/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_12
+	burst_delay = FIRE_DELAY_TIER_12
+	burst_amount = BURST_AMOUNT_TIER_3
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
+
+//-------------------------------------------------------
+
+//P90, a classic SMG (TWE version).
+
+/obj/item/weapon/gun/smg/p90/twe
+	name = "\improper FN-TWE P90 submachinegun"
+	desc = "A variation of the FN P90 submachine gun. Used by mercenaries and royal marines commandos. This weapon only accepts the AP variation of the 5.7×28mm rounds."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "p90_twe"
+	item_state = "p90_twe"
+
+	fire_sound = 'sound/weapons/p90.ogg'
+	current_mag = /obj/item/ammo_magazine/smg/p90/twe
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor, // Barrel
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/mini,
+		)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+
+/obj/item/weapon/gun/smg/p90/twe/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+
+/obj/item/weapon/gun/smg/p90/twe/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_12
+	burst_delay = FIRE_DELAY_TIER_12
+	burst_amount = BURST_AMOUNT_TIER_3
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5

@@ -1,0 +1,13 @@
+{
+	"map_name": "Jungle Delta",
+    "map_path": "map_files/jungle_delta",
+    "map_file": "jungle_delta.dmm",
+    "webmap_url": "JungleDelta",
+
+	"weather_holder": "/datum/weather_ss_map_holder/lv624",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "jungle"
+}

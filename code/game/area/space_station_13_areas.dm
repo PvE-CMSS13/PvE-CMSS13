@@ -24,6 +24,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	power_environ = FALSE
 	temperature = TCMB
 	pressure = 0
+	gravity = 0
 	flags_area = AREA_NOTUNNEL
 	weather_enabled = FALSE
 

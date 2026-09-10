@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(medal_recommendations)
 	giver_mob = list()
 	giver_ckey = list()
 
-GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
+GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL, MARINE_BRONZE_HEART_MEDAL))
 
 /proc/give_medal_award(medal_location, as_admin = FALSE)
 	if(as_admin && !check_rights(R_ADMIN))

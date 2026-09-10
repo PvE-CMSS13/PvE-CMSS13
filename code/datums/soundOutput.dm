@@ -49,7 +49,7 @@
 					S.falloff /= 2
 					owner_turf = candidate
 			S.x = T.x - owner_turf.x
-			S.y = 0
+			S.y = T.z - owner_turf.z
 			S.z = T.y - owner_turf.y
 		S.y += T.y_s_offset
 		S.x += T.x_s_offset
@@ -79,6 +79,7 @@
 			return
 	if(!target_ambience)
 		target_ambience = target_area.get_sound_ambience(owner)
+
 	if(target_area)
 		soundscape_playlist = target_area.soundscape_playlist
 

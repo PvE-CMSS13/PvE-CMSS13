@@ -111,6 +111,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 /obj/vehicle/multitile/apc/uppapc/remove_seated_verbs(mob/living/M, seat)
@@ -131,6 +132,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 //Called when players try to move vehicle
@@ -176,7 +178,6 @@
 		if(current_turf.density)
 			to_chat(user, SPAN_XENO("The path over [src] is obstructed!"))
 			return
-
 /*
 ** PRESETS SPAWNERS
 */
