@@ -193,6 +193,28 @@
 
 	qdel(src)
 
+/obj/effect/landmark/interior/spawn/vehicle_operator_seat/armor/solo
+	name = "armor operator's seat spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "armor_chair"
+	color = "yellow"
+
+/obj/effect/landmark/interior/spawn/vehicle_operator_seat/armor/solo/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/solo/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.vehicle = I.exterior
+	S.required_skill = S.vehicle.required_skill
+	S.setDir(dir)
+	S.update_icon()
+	S.alpha = alpha
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+
+	qdel(src)
+
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat
 	name = "1st support gunner's seat spawner"
 	icon = 'icons/obj/vehicles/interiors/general.dmi'

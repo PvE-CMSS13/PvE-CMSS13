@@ -33,3 +33,6 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
 	))
+
+/obj/item/hardpoint/primary/autocannon/solo
+	allowed_seat = VEHICLE_DRIVER

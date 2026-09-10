@@ -1,0 +1,308 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 31;
+	layer = 2.9;
+	pixel_x = 1
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/turf/open/shuttle/vehicle/floor_3_7,
+/area/interior/vehicle/uppapc)
+"c" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = -11
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
+/area/interior/vehicle/uppapc)
+"d" = (
+/turf/open/shuttle/vehicle/floor_1_1_3,
+/area/interior/vehicle/uppapc)
+"h" = (
+/obj/structure/surface/table/reinforced/toc/east{
+	pixel_y = -5
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "toc_map";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = 13;
+	pixel_x = -7
+	},
+/obj/structure/phone_base/toc{
+	pixel_x = 11;
+	pixel_y = 13;
+	phone_category = "Vehicles";
+	name = "APC reciever";
+	phone_id = "ZSL-68 'Pilgrim'"
+	},
+/turf/open/shuttle/vehicle/floor_1_8,
+/area/interior/vehicle/uppapc)
+"i" = (
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	icon = 'icons/obj/vehicles/interiors/uppapc.dmi'
+	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
+/area/interior/vehicle/uppapc)
+"k" = (
+/turf/open/void/vehicle/unopacity,
+/area/space)
+"l" = (
+/obj/structure/surface/table/reinforced/toc/west{
+	pixel_y = -5
+	},
+/obj/structure/machinery/computer/overwatch/upp/toc{
+	pixel_y = 14
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/toc/upp{
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/turf/open/shuttle/vehicle/floor_1_7,
+/area/interior/vehicle/uppapc)
+"r" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 31;
+	layer = 2.9
+	},
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/uppapc/rear;
+	pixel_x = -32;
+	icon = 'icons/obj/vehicles/interiors/uppapc.dmi';
+	tag = "rear center"
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 14
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/turf/open/shuttle/vehicle/floor_3_11,
+/area/interior/vehicle/uppapc)
+"v" = (
+/obj/structure/bed/chair/vehicle/toc{
+	dir = 1;
+	pixel_y = 19;
+	pixel_x = 16
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 4;
+	pixel_x = -6;
+	pixel_y = 25
+	},
+/turf/open/shuttle/vehicle/floor_1_10,
+/area/interior/vehicle/uppapc)
+"x" = (
+/turf/open/shuttle/vehicle/floor_3_9,
+/area/interior/vehicle/uppapc)
+"y" = (
+/obj/effect/landmark/interior/spawn/vehicle_operator_seat/armor/solo{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_8,
+/area/interior/vehicle/uppapc)
+"z" = (
+/turf/open/void/vehicle,
+/area/space)
+"E" = (
+/obj/structure/extinguisher_cabinet/lifeboat{
+	icon = 'icons/obj/vehicles/interiors/general.dmi';
+	pixel_x = 10;
+	pixel_y = 30
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 30;
+	pixel_x = -6
+	},
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 5;
+	pixel_x = -18;
+	pixel_y = 38
+	},
+/turf/open/shuttle/vehicle/floor_1_5,
+/area/interior/vehicle/uppapc)
+"F" = (
+/turf/open/shuttle/vehicle/floor_1_12,
+/area/interior/vehicle/uppapc)
+"I" = (
+/obj/structure/vehicle_locker{
+	pixel_x = -1;
+	pixel_y = -2;
+	icon = 'icons/obj/vehicles/interiors/uppapc.dmi';
+	layer = 3.01
+	},
+/turf/open/void/vehicle/unopacity,
+/area/space)
+"J" = (
+/obj/structure/prop/vehicle/uppapc{
+	pixel_x = 16;
+	pixel_y = -32
+	},
+/turf/open/void/vehicle,
+/area/space)
+"K" = (
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 8;
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/effect/landmark/interior/spawn/entrance{
+	alpha = 50;
+	exit_type = /obj/structure/interior_exit/vehicle/uppapc;
+	name = "Right APC door";
+	tag = "right"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = 20;
+	anchored = 1
+	},
+/turf/open/shuttle/vehicle/floor_3,
+/area/interior/vehicle/uppapc)
+"L" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
+/area/interior/vehicle/uppapc)
+"M" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = -11
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = 20;
+	anchored = 1;
+	dir = 8
+	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
+/area/interior/vehicle/uppapc)
+"O" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/turf/open/shuttle/vehicle/floor_3_8,
+/area/interior/vehicle/uppapc)
+"R" = (
+/turf/open/shuttle/vehicle/floor_1_8,
+/area/interior/vehicle/uppapc)
+"S" = (
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 8;
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/effect/landmark/interior/spawn/entrance{
+	alpha = 50;
+	dir = 1;
+	exit_type = /obj/structure/interior_exit/vehicle/uppapc;
+	name = "Left APC door";
+	pixel_y = 32;
+	tag = "left"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	anchored = 1
+	},
+/turf/open/shuttle/vehicle/floor_3,
+/area/interior/vehicle/uppapc)
+
+(1,1,1) = {"
+z
+z
+z
+z
+J
+"}
+(2,1,1) = {"
+z
+k
+r
+M
+k
+"}
+(3,1,1) = {"
+z
+l
+v
+L
+k
+"}
+(4,1,1) = {"
+z
+h
+d
+c
+k
+"}
+(5,1,1) = {"
+z
+k
+E
+O
+k
+"}
+(6,1,1) = {"
+z
+S
+R
+F
+K
+"}
+(7,1,1) = {"
+z
+k
+a
+i
+k
+"}
+(8,1,1) = {"
+z
+I
+y
+x
+k
+"}
+(9,1,1) = {"
+z
+z
+z
+z
+z
+"}

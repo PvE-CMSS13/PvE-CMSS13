@@ -241,6 +241,19 @@
 		return
 	T.toggle_gyro(usr)
 
+/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer() //probs a cleaner way to do this but I can't be arsed
+	set name = "Toggle APC Turret Gyrostabilizer"
+	set desc = "Toggles APC Turret Gyrostabilizer allowing it independent movement regardless of hull direction."
+	set category = "Vehicle"
+
+	var/mob/M = usr
+	if(!M || !istype(M))
+		return
+
+	var/obj/vehicle/multitile/V = M.interactee
+	if(!istype(V))
+		return
+
 	var/obj/item/hardpoint/holder/apc_turret/A = null
 	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
 		A = AT

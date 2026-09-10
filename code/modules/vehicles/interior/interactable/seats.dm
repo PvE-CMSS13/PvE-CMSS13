@@ -150,6 +150,31 @@
 
 	return ..()
 
+// Operator's seat
+// This is for solo prop usage ONLY and is not intended for use by actual players
+/obj/structure/bed/chair/comfy/vehicle/solo
+	name = "operator's seat"
+	desc = "Military-grade seat for armored vehicle operator with some controls, switches and indicators. There are banks connected to on-board combat automatics to allow them to assist in a solo-crewed vehicle output."
+	var/image/over_image = null
+	seat = VEHICLE_DRIVER
+	required_skill = SKILL_VEHICLE_CREWMAN
+
+/obj/structure/bed/chair/comfy/vehicle/solo/do_buckle(mob/target, mob/user)
+	required_skill = vehicle.required_skill
+	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
+		if(target == user)
+			to_chat(user, SPAN_WARNING("You have no idea how to operate this thing!"))
+		return FALSE
+
+	for(var/obj/item/I in user.contents)		//prevents shooting while zoomed in, but zoom can still be activated and used without shooting
+		if(I.zoom)
+			I.zoom(user)
+
+	if(vehicle)
+		vehicle.vehicle_faction = target.faction
+
+	return ..()
+
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
 

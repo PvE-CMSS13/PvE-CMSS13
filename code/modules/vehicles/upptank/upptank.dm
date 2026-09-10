@@ -47,6 +47,49 @@
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
 
 
+/obj/vehicle/multitile/tank/upptank/solo
+	interior_map = /datum/map_template/interior/upptank_solo
+
+/obj/vehicle/multitile/tank/upptank/solo/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	add_verb(user.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+
+/obj/vehicle/multitile/tank/upptank/solo/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	remove_verb(user.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+	))
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
+
+//Called when players try to move vehicle
+//Another wrapper for try_move()
+/obj/vehicle/multitile/tank/upptank/solo/relaymove(mob/user, direction)
+	return ..()
+
 /obj/vehicle/multitile/tank/upptank/command
 	name = "Cheetah 2B Light Command Tank"
 	desc = "A giant piece of state-approved armor with a big gun and enhanced comms equipment, you know what to do. Entrance in the back."
@@ -320,4 +363,63 @@
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/p17702)
 		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank)
 		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m)
+		break
+
+//SOLO TANK PRESET: fully armed and ready to rumble
+/obj/effect/vehicle_spawner/upptank/solo/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/upptank/solo/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+//PRESET: default hardpoints, MG secondaries
+/obj/effect/vehicle_spawner/upptank/solo/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/reactive)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
+	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/p17702/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m/solo)
+		break
+
+//PRESET: TOW hardpoints, TOW launcher secondaries
+/obj/effect/vehicle_spawner/upptank/solo/tow/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/reactive)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
+	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/p17702/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/hj35launcher/upptank/solo)
+		break
+
+//PRESET: Anti-Armored hardpoints, MG secondaries, Railgun
+/obj/effect/vehicle_spawner/upptank/solo/railgun/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/reactive)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
+	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/railgun/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m/solo)
+		break
+
+//PRESET: Anti-Armored Sniper hardpoints, MG secondaries, Railgun
+/obj/effect/vehicle_spawner/upptank/solo/sniper_railgun/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/reactive)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
+	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/railgun/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank/solo)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m/solo)
 		break

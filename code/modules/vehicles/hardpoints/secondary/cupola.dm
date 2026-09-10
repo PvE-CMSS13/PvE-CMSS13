@@ -33,6 +33,9 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
+/obj/item/hardpoint/secondary/m56cupola/solo
+	allowed_seat = VEHICLE_DRIVER
+
 /obj/item/hardpoint/secondary/m56cupola/aev
 	name = "\improper Pintle-Mounted M56 RWS"
 	desc = "A remotely-controlled weapon system for armored engineering vehicles using a modified M56."

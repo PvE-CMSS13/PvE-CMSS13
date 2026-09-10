@@ -38,3 +38,6 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/secondary/t60p3m/solo
+	allowed_seat = VEHICLE_DRIVER

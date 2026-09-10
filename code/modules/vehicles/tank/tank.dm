@@ -226,6 +226,52 @@
 	icon_state = "tank_base_n"
 
 /*
+** SOLO TANKS
+*/
+/obj/vehicle/multitile/tank/solo
+	interior_map = /datum/map_template/interior/tank_solo
+
+/obj/vehicle/multitile/tank/solo/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	add_verb(user.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+
+/obj/vehicle/multitile/tank/solo/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	remove_verb(user.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+	))
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
+
+//Called when players try to move vehicle
+//Another wrapper for try_move()
+/obj/vehicle/multitile/tank/solo/relaymove(mob/user, direction)
+	return ..()
+
+/*
 ** COMMAND TANK
 */
 /obj/vehicle/multitile/tank/command
@@ -629,4 +675,58 @@
 	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		break
+
+//SOLO TANK PRESET: fully armed and ready to rumble
+/obj/effect/vehicle_spawner/tank/solo/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/solo/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+/obj/effect/vehicle_spawner/tank/solo/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon/solo)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/solo)
+		break
+
+//PRESET: minigun kit
+/obj/effect/vehicle_spawner/tank/solo/minigun/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/minigun/solo)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer/solo)
+		break
+
+//PRESET: dragon flamer kit
+/obj/effect/vehicle_spawner/tank/solo/flamer/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/flamer/solo)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher/solo)
+		break
+
+//PRESET: autocannon kit
+/obj/effect/vehicle_spawner/tank/solo/autocannon/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon/solo)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher/solo)
 		break

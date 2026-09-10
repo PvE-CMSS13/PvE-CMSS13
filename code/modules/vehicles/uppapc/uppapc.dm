@@ -111,6 +111,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 /obj/vehicle/multitile/apc/uppapc/remove_seated_verbs(mob/living/M, seat)
@@ -131,6 +132,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 //Called when players try to move vehicle
@@ -176,6 +178,43 @@
 		if(current_turf.density)
 			to_chat(user, SPAN_XENO("The path over [src] is obstructed!"))
 			return
+
+/obj/vehicle/multitile/apc/uppapc/solo
+	interior_map = /datum/map_template/interior/uppapc_solo
+
+/obj/vehicle/multitile/apc/uppapc/solo/add_seated_verbs(mob/living/M, seat)
+	if(!M.client)
+		return
+	add_verb(M.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
+	))
+
+/obj/vehicle/multitile/apc/uppapc/solo/remove_seated_verbs(mob/living/M, seat)
+	if(!M.client)
+		return
+	remove_verb(M.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/toggle_door_lock,
+		/obj/vehicle/multitile/proc/activate_horn,
+		/obj/vehicle/multitile/proc/cycle_hardpoint,
+		/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
+	))
+	SStgui.close_user_uis(M, src)
+
+//Called when players try to move vehicle
+//Another wrapper for try_move()
+/obj/vehicle/multitile/apc/uppapc/solo/relaymove(mob/user, direction)
+	return ..()
 
 /*
 ** PRESETS SPAWNERS
@@ -240,4 +279,32 @@
 	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
 		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun)
 		AT.add_hardpoint(new /obj/item/hardpoint/secondary/hj35launcher)
+		break
+
+//SOLO APC PRESET: fully armed and ready to rumble
+/obj/effect/vehicle_spawner/apc/uppapc/solo/spawn_vehicle()
+	var/obj/vehicle/multitile/apc/uppapc/solo/APC = new (loc)
+
+	load_misc(APC)
+	load_hardpoints(APC)
+	handle_direction(APC)
+	APC.update_icon()
+
+//PRESET: default hardpoints, installed minigun
+/obj/effect/vehicle_spawner/apc/uppapc/solo/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upp)
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun/solo)
+		break
+
+//PRESET: default hardpoints, installed minigun, hj-35
+/obj/effect/vehicle_spawner/apc/uppapc/solo/minigunhj35/load_hardpoints(obj/vehicle/multitile/apc/uppapc/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/apc_turret)
+	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upp)
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		AT.add_hardpoint(new /obj/item/hardpoint/primary/gshk_minigun/solo)
+		AT.add_hardpoint(new /obj/item/hardpoint/secondary/hj35launcher/solo)
 		break

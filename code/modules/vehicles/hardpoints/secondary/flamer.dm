@@ -60,3 +60,6 @@
 	COOLDOWN_START(src, fire_cooldown, fire_delay)
 
 	return AUTOFIRE_CONTINUE
+
+/obj/item/hardpoint/secondary/small_flamer/solo
+	allowed_seat = VEHICLE_DRIVER

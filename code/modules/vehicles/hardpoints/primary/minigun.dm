@@ -87,3 +87,6 @@
 	if(old_stage_rate != new_stage_rate)
 		stage_delay_mult = 1 / new_stage_rate
 		SEND_SIGNAL(src, COMSIG_GUN_AUTOFIREDELAY_MODIFIED, fire_delay * stage_delay_mult)
+
+/obj/item/hardpoint/primary/minigun/solo
+	allowed_seat = VEHICLE_DRIVER

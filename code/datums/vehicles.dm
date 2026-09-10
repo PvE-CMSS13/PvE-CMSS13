@@ -50,6 +50,10 @@
 	name = "Command Tank"
 	interior_id = "tank_command"
 
+/datum/map_template/interior/tank_solo
+	name = "Tank (Solo)"
+	interior_id = "tank_solo"
+
 /datum/map_template/interior/upptank
 	name = "UPP Tank"
 	interior_id = "upptank"
@@ -57,6 +61,10 @@
 /datum/map_template/interior/upptank_command
 	name = "UPP Command Tank"
 	interior_id = "upptank_command"
+
+/datum/map_template/interior/upptank_solo
+	name = "UPP Tank (Solo)"
+	interior_id = "upptank_solo"
 
 /datum/map_template/interior/aev
 	name = "AEV"
@@ -113,3 +121,7 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
+
+/datum/map_template/interior/uppapc_solo
+	name = "ZSL-68 (Solo)"
+	interior_id = "uppapc_solo"
