@@ -464,3 +464,53 @@ f
 		headset = wear_r_ear
 	if(headset)
 		headset.update_minimap_icon()
+
+/mob/living/carbon/human/proc/paradrop()
+	var/turf/spawn_turf = get_turf(src)
+	spawn_turf.ceiling_debris_check(2)
+	handle_paradrop(spawn_turf)
+	var/obj/item/to_move = back
+	temp_drop_inv_item(to_move, 0)
+	equip_to_slot_or_del(to_move, WEAR_R_HAND)
+	equip_to_slot_or_del(new /obj/item/parachute(src), WEAR_BACK)
+	if(get_ai_brain()) //have to do this again because slot swapping fucks with hAI
+		get_ai_brain().appraise_inventory(armor = TRUE)
+
+/mob/living/carbon/human/proc/strip_all()
+	for(var/obj/item/current_item in src)
+		//no more deletion of ID cards
+		if(istype(current_item, /obj/item/card/id/))
+			continue
+		qdel(current_item)
+	if(get_ai_brain())
+		get_ai_brain().appraise_inventory(armor = TRUE)
+
+/mob/living/carbon/human/proc/strip_weapons()
+	var/obj/item_storage
+	for(var/obj/item/current_item in src.GetAllContents(3))
+		if(istype(current_item, /obj/item/ammo_magazine))
+
+			item_storage = current_item.loc
+			qdel(current_item)
+
+			if(istype(item_storage, /obj/item/storage))
+				item_storage.update_icon()
+
+				continue
+
+		if(istype(current_item, /obj/item/weapon) && !istype(current_item, /obj/item/weapon/zombie_claws))
+			qdel(current_item)
+			continue
+
+		if(istype(current_item, /obj/item/explosive))
+			qdel(current_item)
+
+	for(var/obj/item/hand_item in hands)
+		if(istype(hand_item, /obj/item/weapon))
+			qdel(hand_item)
+			continue
+
+		if(istype(hand_item, /obj/item/explosive))
+			qdel(hand_item)
+	if(get_ai_brain())
+		get_ai_brain().appraise_inventory(armor = TRUE)

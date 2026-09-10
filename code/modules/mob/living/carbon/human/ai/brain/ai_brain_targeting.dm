@@ -75,11 +75,23 @@
 		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_vehicle_target) in dir_cone))
 			continue
 
-		if(potential_vehicle_target.health <= 0)
-			continue
-
 		if(faction_check(potential_vehicle_target))
 			continue
+
+		if(iszombie(tied_human))
+			var/list/valid_targets = list()
+			for(var/mob/living/carbon/potential_target in potential_vehicle_target.interior.get_passengers())
+				if(!can_target(potential_target))
+					continue
+
+				valid_targets += potential_target
+
+			if(!length(valid_targets))
+				continue
+
+		else
+			if(potential_vehicle_target.health <= 0)
+				continue
 
 		viable_targets += potential_vehicle_target
 
@@ -144,7 +156,7 @@
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)
 		return FALSE
 
-	if(!friendly_check(target))
+	if(!friendly_check(target) && !iszombie(tied_human))
 		return FALSE
 
 	return TRUE

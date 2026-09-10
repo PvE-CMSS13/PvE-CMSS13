@@ -770,6 +770,7 @@
 	if(!istype(M))
 		return
 
+	var/mob_ignited = FALSE
 	var/sig_result = SEND_SIGNAL(M, COMSIG_LIVING_FLAMER_CROSSED, tied_reagent)
 	var/burn_damage = floor(burnlevel * 0.5)
 	switch(fire_variant)
@@ -790,9 +791,11 @@
 	if(!(sig_result & COMPONENT_NO_IGNITE) && burn_damage)
 		switch(fire_variant)
 			if(FIRE_VARIANT_TYPE_B) //Armor Shredding Greenfire, super easy to pat out. 50 duration -> 10 stacks (1 pat/resist)
-				M.TryIgniteMob(floor(tied_reagent.durationfire / 5), tied_reagent)
+				if(M.TryIgniteMob(floor(tied_reagent.durationfire / 5), tied_reagent))
+					mob_ignited = TRUE
 			else
-				M.TryIgniteMob(tied_reagent.durationfire, tied_reagent)
+				if(M.TryIgniteMob(tied_reagent.durationfire, tied_reagent))
+					mob_ignited = TRUE
 
 	if(sig_result & COMPONENT_NO_BURN && !tied_reagent.fire_penetrating)
 		burn_damage = 0
@@ -801,17 +804,18 @@
 		to_chat(M, SPAN_DANGER("[isxeno(M) ? "We" : "You"] step over the flames."))
 		return
 
-	M.last_damage_data = weapon_cause_data
-	M.apply_damage(burn_damage, BURN) //This makes fire stronk.
+	if(mob_ignited)
+		M.last_damage_data = weapon_cause_data
+		M.apply_damage(burn_damage, BURN) //This makes fire stronk.
 
-	var/variant_burn_msg = null
-	switch(fire_variant) //Fire variant special message appends.
-		if(FIRE_VARIANT_TYPE_B)
-			if(isxeno(M))
-				var/mob/living/carbon/xenomorph/X = M
-				X.armor_deflection?(variant_burn_msg=" We feel the flames weakening our exoskeleton!"):(variant_burn_msg=" You feel the flaming chemicals eating into your body!")
-	to_chat(M, SPAN_DANGER("You are burned![variant_burn_msg?"[variant_burn_msg]":""]"))
-	M.updatehealth()
+		var/variant_burn_msg = null
+		switch(fire_variant) //Fire variant special message appends.
+			if(FIRE_VARIANT_TYPE_B)
+				if(isxeno(M))
+					var/mob/living/carbon/xenomorph/X = M
+					X.armor_deflection?(variant_burn_msg=" We feel the flames weakening our exoskeleton!"):(variant_burn_msg=" You feel the flaming chemicals eating into your body!")
+		to_chat(M, SPAN_DANGER("You are burned![variant_burn_msg?"[variant_burn_msg]":""]"))
+		M.updatehealth()
 
 /obj/flamer_fire/proc/update_flame()
 	if(burnlevel < 15 && flame_icon != "dynamic")

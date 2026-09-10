@@ -305,3 +305,6 @@
 #define DMG_ORGAN_DAM_PROB_MULT (2/9)
 /// The multiplier to existing brute damage when calculating organ damage probability
 #define BRUTE_ORGAN_DAM_PROB_MULT (0.05)
+
+///The Zombie specifc multiplier to damage when calculating organ damage probability
+#define ZOMBIE_ORGAN_DAM_PROB_MULT 0.5

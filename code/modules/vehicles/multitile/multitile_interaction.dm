@@ -7,6 +7,24 @@
 		install_hardpoint(HP, user)
 		return
 
+	if(istype(O, /obj/item/weapon/zombie_claws))
+		if(health <= 0)
+			handle_player_entrance(user)
+			return
+
+		var/mob/living/carbon/zombie_user = user
+		var/damage = O.force
+		if(zombie_user.on_fire)
+			damage *= 1.15
+
+		playsound(user.loc, 'sound/effects/metalhit.ogg', 25)
+
+		user.visible_message(SPAN_DANGER("\The [user] slashes \the [src]!"), \
+		SPAN_DANGER("You slash \the [src]!"))
+		take_damage_type(max(damage + rand(-20,-10),5), "slash", user)
+
+		healthcheck()
+
 	if(ispowerclamp(O))
 		var/obj/item/powerloader_clamp/PC = O
 		if(PC.linked_powerloader && PC.loaded && istype(PC.loaded, /obj/item/hardpoint))
@@ -430,7 +448,17 @@
 	hardpoint.start_fire(source, object, location, control, params)
 
 /obj/vehicle/multitile/proc/handle_player_entrance(mob/M)
-	if(!M || M.client == null) return
+	if(ishuman(M))
+		var/mob/living/carbon/human/user = M
+		if(!M || M.client == null && !user.get_ai_brain())
+			return
+	else if(isxeno(M))
+		var/mob/living/carbon/xenomorph/xeno_user = M
+		if(!M || M.client == null && !(xeno_user.mob_flags & AI_CONTROLLED))
+			return
+	else
+		if(!M || M.client == null)
+			return
 
 	var/mob_x = M.x - src.x
 	var/mob_y = M.y - src.y
@@ -441,30 +469,29 @@
 			entrance_used = entrance
 			break
 
-	var/enter_time = 0
-	// door locks break when hull is destroyed. Xenos enter slower, but their speed is not affected by anything and they ignore locks
-	if(isxeno(M))
-		enter_time = 3 SECONDS
-	else
-		if(door_locked && health > 0) //check if lock on and actually works
-			if(ishuman(M))
-				var/mob/living/carbon/human/user = M
-				if(!allowed(user) || !get_target_lock(user.faction_group)) //if we are human, we check access and faction
-					to_chat(user, SPAN_WARNING("\The [src] is locked!"))
-					return
-			else
-				to_chat(M, SPAN_WARNING("\The [src] is locked!")) //animals are not allowed inside without supervision
-				return
-
-
-	// Only xenos can force their way in without doors, and only when the frame is completely broken
+	// Only xenos or zombies can force their way in without doors, and only when the frame is completely broken
 	if(!entrance_used && health > 0)
 		return
-	else if(!entrance_used && !isxeno(M))
+	else if(!entrance_used && (!isxeno(M) || !iszombie(M)))
 		return
 
+	var/enter_time = 0
+	// door locks break when hull is destroyed. Xenos and zombies enter slower.
+
+	if(iszombie(M) || isxeno(M))
+		enter_time = 3 SECONDS
+	if(door_locked && health > 0) //check if lock on and actually works
+		if(ishuman(M) && !iszombie(M))
+			var/mob/living/carbon/human/user = M
+			if(!allowed(user) || !get_target_lock(user.faction_group)) //if we are human, we check access and faction
+				to_chat(user, SPAN_WARNING("\The [src] is locked!"))
+				return
+		else
+			to_chat(M, SPAN_WARNING("\The [src] is locked!")) //animals are not allowed inside without supervision
+			return
+
 	var/enter_msg = "We start climbing into \the [src]..."
-	if(health <= 0 && isxeno(M))
+	if(health <= 0 && (isxeno(M) || iszombie(M)))
 		enter_msg = "We start prying away loose plates, squeezing into \the [src]..."
 
 	// Check if drag anything

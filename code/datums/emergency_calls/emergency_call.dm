@@ -123,7 +123,7 @@
 	error("get_specific_call could not find emergency call '[call_name]'")
 	return
 
-/datum/emergency_call/proc/show_join_message()
+/datum/emergency_call/proc/show_join_message(use_player_slot_appearance = FALSE)
 	if(!mob_max || !SSticker.mode) //Just a supply drop, don't bother.
 		return
 
@@ -131,6 +131,8 @@
 		if(M.client)
 			to_chat(M, SPAN_WARNING(FONT_SIZE_LARGE("\n[ert_message]. &gt; <a href='byond://?src=\ref[M];joinresponseteam=1;'><b>Join Response Team</b></a> &lt; </span>")))
 			to_chat(M, SPAN_WARNING(FONT_SIZE_LARGE("You cannot join if you have Ghosted recently. Click the link in chat, or use the verb in the ghost tab to join.</span>\n")))
+			if(use_player_slot_appearance)
+				to_chat(M, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("Your character slot appearance and preferences will be used for this! Quickly choose a different slot in Edit Characters if your ghost doesn't match!</span>\n")))
 
 			give_action(M, /datum/action/join_ert, src)
 
@@ -214,25 +216,25 @@
 	else
 		to_chat(src, SPAN_WARNING("You did not get enlisted in the response team. Better luck next time!"))
 
-/datum/emergency_call/proc/activate(quiet_launch = FALSE, announce_incoming = TRUE, turf/override_spawn_loc)
+/datum/emergency_call/proc/activate(quiet_launch = FALSE, announce_incoming = TRUE, turf/override_spawn_loc, use_player_slot_appearance = FALSE)
 	set waitfor = 0
 	if(!SSticker.mode) //Something horribly wrong with the gamemode ticker
 		return
 
 	SSticker.mode.picked_calls += src
 
-	show_join_message() //Show our potential candidates the message to let them join.
+	show_join_message(use_player_slot_appearance) //Show our potential candidates the message to let them join.
 	message_admins("Distress beacon: '[name]' activated [hostility? "[SPAN_WARNING("(THEY ARE HOSTILE)")]":"(they are friendly)"]. Looking for candidates.")
 
 	if(!quiet_launch)
 		marine_announcement("A distress beacon has been launched from the [MAIN_SHIP_NAME].", "Priority Alert", 'sound/AI/distressbeacon.ogg', logging = ARES_LOG_SECURITY)
 
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/emergency_call, spawn_candidates), quiet_launch, announce_incoming, override_spawn_loc), 30 SECONDS)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/emergency_call, spawn_candidates), quiet_launch, announce_incoming, override_spawn_loc, use_player_slot_appearance), 30 SECONDS)
 
 /datum/emergency_call/proc/remove_nonqualifiers(list/datum/mind/candidates_list)
 	return candidates_list //everyone gets selected on 99% of distress beacons.
 
-/datum/emergency_call/proc/spawn_candidates(quiet_launch = FALSE, announce_incoming = TRUE, override_spawn_loc)
+/datum/emergency_call/proc/spawn_candidates(quiet_launch = FALSE, announce_incoming = TRUE, override_spawn_loc, use_player_slot_appearance)
 	if(SSticker.mode)
 		SSticker.mode.picked_calls -= src
 
@@ -325,12 +327,12 @@
 			i++
 			if(i > mob_max)
 				break //Some logic. Hopefully this will never happen..
-			create_member(M, override_spawn_loc)
+			create_member(M, override_spawn_loc, use_player_slot_appearance)
 
 
 	if(spawn_max_amount && i < mob_max)
 		for(var/c in i to mob_max)
-			create_member(null, override_spawn_loc)
+			create_member(null, override_spawn_loc, use_player_slot_appearance)
 
 	candidates = list()
 	if(arrival_message && announce_incoming)

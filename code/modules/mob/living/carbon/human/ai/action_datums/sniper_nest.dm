@@ -88,6 +88,10 @@
 	if(!check_rights(R_DEBUG))
 		return
 
+	if(!SSticker.mode)
+		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
+		return
+
 	if(tgui_input_list(usr, "Press Enter to select the home turf of the sniper.", "Home Turf", list("Enter", "Cancel")) != "Enter")
 		return
 

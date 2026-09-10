@@ -301,7 +301,8 @@
 
 
 /mob/living/carbon/human/add_splatter_floor(turf/T, small_drip, b_color)
-	b_color = species.blood_color
+	if(isnull(b_color))
+		b_color = species.blood_color
 
 	..()
 

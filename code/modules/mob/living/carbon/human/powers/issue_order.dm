@@ -35,7 +35,7 @@
 
 	var/turf/T = get_turf(src)
 	for(var/mob/living/carbon/human/H in range(COMMAND_ORDER_RANGE, T))
-		if(H.stat == DEAD)
+		if(H.stat == DEAD || !src.get_target_lock(H.get_id_faction_group()))
 			continue
 		H.activate_order_buff(order, command_aura_strength, command_aura_duration)
 

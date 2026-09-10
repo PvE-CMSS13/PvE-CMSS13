@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")

@@ -3,7 +3,7 @@
 	action_flags = ACTION_USING_HANDS | ACTION_USING_LEGS | ACTION_USING_MOUTH
 
 /datum/ai_action/resist_burning/get_weight(datum/human_ai_brain/brain)
-	if(!brain.tied_human.on_fire)
+	if(!brain.tied_human.on_fire || iszombie(brain.tied_human))
 		return 0
 
 	return 14

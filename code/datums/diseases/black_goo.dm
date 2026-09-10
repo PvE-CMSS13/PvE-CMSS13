@@ -169,11 +169,14 @@
 	icon = 'icons/mob/humans/species/r_zombie.dmi'
 	icon_state = "claw_l"
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
-	force = MELEE_FORCE_TIER_5
+	force = MELEE_FORCE_NORMAL
 	w_class = SIZE_MASSIVE
-	sharp = 1
+	sharp = IS_SHARP_ITEM_SIMPLE
 	attack_verb = list("slashed", "torn", "scraped", "gashed", "ripped")
 	pry_capable = IS_PRY_CAPABLE_FORCE
+
+	/// variable for attempting to pry a door to not spam prying
+	var/attempting_pry = FALSE
 
 /obj/item/weapon/zombie_claws/attack(mob/living/target, mob/living/carbon/human/user)
 	if(iszombie(target))
@@ -183,50 +186,60 @@
 	if(!.)
 		return FALSE
 	playsound(loc, 'sound/weapons/bladeslice.ogg', 25, 1, 5)
+	if(user.on_fire)
+		target.apply_armoured_damage(rand(3,16), ARMOR_MELEE, BURN, null, 25)
 
 	if(ishuman_strict(target))
 		var/mob/living/carbon/human/human = target
 
 		if(locate(/datum/disease/black_goo) in human.viruses)
 			to_chat(user, SPAN_XENOWARNING("<b>You sense your target is infected.</b>"))
-	target.apply_effect(1, SLOW)
 
-/obj/item/weapon/zombie_claws/afterattack(obj/O as obj, mob/user as mob, proximity)
-	if(get_dist(src, O) > 1)
+/obj/item/weapon/zombie_claws/afterattack(obj/possible_door as obj, mob/user as mob, proximity)
+	if(attempting_pry)
 		return
-	if(istype(O, /obj/structure/machinery/door/airlock))
-		var/obj/structure/machinery/door/airlock/D = O
-		if(!D.density)
-			return
-		if(D.heavy)
-			to_chat(usr, SPAN_DANGER("[D] is too heavy to be forced open."))
+	if(get_dist(src, possible_door) > 1)
+		return
+	if(istype(possible_door, /obj/structure/machinery/door/airlock))
+		var/obj/structure/machinery/door/airlock/door = possible_door
+		if(door.layer == DOOR_OPEN_LAYER)
 			return FALSE
-		if(user.action_busy || user.a_intent == INTENT_HARM)
+		if(door.heavy)
+			to_chat(usr, SPAN_DANGER("[door] is too heavy to be forced open."))
+			return FALSE
+		if(!door.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
-
-		user.visible_message(SPAN_DANGER("[user] jams their [name] into [O] and strains to rip it open."),
-		SPAN_DANGER("You jam your [name] into [O] and strain to rip it open."))
+		attempting_pry = TRUE
+		user.visible_message(SPAN_DANGER("[user] jams their [name] into [possible_door] and strains to rip it open."),
+		SPAN_DANGER("You jam your [name] into [possible_door] and strain to rip it open."))
 		playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, 1)
-		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
-			if(!D.density)
-				return
+		if(do_after(user, 3 SECONDS, INTERRUPT_INCAPACITATED|INTERRUPT_MOVED, BUSY_ICON_HOSTILE) && !(get_dist(src, possible_door) > 1) && door.density)
+			user.visible_message(SPAN_DANGER("[user] forces [possible_door] open with their [name]."),
+			SPAN_DANGER("You force [possible_door] open with your [name]."))
+			door.open(1)
+			attempting_pry = FALSE
+		else
+			attempting_pry = FALSE
 
-			user.visible_message(SPAN_DANGER("[user] forces [O] open with their [name]."),
-			SPAN_DANGER("You force [O] open with your [name]."))
-			D.open(1)
-
-	else if(istype(O, /obj/structure/mineral_door/resin))
-		var/obj/structure/mineral_door/resin/D = O
-		if(D.isSwitchingStates) return
-		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
+	else if(istype(possible_door, /obj/structure/mineral_door/resin))
+		var/obj/structure/mineral_door/resin/door = possible_door
+		if(door.layer == DOOR_OPEN_LAYER)
+			return FALSE
+		if(door.isSwitchingStates)
 			return
-		user.visible_message(SPAN_DANGER("[user] jams their [name] into [D] and strains to rip it open."),
-		SPAN_DANGER("You jam your [name] into [D] and strain to rip it open."))
+		if(!door.density || user.action_busy || user.a_intent == INTENT_HARM)
+			return
+		attempting_pry = TRUE
+		user.visible_message(SPAN_DANGER("[user] jams their [name] into [door] and strains to rip it open."),
+		SPAN_DANGER("You jam your [name] into [door] and strain to rip it open."))
 		playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
-		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && D.density)
-			user.visible_message(SPAN_DANGER("[user] forces [D] open with their [name]."),
-			SPAN_DANGER("You force [D] open with your [name]."))
-			D.open()
+		if(do_after(user, 3 SECONDS, INTERRUPT_INCAPACITATED|INTERRUPT_MOVED, BUSY_ICON_HOSTILE && !(get_dist(src, possible_door) > 1)) && door.density)
+			attempting_pry = FALSE
+			user.visible_message(SPAN_DANGER("[user] forces [door] open with their [name]."),
+			SPAN_DANGER("You force [door] open with your [name]."))
+			door.open()
+		else
+			attempting_pry = FALSE
 
 /obj/item/reagent_container/food/drinks/bottle/black_goo
 	name = "strange bottle"
@@ -283,6 +296,24 @@
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 
+/obj/item/clothing/head/helmet/zombie
+	name = "thick armoured skin"
+	gender = PLURAL
+	icon = 'icons/obj/items/clothing/glasses.dmi'
+	icon_state = "stub"
+	item_state = "BLANK"
+	w_class = SIZE_SMALL
+	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FEET|BODY_FLAG_HANDS
+
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/storage/fancy/blackgoo
 	icon = 'icons/obj/items/black_goo_stuff.dmi'

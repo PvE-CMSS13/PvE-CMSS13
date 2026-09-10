@@ -272,6 +272,7 @@
 	VV_DROPDOWN_OPTION(VV_HK_SETMATRIX, "Set Base Matrix")
 	VV_DROPDOWN_OPTION("", "-----MOB-----")
 	VV_DROPDOWN_OPTION(VV_HK_GIVE_DISEASE, "Give Disease")
+	VV_DROPDOWN_OPTION(VV_HK_REMOVE_ALL_DISEASE, "Remove All Diseases")
 	VV_DROPDOWN_OPTION(VV_HK_BUILDMODE, "Give Build Mode")
 	VV_DROPDOWN_OPTION(VV_HK_GIB, "Gib")
 	VV_DROPDOWN_OPTION(VV_HK_DROP_ALL, "Drop All")
@@ -324,6 +325,12 @@
 			return
 
 		usr.client.give_disease(src)
+
+	if(href_list[VV_HK_REMOVE_ALL_DISEASE])
+		if(!check_rights(R_ADMIN))
+			return
+
+		usr.client.remove_all_disease(src)
 
 	if(href_list[VV_HK_BUILDMODE])
 		if(!check_rights(R_ADMIN))

@@ -510,12 +510,12 @@
 
 
 
-/mob/living/proc/revive(keep_viruses)
-	rejuvenate()
+/mob/living/proc/revive(keep_viruses, is_zombie = FALSE)
+	rejuvenate(is_zombie)
 
 
-/mob/living/proc/rejuvenate()
-	heal_all_damage()
+/mob/living/proc/rejuvenate(is_zombie = FALSE)
+	heal_all_damage(is_zombie)
 
 	// shut down ongoing problems
 	status_flags &= ~PERMANENTLY_DEAD
@@ -541,7 +541,8 @@
 		H.update_headshot_overlay() //They don't have their brains blown out anymore, if they did.
 
 	// fix all of our organs
-	restore_all_organs()
+	if(!is_zombie)
+		restore_all_organs()
 
 	//Reset any surgeries.
 	active_surgeries = DEFENSE_ZONES_LIVING
@@ -561,13 +562,14 @@
 	SEND_SIGNAL(src, COMSIG_LIVING_REJUVENATED)
 
 
-/mob/living/proc/heal_all_damage()
+/mob/living/proc/heal_all_damage(is_zombie = FALSE)
 	// shut down various types of badness
 	heal_overall_damage(getBruteLoss(), getFireLoss())
 	setToxLoss(0)
 	setOxyLoss(0)
 	setCloneLoss(0)
-	setBrainLoss(0)
+	if(!is_zombie)
+		setBrainLoss(0)
 	set_effect(0, PARALYZE)
 	set_effect(0, STUN)
 	set_effect(0, DAZE)
