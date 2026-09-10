@@ -616,3 +616,57 @@
 	overlays.Cut()
 	var/image/source_image = image(icon, "ai_interface_top", layer = ABOVE_MOB_LAYER)
 	overlays += source_image
+
+// PVE Portable ARES laptop just for RP purposes
+
+/obj/structure/machinery/computer/ares_console/laptop_prop
+	name = "\improper General Purpose Laptop"
+	desc = "A laptop loaded with custom software appropriate to the owner's intended task. It has a customized keyboard."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp"
+	density = FALSE
+	var/w_class = SIZE_SMALL
+	layer = UPPER_ITEM_LAYER
+	needs_power = FALSE
+	var/source_type = /obj/item/device/laptop_prop
+
+/obj/structure/machinery/computer/ares_console/laptop_prop/MouseDrop(over_object)
+	if(over_object == usr && Adjacent(usr))
+		if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+			to_chat(usr, SPAN_WARNING("You do not know how to safely shut down the [src]..."))
+			return
+		else
+			usr.visible_message(SPAN_NOTICE("[usr] starts shutting down and packing up [src]."), \
+			SPAN_NOTICE("You begin to shut down and pack up [src]..."))
+			do_after(usr, 3 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src)
+			playsound(usr, 'sound/machines/terminal_off.ogg', 25, FALSE)
+			collapse()
+
+/obj/structure/machinery/computer/ares_console/laptop_prop/proc/collapse(mob/living/carbon/human/user)
+	var/obj/item/device/laptop_prop = new source_type(loc)
+	if(istype(user))
+		user.visible_message(SPAN_NOTICE("[user] shuts down and packs up [src]."),
+			SPAN_NOTICE("You quickly shut down and pack up [src]."))
+		user.put_in_active_hand(laptop_prop)
+	qdel(src)
+
+/obj/item/device/laptop_prop
+	name = "\improper General Purpose Laptop"
+	desc = "A laptop loaded with custom software appropriate to the owner's intended task, all packed into an ultra-tough carry case."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp_cl"
+	w_class = SIZE_SMALL
+	unacidable = TRUE
+	has_special_table_placement = TRUE
+
+/obj/item/device/laptop_prop/set_to_table(obj/structure/surface/target)
+	if (do_after(usr, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
+		var/obj/structure/machinery/computer/ares_console/laptop_prop/deployed = new(target.loc)
+		usr.visible_message(SPAN_NOTICE("[usr] sets up [deployed]."), \
+			SPAN_NOTICE("You quickly set up [deployed] on the table."))
+		qdel(src)
+	else
+		to_chat(usr, SPAN_WARNING("You fail to setup the [src]"))
+
+/obj/item/device/laptop_prop/ex_act()
+	return
