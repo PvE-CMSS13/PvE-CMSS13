@@ -66,7 +66,7 @@
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light
 	name = "\improper WY light tactical armor"
-	icon_state = "pmc_sniper"
+	icon_state = "pmc_vest"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
@@ -74,7 +74,7 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
+	item_state_slots = list(WEAR_JACKET = "pmc_vest")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate
 	name = "\improper M1 pattern corporate security armor"
@@ -141,41 +141,6 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
-
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator
-	name = "\improper M5Xg exoskeleton gunner armor"
-	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk. This variant is designed to support a M56 Smartgun."
-	icon_state = "commando_armor"
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
-	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	item_state_slots = list(WEAR_JACKET = "commando_armor")
-	unacidable = TRUE
-
-/obj/item/clothing/suit/storage/marine/veteran/pmc/commando
-	name = "\improper M5X exoskeleton armor"
-	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk."
-	icon_state = "commando_armor"
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
-	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_inventory = BLOCK_KNOCKDOWN
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	item_state_slots = list(WEAR_JACKET = "commando_armor")
-	unacidable = TRUE
-
 
 //===========================//DISTRESS\\================================\\
 //=======================================================================\\
@@ -272,8 +237,8 @@
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C,  ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B90 pattern"
 
 /obj/item/clothing/suit/marine/faction/UPP/standard/Initialize(mapload)
@@ -298,8 +263,8 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B91-2 pattern"
 	allowed = list(
 		/obj/item/tank/emergency_oxygen,
@@ -347,8 +312,8 @@
 	time_to_unequip = 10
 	time_to_equip = 10
 	flags_inventory = null
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B72-03 pattern"
 
 /obj/item/clothing/suit/marine/faction/UPP/light/Initialize(mapload)
@@ -785,8 +750,8 @@
 		/obj/item/storage/backpack/general_belt/rmc,
 		/obj/item/storage/belt/gun/flaregun,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE2)
 
 /obj/item/clothing/suit/marine/veteran/royal_marine/heavy
 //Just the normal armor with attachies
@@ -894,4 +859,373 @@
 	time_to_unequip = 20
 	time_to_equip = 20
 
+//====================//Weyland Yutani (updated)\\=======================\\
+//=======================================================================\\
+
+//===============================//PMC\\=================================\\
+
+/obj/item/clothing/suit/marine/veteran/pmc
+	name = "\improper M4 pattern PMC armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind."
+	icon_state = "pmc_armor"
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine/,
+		/obj/item/weapon/baton,
+		/obj/item/restraint/handcuffs,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/explosive/grenade,
+		/obj/item/storage/bible,
+		/obj/item/tool/crowbar,
+		/obj/item/storage/large_holster/katana,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/weapon/sword/machete,
+		/obj/item/attachable/bayonet,
+		/obj/item/device/motiondetector,
+		/obj/item/tool/crew_monitor,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT)
+
+/obj/item/clothing/suit/marine/veteran/pmc/heavy
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/heavy/medic
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/heavy/medic/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/paint/medic/wy/paint = new()
+	src.attach_accessory(null, paint, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/light
+	name = "\improper M4 pattern light PMC armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. Has some armor plating removed for extra mobility."
+	icon_state = "pmc_vest"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	item_state_slots = list(WEAR_JACKET = "pmc_vest")
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/heavy
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/neckguard/neckguard = new()
+	src.attach_accessory(null, neckguard, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/heavy/medic
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/heavy/medic/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/paint/medic/wy/paint = new()
+	src.attach_accessory(null, paint, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/smartgun //Smartgun Spec Armor
+	name = "\improper M4 pattern PMC gunner armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun."
+	icon_state = "heavy_armor"
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	item_state_slots = list(WEAR_JACKET = "heavy_armor")
+	allowed = list(
+		/obj/item/weapon/gun/smartgun,
+		/obj/item/weapon/gun/smartgun/dirty,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_DECORNECK)
+
+/obj/item/clothing/suit/marine/veteran/pmc/smartgun/heavy
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/smartgun/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/pmcpads/kneepads/kneepads = new()
+	src.attach_accessory(null, kneepads, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/guard
+	name = "\improper M4 pattern PMC guard armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This one belongs to high profile elite guard within the W-Y PMC."
+	icon_state = "guard_armor"
+	item_state_slots = list(WEAR_JACKET = "guard_armor")
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PAINT)
+
+/obj/item/clothing/suit/marine/veteran/pmc/guard/heavy
+	name = "\improper M4 pattern PMC riot guard armor"
+	icon_state = "guard_armor_spec"
+	item_state_slots = list(WEAR_JACKET = "guard_armor_spec")
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/veteran/pmc/guard/medic/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/paint/medic/wy/black/paint = new()
+	src.attach_accessory(null, paint, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/guard/vest
+	name = "\improper M4 pattern PMC guard bulletproof armor"
+	icon_state = "guard_vest"
+	item_state_slots = list(WEAR_JACKET = "guard_vest")
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/veteran/pmc/leader
+	name = "\improper M4 pattern PMC leader armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
+	icon_state = "officer_armor"
+	item_state_slots = list(WEAR_JACKET = "officer_armor")
+
+/obj/item/clothing/suit/marine/veteran/pmc/leader/guard
+	name = "\improper M4 pattern PMC guard leader armor"
+	icon_state = "guard_armor_officer"
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc)
+	item_state_slots = list(WEAR_JACKET = "guard_armor_officer")
+
+/obj/item/clothing/suit/marine/veteran/pmc/engineer
+	name = "\improper M4 pattern engineer PMC armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high elemental protection, like shock, fire and fragments, lacks in terms of kevlar for bullet protection."
+	icon_state = "pmc_engineer_armor"
+	item_state_slots = list(WEAR_JACKET = "pmc_engineer_armor")
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	flags_marine_armor = null
+	actions_types = null
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
+
+/obj/item/clothing/suit/marine/veteran/pmc/engineer/heavy
+	name = "\improper M4 pattern reinforced engineer PMC armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high elemental protection, like shock, fire and fragments, the base armor plates have been kept, making it quite cumbersome to walk around."
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/synth
+	name = "\improper M4 pattern PMC Synthetic armor"
+	desc = "A serious modification of the standard Armat Systems M3 armor. This variant was designed for PMC Support Units in the field, with every armor insert removed. It's designed with the idea of a high speed lifesaver in mind."
+	time_to_unequip = 0.5 SECONDS
+	time_to_equip = 1 SECONDS
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
+	flags_marine_armor = ARMOR_LAMP_OVERLAY|SYNTH_ALLOWED
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/synth/heavy
+//Just the normal armor with attachies
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/synth/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pmcpads/greaves/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/bulletproof
+	name = "\improper M4 pattern PMC bulletproof armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. Has some armor plating removed for extra mobility."
+	icon_state = "pmc_vest"
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
+	item_state_slots = list(WEAR_JACKET = "pmc_vest")
+
+/obj/item/clothing/suit/marine/veteran/pmc/light/bulletproof/guard
+	name = "\improper M4 pattern PMC guard bulletproof armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This one belongs to high profile elite guard within the W-Y PMC."
+	icon_state = "guard_vest"
+	item_state_slots = list(WEAR_JACKET = "guard_vest")
+
+
+
+//=========================//WY Whiteout synths\\========================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid
+	name = "\improper M7X Apesuit"
+	desc = "The Latest in the line of Apesuits from Weyland Yutani, designed for use by combat droids, it's more compact and mobile then the original allowing for more mobility."
+	icon_state = "combat_android_jacket"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCK_KNOCKDOWN
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_marine_armor = null
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/combat_android)
+	actions_types = null
+	item_state_slots = list(WEAR_JACKET = "combat_android_jacket")
+	unacidable = TRUE
+
+/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/dark
+	name = "\improper M7X Mark II Apesuit"
+	desc = "The M7X Mark II Apesuit: Following recent archaeological studies on highly classified sites, W-Y's R and D Department managed to reverse engineer a more compact invisibility cloak for this armour from some their discoveries."
+	icon_state = "invis_android_jacket"
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/combat_android/dark)
+	item_state_slots = list(WEAR_JACKET = "invis_android_jacket")
+
+//============================//WY Commando\\============================\\
+
+/obj/item/clothing/suit/marine/veteran/pmc/commando
+	name = "\improper MY7 pattern Commando armor"
+	desc = "A modification of the W-Y PMC armor patterns. Designed for elite corporate mercenaries in mind."
+	icon_state = "commando_armor"
+	item_state_slots = list(WEAR_JACKET = "commando_armor")
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_HIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_marine_armor = null
+	actions_types = null
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
+
+/obj/item/clothing/suit/marine/veteran/pmc/commando/damaged //survivor variant
+	name = "damaged MY7 pattern Commando armor"
+	desc = "A modification of the W-Y PMC armor patterns. Designed for elite corporate mercenaries in mind. This one has a lot of scratches and acid damage."
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/veteran/pmc/commando/leader
+	name = "\improper MY7 pattern Commando leader armor"
+	desc = "A modification of the W-Y PMC armor patterns. Designed for elite corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
+	icon_state = "commando_armor_leader"
+	item_state_slots = list(WEAR_JACKET = "commando_armor_leader")
+
+/obj/item/clothing/suit/marine/veteran/pmc/smartgun/commando
+	name = "\improper MY7 pattern Commando gunner armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun."
+	icon_state = "commando_armor_sg"
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	flags_marine_armor = null
+	actions_types = null
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_HIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	item_state_slots = list(WEAR_JACKET = "commando_armor_sg")
+	allowed = list(
+		/obj/item/weapon/gun/smartgun,
+		/obj/item/weapon/gun/smartgun/dirty,
+	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
+
+/obj/item/clothing/suit/marine/veteran/pmc/apesuit
+	name = "\improper M5X Apesuit"
+	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk."
+	icon_state = "ape_suit"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS|BODY_FLAG_FEET
+	uniform_restricted = list(/obj/item/clothing/under/marine/veteran/pmc/apesuit)
+	item_state_slots = list(WEAR_JACKET = "ape_suit")
+	unacidable = TRUE
+	flags_marine_armor = null
+	actions_types = null
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PLATE2)
+
+//=============================//IASFs\\==================================\\
+//=======================================================================\\
+
+/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/iasf
+
+	name = "goshawk airborne vest"
+	desc = "A lightweight, high-mobility flak vest designed for the Imperial Armed Space Force’s airborne troops. Developed by Alphatech, the Goshawk offers crucial protection while ensuring paratroopers retain full freedom of movement during high-risk insertions. Advanced composite plating and reinforced webbing make it effective against shrapnel and small-arms fire, striking the perfect balance between defense and agility for those who strike fast and strike hard."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
+	)
+	icon_state = "iasf_light"
+	item_state = "iasf_light"
+	storage_slots = 3
+
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW // Goon stats
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+	flags_armor_protection = (BODY_FLAG_CHEST)
+	flags_cold_protection = (BODY_FLAG_CHEST)
+	flags_heat_protection = (BODY_FLAG_CHEST)
 

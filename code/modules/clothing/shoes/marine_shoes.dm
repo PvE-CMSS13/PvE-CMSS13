@@ -83,6 +83,68 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/veteran/pmc
+	name = "polished shoes"
+	desc = "The height of fashion, but these look to be woven with protective fiber."
+	icon_state = "jackboots"
+	item_state = "jackboots"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	min_cold_protection_temperature = SHOE_MIN_COLD_PROT
+	max_heat_protection_temperature = SHOE_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_FEET
+	flags_inventory = FPRINT|NOSLIPPING
+	siemens_coefficient = 0.6
+	allowed_items_typecache = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/throwing_knife,
+		/obj/item/weapon/gun/pistol/clfpistol,
+		/obj/item/weapon/straight_razor,
+	)
+
+/obj/item/clothing/shoes/veteran/pmc/update_icon()
+	if(stored_item)
+		icon_state = "[initial(icon_state)]-1"
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/clothing/shoes/veteran/pmc/knife
+	spawn_item_type = /obj/item/attachable/bayonet/wy
+
+/obj/item/clothing/shoes/veteran/pmc/commando
+	name = "\improper W-Y commando boots"
+	desc = "A pair of heavily armored, acid-resistant boots."
+
+	armor_bio = CLOTHING_ARMOR_HIGH
+	siemens_coefficient = 0.2
+	unacidable = TRUE
+
+/obj/item/clothing/shoes/veteran/pmc/commando/knife
+	spawn_item_type = /obj/item/attachable/bayonet/wy
+
+/obj/item/clothing/shoes/veteran/pmc/combat_android
+	name = "\improper M7X greaves"
+	desc = "A pair of heavily armored, acid-resistant boots, made to complete the M7X Apesuit."
+	icon_state = "droid_boots"
+	item_state = "droid_boots"
+	armor_bio = CLOTHING_ARMOR_HIGH
+	siemens_coefficient = 0.2
+	unacidable = TRUE
+	spawn_item_type = /obj/item/attachable/bayonet/wy
+
+/obj/item/clothing/shoes/veteran/pmc/combat_android/dark
+	name = "\improper M7X Mark II greaves"
+	desc = "A pair of heavily armored, optical camouflaged, acid-resistant boots, made to complete the M7X Mark II Apesuit."
+	icon_state = "invis_droid_boots"
+	item_state = "invis_droid_boots"
+
 /obj/item/clothing/shoes/marine/rmc
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."

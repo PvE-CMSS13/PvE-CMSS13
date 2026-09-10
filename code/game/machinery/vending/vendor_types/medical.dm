@@ -679,6 +679,7 @@
 		list("Ointment", round(scale * 7), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Roll of Gauze", round(scale * 7), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Splints", round(scale * 7), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Saline IV bag", floor(scale * 4), /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("AUTOINJECTORS", -1, null, null),
 		list("Autoinjector (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),

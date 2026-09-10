@@ -171,6 +171,41 @@
 /obj/item/clothing/accessory/health/ceramic_plate/take_slash_damage(mob/living/user, list/slashdata)
 	return
 
+/obj/item/clothing/accessory/health/ceramic_plate/marine
+	name = "ASAPP armor plate"
+	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds."
+	icon_state = "armor_plate_100"
+	base_icon_state = "armor_plate"
+	overlay_state = "armor_plate_100"
+	slot = ACCESSORY_SLOT_PLATE
+	armor_health = 300
+	armor_maxhealth = 300
+
+/obj/item/clothing/accessory/health/ceramic_plate/twe
+	name = "HASP armor plate"
+	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
+	icon_state = "regular2_100"
+	base_icon_state = "regular2"
+	slot = ACCESSORY_SLOT_PLATE2
+	armor_health = 350
+	armor_maxhealth = 350
+
+/obj/item/clothing/accessory/health/ceramic_plate/twe/wy
+	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, though this one has been painted white for service with Weyland Yutani's elite tactical teams. gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
+	icon_state = "pmc_armor_plate_100"
+	overlay_state = "pmc_armor_plate_100"
+	base_icon_state = "pmc_armor_plate"
+
+/obj/item/clothing/accessory/health/ceramic_plate/upp
+	name = "TNAP armor plate"
+	desc = "Titanium Nanocrystalline Alloy Plate is a modular clip-on armor plate, designed to provide additional protection for UPP combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate can stop almost any firearm rounds and have highest protection."
+	icon_state = "ceramic2_100"
+	base_icon_state = "ceramic2"
+	overlay_state = "armor_plate_100"
+	slot = ACCESSORY_SLOT_PLATE3
+	armor_health = 400
+	armor_maxhealth = 400
+
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"
 	desc = "A weak armor plate, only able to protect from a little bit of damage. Perhaps that will be enough."

@@ -385,6 +385,8 @@
 	icon_state = "splint"
 	amount = 5
 	max_amount = 5
+	amount = 5
+	max_amount = 5
 	stack_id = "splint"
 
 	var/indestructible_splints = FALSE

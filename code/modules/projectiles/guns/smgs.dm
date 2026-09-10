@@ -64,6 +64,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/magnetic_harness,
@@ -134,11 +135,10 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/magnetic_harness,
 	)
 	random_spawn_under = list(
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/verticalgrip,
 	)
 	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
@@ -146,7 +146,7 @@
 	)
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 	)
 
@@ -193,6 +193,16 @@
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
 
+/obj/item/weapon/gun/smg/m39/elite/compact
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+	random_spawn_under = null
+
+/obj/item/weapon/gun/smg/m39/elite/compact/heap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/smg/m39/heap
+	random_spawn_under = null
+
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
@@ -214,6 +224,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
@@ -273,6 +284,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/bayonet/wy,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,

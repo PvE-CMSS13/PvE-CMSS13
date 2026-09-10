@@ -159,7 +159,7 @@
 	dual_purpose = FALSE
 	throw_range = 6
 	underslug_launchable = FALSE
-	explosion_power = 120
+	explosion_power = 200
 	shrapnel_count = 48
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR

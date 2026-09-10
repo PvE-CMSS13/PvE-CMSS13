@@ -99,6 +99,16 @@
 	flags_inv_hide = HIDEFACE
 	flags_equip_slot = SLOT_FACE
 
+/obj/item/clothing/mask/gas/pmc/balaclava
+	name = "\improper M7 pattern armored balaclava"
+	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter."
+	icon_state = "pmc_balaclava"
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+
+/obj/item/clothing/mask/gas/pmc/balaclava/twohole
+	icon_state = "pmc_balaclava_twohole"
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR
+
 /obj/item/clothing/mask/gas/pmc/marsoc
 	name = "\improper SOF armored balaclava"
 	desc = "Designed for maximum protection -- and badassery. Provides protection against facial attacks, filters toxins, and conceals the wearer's identity."
@@ -112,6 +122,7 @@
 	name = "\improper M8 pattern armored balaclava"
 	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter. This particular suit looks like it belongs to a high-ranking officer."
 	icon_state = "officer_mask"
+	flags_inv_hide = HIDEFACE|HIDEALLHAIR
 
 /obj/item/clothing/mask/gas/bear
 	name = "tactical balaclava"

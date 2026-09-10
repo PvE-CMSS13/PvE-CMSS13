@@ -648,6 +648,14 @@
 /obj/item/weapon/gun/pistol/vp78/rmc/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/pistol/vp78/whiteout
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
+	starting_attachment_types = list(/obj/item/attachable/heavy_barrel, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/vp78/commando
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
+	starting_attachment_types = list(/obj/item/attachable/reflex)
+
 //-------------------------------------------------------
 /*
 Auto 9 The gun RoboCop uses. A better version of the VP78, with more rounds per magazine. Probably the best pistol around, but takes no attachments.

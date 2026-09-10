@@ -655,6 +655,24 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/under/shorts/red/uscm
 	cost = 1
 	allowed_origins = USCM_ORIGINS
+// IASF jackets
+/datum/gear/clothing/iasf_combat_jacket
+	display_name = "IASF combat jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/service/iasf_combat_jacket
+	cost = 3
+	allowed_origins = USCM_ORIGINS
+// TWE jackets
+/datum/gear/clothing/royal_marine_commando_service_jacket
+	display_name = "Royal Marine Commando service jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/rmc/service
+	cost = 3
+	allowed_origins = TWE_ORIGINS
+
+/datum/gear/clothing/royal_marine_commando_service_jacket_black
+	display_name = "Royal Marine Commando service jacket | Black"
+	path = /obj/item/clothing/suit/storage/jacket/marine/rmc/service/black
+	cost = 3
+	allowed_origins = TWE_ORIGINS
 
 /*
 //================================================
@@ -1616,52 +1634,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	slot = WEAR_IN_ACCESSORY
 	allowed_origins = USCM_ORIGINS
 
-/datum/gear/misc/patch_uscm
-	display_name = "USCM shoulder patch"
-	path = /obj/item/clothing/accessory/patch
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/misc/patch_uscm/devils
-	display_name = "Solar Devils shoulder patch"
-	path = /obj/item/clothing/accessory/patch/devils
-
-/datum/gear/misc/patch_uscm/ua
-	display_name = "United Americas flag shoulder patch"
-	path = /obj/item/clothing/accessory/patch/ua
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = USCM_ORIGINS
-
-/datum/gear/misc/patch_uscm/usa
-	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
-	path = /obj/item/clothing/accessory/patch/usa
-	cost = 1
-	slot = WEAR_IN_ACCESSORY
-
-/datum/gear/misc/patch_upp
-	display_name = "UPPAC shoulder patch"
-	path = /obj/item/clothing/accessory/patch/upp
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = UPP_ORIGINS
-
-/datum/gear/misc/patch_upp/sof
-	display_name = "Naval Infantry shoulder patch"
-	path = /obj/item/clothing/accessory/patch/upp/naval
-
-/datum/gear/misc/patch_rmc
-	display_name = "Royal Marines Commando shoulder patch"
-	path = /obj/item/clothing/accessory/patch/royal_marines
-	cost = 0
-	slot = WEAR_IN_ACCESSORY
-	allowed_origins = TWE_ORIGINS
-
-/datum/gear/misc/patch_rmc/twe
-	display_name = "Three World Empire shoulder patch"
-	path = /obj/item/clothing/accessory/patch/twe
-
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo
@@ -1702,3 +1674,110 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Eye drops"
 	path = /obj/item/prop/helmetgarb/eye_drops
 	cost = 1
+
+/*
+//================================================
+				Patches
+//================================================
+*/
+
+/datum/gear/patch
+	category = "Patches"
+
+/datum/gear/patch/msfpatch
+	display_name = "MSF shoulder patch"
+	path = /obj/item/clothing/accessory/patch/msf_patch
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/patch_uscm
+	display_name = "USCM shoulder patch"
+	path = /obj/item/clothing/accessory/patch
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/patch/patch_uscm/devils
+	display_name = "Solar Devils shoulder patch"
+	path = /obj/item/clothing/accessory/patch/devils
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/patch_uscm/ua
+	display_name = "United Americas flag shoulder patch"
+	path = /obj/item/clothing/accessory/patch/ua
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/patch/patch_uscm/usa
+	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
+	path = /obj/item/clothing/accessory/patch/usa
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/patch_upp
+	display_name = "UPPAC shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/patch/patch_upp/sof
+	display_name = "Naval Infantry shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp/naval
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/patch_rmc
+	display_name = "Royal Marines Commando shoulder patch"
+	path = /obj/item/clothing/accessory/patch/royal_marines
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = TWE_ORIGINS
+
+/datum/gear/patch/patch_rmc/twe
+	display_name = "Three World Empire shoulder patch"
+	path = /obj/item/clothing/accessory/patch/twe
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+//W-Y patches
+/datum/gear/patch/wy
+	display_name = "Weyland-Yutani patch"
+	path = /obj/item/clothing/accessory/patch/wy
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/wysquare
+	display_name = "Weyland-Yutani Square patch"
+	path = /obj/item/clothing/accessory/patch/wysquare
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/wy_faction
+	display_name = "Weyland-Yutani Faction patch"
+	path = /obj/item/clothing/accessory/patch/wy_faction
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/wy_white
+	display_name = "Weyland-Yutani White patch"
+	path = /obj/item/clothing/accessory/patch/wy_white
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/wyfury
+	display_name = "Weyland-Yutani Fury '161' patch"
+	path = /obj/item/clothing/accessory/patch/wyfury
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+//Merc patchs
+/datum/gear/patch/freelancer_patch
+	display_name = "Freelancer's Guild patch"
+	path = /obj/item/clothing/accessory/patch/freelancer_patch
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+
+/datum/gear/patch/merc_patch
+	display_name = "Old Freelancer's Guild patch"
+	path = /obj/item/clothing/accessory/patch/merc_patch
+	cost = 0
+	slot = WEAR_IN_ACCESSORY

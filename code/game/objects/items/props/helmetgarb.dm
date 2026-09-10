@@ -627,3 +627,15 @@
 	user.visible_message(SPAN_NOTICE("[user] squeezes a few drops into their eye."), SPAN_NOTICE("You squeeze a few drops into your eye."))
 	user.apply_effect(5, EYE_BLUR)
 	COOLDOWN_START(src, last_eye_drops, 2.5 SECONDS)
+
+/obj/item/prop/helmetgarb/rmc_platemask
+	name = "RMC 12 pattern platemask"
+	desc = "The complimentary, but not necessary platemask, attachable to Mk10 open combat helmets. Useful against shrapnel or just in the cold enviroment, but with enough force it will easily be ripped off."
+	icon_state = "rmc_platemask"
+	flags_obj = OBJ_NO_HELMET_BAND
+
+/obj/item/prop/helmetgarb/rmc_goggles
+	name = "RMC 14 pattern goggles"
+	desc = "The complimentary, but not necessary googles, attachable to Mk10 open combat helmets. An additional protection to the eyes, be it a cold wind, or a spit from a rioting civilian. It's a true talent to be able to see through them easily, without HUD visor."
+	icon_state = "rmc_goggles"
+	flags_obj = OBJ_NO_HELMET_BAND

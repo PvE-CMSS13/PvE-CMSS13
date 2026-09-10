@@ -426,3 +426,99 @@
 	name = "\improper UPP naval infantry jacket"
 	desc = "A standard issue naval infantry service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality."
 	icon_state = "upp_coat_naval"
+
+//==================IASF==================\\
+
+/obj/item/clothing/suit/storage/jacket/marine/service/iasf_co
+	name = "\improper IASF Commanding Officer’s service jacket"
+	desc = "A service jacket typically worn by Commanding Officers of the IASF. Reinforced with lightweight Kevlar shards, it offers limited protection against stabbing weapons and small arms fire while maintaining a formal yet practical design for airborne leadership in the field."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
+	icon_state = "iasf_service_co"
+	has_buttons = FALSE
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
+	)
+
+/obj/item/clothing/suit/storage/jacket/marine/service/iasf_co/alt
+	icon_state = "iasf_service_co_alt"
+
+/obj/item/clothing/suit/storage/jacket/marine/service/iasf_combat_jacket
+	name = "\improper IASF combat jacket"
+	desc = "A rugged, all-weather combat jacket issued to the Imperial Armed Space Force. Designed for versatility, it serves as both a field garment and a lightweight layer of protection. Reinforced with ballistic fibers and treated for weather resistance, it offers limited defense against shrapnel and small arms fire while keeping paratroopers comfortable in harsh conditions. Its deep green color and durable fabric make it a staple for both active deployment and off-duty wear."
+	has_buttons = TRUE
+	icon_state = "iasf_jacket"
+	initial_icon_state = "iasf_jacket"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
+	)
+
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
+	allowed = list (
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/weapon/baton,
+		/obj/item/restraint/handcuffs,
+		/obj/item/device/binoculars,
+		/obj/item/attachable/bayonet,
+
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/mateba,
+		/obj/item/storage/belt/gun/smartpistol,
+		/obj/item/weapon/gun,
+
+		/obj/item/device/flashlight,
+		/obj/item/device/healthanalyzer,
+		/obj/item/device/radio,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/tool/crowbar,
+		/obj/item/tool/crew_monitor,
+		/obj/item/tool/pen,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/katana,
+		/obj/item/device/motiondetector,
+	)
+	min_cold_protection_temperature = T0C
+	siemens_coefficient = 0.7
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+
+// TWE - RMC - Royal Marine Commandos
+
+/obj/item/clothing/suit/storage/jacket/marine/rmc/service
+	name = "\improper Royal Marine Commando service jacket"
+	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	icon_state = "rmc_service"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
+	)
+	has_buttons = FALSE
+
+/obj/item/clothing/suit/storage/jacket/marine/rmc/service/co
+	name = "\improper Royal Marine Commando senior officer's service jacket"
+	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	icon_state = "rmc_service_co"
+
+/obj/item/clothing/suit/storage/jacket/marine/rmc/service/black
+	name = "\improper Royal Marine Commando service jacket"
+	desc = "A service jacket typically worn by officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	icon_state = "rmc_service_black"
+
+/obj/item/clothing/suit/storage/jacket/marine/rmc/service/co/black
+	name = "\improper Royal Marine Commando senior officer's service jacket"
+	desc = "A service jacket worn by the senior officers of the RMC. It has shards of light Kevlar to help protect against stabbing weapons and bullets."
+	icon_state = "rmc_service_black_co"
+
+/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber/rmc
+	name = "commanding officer bomber jacket"
+	desc = "A bomber jacket worn by RMC officers. A classic, stylish choice for those in the higher ranks."
+	has_buttons = TRUE
+	icon_state = "rmc_bomber"
+	initial_icon_state = "rmc_bomber"
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/TWE.dmi'
+	)

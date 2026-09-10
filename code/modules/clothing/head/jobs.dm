@@ -100,15 +100,6 @@
 	desc = "A stylish, if purple, beret."
 	icon_state = "purpleberet"
 
-/obj/item/clothing/head/beret/pmc
-	name = "white beret"
-	desc = "The pinnacle of fashion for any aspiring mercenary leader. Designed to protect the head from light impacts."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "officer_hat"
-	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
-	)
-
 //Medical
 /obj/item/clothing/head/surgery
 	name = "surgical cap"

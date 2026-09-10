@@ -7,7 +7,6 @@
 	mob_max = 8
 	mob_min = 5
 	arrival_message = "'!`2*%slau#*jer t*h$em a!l%. le&*ve n(o^ w&*nes%6es.*v$e %#d ou^'"
-	objectives = "Whiteout protocol is in effect for the target. Ensure there are no traces of the infestation or any witnesses."
 	probability = 0
 	shuttle_id = MOBILE_SHUTTLE_ID_ERT2
 	home_base = /datum/lazy_template/ert/weyland_station
@@ -17,6 +16,9 @@
 	max_heavies = 2
 	hostility = TRUE
 
+/datum/emergency_call/death/New()
+	. = ..()
+	objectives = "Whiteout protocol is in effect for the target. Ensure there are no traces of the infestation or any witnesses."
 
 // DEATH SQUAD--------------------------------------------------------------------------------
 /datum/emergency_call/death/create_member(datum/mind/player, turf/override_spawn_loc)
@@ -30,23 +32,25 @@
 
 	if(!leader && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(person.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = person
-		to_chat(person, SPAN_ROLE_HEADER("You are the Whiteout Team Leader!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are the Whiteout Team Leading Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/leader, TRUE, TRUE)
 	else if(medics < max_medics && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(person.client, JOB_SQUAD_MEDIC, time_required_for_job))
 		medics++
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Medic!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Support Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/medic, TRUE, TRUE)
 	else if(heavies < max_heavies && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_SMARTGUNNER) && check_timelock(person.client, list(JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN), time_required_for_job))
 		heavies++
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Terminator!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Cloaker Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
-		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/terminator, TRUE, TRUE)
+		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/cloaker, TRUE, TRUE)
 	else
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Operative!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Combat Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout, TRUE, TRUE)
+
+	to_chat(person, SPAN_WARNING(FONT_SIZE_HUGE("YOU ARE [hostility? "HOSTILE":"FRIENDLY"] to the USCM.")))
 
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), person, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)
 
@@ -65,22 +69,24 @@
 
 	if(!leader && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(person.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = person
-		to_chat(person, SPAN_ROLE_HEADER("You are the Whiteout Team Leader!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are the Whiteout Team Leading Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/low_threat/leader, TRUE, TRUE)
 	else if(medics < max_medics && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(person.client, JOB_SQUAD_MEDIC, time_required_for_job))
 		medics++
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Medic!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Support Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/low_threat/medic, TRUE, TRUE)
 	else if(heavies < max_heavies && HAS_FLAG(person.client.prefs.toggles_ert, PLAY_SMARTGUNNER) && check_timelock(person.client, list(JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN), time_required_for_job))
 		heavies++
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Terminator!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Cloaker Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
-		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/low_threat/terminator, TRUE, TRUE)
+		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/low_threat/cloaker, TRUE, TRUE)
 	else
-		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Operative!"))
+		to_chat(person, SPAN_ROLE_HEADER("You are a Whiteout Team Combat Unit!"))
 		to_chat(person, SPAN_ROLE_BODY("Whiteout protocol is in effect for the target, all assets onboard are to be liquidated with expediency unless otherwise instructed by Weyland Yutani personnel holding the position of Director or above."))
 		arm_equipment(person, /datum/equipment_preset/pmc/w_y_whiteout/low_threat, TRUE, TRUE)
+
+	to_chat(person, SPAN_WARNING(FONT_SIZE_HUGE("YOU ARE [hostility? "HOSTILE":"FRIENDLY"] to the USCM.")))
 
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), person, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)

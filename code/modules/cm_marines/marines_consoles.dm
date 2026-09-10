@@ -1007,23 +1007,25 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,
 
-				// 200-229: Visitors
+				// 200-231: Visitors
 				JOB_UPP_REPRESENTATIVE = 201,
 				JOB_TWE_REPRESENTATIVE = 201,
 				JOB_PMC_DIRECTOR = 220,
 				JOB_PMC_LEADER = 220,
 				JOB_PMC_LEAD_INVEST = 220,
 				JOB_PMC_SYNTH = 221,
-				JOB_PMC_XENO_HANDLER = 221,
-				JOB_PMC_SNIPER = 222,
-				JOB_PMC_GUNNER = 223,
-				JOB_PMC_MEDIC = 224,
-				JOB_PMC_INVESTIGATOR = 224,
-				JOB_PMC_ENGINEER = 225,
-				JOB_PMC_STANDARD = 226,
-				JOB_PMC_DOCTOR = 227,
-				JOB_WY_GOON_LEAD = 228,
-				JOB_WY_GOON = 229,
+				JOB_PMC_XENO_HANDLER = 222,
+				JOB_PMC_SNIPER = 223,
+				JOB_PMC_GUNNER = 224,
+				JOB_PMC_MEDIC = 225,
+				JOB_PMC_INVESTIGATOR = 226,
+				JOB_PMC_ENGINEER = 227,
+				JOB_PMC_STANDARD = 228,
+				JOB_PMC_DETAINER = 229,
+				JOB_PMC_CROWD_CONTROL = 230,
+				JOB_PMC_DOCTOR = 231,
+				JOB_WY_GOON_LEAD = 232,
+				JOB_WY_GOON = 233,
 
 				// Appear at bottom of squad list
 				JOB_MARINE_RAIDER_SL = 130,
@@ -1082,6 +1084,7 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_LEAD_INVEST = 60,
 				JOB_PMC_INVESTIGATOR = 61,
 				JOB_PMC_DETAINER = 62,
+				JOB_PMC_CROWD_CONTROL = 63,
 
 				// 70-79 PMCs Combat Team
 				JOB_PMC_LEADER = 70,
@@ -1089,6 +1092,12 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_GUNNER = 72,
 				JOB_PMC_MEDIC = 73,
 				JOB_PMC_STANDARD = 75,
+
+				// 70-79 W-Y Commando Combat Team
+				JOB_WY_COMMANDO_STANDARD = 70,
+				JOB_WY_COMMANDO_LEADER= 71,
+				JOB_WY_COMMANDO_GUNNER = 72,
+				JOB_WY_COMMANDO_DOGCATHER = 73,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,

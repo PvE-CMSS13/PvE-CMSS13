@@ -281,7 +281,12 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper M5 bayonet"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "bayonet"
-	item_state = "combat_knife"
+	item_state = "combat_bayonet"
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_0.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_0.dmi'
+	)
 	desc = "An outdated rifle bayonet issued by the USCMC. Neatly fits into boot-mounted holsters, and can- in emergencies- be utilized to dig out shrapnel."
 	sharp = IS_SHARP_ITEM_ACCURATE
 	force = MELEE_FORCE_NORMAL
@@ -317,7 +322,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper Type 80 bayonet"
 	desc = "The standard-issue bayonet of the UPP, the Type 80 is balanced to also function as an effective throwing knife."
 	icon_state = "upp_bayonet"
-	item_state = "knife"
+	item_state = "upp_bayonet"
 	attach_icon = "upp_bayonet_a"
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
@@ -338,13 +343,21 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bayonet/rmc
 	name = "\improper L5 bayonet"
 	desc = "The standard-issue bayonet of the RMC, the L5 is balanced to also function as an effective throwing knife."
-	icon_state = "upp_bayonet" // PLACEHOLDER PLEASE REPLACE
-	item_state = "combat_knife"
-	attach_icon = "upp_bayonet_a" // PLACEHOLDER PLEASE REPLACE
+	icon_state = "twe_bayonet"
+	item_state = "twe_bayonet"
+	attach_icon = "twe_bayonet_a"
 	throwforce = MELEE_FORCE_TIER_10 //doubled by throwspeed to 100
 	throw_speed = SPEED_REALLY_FAST
 	throw_range = 7
 	pry_delay = 1 SECONDS
+
+/obj/item/attachable/bayonet/wy
+	name = "\improper SA120 L7 bayonet"
+	desc = "The standard-issue bayonet of the W-Y Commandos and PMCs, has a better ergonomic carbon finish grip and corrosion proof blade."
+	icon_state = "wy_bayonet"
+	item_state = "wy_bayonet"
+	attach_icon = "wy_bayonet_a"
+	unacidable = TRUE
 
 /obj/item/attachable/bayonet/van_bandolier
 	name = "\improper Fairbairn-Sykes fighting knife"
@@ -3572,7 +3585,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/flamer/New()
 	..()
-	attachment_firing_delay = FIRE_DELAY_TIER_4 * 5
+	attachment_firing_delay = FIRE_DELAY_TIER_1
 
 /obj/item/attachable/attached_gun/flamer/get_examine_text(mob/user)
 	. = ..()
@@ -3727,7 +3740,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/New()
 	..()
-	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+	attachment_firing_delay = FIRE_DELAY_TIER_5*2
 
 /obj/item/attachable/attached_gun/shotgun/get_examine_text(mob/user)
 	. = ..()
@@ -3772,6 +3785,99 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/m20a/set_bullet_traits()
 	return
+
+/obj/item/attachable/attached_gun/shotgun/af13 //NSG underslung shottie
+	name = "\improper AF13 underbarrel shotgun"
+	icon_state = "masterkey_af13"
+	attach_icon = "masterkey_af13_a"
+	desc = "A Weyland-Yutani AF13 underslung shotgun. Attaches to the underbarrel of NSG23 line of weapons. Only capable of loading up to six buckshot shells. Specialized for breaching into buildings."
+	w_class = SIZE_MEDIUM
+	max_rounds = 6
+	current_rounds = 6
+	slot = "under"
+	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
+	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
+
+/obj/item/attachable/attached_gun/shotgun/af13/New()
+	..()
+	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+
+/obj/item/attachable/attached_gun/shotgun/af13/get_examine_text(mob/user)
+	. = ..()
+	if(current_rounds > 0) . += "It has [current_rounds] shell\s left."
+	else . += "It's empty."
+
+/obj/item/attachable/attached_gun/shotgun/af13/set_bullet_traits()
+	LAZYADD(traits_to_give_attached, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 10.8, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+	))
+
+/obj/item/attachable/attached_gun/shotgun/af13/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
+	if(istype(mag) && mag.flags_magazine & AMMUNITION_HANDFUL)
+		if(mag.default_ammo == /datum/ammo/bullet/shotgun/buckshot)
+			if(current_rounds >= max_rounds)
+				to_chat(user, SPAN_WARNING("[src] is full."))
+			else
+				current_rounds++
+				mag.current_rounds--
+				mag.update_icon()
+				to_chat(user, SPAN_NOTICE("You load one shotgun shell in [src]."))
+				playsound(user, 'sound/weapons/gun_shotgun_shell_insert.ogg', 25, 1)
+				if(mag.current_rounds <= 0)
+					user.temp_drop_inv_item(mag)
+					qdel(mag)
+			return
+	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
+
+/obj/item/attachable/attached_gun/shotgun/af13b //NSG underslung shottie for Breacher gun
+	name = "\improper AF13-B underbarrel shotgun"
+	icon_state = "masterkey_af13"
+	attach_icon = "masterkey_af13_a"
+	desc = "A Weyland-Yutani AF13-B underslung shotgun, heavily modified by RMC Armourers. Attaches to the underbarrel of NSG23 line of weapons. Only capable of loading up to six buckshot shells. Specialized for breaching into buildings."
+	w_class = SIZE_MEDIUM
+	max_rounds = 6
+	current_rounds = 6
+	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
+	slot = "under"
+	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
+	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_WIELD_OVERRIDE
+
+/obj/item/attachable/attached_gun/shotgun/af13b/New()
+	..()
+	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+
+/obj/item/attachable/attached_gun/shotgun/af13b/get_examine_text(mob/user)
+	. = ..()
+	if(current_rounds > 0) . += "It has [current_rounds] shell\s left."
+	else . += "It's empty."
+
+/obj/item/attachable/attached_gun/shotgun/af13b/set_bullet_traits()
+	LAZYADD(traits_to_give_attached, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 3*10.8, GLOB.damage_boost_breaching), // 2-taps the R doors
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_pylons)
+	))
+
+/obj/item/attachable/attached_gun/shotgun/af13b/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
+	if(istype(mag) && mag.flags_magazine & AMMUNITION_HANDFUL)
+		if(mag.default_ammo == /datum/ammo/bullet/shotgun/buckshot)
+			if(current_rounds >= max_rounds)
+				to_chat(user, SPAN_WARNING("[src] is full."))
+			else
+				current_rounds++
+				mag.current_rounds--
+				mag.update_icon()
+				to_chat(user, SPAN_NOTICE("You load one shotgun shell in [src]."))
+				playsound(user, 'sound/weapons/gun_shotgun_shell_insert.ogg', 25, 1)
+				if(mag.current_rounds <= 0)
+					user.temp_drop_inv_item(mag)
+					qdel(mag)
+			return
+	to_chat(user, SPAN_WARNING("[src] only accepts shotgun buckshot."))
 
 /obj/item/attachable/attached_gun/extinguisher
 	name = "HME-12 underbarrel extinguisher"

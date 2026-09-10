@@ -538,6 +538,52 @@
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_10
 	fa_max_scatter = SCATTER_AMOUNT_NONE
 
+/obj/item/weapon/gun/smartgun/l56a2
+	name = "\improper L56A2 smartgun"
+	desc = "The actual firearm in the 4-piece L56A2 Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
+	desc_lore = "Originally produced for the Three World Empires Royal Marines forces, it mostly ended up in hands of W-Y PMCs and other affiliated forces, with Three World Empire giving preference for other design, that is still produced by W-Y regardless. Compared to more commonly used M56A2, it has improved recoil control, better electronics and advanced tracking software."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/machineguns.dmi'
+	icon_state = "l56d"
+	item_state = "l56d"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/smartguns.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/smartguns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/smartguns_righthand.dmi'
+	)
+	starting_attachment_types = null
+	worn_x_dimension = 64
+	inhand_x_dimension = 64
+	hud_offset = -8
+	pixel_x = -8
+	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+	)
+
+/obj/item/weapon/gun/smartgun/l56a2/elite
+	name = "\improper L56A2D 'Dirty' smartgun"
+	desc = "The actual firearm in the 4-piece L56A2D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
+	desc_lore = "Essentially a reuse of a proof of concept originally made as M57D, utilizing depleted uranium rounds, this one reuses same ideas on a basis of a more robust L56A2 smartgun."
+	current_mag = /obj/item/ammo_magazine/smartgun/dirty
+	ammo = /obj/item/ammo_magazine/smartgun/dirty
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/dirty ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet/dirty
+
+/obj/item/weapon/gun/smartgun/l56a2/elite/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	if(!recoil_compensation)
+		scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	set_fire_delay(FIRE_DELAY_TIER_12)
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_10
+	fa_max_scatter = SCATTER_AMOUNT_NONE
 
 // CLF SMARTGUN
 

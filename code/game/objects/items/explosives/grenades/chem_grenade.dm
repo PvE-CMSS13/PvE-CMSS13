@@ -174,6 +174,50 @@
 	containers += B2
 	update_icon()
 
+/obj/item/explosive/grenade/custom/teargas
+	name = "\improper M66 teargas grenade"
+	desc = "Tear gas grenade used for nonlethal riot control. Please wear adequate gas protection."
+	assembly_stage = ASSEMBLY_LOCKED
+	harmful = FALSE
+	has_blast_wave_dampener = FALSE
+	antigrief_protection = FALSE
+
+/obj/item/explosive/grenade/custom/teargas/Initialize()
+	if(type == /obj/item/explosive/grenade/custom/teargas) // ugly but we only want to change base level teargas
+		if(SSticker.mode && MODE_HAS_FLAG(MODE_FACTION_CLASH))
+			new /obj/item/explosive/grenade/flashbang/noskill(loc)
+			return INITIALIZE_HINT_QDEL
+		else if(SSticker.current_state < GAME_STATE_PLAYING)
+			RegisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP, PROC_REF(replace_teargas))
+	. = ..()
+	var/obj/item/reagent_container/glass/beaker/B1 = new(src)
+	var/obj/item/reagent_container/glass/beaker/B2 = new(src)
+
+	B1.reagents.add_reagent("condensedcapsaicin", 25)
+	B1.reagents.add_reagent("potassium", 25)
+	B2.reagents.add_reagent("phosphorus", 25)
+	B2.reagents.add_reagent("sugar", 25)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src, 4 SECONDS) //~4 second timer
+
+	containers += B1
+	containers += B2
+
+	update_icon()
+
+/obj/item/explosive/grenade/custom/teargas/proc/replace_teargas()
+	if(MODE_HAS_FLAG(MODE_FACTION_CLASH))
+		new /obj/item/explosive/grenade/flashbang/noskill(loc)
+		qdel(src)
+	UnregisterSignal(SSdcs, COMSIG_GLOB_MODE_PRESETUP)
+
+
+/obj/item/explosive/grenade/custom/teargas/attack_self(mob/user)
+	if(!skillcheck(user, SKILL_POLICE, SKILL_POLICE_SKILLED))
+		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
+		return
+	..()
+
 /obj/item/explosive/grenade/custom/ied
 	name = "improvised explosive device"
 	desc = "An improvised chemical explosive grenade. Designed to kill through fragmentation."

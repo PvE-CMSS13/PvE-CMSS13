@@ -673,6 +673,10 @@
 	item_state = "aamateba"
 	current_mag = /obj/item/ammo_magazine/internal/revolver/mateba/impact
 
+/obj/item/weapon/gun/revolver/mateba/engraved/tactical
+	current_mag = /obj/item/ammo_magazine/internal/revolver/mateba
+	starting_attachment_types = list(/obj/item/attachable/mateba, /obj/item/attachable/compensator, /obj/item/attachable/reflex)
+
 /obj/item/weapon/gun/revolver/mateba/cmateba
 	name = "\improper Mateba autorevolver custom"
 	desc = "The .454 Mateba 6 Unica autorevolver is a semi-automatic handcannon that uses its own recoil to rotate the cylinders. Extremely rare, prohibitively costly, and unyieldingly powerful, it's found in the hands of a select few high-ranking USCM officials. Stylish, sophisticated, and above all, extremely deadly."

@@ -75,11 +75,50 @@
 	icon_state = "cbrn"
 	item_state = "cbrn"
 
+/obj/item/clothing/gloves/marine/veteran/pmc
+	name = "\improper WY PMC gloves"
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division."
+	icon_state = "pmc"
+	item_state = "pmc"
+
+/obj/item/clothing/gloves/marine/veteran/pmc/black
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division. These are colored in black."
+	icon_state = "veteran"
+	item_state = "veteran"
+
 /obj/item/clothing/gloves/marine/veteran/pmc/commando
+	name = "\improper W-Y Commando gloves"
+	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani Commandos."
+	icon_state = "pmc_elite"
+	item_state = "pmc_elite"
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/gloves/marine/veteran/pmc/commando/leader
+	icon_state = "pmc_elite_leader"
+	item_state = "pmc_elite_leader"
+
+/obj/item/clothing/gloves/marine/veteran/pmc/apesuit
 	name = "\improper M5X gauntlets"
-	desc = "A pair of heavily armored gloves made to complete the M5X exoskeleton armor"
+	desc = "A pair of heavily armored gloves made to pair up the M5X Apesuit system."
 	icon_state = "gauntlets"
-	item_state = "bgloves"
+	item_state = "gauntlets"
+	siemens_coefficient = 0
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_VERYHIGH
+	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/veteran/pmc/combat_droid
+	name = "\improper M7X gauntlets"
+	desc = "A pair of heavily armored gloves made to pair up the M7X Apesuit system."
+	icon_state = "combat_android_gloves"
+	item_state = "black"
+	item_state_slots = list(WEAR_HANDS = "black")
 	siemens_coefficient = 0
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH

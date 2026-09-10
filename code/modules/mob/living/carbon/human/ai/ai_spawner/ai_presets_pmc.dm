@@ -31,11 +31,6 @@
 	desc = "Armed with an SMG this is the PMC analog of a vehicle crewman"
 	path = /datum/equipment_preset/pmc/crewman
 
-/datum/human_ai_equipment_preset/pmc/xeno_handler
-	name = "PMC - Xeno Handler"
-	desc = "The xeno handler is essentially a PMC standard with a fancy name"
-	path = /datum/equipment_preset/pmc/xeno_handler
-
 /datum/human_ai_equipment_preset/pmc/doctor
 	name = "PMC - Doctor"
 	desc = "A civillian doctor working alongside W-Y PMCs, unarmed"
@@ -60,3 +55,43 @@
 	name = "PMC - Security Android"
 	desc = "A highly illegal PMC security android. GMs should not be using this willynilly"
 	path = /datum/equipment_preset/synth/working_joe/security_android/pmc
+
+/datum/human_ai_equipment_preset/pmc/detainer
+	name = "PMC - Security Enforcer"
+	desc = "An experienced security member of W-Y PMC. Armed with corporate white M41A mark II with AP munition."
+	path = /datum/equipment_preset/pmc/pmc_detainer
+
+/datum/human_ai_equipment_preset/pmc/riot_control
+	name = "PMC - Crowd Control Specialist"
+	desc = "Heavily equipped riot control unit. Armed with ES-7 Supernova Electrostatic Shockgun."
+	path = /datum/equipment_preset/pmc/pmc_riot_control
+
+/datum/human_ai_equipment_preset/pmc/medical_investigator
+	name = "PMC - Medical Investigator"
+	desc = "PMC guard medical expert. Usually called for after-fight hostage treatment."
+	path = /datum/equipment_preset/pmc/pmc_med_investigator
+
+/datum/human_ai_equipment_preset/pmc/lead_investigator
+	name = "PMC - Lead Investigator"
+	desc = "PMC guard commander. Detective and military police warden in one flask."
+	path = /datum/equipment_preset/pmc/pmc_lead_investigator
+
+/datum/human_ai_equipment_preset/pmc/commando_standard
+	name = "PMC Commando - Standard"
+	desc = "W-Y PMC's finest. These ones are not so heavily equipped as usual, but don't get cocky while fightin 'em."
+	path = /datum/equipment_preset/pmc/commando/standard/low_threat
+
+/datum/human_ai_equipment_preset/pmc/commando_gunner
+	name = "PMC Commando - Smartgunner"
+	desc = "A commando equipped with L56D smartgun."
+	path = /datum/equipment_preset/pmc/commando/gunner/low_threat
+
+/datum/human_ai_equipment_preset/pmc/commando_dogcatcher
+	name = "PMC Commando - Dog Catcher"
+	desc = "A commando equipped with apesuit for maximum protection against xenos."
+	path = /datum/equipment_preset/pmc/commando/dogcatcher
+
+/datum/human_ai_equipment_preset/pmc/commando_leader
+	name = "PMC Commando - Leader"
+	desc = "The best commanding the best. Comes with fancy black and red armor."
+	path = /datum/equipment_preset/pmc/commando/leader/low_threat

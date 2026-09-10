@@ -375,6 +375,46 @@
 	new /obj/item/storage/pill_bottle/alkysine(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
+/obj/item/storage/belt/medical/lifesaver/wy
+	name = "\improper WY-TM625 pattern medical bag"
+	desc = "The WY-TM625 is the standard load-bearing equipment of the W-Y security forces. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+	icon_state = "wy_medicbag"
+	item_state = "wy_medicbag"
+	flags_atom = FPRINT
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/medical/lifesaver/wy/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+	new /obj/item/stack/medical/splint/nano(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/device/healthanalyzer(src)
+
+/obj/item/storage/belt/medical/lifesaver/wy/partial/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/stack/medical/splint/nano(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/device/healthanalyzer(src)
+
 /obj/item/storage/belt/medical/lifesaver/full/forecon/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -584,6 +624,26 @@
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/restraint/handcuffs(src)
 	new /obj/item/notepad/blue(src)
+
+/obj/item/storage/belt/security/MP/WY
+	name = "\improper M276-C corporate security rig"
+	desc = "A Weyland-Yutani adaptation of the M276 load-bearing equipment, designed for corporate security forces. This modular black rig features multiple pouches for carrying restraints, ammunition, and a mix of lethal and non-lethal equipment for maintaining order."
+
+/obj/item/storage/belt/security/MP/WY/full/fill_preset_inventory()
+	new /obj/item/weapon/gun/energy/taser(src)
+	new /obj/item/device/flash(src)
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/device/clue_scanner(src)
+
+/obj/item/storage/belt/security/MP/WY/full/synth/fill_preset_inventory()
+	new /obj/item/explosive/grenade/flashbang(src)
+	new /obj/item/device/flash(src)
+	new /obj/item/weapon/baton(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/device/clue_scanner(src)
+	new /obj/item/restraint/handcuffs(src)
 
 /obj/item/storage/belt/security/MP/colonist
 	name = "security duty belt"
@@ -830,6 +890,35 @@
 	new /obj/item/ammo_magazine/rifle/type71/heap(src)
 	new /obj/item/ammo_magazine/rifle/type71/heap(src)
 
+/obj/item/storage/belt/marine/wy
+	name = "\improper WY-TM402 pattern ammo load rig"
+	desc = "The WY-TM402 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This is the standard variant, designed for bulk ammunition-carrying operations."
+
+	icon_state = "wy_ammobelt"
+	flags_atom = FPRINT
+	has_gamemode_skin = FALSE
+	item_state_slots = list(
+		WEAR_WAIST = "wy_ammobelt",
+		WEAR_L_HAND = "marinebelt",
+		WEAR_R_HAND = "marinebelt"
+	)
+
+/obj/item/storage/belt/marine/wy/m39_pmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+
+/obj/item/storage/belt/marine/wy/nsg23_pmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
 	name = "\improper M804 heavygunner storage rig"
@@ -889,6 +978,13 @@
 		dump_ammo_to(M, user, M.transfer_handful_amount)
 	else
 		return ..()
+
+/obj/item/storage/belt/shotgun/wy
+	name = "\improper WY-TM406 pattern shotgun shell loading rig"
+	desc = "The WY-TM406 is the standard load-bearing equipment of the W-Y security forces. An ammunition belt designed to hold shotgun shells or individual bullets."
+	icon_state = "wy_shotgunbelt"
+	item_state = "wy_shotgunbelt"
+	flags_atom = FPRINT
 
 /obj/item/storage/belt/shotgun/upp
 	name = "\improper Type 42 pattern shotgun shell loading rig"
@@ -1072,6 +1168,12 @@
 	else
 		return ..()
 
+/obj/item/storage/belt/grenade/wy
+	name="\improper WY-TM-386 pattern M40 Grenade rig"
+	desc="The WY-TM-386 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
+	storage_slots = 20
+	max_storage_space = 60
+
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
 	desc="The M276 Mk. II is is an upgraded version of the M276 grenade rig, with more storage capacity."
@@ -1108,7 +1210,11 @@
 		new /obj/item/explosive/grenade/high_explosive/impact(src)
 		new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
 
-
+/obj/item/storage/belt/grenade/large/wy
+	name="\improper WY-TM-386 pattern M40 Grenade rig Mk. II"
+	desc="The WY-TM-386 Mk. II is is an upgraded version of the m40 grenade rig, with more storage capacity."
+	storage_slots = 25
+	max_storage_space = 75
 
 ////////////////////////////// GUN BELTS /////////////////////////////////////
 
@@ -1357,6 +1463,50 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 
+/obj/item/storage/belt/gun/m4a3/wy
+	name = "\improper WY-TM892 pattern general pistol holster rig"
+	desc = "The WY-TM892 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version has a holster assembly that allows one to carry the most common pistols. It also contains side pouches that can store most pistol magazines."
+	icon_state = "wy_holster"
+	item_state = "marinebelt"
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -3,
+			"icon_y" = 0))
+
+/obj/item/storage/belt/gun/m4a3/wy/vp70/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/vp70_near_empty/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
+	for(var/i = 1 to 3)
+		new /obj/item/ammo_magazine/pistol/vp70(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/es4/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/es4())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/es4(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/vp78/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/vp78_near_empty/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to 3)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/gun/m4a3/wy/vp78_whiteout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/whiteout())
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
+
 /obj/item/storage/belt/gun/m4a3/m1911/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911())
 	new /obj/item/ammo_magazine/pistol/m1911(src)
@@ -1473,6 +1623,16 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
+/obj/item/storage/belt/gun/m39/full/whiteout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/compact/heap(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/heap(src)
+
+/obj/item/storage/belt/gun/m39/full/whiteout_low_threat/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/compact(src))
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/ap(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/xm51
@@ -1577,6 +1737,12 @@
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44/mp())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/marksman(src)
+
+/obj/item/storage/belt/gun/m44/wy
+	name = "\improper WY-TM880 pattern general revolver holster rig"
+	desc = "The WY-TM880 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is universal and adjustable for different revolvers, along with six small pouches for speedloaders. It smells faintly of hay."
+	icon_state = "wy_m44r_holster"
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m44/gunslinger
 	name = "custom-tooled gunslinger's belt"
@@ -1726,6 +1892,34 @@
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
+
+/obj/item/storage/belt/gun/mateba/commando
+	name = "commando WY-T190 pattern Unica holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the Weyland Yutani. \
+	It consists of a modular belt with various clips. This version is for the powerful Unica autorevolver, \
+	along with five small pouches for speedloaders. This specific one is tinted black and engraved with gold, heavily customized for a high-ranking official."
+	icon_state = "amateba_holster"
+	item_state = "marinebelt"
+	flags_atom = NO_NAME_OVERRIDE
+	has_gamemode_skin = FALSE
+
+/obj/item/storage/belt/gun/mateba/commando/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/engraved/tactical())
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+
+/obj/item/storage/belt/gun/mateba/commando/full/deathsquad/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/engraved/tactical())
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
+	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
@@ -2015,8 +2209,11 @@
 #undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/smartgunner/pmc
-	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"
-	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a sidearm."
+	name = "\improper WY-TM410 pattern smartgunner sidearm rig"
+	desc = "A special pattern of W-Y made combat belt, designed to carry smartgun ammunition and a sidearm."
+	icon_state = "wy_sgbelt"
+	flags_atom = NO_NAME_OVERRIDE
+	has_gamemode_skin = FALSE
 	can_hold = list(
 		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
@@ -2027,25 +2224,29 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/pmc/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
-	new /obj/item/ammo_magazine/pistol/vp70(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-
-/obj/item/storage/belt/gun/smartgunner/wo/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/smartgun/dirty(src)
-	new /obj/item/ammo_magazine/smartgun/dirty(src)
-	new /obj/item/ammo_magazine/smartgun/dirty(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 
-/obj/item/storage/belt/gun/smartgunner/whiteout
-	name = "\improper M802 pattern 'Terminator' smartgunner sidearm rig"
-	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a Mateba revolver."
+/obj/item/storage/belt/gun/smartgunner/pmc/commando/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/commando())
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
+/obj/item/storage/belt/gun/smartgunner/commando
+	name = "\improper WY-TM410 pattern 'Terminator' smartgunner sidearm rig"
+	desc = "A special pattern of W-Y made combat belt, designed to carry smartgun ammunition and a sidearm."
+	icon_state = "wy_sgbelt"
+	flags_atom = NO_NAME_OVERRIDE
+	has_gamemode_skin = FALSE
 	can_hold = list(
 		/obj/item/device/flashlight/flare,
 		/obj/item/weapon/gun/flare,
@@ -2056,11 +2257,11 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/smartgun,
 	)
-	has_gamemode_skin = FALSE
 
-/obj/item/storage/belt/gun/smartgunner/whiteout/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/pmc())
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
+/obj/item/storage/belt/gun/smartgunner/commando/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/whiteout())
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
