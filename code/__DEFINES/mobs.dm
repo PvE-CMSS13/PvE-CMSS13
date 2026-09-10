@@ -191,6 +191,7 @@
 #define GIVING (1<<5) // Is currently trying to give an item to someone
 #define NOBIOSCAN (1<<6)
 #define AI_CONTROLLED (1<<7)
+#define BODY_BURSTING (1<<8)
 
 //=================================================
 

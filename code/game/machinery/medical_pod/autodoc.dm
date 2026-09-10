@@ -529,11 +529,17 @@
 									S.limb_ref.implants -= I
 									H.embedded_items -= I
 									qdel(I)
-						var/obj/item/larva_ref = locate(/obj/item/alien_embryo) in H.contents
+						var/obj/item/alien_embryo/larva_ref = locate(/obj/item/alien_embryo) in H.contents
 						if(S.limb_ref.name == "chest" && larva_ref)
-							sleep(REMOVE_OBJECT_MAX_DURATION*surgery_mod)
-							H.contents -= larva_ref
-						qdel(larva_ref)
+							if(larva_ref.flags_embryo & FLAG_EMBRYO_HYBRID)
+								visible_message("[icon2html(src, viewers(src))] \The <b>[src]</b> croaks: Procedure has been deemed impossible.");
+								playsound(src.loc, 'sound/machines/buzz-two.ogg', 15, 1)
+								surgery_todo_list -= S
+								continue // Auto-doc cannot remove this embryo subtype
+							else
+								sleep(REMOVE_OBJECT_MAX_DURATION*surgery_mod)
+								H.contents -= larva_ref
+								qdel(larva_ref)
 						if(S.limb_ref.name == "chest" || S.limb_ref.name == "head")
 							close_encased(H,S.limb_ref)
 						if(!surgery) break

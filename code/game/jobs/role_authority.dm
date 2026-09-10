@@ -756,6 +756,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/king
 		if(RUNNER_ACIDER)
 			M = /mob/living/carbon/xenomorph/runner/acider
+		if(XENO_CASTE_BODYBURSTER)
+			M = /mob/living/carbon/xenomorph/bodyburster
+		if(XENO_CASTE_LANKY)
+			M = /mob/living/carbon/xenomorph/lanky
+//		if(XENO_CASTE_LANKYBRUTE)
+//			M = /mob/living/carbon/xenomorph/lankybrute
 	return M
 
 
