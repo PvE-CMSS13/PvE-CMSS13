@@ -244,6 +244,11 @@
 	var/proj_x = 0
 	var/proj_y = 0
 	var/proj_z = 0
+	var/proj_base_layer = null
+	var/proj_plane = -6
+	var/proj_mouse_opacity = 1
+	var/proj_opacity = 1
+	var/obj/effect/projector/proj = null
 	unacidable = TRUE
 
 	var/list/image/hud_list
@@ -269,39 +274,61 @@
 
 /atom/movable/clone/bullet_act(obj/projectile/P)
 	return src.mstr.bullet_act(P)
+
+/atom/movable/clone/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	return TRUE
+	// at least for how we're using them for airlocks, we don't want clones moving
+
+/atom/movable/clone/Destroy(force)
+	if(!force)
+		return QDEL_HINT_LETMELIVE
+	. = ..()
 /////////////////////
 
-/atom/movable/proc/create_clone_movable(shift_x, shift_y, shift_z)
+/atom/movable/proc/create_clone_movable(obj/effect/projector/P)
 	var/atom/movable/clone/C = new /atom/movable/clone(src.loc)
 	C.density = FALSE
-	C.proj_x = shift_x
-	C.proj_y = shift_y
-	C.proj_z = shift_z
+	C.proj_x = P.vector_x
+	C.proj_y = P.vector_y
+	C.proj_z = P.vector_z
+	if(P.mask_layer)
+		C.proj_base_layer = P.mask_layer-0.5
+	C.proj_plane = P.movables_projection_plane
+	C.proj_mouse_opacity = P.projected_mouse_opacity
+	C.proj_opacity = P.projected_opacity
 
 	GLOB.clones.Add(C)
 	C.mstr = src //Link clone and master
+	C.proj = P
 	src.clone = C
 
-/atom/movable/proc/update_clone()
+/atom/movable/proc/update_clone(full_update = TRUE)
 	///---Var-Copy---////
 	clone.forceMove(locate(x + clone.proj_x, y + clone.proj_y, z + clone.proj_z))
 	//Translate clone position by projection factor
 	//This is done first to reduce movement latency
 
-	clone.anchored = anchored //Some of these may be suitable for Init
 	clone.appearance = appearance
 	clone.dir = dir
-	clone.flags_atom = flags_atom
-	clone.density = density
-	clone.layer = layer
-	clone.level = level
-	clone.name = name
 	clone.pixel_x = pixel_x
 	clone.pixel_y = pixel_y
 	clone.transform = transform
 	clone.invisibility = invisibility
-	////////////////////
+	clone.flags_atom = flags_atom
+	clone.layer = layer
+	clone.opacity = clone.proj_opacity
+	clone.plane = clone.proj_plane // necessary when placing movables (typically plane -6) under a turf (typically plane -7)
+	clone.density = density
+	clone.anchored = anchored
+	clone.name = name
+	clone.mouse_opacity = clone.proj_mouse_opacity
 
+	if(clone.proj_base_layer)
+		for(var/overlay in clone.overlays) // overlays cannot be reliably interacted with to apply layers
+			clone.overlays -= overlay
+		clone.layer = clone.proj_base_layer+(layer/10)
+
+	////////////////////
 	if(light) //Clone lighting
 		if(!clone.light)
 			clone.set_light(luminosity) //Create clone light
@@ -309,9 +336,10 @@
 		if(clone.light)
 			clone.set_light(0) //Kill clone light
 
+
 /atom/movable/proc/destroy_clone()
 	GLOB.clones.Remove(src.clone)
-	qdel(src.clone)
+	qdel(src.clone, TRUE)
 	src.clone = null
 
 /**

@@ -79,6 +79,7 @@
 			return
 	if(!target_ambience)
 		target_ambience = target_area.get_sound_ambience(owner)
+
 	if(target_area)
 		soundscape_playlist = target_area.soundscape_playlist
 
