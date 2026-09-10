@@ -13,8 +13,8 @@
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 12
-	vision_flags = SEE_TURFS
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_NEGATIVE
 	var/headcam = FALSE
@@ -38,7 +38,6 @@
 	desc = "The actual goggle part of the M2 night vision system."
 	icon_state = "stub" //our actual icon is a part of our helmet.
 	item_state = null
-	vision_flags = SEE_TURFS
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
 	flags_inventory = CANTSTRIP
 
@@ -48,7 +47,6 @@
 	desc = "A headset and night vision system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
 	icon_state = "m49a_goggles"
 	deactive_state = "m49a_goggles_0"
-	vision_flags = SEE_TURFS
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
 	toggleable = TRUE
 	fullscreen_vision = null
@@ -61,7 +59,6 @@
 	desc = "A headset, night vision optic and biomonitor readout system. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
 	icon_state = "m4_goggles"
 	deactive_state = "m4_goggles_0"
-	vision_flags = SEE_TURFS
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 	toggleable = TRUE
 	fullscreen_vision = null
@@ -83,7 +80,6 @@
 	desc = "A set of enhanced-vision goggles often issued to the marksman of USCM scout-sniper teams. Allows highlighted imaging of surroundings. Click it to toggle."
 	icon_state = "ghillie_goggles"
 	deactive_state = "ghillie_goggles_0"
-	vision_flags = SEE_TURFS
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
@@ -94,7 +90,6 @@
 	desc = "A standalone version of the HMS commonly seen attached to the M56 weapon system. Allows highlighted imaging of surroundings and connects the wearer to the Command & Control network whilst also providing a HUD display. Click it to toggle."
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
-	vision_flags = SEE_TURFS
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	toggleable = TRUE
 	fullscreen_vision = null
@@ -139,7 +134,6 @@
 	deactive_state = "m56_goggles_0"
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
-	vision_flags = SEE_TURFS
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
@@ -263,6 +257,15 @@
 	vision_flags = 0
 	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
+/obj/item/clothing/glasses/night/m56_goggles/pmc
+	name = "\improper M56A3 head mounted sight"
+	desc = "A tweaked headset and optic system for the M56A3 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"

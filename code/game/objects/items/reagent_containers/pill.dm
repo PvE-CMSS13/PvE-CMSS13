@@ -245,7 +245,7 @@
 	pill_initial_reagents = list("russianred" = 10)
 	pill_icon_class = "spac"
 /obj/item/reagent_container/pill/peridaxon
-	pill_desc = "A Peridaxon pill. Temporarily halts the effects of internal organ damage."
+	pill_desc = "A Peridaxon pill. Mitigates the effects of internal organ damage whilst also slowly healing them."
 	pill_initial_reagents = list("peridaxon" = 7)
 	pill_icon_class = "peri"
 

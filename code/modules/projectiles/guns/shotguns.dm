@@ -1112,6 +1112,14 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/shotgun,
 		/obj/item/attachable/sling,
 	)
+	map_specific_decoration = FALSE
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi',
+		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/jungle/suit_slot.dmi'
+	)
+	//Someone was a hack and didn't port all the onmobs to the generic files
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -1205,8 +1213,17 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 
 /obj/item/weapon/gun/shotgun/pump/stock
-	starting_attachment_types = list(/obj/item/attachable/stock/shotgun)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
+	desc = "A classic Ithaca 37 hunting shotgun, complete with a traditional, albeit well-worn, wooden stock. The full-length barrel & magazine tube lets this fit six shells and one chambered."
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded/full_length
+	starting_attachment_types = list(/obj/item/attachable/shotgun_barrel)
+
+/obj/item/weapon/gun/shotgun/pump/stock/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/stock/shotgun/integratedstock = new(src)
+	integratedstock.flags_attach_features &= ~ATTACH_REMOVABLE
+	integratedstock.Attach(src)
+	update_attachable(integratedstock.slot)
+
 
 //-------------------------------------------------------
 

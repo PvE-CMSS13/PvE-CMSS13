@@ -5,7 +5,7 @@
 */
 
 /datum/ammo/rocket
-	name = "high explosive rocket"
+	name = "hypervelocity high explosive rocket"
 	icon_state = "missile"
 	ping = null //no bounce off.
 	sound_bounce = "rocket_ricochet"
@@ -17,9 +17,11 @@
 	accurate_range = 7
 	max_range = 11
 	damage = 15
-	shell_speed = AMMO_SPEED_TIER_2
+	shell_speed = AMMO_SPEED_TIER_5
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_VERY_SOFT_YELLOW
+	var/blast_power = 300
+	var/falloff_rate = 40
 
 /datum/ammo/rocket/New()
 	..()
@@ -32,28 +34,64 @@
 
 /datum/ammo/rocket/on_hit_mob(mob/mob, obj/projectile/projectile)
 	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
-		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
-	cell_explosion(get_turf(mob), 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+		mob.ex_act((blast_power*2), null, projectile.weapon_cause_data, 100)
+	cell_explosion(get_turf(mob), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, get_turf(mob))
 	smoke.start()
 
 /datum/ammo/rocket/on_hit_obj(obj/object, obj/projectile/projectile)
-	cell_explosion(get_turf(object), 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, get_turf(object))
 	smoke.start()
 
 /datum/ammo/rocket/on_hit_turf(turf/turf, obj/projectile/projectile)
-	cell_explosion(turf, 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
 
 /datum/ammo/rocket/do_at_max_range(obj/projectile/projectile)
-	cell_explosion(get_turf(projectile), 250, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
 	smoke.set_up(1, get_turf(projectile))
 	smoke.start()
 
+/datum/ammo/rocket/smoke
+	name = "hypervelocity smoke rocket"
+	flags_ammo_behavior = AMMO_ROCKET|AMMO_STRIKES_SURFACE
+	damage = 350
+	blast_power = 50
+	falloff_rate = 100
+
+/datum/ammo/rocket/smoke/on_hit_mob(mob/mob, obj/projectile/projectile)
+	cell_explosion(get_turf(mob), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	var/datum/effect_system/smoke_spread/bad/landingSmoke = new /datum/effect_system/smoke_spread/bad
+	landingSmoke.set_up(5, 0, get_turf(mob), null, 30)
+	landingSmoke.start()
+	landingSmoke = null
+
+
+/datum/ammo/rocket/smoke/on_hit_obj(obj/object, obj/projectile/projectile)
+	cell_explosion(get_turf(object), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	var/datum/effect_system/smoke_spread/bad/landingSmoke = new /datum/effect_system/smoke_spread/bad
+	landingSmoke.set_up(5, 0, get_turf(object), null, 30)
+	landingSmoke.start()
+	landingSmoke = null
+
+/datum/ammo/rocket/smoke/on_hit_turf(turf/turf, obj/projectile/projectile)
+	cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	var/datum/effect_system/smoke_spread/bad/landingSmoke = new /datum/effect_system/smoke_spread/bad
+	landingSmoke.set_up(5, 0, turf, null, 30)
+	landingSmoke.start()
+	landingSmoke = null
+
+/datum/ammo/rocket/smoke/do_at_max_range(obj/projectile/projectile)
+	cell_explosion(get_turf(projectile), blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+	var/datum/effect_system/smoke_spread/bad/landingSmoke = new /datum/effect_system/smoke_spread/bad
+	landingSmoke.set_up(5, 0, get_turf(projectile), null, 30)
+	landingSmoke.start()
+	landingSmoke = null
+
 /datum/ammo/rocket/ap
-	name = "anti-armor rocket"
+	name = "hypervelocity anti-armor rocket"
 	damage_falloff = 0
 	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
 
@@ -66,18 +104,20 @@
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
 	var/vehicle_slowdown_time = 2 SECONDS
+	blast_power = 200
+	falloff_rate = 50
 
 /datum/ammo/rocket/ap/on_hit_mob(mob/mob, obj/projectile/projectile)
 	var/turf/turf = get_turf(mob)
-	mob.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
+	mob.ex_act((blast_power*2), projectile.dir, projectile.weapon_cause_data, 100)
 	mob.apply_effect(3, WEAKEN)
 	mob.apply_effect(3, PARALYZE)
 	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
-		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
+		mob.ex_act((blast_power*3), null, projectile.weapon_cause_data, 100)
 	if(mob.mob_size >= MOB_SIZE_BIG) // Bonus vs BIG things
 		var/mob/living/alivent = mob
 		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
-	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
 
@@ -88,18 +128,18 @@
 		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
 		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Anti-Armor Rocket"))
 		mob.interior_crash_effect()
-		mob.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
+		mob.ex_act((blast_power*2), projectile.dir, projectile.weapon_cause_data, 100)
 	else
 		var/turf/turf = get_turf(object)
-		object.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
-		cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+		object.ex_act((blast_power*2), projectile.dir, projectile.weapon_cause_data, 100)
+		cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 		smoke.set_up(1, turf)
 		smoke.start()
 
 /datum/ammo/rocket/ap/on_hit_turf(turf/turf, obj/projectile/projectile)
 	var/hit_something = 0
 	for(var/mob/mob in turf)
-		mob.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
+		mob.ex_act((blast_power*2), projectile.dir, projectile.weapon_cause_data, 100)
 		mob.apply_effect(3, WEAKEN)
 		mob.apply_effect(3, PARALYZE)
 		hit_something = 1
@@ -107,13 +147,13 @@
 	if(!hit_something)
 		for(var/obj/object in turf)
 			if(object.density)
-				object.ex_act(400, projectile.dir, projectile.weapon_cause_data, 100)
+				object.ex_act((blast_power*2), projectile.dir, projectile.weapon_cause_data, 100)
 				hit_something = 1
 				continue
 	if(!hit_something)
-		turf.ex_act(150, projectile.dir, projectile.weapon_cause_data, 200)
+		turf.ex_act(blast_power, projectile.dir, projectile.weapon_cause_data, 200)
 
-	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
 
@@ -121,7 +161,7 @@
 	var/turf/turf = get_turf(projectile)
 	var/hit_something = 0
 	for(var/mob/mob in turf)
-		mob.ex_act(450, projectile.dir, projectile.weapon_cause_data, 100)
+		mob.ex_act((blast_power*3), projectile.dir, projectile.weapon_cause_data, 100)
 		mob.apply_effect(3, WEAKEN)
 		mob.apply_effect(3, PARALYZE)
 		hit_something = 1
@@ -129,12 +169,12 @@
 	if(!hit_something)
 		for(var/obj/object in turf)
 			if(object.density)
-				object.ex_act(150, projectile.dir, projectile.weapon_cause_data, 100)
+				object.ex_act(blast_power, projectile.dir, projectile.weapon_cause_data, 100)
 				hit_something = 1
 				break
 	if(!hit_something)
-		turf.ex_act(150, projectile.dir, projectile.weapon_cause_data)
-	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+		turf.ex_act(blast_power, projectile.dir, projectile.weapon_cause_data)
+	cell_explosion(turf, blast_power, falloff_rate, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
 
@@ -142,6 +182,9 @@
 	name = "anti-tank rocket"
 	damage = 200
 	vehicle_slowdown_time = 5 SECONDS
+	shell_speed = AMMO_SPEED_TIER_3 //Someone might manage to hit a rest hotkey in time at this speed, who knows
+	blast_power = 100
+	falloff_rate = 100
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
 	if(istype(object, /obj/vehicle/multitile))
@@ -151,7 +194,7 @@
 		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Anti-Tank Rocket"))
 		mob.interior_crash_effect()
 		var/turf/turf = get_turf(mob.loc)
-		mob.ex_act(150, projectile.dir, projectile.weapon_cause_data, 100)
+		mob.ex_act(blast_power, projectile.dir, projectile.weapon_cause_data, 100)
 		smoke.set_up(1, turf)
 		smoke.start()
 		return
@@ -190,7 +233,7 @@
 	max_range = 32
 	damage = 250
 	damage_var_high = 120
-	shell_speed = AMMO_SPEED_TIER_6
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	vehicle_slowdown_time = 15 SECONDS
 	penetration= ARMOR_PENETRATION_TIER_10
 

@@ -68,6 +68,7 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 		return
 	burning = TRUE
 	var/spread_time = rand(75, 150)
+	layer = ABOVE_TABLE_LAYER
 	if(!(fire_flag & FLORA_BURN_NO_SPREAD))
 		addtimer(CALLBACK(src, PROC_REF(spread_fire)), spread_time)
 	addtimer(CALLBACK(src, PROC_REF(burn_up)), spread_time + 5 SECONDS)

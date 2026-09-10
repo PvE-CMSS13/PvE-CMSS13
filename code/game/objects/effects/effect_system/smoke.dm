@@ -348,7 +348,10 @@
 	creature.apply_damage(0.75, BRAIN)
 	creature.apply_damage(1, OXY)
 	lungs.take_damage(1)
-	to_chat(creature, SPAN_DANGER("Your body is going numb, almost as if paralyzed!"))
+	if(xeno_creature)
+		to_chat(xeno_creature, SPAN_XENODANGER("You are struggling to move, it's as if you're paralyzed!"))
+	else
+		to_chat(creature, SPAN_DANGER("Your body is going numb, almost as if paralyzed!"))
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
 	if(prob(60 + round(amount*15))) //Highly likely to drop items due to arms/hands seizing up
@@ -370,11 +373,86 @@
 		creature.apply_damage(20, BRUTE)
 		xeno_creature.AddComponent(/datum/component/status_effect/interference, 10, 10)
 		xeno_creature.blinded = TRUE
+		var/stun_chance = 50
+		if(xeno_affecting)
+			stun_chance = 65
+		if(prob(stun_chance))
+			creature.KnockDown(2)
+
 
 /obj/effect/particle_effect/smoke/cn20/contact_eyes(mob/living/carbon/creature)
 	if(..())
 		return
 	to_chat(creature, SPAN_DANGER("Your eyes sting. You can't see!"))
+	human_creature.SetEyeBlind(round(effect_amt/3))
+	eyes.take_damage(1)
+
+/////////////////////////////////////////////
+// Cryogenic Neon Gas
+/////////////////////////////////////////////
+
+/obj/effect/particle_effect/smoke/cryo
+	name = "superchilled neon gas"
+	smokeranking = SMOKE_RANK_HIGH
+	color = "#b1d4e2"
+	xeno_affecting = TRUE
+	opacity = FALSE
+	alpha = 50
+	time_to_live = 20
+	stun_chance = 20
+	var/effect_amt
+
+/obj/effect/particle_effect/smoke/cryo/Move()
+	. = ..()
+	for(var/mob/living/carbon/creature in get_turf(src))
+		affect(creature)
+
+/obj/effect/particle_effect/smoke/cryo/affect(mob/living/carbon/creature)
+	..()
+	effect_amt = round(6 + amount*6)
+
+/obj/effect/particle_effect/smoke/cryo/inhalation(mob/living/carbon/creature)
+	if(..())
+		return
+	creature.apply_damage(10, BURN)
+	creature.apply_damage(2, OXY)
+	lungs.take_damage(2)
+	creature.reagents.add_reagent("neon", 5)
+
+	if(xeno_creature)
+		to_chat(xeno_creature, SPAN_XENODANGER("You are struggling to move, it's as if your chitin is freezing solid!"))
+	else
+		to_chat(creature, SPAN_DANGER("Your body is going numb, moving becoming much more difficult!"))
+	if(prob(stun_chance))
+		creature.apply_effect(1, SUPERSLOW)
+	human_creature.temporary_slowdown = max(human_creature.temporary_slowdown, 4) //One tick every two second
+	human_creature.recalculate_move_delay = TRUE
+	if(!xeno_creature && creature.coughedtime != 1 && !creature.stat) //Coughing/gasping
+		creature.coughedtime = 1
+		if(prob(50))
+			creature.emote("cough")
+		else
+			creature.emote("gasp")
+		addtimer(VARSET_CALLBACK(creature, coughedtime, 0), 1.5 SECONDS)
+
+/obj/effect/particle_effect/smoke/cryo/contact_skin(mob/living/carbon/creature)
+	if(..())
+		return
+	if(isxeno(creature))
+		creature.apply_damage(20, BURN)
+		creature.reagents.add_reagent("neon", 2)
+		xeno_creature.apply_effect(1, SUPERSLOW)
+		var/stun_chance = 20
+		if(xeno_affecting)
+			stun_chance = 20
+		if(prob(stun_chance))
+			creature.KnockDown(2)
+
+/obj/effect/particle_effect/smoke/cryo/contact_eyes(mob/living/carbon/creature)
+	if(..())
+		return
+	to_chat(creature, SPAN_DANGER("Your eyes sting before you lose all feeling there and the world darkens. You can't see!"))
+	creature.reagents.add_reagent("neon", 1)
 	human_creature.SetEyeBlind(round(effect_amt/3))
 	eyes.take_damage(1)
 
@@ -400,7 +478,9 @@
 	if(..())
 		return
 	creature.hallucination += 15
-	creature.druggy += 1
+	creature.confused += 1
+	creature.dizziness += 5
+	creature.slurring += 1
 
 	if(prob(stun_chance))
 		creature.apply_effect(1, WEAKEN)
@@ -426,8 +506,8 @@
 		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
 	else
 		to_chat(creature, SPAN_WARNING("You feel the sting of the tear gas!"))
-		creature.AdjustEyeBlur(25)
-		creature.AdjustEyeBlind(10)
+		creature.AdjustEyeBlur(2)
+		creature.AdjustEyeBlind(1)
 
 	creature.emote("scream")
 	creature.apply_effect(3, SLOW)
@@ -737,6 +817,9 @@
 
 /datum/effect_system/smoke_spread/tear
 	smoke_type = /obj/effect/particle_effect/smoke/tear
+
+/datum/effect_system/smoke_spread/cryo
+	smoke_type = /obj/effect/particle_effect/smoke/cryo
 
 // XENO SMOKES
 

@@ -140,6 +140,17 @@
 	chemclass = CHEM_CLASS_UNCOMMON
 	properties = list(PROPERTY_HALLUCINOGENIC = 8)
 
+/datum/reagent/toxin/neon
+	name = "Hyperchilled Neon"
+	id = "neon"
+	description = "Supercooled liquid neon, aerosolized for aerial dispersion. Inadvisable to come into contact with unless equipped with adequate PPE."
+	reagent_state = GAS
+	color = "#ffffff10"
+	overdose = VHIGH_REAGENTS_OVERDOSE
+	overdose_critical = VHIGH_REAGENTS_OVERDOSE_CRITICAL
+	chemclass = CHEM_CLASS_UNCOMMON
+	properties = list(PROPERTY_HYPOTHERMIC = 8, PROPERTY_HYPOXEMIC = 0.5)
+
 //Reagents used for plant fertilizers.
 /datum/reagent/toxin/fertilizer
 	name = "fertilizer"

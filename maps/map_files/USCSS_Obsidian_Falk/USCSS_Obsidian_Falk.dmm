@@ -1556,6 +1556,16 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"aeu" = (
+/obj/structure/closet/secure_closet{
+	name = "team leader locker";
+	req_access_txt = "209;211"
+	},
+/obj/item/device/binoculars/range/designator,
+/obj/item/device/whistle,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "aev" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
@@ -8754,16 +8764,16 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axd" = (
@@ -8773,9 +8783,7 @@
 	},
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/smartgun_battery,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
@@ -8789,6 +8797,8 @@
 	light_power = 0.7
 	},
 /obj/item/smartgun_battery,
+/obj/item/clothing/glasses/night/m56_goggles/pmc,
+/obj/item/clothing/suit/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axe" = (
@@ -9098,13 +9108,11 @@
 "ayj" = (
 /obj/structure/closet/secure_closet{
 	name = "heavy weapons specialist locker";
-	req_access_txt = "208;217"
+	req_access_txt = "209;217"
 	},
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/smartgun_battery,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
@@ -9114,6 +9122,8 @@
 /obj/item/ammo_magazine/smartgun,
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/smartgun_battery,
+/obj/item/clothing/glasses/night/m56_goggles/pmc,
+/obj/item/clothing/suit/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayk" = (
@@ -22216,7 +22226,10 @@
 /area/firefly/supply)
 "pgD" = (
 /obj/structure/medical_supply_link/green,
-/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	req_one_access = list(202);
+	hackable = 0
+	},
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
 "pgE" = (
@@ -42218,7 +42231,7 @@ atf
 axq
 aeg
 axl
-axe
+aeu
 axe
 ayj
 axd
@@ -43678,9 +43691,9 @@ rNE
 sQd
 rNE
 aev
-rNE
 sQd
 rNE
+sQd
 aev
 siC
 aei

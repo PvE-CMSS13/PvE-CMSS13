@@ -208,7 +208,6 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 /obj/item/storage/box/packet/rmc/mini
 	name = "\improper L103A1 20mm HE grenade packet"
 	desc = "It contains eight L103A1 20mm HE grenades. Handle with care."
-	w_class = SIZE_LARGE //No more bag-storing for these
 	storage_slots = 8
 	icon_state = "rmc_packet"
 	packet_icon = "bfab-p"

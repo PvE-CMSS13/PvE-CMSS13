@@ -243,6 +243,10 @@
 	bonus_overlay = "mac15_ext"
 	max_rounds = 50
 
+/obj/item/ammo_magazine/smg/mac15/extended/terror
+	name = "\improper MAC-15 cursed magazine (9mm)"
+	default_ammo = /datum/ammo/xeno_container
+
 //-------------------------------------------------------
 // the real UZI
 
@@ -252,7 +256,7 @@
 /obj/item/ammo_magazine/smg/uzi
 	name = "\improper UZI magazine (9x21mm)"
 	desc = "A magazine for the UZI. Seems pretty small, huh? Anything larger caused feeding errors."
-	caliber = "9x12mm"
+	caliber = "9x21mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "uzi"
 	max_rounds = 25

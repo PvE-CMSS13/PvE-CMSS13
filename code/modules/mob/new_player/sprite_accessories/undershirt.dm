@@ -132,7 +132,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
-	icon_state = "telnyashka_blue"
+	icon_state = "telnyashka_black"
 	gender = NEUTER
 	restricted = TRUE
 
@@ -145,6 +145,12 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 /datum/sprite_accessory/undershirt/telnyashka/interior
 	name = "Interior Forces Telnyashka"
 	icon_state = "telnyashka_red"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/telnyashka/paratrooper
+	name = "Airborne Telnyashka"
+	icon_state = "telnyashka_blue"
 	gender = NEUTER
 	restricted = TRUE
 

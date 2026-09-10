@@ -22,7 +22,7 @@
 	assignment = JOB_PMCPLAT_LEADER
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_LEADER
-	skills = /datum/skills/pmc/director
+	skills = /datum/skills/SL
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
@@ -32,7 +32,7 @@
 	assignment = JOB_PMCPLAT_FTL
 	idtype = /obj/item/card/id/pmc
 	rank = JOB_SQUAD_TEAM_LEADER
-	skills = /datum/skills/pmc/SL
+	skills = /datum/skills/tl
 
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"

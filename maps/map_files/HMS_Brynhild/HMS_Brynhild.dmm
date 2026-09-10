@@ -3120,9 +3120,13 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/closet/secure_closet/rmc_section_leader{
+/obj/structure/closet/secure_closet/rmc_troop_sergeant{
 	pixel_y = 15;
-	pixel_x = -5
+	pixel_x = -8
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -8;
+	pixel_y = 31
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3186,13 +3190,9 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
 "gn" = (
-/obj/structure/closet/secure_closet/rmc_troop_sergeant{
+/obj/structure/closet/secure_closet/rmc_section_leader{
 	pixel_y = 15;
-	pixel_x = 6
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -14;
-	pixel_y = 23
+	pixel_x = -8
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3272,14 +3272,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"gx" = (
-/obj/structure/surface/rack{
-	pixel_y = -18;
-	pixel_x = -16;
-	layer = 2.81
-	},
-/turf/closed/wall/almayer/aicore/white/hull,
-/area/hms_brynhild/armoury)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
@@ -5310,6 +5302,18 @@
 	},
 /turf/open/floor/elevatorshaft,
 /area/hms_brynhild/lower_hangar)
+"kB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/rmc_section_leader{
+	pixel_y = -15;
+	pixel_x = -8;
+	name = "section 2IC locker";
+	req_access = list(306,298)
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury)
 "kC" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -12920,13 +12924,13 @@
 	pixel_x = -5;
 	pixel_y = 8
 	},
-/obj/item/device/binoculars/range/designator{
-	pixel_x = 7;
-	pixel_y = 4
-	},
 /obj/item/device/flight_laptop{
 	pixel_x = -7;
 	pixel_y = 1
+	},
+/obj/item/device/binoculars/range/rmc{
+	pixel_x = 8;
+	pixel_y = 7
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/colour_office)
@@ -18378,6 +18382,10 @@
 /obj/item/facepaint/sniper{
 	pixel_x = 6;
 	pixel_y = -2
+	},
+/obj/item/device/binoculars/range/rmc{
+	pixel_x = -9;
+	pixel_y = 3
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -28122,7 +28130,7 @@ WY
 ZF
 sw
 gi
-AI
+kB
 sw
 sw
 sw
@@ -28262,7 +28270,7 @@ uO
 ny
 WY
 sf
-gx
+sw
 gn
 bm
 sw

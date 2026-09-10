@@ -868,8 +868,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/specialist
 	name = "\improper B18 helmet"
 	desc = "Helmet and faceplate component of the B18 armor system. Nanobonded carbonfiber laminated with ultrahigh molecular density polymer, with an integral rebreather and heads up display."
-	icon_state = "grenadier_helmet"
-	item_state = "grenadier_helmet"
+	icon_state = "pyro_helmet"
+	item_state = "pyro_helmet"
 	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
@@ -879,7 +879,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	unacidable = TRUE
 	anti_hug = 6
 	force = 20
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
 
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"
@@ -1035,7 +1036,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
-	name = "\improper Kame combat helmet"
+	name = "\improper Mk10 combat helmet"
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD
@@ -1048,6 +1049,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
 	name = "\improper Mk12 marksman helmet"
@@ -1064,14 +1067,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	name = "\improper Mk16 tactical helmet"
-	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
+	desc = "Standard issue high molecular density polymer enclosed combat helmet of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "heavy_wy"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
-	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "Standard issue high molecular density polymer enclosed combat helmet of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "heavy_rmc"
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc
@@ -1931,19 +1936,44 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
+/obj/item/clothing/head/helmet/space/pressure/rmc
+	name = "\improper Ross-Smith Mk4 pressure helmet"
+	desc = "A heavy space helmet, designed to be worm alongside the Ross-Smith Mk4 pressure suit utilized by the Three World Empires Royal Marine Commando forces. Makes usage of camera systems and an internal display screen, rather than a toughened glass visor for visibility."
+	helmet_color = "helmet_rmc"
+	contained_sprite = TRUE
+	item_state = "pressure_helmet_rmc"
+	icon_state = "pressure_helmet_rmc"
+	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
+
 //=USASF & ARMY=\\
 
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
-	name = "\improper MK25 para-rescue helmet"
+	name = "\improper M50-N para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
-	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	contained_sprite = TRUE
+	item_state = "para_helmet"
+	icon_state = "para_helmet"
+	icon = 'icons/mob/humans/onmob/contained/navy_helmets.dmi'
 
 /obj/item/clothing/head/helmet/marine/rto/navy
-	name = "\improper M12 pattern naval-deployment helmet"
-	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship."
+	name = "\improper M12-N pattern helmet"
+	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets with their own variant of the M12 helmet. Issued to personnel whose duties saw them at risk of suffering cranial injuries from more than low-hanging bulkhead coaming."
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	contained_sprite = TRUE
+	item_state = "navy_helmet"
+	icon_state = "navy_helmet"
+	icon = 'icons/mob/humans/onmob/contained/navy_helmets.dmi'
+
+/obj/item/clothing/head/helmet/marine/MP/navy
+	name = "\improper M09-N pattern MAA helmet"
+	desc = "A variant of the M09 Pattern Helmet worn by Masters-At-Arms of the USASF. In the process of being phased out, this bucket will still keep your brains intact as well as the newer models."
+	icon_state = "u_mp_helmet"
+	item_state = "u_mp_helmet"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	built_in_visors = list(new /obj/item/device/helmet_visor/security)
 
 /obj/item/clothing/head/helmet/marine/rto/army
 	name = "\improper Personal Head Armor System helmet"

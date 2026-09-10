@@ -131,12 +131,13 @@
 //================================================
 */
 /obj/item/explosive/grenade/high_explosive/frag
-	name = "\improper M40 HEFA grenade"
-	desc = "High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in the M92 Launcher, or thrown by hand."
+	name = "\improper M26 HEFA grenade"
+	desc = "High-Explosive Fragmentation/Antipersonnel. An aging, but still effective, fragmentation grenade that was the first offering in the 30mm grenade market. Capable of being loaded in compatible launchers, or thrown by hand."
 	icon_state = "grenade_hefa"
 	item_state = "grenade_hefa"
+	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
 	explosion_power = 40
-	shrapnel_count = 48
+	shrapnel_count = 24
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
 /obj/item/explosive/grenade/high_explosive/frag/toy
@@ -397,7 +398,27 @@
 
 /obj/item/explosive/grenade/incendiary/impact/upp/launch_impact(atom/hit_atom)
 	..()
-	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
+	var/detonate = TRUE
+	var/turf/hit_turf = null
+	if(isobj(hit_atom) && !rebounding)
+		detonate = FALSE
+	if(isturf(hit_atom))
+		hit_turf = hit_atom
+		if(hit_turf.density && !rebounding)
+			detonate = FALSE
+	if(active && detonate) // Active, and we reached our destination.
+		var/angle = dir2angle(last_move_dir)
+		var/turf/target = locate(x + sin(angle)*radius, y + cos(angle)*radius, z)
+		if(target)
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, target)
+			cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
+		else
+			//Not stellar, but if we can't find a direction, fall back to HIDP behaviour.
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, target)
+			cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
+		playsound(src, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
+		qdel(src)
+
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
@@ -1041,6 +1062,42 @@
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
 	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 20)
 	LSD_gas.start()
+	new spent_case(get_turf(src))
+	qdel(src)
+
+/*
+//================================================
+			Cryogenic Grenades
+//================================================
+*/
+/obj/item/explosive/grenade/cryo
+	name = "\improper NFG-1913 cryogenic canister grenade"
+	desc = "A canister grenade of aerosolized liquid neon with sufficient thermal cladding to prevent freezer-burn whilst handling. It is set to detonate in 4 seconds."
+	icon_state = "flashbang2"//temp icon
+	det_time = 40
+	item_state = "grenade_phos_clf"//temp icon
+	caliber = "non-standard"
+	underslug_launchable = FALSE
+	harmful = TRUE
+	antigrief_protection = FALSE
+	arm_sound = 'sound/weapons/pinpull.ogg'
+	var/datum/effect_system/smoke_spread/cryo/cryo_gas
+	var/cryo_gas_radius = 6
+	spent_case = /obj/item/trash/grenade/gas
+
+/obj/item/explosive/grenade/cryo/Initialize()
+	. = ..()
+	cryo_gas = new /datum/effect_system/smoke_spread/cryo
+	cryo_gas.attach(src)
+
+/obj/item/explosive/grenade/cryo/Destroy()
+	QDEL_NULL(cryo_gas)
+	return ..()
+
+/obj/item/explosive/grenade/cryo/prime()
+	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
+	cryo_gas.set_up(cryo_gas_radius, 0, get_turf(src), null, 20)
+	cryo_gas.start()
 	new spent_case(get_turf(src))
 	qdel(src)
 

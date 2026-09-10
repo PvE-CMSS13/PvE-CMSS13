@@ -727,17 +727,17 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/redemption_stimulant(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/speed_stimulant(src)
 
+/obj/item/storage/pouch/medical/socmed/not_op
+	storage_slots = 7
+
 /obj/item/storage/pouch/medical/socmed/not_op/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
 	new /obj/item/stack/medical/splint(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
-	new /obj/item/tool/extinguisher/mini(src)
 
 /obj/item/storage/pouch/medical/socmed/dutch
 	name = "\improper Dutch's Medical Pouch"
@@ -950,6 +950,22 @@
 	new /obj/item/storage/pill_bottle/imialk(src)
 	new /obj/item/reagent_container/blood/OMinus(src)
 
+/obj/item/storage/pouch/medkit/full/socmed
+	name = "tactical medical kit pouch"
+	desc = "A heavy pouch containing everything one needs to get themselves back on their feet. Quite the selection."
+	icon_state = "socmed"
+	storage_slots = 9
+
+/obj/item/storage/pouch/medkit/full/socmed/fill_preset_inventory()
+	new /obj/item/stack/medical/splint/nano(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+	new /obj/item/roller(src)
+	new /obj/item/bodybag/cryobag(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/pouch/pressurized_reagent_canister
 	name = "Pressurized Reagent Canister Pouch"
@@ -1351,13 +1367,13 @@
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool/hugetank(src)
 	new /obj/item/tool/extinguisher/mini(src)
-	new /obj/item/stack/cable_coil(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 
 /obj/item/storage/pouch/tools/mortar/fill_preset_inventory()
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/wirecutters(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/tactical/full/fill_preset_inventory()

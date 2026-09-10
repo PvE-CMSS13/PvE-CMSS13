@@ -228,8 +228,10 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		list("ENGINEERING SET (MANDATORY)", 0, null, null, null),
 		list("Essential Engineering Set", 0, /obj/effect/essentials_set/rmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
+/* //Commented out until I get around to making the hammer function differently
 		list("HEAVY-DUTY BREACHING EQUIPMENT (CHOOSE 1)", 0, null, null, null),
 		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+*/
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -267,6 +269,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		/obj/item/storage/belt/gun/mortarbelt/rmc,
 		/obj/item/device/binoculars/range,
 		/obj/item/tool/wrench,
+		/obj/item/tool/screwdriver,
+		/obj/item/device/multitool,
 	)
 
 /obj/effect/essentials_set/rmcgl

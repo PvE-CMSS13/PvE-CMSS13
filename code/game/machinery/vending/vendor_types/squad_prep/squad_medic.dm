@@ -133,7 +133,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/imp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Medical Satchel", 0, /obj/item/storage/backpack/marine/satchel/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
@@ -255,7 +255,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 		list("M3-R Armor", 0, /obj/item/clothing/suit/marine/rto/forecon, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/standard, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/imp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Medical Satchel", 0, /obj/item/storage/backpack/marine/satchel/medic/standard, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),

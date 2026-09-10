@@ -170,7 +170,7 @@
 
 /obj/structure/closet/secure_closet/rmc_troop_sergeant/Initialize()
 	. = ..()
-	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/binoculars/range/rmc(src)
 	new /obj/item/storage/backpack/rmc/frame(src)
 	new /obj/item/storage/firstaid/adv(src)
 	new /obj/item/ammo_box/magazine/nsg23(src)
@@ -182,7 +182,7 @@
 
 /obj/structure/closet/secure_closet/rmc_section_leader/Initialize()
 	. = ..()
-	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/binoculars/range/rmc(src)
 	new /obj/item/device/whistle(src)
 
 /obj/structure/closet/secure_closet/rmc_smartgunner

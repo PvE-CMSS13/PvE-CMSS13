@@ -308,6 +308,10 @@
 	w_class = SIZE_TINY
 	gun_type = /obj/item/weapon/gun/pistol/clfpistol
 
+/obj/item/ammo_magazine/pistol/clfpistol/terror
+	name = "Type 18 cursed magazine (.50)"
+	default_ammo = /datum/ammo/xeno_container/crusher
+
 //-------------------------------------------------------
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
 // rebalanced - singlefire, very strong bullets but slow to fire and heavy recoil

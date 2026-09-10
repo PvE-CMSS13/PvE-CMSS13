@@ -471,7 +471,7 @@
 
 /obj/item/clothing/accessory/patch/army/armor
 	name = "Army Armor patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Regiment."
 	icon_state = "armorpatch"
 
 /obj/item/clothing/accessory/patch/cmb/brazil_police
@@ -1042,6 +1042,7 @@
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
+	storage_slots = 4
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1679,6 +1680,17 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/small/marsoc
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/marsoc/fill_preset_inventory()
+	new /obj/item/storage/box/mre/fsr(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
@@ -1691,7 +1703,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
@@ -1700,7 +1712,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
@@ -1710,7 +1722,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
 //===
@@ -1789,9 +1801,22 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
-	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
+	desc = "A large pouch with M3-R Pattern webbing clips designed to house medical equipment for Corpsmen attached to FORECON units, where resupply isn't readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
@@ -1802,11 +1827,15 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6
 	can_hold = list(
-		/obj/item/storage/surgical_case/regular,
-		/obj/item/reagent_container/blood,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/storage/surgical_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
-		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/blood,
+		/obj/item/bodybag,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m56
@@ -1945,3 +1974,39 @@
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
+//===========================//CUSTOM PMC ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc
+	name = "\improper Tactical Webbing"
+	icon_state = "s_m3webbingsmall"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to W-Y tactical armor. This one is the slimmed down model designed for general purpose storage."
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/pmc
+	name = "\improper Tactical Magazine Webbing"
+	desc = "A set of webbing pouches that can carry multiple magazines. Comes with clips to mount to the tactical armor system used by W-Y PMCs."
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/sniper/elite,
+		/obj/item/ammo_magazine/pistol/vp78,
+		/obj/item/ammo_magazine/pistol/vp70,
+		/obj/item/ammo_magazine/smg/m39,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/pmc
+	name = "\improper Tactical Grenade Webbing"
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades, modified to mount comfortably to the W-Y tactical armor."
+	icon_state = "s_m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade

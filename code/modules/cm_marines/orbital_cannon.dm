@@ -608,6 +608,31 @@ GLOBAL_LIST_EMPTY(orbital_cannon_cancellation)
 	sleep(clear_delay)
 	qdel(src)
 
+/obj/structure/ob_ammo/warhead/cryo
+	name = "\improper 'Top Hat' Chemical Weapon Warhead (Cryogenic Neon)"
+	warhead_kind = "cryo"
+	icon_state = "ob_warhead_3"
+	var/clear_power = 200
+	var/clear_falloff = 400
+	var/clear_delay = 3
+
+/obj/structure/ob_ammo/warhead/cryo/warhead_impact(turf/target)
+	. = ..()
+	if (!.)
+		return
+
+	new /obj/effect/overlay/temp/blinking_laser (target)
+	sleep(10)
+	var/datum/cause_data/cause_data = create_cause_data(initial(name), source_mob)
+	cell_explosion(target, clear_power, clear_falloff, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	spawn(5)
+		var/datum/effect_system/smoke_spread/cryo/terror = new()
+		terror.set_up(18, 0, target, null)
+		terror.start()
+	handle_ob_shake(target)
+
+	sleep(clear_delay)
+	qdel(src)
 
 /obj/structure/ob_ammo/ob_fuel
 	name = "solid fuel"

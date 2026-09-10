@@ -169,14 +169,14 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/verticalgrip)
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash
 	random_spawn_chance = 0
 
 /obj/item/weapon/gun/smg/m39/elite/rmc/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SMG2)
-	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_delay(FIRE_DELAY_TIER_SG)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT

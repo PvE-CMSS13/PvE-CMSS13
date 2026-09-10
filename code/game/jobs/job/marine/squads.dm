@@ -408,6 +408,7 @@
 
 /datum/squad/marine/pmc/secondary
 	name = SQUAD_PMCPLT_2
+	equipment_color = "#67d692"
 	chat_color = "#0fc777"
 	minimap_color = MINIMAP_SQUAD_ECHO
 	usable = FALSE
@@ -703,6 +704,10 @@
 			assignment = JOB_MARINE_RAIDER
 			if(name == JOB_MARINE_RAIDER)
 				assignment = "Special Operator"
+		if(JOB_MARINE_RAIDER_MED)
+			assignment = JOB_MARINE_RAIDER_MED
+			if(name == JOB_MARINE_RAIDER_MED)
+				assignment = "Special Amphibious Reconnaissance Corpsman"
 		if(JOB_MARINE_RAIDER_SL)
 			assignment = JOB_MARINE_RAIDER_SL
 			if(name == JOB_MARINE_RAIDER)

@@ -250,7 +250,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 2)
+	properties = list(PROPERTY_NEUROPEUTIC = 1)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -261,19 +261,19 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 2)
+	properties = list(PROPERTY_OCULOPEUTIC = 1)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
 	id = "peridaxon"
-	description = "Prevents symptoms caused by damaged internal organs while in the bloodstream, but does not fix the organ damage. Recommended for patients awaiting internal organ surgery. Overdosing on peridaxon will cause internal tissue damage."
+	description = "Mitigates symptoms caused by damaged internal organs when present in the bloodstream whilst also slowly repairing the affected organs. Recommended for patients awaiting internal organ surgery. Overdosing on peridaxon will cause internal tissue damage."
 	reagent_state = LIQUID
 	color = "#C845DC"
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 40 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ORGANSTABILIZE = 4)
+	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
 
 /datum/reagent/medical/bicaridine // yes it cures IB, it's located in some other part of wound code for whatever reason
 	name = "Bicaridine"

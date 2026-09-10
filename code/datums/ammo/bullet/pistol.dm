@@ -97,6 +97,7 @@
 	name = "electrostatic pistol bullet"
 	sound_override = null
 	damage = 15
+	stamina_damage = 35
 
 /datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
 	slowdown(entity, bullet)
@@ -116,6 +117,10 @@
 	shell_speed = AMMO_SPEED_TIER_5
 	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special/New()
+	..()
+	RegisterSignal(src, COMSIG_AMMO_POINT_BLANK, PROC_REF(handle_battlefield_execution))
 
 /datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()

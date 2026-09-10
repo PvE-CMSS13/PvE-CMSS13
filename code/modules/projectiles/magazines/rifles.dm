@@ -544,6 +544,12 @@
 	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+/obj/item/ammo_magazine/rifle/boltaction/vulture/terror
+	name = "\improper M707 cursed magazine (20x102mm)"
+	desc = "A magazine for the M707 anti-matieriel rifle. Contains two... Something, inside."
+	default_ammo = /datum/ammo/xeno_container/king
+	max_rounds = 2
+
 //=ROYAL MARINES=\\
 
 /obj/item/ammo_magazine/rifle/rmc_f90

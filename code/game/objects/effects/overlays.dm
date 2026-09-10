@@ -218,6 +218,11 @@
 	icon = 'icons/obj/items/weapons/projectiles.dmi'
 	icon_state = "laser_target3"
 
+/obj/effect/overlay/temp/blinking_laser/invis
+	light_range = 0
+	effect_duration = 1
+	invisibility = INVISIBILITY_LEVEL_ONE
+
 /obj/effect/overlay/temp/plasma_impact
 	name = "plasma impact"
 	icon = 'icons/effects/effects.dmi'

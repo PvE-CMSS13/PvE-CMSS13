@@ -10562,10 +10562,6 @@
 	pixel_x = -9;
 	layer = 3.01
 	},
-/obj/item/storage/firstaid/softpack{
-	pixel_y = -5;
-	pixel_x = -11
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "aIv" = (

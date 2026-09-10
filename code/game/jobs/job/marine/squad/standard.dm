@@ -15,10 +15,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/private
 	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/lance_corporal
 	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL")
-
-/datum/job/marine/standard/on_config_load()
-	entry_message_body = "You are a rank-and-file <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_MARINE_QUICKSTART]'>Soldier of your standing army</a>, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Ooh-rah!<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
-	return ..()
+	entry_message_body = "You are a rank-and-file Soldier of your standing army, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Ooh-rah!<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
 /datum/job/marine/standard/set_spawn_positions(count)
 	spawn_positions = max((floor(count * STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO)), 8)

@@ -11,7 +11,7 @@
 	name = "\improper PDT locator tube"
 	desc = "The second half of the Personal Data Transmitter Bracelet/Locator Tube Set, also known as a PDT/L. When activated, this device attempts to locate the paired Personal Data Transmitter Bracelet. They both share a serial number for ease of detection in case of mixup."
 	icon_state = "pdt_locator_tube"
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY
 
 	var/obj/item/clothing/accessory/wrist/pdt_bracelet/linked_bracelet
 	var/obj/item/cell/crap/battery

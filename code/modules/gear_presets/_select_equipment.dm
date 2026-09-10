@@ -1742,6 +1742,14 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 
+/datum/equipment_preset/proc/add_rmc_md(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/md_chance = rand(1,3)
+	switch(md_chance)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
+
 /datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
@@ -1852,3 +1860,19 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/glasses/sunglasses/aviator,
 	)
 	new_human.equip_to_slot_or_del(new helmeteyewearpath, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_army_eyewear(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/eyewearpath = rand(1,8)
+	switch(eyewearpath)
+		if(1, 2, 3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
+		if(4, 5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/classic, WEAR_EYES)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator, WEAR_EYES)
+		if(8)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)

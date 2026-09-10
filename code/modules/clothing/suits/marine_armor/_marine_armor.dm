@@ -565,7 +565,7 @@
 
 /obj/item/clothing/suit/storage/marine/M3G
 	name = "\improper M3-G4 grenadier armor"
-	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM Grenadiers."
+	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM marines handling copious quantities of explosive material."
 	icon_state = "grenadier"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
@@ -574,7 +574,7 @@
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
@@ -948,6 +948,113 @@
 	. = ..()
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
+
+//Specialist custom-armors\\
+
+/obj/item/clothing/suit/marine/M3G
+	name = "\improper M3-G4 grenadier armor"
+	desc = "A custom set of M3 armor packed to the brim with padding, plating, and every form of ballistic protection under the sun. Used exclusively by USCM forces who handle copious quantities of explosive material in the field."
+	icon_state = "grenadier"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_item = NO_CRYO_STORE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	specialty = "M3-G4 grenadier"
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+	unacidable = TRUE
+	light_range = 5
+
+/obj/item/clothing/suit/marine/specialist
+	name = "\improper B18 defensive armor"
+	desc = "A heavy, power-assisted set of armor plates for when you really, really need to not die horribly. Slows you down though, even moreso when the internal power cell runs out.\nComes with two vials of potent medication in the arm-guards that can be injected as needed. It can't mount supplementary webbing due to the sheer bulk, however."
+	contained_sprite = TRUE
+	item_state = "xarmor"
+	icon_state = "xarmor"
+	icon = 'icons/mob/humans/onmob/contained/b18_armor.dmi'
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_marine_armor = ARMOR_LAMP_OVERLAY
+	light_range = 4
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PAINT)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_PAINT)
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	unacidable = TRUE
+	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/b18_armor/inject_chemicals)
+	var/injections = 2
+	/// 1 means the player overdosed with OD_OFF mode. 2 means the plate adjusted the chemicals injected.
+	var/warning_type = FALSE
+	var/list/chemicals_to_inject = list(
+		"oxycodone" = 20,
+		"bicaridine" = 30,
+		"kelotane" = 30,
+		"meralyne" = 15,
+		"dermaline" = 15,
+		"inaprovaline" = 30,
+	)
+
+//Action buttons
+/datum/action/item_action/specialist/b18_armor/inject_chemicals
+	ability_primacy = SPEC_PRIMARY_ACTION_1
+
+/datum/action/item_action/specialist/b18_armor/inject_chemicals/New(Target, obj/item/holder)
+	. = ..()
+	name = "Inject Emergency Vial"
+	action_icon_state = "plate_research"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/obj/items/items.dmi', button, action_icon_state)
+
+/datum/action/item_action/specialist/b18_armor/inject_chemicals/action_activate()
+	. = ..()
+	var/obj/item/clothing/suit/marine/specialist/b18 = holder_item
+	b18.inject_chemicals()
+
+/obj/item/clothing/suit/marine/specialist/verb/inject_chemicals()
+	set name = "Inject Emergency Vial"
+	set desc = "Use the internal vials of medication to dose yourself."
+	set category = "Object"
+	set src in usr
+
+	if(!ishuman(usr))
+		return
+	var/mob/living/carbon/human/wearer = usr
+	if(wearer.wear_suit != src)
+		to_chat(wearer, SPAN_WARNING("You must be wearing the B18 defensive armor to activate the injector system!"))
+		return
+
+	var/current_injections = injections
+	if(injections <= 0)
+		to_chat(wearer, SPAN_DANGER("[src]'s inner reserve is empty, it can't provide you anymore medication!"))
+		return
+	for(var/chemical in chemicals_to_inject)
+		var/datum/reagent/reag = GLOB.chemical_reagents_list[chemical]
+		if(wearer.reagents.get_reagent_amount(chemical) + chemicals_to_inject[chemical] > reag.overdose)
+			to_chat(wearer, SPAN_DANGER("You hold the two buttons, but the bracer buzzes and refuses to inject, indicating the potential overdose!"))
+			return
+		wearer.reagents.add_reagent(chemical, chemicals_to_inject[chemical])
+	playsound(loc, "sound/items/air_release.ogg", 100, TRUE)
+	to_chat(wearer, SPAN_DANGER("You hold the two buttons and feel something cool flood into your arm!"))
+	injections = (current_injections - 1)
 
 //Army & USASF custom-armors\\
 

@@ -67,7 +67,7 @@
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_item = NO_CRYO_STORE
 
 /obj/item/clothing/gloves/marine/pve_mopp
 	name = "\improper M2 MOPP gloves"

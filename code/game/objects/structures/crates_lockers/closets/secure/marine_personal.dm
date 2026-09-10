@@ -175,11 +175,17 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader/spawn_gear()
+	new /obj/item/clothing/head/cmcap/royal_marine(src)
+	new /obj/item/clothing/under/marine/veteran/royal_marine(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
+	new /obj/item/clothing/shoes/marine/rmc/knife(src)
+
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander/spawn_gear()
 	new /obj/item/clothing/head/cmcap/royal_marine(src)
 	new /obj/item/clothing/under/marine/veteran/royal_marine/lt(src)
 	new /obj/item/clothing/accessory/ranks/rmc/o1(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/rifleman

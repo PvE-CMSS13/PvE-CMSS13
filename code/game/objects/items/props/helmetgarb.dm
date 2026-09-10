@@ -313,7 +313,7 @@
 
 	user.add_client_color_matrix("nvg", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
 	user.overlay_fullscreen("nvg", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
+	//user.overlay_fullscreen("nvg_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
 	playsound(user, 'sound/handling/toggle_nv1.ogg', 25)
 	nightvision = TRUE
 	user.update_sight()
@@ -343,7 +343,7 @@
 	if(nightvision)
 		attached_mob.remove_client_color_matrix("nvg", 1 SECONDS)
 		attached_mob.clear_fullscreen("nvg", 0.5 SECONDS)
-		attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
+		//attached_mob.clear_fullscreen("nvg_blur", 0.5 SECONDS)
 		playsound(attached_mob, 'sound/handling/toggle_nv2.ogg', 25)
 		nightvision = FALSE
 
@@ -406,9 +406,11 @@
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] when they are hidden."))
 		return
 
+/*
 	if(user.client.view > 7 && shape != NVG_SHAPE_COSMETIC)
 		to_chat(user, SPAN_WARNING("You cannot use \the [src] while using optics."))
 		return
+*/
 
 	activated = !activated
 
@@ -438,7 +440,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/proc/change_view(mob/M, new_size)
 	SIGNAL_HANDLER
 
-	if(new_size > 7) // cannot use binos with NVG
+	if(new_size > 20)
 		toggle_nods(M)
 
 /obj/item/prop/helmetgarb/helmet_nvg/proc/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno) //xenos can break NVG if aim head

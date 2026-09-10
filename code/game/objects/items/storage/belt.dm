@@ -127,6 +127,17 @@
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 	new /obj/item/device/multitool(src)
 
+/obj/item/storage/belt/utility/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool/hugetank(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/explosive/plastic(src)
 
 /obj/item/storage/belt/utility/atmostech/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
@@ -270,6 +281,22 @@
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 
+/obj/item/storage/belt/medical/parajumper/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/merabica(src)
+	new /obj/item/storage/pill_bottle/dexalinplus(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/keloderm(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/iron(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
+	new /obj/item/roller/surgical(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated(src)
+	new /obj/item/device/defibrillator/compact_adv(src)
+
 /obj/item/storage/belt/medical/get_examine_text()
 	. = ..()
 	. += SPAN_NOTICE("The belt is currently set to [mode ? "take pills directly from bottles": "NOT take pills directly from bottles"].")
@@ -380,18 +407,18 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
-	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
-	new /obj/item/storage/pill_bottle/alkysine(src)
-	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
@@ -515,6 +542,46 @@
 	new /obj/item/reagent_container/spray/pepper(src)
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/belt/security/usasf
+	name = "\improper USASF duty belt"
+	desc = "Modelled on the standard belt system of the USCMC. It consists of a modular belt with various clips. This configuration is commonly seen among Men At Arms aboard both voidcraft and stations, though it can hold some munitions."
+	icon_state = "securitybelt"
+	item_state = "security"//Could likely use a better one.
+	item_state_slots = list(
+		WEAR_L_HAND = "s_marinebelt",
+		WEAR_R_HAND = "s_marinebelt")
+	storage_slots = 7
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 21
+	can_hold = list(
+		/obj/item/reagent_container/spray/pepper,
+		/obj/item/restraint/handcuffs,
+		/obj/item/device/flash,
+		/obj/item/clothing/glasses,
+		/obj/item/ammo_magazine,
+		/obj/item/weapon/baton,
+		/obj/item/weapon/gun/energy/taser,
+		/obj/item/device/flashlight,
+		/obj/item/device/clue_scanner,
+		/obj/item/notepad,
+	)
+
+/obj/item/storage/belt/security/usasf/full/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/belt/security/usasf/heavy/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
@@ -1473,11 +1540,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
-#define MAXIMUM_MAGAZINE_COUNT 2
+#define MAXIMUM_MAGAZINE_COUNT 4
 
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"
-	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing magazines along with extra shells."
 	icon_state = "xm51_holster"
 	has_gamemode_skin = FALSE
 	gun_has_gamemode_skin = FALSE
@@ -2229,6 +2296,24 @@
 		/obj/item/ammo_magazine/hardpoint/flare_launcher,
 	)
 
+/obj/item/storage/belt/marine/sharp
+	name = "\improper M103 pattern SHARP magazine belt"
+	desc = "A specially modified M103 pattern rig designed to hold P9 SHARP rifle magazines, instead of tank shells."
+	icon_state = "tankbelt"
+	item_state = "tankbelt"
+	item_state_slots = list(
+		WEAR_L_HAND = "utility",
+		WEAR_R_HAND = "utility")
+	storage_slots = 10
+	max_storage_space = 10
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/track,
+	)
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
 /obj/item/storage/belt/souto
 	name = "\improper Souto belt"
 	desc = "Souto Man's trusty utility belt with breakaway Souto cans. They cannot be put back."
@@ -2266,7 +2351,7 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/rmc/nsg/fill_preset_inventory()
-	for(var/i in 1 to storage_slots)
+	for(var/i in 3 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/belt/medical/rmc
@@ -2318,6 +2403,7 @@
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
@@ -2375,10 +2461,10 @@
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/he())
+	can_be_inserted(new /obj/item/mortar_shell/smoke())
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/smoke(src)
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())

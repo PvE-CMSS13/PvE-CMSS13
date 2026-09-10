@@ -76,7 +76,7 @@
 
 /datum/human_ai_squad_preset/upp/gunner
 	name = "Naval Infantry, Gunner"
-	desc = "USE WITH CAUTION. Naval Infantry heavy gunner armed with a GPMG loaded with HEAP and carrying IFAKs containing gauze, ointment, splints and an injector."
+	desc = "USE WITH CAUTION. Naval Infantry heavy gunner armed with a GPMG and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/upp/machinegunner = 1,
 	)

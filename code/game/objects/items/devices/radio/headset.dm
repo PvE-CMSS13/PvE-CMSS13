@@ -673,8 +673,22 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/seclead
 	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
 
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/pltco
 	initial_keys = list(/obj/item/device/encryptionkey/bravo, /obj/item/device/encryptionkey/squadlead)
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
@@ -690,10 +704,11 @@
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_RSL
 
 	inbuilt_tracking_options = list(
-		"Squad Leader" = TRACKER_ASL,
+		"Snake Eaters Squad Leader" = TRACKER_RSL,
+		"Ocelot Grapplers Squad Leader" = TRACKER_R2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -707,10 +722,15 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	inbuilt_tracking_options = list(
-		"Troop Commander" = TRACKER_PLTCO,
+		"Troop Commander" = TRACKER_RMCSL,
 		"Section/Team Leader" = TRACKER_FTL,
 	)
-	locate_setting = TRACKER_PLTCO
+	locate_setting = TRACKER_RMCSL
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq
+	name = "Royal Marine Commando command headset"
+	desc = "A special headset used by the commanders of the TWE's elite Royal Marine Commandos."
+	initial_keys = list(/obj/item/device/encryptionkey/command)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
@@ -721,8 +741,15 @@
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
 	frequency = UPP_FREQ
+	misc_tracking = TRUE
 	minimap_type = MINIMAP_FLAG_UPP
 	hud_type = list(MOB_HUD_FACTION_UPP)
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth
 	name = "UPP synth headset"
@@ -730,11 +757,12 @@
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_UPPSL
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Red Dawn Platoon Sergeant" = TRACKER_UPPSL,
+		"Golden Embers Platoon Sergeant" = TRACKER_UPP2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -762,6 +790,8 @@
 	item_state = "upp_headset"
 	frequency = CLF_FREQ
 	has_hud = FALSE //Until we get CANC stuff, this'll do
+
+
 
 /obj/item/device/radio/headset/almayer/cia
 	name = "radio headset"
@@ -1046,6 +1076,7 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
 
+	has_tracker = TRUE
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CL
 	inbuilt_tracking_options = list(
@@ -1054,8 +1085,16 @@
 
 /obj/item/device/radio/headset/distress/pmc/platoon
 	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
+	item_state = "uscm_headset"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		)
+	minimap_type = MINIMAP_FLAG_PMC
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
+	frequency = PMC_FREQ
+	misc_tracking = TRUE
 	initial_keys = list(/obj/item/device/encryptionkey/pmc)
-	locate_setting = TRACKER_SL
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
 		"Operation Leader" = TRACKER_SL,
@@ -1065,23 +1104,37 @@
 
 /obj/item/device/radio/headset/distress/pmc/platoon/synth
 	name = "PMC synth headset"
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
 	desc = "A headset & HUD unit issued to corporate support synthetics. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_PSL
 
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_ASL,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
 /obj/item/device/radio/headset/distress/pmc/platoon/cmd
 	name = "overwatch headset"
-	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
+	desc = "A special headset & HUD unit used to PMC Overwatch. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
+	inbuilt_tracking_options = list(
+		"Overwatch" = TRACKER_PLTCO,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"

@@ -284,26 +284,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/ammo_magazine/sniper/rmc,
 		/obj/item/ammo_magazine/sniper/rmc,
 		/obj/item/weapon/gun/rifle/sniper/rmc,
-		/obj/item/clothing/glasses/night/m42_hms/rmc,
-		/obj/item/attachable/bipod,
-	)
-
-/obj/effect/essentials_set/rmcsniper
-	spawned_gear_list = list(
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/weapon/gun/rifle/sniper/M42A/silenced,
-		/obj/item/clothing/glasses/night/m42_hms/rmc,
 		/obj/item/attachable/bipod,
 	)
 
 GLOBAL_LIST_INIT(cm_vending_clothing_rmc_sniper, list(
 		list("PRECISION WEAPON SET (MANDATORY)", 0, null, null, null),
-		list("Essential Sniper Set", 0, /obj/effect/essentials_set/rmcsniper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 		list("Essential Marksman Set", 0, /obj/effect/essentials_set/rmcdmr, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("HELMET (CHOOSE 1)", 0, null, null, null),

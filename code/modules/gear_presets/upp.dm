@@ -886,9 +886,9 @@
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/officer/kapitan
-	name = "UPP Kapitan"
+	name = "UPP Captain"
 	assignment = JOB_UPP_KPT_OFFICER
-	role_comm_title = "KPT"
+	role_comm_title = "CPT"
 	rank = JOB_UPP_KPT_OFFICER
 	paygrades = list(PAY_SHORT_UO3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/kapitan
@@ -896,22 +896,22 @@
 /datum/equipment_preset/upp/officer/major
 	name = "UPP Major"
 	assignment = JOB_UPP_MAY_OFFICER
-	role_comm_title = "MAY"
+	role_comm_title = "MAJ"
 	rank = JOB_UPP_MAY_OFFICER
 	paygrades = list(PAY_SHORT_UO4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/upp/commander
 
 /datum/equipment_preset/upp/officer/lt_kolonel
-	name = "UPP Leytenant Kolonel"
+	name = "UPP Lieutenant Colonel"
 	assignment = JOB_UPP_LTKOL_OFFICER
-	role_comm_title = "LTKOL"
+	role_comm_title = "LTCOL"
 	rank = JOB_UPP_LTKOL_OFFICER
 	paygrades = list(PAY_SHORT_UO5 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/upp/officer/kolonel
 	name = "UPP Kolonel"
 	assignment = JOB_UPP_KOL_OFFICER
-	role_comm_title = "KOL"
+	role_comm_title = "COL"
 	rank = JOB_UPP_KOL_OFFICER
 	paygrades = list(PAY_SHORT_UO6 = JOB_PLAYTIME_TIER_0)
 
@@ -1063,20 +1063,17 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 
 /datum/equipment_preset/upp/commando/load_gear(mob/living/carbon/human/new_human)
-	//TODO: add backpacks and satchels
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/scout_cloak/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/kdo, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/upp, WEAR_FACE)
@@ -1091,18 +1088,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92/suppressed, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92, WEAR_IN_ACCESSORY)
-
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine, WEAR_J_STORE)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/scarce, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
 //*****************************************************************************************************/
@@ -1184,8 +1180,8 @@
 /datum/equipment_preset/upp/mildoctor
 	name = "UPP Military Doctor"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Leytenant Doktor"
-	role_comm_title = "LTDOK"
+	assignment = "Lieutenant Doctor"
+	role_comm_title = "LTDOC"
 	rank = JOB_UPP_LT_DOKTOR
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/doctor
@@ -1514,9 +1510,9 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military/upp, WEAR_FACE)

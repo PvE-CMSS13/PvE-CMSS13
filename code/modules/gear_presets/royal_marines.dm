@@ -31,12 +31,12 @@
 
 /datum/equipment_preset/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/medium(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/rmc(new_human), WEAR_IN_BACK)
+	add_rmc_md(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -49,6 +49,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -103,6 +104,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -155,6 +157,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_nvg(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -192,10 +195,10 @@
 /datum/equipment_preset/royal_marine/sniper/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/rmc(new_human), WEAR_IN_BACK)
+	add_rmc_md(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -209,6 +212,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -220,8 +224,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A/silenced(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
@@ -251,8 +253,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
 	..()
 
 //*****************************************************************************************************/
@@ -272,13 +272,12 @@
 /datum/equipment_preset/royal_marine/medic/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/medic(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/rmc_surgical_case(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/rmc_surgical_case/full(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -292,6 +291,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e2n(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -349,6 +349,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e2e(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/tactical(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
@@ -389,6 +390,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e2g(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wrench(new_human), WEAR_IN_ACCESSORY)
@@ -405,7 +407,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/rmc/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
@@ -441,12 +446,12 @@
 /datum/equipment_preset/royal_marine/leader/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
+	add_rmc_md(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -459,6 +464,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e3(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -490,6 +496,17 @@
 	assignment = JOB_TWE_RMC_TEAMLEADER
 	rank = JOB_TWE_RMC_TEAMLEADER
 
+/datum/equipment_preset/royal_marine/leader/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	//uniform
+	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
+	..()
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/troopsergeant
@@ -509,6 +526,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/nsg23(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -516,6 +534,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
 	//uniform
 	add_rmc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/e4(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
@@ -552,12 +571,12 @@
 
 /datum/equipment_preset/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/medium(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/rmc(new_human), WEAR_IN_BACK)
+	add_rmc_md(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
@@ -566,6 +585,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
 	//uniform
 	add_rmc_lt_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/o1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
@@ -607,6 +627,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt/service, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/rmc/o3(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)

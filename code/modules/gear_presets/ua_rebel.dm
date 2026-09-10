@@ -405,7 +405,7 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/M42A(new_human))
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/M42A/basic(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)

@@ -1,6 +1,6 @@
 /datum/paygrade/upp
 	name = "UPP Paygrade"
-	pay_multiplier = 0.1 //lol. lmao
+	pay_multiplier = 0.8 //Less than UA forces, but not piddling quantities
 	default_faction = FACTION_UPP
 
 
@@ -15,37 +15,37 @@
 	paygrade = PAY_SHORT_UE2
 	name = "Senior Private"
 	prefix = "SrPvt."
-	pay_multiplier = 0.2
+	pay_multiplier = 0.9
 
 /datum/paygrade/upp/ue3
 	paygrade = PAY_SHORT_UE3
 	name = "Corporal"
 	prefix = "Cpl."
-	pay_multiplier = 0.3
+	pay_multiplier = 1
 
 /datum/paygrade/upp/ue4
 	paygrade = PAY_SHORT_UE4
 	name = "Junior Sergeant"
 	prefix = "JrSgt."
-	pay_multiplier = 0.5
+	pay_multiplier = 1.1
 
 /datum/paygrade/upp/ue5
 	paygrade = PAY_SHORT_UE5
 	name = "Sergeant"
 	prefix = "Sgt."
-	pay_multiplier = 0.7
+	pay_multiplier = 1.2
 
 /datum/paygrade/upp/ue6
 	paygrade = PAY_SHORT_UE6
 	name = "Senior Sergeant"
 	prefix = "SrSgt."
-	pay_multiplier = 0.9
+	pay_multiplier = 1.4
 
 /datum/paygrade/upp/ue7
 	paygrade = PAY_SHORT_UE7
 	name = "Sergeant Major"
 	prefix = "SgtMaj."
-	pay_multiplier = 1
+	pay_multiplier = 1.5
 
 //UPP Commandos
 /datum/paygrade/upp/uk1
@@ -73,14 +73,14 @@
 	paygrade = PAY_SHORT_UO1
 	name = "Junior Lieutenant"
 	prefix = "Jr. Lt."
-	pay_multiplier = 1.25
+	pay_multiplier = 1.6
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo2
 	paygrade = PAY_SHORT_UO2
 	name = "Senior Lieutenant"
 	prefix = "Sr. LT."
-	pay_multiplier = 1.5
+	pay_multiplier = 1.7
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo3

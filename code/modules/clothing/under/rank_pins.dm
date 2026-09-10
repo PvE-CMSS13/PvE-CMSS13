@@ -452,6 +452,7 @@
 
 /obj/item/clothing/accessory/ranks/rmc/e2g
 	rank_short = PAY_SHORT_RMC2G
+	icon_state = "ranks_nco"
 
 /obj/item/clothing/accessory/ranks/rmc/e2n
 	rank_short = PAY_SHORT_RMC2N

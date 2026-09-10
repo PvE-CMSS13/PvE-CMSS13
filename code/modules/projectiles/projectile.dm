@@ -183,6 +183,8 @@
 
 	if(effective_range_min && distance_travelled < effective_range_min)
 		return max(0, damage - floor((effective_range_min - distance_travelled) * damage_buildup))
+	else if(effective_range_min && distance_travelled > effective_range_min)
+		return max(0, damage + floor((distance_travelled * damage_buildup) - effective_range_min))
 	else if(distance_travelled > effective_range_max)
 		return max(0, damage - floor((distance_travelled - effective_range_max) * damage_falloff))
 	return damage

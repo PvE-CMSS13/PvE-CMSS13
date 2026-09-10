@@ -2,8 +2,8 @@
 	name = "medical pack"
 	singular_name = "medical pack"
 	icon = 'icons/obj/items/items.dmi'
-	amount = 10
-	max_amount = 10
+	amount = 20
+	max_amount = 20
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
@@ -383,8 +383,8 @@
 	singular_name = "medical splint"
 	desc = "A collection of different splints and securing gauze. What, did you think we only broke legs out here?"
 	icon_state = "splint"
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 	stack_id = "splint"
 
 	var/indestructible_splints = FALSE

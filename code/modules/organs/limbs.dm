@@ -167,15 +167,15 @@
 	. = ..()
 	if(!(status & (LIMB_ROBOT|LIMB_SYNTHSKIN))) //meatbags do not care about EMP
 		return
-	var/probability = 30
-	var/damage = 15
+	var/probability = 5
+	var/damage = 20
 	if(severity == 2)
 		probability = 1
 		damage = 3
 	if(prob(probability))
 		droplimb(0, 0, "EMP")
 	else
-		take_damage(damage, 0, 1, 1, used_weapon = "EMP")
+		take_damage(0, damage, 1, 0, used_weapon = "EMP")
 
 
 /obj/limb/proc/take_damage_organ_damage(brute, sharp)
