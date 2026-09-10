@@ -58,6 +58,10 @@
 	name = "UPP Command Tank"
 	interior_id = "upptank_command"
 
+/datum/map_template/interior/ridgeway
+	name = "Ridgeway Tank"
+	interior_id = "ridgeway"
+
 /datum/map_template/interior/aev
 	name = "AEV"
 	interior_id = "aev"

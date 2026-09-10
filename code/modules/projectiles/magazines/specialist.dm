@@ -535,6 +535,7 @@
 	default_ammo = /datum/ammo/energy/plasma
 	gun_type = /obj/item/weapon/gun/XM99
 
+
 // The "round-remover" power/fuel cell for the XM99
 /obj/item/ammo_magazine/plasma/gibber
 	name = "\improper XM99A1 lithium battery drum"

@@ -130,6 +130,10 @@
 	icon = 'icons/obj/vehicles/interiors/tank.dmi'
 	icon_state = "locker"
 
+/obj/structure/vehicle_locker/tank/ridgeway
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "rlocker"
+
 /obj/structure/vehicle_locker/tank/upp
 	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
 	icon_state = "locker"

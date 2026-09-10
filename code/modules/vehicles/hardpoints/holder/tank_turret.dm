@@ -303,3 +303,65 @@
 		data += list(H.get_tgui_info())
 
 	return data
+
+// Rideway turret
+/obj/item/hardpoint/holder/tank_turret/ridgeway
+	name = "\improper M40 Ridgeway Turret"
+	desc = "  The turret of the M40 Ridgeway heavy tank. A significant improvement over older vehicles, the Ridgeway is capable of deploying vastly superior weapons, defensive systems, optics and sensors without sacrificing on its armour or taking on excessive weight."
+
+	icon = 'icons/obj/vehicles/ridgeway.dmi'
+	icon_state = "tank_turret_0"
+	disp_icon = "tank"
+	disp_icon_state = "tank_turret"
+	activation_sounds = list('sound/weapons/vehicles/smokelauncher_fire.ogg')
+	pixel_x = -48
+	pixel_y = -48
+
+	density = TRUE //come on, it's huge
+
+	activatable = TRUE
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/flare_launcher
+	max_clips = 5
+	use_muzzle_flash = FALSE
+
+	w_class = SIZE_MASSIVE
+	density = TRUE
+	anchored = TRUE
+
+	allowed_seat = VEHICLE_DRIVER
+
+	slot = HDPT_TURRET
+
+	// big beefy chonk of metal
+	health = 1500
+	damage_multiplier = 0.05
+
+	accepted_hardpoints = list(
+		// primaries
+        /obj/item/hardpoint/primary/cannon/plasmacannon,
+		/obj/item/hardpoint/primary/cannon/ridgeway,
+
+		// secondaries
+		/obj/item/hardpoint/secondary/small_flamer,
+		/obj/item/hardpoint/secondary/towlauncher,
+		/obj/item/hardpoint/secondary/m56cupola,
+		/obj/item/hardpoint/secondary/grenade_launcher
+	)
+
+	hdpt_layer = HDPT_LAYER_TURRET
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 24),
+		"4" = list(-20, 15),
+		"8" = list(20, 15)
+	)
+
+	scatter = 2
+	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	gun_firemode_list = list(
+		GUN_FIREMODE_BURSTFIRE,
+	)
+	burst_amount = 2
+	burst_delay = 1.0 SECONDS
+	extra_delay = 5.0 SECONDS
