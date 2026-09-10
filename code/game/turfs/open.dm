@@ -533,6 +533,13 @@
 	baseturfs = /turf/open/gm/dirt2
 	minimap_color = MINIMAP_DIRT
 
+/turf/open/gm/dirt3
+	name = "dirt"
+	icon_state = "dirt"
+	baseturfs = /turf/open/gm/dirt2
+	minimap_color = MINIMAP_DIRT
+	color = "#818181"
+
 /turf/open/gm/dirtgrassborder
 	name = "grass"
 	icon_state = "grassdirt_edge"

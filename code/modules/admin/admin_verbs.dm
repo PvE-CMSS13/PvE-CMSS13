@@ -377,6 +377,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
 		add_verb(src, /client/proc/gm_lighting)
+		add_verb(src, /client/proc/gm_shipmap_lighting)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
