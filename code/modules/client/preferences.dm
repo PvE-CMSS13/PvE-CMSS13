@@ -2113,6 +2113,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/find_assigned_slot(job_title, is_late_join = FALSE)
 	if(toggle_prefs & (is_late_join ? TOGGLE_LATE_JOIN_CURRENT_SLOT : TOGGLE_START_JOIN_CURRENT_SLOT))
 		return
+	if(!GLOB.toggle_slot_preferences)
+		return
 	var/slot_for_job = pref_job_slots[job_title]
 	switch(slot_for_job)
 		if(JOB_SLOT_RANDOMISED_SLOT)

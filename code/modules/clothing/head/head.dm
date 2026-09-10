@@ -114,6 +114,14 @@
 	name = "Black Beret"
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/canc
+	name = "CANC beret"
+	desc = "Military CANC beret."
+	icon_state = "canc_beret"
+
+/obj/item/clothing/head/beret/cm/canc/leader
+	desc = "Military CANC beret, worn by junior officers, complete with a subdued insignia."
+	icon_state = "canc_beret_leader"
 
 /obj/item/clothing/head/headband
 	name = "headband"

@@ -92,7 +92,7 @@
 	start_automatic = TRUE
 
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
-
+	var/list/cover_offset = list("open_x" = -2, "open_y" = 8, "closed_x" = -10, "closed_y" = 0)
 
 /obj/item/weapon/gun/m60/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -151,9 +151,9 @@
 /obj/item/weapon/gun/m60/update_icon()
 	. = ..()
 	if(cover_open)
-		overlays += image("+[base_gun_icon]_cover_open", pixel_x = -2, pixel_y = 8)
+		overlays += image("+[base_gun_icon]_cover_open", pixel_x = cover_offset["open_x"], pixel_y = cover_offset["open_y"])
 	else
-		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = -10, pixel_y = 0)
+		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = cover_offset["closed_x"], pixel_y = cover_offset["closed_y"])
 
 /obj/item/weapon/gun/m60/able_to_fire(mob/living/user)
 	. = ..()
@@ -279,6 +279,8 @@
 		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
 		return FALSE
 
+/obj/item/weapon/gun/pkp/standard_fmj
+	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
 /obj/item/weapon/gun/pkp/iff
 	name = "\improper QYJ-72-I General Purpose Machine Gun"
 	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
@@ -584,3 +586,39 @@
 	explosion_delay_sharp = !explosion_delay_sharp
 	playsound(source, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
 	to_chat(source, SPAN_NOTICE("You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("five seconds") : SPAN_BOLD("one second")]."))
+
+/obj/item/weapon/gun/m60/m38
+	name = "M38 general purpose machinegun"
+	desc = "Once-standard USCM GPMG. Chambered in 12x30mm caseless, hard-hitting and extremely reliable."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m38"
+	item_state = "m38"
+	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	current_mag = /obj/item/ammo_magazine/m38
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	attachable_allowed = list(
+		/obj/item/attachable/m60barrel/m38,
+		/obj/item/attachable/bipod/m60/m38,
+		/obj/item/attachable/stock/m60/m38,
+		/obj/item/attachable/flashlight/tactical,
+	)
+	starting_attachment_types = list(/obj/item/attachable/m60barrel/m38, /obj/item/attachable/bipod/m60/m38, /obj/item/attachable/stock/m60/m38, /obj/item/attachable/flashlight/tactical)
+	cover_offset = list("open_x" = -3, "open_y" = 4, "closed_x" = 0, "closed_y" = 0)
+
+/obj/item/weapon/gun/m60/m38/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_10
+	fa_max_scatter = 3.5
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	empty_sound = 'sound/weapons/gun_empty.ogg'
+
+/obj/item/weapon/gun/m60/m38/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 36, "muzzle_y" = 20, "rail_x" = 0, "rail_y" = 0, "under_x" = 30, "under_y" = 14, "stock_x" = 8, "stock_y" = 16, "side_rail_x" = 30, "side_rail_y" = 16)

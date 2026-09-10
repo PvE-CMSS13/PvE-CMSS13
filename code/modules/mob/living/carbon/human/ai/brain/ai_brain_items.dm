@@ -385,6 +385,10 @@
 	if(primary_weapon)
 		UnregisterSignal(primary_weapon, COMSIG_PARENT_QDELETING)
 	primary_weapon = new_gun
+	for(var/obj/item/attachable/flashlight/light in new_gun.contents)
+		if(!light)
+			continue
+		light.activate_attachment(new_gun, tied_human)
 	appraise_primary()
 	if(primary_weapon)
 		RegisterSignal(primary_weapon, COMSIG_PARENT_QDELETING, PROC_REF(on_primary_delete), TRUE)
@@ -492,7 +496,10 @@
 /datum/human_ai_brain/proc/add_secondary_weapon(obj/item/weapon/gun/secondary)
 	if(!secondary || (secondary in secondary_weapons))
 		return
-
+	for(var/obj/item/attachable/flashlight/light in secondary.attachments)
+		if(!light)
+			continue
+		light.activate_attachment(secondary, tied_human)
 	secondary_weapons += secondary
 	RegisterSignal(secondary, COMSIG_PARENT_QDELETING, PROC_REF(on_secondary_delete), TRUE)
 

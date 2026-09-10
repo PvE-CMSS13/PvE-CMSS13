@@ -41,6 +41,9 @@
 /obj/item/clothing/shoes/marine/knife
 	spawn_item_type = /obj/item/weapon/knife/marine
 
+/obj/item/clothing/shoes/marine/knife/old
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/brown
 	icon_state = "marine_brown"
 	desc = "A pair of standard issue brown United States Colonial Marine combat boots."
@@ -66,6 +69,9 @@
 	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
 	spawn_item_type = /obj/item/attachable/bayonet/upp
+
+/obj/item/clothing/shoes/marine/upp/canc
+	spawn_item_type = /obj/item/attachable/bayonet/canc
 
 /obj/item/clothing/shoes/marine/upp/guard
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."

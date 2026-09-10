@@ -173,6 +173,20 @@
 	current_camo = FULL_CAMOUFLAGE_ALPHA
 	visible_camo_alpha = VISIBLE_CAMOUFLAGE_ALPHA
 
+/obj/item/clothing/suit/storage/marine/ghillie/canc
+	name = "'Bashe' ghillie suit"
+	desc = "CANC-produced lightweight ghillie suit often used by guerillas, snipers and partisans."
+	icon_state = "canc_ghillie"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
+	has_light = FALSE
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_LOW
+
 #undef FULL_CAMOUFLAGE_ALPHA
 #undef VISIBLE_CAMOUFLAGE_ALPHA
 #undef FULL_PVE_CAMOUFLAGE_ALPHA

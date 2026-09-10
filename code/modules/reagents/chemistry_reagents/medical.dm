@@ -451,3 +451,12 @@
 	custom_metabolism = AMOUNT_PER_TIME(1, 200 SECONDS)
 	data = 0
 	properties = list(PROPERTY_CURING = 2)
+
+/datum/reagent/medical/multivitamin
+	name = "Multivitamin"
+	id = "multivitamin"
+	description = "A specifically designed blend of vitamins that helps spacemen live in space like normal human beings."
+	reagent_state = LIQUID
+	color = "#B865CC"
+	chemclass = CHEM_CLASS_UNCOMMON
+	properties = list(PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)

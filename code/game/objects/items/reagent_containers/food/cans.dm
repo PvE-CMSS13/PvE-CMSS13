@@ -744,3 +744,19 @@
 /obj/item/reagent_container/food/drinks/cans/aspen/Initialize()
 	. = ..()
 	reagents.add_reagent("beer", 50)
+
+/obj/item/reagent_container/food/drinks/cans/space_water_bottle
+	name = "collapsible water bottle"
+	desc = "Made of soft plastic, this bottle was designed more than 200 years ago specifically for use on space craft. It can be collapsed for ease of storage."
+	icon_state = "space_water"
+	open = TRUE
+
+/obj/item/reagent_container/food/drinks/cans/space_water_bottle/attack_self(mob/user)
+	if(crushed)
+		crushed = FALSE
+		flags_atom |= OPENCONTAINER
+		desc = initial(desc)
+		icon_state = initial(icon_state)
+		user.visible_message(SPAN_BOLDNOTICE("[user] casually unfolds the [name]."), null, null, CHAT_TYPE_FLUFF_ACTION)
+		playsound(src,"sound/items/can_crush.ogg", 20, FALSE, 15)
+	..()

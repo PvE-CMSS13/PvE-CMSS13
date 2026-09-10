@@ -262,6 +262,7 @@
 	VAR_PROTECTED/autofire_slow_mult = 1
 	/// How many empty shell casings are in the gun?
 	var/empty_casings = 0
+	var/sabotaged = 0
 
 /**
  * An assoc list where the keys are fire delay group string defines

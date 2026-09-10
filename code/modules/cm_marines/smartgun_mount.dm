@@ -1193,3 +1193,14 @@
 		deployment_system.deployed_mg = null
 		deployment_system = null
 	return ..()
+
+/obj/structure/machinery/m56d_hmg/mg_turret/dropship/minigun
+	name = "\improper M159 'Cuatro' heavy minigun"
+	desc = "An outdated minigun variant designed to protect landing dropcraft. Boasts incredible rate of fire and high caliber, however, M159 is prone to malfunctions."
+	icon_full = "evilgun"
+	icon_empty = "evilgun"
+	fire_delay = 1
+	rounds = 5000
+	rounds_max = 5000
+	ammo = /datum/ammo/bullet/m38
+	gun_noise = 'sound/weapons/gun_dropship_minigun.ogg'

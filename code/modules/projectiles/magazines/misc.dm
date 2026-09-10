@@ -79,6 +79,28 @@
 	reload_delay = 8
 	gun_type = /obj/item/weapon/gun/m60
 
+/obj/item/ammo_magazine/m38
+	name = "M38 belt box (12x30mm caseless)"
+	desc = "Heavy high-capacity belt box for M38 GPMG."
+	caliber = "12x30"
+	w_class = SIZE_MEDIUM
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "m60"
+
+	matter = list("metal" = 10000)
+	default_ammo = /datum/ammo/bullet/m38
+	max_rounds = 150
+	reload_delay = 4
+	gun_type = /obj/item/weapon/gun/m60/m38
+	ammo_band_icon = "+m60_band"
+	ammo_band_icon_empty = "+m60_band_e"
+
+/obj/item/ammo_magazine/m38/heap
+	name = "M38 HEAP belt box (12x30mm caseless)"
+	desc = "Heavy high-capacity belt box for M38 GPMG filled with high-explosive armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/m38/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
 /obj/item/ammo_magazine/pkp
 	name = "QYJ-72 ammo box (10x27mm HEAP)"
 	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."

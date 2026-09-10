@@ -98,6 +98,30 @@
 		list("Plastic Cup", 20, /obj/item/reagent_container/food/drinks/cup, VENDOR_ITEM_REGULAR)
 	)
 
+/obj/structure/machinery/cm_vending/sorted/marine_food/dog_war
+	name = "DFS shunt-stable food dispenser"
+	desc = "A space-grade food dispenser produced and stocked by Diversified Foodservice Supply."
+	icon = 'icons/obj/structures/machinery/vending.dmi'
+	icon_state = "marine_food"
+	vend_sound = "sound/machines/vending.ogg"
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/dog_war/populate_product_list(scale)
+	listed_products = list(
+		list("MAINS", -1, null, null),
+		list("Roastbeef", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/beef, VENDOR_ITEM_REGULAR),
+		list("Pork Patty", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/pork, VENDOR_ITEM_REGULAR),
+		list("Chicken Patty", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/chicken, VENDOR_ITEM_REGULAR),
+		list("SIDES", -1, null, null),
+		list("Cornbread", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/cornbread, VENDOR_ITEM_REGULAR),
+		list("French Fries", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/fries, VENDOR_ITEM_REGULAR),
+		list("Dinner Rolls", 15, /obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/dinner_rolls, VENDOR_ITEM_REGULAR),
+		list("BEVERAGES", -1, null, null),
+		list("Water", 15, /obj/item/reagent_container/food/drinks/cans/water_ration, VENDOR_ITEM_REGULAR),
+		list("Multivitamin", 15, /obj/item/reagent_container/food/condiment/juice/multivitamin, VENDOR_ITEM_REGULAR),
+		list("BEVERAGE CONTAINER", -1, null, null),
+		list("Collapsible Bottle", 15, /obj/item/reagent_container/food/drinks/cans/space_water_bottle, VENDOR_ITEM_REGULAR),
+	)
+
 //------------BOOZE-O-MAT VENDOR---------------
 
 /obj/structure/machinery/cm_vending/sorted/boozeomat

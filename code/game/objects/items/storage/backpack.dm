@@ -422,6 +422,12 @@
 /obj/item/storage/backpack/marine/standard
 	has_gamemode_skin = FALSE
 
+/obj/item/storage/backpack/marine/old
+	name = "\improper dated assault pack"
+	desc = "One of the many backpacks used by UA militaries prior to widespread adoption of M3 armor and Intuitive Mounting Point system."
+	icon_state = "marinepack"
+	item_state = "marinepack"
+
 /obj/item/storage/backpack/marine/ammo_rack
 	name = "\improper IMP ammo rack"
 	desc = "A bare IMP frame with buckles designed to hold multiple ammo cans, but can fit any cumbersome box thanks to Marine ingenuity. Helps you lug around extra rounds or supplies."
@@ -581,7 +587,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559 'Bagulnik' Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_category = PHONE_UPP_SOLDIER
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 
@@ -590,7 +599,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559-A 'Bagulnik' Small Radio Telephone Pack"
+	desc = "A smaller variant of the heavy-duty pack, used for telecommunications between central command. Commonly carried by RTOs."
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 	phone_category = PHONE_UPP_SOLDIER
@@ -598,8 +608,16 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
+/obj/item/storage/backpack/marine/satchel/rto/canc
+	name = "\improper Type 559 Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_category = PHONE_CANC_SOLDIER
+	networks_receive = list(FACTION_UPP)
+	networks_transmit = list(FACTION_UPP)
+
 /obj/item/storage/backpack/marine/smock
-	name = "\improper M3 sniper's smock"
+	name = "\improper camo smock"
 	desc = "A specially-designed smock with pockets for all your sniper needs."
 	icon_state = "smock"
 	worn_accessible = TRUE
@@ -620,6 +638,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	worn_accessible = TRUE
 	has_gamemode_skin = FALSE //monkeysfist101 never sprited a snowtype but included duplicate icons. Why?? Recolor and touch up sprite at a later date.
 	xeno_types = null
+
+/obj/item/storage/backpack/marine/rocketpack/upp
+	name = "\improper 57-Sh-100 rocket bag"
+	desc = "A UPP-designed rocket bag that fits several types of rockets, grenades and missiles."
+	icon_state = "upp_rocketpack"
 
 /obj/item/storage/backpack/marine/grenadepack
 	name = "\improper USCM IMP M63A1 grenade satchel"

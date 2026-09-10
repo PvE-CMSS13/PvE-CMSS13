@@ -31,6 +31,12 @@
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
 
+/obj/item/clothing/mask/gas/old
+	name = "\improper M3 gasmask"
+	desc = "An older gasmask model used by the USCMC, M3 was initially designated EXO-P2 (exo-planet, panoramic) and intended for mining and exploration activities. Despite using a pre-existing module, R&D departement had to extensively modify it to make it suitable for combat."
+	icon_state = "gas_old"
+	item_state = "gas_old"
+
 /obj/item/clothing/mask/gas/military
 	name = "\improper M5 gasmask"
 	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear."
@@ -68,6 +74,12 @@
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
 	icon_state = "pfb"
 	item_state = "pfb"
+
+/obj/item/clothing/mask/gas/military/upp/canc
+	name = "\improper Type 66 gasmask"
+	desc = "Unlicensed CANC modification of the Union's ShMB/4 gasmask. It features additional protective layer and anti-glare self-polarizing lenses. It's also significantly heavier, with some users reporting lenses becoming opaque forever."
+	icon_state = "pfbcanc"
+	item_state = "pfbcanc"
 
 /obj/item/clothing/mask/gas/pve_mopp
 	name = "\improper M2 MOPP mask"

@@ -309,3 +309,13 @@
 /obj/item/reagent_container/food/condiment/juice/milk/Initialize()
 	. = ..()
 	reagents.add_reagent("dehydrated_milk_powder", 12)
+
+/obj/item/reagent_container/food/condiment/juice/multivitamin
+	name = "Multivitamin Juice Packet"
+	desc = "A small packet of orange flavored drink mix, complete with multivitamin additives."
+	icon_state = "ojpowder"
+
+/obj/item/reagent_container/food/condiment/juice/multivitamin/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_orange_juice", 3)
+	reagents.add_reagent("multivitamin", 3)

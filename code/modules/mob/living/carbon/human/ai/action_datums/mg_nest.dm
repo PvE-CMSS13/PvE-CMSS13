@@ -88,6 +88,7 @@
 		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,
 		/datum/equipment_preset/rebel/soldier/machinegunner::name = /datum/equipment_preset/rebel/soldier/machinegunner,
 		/datum/equipment_preset/clf/soldier/machinegunner::name = /datum/equipment_preset/clf/soldier/machinegunner,
+		/datum/equipment_preset/canc/remnant/old/commando/machinegunner::name = /datum/equipment_preset/canc/remnant/old/commando/machinegunner,
 	)
 
 	if(!check_rights(R_DEBUG))

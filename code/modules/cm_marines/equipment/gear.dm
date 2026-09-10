@@ -445,6 +445,74 @@
 	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop cold, boiled rice."
 	icon_state = "rmc_fish"
 
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war
+	name = "\improper some old space food"
+	desc = "How did this get here?"
+	icon_state = "tofu"
+	bitesize = 5
+	var/wrapper_state = "dog_war_wrapper_wide"
+	var/has_package = TRUE
+	trash = null
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/Initialize()
+	. = ..()
+	if(has_package)
+		overlays += image(icon, wrapper_state)
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/attack_self(mob/user)
+	if(has_package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull and tear the vacum-sealed packaging easily."))
+		package = FALSE
+		overlays.Cut()
+		has_package = FALSE
+		return
+	..()
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/main
+	wrapper_state = "dog_war_wrapper_thin"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/pork
+	name = "shunt-stable pork"
+	desc = "Two chunks of pork, moist and unpleasant."
+	icon_state = "space_pork"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/beef
+	name = "shunt-stable beef"
+	desc = "Two beef patties, dry and chewy."
+	icon_state = "space_beef"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/main/chicken
+	name = "shunt-stable chicken"
+	desc = "Two chicken patties, stringy and crumbling for some reason."
+	icon_state = "space_chicken"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/side
+	wrapper_state = "dog_war_wrapper_wide"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 10)
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/cornbread
+	name = "shunt-stable cornbread"
+	desc = "Large piece of cornbread with deep break lines. Extremely dry. You get a feeling the vacuum-seal and special storage conditions are redundant for this bread."
+	icon_state = "space_cornbread"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/fries
+	name = "shunt-stable fries"
+	desc = "Bunch of french fries, stuck together. Over- or undersalted more often than not."
+	icon_state = "space_fries"
+
+/obj/item/reagent_container/food/snacks/mre_pack/dog_war/side/dinner_rolls
+	name = "shunt-stable dinner rolls"
+	desc = "Four dinner rolls. They look very pale and unnatural."
+	icon_state = "space_dinner_rolls"
+
 /obj/item/storage/box/pizza
 	name = "food delivery box"
 	desc = "A space-age food storage device, capable of keeping food extra fresh. Actually, it's just a box."

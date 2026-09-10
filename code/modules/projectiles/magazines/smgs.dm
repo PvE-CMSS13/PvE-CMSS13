@@ -167,9 +167,9 @@
 //Type-19, based on the PPS-43
 
 /obj/item/ammo_magazine/smg/pps43
-	name = "\improper Type-19 stick magazine (7.62x25mm)"
+	name = "\improper Type-19 stick magazine (5.8x21mm)"
 	desc = "A stick magazine for the Type-19 submachinegun."
-	caliber = "7.62x25mm"
+	caliber = "5.8x21mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "insasu_stickmag"
 	bonus_overlay = "insasu_stickmag_overlay"
@@ -181,7 +181,7 @@
 
 
 /obj/item/ammo_magazine/smg/pps43/extended
-	name = "\improper Type-19 drum magazine (7.62x25mm)"
+	name = "\improper Type-19 drum magazine (5.8x21mm)"
 	desc = "A drum magazine for the Type-19 submachinegun."
 	icon_state = "insasu_drum"
 	bonus_overlay = "insasu_drum_overlay"

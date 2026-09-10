@@ -234,15 +234,15 @@
 			new_human.b_eyes = colors[eye_color][3]
 			//gender checks
 			if(new_human.gender == MALE)
-				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
+				first_name = "[pick(GLOB.first_names_male_chinese)]"
 				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
 				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
 			else
-				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
+				first_name = "[pick(GLOB.first_names_female_chinese)]"
 				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
 			//surname
-			last_name = "[capitalize(randomly_generate_chinese_word(rand(1, 4)))]"
-			random_name = "[first_name] [last_name]"
+			last_name = "[pick(GLOB.last_names_chinese)]"
+			random_name = "[last_name] [first_name]"
 			new_human.change_real_name(new_human, random_name)
 		if(BRAZILIAN_ETHNICITY)
 			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")

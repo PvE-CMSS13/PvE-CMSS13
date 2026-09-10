@@ -211,3 +211,8 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+/obj/structure/closet/secure_closet/marine_personal/old/spawn_gear()
+	new /obj/item/clothing/under/marine/standard/old(src)
+	new /obj/item/clothing/shoes/marine/knife/old(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)

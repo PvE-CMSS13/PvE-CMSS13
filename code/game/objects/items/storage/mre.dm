@@ -50,10 +50,14 @@
 		cookie = rand(1,3)
 	if(cookie == 1)
 		storage_slots += 1
-	new entree(src)
-	new side(src)
-	new snack(src)
-	new dessert(src)
+	if(entree)
+		new entree(src)
+	if(side)
+		new side(src)
+	if(snack)
+		new snack(src)
+	if(dessert)
+		new dessert(src)
 	if(supersized)
 		storage_slots +=4
 		new entree2(src)
@@ -402,3 +406,45 @@
 			new /obj/item/reagent_container/food/drinks/cans/spread/strawberryjam(src)
 		if(2)
 			new /obj/item/reagent_container/food/drinks/cans/spread/sunflowerbutter(src)
+
+/obj/item/storage/box/mre/dog_war
+	name = "\improper UA field sustainment ration"
+	desc = "Also known as S-ration. Out of production MRE package designed to sustain colonial marines before the adoption of Marine '70. While several \"menus\" exist, the only real difference is how they flavoured the ProCar block and the assortment of pastes available. If the seal isn't broken on this hermetically secured container, it may still have its \"Party-Poppers\"!"
+	icon_state = "dogwar_mealpack"
+	icon_closed = "dogwar_mealpack"
+	icon_opened = "dogwar_mealpackopened"
+	item_state = "wy_mealpack"
+	trash_item = /obj/item/trash/hdr_mre
+	side = /obj/item/reagent_container/food/drinks/cans/water_ration
+	should_have_spread = TRUE
+	should_have_beverage = FALSE
+	should_have_utencil = TRUE
+	should_have_drink = FALSE
+	should_have_cigarettes = FALSE
+	should_have_matches = FALSE
+	should_have_cookie = FALSE
+	entree = /obj/item/mre_food_packet/entree/dog_war
+	snack = null
+	dessert = null
+	storage_slots = 2
+
+/obj/item/storage/box/mre/dog_war/Initialize()
+	. = ..()
+	if(prob(10))
+		storage_slots++
+		var/poppers = pick(/obj/item/storage/pill_bottle/packet/partypoppers, /obj/item/storage/pill_bottle/packet/partypoppers/gum)
+		new poppers(src)
+		can_hold += poppers
+
+/obj/item/storage/box/mre/dog_war/choose_utencil()
+	new /obj/item/tool/kitchen/utensil/pspoon(src)
+
+/obj/item/storage/box/mre/dog_war/choose_spread()
+	var/spread_type = rand(1, 3)
+	switch(spread_type)
+		if(1)
+			new /obj/item/reagent_container/food/drinks/cans/tube/banana(src)
+		if(2)
+			new /obj/item/reagent_container/food/drinks/cans/tube/ketchup(src)
+		if(3)
+			new /obj/item/reagent_container/food/drinks/cans/tube/orange(src)

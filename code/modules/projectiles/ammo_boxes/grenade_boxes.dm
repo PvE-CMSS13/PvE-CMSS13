@@ -239,6 +239,15 @@
 	overlay_icon_type = "hedp"
 	overlay_grenade_type = "40mm_hedp"
 
+/obj/item/ammo_box/magazine/nade_box/fourtymil/old
+	name = "\improper M74 grenade box"
+	desc = "A secure box holding 25 M74 grenades. Explosive, don't store near the flamer fuel."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/old
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/old)
+	overlay_model_type = "model_m74"
+	overlay_icon_type = "agmf"
+	overlay_grenade_type = "40mm_agmf"
+
 /obj/item/ammo_box/magazine/nade_box/fourtymil/frag
 	name = "\improper 40mm HEFA grenade box"
 	desc = "A secure box holding 25 old-style 40mm High-Explosive, Fragmenting-Antipersonnel grenades."

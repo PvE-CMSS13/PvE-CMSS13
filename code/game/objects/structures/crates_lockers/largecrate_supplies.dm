@@ -140,7 +140,10 @@
 	desc = "A supply crate containing two boxed M56D mounted smartguns."
 	supplies = list(/obj/item/storage/box/m56d_hmg = 2)
 
-
+/obj/structure/largecrate/supply/weapons/m20a2
+	name = "\improper M20A2 pulse rifle chest (x2)"
+	desc = "A supply crate containing two unloaded M20A2 rifles, a variant of 'Harrington' rifle with an integrated shotgun."
+	supplies = list(/obj/item/weapon/gun/rifle/m20a/a2/unloaded = 2)
 
 /obj/structure/largecrate/supply/ammo
 	name = "ammunition case"
@@ -180,6 +183,11 @@
 	desc = "An ammunition case containing eight boxes of slugs, eight boxes of buckshot, and four boxes of flechette rounds."
 	supplies = list(/obj/item/ammo_magazine/shotgun/slugs = 8, /obj/item/ammo_magazine/shotgun/buckshot = 8, /obj/item/ammo_magazine/shotgun/flechette = 4)
 
+/obj/structure/largecrate/supply/ammo/shotgun/sixteen
+	name = "16 Gauge ammunition crate (4x30)"
+	desc = "An ammunition case containing 4 boxes of 16 gauge buckshot."
+	supplies = list(/obj/item/ammo_magazine/shotgun/buckshot/light = 4)
+
 /obj/structure/largecrate/supply/ammo/m39
 	name = "\improper M39 HV magazine case (x16)"
 	desc = "An ammunition case containing sixteen M39 HV magazines."
@@ -214,6 +222,11 @@
 	name = "\improper Type 71 magazine case (x20)"
 	desc = "An ammunition case containing 20 Type 71 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
+
+/obj/structure/largecrate/supply/ammo/m20a
+	name = "\improper M20A magazine case (x20)"
+	desc = "An ammunition case containing 20 M20A magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/m20a = 20)
 
 /obj/structure/largecrate/supply/ammo/nsg23
 	name = "\improper NSG L23A1 magazine case (x20)"

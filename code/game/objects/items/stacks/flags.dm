@@ -336,3 +336,20 @@
 	desc = "The flag of Brazil."
 	icon_state = "flag_brazil_planted"
 	flag_type = /obj/item/flag/plantable/brazil
+
+// CANC FLAG //
+//////////////////////////
+
+/obj/item/flag/plantable/canc
+	name = "\improper CANC flag"
+	desc = "The flag of Chinese/Asian-Nation Cooperative. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_canc"
+	flag_type = /obj/structure/flag/plantable/canc
+	faction = FACTION_CANC
+
+/obj/structure/flag/plantable/canc
+	name = "\improper Brazil flag"
+	desc = "The flag of CANC."
+	icon_state = "flag_canc_planted"
+	flag_type = /obj/item/flag/plantable/canc

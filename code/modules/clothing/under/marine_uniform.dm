@@ -1336,3 +1336,10 @@
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/under/marine/standard/old
+	name = "\improper USCM khakis"
+	icon_state = "d_uscmboiler"
+	item_state = "d_uscmboiler"
+	worn_state = "d_uscmboiler"
+	desc = "Single-tone marine khakis."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE

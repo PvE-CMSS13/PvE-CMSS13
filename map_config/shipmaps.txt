@@ -41,3 +41,6 @@ endmap
 
 map hms_brynhild
 endmap
+
+map golden_arrow_dog_war
+endmap

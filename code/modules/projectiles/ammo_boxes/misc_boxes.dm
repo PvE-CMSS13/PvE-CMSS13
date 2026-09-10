@@ -135,6 +135,13 @@
 /obj/item/ammo_box/magazine/misc/mre/hdr/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/misc/mre/dog_war
+	name = "\improper box of S-rations"
+	desc = "A box of Field Sustainment Rations. Has a thick layer of dust on it."
+	icon_state = "dog_war_food_crate"
+	magazine_type = /obj/item/storage/box/mre/dog_war
+	overlay_content = "_dogwar_mre"
+
 //------------------------M94 Marking Flare Packs Box--------------------------
 
 /obj/item/ammo_box/magazine/misc/flares
