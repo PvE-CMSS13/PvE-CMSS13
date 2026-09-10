@@ -4,7 +4,7 @@
 
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
-	if((species.flags & NO_BLOOD) && !(species.flags & IS_SYNTHETIC))
+	if((species.flags & NO_BLOOD) && !(species.flags & IS_SYNTHETIC) || iszombie(src))
 		return
 
 	if(stat != DEAD && bodytemperature >= 170) //Dead or cryosleep people do not pump the blood.

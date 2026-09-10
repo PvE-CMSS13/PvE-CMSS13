@@ -140,6 +140,11 @@
 
 /mob/living/carbon/human/IgniteMob()
 	. = ..()
+	if(src.undefibbable)
+		if(iszombie(src) && stat == DEAD) //Band-aid for corpses chugging client FPS whilst burning.
+			var/datum/species/zombie/zombie_corpse = src.species
+			if(zombie_corpse.clean_up_zombie(src))
+				return IGNITE_FAILED
 	if((. & IGNITE_IGNITED) && !stat && pain.feels_pain)
 		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, emote), "scream")
 

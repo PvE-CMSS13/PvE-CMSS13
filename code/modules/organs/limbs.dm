@@ -188,7 +188,10 @@
 
 	var/damage = armor_damage_reduction(GLOB.marine_organ_damage, brute, armor, sharp ? ARMOR_SHARP_INTERNAL_PENETRATION : 0, 0, 0, max_damage ? (100*(max_damage-brute_dam) / max_damage) : 100)
 
-	if(internal_organs && prob(damage*DMG_ORGAN_DAM_PROB_MULT + brute_dam*BRUTE_ORGAN_DAM_PROB_MULT))
+	var/chance_multi = DMG_ORGAN_DAM_PROB_MULT
+	if(iszombie(owner))
+		chance_multi = ZOMBIE_ORGAN_DAM_PROB_MULT
+	if(internal_organs && prob(damage*chance_multi + brute_dam*BRUTE_ORGAN_DAM_PROB_MULT))
 		//Damage an internal organ
 		var/datum/internal_organ/I = pick(internal_organs)
 		I.take_damage(brute / 2)
@@ -259,11 +262,48 @@
 							no_limb_loss, damage_source = create_cause_data("amputation"),\
 							mob/attack_source = null,\
 							brute_reduced_by = -1, burn_reduced_by = -1)
+
 	if((brute <= 0) && (burn <= 0))
 		return 0
 
-	if(status & LIMB_DESTROYED)
+	if(forbidden_limbs.len >= 11)
+		debug_log("Possible Runaway limb take_damage recursion!")
 		return 0
+
+	if(status & LIMB_DESTROYED)
+		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
+			var/datum/species/zombie/zombie = owner.species
+			if(zombie.can_rise_again(owner) || owner.stat != DEAD) //Only want this if the zombie is potentially still a threat, otherwise it's w/e
+				var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
+				var/list/potential_limbs = owner.limbs - list(src)
+				while(!random_limb_found || potential_limbs.len < 1)
+					var/obj/limb/check_limb = pick(potential_limbs)
+					if(!(check_limb.status & LIMB_DESTROYED))
+						random_limb_found = TRUE
+						check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs + src, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
+						return
+					else
+						potential_limbs -= check_limb
+			return 0
+		else
+			return 0
+
+	if(iszombie(owner)) //Zombie? Made of paper clearly. No Threshold before we move on
+		var/datum/species/zombie/zombie = owner.species
+		var/obj/limb/limb = src
+		if(body_part == BODY_FLAG_CHEST || body_part == BODY_FLAG_GROIN)
+			limb = pick(owner.limbs - list("chest","groin")) //Targetting something that can't pop off? Not any more.
+
+		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
+			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
+			if(!isnull(owner.zombie_delimb_chance_multi))
+				zombie_cut_prob *= owner.zombie_delimb_chance_multi
+			zombie_cut_prob = clamp(zombie_cut_prob, 0, 100)
+			if(prob(zombie_cut_prob))
+				limb.limb_delimb(damage_source)
+				return
+		if(!zombie.can_rise_again(owner) && owner.stat == DEAD) //This will also check and handle if the zombie is perma.
+			return
 
 	var/previous_brute = brute_dam
 	var/previous_burn = burn_dam
@@ -359,11 +399,13 @@
 	//If limb was damaged before and took enough damage, try to cut or tear it off
 	var/no_perma_damage = owner.status_flags & NO_PERMANENT_DAMAGE
 	var/no_bone_break = owner.chem_effect_flags & CHEM_EFFECT_RESIST_FRACTURE
-	if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
-		if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
-			var/cut_prob = brute/max_damage * 5
-			if(prob(cut_prob))
-				limb_delimb(damage_source)
+
+	if(!iszombie(owner))
+		if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
+			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
+				var/cut_prob = brute/max_damage * 5
+				if(prob(cut_prob))
+					limb_delimb(damage_source)
 
 	SEND_SIGNAL(src, COMSIG_LIMB_TAKEN_DAMAGE, is_ff, previous_brute, previous_burn)
 	owner.updatehealth()
@@ -951,6 +993,10 @@ This function completely restores a damaged organ to perfect condition.
 				//Throw organs around
 				var/lol = pick(GLOB.cardinals)
 				step(organ,lol)
+			if(iszombie(owner))
+				var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-41,41) SECONDS)
+				if(!QDELETED(organ))
+					addtimer(CALLBACK(organ, TYPE_PROC_REF(/obj/item/limb/, zombie_clean_up), owner, owner.zombie_disable_auto_clean), time_til_clean)
 
 		owner.update_body() //Among other things, this calls update_icon() and updates our visuals.
 		owner.update_med_icon()
@@ -1194,12 +1240,12 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 	if(is_broken())
 		if(prob(15))
 			owner.drop_inv_item_on_ground(c_hand)
-			var/emote_scream = pick("screams in pain and", "lets out a sharp cry and", "cries out and")
-			owner.emote("me", 1, "[(!owner.pain.feels_pain) ? "" : emote_scream ] drops what they were holding in their [hand_name]!")
+			var/emote_scream = pick("screams in pain and ", "lets out a sharp cry and ", "cries out and ")
+			owner.visible_message("[owner.name] [(!owner.pain.feels_pain) ? "" : emote_scream ]drops what they were holding in their [hand_name]!", "You[(!owner.pain.feels_pain) ? "" : "'re over come by pain! You cry out and" ] drop what you were holding in your [hand_name]!")
 	if(is_malfunctioning())
 		if(prob(10))
 			owner.drop_inv_item_on_ground(c_hand)
-			owner.emote("me", 1, "drops what they were holding, their [hand_name] malfunctioning!")
+			owner.visible_message("[owner.name]'s [hand_name] malfunctions! And they drop what they were holding!", "Your [hand_name] and you drop what you were holding!")
 			var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread()
 			spark_system.set_up(5, 0, owner)
 			spark_system.attach(owner)
@@ -1516,8 +1562,12 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	if(owner_helmet.flags_inventory & FULL_DECAP_PROTECTION)
 		return
-
-	owner.visible_message("[owner]'s [owner_helmet] goes flying off from the impact!", SPAN_USERDANGER("Your [owner_helmet] goes flying off from the impact!"))
+	if(iszombie(owner))
+		qdel(owner_helmet)
+		owner.visible_message("[owner]'s [owner_helmet] gives way and cracks from the impact!", SPAN_USERDANGER("Your [owner_helmet] has broken and your head is vunlerable!"))
+		playsound(owner, 'sound/effects/helmet_noise.ogg', 100)
+		return
 	owner.drop_inv_item_on_ground(owner_helmet)
+	owner.visible_message("[owner]'s [owner_helmet] goes flying off from the impact!", SPAN_USERDANGER("Your [owner_helmet] goes flying off from the impact!"))
 	INVOKE_ASYNC(owner_helmet, TYPE_PROC_REF(/atom/movable, throw_atom), pick(range(1, get_turf(loc))), 1, SPEED_FAST)
 	playsound(owner, 'sound/effects/helmet_noise.ogg', 100)

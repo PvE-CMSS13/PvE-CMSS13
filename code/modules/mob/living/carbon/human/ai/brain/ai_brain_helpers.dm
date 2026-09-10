@@ -167,6 +167,16 @@
 
 /// Tells the AI to unwield *something*, prioritizing melee
 /datum/human_ai_brain/proc/unholster_any_weapon()
+	if(iszombie(tied_human))
+		var/cur_hand = tied_human.get_active_hand()
+		if(isnull(cur_hand)) //Check if we have a hand. If not try the other one? Claws are stuck to hands so if this is null we've lost the hand
+			var/obj/limb/hand/r_hand/right_hand	= tied_human.get_limb("r_hand")
+			var/obj/limb/hand/l_hand/left_hand = tied_human.get_limb("l_hand")
+			if(!(left_hand.status & LIMB_DESTROYED) || !(right_hand.status & LIMB_DESTROYED)) //We have hands?
+				tied_human.swap_hand()
+				cur_hand = tied_human.get_active_hand()
+			else
+				return FALSE
 	if(unholster_melee())
 		tied_human.a_intent_change(INTENT_GRAB)
 		return TRUE
