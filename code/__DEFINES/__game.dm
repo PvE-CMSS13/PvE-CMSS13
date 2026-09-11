@@ -50,6 +50,7 @@
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+#define MAP_LV818_FEATURELESS_JUNGLE "LV818 Featureless Jungle"
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
