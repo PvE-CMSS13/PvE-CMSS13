@@ -1,14 +1,14 @@
 /datum/caste_datum/drone
 	caste_type = XENO_CASTE_DRONE
 	tier = 1
-	melee_damage_lower = XENO_DAMAGE_TIER_1
-	melee_damage_upper = XENO_DAMAGE_TIER_2
-	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = 180
+	melee_damage_lower = XENO_DAMAGE_TIER_3
+	melee_damage_upper = XENO_DAMAGE_TIER_4
+	melee_vehicle_damage = XENO_DAMAGE_TIER_3
+	max_health = XENO_HEALTH_DRONE
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
-	xeno_explosion_resistance = XENO_NO_EXPLOSIVE_ARMOR
-	armor_deflection = XENO_NO_ARMOR
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
+	armor_deflection = XENO_ARMOR_TIER_2
 	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_TIER_7
 
@@ -77,7 +77,7 @@
 	)
 	gib_chance = 100
 
-	acid_blood_damage = 25 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
+	acid_blood_damage = 40 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
 
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'

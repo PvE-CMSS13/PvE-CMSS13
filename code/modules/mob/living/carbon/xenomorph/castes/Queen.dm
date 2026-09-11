@@ -6,14 +6,14 @@
 	caste_type = XENO_CASTE_QUEEN
 	tier = 0
 
-	melee_damage_lower = XENO_DAMAGE_TIER_5
-	melee_damage_upper = XENO_DAMAGE_TIER_7
+	melee_damage_lower = XENO_DAMAGE_TIER_7
+	melee_damage_upper = XENO_DAMAGE_TIER_9
 	melee_vehicle_damage = XENO_DAMAGE_TIER_9 //Queen and Ravs have extra multiplier when dealing damage in multitile_interaction.dm
 	max_health = XENO_HEALTH_QUEEN * 5 // PVE boss edition
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
 	plasma_max = XENO_PLASMA_TIER_10 * 3 // PVE boss edition
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_4
+	armor_deflection = XENO_ARMOR_TIER_5
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_QUEEN
 
@@ -274,6 +274,7 @@
 	pull_speed = 3 //screech/neurodragging is cancer, at the very absolute least get some runner to do it for teamwork
 	organ_value = 8000 // queen is expensive
 
+	acid_blood_spatter = TRUE
 	acid_blood_damage = 60 /// Strong acid blood. Don't get too close!
 
 	icon_xeno = 'icons/mob/xenos/queen.dmi'
@@ -343,7 +344,7 @@
 		/datum/action/xeno_action/onclick/grow_ovipositor,
 		/datum/action/xeno_action/onclick/manage_hive,
 		/datum/action/xeno_action/activable/info_marker/queen,
-		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
+		/datum/action/xeno_action/onclick/screech/ai, //custom macro, Screech
 		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
 		/datum/action/xeno_action/onclick/shift_spits,
 		//second macro
@@ -351,7 +352,7 @@
 
 	// Abilities they get when they've successfully aged.
 	var/mobile_aged_abilities = list(
-		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
+		/datum/action/xeno_action/onclick/screech/ai, //custom macro, Screech
 		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
 		/datum/action/xeno_action/onclick/shift_spits, //second macro
 	)
@@ -361,6 +362,8 @@
 	var/queen_age_timer_id = TIMER_ID_NULL
 
 	bubble_icon = "alienroyal"
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
 
 /mob/living/carbon/xenomorph/queen/can_destroy_special()
 	return TRUE
@@ -440,6 +443,14 @@
 
 	AddComponent(/datum/component/footstep, 2 , 35, 11, 4, "alien_footstep_large")
 	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(check_block))
+
+	playsound(src, 'sound/voice/alien_queen_command.ogg', 100, TRUE, 30, falloff = 5)
+	if(!get_turf(src)) //autowiki compat, spawns in nullspace
+		return
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
+		var/relative_dir = get_dir(current_mob, src)
+		var/final_dir = dir2text(relative_dir)
+		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
 
 /mob/living/carbon/xenomorph/queen/proc/check_block(mob/queen, turf/new_loc)
 	SIGNAL_HANDLER
@@ -788,7 +799,7 @@
 
 	visible_message(SPAN_XENOWARNING("[src] begins slowly lifting [victim] into the air."), \
 	SPAN_XENOWARNING("You begin focusing your anger as you slowly lift [victim] into the air."))
-	if(do_after(src, 80, INTERRUPT_ALL, BUSY_ICON_HOSTILE, victim))
+	if(do_after(src, 30, INTERRUPT_ALL, BUSY_ICON_HOSTILE, victim))
 		if(!victim)
 			return FALSE
 		if(victim.loc != cur_loc)
@@ -991,3 +1002,14 @@
 	point.color = "#a800a8"
 
 	visible_message("<b>[src]</b> points to [target_atom]", null, null, 5)
+
+
+/datum/action/xeno_action/onclick/screech/ai
+	default_ai_action = TRUE
+	ai_prob_chance = 70
+	xeno_cooldown = 30 SECONDS
+
+/datum/action/xeno_action/onclick/screech/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
+	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
+	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 6)
