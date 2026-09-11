@@ -462,6 +462,8 @@
 				sound = pick('sound/effects/alien_footstep_large1.ogg','sound/effects/alien_footstep_large2.ogg','sound/effects/alien_footstep_large3.ogg')
 			if("alien_footstep_medium")
 				sound = pick('sound/effects/alien_footstep_medium1.ogg','sound/effects/alien_footstep_medium2.ogg','sound/effects/alien_footstep_medium3.ogg')
+			if("alien_footstep_small")
+				sound = pick('sound/effects/alien_footstep_small1.ogg', 'sound/effects/alien_footstep_small2.ogg')
 			if("alien_charge")
 				sound = pick('sound/effects/alien_footstep_charge1.ogg','sound/effects/alien_footstep_charge2.ogg','sound/effects/alien_footstep_charge3.ogg')
 			if("alien_resin_build")

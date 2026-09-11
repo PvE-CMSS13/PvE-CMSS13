@@ -77,6 +77,9 @@
 	var/aggression_min = AGGRESSION_MINIMUM ///Aggression cannot fall below this value.
 
 /mob/living/carbon/xenomorph/soldier/Initialize()
+
+	AddComponent(/datum/component/footstep, 1 , 20, 12, 4, "alien_footstep_small")
+
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/onclick/regurgitate,

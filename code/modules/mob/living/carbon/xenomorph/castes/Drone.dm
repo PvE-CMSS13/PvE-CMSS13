@@ -93,3 +93,7 @@
 
 /mob/living/carbon/xenomorph/drone/init_movement_handler()
 	return new /datum/xeno_ai_movement/drone(src)
+
+/mob/living/carbon/xenomorph/drone/Initialize()
+	. = ..()
+	AddComponent(/datum/component/footstep, 1 , 20, 12, 4, "alien_footstep_small")
