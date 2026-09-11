@@ -1,0 +1,9 @@
+{
+    "map_name": "UPP Bunker",
+    "map_path": "map_files/upp_bunker",
+    "map_file": "upp_bunker.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/upp_bunker/",
+    "platoon": "/datum/squad/marine/upp"
+}

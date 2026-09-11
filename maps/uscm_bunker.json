@@ -1,0 +1,8 @@
+{
+    "map_name": "USCM Bunker",
+    "map_path": "map_files/uscm_bunker",
+    "map_file": "uscm_bunker.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}

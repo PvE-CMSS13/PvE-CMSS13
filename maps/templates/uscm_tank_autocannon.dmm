@@ -1,0 +1,60 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/item/ammo_magazine/hardpoint/flare_launcher,
+/turf/template_noop,
+/area/template_noop)
+"e" = (
+/obj/effect/vehicle_spawner/tank/fixed/autocannon,
+/turf/template_noop,
+/area/template_noop)
+"w" = (
+/obj/item/ammo_magazine/hardpoint/towlauncher,
+/turf/template_noop,
+/area/template_noop)
+"G" = (
+/obj/item/ammo_magazine/hardpoint/ace_autocannon,
+/turf/template_noop,
+/area/template_noop)
+"Q" = (
+/turf/template_noop,
+/area/template_noop)
+"S" = (
+/obj/item/storage/toolbox/mechanical/green,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+Q
+G
+w
+Q
+Q
+"}
+(2,1,1) = {"
+Q
+Q
+Q
+Q
+Q
+"}
+(3,1,1) = {"
+Q
+Q
+e
+Q
+Q
+"}
+(4,1,1) = {"
+Q
+Q
+Q
+Q
+Q
+"}
+(5,1,1) = {"
+Q
+a
+S
+Q
+Q
+"}

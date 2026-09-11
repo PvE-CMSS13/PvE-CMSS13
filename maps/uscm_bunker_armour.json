@@ -1,0 +1,8 @@
+{
+    "map_name": "USCM Bunker (Armour)",
+    "map_path": "map_files/uscm_bunker_armour",
+    "map_file": "uscm_bunker_armour.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/armour"
+}

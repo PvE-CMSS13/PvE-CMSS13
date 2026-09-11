@@ -107,6 +107,35 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
 
+//-- Armour Platoons --//
+/datum/job/marine/tl/ai/armour
+	title = JOB_SQUAD_ARMOUR_GUNNER
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/armour/gunner
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+	supervisors = "the Element Commander, and Element Sergeant"
+	entry_message_body = "You are a gunner for a USCM Armor element. Your task is leading your assigned vehicle, following orders given to your vehicle to carry out and having your assigned driver get your vehicle rolling.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armory.</b>"
+
+/obj/effect/landmark/start/marine/tl/armour
+	name = JOB_SQUAD_ARMOUR_GUNNER
+	squad = SQUAD_ARMOUR
+	job = /datum/job/marine/tl/ai/armour
+
+/datum/job/marine/tl/ai/upp/armour
+	title = JOB_SQUAD_ARMOUR_GUNNER_UPP
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/upp/armour/gunner
+	job_options = list(JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+	supervisors = "the Group Commander, and Group Sergeant"
+	entry_message_body = "You are a gunner for a UPP Armed Collective Armor element. Your task is leading your assigned vehicle, following orders given to your vehicle to carry out and having your assigned driver get your vehicle rolling.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/tl/upp/armour
+	name = JOB_SQUAD_ARMOUR_GUNNER_UPP
+	squad = SQUAD_ARMOUR_UPP
+	job = /datum/job/marine/tl/ai/upp/armour
+
 //-- RMC Platoon --//
 //Section/squad leader & team leader//
 

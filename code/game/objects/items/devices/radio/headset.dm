@@ -697,6 +697,21 @@
 		"Landing Zone" = TRACKER_LZ
 	)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/armour
+	name = "USCM Armor headset"
+	desc = "Issued only to USCM Armor elements."
+	frequency = ARMOUR_FREQ
+	has_hud = TRUE
+	inbuilt_tracking_options = list(
+		"Element Commander" = TRACKER_PLTCO,
+		"Vehicle Gunner" = TRACKER_ASL,
+		"Landing Zone" = TRACKER_LZ
+	)
+	locate_setting = TRACKER_PLTCO
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/armour/commander
+	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/rmc
 	name = "Royal Marine Commando headset"
 	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
@@ -754,6 +769,21 @@
 	name = "UPP-CMD headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/command)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/armour
+	name = "UPP-ARM headset"
+	desc = "A special headset used by UPP Armed Collective Armour elements."
+	frequency = UPP_ARMOUR_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/armour)
+
+	inbuilt_tracking_options = list(
+		"Group Commander" = TRACKER_PLTCO,
+		"Hardware Gunner" = TRACKER_ASL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/armour/commander
+	initial_keys = list(/obj/item/device/encryptionkey/upp/armour, /obj/item/device/encryptionkey/upp/command)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/canc
 	name = "CANC headset"

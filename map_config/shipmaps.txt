@@ -41,3 +41,15 @@ endmap
 
 map hms_brynhild
 endmap
+
+map uscm_bunker
+endmap
+
+map upp_bunker
+endmap
+
+map uscm_bunker_armour
+endmap
+
+map upp_bunker_armour
+endmap

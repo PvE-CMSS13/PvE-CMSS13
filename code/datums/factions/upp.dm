@@ -93,6 +93,38 @@
 				IMG3.color = squad_clr
 				holder.overlays += IMG3
 
+// UPP Armour Platoon
+
+	if(istype(squad, /datum/squad/marine/upp/armour))
+		var/squad_clr = H.assigned_squad.equipment_color
+		switch(GET_DEFAULT_ROLE(_role))
+			if(JOB_SQUAD_ARMOUR_GUNNER_UPP) hud_icon_state = "tl"
+			if(JOB_SQUAD_ARMOUR_LEADER_UPP) hud_icon_state = "leader"
+			if(JOB_SQUAD_ARMOUR_COMMANDER_UPP) hud_icon_state = "wo_xo"
+		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H)
+			H.langchat_styles = "langchat_smaller_bolded"
+		else
+			H.langchat_styles = initial(H.langchat_styles)
+		H.langchat_color = H.assigned_squad.chat_color
+
+		if(!hud_icon_state) hud_icon_state = H.rank_fallback
+		if(hud_icon_state)
+			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad")
+			if(squad_clr)
+				IMG.color = squad_clr
+			else
+				IMG.color = "#ce742a"
+			holder.overlays += IMG
+			holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[hud_icon_state]")
+		if(H.assigned_squad && H.assigned_fireteam)
+			var/image/IMG2 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[H.assigned_fireteam]")
+			IMG2.color = squad_clr
+			holder.overlays += IMG2
+			if(H.assigned_squad.fireteam_leaders[H.assigned_fireteam] == H)
+				var/image/IMG3 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_ftl")
+				IMG3.color = squad_clr
+				holder.overlays += IMG3
+
 /datum/faction/upp/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),

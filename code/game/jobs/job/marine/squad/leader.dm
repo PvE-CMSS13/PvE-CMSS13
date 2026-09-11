@@ -111,6 +111,34 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
 
+//-- Armour Platoons --//
+// 2ic SNCO that is also a gunner in tank
+/datum/job/marine/leader/ai/armour
+	title = JOB_SQUAD_ARMOUR_LEADER
+	gear_preset = /datum/equipment_preset/uscm/armour/leader
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
+	supervisors = "the Element Commander"
+	entry_message_body = "You are the second in command of the whole Element, ensuring the orders of the Element Commander are followed through. You are ALSO the gunner of the lead tank in the element. You report to the Element Commander under normal circumstances, but may be required to take command should they die.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/leader/armour
+	name = JOB_SQUAD_ARMOUR_LEADER
+	squad = SQUAD_ARMOUR
+	job = /datum/job/command/bridge/ai/armour
+
+/datum/job/marine/leader/ai/upp/armour
+	title = JOB_SQUAD_ARMOUR_LEADER_UPP
+	gear_preset = /datum/equipment_preset/uscm/upp/armour/leader
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	job_options = list(SRSGT_VARIANT = "SrSGT", SGTMJR_VARIANT = "SGTMJR")
+	supervisors = "the Group Commander"
+	entry_message_body = "You are the second in command of the whole Group, ensuring the orders of the Group Commander are followed through. You are ALSO the gunner of the lead tank in the element. You report to the Group Commander under normal circumstances, but may be required to take command should they die.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/leader/upp/armour
+	name = JOB_SQUAD_ARMOUR_LEADER_UPP
+	squad = SQUAD_ARMOUR_UPP
+	job = /datum/job/command/bridge/ai/upp/armour
+
 //-- RMC Platoon --//
 // Second-in-command under LT, handles the mortar calls //
 /datum/job/marine/leader/ai/rmc

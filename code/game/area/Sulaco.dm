@@ -220,6 +220,19 @@
 		return FALSE
 	return TRUE
 
+/area/shuttle/nea_kameni
+	name = "\improper Dropship Nea Kameni"
+	icon_state = "shuttlered"
+	base_muffle = MUFFLE_HIGH
+	soundscape_interval = 30
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/shuttle/nea_kameni/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
 /area/shuttle/drop3
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
 	soundscape_interval = 30 //seconds

@@ -211,3 +211,77 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+// ==ARMOUR SQUADS== //
+// ==USCM== //
+
+/obj/structure/closet/secure_closet/marine_personal/armour/spawn_gear()
+	new /obj/item/clothing/under/marine/officer/boiler(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/service/tanker(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/armour(src)
+
+/obj/structure/closet/secure_closet/marine_personal/armour/driver
+	job = JOB_SQUAD_ARMOUR_DRIVER
+
+/obj/structure/closet/secure_closet/marine_personal/armour/gunner
+	job = JOB_SQUAD_ARMOUR_GUNNER
+
+/obj/structure/closet/secure_closet/marine_personal/armour/leader
+	job = JOB_SQUAD_ARMOUR_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/armour/leader/spawn_gear()
+	new /obj/item/clothing/under/marine/officer/boiler(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/service/tanker(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/armour/commander(src)
+
+/obj/structure/closet/secure_closet/marine_personal/armour/commander
+	job = JOB_SQUAD_ARMOUR_COMMANDER
+
+/obj/structure/closet/secure_closet/marine_personal/armour/commander/spawn_gear()
+	new /obj/item/clothing/under/marine/officer/boiler(src)
+	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/head/cmcap/bridge(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/service(src)
+	new /obj/item/clothing/head/marine/peaked/service(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/service/tanker(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/armour/commander(src)
+
+// ==UPP== //
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret(src)
+	new /obj/item/clothing/under/marine/veteran/UPP/boiler(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/bomber(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/armour(src)
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/driver
+	job = JOB_SQUAD_ARMOUR_DRIVER_UPP
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/gunner
+	job = JOB_SQUAD_ARMOUR_GUNNER_UPP
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/leader
+	job = JOB_SQUAD_ARMOUR_LEADER_UPP
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/leader/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret(src)
+	new /obj/item/clothing/under/marine/veteran/UPP/boiler(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/bomber(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/armour/commander(src)
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/commander
+	job = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+
+/obj/structure/closet/secure_closet/marine_personal/upp/armour/commander/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret(src)
+	new /obj/item/clothing/under/marine/veteran/UPP/boiler(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/armour/commander(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/bomber(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)

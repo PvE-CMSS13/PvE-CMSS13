@@ -24,6 +24,9 @@
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 
+#define SQUAD_ARMOUR "Chthonic Vanguard"
+#define SQUAD_ARMOUR_UPP "Tungsten Hussars"
+
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
 #define JOB_SQUAD_LEADER "Section Sergeant"
@@ -50,6 +53,17 @@
 #define JOB_SQUAD_RTO "Recon Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
+
+//-------- Armour Platoons --------//
+#define JOB_SQUAD_ARMOUR_COMMANDER "Element Commander"
+#define JOB_SQUAD_ARMOUR_LEADER "Element Sergeant"
+#define JOB_SQUAD_ARMOUR_GUNNER "Vehicle Gunner"
+#define JOB_SQUAD_ARMOUR_DRIVER "Vehicle Driver"
+
+#define JOB_SQUAD_ARMOUR_COMMANDER_UPP "Group Commander"
+#define JOB_SQUAD_ARMOUR_LEADER_UPP "Group Sergeant"
+#define JOB_SQUAD_ARMOUR_GUNNER_UPP "Hardware Gunner"
+#define JOB_SQUAD_ARMOUR_DRIVER_UPP "Hardware Driver"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 

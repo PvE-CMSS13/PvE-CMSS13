@@ -101,6 +101,34 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	name = JOB_PMCPLAT_OW
 	job = /datum/job/command/bridge/ai/pmc
 
+//-- Armour Platoons --//
+// lead from within the command tank
+/datum/job/command/bridge/ai/armour
+	title = JOB_SQUAD_ARMOUR_COMMANDER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm_ship/so/armour
+	job_options = list(SECOND_LT_VARIANT = "2ndLt", FIRST_LT_VARIANT = "1stLt")
+	supervisors = "USCM Company Command"
+	entry_message_body = "Your job is to conduct the briefing for the Element, lead the operation from within the command vehicle, and listen to your superior officers.</a> You are in charge of the Element for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+
+/obj/effect/landmark/start/bridge/armour
+	name = JOB_SQUAD_ARMOUR_COMMANDER
+	squad = SQUAD_ARMOUR
+	job = /datum/job/command/bridge/ai/armour
+
+/datum/job/command/bridge/ai/upp/armour
+	title = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm_ship/so/upp/armour
+	job_options = list(JR_LT_VARIANT = "JrLT", SR_LT_VARIANT = "SrLT")
+	supervisors = "UPP Armed Collective Company Command"
+	entry_message_body = "Your job is to conduct the briefing for the group, lead the operation from within the command vehicle, and listen to your superior officers.</a> You are in charge of the group for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+
+/obj/effect/landmark/start/bridge/upp/armour
+	name = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+	squad = SQUAD_ARMOUR_UPP
+	job = /datum/job/command/bridge/ai/upp/armour
+
 //-- RMC Platoon --//
 //Groundside command, no overwatch. Lead by example, chip chip cheerio and all that rubbish//
 

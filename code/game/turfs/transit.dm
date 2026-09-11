@@ -305,6 +305,10 @@
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/upp/nea_kameni
+	shuttle_tag = DROPSHIP_NEAKAMENI
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 

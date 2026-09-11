@@ -1,0 +1,780 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aA" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
+	},
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -13;
+	pixel_y = 29
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"cO" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "port_door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"cS" = (
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/nea_kameni)
+"di" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_11";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"ey" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"eE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 4;
+	pixel_x = -23;
+	network = list("Chapaev","Nea Kameni")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"ft" = (
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"hg" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp9"
+	},
+/area/shuttle/nea_kameni)
+"hS" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "starboard_door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"iN" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"jZ" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"kt" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"ld" = (
+/obj/effect/attach_point/weapon/midway/left_wing{
+	ship_tag = "dropship_upp"
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
+	},
+/area/shuttle/nea_kameni)
+"lf" = (
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 22
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"lm" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp1"
+	},
+/area/shuttle/nea_kameni)
+"nZ" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"pv" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_3";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"qf" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T61"
+	},
+/area/shuttle/nea_kameni)
+"rr" = (
+/obj/structure/machinery/computer/dropship_weapons/midway{
+	name = "\improper 'Nea Kameni' weapons controls";
+	shuttle_tag = "dropship_upp";
+	faction = "UPP";
+	req_one_access = list(230, 235,240)
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"si" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"um" = (
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1;
+	layer = 3.01
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8;
+	pixel_y = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -15
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"wi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1;
+	pixel_x = -1
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp/nea_kameni{
+	id = "aft-door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"wO" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp201"
+	},
+/area/shuttle/nea_kameni)
+"xc" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_rightengine"
+	},
+/area/shuttle/nea_kameni)
+"xv" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"xE" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp4"
+	},
+/area/shuttle/nea_kameni)
+"Ab" = (
+/obj/structure/barricade/handrail/strata{
+	can_buckle = 1;
+	layer = 3.01
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = -12
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"AK" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp21"
+	},
+/area/shuttle/nea_kameni)
+"BD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"BT" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"CV" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = 30
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"DG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"Fc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	dir = 8;
+	pixel_x = 23;
+	network = list("Chapaev","Nea Kameni")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"Fz" = (
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"FF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"FG" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/nea_kameni)
+"Gn" = (
+/obj/structure/stairs{
+	layer = 2.1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"GH" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight,
+/obj/structure/blocker/invisible_wall,
+/obj/item/frame/camera{
+	pixel_x = 12;
+	pixel_y = 17;
+	name = "broken dashcam";
+	desc = "Welp, no more funny crash vids..."
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"GY" = (
+/obj/docking_port/mobile/marine_dropship/upp,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"Hk" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp251"
+	},
+/area/shuttle/nea_kameni)
+"HB" = (
+/turf/closed/shuttle/dropship1/transparent{
+	name = "wall";
+	icon = 'icons/turf/ert_shuttle.dmi';
+	icon_state = "upp27"
+	},
+/area/shuttle/nea_kameni)
+"HD" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp3"
+	},
+/area/shuttle/nea_kameni)
+"IK" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
+	},
+/obj/structure/platform/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12;
+	pixel_y = 29
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"Jo" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/effect/attach_point/weapon/midway/right_fore{
+	ship_tag = "dropship_upp"
+	},
+/turf/template_noop,
+/area/template_noop)
+"Jy" = (
+/turf/template_noop,
+/area/template_noop)
+"JN" = (
+/obj/structure/platform/mineral{
+	dir = 4;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"Ko" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 22
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"Kv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = -5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 19
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"LD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"LW" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"MF" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp_leftengine"
+	},
+/area/shuttle/nea_kameni)
+"Nh" = (
+/obj/structure/platform/mineral{
+	dir = 1;
+	color = "#464847"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	network = list("Chapaev","Nea Kameni")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"Ou" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/upp,
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"OE" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 8;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/nea_kameni)
+"PQ" = (
+/obj/effect/attach_point/weapon/midway/right_wing{
+	ship_tag = "dropship_upp"
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "upp251"
+	},
+/area/shuttle/nea_kameni)
+"Qk" = (
+/obj/structure/machinery/computer/cameras/dropship/midway{
+	network = list("Nea Kameni","Laser Targets");
+	name = "\improper 'Nea Kameni' camera controls"
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/phone_base{
+	pixel_y = 32;
+	name = "Nea Kameni Telephone";
+	phone_category = "Dropship";
+	phone_id = "Nea Kameni";
+	networks_receive = list("UPP");
+	networks_transmit = list("UPP")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"RX" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/midway{
+	pixel_x = -6;
+	pixel_y = -16;
+	network = list("Chapaev","Nea Kameni")
+	},
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/nea_kameni)
+"Sx" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp5"
+	},
+/area/shuttle/nea_kameni)
+"Tq" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"TG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp23"
+	},
+/area/shuttle/nea_kameni)
+"TO" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"Wy" = (
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 9;
+	ship_tag = "dropship_upp"
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/nea_kameni)
+"Xb" = (
+/turf/closed/shuttle/ert{
+	icon_state = "uppwall"
+	},
+/area/shuttle/nea_kameni)
+"Xe" = (
+/obj/effect/attach_point/weapon/midway/left_fore,
+/obj/effect/attach_point/weapon/midway/left_fore{
+	ship_tag = "dropship_upp"
+	},
+/turf/template_noop,
+/area/template_noop)
+"Xo" = (
+/turf/closed/shuttle/ert{
+	icon_state = "T151"
+	},
+/area/shuttle/nea_kameni)
+"XE" = (
+/obj/structure/platform_decoration/mineral{
+	dir = 8;
+	color = "#464847"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/nea_kameni)
+"Ya" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_x = 12
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"Yn" = (
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/nea_kameni)
+"YJ" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "\improper MinZdrav dispenser";
+	desc = "A wall-mounted medical equipment dispenser. Provided by Ministry of Health of UPP, it contains a small quantity of emergency supplies.";
+	pixel_x = -30
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"Zh" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/nea_kameni)
+"Zm" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp8"
+	},
+/area/shuttle/nea_kameni)
+"Zn" = (
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_11";
+	opacity = 0
+	},
+/area/shuttle/nea_kameni)
+"ZO" = (
+/turf/closed/shuttle/ert{
+	icon_state = "upp22"
+	},
+/area/shuttle/nea_kameni)
+
+(1,1,1) = {"
+Jy
+Jy
+Jy
+Jy
+ld
+cO
+cO
+MF
+pv
+Zn
+Jy
+Jy
+qf
+MF
+pv
+DG
+Zn
+Jy
+"}
+(2,1,1) = {"
+Jy
+Jy
+Xe
+wO
+ZO
+LD
+LD
+Zm
+xE
+xE
+xE
+xE
+xE
+xE
+MF
+pv
+DG
+Zn
+"}
+(3,1,1) = {"
+wO
+xE
+xE
+AK
+lf
+OE
+Yn
+iN
+nZ
+xv
+YJ
+eE
+Gn
+cS
+Zm
+xE
+xE
+lm
+"}
+(4,1,1) = {"
+AK
+Qk
+FG
+HB
+jZ
+Ya
+um
+IK
+ft
+ft
+ft
+ft
+ey
+cS
+jZ
+LW
+si
+wi
+"}
+(5,1,1) = {"
+HB
+GH
+jZ
+Ou
+si
+Kv
+Xb
+Nh
+si
+GY
+si
+si
+si
+si
+jZ
+jZ
+jZ
+Yn
+"}
+(6,1,1) = {"
+AK
+rr
+RX
+HB
+jZ
+Yn
+Ab
+aA
+JN
+JN
+JN
+JN
+XE
+cS
+jZ
+TO
+si
+BD
+"}
+(7,1,1) = {"
+Hk
+Sx
+Sx
+AK
+Ko
+Wy
+Yn
+Tq
+kt
+Zh
+CV
+Fc
+Gn
+cS
+hg
+Sx
+Sx
+HD
+"}
+(8,1,1) = {"
+Jy
+Jy
+Jo
+Hk
+TG
+FF
+FF
+hg
+Sx
+Sx
+Sx
+Sx
+Sx
+Sx
+xc
+Fz
+BT
+di
+"}
+(9,1,1) = {"
+Jy
+Jy
+Jy
+Jy
+PQ
+hS
+hS
+xc
+Fz
+di
+Jy
+Jy
+Xo
+xc
+Fz
+BT
+di
+Jy
+"}

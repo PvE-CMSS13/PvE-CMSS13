@@ -768,6 +768,24 @@
 	faction = FACTION_TWE
 	access_list = ACCESS_LIST_TWE_TROOP
 
+/datum/equipment_preset/uscm_ship/so/armour
+	name = "USCM Armor, Element Commander"
+	assignment = JOB_SQUAD_ARMOUR_COMMANDER
+	rank = JOB_SQUAD_ARMOUR_COMMANDER
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ElmntCO"
+	skills = /datum/skills/vehicle_crew/commander
+
+/datum/equipment_preset/uscm_ship/so/upp/armour
+	name = "UPP Armour, Group Commander"
+	assignment = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+	rank = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
+	access_list = ACCESS_LIST_UPP_PLATOON
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	role_comm_title = "GrpCO"
+	skills = /datum/skills/vehicle_crew/commander
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/so_equipped

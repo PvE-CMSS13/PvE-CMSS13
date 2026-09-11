@@ -335,6 +335,32 @@
 	usable = TRUE
 	locked = TRUE
 
+//############################### Armour Squads
+/datum/squad/marine/armour
+	name = SQUAD_ARMOUR
+	equipment_color = "#b32ace"
+	chat_color = "#b32ace"
+	minimap_color = "#b32ace"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = ARMOUR_FREQ
+	minimap_color = MINIMAP_SQUAD_CHARLIE
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
+/datum/squad/marine/armour/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/upp/armour
+	name = SQUAD_ARMOUR_UPP
+	equipment_color = "#ce742a"
+	chat_color = "#ce742a"
+	minimap_color = "#ce742a"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = UPP_ARMOUR_FREQ
+	usable = TRUE
+
 //############################### UPP Squads
 /datum/squad/upp
 	name = "Root"
@@ -722,6 +748,58 @@
 				assignment = "Officer"
 
 //This is a mess
+		if(JOB_SQUAD_ARMOUR_DRIVER)
+			assignment = JOB_SQUAD_ARMOUR_DRIVER
+			num_riflemen++
+			var/squad_number = (num_riflemen > 3) ? pick(1, 2, 3) : num_riflemen
+			assign_fireteam("SQ[squad_number]", M)
+		if(JOB_SQUAD_ARMOUR_GUNNER)
+			assignment = JOB_SQUAD_ARMOUR_GUNNER
+			num_tl++
+			M.important_radio_channels += radio_freq
+			var/squad_number = (num_tl > 2) ? pick(1, 2) : num_tl
+			assign_fireteam("SQ[squad_number]", M)
+			assign_ft_leader("SQ[squad_number]", M)
+		if(JOB_SQUAD_ARMOUR_COMMANDER)
+			assignment = JOB_SQUAD_ARMOUR_COMMANDER
+			M.important_radio_channels += radio_freq
+			assign_fireteam("SQ1", M)
+		if(JOB_SQUAD_ARMOUR_LEADER)
+			assignment = JOB_SQUAD_ARMOUR_LEADER
+			M.important_radio_channels += radio_freq
+			num_leaders++
+			squad_leader = M
+			SStracking.set_leader(tracking_id, M)
+			SStracking.start_tracking("marine_sl", M)
+			assign_fireteam("SQ3", M)
+			assign_ft_leader("SQ3", M)
+
+		if(JOB_SQUAD_ARMOUR_DRIVER_UPP)
+			assignment = JOB_SQUAD_ARMOUR_DRIVER_UPP
+			num_riflemen++
+			var/squad_number = (num_riflemen > 3) ? pick(1, 2, 3) : num_riflemen
+			assign_fireteam("SQ[squad_number]", M)
+		if(JOB_SQUAD_ARMOUR_GUNNER_UPP)
+			assignment = JOB_SQUAD_ARMOUR_GUNNER_UPP
+			num_tl++
+			M.important_radio_channels += radio_freq
+			var/squad_number = (num_tl > 2) ? pick(1, 2) : num_tl
+			assign_fireteam("SQ[squad_number]", M)
+			assign_ft_leader("SQ[squad_number]", M)
+		if(JOB_SQUAD_ARMOUR_COMMANDER_UPP)
+			assignment = JOB_SQUAD_ARMOUR_COMMANDER_UPP
+			M.important_radio_channels += radio_freq
+			assign_fireteam("SQ1", M)
+		if(JOB_SQUAD_ARMOUR_LEADER_UPP)
+			assignment = JOB_SQUAD_ARMOUR_LEADER_UPP
+			M.important_radio_channels += radio_freq
+			num_leaders++
+			squad_leader = M
+			SStracking.set_leader(tracking_id, M)
+			SStracking.start_tracking("marine_sl", M)
+			assign_fireteam("SQ3", M)
+			assign_ft_leader("SQ3", M)
+
 		if(JOB_TWE_RMC_SECTIONLEADER)
 			assignment = JOB_TWE_RMC_SECTIONLEADER
 			num_tl++

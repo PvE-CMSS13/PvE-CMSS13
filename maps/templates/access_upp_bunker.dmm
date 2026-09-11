@@ -1,0 +1,109 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/hangar)
+"b" = (
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"c" = (
+/obj/structure/ladder{
+	id = "bunkerexit-east";
+	height = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"I" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/hangar)
+"K" = (
+/obj/structure/ladder{
+	id = "bunkerexit-west";
+	height = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"L" = (
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"M" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"V" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Bunker Access";
+	dir = 2;
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"Z" = (
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 7;
+	pixel_y = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+Z
+K
+b
+a
+"}
+(3,1,1) = {"
+V
+I
+M
+I
+V
+"}
+(4,1,1) = {"
+a
+L
+c
+b
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+"}

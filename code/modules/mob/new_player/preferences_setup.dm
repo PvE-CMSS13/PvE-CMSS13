@@ -326,6 +326,25 @@
 			return /datum/equipment_preset/pmc/standard
 		if(JOB_PMCPLAT_SMALL_MEDIC)
 			return /datum/equipment_preset/pmc/medic
+//Armour Platoons
+// USCM
+		if(JOB_SQUAD_ARMOUR_COMMANDER)
+			return /datum/equipment_preset/uscm_ship/so/armour
+		if(JOB_SQUAD_ARMOUR_LEADER)
+			return /datum/equipment_preset/uscm/armour/leader
+		if(JOB_SQUAD_ARMOUR_GUNNER)
+			return /datum/equipment_preset/uscm/armour/gunner
+		if(JOB_SQUAD_ARMOUR_DRIVER)
+			return /datum/equipment_preset/uscm/armour
+// UPP
+		if(JOB_SQUAD_ARMOUR_COMMANDER_UPP)
+			return /datum/equipment_preset/uscm_ship/so/upp/armour
+		if(JOB_SQUAD_ARMOUR_LEADER_UPP)
+			return /datum/equipment_preset/uscm/upp/armour/leader
+		if(JOB_SQUAD_ARMOUR_GUNNER_UPP)
+			return /datum/equipment_preset/uscm/upp/armour/gunner
+		if(JOB_SQUAD_ARMOUR_DRIVER_UPP)
+			return /datum/equipment_preset/uscm/upp/armour
 //RMC Troop
 		if(JOB_TWE_RMC_RIFLEMAN)
 			return /datum/equipment_preset/royal_marine/standard

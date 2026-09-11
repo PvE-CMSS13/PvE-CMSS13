@@ -1,0 +1,2700 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ar" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"aI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"aT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ck" = (
+/obj/structure/cargo_container/upp/mk6/mid{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"cA" = (
+/turf/open/floor/mech_bay_recharge_floor,
+/area/golden_arrow/hangar)
+"cM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"dd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"eg" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ew" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/hangar)
+"eB" = (
+/obj/structure/cargo_container/upp/mk6/right{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"eJ" = (
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"eL" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"eX" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/structure/dropship_equipment/paradrop_system,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"fd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"gt" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"gy" = (
+/obj/structure/machinery/recharge_station{
+	pixel_y = 13
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/hangar)
+"gJ" = (
+/obj/structure/surface/table/gamblingtable{
+	color = "#aeaeae"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_y = 6;
+	pixel_x = 6
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"gU" = (
+/obj/structure/closet{
+	name = "emergency closet";
+	desc = "It's a storage unit for emergency breathmasks and o2 tanks."
+	},
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/storage/firstaid/o2,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/hangar)
+"ha" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/closet/medical_wall{
+	pixel_x = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"hn" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = -6
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"hL" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/motor_pool)
+"ig" = (
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"ii" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"iR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"ja" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"jw" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Other Sections"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"jN" = (
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster17";
+	name = "'Miss April' pinup";
+	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in Playboy Magazine.";
+	pixel_y = 43;
+	pixel_x = -13;
+	layer = 3.5;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster29";
+	name = "'Miss February' pinup";
+	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in Playboy Magazine.";
+	pixel_y = 40;
+	layer = 3.5;
+	pixel_x = 2;
+	can_block_movement = 0
+	},
+/obj/structure/bed/chair,
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"ku" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/motor_pool)
+"kz" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"kI" = (
+/obj/structure/cargo_container/canc/right{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"ly" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"lN" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/motor_pool)
+"mb" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"mE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"mN" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"nW" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"oD" = (
+/obj/structure/machinery/pipedispenser,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"oN" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/storage/pouch/cassette,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 7
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"oS" = (
+/obj/structure/bed/chair{
+	pixel_y = -2
+	},
+/obj/structure/machinery/prop{
+	desc = "This poster features Jennifer Bentley standing on a beach in a lifeguard's uniform. She was the March 2180 centerfold in Playboy Magazine.";
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster12";
+	name = "'Miss March' pinup";
+	layer = 3.5;
+	pixel_y = 45;
+	pixel_x = 2
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"pc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#832121";
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"pt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#832121";
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"pv" = (
+/obj/structure/ladder{
+	id = "bunkerexit-west";
+	height = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"qH" = (
+/obj/vehicle/powerloader/jd{
+	name = "\improper CosmosStal 12 Bogatyr Power Loader";
+	color = "#A2B4AC";
+	desc = "The CosmosStal 12 Bogatyr Power Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects based on the Caterpillar P-5000, first designed in January 29, 2025 by the Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere.";
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"qO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/hydrant{
+	pixel_x = -28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"qQ" = (
+/obj/structure/cargo_container/canc/tan/mid,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"rj" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/prop/almayer/comp_open{
+	layer = 2.9;
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"sc" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"sj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"so" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"sH" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/motor_pool)
+"sV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/tjoint2{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"tC" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"uq" = (
+/obj/item/stool{
+	can_buckle = 1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"ur" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"uD" = (
+/turf/open/space/basic,
+/area/space)
+"vw" = (
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"vH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"vI" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"vP" = (
+/obj/structure/machinery/light/small{
+	light_color = "#832121";
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"wG" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"wP" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/motor_pool)
+"wU" = (
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/motor_pool)
+"xa" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"zT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Ab" = (
+/obj/structure/cargo_container/upp/mk6/right{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Ar" = (
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"Ba" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"Bm" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/storage/box/flare/upp,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Cb" = (
+/obj/structure/cargo_container/upp/mk6/left{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Ck" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/motor_pool)
+"Cv" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 4
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"CD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"CI" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"CV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Dd" = (
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"Do" = (
+/turf/open/floor/corsat,
+/area/golden_arrow/hangar)
+"DC" = (
+/obj/structure/roof/cargocrane_tracks/tjoint3{
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"DW" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Eb" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Ey" = (
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"EG" = (
+/obj/structure/machinery/recharge_station{
+	pixel_y = 13
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/hangar)
+"EO" = (
+/obj/structure/ladder{
+	id = "bunkerexit-east";
+	height = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"EV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Ff" = (
+/obj/structure/surface/table/gamblingtable{
+	color = "#aeaeae"
+	},
+/obj/item/toy/deck{
+	pixel_y = 5;
+	pixel_x = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Fj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Fp" = (
+/obj/structure/surface/table/gamblingtable{
+	color = "#aeaeae"
+	},
+/obj/item/device/flashlight/lamp{
+	light_power = 0.8;
+	light_color = "#e7c0a4";
+	light_range = 4;
+	anchored = 1;
+	pixel_y = -7;
+	pixel_x = 8;
+	layer = 5
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"FA" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"Ge" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/recharger{
+	pixel_x = 5
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Gh" = (
+/obj/structure/barricade/handrail{
+	layer = 3.7;
+	pixel_y = -9
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	layer = 3.01;
+	pixel_y = 13
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"Gy" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev")
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"GJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"GU" = (
+/obj/structure/barricade/handrail{
+	layer = 3.7;
+	pixel_y = -9
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	layer = 3.01;
+	pixel_y = 13
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/vehicle/powerloader/jd{
+	name = "\improper CosmosStal 12 Bogatyr Power Loader";
+	color = "#A2B4AC";
+	desc = "The CosmosStal 12 Bogatyr Power Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects based on the Caterpillar P-5000, first designed in January 29, 2025 by the Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere.";
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"Hi" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/hangar)
+"HG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"HM" = (
+/obj/structure/closet{
+	name = "emergency closet";
+	desc = "It's a storage unit for emergency breathmasks and o2 tanks."
+	},
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/tank/emergency_oxygen/double,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/item/clothing/mask/gas/military/upp,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 2.5
+	},
+/obj/item/storage/firstaid/o2,
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/golden_arrow/hangar)
+"Il" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/nea_kameni;
+	name = "Bunker Hangar Bay"
+	},
+/turf/open/floor/corsat,
+/area/golden_arrow/hangar)
+"Ix" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"IT" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/motor_pool)
+"Je" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2"
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/motor_pool)
+"Jr" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"JD" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"JR" = (
+/obj/structure/cargo_container/canc/left{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Kj" = (
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Kz" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"KC" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"KQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Lv" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/hangar)
+"LI" = (
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 7;
+	pixel_y = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Mf" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"Ms" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/motor_pool)
+"MQ" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/prop/almayer/comp_closed{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/tool/wrench{
+	pixel_y = 16
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"Nt" = (
+/obj/structure/roof/cargocrane_tracks/tjoint2{
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"NP" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"OJ" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Ph" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Bunker Access";
+	dir = 2;
+	req_one_access_txt = "230"
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"Pp" = (
+/obj/structure/cargo_container/canc/mid{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Qk" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"QJ" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Rg" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/tool/wrench,
+/obj/item/tool/weldingtool/hugetank,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Rs" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/motor_pool)
+"RA" = (
+/obj/structure/roof/cargocrane_tracks/cross{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"RI" = (
+/obj/structure/curtain/red,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 13
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"RJ" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"RT" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/clipboard{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/item/tool/pen/clicky{
+	desc = "It's a normal black ink pen."
+	},
+/obj/item/device/flashlight/lamp{
+	light_power = 0.8;
+	light_color = "#e7c0a4";
+	light_range = 4;
+	anchored = 1;
+	pixel_y = 14;
+	pixel_x = 7;
+	on = 1;
+	layer = 5
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"RY" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/tool/crowbar,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Sp" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/mech_bay_recharge_floor,
+/area/golden_arrow/hangar)
+"SK" = (
+/obj/structure/cargo_container/canc/tan/left,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Td" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"TB" = (
+/obj/structure/machinery/light/small{
+	light_color = "#832121";
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"TT" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/golden_arrow/hangar)
+"Ut" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"UB" = (
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"UL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/motor_pool)
+"VA" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/motor_pool)
+"Wb" = (
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_x = 7
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Wd" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Wv" = (
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Ww" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/tjoint3{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"WI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"Xx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/motor_pool)
+"XB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"XH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"Yh" = (
+/obj/structure/cargo_container/canc/tan/right,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"YT" = (
+/obj/structure/cargo_container/upp/mk6/mid{
+	opacity = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo";
+	pixel_x = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"YV" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
+"Zc" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"ZQ" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/cell_charger,
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 8
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+"ZX" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}
+(2,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+YV
+Qk
+CD
+Xx
+qO
+Xx
+qH
+UB
+Xx
+mb
+Ck
+"}
+(3,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+YV
+Dd
+sj
+Rs
+wP
+wP
+wP
+wP
+wP
+ku
+Ck
+"}
+(4,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Rg
+ZQ
+gU
+Hi
+Hi
+YV
+Mf
+CD
+Je
+IT
+UL
+UL
+IT
+IT
+ja
+Ck
+"}
+(5,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+eJ
+Kj
+XH
+Cb
+Kj
+XH
+JR
+Hi
+Sp
+Dd
+TT
+Dd
+oD
+Hi
+YV
+Mf
+CD
+iR
+sH
+sH
+Ms
+sH
+sH
+nW
+Ck
+"}
+(6,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+XH
+Ey
+eJ
+XH
+YT
+eJ
+XH
+Pp
+Hi
+eX
+Dd
+Dd
+hn
+ZX
+Hi
+YV
+Mf
+CD
+Je
+IT
+UL
+UL
+UL
+UL
+ja
+Ck
+"}
+(7,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+dd
+cM
+Jr
+Ww
+Ab
+xa
+XH
+kI
+Hi
+DW
+Dd
+Dd
+uq
+Ge
+Hi
+YV
+Dd
+CD
+Rs
+lN
+wU
+wU
+wU
+hL
+VA
+Ck
+"}
+(8,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Ey
+XH
+vH
+ii
+vH
+eJ
+eJ
+eJ
+Hi
+cA
+FA
+ly
+ly
+vI
+Hi
+YV
+Dd
+sj
+Xx
+Xx
+Kz
+ha
+gt
+Gh
+UB
+Ck
+"}
+(9,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Zc
+ur
+Zc
+Hi
+Hi
+Hi
+Hi
+Hi
+Ar
+Ar
+Ar
+Hi
+Hi
+vw
+ar
+OJ
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}
+(10,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+vw
+vP
+vw
+vw
+vw
+Gy
+GJ
+mE
+GJ
+vw
+vP
+vw
+vw
+vw
+GJ
+GJ
+GJ
+Gy
+vP
+Dd
+Mf
+CD
+Xx
+qO
+Xx
+UB
+UB
+Xx
+mb
+Ck
+"}
+(11,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+YV
+wG
+kz
+mN
+mN
+kz
+kz
+Nt
+mN
+mN
+kz
+kz
+kz
+mN
+mN
+kz
+kz
+DC
+Ut
+Mf
+Mf
+CD
+Rs
+wP
+wP
+wP
+wP
+wP
+ku
+Ck
+"}
+(12,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+ew
+YV
+Mf
+Dd
+CD
+HG
+IT
+UL
+UL
+IT
+IT
+ja
+Ck
+"}
+(13,1,1) = {"
+Hi
+Hi
+Hi
+Hi
+Hi
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+JD
+YV
+Dd
+Dd
+sj
+ig
+sH
+sH
+Ms
+sH
+sH
+nW
+Ck
+"}
+(14,1,1) = {"
+Hi
+EV
+pt
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+tC
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+zT
+vw
+JD
+vw
+Dd
+Mf
+CD
+Je
+UL
+UL
+UL
+UL
+IT
+ja
+Ck
+"}
+(15,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+YV
+Mf
+Mf
+CD
+Rs
+lN
+wU
+wU
+wU
+hL
+VA
+Ck
+"}
+(16,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+YV
+Mf
+Dd
+CD
+Xx
+Xx
+Kz
+ha
+gt
+GU
+UB
+Ck
+"}
+(17,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+vw
+vw
+vw
+Wd
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}
+(18,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+vw
+YV
+YV
+YV
+so
+KC
+YV
+Hi
+LI
+pv
+vw
+Hi
+"}
+(19,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Il
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+QJ
+RA
+Ut
+Lv
+Lv
+Lv
+so
+Lv
+Lv
+Ph
+Lv
+NP
+Lv
+Hi
+"}
+(20,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+vw
+YV
+YV
+YV
+so
+RJ
+YV
+Hi
+Wv
+EO
+vw
+Hi
+"}
+(21,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+vw
+vw
+vw
+Wd
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}
+(22,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+YV
+Dd
+Dd
+CD
+Xx
+qO
+Xx
+qH
+UB
+Xx
+mb
+Ck
+"}
+(23,1,1) = {"
+Hi
+aT
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Do
+Fj
+vw
+JD
+YV
+Mf
+Dd
+CD
+Rs
+wP
+wP
+wP
+wP
+wP
+ku
+Ck
+"}
+(24,1,1) = {"
+Hi
+WI
+pc
+Td
+eg
+Td
+Td
+Td
+Td
+Td
+Td
+Td
+Td
+sc
+Td
+Td
+Td
+Td
+Td
+Td
+aI
+vw
+JD
+vw
+Mf
+Mf
+CD
+Je
+IT
+UL
+UL
+IT
+IT
+ja
+Ck
+"}
+(25,1,1) = {"
+Hi
+Hi
+Hi
+Hi
+Hi
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+vw
+JD
+YV
+Dd
+Dd
+CD
+iR
+sH
+sH
+Ms
+sH
+sH
+nW
+Ck
+"}
+(26,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+ew
+YV
+Dd
+Dd
+CD
+Je
+IT
+UL
+UL
+UL
+UL
+ja
+Ck
+"}
+(27,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+YV
+YV
+YV
+vw
+vw
+YV
+wG
+DC
+mN
+mN
+kz
+kz
+kz
+mN
+mN
+kz
+kz
+Nt
+Ut
+Mf
+Dd
+CD
+Rs
+lN
+wU
+wU
+wU
+hL
+VA
+Ck
+"}
+(28,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+vw
+TB
+vw
+vw
+vw
+Eb
+Td
+XB
+Td
+vw
+TB
+vw
+vw
+CI
+Td
+Td
+Td
+Eb
+TB
+Mf
+Mf
+CD
+Xx
+Xx
+Kz
+ha
+gt
+Gh
+UB
+Ck
+"}
+(29,1,1) = {"
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Zc
+ur
+Zc
+Hi
+Hi
+Hi
+Hi
+Hi
+jw
+jw
+jw
+Hi
+Hi
+vw
+vw
+Wd
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}
+(30,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+XH
+Cb
+KQ
+CV
+SK
+eJ
+eJ
+Wb
+Hi
+oN
+fd
+fd
+fd
+eJ
+Hi
+YV
+Dd
+CD
+Xx
+qO
+Xx
+UB
+UB
+Xx
+mb
+Ck
+"}
+(31,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+dd
+ck
+Jr
+sV
+qQ
+jN
+Fp
+Ff
+Hi
+gy
+Dd
+Dd
+rj
+RT
+Hi
+YV
+Dd
+CD
+Rs
+wP
+wP
+wP
+wP
+wP
+ku
+Ck
+"}
+(32,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+XH
+eB
+eJ
+XH
+Yh
+oS
+gJ
+eL
+Hi
+EG
+uq
+Dd
+Dd
+Ix
+Hi
+YV
+Mf
+CD
+HG
+IT
+UL
+UL
+IT
+IT
+ja
+Ck
+"}
+(33,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+eJ
+eJ
+XH
+RI
+eJ
+XH
+XH
+Hi
+Bm
+MQ
+Dd
+Dd
+RY
+Hi
+YV
+Mf
+CD
+ig
+sH
+sH
+Ms
+sH
+sH
+nW
+Ck
+"}
+(34,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+oD
+Cv
+HM
+Hi
+Hi
+YV
+Dd
+sj
+Je
+UL
+UL
+UL
+UL
+IT
+ja
+Ck
+"}
+(35,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Hi
+Hi
+YV
+Dd
+CD
+Rs
+lN
+wU
+wU
+wU
+hL
+VA
+Ck
+"}
+(36,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+YV
+Ba
+CD
+Xx
+Xx
+Kz
+ha
+gt
+GU
+UB
+Ck
+"}
+(37,1,1) = {"
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+uD
+Hi
+Hi
+Hi
+Hi
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+"}

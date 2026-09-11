@@ -433,6 +433,14 @@
 	name = "upp late join"
 	squad = SQUAD_UPP
 
+/obj/effect/landmark/late_join/armour
+	name = "armour late join"
+	squad = SQUAD_ARMOUR
+
+/obj/effect/landmark/late_join/upp/armour
+	name = "upp armour late join"
+	squad = SQUAD_ARMOUR_UPP
+
 /obj/effect/landmark/late_join/rmc
 	name = "rmc late join"
 	squad = SQUAD_RMC

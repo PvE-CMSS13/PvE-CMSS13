@@ -215,6 +215,18 @@
 /obj/docking_port/mobile/marine_dropship/gibraltar/get_transit_path_type()
 	return /turf/open/space/transit/dropship/gibraltar
 
+/obj/docking_port/mobile/marine_dropship/nea_kameni
+	name = "Nea Kameni"
+	id = DROPSHIP_NEAKAMENI
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/nea_kameni/get_transit_path_type()
+	return /turf/open/space/transit/dropship/upp/nea_kameni
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -439,6 +451,10 @@
 /datum/map_template/shuttle/upp
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
+
+/datum/map_template/shuttle/nea_kameni
+	name = "Nea Kameni"
+	shuttle_id = DROPSHIP_NEAKAMENI
 
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"

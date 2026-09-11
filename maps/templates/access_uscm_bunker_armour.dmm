@@ -1,0 +1,3122 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/motor_pool)
+"aB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/hangar)
+"aO" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"bt" = (
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/hangar)
+"bQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 2
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"bU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"bV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"ce" = (
+/obj/structure/barricade/handrail{
+	layer = 3.7;
+	pixel_y = -9
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	layer = 3.01;
+	pixel_y = 13
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"cn" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/motor_pool)
+"co" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ct" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"cv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/motor_pool)
+"cw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"cQ" = (
+/obj/effect/decal/siding,
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"cW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/motor_pool)
+"dj" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"dm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"dp" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"dO" = (
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/hangar)
+"dQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
+"dT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/hangar)
+"dZ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/motor_pool)
+"eP" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ff" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"fs" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/motor_pool)
+"fA" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
+"fO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"fW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/hangar)
+"fX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"gc" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
+"gp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"gN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
+"gT" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"hl" = (
+/obj/effect/decal/siding{
+	icon_state = "siding9"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"hr" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"im" = (
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"jk" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/motor_pool)
+"jw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
+"jy" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/motor_pool)
+"jC" = (
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/motor_pool)
+"ke" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"kk" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"kz" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop{
+	density = 1;
+	icon_state = "pipe_d";
+	name = "refueling pump";
+	desc = "A pump used for refueling the dropship.";
+	pixel_x = -4;
+	pixel_y = -5;
+	layer = 2.7
+	},
+/obj/effect/decal/siding{
+	icon_state = "siding2"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"kE" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
+"kF" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/motor_pool)
+"lg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"lt" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"lR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/motor_pool)
+"lS" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
+"lY" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"mt" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ni" = (
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"nq" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"nL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/motor_pool)
+"nX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"oo" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"oD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"pn" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/comp_open{
+	pixel_y = 9;
+	pixel_x = -12
+	},
+/obj/item/reagent_container/food/drinks/cans/souto/diet{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/trash/chips{
+	layer = 2.7;
+	pixel_y = -9
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"pI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"qc" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"qn" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/motor_pool)
+"qy" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"qE" = (
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/motor_pool)
+"qY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"rt" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/motor_pool)
+"rP" = (
+/obj/effect/decal/siding{
+	icon_state = "siding8"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"ss" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"tr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/prop{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "targeting_system";
+	name = "\improper Broken AN/AAQ-178 Weapon Targeting System";
+	desc = "A targeting system for dropships. It improves firing accuracy on laser targets. Far beyond repair.";
+	pixel_y = 3;
+	pixel_x = 7;
+	density = 1;
+	layer = 3.1
+	},
+/obj/item/prop/almayer/flight_recorder{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_x = 7;
+	pixel_y = 15;
+	layer = 3.11
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"ty" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"tU" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
+"ub" = (
+/obj/structure/prop/dam/crane,
+/obj/structure/prop{
+	icon = 'icons/obj/structures/props/almayer_props64.dmi';
+	icon_state = "cooling_system";
+	name = "Damaged FS/ACS-9 cooling system";
+	desc = "A cooling system for the Tripoli. It produces additional cooling reducing delays between launch. The pipes are crooked and bent,  hoses are sliced open, and that's not even mentioning the bullet holes. Looks to be an older model as well.";
+	density = 1;
+	pixel_y = 16;
+	layer = 3.1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/motor_pool)
+"uB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
+"uZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"vw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/motor_pool)
+"wh" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"wp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"wN" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/motor_pool)
+"wR" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"xi" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"xj" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"xl" = (
+/obj/effect/decal/siding{
+	icon_state = "siding2"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"xp" = (
+/obj/structure/barricade/handrail{
+	layer = 3.7;
+	pixel_y = -9
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	layer = 3.01;
+	pixel_y = 13
+	},
+/obj/vehicle/powerloader{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"xM" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"xU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"zb" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"zz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 8
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"zK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"zM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/motor_pool)
+"zY" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	name = "Hangar Bay Starboard";
+	id = "golden arrow lz2";
+	roundstart_template = /datum/map_template/shuttle/tripoli
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Av" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"AA" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/motor_pool)
+"Bv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"BR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 4
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Cu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/hangar)
+"Cz" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/motor_pool)
+"CZ" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/motor_pool)
+"Dj" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Dk" = (
+/obj/effect/decal/siding{
+	icon_state = "siding4"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Ds" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/ladder{
+	id = "bunkerexit-south";
+	height = 1
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_y = -28
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 14;
+	pixel_y = -28
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"DT" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/motor_pool)
+"Ek" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Et" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"Ez" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/motor_pool)
+"EU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/motor_pool)
+"EZ" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Fd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Fs" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"FB" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"FT" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/motor_pool)
+"GW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/hangar)
+"Hg" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Hk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"Hm" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Hp" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Hs" = (
+/obj/structure/machinery/door/airlock/maintenance/colony{
+	req_one_access = null;
+	name = "\improper Bunker Hatch"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"HB" = (
+/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"HE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"HT" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"HU" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	name = "Hangar Bay Port";
+	roundstart_template = /datum/map_template/shuttle/cyclone
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"HX" = (
+/obj/effect/decal/siding{
+	icon_state = "siding10"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Ir" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/motor_pool)
+"Iw" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Iy" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Iz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/tool/screwdriver{
+	pixel_y = 7;
+	pixel_x = -4;
+	layer = 3.03
+	},
+/obj/item/tool/wirecutters{
+	pixel_y = -7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"IB" = (
+/turf/open/space/basic,
+/area/space)
+"ID" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Jc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/motor_pool)
+"Jv" = (
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"JH" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"Kg" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Kk" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"KC" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"KG" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"Lq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/hydrant{
+	pixel_x = -28
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"LC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/motor_pool)
+"Mj" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"MC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"MM" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Nd" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"Np" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
+"Nv" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/almayer/flight_recorder{
+	pixel_y = 3
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Nz" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ND" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/hangar)
+"OR" = (
+/obj/effect/decal/siding{
+	icon_state = "siding5"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Pf" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Pk" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"PC" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"PE" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"PW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/siding{
+	icon_state = "siding2"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"QC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"QI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Ra" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
+"Ri" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/hangar)
+"RM" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"RW" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"SB" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"SR" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"SW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"Tb" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/closet/medical_wall{
+	pixel_x = 28
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/motor_pool)
+"Tf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Tv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"TK" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"TT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Ua" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/motor_pool)
+"Ub" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"VQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Wh" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Ww" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/motor_pool)
+"WR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/siding{
+	icon_state = "siding8"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Xf" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Xm" = (
+/obj/structure/ladder{
+	id = "bunkerexit-north";
+	height = 1
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_y = 28
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 14;
+	pixel_y = 28
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Xy" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"XU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Yf" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"Yj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/motor_pool)
+"Ym" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Yn" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"YL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/hangar)
+"YP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/siding{
+	icon_state = "siding6"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"YV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+Ez
+Ez
+Ez
+Ez
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+"}
+(2,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+jk
+vw
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(3,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+fA
+fA
+jw
+JH
+Lq
+JH
+Jv
+ss
+JH
+oo
+Ez
+"}
+(4,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+rt
+Ua
+zM
+rt
+CZ
+CZ
+CZ
+CZ
+CZ
+cn
+Ez
+"}
+(5,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+tU
+LC
+Jc
+Yj
+qn
+Ww
+Ww
+qn
+qn
+jy
+Ez
+"}
+(6,1,1) = {"
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+Ez
+Np
+cW
+Jc
+gN
+dZ
+dZ
+nL
+dZ
+dZ
+Cz
+Ez
+"}
+(7,1,1) = {"
+PC
+Tv
+wp
+wp
+ty
+wp
+wp
+wp
+Fd
+wp
+wp
+wp
+ty
+ty
+wp
+wp
+wp
+wp
+Fd
+ty
+ty
+wp
+wp
+wp
+wp
+tU
+LC
+Jc
+Yj
+qn
+Ww
+Ww
+Ww
+Ww
+jy
+Ez
+"}
+(8,1,1) = {"
+PC
+ff
+bU
+RM
+eP
+hr
+ke
+xi
+lt
+aO
+ke
+xi
+Pk
+xM
+HT
+xi
+eP
+aO
+gT
+RM
+eP
+aO
+HT
+RM
+cw
+jC
+AA
+ac
+cv
+DT
+wN
+wN
+wN
+fs
+kF
+Ez
+"}
+(9,1,1) = {"
+PC
+ff
+Kg
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+dj
+kE
+gc
+jw
+JH
+JH
+QC
+Tb
+nq
+ce
+ss
+Ez
+"}
+(10,1,1) = {"
+PC
+ff
+Yf
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+Wh
+jk
+jk
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(11,1,1) = {"
+PC
+ff
+Nz
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+ID
+fA
+kE
+jw
+JH
+Lq
+JH
+ss
+ss
+JH
+oo
+Ez
+"}
+(12,1,1) = {"
+PC
+ff
+qc
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+zK
+rt
+Ua
+zM
+rt
+CZ
+CZ
+CZ
+CZ
+CZ
+cn
+Ez
+"}
+(13,1,1) = {"
+PC
+ff
+Kg
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+zb
+gN
+LC
+Jc
+dQ
+qn
+Ww
+Ww
+qn
+qn
+jy
+Ez
+"}
+(14,1,1) = {"
+PC
+qY
+HB
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+HU
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+qy
+gN
+cW
+Jc
+tU
+dZ
+dZ
+nL
+dZ
+dZ
+Cz
+Ez
+"}
+(15,1,1) = {"
+PC
+ff
+KC
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+ID
+tU
+LC
+Jc
+Yj
+Ww
+Ww
+Ww
+Ww
+qn
+jy
+Ez
+"}
+(16,1,1) = {"
+PC
+ff
+qc
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+wR
+jC
+AA
+ac
+cv
+DT
+wN
+wN
+wN
+fs
+kF
+Ez
+"}
+(17,1,1) = {"
+PC
+ff
+mt
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+dj
+kE
+kE
+jw
+JH
+JH
+QC
+Tb
+nq
+xp
+ss
+Ez
+"}
+(18,1,1) = {"
+PC
+ff
+co
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+dj
+jk
+vw
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(19,1,1) = {"
+PC
+ff
+KC
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+Wh
+Hg
+Fs
+Hg
+fX
+Hg
+Hg
+PE
+PC
+IB
+IB
+IB
+"}
+(20,1,1) = {"
+PC
+ff
+HE
+lY
+RW
+fO
+dm
+lY
+pI
+SR
+dm
+lY
+RW
+FB
+SB
+Xy
+wh
+SR
+Xf
+Xy
+RW
+SR
+SB
+lY
+lg
+Hg
+Fs
+Hg
+fX
+Hg
+Hg
+Kk
+PC
+IB
+IB
+IB
+"}
+(21,1,1) = {"
+PC
+Ek
+nX
+nX
+xU
+nX
+nX
+nX
+nX
+Tf
+nX
+XU
+XU
+XU
+nX
+nX
+nX
+XU
+XU
+XU
+XU
+QI
+Av
+nX
+nX
+fW
+Ra
+dO
+PC
+PC
+Hs
+PC
+PC
+IB
+IB
+IB
+"}
+(22,1,1) = {"
+PC
+Hg
+Hg
+Hg
+PC
+Hg
+Hg
+ND
+lS
+lS
+lS
+uB
+uB
+ND
+lS
+lS
+lS
+uB
+uB
+aB
+Hg
+Hg
+PC
+Hg
+Hg
+MC
+Yn
+ni
+PC
+BR
+Hg
+EZ
+PC
+IB
+IB
+IB
+"}
+(23,1,1) = {"
+PC
+Hg
+xj
+PC
+PC
+PC
+Iy
+SW
+Mj
+Mj
+Mj
+Mj
+Mj
+SW
+Mj
+Mj
+Mj
+Mj
+Mj
+uZ
+xj
+PC
+PC
+PC
+Iy
+Nd
+Bv
+kk
+PC
+Xm
+Hg
+Ds
+PC
+IB
+IB
+IB
+"}
+(24,1,1) = {"
+PC
+Hg
+Hg
+Hg
+PC
+Hg
+Hg
+dT
+Et
+Et
+Et
+Et
+Et
+dT
+Et
+Et
+Et
+Et
+Et
+GW
+Hg
+Hg
+PC
+Hg
+Fs
+Nd
+Yn
+ni
+PC
+zz
+Hg
+Ym
+PC
+IB
+IB
+IB
+"}
+(25,1,1) = {"
+PC
+Tv
+ty
+wp
+Fd
+wp
+wp
+TT
+ty
+ty
+wp
+Hk
+wp
+wp
+bQ
+tr
+Iz
+wp
+oD
+ty
+ty
+wp
+Fd
+wp
+ty
+Ri
+KG
+bt
+PC
+PC
+Hs
+PC
+PC
+IB
+IB
+IB
+"}
+(26,1,1) = {"
+PC
+bV
+Hm
+eP
+Pk
+eP
+eP
+eP
+TK
+Pk
+eP
+eP
+eP
+TK
+eP
+Pk
+Pk
+Pk
+TK
+eP
+eP
+eP
+Pk
+eP
+MM
+Fs
+Fs
+Hg
+fX
+Hg
+Hg
+Kk
+PC
+IB
+IB
+IB
+"}
+(27,1,1) = {"
+PC
+ff
+KC
+hl
+rP
+rP
+WR
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+rP
+WR
+HX
+dj
+Hg
+Fs
+Hg
+fX
+Hg
+Hg
+PE
+PC
+IB
+IB
+IB
+"}
+(28,1,1) = {"
+PC
+ff
+Nz
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+PW
+Nv
+jk
+jk
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(29,1,1) = {"
+PC
+Cu
+Nz
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+kz
+pn
+kE
+gc
+jw
+JH
+Lq
+JH
+Jv
+ss
+JH
+oo
+Ez
+"}
+(30,1,1) = {"
+PC
+gp
+Nz
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+zb
+qE
+lR
+zM
+rt
+CZ
+CZ
+CZ
+CZ
+CZ
+cn
+Ez
+"}
+(31,1,1) = {"
+PC
+YV
+KC
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+dj
+tU
+LC
+Jc
+Yj
+qn
+Ww
+Ww
+Ww
+qn
+jy
+Ez
+"}
+(32,1,1) = {"
+PC
+Ub
+Iw
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+zY
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+Dj
+tU
+cW
+Jc
+tU
+dZ
+dZ
+nL
+dZ
+dZ
+Cz
+Ez
+"}
+(33,1,1) = {"
+PC
+gp
+KC
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+dj
+gN
+LC
+Jc
+Yj
+qn
+Ww
+Ww
+qn
+qn
+jy
+Ez
+"}
+(34,1,1) = {"
+PC
+bV
+KC
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+dj
+cv
+FT
+ac
+cv
+DT
+wN
+wN
+wN
+fs
+kF
+Ez
+"}
+(35,1,1) = {"
+PC
+YL
+KC
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+xl
+zb
+kE
+fA
+jw
+JH
+JH
+QC
+Tb
+nq
+ce
+ss
+Ez
+"}
+(36,1,1) = {"
+PC
+ff
+KC
+cQ
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+im
+PW
+dj
+jk
+vw
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(37,1,1) = {"
+PC
+ff
+KC
+OR
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+Dk
+YP
+dj
+kE
+fA
+jw
+JH
+Lq
+JH
+ss
+ss
+JH
+oo
+Ez
+"}
+(38,1,1) = {"
+PC
+ff
+Hp
+lY
+Xy
+Xy
+lY
+Xy
+ct
+lY
+lY
+lY
+lY
+ct
+lY
+lY
+Xy
+lY
+ct
+lY
+dp
+lY
+Xy
+lY
+Pf
+qE
+Ua
+zM
+rt
+CZ
+CZ
+CZ
+CZ
+CZ
+cn
+Ez
+"}
+(39,1,1) = {"
+PC
+Ek
+nX
+nX
+nX
+XU
+nX
+nX
+xU
+XU
+XU
+nX
+nX
+nX
+nX
+nX
+XU
+XU
+Av
+VQ
+nX
+XU
+XU
+XU
+XU
+gN
+LC
+Jc
+Yj
+qn
+Ww
+Ww
+Ww
+qn
+jy
+Ez
+"}
+(40,1,1) = {"
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+PC
+Ez
+Np
+cW
+Jc
+tU
+dZ
+dZ
+nL
+dZ
+dZ
+Cz
+Ez
+"}
+(41,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+tU
+LC
+EU
+Yj
+Ww
+qn
+Ww
+Ww
+Ww
+jy
+Ez
+"}
+(42,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+jC
+AA
+ac
+cv
+DT
+wN
+wN
+wN
+fs
+kF
+Ez
+"}
+(43,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+kE
+ub
+jw
+JH
+JH
+QC
+Tb
+nq
+xp
+ss
+Ez
+"}
+(44,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+jk
+jk
+Ir
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+Ez
+"}
+(45,1,1) = {"
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+Ez
+Ez
+Ez
+Ez
+Ez
+IB
+IB
+IB
+IB
+IB
+IB
+IB
+"}
