@@ -1028,3 +1028,46 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	time_to_unequip = 10
 	time_to_equip = 10
+
+/obj/item/clothing/suit/marine/snowman
+	name = "\improper Snowsuit"
+	desc = "A standard snow suit. It can protect the wearer from extreme cold."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc/snowman
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	icon_state = "s_ghillie_armor"
+
+/obj/item/clothing/suit/marine/snowman/canc
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/snowman/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/armoured_rad
+	name = "Radiation suit"
+	desc = "A suit that protects against radiation. Label: Made with lead, do not eat insulation."
+	icon_state = "rad"
+	item_state = "rad_suit"
+	icon = 'icons/obj/items/clothing/suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
+	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/obj/item/clothing/suit/marine/armoured_rad/canc
+
+/obj/item/clothing/suit/marine/armoured_rad/canc/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
