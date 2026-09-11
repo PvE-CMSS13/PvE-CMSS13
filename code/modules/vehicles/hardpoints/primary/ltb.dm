@@ -36,3 +36,18 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 300, GLOB.damage_boost_vehicles),
 	))
+
+/obj/item/hardpoint/primary/cannon/wolfpack
+	px_offsets = list(
+		"1" = list(0, 0),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
+
+	muzzle_flash_pos = list(
+		"1" = list(0, 65),
+		"2" = list(0, -80),
+		"4" = list(95, -4),
+		"8" = list(-95, -4)
+	)

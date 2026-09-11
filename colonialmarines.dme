@@ -2596,6 +2596,7 @@
 #include "code\modules\vehicles\apc\apc_medical.dm"
 #include "code\modules\vehicles\apc\apc_movie.dm"
 #include "code\modules\vehicles\apc\apc_moviemed.dm"
+#include "code\modules\vehicles\apc\apc_wolfpack.dm"
 #include "code\modules\vehicles\apc\arc.dm"
 #include "code\modules\vehicles\apc\arc_weaponless.dm"
 #include "code\modules\vehicles\apc\interior.dm"
