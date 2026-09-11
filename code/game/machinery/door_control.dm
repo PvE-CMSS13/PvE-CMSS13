@@ -2,6 +2,7 @@
 #define CONTROL_NORMAL_DOORS 1
 #define CONTROL_EMITTERS 2
 #define CONTROL_DROPSHIP 3
+#define CONTROL_LADDERS 4
 
 /obj/structure/machinery/door_control
 	name = "remote door-control"
@@ -105,6 +106,11 @@
 			else
 				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/door, close))
 
+/obj/structure/machinery/door_control/proc/handle_ladders()
+	for(var/obj/structure/ladder/hatch/LH in GLOB.ladder_list)
+		if(LH.id == id)
+			LH.toggle_lock()
+
 /obj/structure/machinery/door_control/verb/push_button()
 	set name = "Push Button"
 	set category = "Object"
@@ -140,6 +146,8 @@
 			handle_pod()
 		if(CONTROL_DROPSHIP)
 			handle_dropship(id)
+		if(CONTROL_LADDERS)
+			handle_ladders()
 
 	desiredstate = !desiredstate
 	spawn(15)
@@ -234,6 +242,8 @@
 			handle_pod()
 		if(CONTROL_DROPSHIP)
 			handle_dropship(id)
+		if(CONTROL_LADDERS)
+			handle_ladders()
 
 	desiredstate = !desiredstate
 

@@ -201,6 +201,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_BLACKSTONE_BRIDGE = new /obj/item/map/blackstone_bridge(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

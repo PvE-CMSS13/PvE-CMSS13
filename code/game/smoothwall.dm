@@ -196,8 +196,9 @@
 
 
 /turf/closed/wall/handle_icon_junction(junction)
-	icon_state = "[walltype][junction]"
-	junctiontype = junction
+	if(!special_icon) //Necessary for confinement walls/windows to show their icon next to regular windows; otherwise it blanks out.
+		icon_state = "[walltype][junction]"
+		junctiontype = junction
 
 /obj/structure/grille/almayer/handle_icon_junction(junction)
 	icon_state = "grille[junction]"

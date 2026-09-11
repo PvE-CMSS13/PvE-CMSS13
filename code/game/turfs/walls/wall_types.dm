@@ -350,6 +350,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/stone.dmi'
 	icon_state = "stone"
 	walltype = WALL_STONE
+	turf_flags = TURF_NATURAL
 	var/mineral
 	var/last_event = 0
 	var/active = null
@@ -478,6 +479,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon = 'icons/turf/walls/cult.dmi'
 	icon_state = "cult"
 	walltype = WALL_CULT
+	turf_flags = TURF_NATURAL //Not exactly 'natural', but close enough
 	color = "#3c3434"
 
 /turf/closed/wall/cult/make_girder(destroyed_girder)
@@ -540,11 +542,30 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "cavewall"
 	desc = "A rough wall of hardened rock."
 	walltype = WALL_CAVE
+	turf_flags = TURF_NATURAL
 	hull = 1
 	color = "#535963"
 
+/turf/closed/wall/rock/destructible
+	name = "rock wall"
+	desc = "A rough wall of rock."
+	icon_state = "cavewall_destructible"
+	damage_cap = HEALTH_WALL_ROCK
+	repair_materials = list()
+	baseturfs = /turf/open/gm/dirt
+	hull = FALSE
+
 /turf/closed/wall/rock/brown
 	color = "#826161"
+
+/turf/closed/wall/rock/brown/destructible
+	name = "rock wall"
+	desc = "A rough wall of rock."
+	icon_state = "cavewall_destructible"
+	damage_cap = HEALTH_WALL_ROCK
+	repair_materials = list()
+	baseturfs = /turf/open/gm/dirt
+	hull = FALSE
 
 /turf/closed/wall/rock/orange
 	color = "#994a16"
@@ -560,6 +581,20 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/rock/ice/thin
 	alpha = 166
 
+/turf/closed/wall/rock/underground
+	name = "dense dirt wall"
+	desc = "Exceptionally rough wall of hardened dirt."
+	color = "#675a48"
+
+/turf/closed/wall/rock/destructible
+	name = "rock wall"
+	desc = "A rough wall of rock."
+	icon_state = "cavewall_destructible"
+	damage_cap = HEALTH_WALL_ROCK
+	repair_materials = list()
+	baseturfs = /turf/open/gm/dirt
+	hull = FALSE
+
 //Strata New Blendy Ice
 
 /turf/closed/wall/strata_ice
@@ -568,12 +603,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "strata_ice"
 	desc = "An absolutely massive collection of columns made of ice. The longer you stare, the deeper the ice seems to go."
 	walltype = WALL_STRATA_ICE //Not a metal wall
+	turf_flags = TURF_NATURAL
 	hull = 1 //Can't break this ice.
 
 /turf/closed/wall/strata_ice/dirty
 	icon_state = "strata_ice_dirty"
 	desc = "Columns and crags stacked atop one another. They defiantly push towards the heavens, but are stopped short by dripping frigid excess."
 	walltype = WALL_STRATA_ICE_DIRTY
+	turf_flags = TURF_ORGANIC|TURF_NATURAL
 
 /turf/closed/wall/strata_ice/jungle
 	name = "jungle vegetation"
@@ -582,6 +619,15 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "Exceptionally dense vegetation that you can't see through."
 	walltype = WALL_JUNGLE_UPDATED //Not a metal wall
 	hull = 1
+
+/turf/closed/wall/strata_ice/jungle/destructible
+	name = "jungle flora"
+	desc = "Dense jungle flora that you can't see through."
+	icon_state = "jungle_veg_destructible"
+	damage_cap = HEALTH_WALL_JUNGLE
+	repair_materials = list()
+	baseturfs = /turf/open/jungle/clear
+	hull = FALSE
 
 /turf/closed/wall/strata_outpost_ribbed //this guy is our reinforced replacement
 	name = "ribbed outpost walls"
@@ -637,6 +683,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	name = "rock wall"
 	icon_state = "solaris_rock"
 	walltype = WALL_SOLARIS_ROCK
+	turf_flags = TURF_NATURAL
 	hull = 1
 
 
@@ -660,6 +707,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/dev/reinforced/hull
 	name = "greybox hull wall"
 	desc = "Just like in the orange box! This one is indestructible."
+	turf_flags = TURF_NATURAL
 	hull = 1
 
 //KUTJEVO DESERT WALLS / SHARED TRIJENT TILESET
@@ -705,6 +753,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "shiva_ice"
 	desc = "Slabs on slabs of dirty black ice crusted over ancient rock formations. The permafrost fluctuates between 20in and 12in during the summer months."
 	walltype = WALL_SHIVA_ICE //Not a metal wall
+	turf_flags = TURF_NATURAL
 	hull = 1 //Can't break this ice.
 
 /turf/closed/wall/shiva/prefabricated

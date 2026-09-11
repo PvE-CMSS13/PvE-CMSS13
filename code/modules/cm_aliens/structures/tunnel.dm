@@ -271,14 +271,6 @@
 		to_chat(M, SPAN_WARNING("[src] ended unexpectedly, so we return back up."))
 	return XENO_NO_DELAY_ACTION
 
-/obj/structure/tunnel/proc/animate_crawl(speed = 3, loop_amount = -1, sections = 4)
-	animate(src, pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, loop = loop_amount, easing = JUMP_EASING)
-	for(var/i in 1 to sections)
-		animate(pixel_x = rand(-2,2), pixel_y = rand(-2,2), time = speed, easing = JUMP_EASING)
-
-/obj/structure/tunnel/proc/animate_crawl_reset()
-	animate(src, pixel_x = initial(pixel_x), pixel_y = initial(pixel_y), easing = JUMP_EASING)
-
 /obj/structure/tunnel/maint_tunnel
 	name = "\improper Maintenance Hatch"
 	desc = "An entrance to a maintenance tunnel. You can see bits of slime and resin within. Pieces of debris keep you from getting a closer look."
@@ -287,3 +279,34 @@
 
 /obj/structure/tunnel/maint_tunnel/no_xeno_desc
 	desc = "An entrance to a maintenance tunnel. Pieces of debris keep you from getting a closer look."
+
+/obj/structure/tunnel/maint_tunnel/attackby(obj/item/W as obj, mob/user as mob)
+	if(!isxeno(user))
+		if(istype(W, /obj/item/tool/shovel))
+			var/obj/item/tool/weldingtool/sealing_welder = W
+
+			if(!sealing_welder.welding == 1)
+				return
+
+			if(!sealing_welder.reagents == 0)
+				return
+
+			playsound(user.loc, 'sound/items/weldingtool_on.ogg', 40, 1, 6)
+
+			user.visible_message(SPAN_NOTICE("[user] starts to seal [src]!"), SPAN_NOTICE("You begin sealing [src]!"))
+
+			var/weldtime = 70
+			if(HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
+				weldtime = 50
+
+			if(user.action_busy || !do_after(user, TUNNEL_COLLAPSING_TIME * ((100 - weldtime) * 0.01), INTERRUPT_ALL, BUSY_ICON_BUILD))
+				return
+
+			playsound(loc, 'sound/items/weldingtool_weld.ogg', 50)
+
+			visible_message(SPAN_NOTICE("[src] is sealed tight, barely discernable from the rest of the floor besides some welding marks."))
+
+			qdel(src)
+
+		return ..()
+	return attack_alien(user)

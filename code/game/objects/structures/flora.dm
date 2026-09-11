@@ -530,6 +530,16 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /*
 
+	JUNGLE BUSH
+
+*/
+
+/obj/structure/flora/bush/jungle
+	icon_tag = "plant"
+	variations = 7
+
+/*
+
 	POTTED PLANTS
 
 */
@@ -731,7 +741,7 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 						H.next_move_slowdown = new_slowdown
 						to_chat(H, SPAN_WARNING("You got completely tangled in [src]! Oh boy..."))
 
-/obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/user as mob)
+/obj/structure/flora/jungle/thickbush/attackby(obj/item/I as obj, mob/living/user as mob)
 	//hatchets and shiet can clear away undergrowth
 	if(I && (I.sharp >= IS_SHARP_ITEM_ACCURATE) && !stump)
 		var/damage = rand(2,5)

@@ -12,8 +12,9 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/Initialize()
 	. = ..()
-	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+/*	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
+*/
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/vend_fail()
 	return

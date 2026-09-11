@@ -29,6 +29,13 @@ GLOBAL_LIST_FILE_LOAD(custom_items, "config/custom_items.txt")
 				var/obj/structure/closet/secure_closet/marine_personal/closet_to_spawn_in
 				var/turf/turf = get_turf(M)
 				var/obj/item/Item = new path()
+				if(GLOB.master_mode == GAMEMODE_REMOTE_OUTPOST && is_ground_level(turf.z))
+					for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets) // now this gets called after we got our awesome pve personal locker hooray
+						if(closet.owner == M.real_name && closet.job == M.job)
+							closet_to_spawn_in = closet
+							Item.forceMove(closet_to_spawn_in)
+							ok = TRUE
+							break
 				if(is_mainship_level(turf.z))
 					for(var/obj/structure/closet/secure_closet/marine_personal/closet in GLOB.personal_closets) // now this gets called after we got our awesome pve personal locker hooray
 						if(closet.owner == M.real_name && closet.job == M.job)

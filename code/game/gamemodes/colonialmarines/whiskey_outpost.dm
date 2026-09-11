@@ -4,6 +4,8 @@
 /proc/Check_WO()
 	if(SSticker.mode == GAMEMODE_WHISKEY_OUTPOST || GLOB.master_mode == GAMEMODE_WHISKEY_OUTPOST)
 		return 1
+	if(SSticker.mode == GAMEMODE_REMOTE_OUTPOST || GLOB.master_mode == GAMEMODE_REMOTE_OUTPOST)
+		return 1
 	return 0
 
 /datum/game_mode/whiskey_outpost

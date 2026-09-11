@@ -1,0 +1,89 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"d" = (
+/obj/structure/prop/rock/brown,
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"h" = (
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"w" = (
+/obj/structure/prop/rock,
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"C" = (
+/turf/closed/wall/mineral/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"N" = (
+/turf/closed/wall/solaris/rock,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"W" = (
+/obj/effect/decal/sand_overlay/sand5,
+/turf/open/floor/sandstone/runed,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+N
+C
+N
+C
+a
+"}
+(3,1,1) = {"
+a
+W
+w
+h
+w
+C
+a
+"}
+(4,1,1) = {"
+a
+W
+d
+w
+d
+N
+a
+"}
+(5,1,1) = {"
+a
+W
+h
+d
+h
+C
+a
+"}
+(6,1,1) = {"
+a
+a
+N
+C
+N
+C
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

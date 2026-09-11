@@ -90,6 +90,14 @@
 	icon_state = "sand2_s"
 /obj/effect/decal/sand_overlay/sand2/corner2
 	icon_state = "sand2_c"
+/obj/effect/decal/sand_overlay/sand4
+	icon_state = "sand4_s"
+/obj/effect/decal/sand_overlay/sand2/corner4
+	icon_state = "sand4_c"
+/obj/effect/decal/sand_overlay/sand5
+	icon_state = "sand5_s"
+/obj/effect/decal/sand_overlay/sand5/corner5
+	icon_state = "sand5_c"
 
 /obj/effect/decal/grass_overlay
 	name = "grass edge"
@@ -103,6 +111,13 @@
 
 /obj/effect/decal/grass_overlay/grass1/inner
 	name = "grass edge"
+	icon_state = "grass_innercorner"
+
+/obj/effect/decal/grass_overlay/jungle
+	icon = 'icons/turf/floors/jungle.dmi'
+	icon_state = "grass_outercorner"
+
+/obj/effect/decal/grass_overlay/jungle/inner
 	icon_state = "grass_innercorner"
 
 /obj/effect/decal/siding

@@ -14,7 +14,10 @@
 	)
 
 /datum/job/command/commander/generate_entry_message()
-	entry_message_body = "<a href='[generate_wiki_link()]'>You are the Commanding Officer of the [MAIN_SHIP_NAME] as well as the operation.</a> Your goal is to lead the Marines on their mission as well as protect and command the ship and her crew. Your job involves heavy roleplay and requires you to behave like a high-ranking officer and to stay in character at all times. As the Commanding Officer your only superior is High Command itself. You must abide by the <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_CO_RULES]'>Commanding Officer Code of Conduct</a>. Failure to do so may result in punitive action against you. Godspeed."
+	if(title == JOB_CO)
+		entry_message_body = "<a href='[generate_wiki_link()]'>You are the Commanding Officer of the [MAIN_SHIP_NAME] as well as the operation.</a> Your goal is to lead the Marines on their mission as well as protect and command the ship and her crew. Your job involves heavy roleplay and requires you to behave like a high-ranking officer and to stay in character at all times. As the Commanding Officer your only superior is High Command itself. You must abide by the <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_CO_RULES]'>Commanding Officer Code of Conduct</a>. Failure to do so may result in punitive action against you. Godspeed."
+	if(title == JOB_USCM_GROUND_CO)
+		entry_message_body = "You have been placed in charge of [SSmapping.configs[GROUND_MAP].map_name] outpost by USCM High Command, and it is up to you to carry out your mission, whatever it may be. <br>Protect the outpost from any and all dangers, and conduct operations as assigned by High Command. <br>You are in charge of general logistics and mission control. You and your men are the first and last line of defense on the frontier: brief them on the mission and man the Combat Information Center so they are informed and aware. <br>The Outpost Adjutant is your right hand, so delegate tasks to them as necessary. They will run the outpost day-to-day operations, and they will take over command should anything happen to you. <br>Civilian guests have to follow military regulations, but they are not military personnel. <br>Protect them. <br>Godspeed, Captain and Commander!"
 	return ..()
 
 /datum/job/command/commander/get_whitelist_status(client/player)
@@ -35,12 +38,12 @@
 
 /datum/job/command/commander/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
-	GLOB.marine_leaders[JOB_CO] = M
+	GLOB.marine_leaders[title] = M
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
 /datum/job/command/commander/proc/cleanup_leader_candidate(mob/M)
 	SIGNAL_HANDLER
-	GLOB.marine_leaders -= JOB_CO
+	GLOB.marine_leaders -= title
 
 /datum/job/command/commander/proc/do_announce_entry_message(mob/living/carbon/human/H)
 		all_hands_on_deck("Attention all hands, [H.get_paygrade(0)] [H.real_name] on deck!")

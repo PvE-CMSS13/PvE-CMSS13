@@ -460,8 +460,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		randomize_squad(new_human)
 
 	if(Check_WO() && GLOB.job_squad_roles.Find(GET_DEFAULT_ROLE(new_human.job))) //activates self setting proc for marine headsets for WO
-		var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
-		WO.self_set_headset(new_human)
+		if(SSticker.mode == GAMEMODE_WHISKEY_OUTPOST || GLOB.master_mode == GAMEMODE_WHISKEY_OUTPOST)
+			var/datum/game_mode/whiskey_outpost/WO = SSticker.mode
+			WO.self_set_headset(new_human)
+		if(SSticker.mode == GAMEMODE_REMOTE_OUTPOST || GLOB.master_mode == GAMEMODE_REMOTE_OUTPOST)
+			var/datum/game_mode/remote_outpost/RO = SSticker.mode
+			RO.self_set_outpost_headset(new_human)
 
 	var/assigned_squad
 	if(ishuman(new_human))

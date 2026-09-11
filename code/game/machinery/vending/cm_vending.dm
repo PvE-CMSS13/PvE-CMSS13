@@ -846,8 +846,9 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/structure/machinery/cm_vending/gear/Initialize()
 	. = ..()
-	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+/*	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
+*/	//Until I big-brain how to make this not-ass for groundmap only missions, this'll do
 
 /obj/structure/machinery/cm_vending/gear/ui_static_data(mob/user)
 	. = ..(user)
@@ -868,8 +869,9 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/structure/machinery/cm_vending/clothing/Initialize()
 	. = ..()
-	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
+/*	if(z in SSmapping.levels_by_trait(ZTRAIT_GROUND))
 		malfunction()
+*/	//Until I big-brain how to make this not-ass for groundmap only missions, this'll do
 
 /obj/structure/machinery/cm_vending/clothing/ui_static_data(mob/user)
 	. = ..(user)

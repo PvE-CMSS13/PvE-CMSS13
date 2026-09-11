@@ -5,8 +5,8 @@
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
 #define SQUAD_MARINE_2 "Sun Riders B-Sct"
-#define SQUAD_MARINE_3 "Charlie"
-#define SQUAD_MARINE_4 "Delta"
+//#define SQUAD_MARINE_3 "Charlie"
+//#define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
 #define SQUAD_MARINE_CRYO "Foxtrot"
 #define SQUAD_MARINE_INTEL "Intel"
@@ -492,3 +492,36 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 ///For denying certain traits being applied to people. ie. bad leg
 ///'Grunt' lists are for people who wouldn't logically get the bad leg trait, ie. UPP marine counterparts.
 #define JOB_ERT_GRUNT_LIST list(DUTCH_JOB_LIST, RIOT_JOB_LIST, PROVOST_JOB_LIST, CMB_GRUNT_LIST, CLF_JOB_LIST, UPP_JOB_GRUNT_LIST, UPP_COMMANDO_JOB_LIST, CONTRACTOR_JOB_LIST, ROLES_WY_GOONS, ROLES_WY_PMC_ALL)
+
+//-------------USCM Outpost Squads---------------
+
+#define SQUAD_MARINE_3 "Copperheads"
+#define SQUAD_MARINE_4 "Rattlesnakes"
+
+//-------------USCM Outpost roles---------------
+
+#define JOB_USCM_GROUND_CO "Outpost Commanding Officer"
+#define JOB_USCM_GROUND_AO "Outpost Adjutant Officer"
+#define JOB_USCM_GROUND_SYNTH "Outpost Maint. Synthetic"
+
+#define JOB_USCM_GROUND_SQUAD_LEADER "Outpost Sct. Sergeant"
+#define JOB_USCM_GROUND_SQUAD_TEAM_LEADER "Outpost Sqd. Leader"
+#define JOB_USCM_GROUND_SQUAD_MEDIC "Outpost Corpsman"
+#define JOB_USCM_GROUND_SQUAD_ENGI "Outpost Cmbt. Engineer"
+#define JOB_USCM_GROUND_SQUAD_SPECIALIST "Outpost Specialist"
+#define JOB_USCM_GROUND_SQUAD_SMARTGUNNER "Outpost Smartgunner"
+#define JOB_USCM_GROUND_SQUAD_MARINE "Outpost Rifleman"
+
+#define JOB_USCM_GROUND_CIVILIAN "Civilian Researcher"
+
+#define DEPARTMENT_USCM_GROUND_COMMAND
+#define DEPARTMENT_USCM_GROUND_SUPPORT
+#define DEPARTMENT_USCM_GROUND_MARINE
+
+#define DEPARTMENT_USCM_GROUND_ALL list(\
+										"Outpost Command" = list(JOB_USCM_GROUND_CO, JOB_USCM_GROUND_AO),\
+										"Outpost Support" = list(JOB_USCM_GROUND_SYNTH),\
+										"Outpost Marine" = list(JOB_USCM_GROUND_SQUAD_LEADER, JOB_USCM_GROUND_SQUAD_TEAM_LEADER, JOB_USCM_GROUND_SQUAD_ENGI, JOB_USCM_GROUND_SQUAD_MEDIC, JOB_USCM_GROUND_SQUAD_SPECIALIST, JOB_USCM_GROUND_SQUAD_SMARTGUNNER, JOB_USCM_GROUND_SQUAD_MARINE),\
+									)
+
+//------------------------------------

@@ -74,6 +74,9 @@ endmap
 map whiskey_outpost_v2
 endmap
 
+map blackstone_bridge
+endmap
+
 map lv295_blacksite
 endmap
 

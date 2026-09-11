@@ -9,6 +9,8 @@
 #define FORECON_AUXILIARY_PLATOON new /datum/squad/marine/sof/forecon
 #define UPP_AUXILIARY_PLATOON new /datum/squad/marine/upp/secondary
 #define PMC_AUXILIARY_PLATOON new /datum/squad/marine/pmc/secondary
+#define OUTPOST_FIRST_PLATOON new /datum/squad/marine/charlie
+#define OUTPOST_SECOND_PLATOON new /datum/squad/marine/delta
 
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn

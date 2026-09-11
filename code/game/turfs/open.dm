@@ -751,6 +751,11 @@
 	..()
 	if(istype(M)) M.apply_damage(55,TOX)
 
+/turf/open/gm/river/deep
+	name = "deeper river"
+	base_river_slowdown = 3 //More wading, more slowdown.
+	color = "#e4f0ef"
+
 /turf/open/gm/river/darkred_pool
 	color = "#990000"
 	name = "pool"
@@ -1049,11 +1054,13 @@
 
 // Jungle turfs (Whiksey Outpost)
 
+#define JUNGLE_SPAWN_BUSHES (1<<0)
+#define JUNGLE_SPAWN_PLANTS (1<<1)
+#define JUNGLE_SPAWN_VINES (1<<2)
+#define JUNGLE_SPAWN_BLOCKER (1<<3)
 
 /turf/open/jungle
 	allow_construction = FALSE
-	var/bushes_spawn = 1
-	var/plants_spawn = 1
 	is_groundmap_turf = TRUE
 	name = "wet grass"
 	desc = "Thick, long, wet grass."
@@ -1061,53 +1068,58 @@
 	icon_state = "grass1"
 	var/icon_spawn_state = "grass1"
 	baseturfs = /turf/open/jungle
+	var/flags_jungle_vegetation = JUNGLE_SPAWN_BUSHES|JUNGLE_SPAWN_PLANTS
 
 /turf/open/jungle/Initialize(mapload, ...)
 	. = ..()
 
 	icon_state = icon_spawn_state
 
-	if(plants_spawn && prob(40))
-		if(prob(90))
-			var/image/I
-			if(prob(35))
-				I = image('icons/obj/structures/props/jungleplants.dmi',"plant[rand(1,7)]")
-			else
-				if(prob(30))
-					I = image('icons/obj/structures/props/ausflora.dmi',"reedbush_[rand(1,4)]")
-				else if(prob(33))
-					I = image('icons/obj/structures/props/ausflora.dmi',"leafybush_[rand(1,3)]")
-				else if(prob(50))
-					I = image('icons/obj/structures/props/ausflora.dmi',"fernybush_[rand(1,3)]")
+	if(flags_jungle_vegetation & JUNGLE_SPAWN_BLOCKER)
+		var/obj/structure/flora/jungle/thickbush/blocker_brush = new(src)
+		blocker_brush.indestructable = TRUE
+		blocker_brush.unacidable = TRUE
+
+	else
+		if((flags_jungle_vegetation & JUNGLE_SPAWN_BUSHES) && prob(90))
+			new /obj/structure/flora/jungle/thickbush(src)
+		//We do not want to spawn a bush and plants on the same tile. Looks weird.
+			if((flags_jungle_vegetation & JUNGLE_SPAWN_PLANTS) && prob(40))
+				if(prob(90))
+					var/obj/structure/flora/new_flora
+					if(prob(35))
+						new_flora = new /obj/structure/flora/bush/jungle(src)
+					else
+						switch(pick(50; 1, 70; 2, 150; 3, 30; 4))
+							if(1)
+								new_flora = new /obj/structure/flora/bush/ausbushes/reedbush(src)
+							if(2)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/leafybush(src)
+							if(3)
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/fernybush(src)
+							else
+								new_flora = new /obj/structure/flora/bush/ausbushes/var3/stalkybush(src)
+
+					new_flora.pixel_x = rand(-6,6)
+					new_flora.pixel_y = rand(-6,6)
+
+				else if(!(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)) //Don't want to spawn these along with vines.
+					var/obj/structure/flora/jungle/thickbush/jungle_plant/new_jungle_plant = new(src)
+					new_jungle_plant.pixel_x = rand(-6,6)
+					new_jungle_plant.pixel_y = rand(-6,6)
+
+		if(flags_jungle_vegetation & JUNGLE_SPAWN_VINES)
+			if(prob(65))
+				if(prob(55))
+					switch(pick(1,3))
+						if(1)
+							new /obj/structure/flora/jungle/vines/light_1(src)
+						if(2)
+							new /obj/structure/flora/jungle/vines/light_2(src)
+						if(3)
+							new /obj/structure/flora/jungle/vines/light_3(src)
 				else
-					I = image('icons/obj/structures/props/ausflora.dmi',"stalkybush_[rand(1,3)]")
-			I.pixel_x = rand(-6,6)
-			I.pixel_y = rand(-6,6)
-			overlays += I
-		else
-			var/obj/structure/flora/jungle/thickbush/jungle_plant/J = new(src)
-			J.pixel_x = rand(-6,6)
-			J.pixel_y = rand(-6,6)
-	if(bushes_spawn && prob(90))
-		new /obj/structure/flora/jungle/thickbush(src)
-
-
-
-/turf/open/jungle/proc/Spread(probability, prob_loss = 50)
-	if(probability <= 0)
-		return
-	for(var/turf/open/jungle/J in orange(1, src))
-		if(!J.bushes_spawn)
-			continue
-
-		var/turf/open/jungle/P = null
-		if(J.type == src.type)
-			P = J
-		else
-			P = new src.type(J)
-
-		if(P && prob(probability))
-			P.Spread(probability - prob_loss)
+					new /obj/structure/flora/jungle/vines/heavy(src)
 
 /turf/open/jungle/attackby(obj/item/I, mob/user)
 	//Light Stick
@@ -1133,13 +1145,25 @@
 	return
 
 /turf/open/jungle/clear
-	bushes_spawn = 0
-	plants_spawn = 0
 	icon_state = "grass_clear"
+	flags_jungle_vegetation = NONE
+
+/turf/open/jungle/shrubs
+	icon_state = "grass_shrubs"
+	flags_jungle_vegetation = JUNGLE_SPAWN_PLANTS
+
+/turf/open/jungle/vines
+	icon_state = "grass_vines"
+	icon_spawn_state = "grass2"
+	flags_jungle_vegetation = JUNGLE_SPAWN_VINES|JUNGLE_SPAWN_PLANTS
+
+/turf/open/jungle/impenetrable
+	icon_state = "grass_impenetrable"
 	icon_spawn_state = "grass1"
+	flags_jungle_vegetation = JUNGLE_SPAWN_BLOCKER
 
 /turf/open/jungle/path
-	bushes_spawn = 0
+	flags_jungle_vegetation = NONE
 	name = "dirt"
 	desc = "it is very dirty."
 	icon = 'icons/turf/floors/jungle.dmi'
@@ -1147,13 +1171,8 @@
 	icon_spawn_state = "dirt"
 	minimap_color = MINIMAP_DIRT
 
-/turf/open/jungle/path/Initialize(mapload, ...)
-	. = ..()
-	for(var/obj/structure/flora/jungle/thickbush/B in src)
-		qdel(B)
-
 /turf/open/jungle/impenetrable
-	bushes_spawn = FALSE
+	flags_jungle_vegetation = NONE
 	icon_state = "grass_impenetrable"
 	icon_spawn_state = "grass1"
 
@@ -1166,7 +1185,7 @@
 	icon_state = "grass_clear"
 
 /turf/open/jungle/water
-	bushes_spawn = 0
+	flags_jungle_vegetation = NONE
 	name = "murky water"
 	desc = "thick, murky water"
 	icon = 'icons/turf/floors//beach.dmi'
@@ -1220,7 +1239,7 @@
 						M.apply_damage(rand(0,1), BRUTE, sharp=1)
 
 /turf/open/jungle/water/deep
-	plants_spawn = 0
+	flags_jungle_vegetation = NONE
 	density = TRUE
 	icon_state = "water2"
 	icon_spawn_state = "water2"

@@ -270,12 +270,13 @@
 
 
 /turf/closed/wall/proc/make_girder(destroyed_girder = FALSE)
-	var/obj/structure/girder/G = new /obj/structure/girder(src)
-	G.icon_state = "girder[junctiontype]"
-	G.original = src.type
+	if(!(turf_flags & (TURF_ORGANIC|TURF_NATURAL))) //If it is not organic or natural, we do make a girder.
+		var/obj/structure/girder/new_girder = new /obj/structure/girder(src)
+		new_girder.icon_state = "girder[junctiontype]"
+		new_girder.original = type
 
-	if (destroyed_girder)
-		G.dismantle()
+		if(destroyed_girder)
+			new_girder.dismantle()
 
 
 
@@ -391,7 +392,7 @@
 				return
 
 
-/turf/closed/wall/attackby(obj/item/attacking_item, mob/user)
+/turf/closed/wall/attackby(obj/item/attacking_item, mob/living/user)
 	if(isxeno(user) && istype(attacking_item, /obj/item/grab))
 		var/obj/item/grab/attacker_grab = attacking_item
 		var/mob/living/carbon/xenomorph/user_as_xenomorph = user
@@ -436,6 +437,22 @@
 		take_damage(damage_cap)
 		return
 
+	if(turf_flags & TURF_ORGANIC)
+		if(!hull && attacking_item.sharp >= IS_SHARP_ITEM_ACCURATE)//Sharp enough to cut dense flora/organics.
+			user.animation_attack_on(src)
+			playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
+			take_damage(attacking_item.force)
+			user.flick_attack_overlay(src, "punch") //Flick after the vege hit. Otherwise overlays are Cut() through take_damage() -> update_icon(), and the attack indicator never shows up. Ugh.
+			return TRUE
+
+		to_chat(user, SPAN_WARNING("There isn't anything you can do with that!"))
+		return FALSE //We'll return early if it's organic. No reason to run the rest, you shouldn't be able to build or do anything like that.
+
+	if(istype(attacking_item, /obj/item/frame))
+		if(turf_flags & TURF_ORGANIC)
+			to_chat(user, SPAN_WARNING("You can't place this on [src]!"))
+			return FALSE
+
 	if(istype(attacking_item,/obj/item/frame/apc))
 		var/obj/item/frame/apc/AH = attacking_item
 		AH.try_build(src)
@@ -470,6 +487,7 @@
 		to_chat(user, SPAN_NOTICE("You place the torch down on the wall."))
 		new /obj/structure/prop/brazier/frame/full/torch(src)
 		qdel(attacking_item)
+		return TRUE
 
 	if(hull)
 		to_chat(user, SPAN_WARNING("[src] is much too tough for you to do anything to it with [attacking_item]."))
@@ -539,6 +557,9 @@
 	return attack_hand(user)
 
 /turf/closed/wall/proc/try_weldingtool_usage(obj/item/W, mob/user)
+	if(turf_flags & (TURF_ORGANIC|TURF_NATURAL)) //Nothing organic or natural, like a jungle or rock wall.
+		return FALSE
+
 	if(!damage || !iswelder(W))
 		return FALSE
 	if(user.a_intent != INTENT_HELP)
@@ -559,6 +580,9 @@
 	return TRUE
 
 /turf/closed/wall/proc/try_weldingtool_deconstruction(obj/item/tool/weldingtool/WT, mob/user)
+	if(turf_flags & (TURF_ORGANIC|TURF_NATURAL))
+		return FALSE
+
 	if(!WT.isOn())
 		to_chat(user, SPAN_WARNING("\The [WT] needs to be on!"))
 		return
@@ -580,6 +604,9 @@
 	return
 
 /turf/closed/wall/proc/try_nailgun_usage(obj/item/W, mob/user)
+	if(turf_flags & (TURF_ORGANIC|TURF_NATURAL))
+		return FALSE
+
 	if((!damage && !acided_hole) || !istype(W, /obj/item/weapon/gun/smg/nailgun))
 		return FALSE
 

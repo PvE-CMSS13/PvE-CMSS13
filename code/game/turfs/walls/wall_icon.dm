@@ -38,7 +38,7 @@
 		damage_overlay = current_dmg_overlay
 		overlays += damage_overlays[damage_overlay]
 
-		if(current_bulletholes)
+		if((current_bulletholes) && !(turf_flags & TURF_ORGANIC)) //No overlays for organic/living walls.
 			if(!bullet_overlay)
 				var/bullethole_state = rand(1, BULLETHOLE_STATES)
 				bullet_overlay = image('icons/effects/bulletholes.dmi', src, "bhole_[bullethole_state]_2")

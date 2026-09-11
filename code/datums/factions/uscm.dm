@@ -250,6 +250,28 @@
 				marine_rk = null
 			if(JOB_FORECON_CO)
 				marine_rk = "co"
+			// USCM Outpost goons
+			if(JOB_USCM_GROUND_CO)
+				marine_rk = "wo_co"
+			if(JOB_USCM_GROUND_AO)
+				marine_rk = "wo_xo"
+			if(JOB_USCM_GROUND_SYNTH)
+				marine_rk = "syn"
+			if(JOB_USCM_GROUND_CIVILIAN)
+				marine_rk = "wo_chemist"
+
+			if(JOB_USCM_GROUND_SQUAD_LEADER)
+				marine_rk = "leader"
+			if(JOB_USCM_GROUND_SQUAD_TEAM_LEADER)
+				marine_rk = "tl"
+			if(JOB_USCM_GROUND_SQUAD_MEDIC)
+				marine_rk = "med"
+			if(JOB_USCM_GROUND_SQUAD_ENGI)
+				marine_rk = "engi"
+			if(JOB_USCM_GROUND_SQUAD_SPECIALIST)
+				marine_rk = "spec"
+			if(JOB_USCM_GROUND_SQUAD_SMARTGUNNER)
+				marine_rk = "gun"
 
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
