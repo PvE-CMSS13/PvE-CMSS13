@@ -251,9 +251,29 @@
 	icon_state = "case_double"
 
 /obj/structure/largecrate/supply/explosives/mines
-	name = "\improper M20A2 claymore case (x25)"
-	desc = "A case containing five boxes of five M20A2 claymores."
+	name = "M20A2 claymore bulk crate (x25)"
+	desc = "A crate containing five cases of five M20A2 claymores."
 	supplies = list(/obj/item/storage/box/explosive_mines = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/m760
+	name = "M760 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five M760 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/m760ap = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/m5a3betty
+	name = "M5A3 bounding mine bulk crate (x25)"
+	desc = "A crate containing five cases of five M5A3 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/m5a3betty = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/fzd91
+	name = "FZD-91 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five FZD-91 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/fzd91 = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/tn13
+	name = "TN-13 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five TN-13 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/tn13 = 5)
 
 /obj/structure/largecrate/supply/explosives/grenades
 	name = "\improper M40 HEDP grenade case (x50)"

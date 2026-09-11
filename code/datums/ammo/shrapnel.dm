@@ -25,6 +25,60 @@
 		B.health -= rand(2, 5)
 		B.update_health(1)
 
+/datum/ammo/bullet/shrapnel/landmine
+	name = "landmine shrapnel"
+	icon_state = "buckshot"
+	accurate_range_min = 0
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+
+	accuracy = HIT_ACCURACY_TIER_2
+	accurate_range = 3
+	max_range = 6
+	damage = 10
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = -ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/shrapnel/landmine/strong
+	damage = 30
+	accuracy = HIT_ACCURACY_TIER_4
+	shrapnel_chance = 5
+
+//shrapnel for M5 boundmine
+/datum/ammo/bullet/shrapnel/landmine/bounding
+	name = "airburst shrapnel"
+	icon_state = "buckshot"
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER|AMMO_PRONETARGET
+
+	accuracy = HIT_ACCURACY_TIER_3
+	accurate_range = 2
+	max_range = 5
+	damage = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
+	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
+	damage_var_high = PROJECTILE_VARIANCE_TIER_6
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/shrapnel/landmine/bounding/strong
+	damage = 20
+	penetration = 0
+	shrapnel_chance = 5
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+
+//shrapnel for TN13 mine
+/datum/ammo/bullet/shrapnel/landmine/light
+	name = "jagged landmine fragmentation"
+	damage = 5
+	penetration = -ARMOR_PENETRATION_TIER_1
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/shrapnel/landmine/light/strong
+	damage = 15
+
 /datum/ammo/bullet/shrapnel/rubber
 	name = "rubber pellets"
 	icon_state = "rubber_pellets"
@@ -107,7 +161,8 @@
 
 //player-given claymore shrapnel
 /datum/ammo/bullet/shrapnel/claymore/strong
-	damage = 35
+	damage = 40
+	damage_falloff = DAMAGE_FALLOFF_TIER_8
 	shrapnel_chance = 15
 
 /datum/ammo/bullet/shrapnel/claymore/strong/on_hit_mob(mob/entity, obj/projectile/bullet)
