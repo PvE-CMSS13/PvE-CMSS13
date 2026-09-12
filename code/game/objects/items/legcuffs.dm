@@ -92,3 +92,10 @@
 					var/mob/living/simple_animal/SA = AM
 					SA.health -= 20
 	..()
+
+/obj/item/restraint/legcuffs/xeno_restraints/strong
+	name = "strong xeno restraints"
+	desc = "Use this to hold xenomorphic creatures safely."
+	color = "#ff0000"
+
+	breakouttime = 3 MINUTES

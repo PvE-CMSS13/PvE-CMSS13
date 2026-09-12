@@ -621,6 +621,87 @@ GLOBAL_LIST_EMPTY(personal_closets)
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = null
 
+/datum/equipment_preset/proc/spawn_rebel_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/uniformpath = pick(
+		/obj/item/clothing/under/colonist/clf,
+		)
+	new_human.equip_to_slot_or_del(new uniformpath, WEAR_BODY)
+
+
+/datum/equipment_preset/proc/spawn_rebel_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/storage/militia,
+		/obj/item/clothing/suit/storage/militia/vest,
+		/obj/item/clothing/suit/storage/militia/brace,
+		/obj/item/clothing/suit/storage/militia/partial,
+		/obj/item/clothing/suit/armor/bulletproof,
+		/obj/item/clothing/suit/armor/vest,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+
+/datum/equipment_preset/proc/spawn_rebel_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/militia,
+		/obj/item/clothing/head/militia/bucket,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/head/helmet/skullcap,
+		/obj/item/clothing/head/helmet/swat,
+		/obj/item/clothing/head/hardhat,
+		/obj/item/clothing/head/welding,
+		/obj/item/clothing/head/bandana,
+		/obj/item/clothing/head/headband/red,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband/rambo,
+		)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
+
+/datum/equipment_preset/proc/spawn_rebel_shoes(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/shoespath = pick(
+		/obj/item/clothing/shoes/black,
+		/obj/item/clothing/shoes/brown,
+		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/shoes/leather,
+		/obj/item/clothing/shoes/combat,
+		/obj/item/clothing/shoes/swat,
+		)
+	new_human.equip_to_slot_or_del(new shoespath, WEAR_FEET)
+
+
+/datum/equipment_preset/proc/spawn_rebel_gloves(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/glovespath = pick(
+		/obj/item/clothing/gloves/black,
+		/obj/item/clothing/gloves/swat,
+		/obj/item/clothing/gloves/combat,
+		/obj/item/clothing/gloves/botanic_leather,
+		)
+	new_human.equip_to_slot_or_del(new glovespath, WEAR_HANDS)
+
+
+/datum/equipment_preset/proc/spawn_rebel_belt(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/beltpath = pick(
+		/obj/item/storage/belt/utility/full,
+		/obj/item/storage/belt/knifepouch,
+		/obj/item/storage/belt/gun/flaregun/full,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/katana/full,
+		/obj/item/storage/large_holster/machete/full,
+		/obj/item/storage/belt/marine)
+	new_human.equip_to_slot_or_del(new beltpath, WEAR_WAIST)
+
 
 /datum/equipment_preset/proc/add_rebel_ua_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))

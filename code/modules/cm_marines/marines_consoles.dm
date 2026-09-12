@@ -999,6 +999,10 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				// 60-69: Cargo
 				JOB_WO_CHIEF_REQUISITION = 60,
 				JOB_WO_REQUISITION = 61,
+				JOB_ARMY_TROOPER = 72,
+				JOB_ARMY_ENGI = 73,
+				JOB_ARMY_MEDIC = 74,
+				JOB_ARMY_SYN = 75,
 				// 70-139: SQUADS (look below)
 				// 140+: Civilian/other
 				JOB_WO_CORPORATE_LIAISON = 140,

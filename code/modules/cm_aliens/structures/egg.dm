@@ -235,6 +235,9 @@
 /obj/effect/alien/egg/alpha
 	hivenumber = XENO_HIVE_ALPHA
 
+/obj/effect/alien/egg/kseries
+	hivenumber = XENO_HIVE_K_SERIES
+
 /obj/effect/alien/egg/forsaken
 	hivenumber = XENO_HIVE_FORSAKEN
 

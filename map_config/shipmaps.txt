@@ -41,3 +41,24 @@ endmap
 
 map hms_brynhild
 endmap
+
+map runtime_multiz
+endmap
+
+map runtime
+endmap
+
+map _event1_hybrisa_zombie_iso_goldenarrow
+endmap
+
+map _event2_golden_arrow
+endmap
+
+map _event3_golden_arrow
+endmap
+
+map _event4_uscss_obsidian_falk
+endmap
+
+map _event5_golden_arrow
+endmap

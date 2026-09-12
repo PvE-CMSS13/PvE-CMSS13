@@ -225,6 +225,11 @@
 	desc = "A corporate holo-badge. It's a unique Corporate orange and white."
 	icon_state = "cl"
 
+/obj/item/card/id/silver/cl/hyperdyne
+	name = "corporate holo-badge"
+	desc = "A corporate holo-badge. It's a unique Corporate orange and black."
+	icon_state = "hyperdyne"
+
 /obj/item/card/id/gold/council
 	name = "identification holo-badge"
 	desc = "A real bronze gold Colonel's holo-badge. Commands respect, authority, and it makes an excellent paperweight."
@@ -259,6 +264,27 @@
 	icon_state = "cmbdep"
 	item_state = "silver_badge"
 	paygrade = PAY_SHORT_CMBD
+
+/obj/item/card/id/nspa_silver
+	name = "\improper NSPA silver badge"
+	desc = "The silver badge which represents that the wearer is a NSPA Constable. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
+	icon_state = "nspa_silver"
+	item_state = "silver_id"
+	paygrade = PAY_SHORT_CST
+
+/obj/item/card/id/nspa_silver_gold
+	name = "\improper NSPA silver & gold badge"
+	desc = "The silver with gold accents badge which represents that the wearer is a NSPA Senior Constable to Sergeant. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
+	icon_state = "nspa_silverandgold"
+	item_state = "silver_id"
+	paygrade = PAY_SHORT_SGT
+
+/obj/item/card/id/nspa_gold
+	name = "\improper NSPA gold badge"
+	desc = "A gold badge signifying that the wearer is one of the higher ranks of the NSPA, usually Inspectors and above. It is a sign of justice, authority, and protection. Protecting those who can't. This badge represents a commitment to a sworn oath always kept."
+	icon_state = "nspa_gold"
+	item_state = "gold_id"
+	paygrade = PAY_SHORT_CINSP
 
 /obj/item/card/id/general
 	name = "general officer holo-badge"

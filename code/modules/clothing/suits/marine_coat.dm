@@ -97,6 +97,13 @@
 	)
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/suit/storage/jacket/marine/service/green
+	icon = 'icons/obj/items/clothing/suits/suits_by_map/desert.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_map/desert.dmi'
+	)
+	initial_icon_state = "coat_officer"
+
 /obj/item/clothing/suit/storage/jacket/marine/service/mp
 	name = "military police service jacket"
 	desc = "Marine service jacket in USCMC Military Police scheme. Usually not used due to local standards requiring service armor instead."

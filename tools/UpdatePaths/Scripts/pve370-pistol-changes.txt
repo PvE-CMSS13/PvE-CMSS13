@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/pistol/mod88 : /obj/item/weapon/gun/pistol/vp70{@OLD}
 /obj/item/ammo_magazine/pistol/mod88 : /obj/item/ammo_magazine/pistol/vp70{@OLD}
 /obj/item/ammo_magazine/pistol/mod88/normalpoint : /obj/item/ammo_magazine/pistol/vp70{@OLD}
-/obj/item/weapon/gun/revolver/cmb : /obj/item/weapon/gun/revolver/spearhead{@OLD}
+/obj/item/weapon/gun/revolver/spearhead : /obj/item/weapon/gun/revolver/spearhead{@OLD}
 /obj/item/ammo_magazine/revolver/cmb : /obj/item/ammo_magazine/revolver/spearhead{@OLD}
 /obj/item/weapon/gun/pistol/highpower/tactical : /obj/item/weapon/gun/pistol/highpower/automag/tactical{@OLD}
 /obj/item/storage/box/co2_knife : /obj/item/storage/box/loadout/co2_knife{@OLD}

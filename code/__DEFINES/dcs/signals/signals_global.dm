@@ -84,3 +84,10 @@
 
 /// From /client/proc/rename_platoon()
 #define COMSIG_GLOB_PLATOON_NAME_CHANGE "platoon_name_change"
+
+/// From /datum/controller/subsystem/hijack/proc/call_shuttle()
+#define COMSIG_GLOB_HIJACK_INBOUND "!hijack_inbound"
+
+
+/// From /obj/structure/machinery/door_control/abyssal_lockdown/use_button(mob/living/user,force)
+#define COMSIG_GLOB_ABYSSAL_LOCKDOWN "!abyssal_lockdown"

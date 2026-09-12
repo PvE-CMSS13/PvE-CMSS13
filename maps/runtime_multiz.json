@@ -4,5 +4,5 @@
     "map_file": "USS_Runtime_multiz.dmm",
     "traits": [{"Ground": true}, {"Ground": true}],
     "camouflage": "classic",
-	"disable_ship_map": true
+	"disable_ship_map": false
 }

@@ -1,0 +1,20 @@
+{
+    "map_name": "EVENT 2 - LV624 Long Snow",
+    "short_name": "LV624 Long Snow",
+    "map_path": "map_files/EVENTS",
+    "map_file": "_event2_lv624_long_snow.dmm",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+    "traits": [{ "ground": true}],
+    "camouflage": "snow",
+    "environment_traits": {},
+
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "announce_text": "USS Golden Arrow, this is the USS Kuala. We are in the vicinity of the LV-624 colony and currently engaging with UPP forces at this time. Remain at ready for potential reinforcement action. We'll keep you updated, out.",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

@@ -35,6 +35,26 @@
 	paint_type = "full_camo"
 	icon_state = "full_camo"
 
+/obj/item/facepaint/sniper/snow
+	name = "fullbody paint snow"
+	paint_type = "full_camo_snow"
+	icon_state = "full_camo_snow"
+
+/obj/item/facepaint/sniper/desert
+	name = "fullbody paint desert"
+	paint_type = "full_camo_desert"
+	icon_state = "full_camo_desert"
+
+/obj/item/facepaint/sniper/jungle
+	name = "fullbody paint jungle"
+	paint_type = "full_camo_jungle"
+	icon_state = "full_camo_jungle"
+
+/obj/item/facepaint/sniper/urban
+	name = "fullbody paint urban"
+	paint_type = "full_camo_urban"
+	icon_state = "full_camo_urban"
+
 /obj/item/facepaint/skull
 	name = "skull paint"
 	desc = "Paint, for your face. Make your enemies need a change of underwear from the sheer terror a goddamn skull on your face will bring to them. WARNING: DOES NOT MIX WELL WITH BEARDS."
@@ -46,6 +66,17 @@
 	desc = "A stick of SPF 50 sunscreen, issued to you by the good brass of the Corps. Whereas the previously issued sunscreen was toxic upon ingestion, this batch improves upon that by only containing excessive amounts of cadmium."
 	paint_type = "sunscreen_stick"
 	icon_state = "sunscreen_stick"
+
+/obj/item/facepaint/clown
+	name = "clown makeup paint"
+	desc = "Paint, for your face. Used for entertainers and alike, or maybe you just feel that way."
+	paint_type = "clown_camo"
+	icon_state = "clown_camo"
+
+/obj/item/facepaint/clown/alt
+
+	paint_type = "clown_camo_alt"
+	icon_state = "clown_camo_alt"
 
 /obj/item/facepaint/attack(mob/M, mob/user)
 	if(user.a_intent == INTENT_HARM)

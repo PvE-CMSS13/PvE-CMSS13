@@ -59,6 +59,7 @@
 	pixel_y = 30
 	},
 /obj/structure/bed/chair/comfy/beige,
+/obj/item/clothing/head/hybrisa/pizza_galaxy,
 /obj/effect/vehicle_roof/pizza_van{
 	icon_state = "roof_3"
 	},
@@ -163,6 +164,9 @@
 	},
 /obj/structure/closet/crate/plastic{
 	pixel_y = 8
+	},
+/obj/item/pizzabox/pizza_galaxy/mystery/stack{
+	pixel_y = 12
 	},
 /obj/item/stack/sheet/cardboard{
 	layer = 4;

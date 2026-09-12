@@ -181,6 +181,13 @@
 /obj/structure/bed/alien
 	icon_state = "abed"
 
+/obj/structure/bed/alien/yautja
+	icon_state = "abed"
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+
+/obj/structure/bed/alien/yautja/leader
+	icon_state = "bed"
+
 /*
  * Roller beds
  */
@@ -437,6 +444,57 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	icon_state = "bedroll"
 	rollertype = /obj/structure/bed/bedroll
 
+/obj/structure/bed/bedroll/comfy
+	name = "unfolded comfy bedroll"
+	desc = "A bedroll so comfy, it’s technically illegal in three sectors for causing excessive napping."
+	icon_state = "bedroll_comfy_o"
+	foldabletype = /obj/item/roller/bedroll/comfy
+
+/obj/item/roller/bedroll/comfy
+	name = "folded comfy bedroll"
+	desc = "Folded and innocent-looking — but don’t be fooled. It's technically illegal in three sectors for causing excessive napping."
+	icon_state = "bedroll_comfy"
+	rollertype = /obj/structure/bed/bedroll/comfy
+
+/obj/structure/bed/bedroll/comfy/blue
+	color = "#8cb9e2"
+	foldabletype = /obj/item/roller/bedroll/comfy/blue
+
+/obj/item/roller/bedroll/comfy/blue
+	color = "#8cb9e2"
+	rollertype = /obj/structure/bed/bedroll/comfy/blue
+
+/obj/structure/bed/bedroll/comfy/red
+	color = "#df4f4f"
+	foldabletype = /obj/item/roller/bedroll/comfy/red
+
+/obj/item/roller/bedroll/comfy/red
+	color = "#df4f4f"
+	rollertype = /obj/structure/bed/bedroll/comfy/red
+
+/obj/structure/bed/bedroll/comfy/pink
+	color = "#eaa8b2"
+	foldabletype = /obj/item/roller/bedroll/comfy/pink
+
+/obj/item/roller/bedroll/comfy/pink
+	color = "#eaa8b2"
+	rollertype = /obj/structure/bed/bedroll/comfy/pink
+
+/obj/structure/bed/bedroll/comfy/green
+	color = "#b3e290"
+	foldabletype = /obj/item/roller/bedroll/comfy/green
+
+/obj/item/roller/bedroll/comfy/green
+	color = "#b3e290"
+	rollertype = /obj/structure/bed/bedroll/comfy/green
+
+/obj/structure/bed/bedroll/comfy/yellow
+	color = "#e2df90"
+	foldabletype = /obj/item/roller/bedroll/comfy/yellow
+
+/obj/item/roller/bedroll/comfy/yellow
+	color = "#e2df90"
+	rollertype = /obj/structure/bed/bedroll/comfy/yellow
 //Hospital Rollers (non foldable)
 
 /obj/structure/bed/roller/hospital
@@ -446,26 +504,91 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	foldabletype = null
 	base_bed_icon = "bigrollerempty"
 
+	var/body_icon_state = "bigroller"
+	var/raised_with_body = TRUE
+	var/mob/living/carbon/human/body
+	var/datum/equipment_preset/body_preset = /datum/equipment_preset/corpse/hybrisa/civilian
+
+/obj/structure/bed/roller/hospital/Destroy()
+	if(body)
+		QDEL_NULL(body)
+	return ..()
+
+/obj/structure/bed/roller/hospital/attackby()
+	if(body)
+		return
+	..()
+
+/obj/structure/bed/roller/hospital/attack_hand()
+	if(body)
+		if(raised_with_body)
+			raised_with_body = FALSE
+			update_icon()
+			return
+		else
+			dump_body()
+			update_icon()
+			return
+	..()
+
+/obj/structure/bed/roller/hospital/update_icon()
+	overlays.Cut()
+	if(body)
+		icon_state = body_icon_state + "body"
+		if(raised_with_body)
+			icon_state = icon_state + "_up"
+		else
+			icon_state = icon_state + "_down"
+	else
+		..()
+
+/obj/structure/bed/roller/hospital/MouseDrop_T(atom/dropping, mob/user)
+	if(body)
+		return
+	..()
+
+/obj/structure/bed/roller/hospital/proc/dump_body()
+	var/turf/dump_turf = get_turf(src)
+	body.forceMove(dump_turf)
+	contents -= body
+	body = null
+
+/obj/structure/bed/roller/hospital/attack_alien(mob/living/carbon/xenomorph/M)
+	if(M.a_intent == INTENT_HARM && body)
+		dump_body()
+	return ..()
+/obj/structure/bed/roller/hospital/bloody
+	base_bed_icon = "bigrollerbloodempty"
+	body_icon_state = "bigrollerblood"
+	body_preset = /datum/equipment_preset/corpse/hybrisa/civilian/burst
+
 /obj/structure/bed/roller/hospital_empty
 	icon_state = "bigrollerempty2_down"
 	foldabletype = null
-
 /obj/structure/bed/roller/hospital_empty/bigrollerempty
 	icon_state = "bigrollerempty_down"
 	buckling_y = 2
 	base_bed_icon = "bigrollerempty"
-
 /obj/structure/bed/roller/hospital_empty/bigrollerempty2
 	icon_state = "bigrollerempty2_down"
 	buckling_y = 2
 	base_bed_icon = "bigrollerempty2"
-
 /obj/structure/bed/roller/hospital_empty/bigrollerempty3
 	icon_state = "bigrollerempty3_down"
 	buckling_y = 2
 	base_bed_icon = "bigrollerempty3"
-
 /obj/structure/bed/roller/hospital_empty/bigrollerbloodempty
 	icon_state = "bigrollerbloodempty_down"
 	buckling_y = 2
 	base_bed_icon = "bigrollerbloodempty"
+
+// Hospital divider (not a bed)
+/obj/structure/bed/hybrisa/hospital/hospitaldivider
+	name = "hospital divider"
+	desc = "A hospital divider for privacy."
+	icon = 'icons/obj/structures/props/curtain.dmi'
+	icon_state = "hospitalcurtain"
+	layer = ABOVE_MOB_LAYER
+	anchored = TRUE
+	can_buckle = FALSE
+	hit_bed_sound = 'sound/effects/thud.ogg'

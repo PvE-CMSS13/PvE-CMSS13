@@ -583,6 +583,10 @@
 		creature.apply_effect(SLOW,1)
 	to_chat(creature, SPAN_DANGER(msg))
 
+/obj/effect/particle_effect/smoke/xeno_weak/transparent
+	alpha = 100
+	color = "#ad5f3f"
+
 /obj/effect/particle_effect/smoke/xeno_weak_fire
 	time_to_live = 16
 	color = "#b33e1e"
@@ -761,6 +765,9 @@
 
 /datum/effect_system/smoke_spread/xeno_weaken
 	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak
+
+/datum/effect_system/smoke_spread/xeno_weaken/transparent
+	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak/transparent
 
 /datum/effect_system/smoke_spread/xeno_extinguish_fire
 	smoke_type = /obj/effect/particle_effect/smoke/xeno_weak_fire

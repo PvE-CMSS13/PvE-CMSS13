@@ -173,6 +173,82 @@
 	can_bloody = FALSE
 	supports_surgery = FALSE
 
+//Slipery slope
+/turf/open/slippery
+	name = "sloped roof"
+	icon = 'icons/turf/floors/floors.dmi'
+	icon_state = "grass1"
+
+
+/turf/open/slippery/Entered(atom/movable/crosser)
+	. = ..()
+	if(isobserver(crosser) || crosser.anchored)
+		return
+
+	if(!(isitem(crosser) || isliving(crosser)))
+		return
+
+	INVOKE_ASYNC(crosser, TYPE_PROC_REF(/atom/movable, throw_atom), (get_step(src, dir)), 50, SPEED_FAST, null, TRUE)
+
+/turf/open/slippery/hull
+	name = "sloped roof"
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "outerhull"
+
+/turf/open/slippery/hull/dir
+	icon_state = "outerhull_dir"
+
+/turf/open/slippery/hull/dir/southwest
+	dir = SOUTHWEST
+
+/turf/open/slippery/hull/dir/north
+	dir = NORTH
+
+/turf/open/slippery/hull/dir/east
+	dir = EAST
+
+/turf/open/slippery/hull/dir/northeast
+	dir = NORTHEAST
+
+/turf/open/slippery/hull/dir/southeast
+	dir = SOUTHEAST
+
+/turf/open/slippery/hull/dir/west
+	dir = WEST
+
+/turf/open/slippery/hull/dir/northwest
+	dir = NORTHWEST
+
+/turf/open/slippery/roof
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "outerhull"
+	name = "roof"
+	allow_construction = FALSE
+
+/turf/open/slippery/roof/dir
+	icon_state = "outerhull_dir"
+
+/turf/open/slippery/roof/dir/southwest
+	dir = SOUTHWEST
+
+/turf/open/slippery/roof/dir/north
+	dir = NORTH
+
+/turf/open/slippery/roof/dir/east
+	dir = EAST
+
+/turf/open/slippery/roof/dir/northeast
+	dir = NORTHEAST
+
+/turf/open/slippery/roof/dir/southeast
+	dir = SOUTHEAST
+
+/turf/open/slippery/roof/dir/west
+	dir = WEST
+
+/turf/open/slippery/roof/dir/northwest
+	dir = NORTHWEST
+
 // Prison grass
 /turf/open/organic/grass
 	name = "grass"
@@ -1296,6 +1372,9 @@
 /turf/open/shuttle/dropship/light_grey_middle
 	icon_state = "rasputin13"
 
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right
+	icon_state = "rasputin14"
+
 /turf/open/shuttle/dropship/can_surgery
 	icon_state = "rasputin1"
 	allow_construction = TRUE
@@ -1387,6 +1466,9 @@
 /turf/open/shuttle/escapepod/floor1/east
 	dir = EAST
 
+/turf/open/shuttle/escapepod/floor1/west
+	dir = WEST
+
 /turf/open/shuttle/escapepod/floor11
 	icon_state = "floor11"
 
@@ -1395,6 +1477,27 @@
 
 /turf/open/shuttle/escapepod/floor2
 	icon_state = "floor2"
+
+/turf/open/shuttle/escapepod/floor2/north
+	dir = NORTH
+
+/turf/open/shuttle/escapepod/floor2/east
+	dir = EAST
+
+/turf/open/shuttle/escapepod/floor2/west
+	dir = WEST
+
+/turf/open/shuttle/escapepod/floor3
+	icon_state = "floor3"
+
+/turf/open/shuttle/escapepod/floor3/north
+	dir = NORTH
+
+/turf/open/shuttle/escapepod/floor3/east
+	dir = EAST
+
+/turf/open/shuttle/escapepod/floor3/west
+	dir = WEST
 
 /turf/open/shuttle/escapepod/floor4
 	icon_state = "floor4"
@@ -1584,3 +1687,32 @@
 
 /turf/open/shuttle/vehicle/floor_3_9_1
 	icon_state = "floor_3_9_1"
+
+/turf/open/gm/river/no_overlay/ocean
+	name = "ocean"
+	icon = 'icons/turf/floors/desert_water.dmi'
+	icon_state = "deep"
+
+/turf/open/gm/river/no_overlay/ocean/Entered(atom/movable/AM)
+	..()
+	if(!isobserver(AM) && !isliving(AM) && istype(AM, /obj/item) && !istype(AM, /obj/item/lightstick))
+//	if(!isobserver(AM) && !istype(AM, /obj/effect/elevator) && !istype(AM, /obj/docking_port))
+		addtimer(CALLBACK(src, PROC_REF(enter_depths), AM), 0.2 SECONDS)
+
+/turf/open/gm/river/no_overlay/ocean/proc/enter_depths(atom/movable/AM)
+	if(AM.throwing == 0 && istype(get_turf(AM), /turf/open/gm/river/no_overlay/ocean))
+		AM.visible_message(SPAN_WARNING("[AM] falls into the depths!"), SPAN_WARNING("You fall into the depths!"))
+//		if(!ishuman(AM))
+		qdel(AM)
+
+/turf/open/gm/river/no_overlay/ocean_no_slowdown
+	name = "ocean"
+	icon = 'icons/turf/floors/desert_water.dmi'
+	icon_state = "deep"
+	base_river_slowdown = 0
+
+/turf/open/gm/empty/navalis
+	desc = "The Xenomorphs appear to have emerged from this gaping maw. However, it appears they not only have refused to retreat back in here, they have barricaded it……"
+
+/turf/open/gm/empty/navalis/dig
+	desc = "Worse than Xenomorphs lurk the deepest, darkest, pits of this world. These nameless things await in the dark. Pray they don't find this escape."

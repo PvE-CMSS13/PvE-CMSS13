@@ -1,0 +1,4099 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"al" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"an" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river/north)
+"ar" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"aH" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"aK" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"aR" = (
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"aU" = (
+/turf/closed/shuttle/ert{
+	icon_state = "wy17"
+	},
+/area/strata/interior/out_of_bounds)
+"aX" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"aY" = (
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"by" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"bB" = (
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"bD" = (
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"bE" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#ae8686";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"bQ" = (
+/obj/structure/flora/bush/ausbushes/reedbush,
+/turf/open/gm/coast/dirt/south,
+/area/lazarus/ground/river/central_river)
+"bS" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"ca" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	icon_state = "hotseat_destroyed"
+	},
+/obj/item/shard,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"cc" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"ci" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -8
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"ck" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = 10;
+	pixel_y = 21
+	},
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/item/shard,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"cx" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/item/stack/sheet/metal,
+/obj/item/shard,
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/crashed_shuttle)
+"cB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 4;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 10;
+	pixel_x = -11;
+	pixel_y = 29
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"cD" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"cV" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	icon_state = "hotseat_destroyed"
+	},
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"dg" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"dp" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"dx" = (
+/obj/item/device/healthanalyzer,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_left_to_right,
+/area/lazarus/crashed_shuttle)
+"dU" = (
+/obj/effect/decal/lv_decals/cave_mud_corner,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"dY" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"dZ" = (
+/turf/open/gm/coast/dirt/beachcorner2/south_west,
+/area/lazarus/ground/river/central_river/north)
+"ec" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"eg" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"eh" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_bottom_left,
+/area/lazarus/crashed_shuttle)
+"ew" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"ey" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 12;
+	light_color = "#FF7700";
+	pixel_x = -6;
+	alpha = 155
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_3";
+	opacity = 0
+	},
+/area/strata/interior/out_of_bounds)
+"eB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner,
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 8
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"eG" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"eU" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"eX" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 24;
+	light_color = "#FF7700";
+	pixel_x = -5
+	},
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 3;
+	light_color = "#FF7700";
+	pixel_x = -1;
+	layer = 4.2;
+	alpha = 155
+	},
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"fe" = (
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"fk" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"fl" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "wy_rightengine"
+	},
+/area/strata/interior/out_of_bounds)
+"fq" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"fv" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"fw" = (
+/turf/open/gm/coast/dirt/beachcorner/south_west,
+/area/lazarus/ground/river/central_river)
+"fy" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"fF" = (
+/turf/closed/shuttle/ert{
+	icon_state = "wy9"
+	},
+/area/strata/interior/out_of_bounds)
+"fI" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -3
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "wy15"
+	},
+/area/strata/interior/out_of_bounds)
+"fK" = (
+/turf/closed/wall/rock/brown,
+/area/strata/interior/out_of_bounds)
+"gj" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"gn" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"go" = (
+/obj/item/stack/sheet/metal,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 10;
+	pixel_x = -17;
+	pixel_y = 17
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = -7
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"gy" = (
+/obj/structure/girder,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"gW" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"hc" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"hf" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"hn" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"ht" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"hy" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"hB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"hG" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"hK" = (
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"ie" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"il" = (
+/obj/item/stack/sheet/metal,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 9;
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"ir" = (
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"it" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"iz" = (
+/turf/open/gm/coast/dirt/south,
+/area/lazarus/ground/river/central_river/north)
+"iB" = (
+/turf/open/gm/coast/dirt/west,
+/area/lazarus/ground/river/central_river)
+"iJ" = (
+/obj/structure/girder,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"iP" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"jn" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"jD" = (
+/obj/structure/surface/rack,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 2;
+	pixel_y = -5
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"jE" = (
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"jH" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"jJ" = (
+/obj/item/frame/rack,
+/obj/effect/landmark/objective_landmark/far,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"jL" = (
+/turf/open/auto_turf/lv_grass/layer0_mud_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"jZ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"kg" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"kn" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"kt" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"kQ" = (
+/turf/open/gm/coast/dirt/beachcorner2/north_west,
+/area/lazarus/ground/river/central_river/north)
+"kU" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"lf" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -8
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"lg" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"lY" = (
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river/north)
+"ml" = (
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 10
+	},
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 9
+	},
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"mo" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"ms" = (
+/obj/structure/girder,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"mC" = (
+/obj/effect/decal/large_stain{
+	pixel_x = -36;
+	pixel_y = -39;
+	layer = 2.1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "wy12"
+	},
+/area/strata/interior/out_of_bounds)
+"mL" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	alpha = 155
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"mO" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"mX" = (
+/turf/open/gm/coast/dirt/west,
+/area/lazarus/ground/river/central_river/north)
+"mZ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"ne" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"ni" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"ns" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/storage/belt/medical/lifesaver/wy,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
+/area/lazarus/crashed_shuttle)
+"nw" = (
+/obj/structure/flora/jungle/planttop1,
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"ny" = (
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"nE" = (
+/obj/effect/landmark/corpsespawner/pmc,
+/obj/effect/decal/cleanable/blood{
+	pixel_y = 20
+	},
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"nL" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"nZ" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"od" = (
+/obj/item/frame/rack,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/item/shard,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"oh" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"oq" = (
+/turf/closed/shuttle/dropship4/WY/HorizonRunner{
+	icon_state = "leftengine_1"
+	},
+/area/strata/interior/out_of_bounds)
+"oC" = (
+/obj/item/card/id/pmc,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/crashed_shuttle)
+"oK" = (
+/obj/structure/prop/colorable_rock/boulder/small/boulder3{
+	color = "#8d6d6d";
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"oL" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/coast/dirt/west,
+/area/lazarus/ground/river/central_river/north)
+"oO" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#ae8686";
+	dir = 9;
+	pixel_x = -11;
+	pixel_y = 7
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"oW" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"oX" = (
+/obj/item/storage/firstaid/regular,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/crashed_shuttle)
+"oY" = (
+/turf/closed/shuttle/ert{
+	icon_state = "wy13"
+	},
+/area/strata/interior/out_of_bounds)
+"pA" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"pQ" = (
+/obj/structure/machinery/big_computers/computerwhite/computer4{
+	icon_state = "sensor_comp2_off"
+	},
+/obj/item/shard,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"pR" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"qb" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/obj/item/frame/rack,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/spawner/random/sentry/midchance,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/crashed_shuttle)
+"qd" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"qf" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"qm" = (
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/item/stack/sheet/metal,
+/obj/item/shard,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"qp" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/item/explosive/grenade/high_explosive/pmc,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"qr" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"qt" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"qy" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -20
+	},
+/obj/item/shard,
+/turf/open/floor/almayer/test_floor4,
+/area/lazarus/crashed_shuttle)
+"qL" = (
+/turf/open/gm/coast/dirt/beachcorner/north_west,
+/area/lazarus/ground/river/central_river/north)
+"re" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"rr" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/girder,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"rs" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"rE" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"rF" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"si" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"st" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"sL" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"sO" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"sS" = (
+/obj/structure/girder,
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"sX" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 17
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"tz" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"tI" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/crashed_shuttle)
+"tW" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"uc" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
+/area/lazarus/crashed_shuttle)
+"uv" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 4;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"uG" = (
+/turf/open/gm/coast/dirt/beachcorner/south_east,
+/area/lazarus/ground/river/central_river)
+"uJ" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -9;
+	pixel_y = -9
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"uS" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"vm" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"vW" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"wA" = (
+/obj/structure/girder,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"wB" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"wC" = (
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/item/storage/belt/shotgun/black,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"wK" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"wL" = (
+/obj/structure/prop/hybrisa/airport/dropshipenginedamage{
+	light_on = 1;
+	light_power = 5;
+	light_range = 6;
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "wy5"
+	},
+/area/strata/interior/out_of_bounds)
+"wW" = (
+/turf/open/gm/coast/dirt/beachcorner2/north_west,
+/area/lazarus/ground/river/central_river)
+"wX" = (
+/turf/open/gm/coast/dirt/beachcorner/south_west,
+/area/lazarus/ground/river/central_river/north)
+"xg" = (
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"xk" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"xo" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 2;
+	light_color = "#FF7700";
+	pixel_x = -14
+	},
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	alpha = 155;
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"xJ" = (
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
+	dir = 8
+	},
+/obj/structure/machinery/door/poddoor/hybrisa/white{
+	name = "\improper Lockdown";
+	dir = 4
+	},
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/lazarus/crashed_shuttle)
+"xQ" = (
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"xS" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"xW" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"yc" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"ye" = (
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 17
+	},
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"yo" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 4;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#ae8686";
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = -5
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"yz" = (
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 17
+	},
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/item/shard,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"yB" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/central_barrens)
+"yE" = (
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"zh" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"zp" = (
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"zC" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"zJ" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"zO" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#ae8686";
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = -5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"zT" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gibarm_flesh"
+	},
+/obj/effect/decal/ammo_casing,
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	icon_state = "shuttle_chair_destroyed"
+	},
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/crashed_shuttle)
+"Af" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"An" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"As" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"AB" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 9;
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"AC" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"AE" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = 10;
+	pixel_y = 21
+	},
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/effect/landmark/objective_landmark/far,
+/obj/item/shard,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"AJ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"AP" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"AZ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Bj" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"Bn" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Bp" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 9;
+	pixel_x = -6;
+	pixel_y = -15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Bq" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 1;
+	light_color = "#FF7700";
+	pixel_x = -3
+	},
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 19;
+	light_color = "#FF7700";
+	pixel_x = -5;
+	layer = 4.2;
+	alpha = 155
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/turf/closed/wall/rock/brown,
+/area/lazarus/crashed_shuttle)
+"BB" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#ae8686";
+	dir = 6;
+	pixel_y = 14;
+	pixel_x = 10
+	},
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/item/shard,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"BC" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"BG" = (
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"BQ" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/item/ammo_magazine/rifle/nsg23{
+	current_rounds = 17
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"BT" = (
+/obj/structure/girder,
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 25;
+	light_color = "#FF7700";
+	pixel_x = -30;
+	layer = 4.2;
+	alpha = 155
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"BV" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Cb" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Ck" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Cp" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"CM" = (
+/obj/structure/flora/jungle/plantbot1,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"CR" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"Dx" = (
+/obj/structure/flora/jungle/alienplant1,
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river)
+"DB" = (
+/obj/structure/girder,
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"DK" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"DP" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"DY" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Ek" = (
+/obj/effect/decal/large_stain,
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 8
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"EB" = (
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"EG" = (
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"EP" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Fc" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Fd" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"Fh" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Fp" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = -4;
+	light_color = "#FF7700";
+	pixel_x = -1
+	},
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 7;
+	light_color = "#FF7700";
+	pixel_x = -11;
+	layer = 4.2;
+	alpha = 155
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "leftengine_2";
+	opacity = 0
+	},
+/area/strata/interior/out_of_bounds)
+"Fs" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Fv" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"FG" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"FW" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Gb" = (
+/obj/item/device/flashlight/flare,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_bottom_right,
+/area/lazarus/crashed_shuttle)
+"Gf" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/gm/coast/dirt/beachcorner/north_west,
+/area/lazarus/ground/river/central_river/north)
+"Gi" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Gm" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"Gq" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"GA" = (
+/turf/closed/shuttle/ert{
+	icon_state = "wy5"
+	},
+/area/strata/interior/out_of_bounds)
+"GG" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"GV" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Hd" = (
+/turf/open/gm/coast/dirt/beachcorner/north_west,
+/area/lazarus/ground/river/central_river)
+"Hg" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Hz" = (
+/obj/structure/flora/bush/ausbushes/var3/stalkybush,
+/turf/open/gm/coast/dirt/beachcorner2/north_west,
+/area/lazarus/ground/river/central_river)
+"HN" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"HQ" = (
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river)
+"Ix" = (
+/turf/open/gm/coast/dirt/beachcorner2/south_east,
+/area/lazarus/ground/river/central_river)
+"Iy" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"IF" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"IG" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"IK" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"IO" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"IU" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"Jg" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"Jj" = (
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#ffa133";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 16;
+	light_color = "#FF7700";
+	pixel_x = -1;
+	alpha = 155
+	},
+/obj/structure/prop/hybrisa/misc/fire/fire2{
+	color = "#FF7700";
+	icon = 'icons/effects/fire.dmi';
+	icon_state = "dynamic_2";
+	pixel_y = 36;
+	light_color = "#FF7700";
+	pixel_x = -4;
+	layer = 4.2
+	},
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "rightengine_2";
+	opacity = 0
+	},
+/area/strata/interior/out_of_bounds)
+"Jq" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"Jt" = (
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/turf/closed/wall/rock/brown,
+/area/lazarus/crashed_shuttle)
+"JF" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"JI" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"JM" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"JU" = (
+/obj/effect/landmark/objective_landmark/far,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/test_floor5,
+/area/lazarus/ground/barrens/north_barrens)
+"Kd" = (
+/obj/effect/landmark/corpsespawner/wygoon,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
+/area/lazarus/crashed_shuttle)
+"Kq" = (
+/obj/effect/decal/cleanable/blood{
+	layer = 3;
+	pixel_x = 24
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
+/area/lazarus/crashed_shuttle)
+"Kt" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Kw" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Ky" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"KS" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Lv" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1;
+	icon_state = "hotseat_destroyed"
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"LU" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"LZ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Mb" = (
+/obj/effect/decal/large_stain,
+/turf/closed/shuttle/dropship4/WY/HorizonRunner{
+	icon_state = "rightengine_1"
+	},
+/area/strata/interior/out_of_bounds)
+"Mq" = (
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 9
+	},
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 10
+	},
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Mz" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river)
+"Nn" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Np" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"NG" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"NH" = (
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"NY" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Of" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/floor/brown_dirt/random_rocks_alt{
+	dir = 6
+	},
+/area/lazarus/ground/barrens/central_barrens)
+"Og" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9
+	},
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"OC" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -14;
+	pixel_y = -19;
+	layer = 2.1;
+	dir = 1
+	},
+/turf/closed/wall/rock/grey,
+/area/strata/interior/out_of_bounds)
+"OH" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"OP" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"OX" = (
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/item/shard,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"OY" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Pb" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -21;
+	pixel_y = -21
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Pr" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Pv" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Pw" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"PJ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"PO" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/coast/dirt/beachcorner/north_west,
+/area/lazarus/ground/river/central_river)
+"PR" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Qr" = (
+/obj/structure/girder,
+/obj/effect/decal/large_stain,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"Qu" = (
+/obj/structure/bed/chair/dropship/passenger,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"Qx" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"Qz" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"QK" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/central_barrens)
+"QQ" = (
+/obj/structure/girder,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"QT" = (
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Rb" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Rc" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Re" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 10;
+	pixel_x = -11;
+	pixel_y = 41
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Rh" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4;
+	icon_state = "hotseat_destroyed"
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"Ru" = (
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/structure/bed/chair/dropship/passenger{
+	icon_state = "hotseat_destroyed"
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"RM" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"RS" = (
+/obj/structure/flora/bush/ausbushes/reedbush,
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/coast/dirt/beachcorner2/north_west,
+/area/lazarus/ground/river/central_river)
+"RU" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"SF" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"SR" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"SX" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Tc" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = -21;
+	pixel_y = 14
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Te" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Tg" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 4;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"Tm" = (
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "wy1"
+	},
+/area/strata/interior/out_of_bounds)
+"TE" = (
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"TM" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"TO" = (
+/obj/effect/decal/cleanable/blood/drip{
+	pixel_x = -8
+	},
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
+/area/lazarus/crashed_shuttle)
+"Uu" = (
+/obj/effect/decal/large_stain,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = -2;
+	pixel_y = 11;
+	layer = 2.1
+	},
+/obj/item/shard,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"UD" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+"UE" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8;
+	icon_state = "hotseat_destroyed"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"VG" = (
+/turf/open/gm/coast/dirt/beachcorner2/south_west,
+/area/lazarus/ground/river/central_river)
+"VJ" = (
+/obj/effect/landmark/big_fog_marker,
+/turf/open/gm/coast/dirt/beachcorner/south_west,
+/area/lazarus/ground/river/central_river/north)
+"VN" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 8
+	},
+/obj/effect/decal/lv_decals/red_mud_corner,
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"VP" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/item/shard,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"VY" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Wa" = (
+/obj/item/stack/sheet/metal,
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = -12;
+	pixel_y = 12;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Wb" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Wt" = (
+/obj/structure/bed/chair/dropship/passenger,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/plate,
+/area/lazarus/crashed_shuttle)
+"WL" = (
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 5;
+	pixel_x = -31;
+	pixel_y = 32
+	},
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"WN" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"WO" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 5
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/central_barrens)
+"Xd" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/turf/open/gm/river/soro,
+/area/lazarus/ground/river/central_river)
+"Xe" = (
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 6
+	},
+/obj/effect/decal/lv_decals/cave_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Xz" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"XH" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/landmark/big_fog_marker,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"XI" = (
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"XT" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -18;
+	pixel_y = -8
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"XV" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg3,
+/area/lazarus/ground/barrens/north_barrens)
+"Yb" = (
+/obj/effect/decal/large_stain{
+	pixel_x = 3;
+	pixel_y = -9;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Yi" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/girder,
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/lv_decals/red_mud_corner{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/platingdmg2,
+/area/lazarus/ground/barrens/north_barrens)
+"Yk" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"Yt" = (
+/obj/effect/decal/large_stain{
+	dir = 1;
+	pixel_x = -20;
+	pixel_y = -4
+	},
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"YC" = (
+/obj/structure/girder,
+/obj/effect/decal/large_stain{
+	dir = 1
+	},
+/turf/open/floor/platingdmg1,
+/area/lazarus/crashed_shuttle)
+"YD" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"YE" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks_alt,
+/area/lazarus/ground/barrens/north_barrens)
+"YM" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"YN" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_sand/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"YP" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"YR" = (
+/obj/item/stack/sheet/metal,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/platingdmg1,
+/area/lazarus/ground/barrens/north_barrens)
+"Za" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/cleanable/dirt/alt_dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/central_barrens)
+"Zd" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer0,
+/area/lazarus/ground/barrens/north_barrens)
+"Zf" = (
+/turf/open/gm/coast/dirt/north,
+/area/lazarus/ground/river/central_river)
+"Zg" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = 16
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/brown_dirt/random_rocks,
+/area/lazarus/ground/barrens/north_barrens)
+"Zn" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 8;
+	pixel_x = -18;
+	pixel_y = -12
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/item/shard,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"ZC" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/strata/interior/out_of_bounds)
+"ZV" = (
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#d4a88e";
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/auto_turf/lv_grass/layer1,
+/area/lazarus/ground/barrens/north_barrens)
+"ZY" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/decal/large_stain{
+	pixel_x = -12;
+	pixel_y = 12;
+	layer = 2.1;
+	dir = 1
+	},
+/obj/item/stack/rods{
+	amount = 15
+	},
+/obj/structure/girder/displaced,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/platingdmg3,
+/area/lazarus/crashed_shuttle)
+
+(1,1,1) = {"
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+aR
+aR
+aR
+jL
+Xe
+ml
+Mq
+TE
+TE
+ZC
+ZC
+ir
+TE
+xg
+xg
+TE
+Yk
+Zd
+YP
+fK
+fK
+fK
+fK
+aR
+aR
+aR
+mO
+mO
+OY
+jE
+OY
+qt
+ny
+NH
+"}
+(2,1,1) = {"
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+aR
+aR
+aR
+dU
+yE
+EB
+EB
+TE
+ir
+ir
+TE
+Ky
+RU
+Yk
+ir
+kg
+Fh
+ni
+DB
+sS
+Fp
+oq
+Og
+aR
+OY
+jE
+nw
+CM
+mO
+ny
+ny
+Kw
+aY
+"}
+(3,1,1) = {"
+aR
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+Wa
+pA
+hc
+fv
+VY
+RM
+TE
+TE
+hB
+Af
+jH
+SR
+Fh
+wB
+Fh
+Zn
+uJ
+wK
+ms
+Tm
+zC
+qd
+yB
+jn
+eG
+eg
+jn
+hf
+jn
+FW
+NH
+"}
+(4,1,1) = {"
+ZC
+aR
+aR
+OC
+YC
+Jt
+Bq
+wA
+mC
+ZY
+Yi
+WL
+VN
+iP
+sL
+Fv
+mZ
+TM
+OH
+rr
+Pr
+Kt
+NY
+Qz
+fq
+AZ
+go
+aH
+Jq
+nL
+re
+hG
+sO
+QT
+gj
+LZ
+Ck
+Cp
+As
+Wb
+rE
+"}
+(5,1,1) = {"
+ZC
+aR
+xo
+BT
+od
+AE
+wC
+ca
+Rh
+tI
+UD
+cB
+il
+yo
+hn
+oh
+PJ
+fy
+SX
+XI
+CR
+hB
+ht
+by
+IF
+BG
+Pb
+Yt
+XT
+wB
+bB
+eG
+tz
+jn
+fk
+eG
+pR
+FW
+FW
+rF
+gn
+"}
+(6,1,1) = {"
+fK
+aR
+wA
+pQ
+qp
+nE
+lg
+Kq
+ns
+ye
+eh
+sX
+XV
+AB
+Pv
+eB
+ci
+ec
+Fd
+uS
+wB
+ew
+BV
+by
+PJ
+BC
+Gq
+Hg
+Cb
+Fh
+al
+jn
+aX
+eg
+DK
+Jg
+FW
+aY
+NH
+NH
+aY
+"}
+(7,1,1) = {"
+fK
+aR
+aR
+Uu
+zT
+ck
+Qu
+Wt
+Ru
+Lv
+dx
+GG
+TO
+IG
+lf
+Tg
+NG
+OP
+xk
+HN
+Bj
+qr
+cD
+IU
+YR
+aK
+YD
+AC
+GV
+OP
+ar
+si
+QK
+WN
+Za
+kn
+kU
+tW
+WO
+PO
+iB
+"}
+(8,1,1) = {"
+aR
+aR
+aR
+qm
+yz
+kt
+OX
+BQ
+uc
+Kd
+Gb
+oC
+qb
+JU
+AP
+vW
+Xz
+yc
+YN
+Yb
+EG
+DP
+Rb
+SR
+xQ
+gy
+zp
+dg
+by
+wB
+Gi
+kn
+Fc
+eg
+fk
+Bn
+DK
+Of
+Hd
+Hz
+HQ
+"}
+(9,1,1) = {"
+aR
+fK
+fK
+wA
+jD
+cx
+cV
+vm
+UE
+oX
+jJ
+fF
+wL
+iJ
+QQ
+Ek
+uv
+KS
+hc
+Gm
+PJ
+zh
+bS
+eU
+ie
+SX
+by
+wB
+zJ
+ZV
+Fc
+Fc
+FW
+NH
+NH
+Hd
+fw
+Hd
+wW
+Mz
+HQ
+"}
+(10,1,1) = {"
+fK
+fK
+mL
+eX
+Qr
+qy
+aU
+fI
+oY
+xJ
+GA
+fl
+ey
+Jj
+Mb
+bD
+Re
+zO
+NG
+oW
+Nn
+dY
+EP
+AC
+gW
+hc
+JI
+IK
+jZ
+Zg
+kn
+st
+WO
+Hd
+iB
+RS
+VG
+wW
+HQ
+HQ
+HQ
+"}
+(11,1,1) = {"
+fK
+aR
+oK
+hy
+BB
+Pw
+VP
+AJ
+JM
+AJ
+IO
+PJ
+Tc
+Bp
+ne
+Np
+XH
+Te
+dp
+it
+Rc
+YN
+xW
+YN
+Fs
+An
+JF
+YM
+Iy
+YM
+rF
+Qx
+nZ
+Zf
+Dx
+HQ
+HQ
+Mz
+HQ
+HQ
+HQ
+"}
+(12,1,1) = {"
+fK
+aR
+oO
+bE
+Ky
+Gf
+mX
+mX
+mX
+mX
+mX
+mX
+VJ
+hK
+aa
+YE
+FG
+wB
+Rb
+LU
+Yk
+Yk
+rs
+Yk
+qf
+xS
+An
+JF
+YM
+YM
+NH
+NH
+Hd
+wW
+Mz
+HQ
+HQ
+HQ
+HQ
+Mz
+Ix
+"}
+(13,1,1) = {"
+aR
+aR
+qL
+oL
+mX
+kQ
+lY
+lY
+lY
+lY
+lY
+lY
+iz
+mo
+it
+An
+Rb
+cc
+Yk
+ir
+Zd
+Zd
+ir
+DY
+xg
+xg
+xg
+fe
+xg
+PR
+PO
+iB
+wW
+HQ
+HQ
+Mz
+HQ
+HQ
+HQ
+Ix
+uG
+"}
+(14,1,1) = {"
+aR
+aR
+kQ
+lY
+lY
+lY
+lY
+an
+lY
+an
+lY
+lY
+dZ
+mX
+wX
+xg
+xg
+TE
+TE
+TE
+TE
+TE
+TE
+fe
+xg
+xg
+fe
+SF
+qL
+wX
+Zf
+HQ
+Mz
+Xd
+HQ
+HQ
+HQ
+Dx
+Mz
+bQ
+NH
+"}

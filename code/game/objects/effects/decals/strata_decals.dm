@@ -30,6 +30,55 @@
 	name = "some foliage"
 	desc = "A few brave tufts of snow grass."
 
+/obj/effect/decal/strata_decals/mud_corner
+	icon_state = "soro_mud_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/strata_decals/tyrargo_mud_corner
+	icon_state = "tyrargo_mud_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/lv_decals
+	icon = 'icons/turf/floors/auto_lv_turf.dmi'
+	icon_state = "grass_0_mud_alt_innercorner"
+	icon_state = "grass_0_mud_alt_innercorner"
+	name = "mud"
+	desc = null
+	layer = TURF_LAYER
+	anchored = TRUE
+
+/obj/effect/decal/lv_decals/cave_mud_corner
+	icon = 'icons/turf/floors/auto_lv_turf.dmi'
+	icon_state = "grass_0_mud_alt_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/lv_decals/red_mud_corner
+	icon = 'icons/turf/floors/auto_lv_turf.dmi'
+	icon_state = "varadero_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/lv_decals/grass_inner_corner
+	icon = 'icons/turf/floors/auto_lv_turf.dmi'
+	icon_state = "alt_grass_innercorner"
+	name = "grass"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/lv_decals/grass_outer_corner
+	icon = 'icons/turf/floors/auto_lv_turf.dmi'
+	icon_state = "alt_grass_outercorner"
+	name = "grass"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 ////////////////INDOORS STUFF////////////////////
 
 /obj/effect/decal/strata_decals/grime

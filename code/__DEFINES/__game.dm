@@ -20,7 +20,8 @@
 
 
 #define MAP_ICE_COLONY "Ice Colony" // Highpop only
-#define MAP_LV_624 "LV-624"
+#define MAP_LV_624 "LV-624" // Classic LV
+#define MAP_LV_624_LAZARUS_LANDING "LV-624 Lazarus Landing" // LV revamp still lowpop.
 #define MAP_LV_624_REPAIRED "LV-624 Repaired"
 #define MAP_BIG_RED "Solaris Ridge"
 #define MAP_PRISON_STATION "Fiorina Cellblocks"
@@ -36,8 +37,15 @@
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
+#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
+#define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
+#define MAP_COCYTUS_DAM "Cocytus Dam"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
+#define MAP_TYRARGO_RIFT "Tyrargo Rift"
+#define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
+#define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
+#define MAP_CAPE_RIVER "Cape River Mining Colony"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"
@@ -53,6 +61,9 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+
+#define MAP_NAVALIS "Navalis Platform 13"//multiz version
+#define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -279,6 +290,7 @@
 /// Blocks mortar placement, lasing, and medevac
 #define CEILING_PROTECTION_TIER_1 1
 #define CEILING_METAL 1.1
+#define CEILING_SANDSTONE_ALLOW_CAS 1.2
 
 /// Blocks CAS signals, supply drops, fultoning, and mortar fire
 #define CEILING_PROTECTION_TIER_2 2
@@ -375,6 +387,9 @@
 #define WALL_STRATA_ICE "strata_ice"
 #define WALL_STRATA_ICE_DIRTY "strata_ice_dirty"
 #define WALL_JUNGLE_UPDATED "jungle_veg"
+#define WALL_FOREST "forest_veg"
+#define WALL_FOREST_ROCK "rock_forest"
+#define WALL_FOREST_ROCK_DIRTY "rock_forest_dirty"
 #define WALL_STRATA_OUTPOST_RIBBED "strata_ribbed_outpost_"
 #define WALL_STRATA_OUTPOST_BARE "strata_bare_outpost_"
 #define WALL_SHIVA_ICE "shiva_ice"
@@ -400,6 +415,10 @@
 #define WALL_AICORE "aiwall"
 #define WALL_UPP_GREEN "uppwall_interior"
 #define WALL_UPP_GREY "uppwall_interior"
+#define WALL_UPP_SHIP "uppwall_interior"
+#define WALL_UPP_BASE "uppwall"
+#define WALL_LV_BASE "lvwall"
+#define WALL_ANCIENT_BASE "ancient_stone"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1

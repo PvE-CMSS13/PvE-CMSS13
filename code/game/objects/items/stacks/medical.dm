@@ -126,6 +126,13 @@
 			attack(target, user)
 			sleep(ai_brain.short_action_delay)
 
+/obj/item/stack/medical/bruise_pack/random_amount
+
+/obj/item/stack/medical/bruise_pack/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
+
 /obj/item/stack/medical/bruise_pack/two
 	amount = 2
 
@@ -174,6 +181,13 @@
 			else
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
+
+/obj/item/stack/medical/ointment/random_amount
+
+/obj/item/stack/medical/ointment/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
 
 /obj/item/stack/medical/advanced/bruise_pack
 	name = "trauma kit"
@@ -447,3 +461,10 @@
 			attack(target, user)
 			sleep(ai_brain.short_action_delay)
 			continue
+
+/obj/item/stack/medical/splint/random_amount
+
+/obj/item/stack/medical/splint/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(2,5)
+	update_icon()

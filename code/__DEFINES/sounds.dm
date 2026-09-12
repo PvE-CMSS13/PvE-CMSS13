@@ -87,6 +87,7 @@
 #define SOUND_ECHO_REVERB_OFF list(0, 0, -10000, -10000, 0, 0.0, 0, 0.25, 1.5, 1.0, 0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, 0) //-10000 to Room & RoomHF makes enviromental reverb effectively inaudible
 
 #define AMBIENCE_SHIP 'sound/ambience/shipambience.ogg'
+#define AMBIENCE_SHIP_ALT 'sound/ambience/shipambience1.ogg'
 #define AMBIENCE_JUNGLE 'sound/ambience/ambienceLV624.ogg'
 #define AMBIENCE_RIVER  'sound/ambience/ambienceriver.ogg'
 #define AMBIENCE_MALL 'sound/ambience/medbay1.ogg'
@@ -115,3 +116,47 @@
 #define SCAPE_PL_HANGAR list('sound/soundscape/hangaramb1.ogg', 'sound/soundscape/hangaramb2.ogg', 'sound/soundscape/hangaramb3.ogg', 'sound/soundscape/hangaramb4.ogg', 'sound/soundscape/hangaramb5.ogg', 'sound/soundscape/hangaramb6.ogg', 'sound/soundscape/hangaramb7.ogg', 'sound/soundscape/hangaramb8.ogg', 'sound/soundscape/hangaramb9.ogg', 'sound/soundscape/hangaramb10.ogg', )
 #define SCAPE_PL_ARES list('sound/soundscape/mother.ogg')
 #define SCAPE_PL_AICORE list('sound/soundscape/aicore/aicore_beep.ogg', 'sound/soundscape/aicore/aicore_ident.ogg', 'sound/soundscape/aicore/aicore_rumble1.ogg', 'sound/soundscape/aicore/aicore_rumble2.ogg', 'sound/soundscape/aicore/aicore_rumble3.ogg', 'sound/soundscape/aicore/aicore_rumble4.ogg', 'sound/soundscape/aicore/aicore_rumble5.ogg', 'sound/soundscape/aicore/aicore_tone1.ogg', 'sound/soundscape/aicore/aicore_tone2.ogg', 'sound/soundscape/aicore/aicore_tone3.ogg', 'sound/soundscape/aicore/aicore_tone4.ogg', 'sound/soundscape/aicore/aicore_tone5.ogg', 'sound/soundscape/aicore/aicore_tone6.ogg', 'sound/soundscape/aicore/aicore_tone7.ogg', 'sound/soundscape/aicore/aicore_tone8.ogg', 'sound/soundscape/aicore/aicore_tone9.ogg', 'sound/soundscape/aicore/aicore_tone10.ogg', 'sound/soundscape/aicore/aicore_tone11.ogg', 'sound/soundscape/aicore/aicore_tone12.ogg', 'sound/soundscape/aicore/aicore_tone13.ogg', 'sound/soundscape/aicore/aicore_tone14.ogg', 'sound/soundscape/aicore/aicore_tone15.ogg', 'sound/soundscape/aicore/aicore_tone16.ogg', 'sound/soundscape/aicore/aicore_tone17.ogg', 'sound/soundscape/aicore/aicore_tone18.ogg', )
+
+
+// Hybrisa Soundscapes
+
+#define AMBIENCE_CITY 'sound/ambience/city_on_fire.ogg'
+#define AMBIENCE_DERELICT 'sound/ambience/derelict_ambience.ogg'
+#define AMBIENCE_LAB 'sound/ambience/lab_ambience.ogg'
+#define AMBIENCE_LAB_2 'sound/ambience/lab_ambience_2.ogg'
+#define AMBIENCE_LAB_HALLWAY 'sound/ambience/lab_ambience_hallway.ogg'
+#define AMBIENCE_WEYMART 'sound/ambience/weymart.ogg'
+#define AMBIENCE_HYBRISA_INTERIOR 'sound/ambience/hybrisa_interior.ogg'
+#define AMBIENCE_HYBRISA_CAVES 'sound/ambience/caves_ambience.ogg'
+#define AMBIENCE_HYBRISA_CAVES_ALARM 'sound/ambience/caves_ambience_alarm.ogg'
+
+#define SCAPE_PL_LV759_OUTDOORS list('sound/soundscape/lv759/outdoors/wind4.ogg','sound/soundscape/lv759/outdoors/wind5.ogg','sound/soundscape/lv759/outdoors/wind6.ogg','sound/soundscape/lv759/outdoors/wind7.ogg','sound/soundscape/lv759/outdoors/wind8.ogg','sound/soundscape/lv759/outdoors/wind9.ogg','sound/soundscape/lv759/outdoors/wind10.ogg','sound/soundscape/lv759/outdoors/wind11.ogg','sound/soundscape/lv759/outdoors/wind12.ogg','sound/soundscape/lv759/outdoors/wind13.ogg','sound/soundscape/lv759/outdoors/wind14.ogg','sound/soundscape/lv759/outdoors/wind15.ogg','sound/soundscape/lv759/outdoors/wind16.ogg','sound/soundscape/lv759/outdoors/wind17.ogg','sound/soundscape/lv759/outdoors/wind18.ogg','sound/soundscape/lv759/outdoors/wind19.ogg','sound/soundscape/lv759/outdoors/wind20.ogg','sound/soundscape/lv759/outdoors/wind21.ogg','sound/soundscape/lv759/outdoors/wind22.ogg','sound/soundscape/lv759/outdoors/wind23.ogg','sound/soundscape/lv759/outdoors/wind24.ogg','sound/soundscape/lv759/outdoors/wind25.ogg','sound/soundscape/lv759/outdoors/wind26.ogg','sound/soundscape/lv759/outdoors/wind27.ogg','sound/soundscape/lv759/outdoors/wind28.ogg',)
+#define SCAPE_PL_LV759_INDOORS list('sound/soundscape/lv522/indoors/indoor_wind.ogg','sound/soundscape/lv522/indoors/indoor_wind2.ogg','sound/soundscape/lv759/indoors/vent_1.ogg','sound/soundscape/lv759/indoors/vent_2.ogg','sound/soundscape/lv759/indoors/vent_3.ogg','sound/soundscape/lv759/indoors/vent_4.ogg','sound/soundscape/lv759/indoors/vent_5.ogg','sound/soundscape/lv759/indoors/vent_6.ogg','sound/soundscape/lv759/indoors/vent_7.ogg','sound/soundscape/lv759/indoors/vent_6.ogg','sound/soundscape/lv759/indoors/distant_sounds_1.ogg','sound/soundscape/lv759/indoors/distant_sounds_2.ogg','sound/soundscape/lv759/indoors/distant_sounds_3.ogg','sound/soundscape/lv759/indoors/distant_sounds_4.ogg','sound/soundscape/lv759/indoors/distant_sounds_5.ogg','sound/soundscape/lv759/indoors/distant_sounds_6.ogg','sound/soundscape/lv759/indoors/distant_sounds_7.ogg','sound/soundscape/lv759/indoors/distant_sounds_8.ogg','sound/soundscape/lv759/indoors/distant_sounds_9.ogg','sound/soundscape/lv759/indoors/distant_sounds_10.ogg','sound/soundscape/engamb1.ogg','sound/soundscape/engamb2.ogg','sound/soundscape/engamb3.ogg','sound/soundscape/engamb4.ogg','sound/soundscape/engamb5.ogg','sound/soundscape/engamb6.ogg','sound/soundscape/engamb7.ogg',)
+#define SCAPE_PL_LV759_DERELICTSHIP list('sound/soundscape/lv759/indoors/derelict1.ogg','sound/soundscape/lv759/indoors/derelict2.ogg','sound/soundscape/lv759/indoors/derelict3.ogg','sound/soundscape/lv759/indoors/derelict4.ogg','sound/soundscape/lv759/indoors/derelict5.ogg','sound/soundscape/lv759/indoors/derelict6.ogg','sound/soundscape/lv759/indoors/derelict7.ogg','sound/soundscape/lv759/indoors/derelict8.ogg')
+#define SCAPE_PL_LV759_DEEPCAVES list('sound/soundscape/lv759/outdoors/deepcave1.ogg','sound/soundscape/lv759/outdoors/deepcave2.ogg')
+#define SCAPE_PL_LV759_CAVES list('sound/soundscape/lv759/outdoors/windy_caverns_1.ogg','sound/soundscape/lv759/outdoors/windy_caverns_2.ogg','sound/soundscape/lv759/outdoors/windy_caverns_3.ogg',)
+#define SCAPE_PL_LV759_PLATEAU_OUTDOORS list('sound/soundscape/lv759/outdoors/derelict_plateau_1.ogg','sound/soundscape/lv759/outdoors/derelict_plateau_2.ogg',)
+
+// Tyrargo Soundscapes
+
+#define AMBIENCE_TYRARGO_CITY 'sound/ambience/tyrargo_city_ambience.ogg'
+#define AMBIENCE_TYRARGO_SEWER_CITY 'sound/ambience/tyrargo_sewer_ambience.ogg'
+
+#define SCAPE_PL_TYRARGO_SEWER list('sound/ambience/tyrargo_underground_1.ogg','sound/ambience/tyrargo_underground_2.ogg','sound/ambience/tyrargo_underground_3.ogg','sound/ambience/tyrargo_underground_4.ogg')
+#define SCAPE_PL_TYRARGO_ALERT list('sound/ambience/tyrargo_alert_1.ogg', 'sound/ambience/tyrargo_alert_2.ogg', 'sound/ambience/tyrargo_alert_3.ogg', 'sound/ambience/tyrargo_alert_4.ogg', 'sound/ambience/tyrargo_alert_5.ogg', 'sound/ambience/tyrargo_alert_6.ogg')
+
+// White Antre Soundscapes
+
+#define AMBIENCE_ANTRE 'sound/ambience/venir_hallway.ogg'
+#define AMBIENCE_ANTRE_ADJACENT 'sound/ambience/venir_hallway_adjacent.ogg'
+
+// Abyssal Soundscapes
+
+#define SCAPE_ABYSSAL_INTERIOR list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg')
+#define SCAPE_ABYSSAL_EXTERIOR list('sound/ambience/ambispace.ogg')
+// Lazarus Landing Soundscapes
+
+#define AMBIENCE_ANCIENT_TEMPLE_DEEP 'sound/ambience/ancient_temple_ruins_deep.ogg'
+#define AMBIENCE_ANCIENT_TEMPLE_SURFACE 'sound/ambience/ancient_temple_ruins_surface.ogg'
+// Cape River
+#define AMBIENCE_CULT 'sound/soundscape/eerie1.ogg'

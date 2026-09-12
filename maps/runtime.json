@@ -4,5 +4,5 @@
     "map_file": "USS_Runtime.dmm",
     "traits": [{"Ground": true}],
     "camouflage": "classic",
-	"disable_ship_map": true
+	"disable_ship_map": false
 }

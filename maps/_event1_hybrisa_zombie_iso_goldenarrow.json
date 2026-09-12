@@ -1,0 +1,9 @@
+{
+    "map_name": "EVENT 1 - USS Golden Arrow",
+    "map_path": "map_files/EVENTS",
+    "map_file": "_event1_hybrisa_zombie_iso_goldenarrow.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow/",
+    "platoon": "/datum/squad/marine/alpha"
+}

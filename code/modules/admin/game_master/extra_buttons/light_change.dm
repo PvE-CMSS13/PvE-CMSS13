@@ -11,7 +11,7 @@
 	if(confirm != "Yes")
 		return FALSE
 	message_admins("[key_name(usr)] changed lighting on map to [daytime_color] color with [light_str].")
-	lightturfs = block(locate(world.maxx, world.maxy, 2), locate(1, 1, 2))
+	lightturfs = block(locate(world.maxx, world.maxy, 5), locate(1, 1, 2))
 	for(var/atom/A as anything in lightturfs)
 		if(istype(A.loc,/area/))
 			var/area/targeted = A.loc

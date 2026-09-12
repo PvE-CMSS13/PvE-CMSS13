@@ -11,6 +11,28 @@
 	icon_state = "green"
 	always_unpowered = 1 //Will this mess things up? God only knows
 
+//Snow Forest (it's really a jungle for now)
+/area/lv624/ground/snow
+	name = "\improper Snow Forest"
+	icon_state = "valley"
+	minimap_color = MINIMAP_AREA_JUNGLE
+	soundscape_playlist = SCAPE_PL_LV759_OUTDOORS
+	ambience_exterior = AMBIENCE_CITY
+	soundscape_interval = 25
+	always_unpowered = 0
+
+/area/lv624/ground/snow/no_paradrop //Prevents paradrops at unwanted outdoor locations, yeah I could've made this a set tag and done each area individually but it's an event PR
+	name = "\improper Snow Forest"
+	icon_state = "syndie-ship"
+	flags_area = AREA_NOPARADROP
+
+/area/lv624/ground/snow/unknown //Placeholder for areas that should be powered and may have cameras located there
+	name = "\improper unknown"
+	icon_state = "away2"
+	ceiling = CEILING_METAL
+	requires_power = TRUE
+	unlimited_power = TRUE
+
 //Jungle
 /area/lv624/ground/jungle
 	minimap_color = MINIMAP_AREA_JUNGLE
@@ -218,8 +240,8 @@
 	name ="\improper Caves"
 	icon_state = "cave"
 	//ambience = list('sound/ambience/ambimine.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambisin4.ogg')
-	ambience_exterior = AMBIENCE_CAVE
-	soundscape_playlist = SCAPE_PL_CAVE
+	ambience_exterior = AMBIENCE_HYBRISA_CAVES
+	soundscape_playlist = SCAPE_PL_LV759_DEEPCAVES
 	soundscape_interval = 25
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
@@ -275,6 +297,8 @@
 	name = "\improper Lazarus"
 	icon_state = "green"
 	ceiling = CEILING_METAL
+	soundscape_playlist = SCAPE_PL_LV759_INDOORS
+	ambience_exterior = AMBIENCE_HYBRISA_INTERIOR
 
 /area/lv624/lazarus/landing_zones
 	ceiling = CEILING_NONE

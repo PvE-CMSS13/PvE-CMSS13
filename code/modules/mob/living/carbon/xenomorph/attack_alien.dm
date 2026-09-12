@@ -515,6 +515,11 @@
 	healthcheck()
 	return XENO_ATTACK_ACTION
 
+/obj/structure/fence/electrified/attack_alien(mob/living/carbon/xenomorph/M)
+	if(electrified && !cut)
+		electrocute_mob(M, get_area(breaker_switch), src, 0.75)
+	return ..()
+
 //Slashin mirrors
 /obj/structure/mirror/attack_alien(mob/living/carbon/xenomorph/M)
 	M.animation_attack_on(src)
@@ -877,7 +882,7 @@
 	return attack_hand(M)
 
 /obj/structure/machinery/colony_floodlight/attack_alien(mob/living/carbon/xenomorph/M)
-	if(!is_lit)
+	if(!is_on)
 		to_chat(M, "Why bother? It's just some weird metal thing.")
 		return XENO_NO_DELAY_ACTION
 	if(damaged)
@@ -891,6 +896,38 @@
 	else
 		playsound(loc, 'sound/effects/Glasshit.ogg', 25, 1)
 	return XENO_ATTACK_ACTION
+
+/obj/structure/machinery/colony_floodlight/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(!is_on || damaged)
+		return TAILSTAB_COOLDOWN_NONE
+	xeno.visible_message(SPAN_DANGER("[xeno] smashes [src] with its tail!"),
+	SPAN_DANGER("We smash at the bright light with our tail!"), max_distance = 5, message_flags = CHAT_TYPE_XENO_COMBAT)
+	health = max(health - xeno.melee_damage_upper, 0)
+	if(!health)
+		set_damaged()
+	else
+		playsound(loc, 'sound/effects/Glasshit.ogg', 25, 1)
+	return TAILSTAB_COOLDOWN_NORMAL
+
+/obj/structure/machinery/colony_floodlight_switch/antre/attack_alien(mob/living/carbon/xenomorph/M)
+	if(!is_on)
+		to_chat(M, SPAN_WARNING("We stare at the [src] clulessly. It's just some weird metal thing."))
+		return XENO_NO_DELAY_ACTION
+	if(!damaged)
+		M.animation_attack_on(src)
+		M.visible_message("[M] slashes away at [src]!","We slash and claw at the bright light!", max_distance = 5, message_flags = CHAT_TYPE_XENO_COMBAT)
+		damaged = TRUE
+		alarming = FALSE
+		var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+		sparks.set_up(5, 1, src)
+		sparks.start()
+		toggle_is_on()
+		toggle_machines()
+		playsound(loc, 'sound/effects/Glasshit.ogg', 25, 1)
+		return XENO_ATTACK_ACTION
+	else
+		to_chat(M, SPAN_WARNING("It's already damaged."))
+		return XENO_NO_DELAY_ACTION
 
 /obj/structure/machinery/colony_floodlight/attack_larva(mob/living/carbon/xenomorph/larva/M)
 	M.visible_message("[M] starts biting [src]!","In a rage, we start biting [src], but with no effect!", null, 5, CHAT_TYPE_XENO_COMBAT)

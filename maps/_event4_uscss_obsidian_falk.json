@@ -1,0 +1,8 @@
+{
+    "map_name": "EVENT 4 - USCSS Obsidian Falk",
+    "map_path": "map_files/EVENTS",
+    "map_file": "_event4_USCSS_Obsidian_Falk.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/pmc"
+}

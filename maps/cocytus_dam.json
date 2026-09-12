@@ -1,0 +1,19 @@
+{
+    "map_name": "Cocytus Dam",
+    "short_name": "Cocytus Dam",
+    "map_path": "map_files/Cocytus_Dam",
+    "map_file": "Cocytus_Dam.dmm",
+    "map_item_type": "/obj/item/map/desert_dam",
+	"weather_holder": "/datum/weather_ss_map_holder/big_red",
+    "announce_text": "Now in orbit above Cocytus Dam.",
+    "camouflage": "jungle",
+    "traits": [{ "Ground": true }],
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
+

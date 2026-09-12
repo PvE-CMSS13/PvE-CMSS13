@@ -1454,7 +1454,7 @@
 		visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 			SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
 
-	if(istype(get_turf(src), /turf/open/gm/river))
+	if(istype(get_turf(src), /turf/open/gm/river) || (/obj/effect/blocker/water in loc))
 		ExtinguishMob()
 
 	if(fire_stacks > 0)
@@ -1726,3 +1726,23 @@
 
 	return .
 
+/mob/living/carbon/human/onZImpact(turf/impact_turf, height)
+	if(isyautja(src))
+		return
+
+	. = ..()
+
+	KnockDown(height * 5)
+	Stun(height * 5)
+
+	var/total_damage = (20 * height) ** 1.3
+	apply_damage(total_damage / 2, BRUTE, "r_leg")
+	apply_damage(total_damage / 2, BRUTE, "l_leg")
+
+	var/obj/limb/leg/found_rleg = locate(/obj/limb/leg/l_leg) in limbs
+	var/obj/limb/leg/found_lleg = locate(/obj/limb/leg/r_leg) in limbs
+
+	found_rleg?.fracture(100)
+	found_lleg?.fracture(100)
+
+	playsound(impact_turf.loc, "slam", 50, 1)

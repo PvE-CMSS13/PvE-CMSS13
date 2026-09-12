@@ -214,8 +214,8 @@
 
 /obj/structure/filtration/machine_64x128
 	icon = 'icons/obj/structures/props/64x128.dmi'
-	//bound_x = 96
-	//bound_y = 96
+	bound_x = 96
+	bound_y = 96
 	density = TRUE
 	anchored = TRUE
 	bound_width = 64
@@ -279,3 +279,35 @@
 	name = "Disinfection Filter"
 	desc = "A water filter specifically designed to separate micro-organisms, such as viruses and bacteria, from water."
 	icon_state = "disinfection"
+
+/obj/structure/filtration/machine_64x96/filtration_machine
+	name = "Filtration Machine"
+	desc = "Machine intended to filter liquid in to two seperate containers."
+	icon_state = "filtration_machine_A_0"
+
+/obj/structure/filtration/machine_64x96/filtration_machine/broken
+	icon_state = "filtration_machine_A_1"
+
+/obj/structure/filtration/machine_64x96/filtration_machine_a/alt
+	icon_state = "filtration_machine_B_0"
+
+/obj/structure/filtration/machine_64x96/filtration_machine_a/alt_broken
+	icon_state = "filtration_machine_B_1"
+
+/obj/structure/filtration/machine_64x96/sedementation
+	name = "Sedementation Tanker"
+	desc = "Machine intended to hold liquid."
+	icon_state = "sedementation_0"
+
+/obj/structure/filtration/machine_64x96/sedementation/broken
+	icon_state = "sedementation_1"
+
+/obj/structure/filtration/machine_64x128/filtrationtank
+	name = "Storage Tank"
+	desc = "A massive tank intended to hold large amounts of liquid."
+	icon_state = "filtration_0"
+	density = TRUE
+
+/obj/structure/filtration/machine_64x128/filtrationtank/broken
+	desc = "A massive tank intended to hold large amounts of liquid. This one appears damaged."
+	icon_state = "filtration_1"

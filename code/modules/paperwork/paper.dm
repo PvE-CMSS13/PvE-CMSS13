@@ -519,6 +519,25 @@
 	name = "paper- 'Standard Operating Procedure'"
 	info = "Alert Levels:<BR>\nBlue- Emergency<BR>\n\t1. Caused by fire<BR>\n\t2. Caused by manual interaction<BR>\n\tAction:<BR>\n\t\tClose all fire doors. These can only be opened by reseting the alarm<BR>\nRed- Ejection/Self-Destruct<BR>\n\t1. Caused by module operating computer.<BR>\n\tAction:<BR>\n\t\tAfter the specified time the module will eject completely.<BR>\n<BR>\nEngine Maintenance Instructions:<BR>\n\tShut off ignition systems:<BR>\n\tActivate internal power<BR>\n\tActivate orbital balance matrix<BR>\n\tRemove volatile liquids from area<BR>\n\tWear a fire suit<BR>\n<BR>\n\tAfter<BR>\n\t\tDecontaminate<BR>\n\t\tVisit medical examiner<BR>\n<BR>\nToxin Laboratory Procedure:<BR>\n\tWear a gas mask regardless<BR>\n\tGet an oxygen tank.<BR>\n\tActivate internal atmosphere<BR>\n<BR>\n\tAfter<BR>\n\t\tDecontaminate<BR>\n\t\tVisit medical examiner<BR>\n<BR>\nDisaster Procedure:<BR>\n\tFire:<BR>\n\t\tActivate sector fire alarm.<BR>\n\t\tMove to a safe area.<BR>\n\t\tGet a fire suit<BR>\n\t\tAfter:<BR>\n\t\t\tAssess Damage<BR>\n\t\t\tRepair damages<BR>\n\t\t\tIf needed, Evacuate<BR>\n\tMeteor Shower:<BR>\n\t\tActivate fire alarm<BR>\n\t\tMove to the back of ship<BR>\n\t\tAfter<BR>\n\t\t\tRepair damage<BR>\n\t\t\tIf needed, Evacuate<BR>\n\tAccidental Reentry:<BR>\n\t\tActivate fire alarms in front of ship.<BR>\n\t\tMove volatile matter to a fire proof area!<BR>\n\t\tGet a fire suit.<BR>\n\t\tStay secure until an emergency ship arrives.<BR>\n<BR>\n\t\tIf ship does not arrive-<BR>\n\t\t\tEvacuate to a nearby safe area!"
 
+/obj/item/paper/kuala/kuala_note
+	name = "USS Kuala prisoner note"
+	info = "many of us managed to survive that crash, the other two I was captured with we're dragged out of this this meat locker a while ago<BR>\n<BR>\nwe managed to figure out that were far north, we just need to <B>hold out until rescue arrives... </B> <BR>\n<BR>\nwe can hear <B>so many of those UPP bastards outside...<BR>\nmaybe it would be best to not try and escape, it may be the death of us all...</B><BR>\n<BR>\n"
+	icon_state = "paper_words"
+	desc = "A paper with rough scribblings from whatever unfortunate soul that ended up here."
+
+/obj/item/paper/kuala/kuala_distress
+	name = "USS Kuala distress call"
+	icon_state = "paper_uscm_words"
+	info = "<center><img src = uscmlogo.png><small><BR>\n<B>United States Colonial Marine Corps</B></small><BR>\n<B><font size=\"4\">USCM EMERGENCY DISTRESS CALL</B></font><BR>\n<font size = \"1\">Form C-1048</font></center><BR>\n<HR><BR>\n<font size = \"2\"><B>Requesting Vessel:</B> <I>USS Kuala</I><BR>\n<B>Sent To:</B> <I>USS Golden Arrow</I><BR>\n<BR>\nDate: <I>Thursday 01 January 2182</I><BR>\nTime: <I>05:45</I><BR>\n<BR>\n<HR><BR>\n<font size=\"4\"><B>PAN-PAN, PAN-PAN, PAN-PAN.</font></B><BR>\n<font size=\"2\">This is the Captain Ramius of the <B>USS Kuala</B>, we are in urgent need of assistance in this sector. We have just lost contact with our squad that was enroute to combat the reported UPP presence to the north of the LV-624 colony. The dropship carrying over 36 soldiers is not responding to hails and appears to have been downed by a AT-87 ASAT anti-air unit. We are requesting immediate assistance in <B>locating the downed ship</B> in the region and <B>destroying any AA presence to the far north of the colony</B>. It appears to be located near a lake with a cabin. <BR>\n<BR>\nWe suspect that there are surviving marines of the dropship. Some have likely been captured and are located at the AA encampment. We <i>HEAVILY</I> advise against directly bombing the AA camp until the site is fully secured. <BR>\n<BR>\nDue to the standard landing zones of the colony being inaccessible, we advise that a <B>HALO jump</B> be preformed to make entry into the region. Fly cautiously due to the AA presence. <BR>\n<BR>\nWe also suspect that UPP radio jamming equipment is located at the encampment, making communication very difficult. Destroy or disable the jamming equipment when you find it. <BR>\n<BR>\nDue to ongoing conflict across the area, all colonist presence has been evacuated beforehand. Any targets that are not USCM affiliated should be considered hostile. Beware of UPP patrols, mines, and try to stay together. There is a high level of danger down there, unfortunately the USS Kuala is unable to provide any support at this time. <BR>\n<BR>\n<BR>\nGood luck, and do not fail the Corps. <BR>\n<BR>\nGodspeed.<BR>\n<BR>\n<I>Captain Hawkins Ramius of the USS Kuala</I><BR>\n<BR>\n<HR><small><I>FOR COMMAND SANCTIONED USE ONLY</I></small>"
+	desc = "Additional Operational instructions for the crew of the USS Golden Arrow"
+
+/obj/item/paper/kuala/kuala_operation_note
+	name = "USS Golden Arrow Operational Orders"
+	icon_state = "paper_uscm_words"
+	info = "<center><img src = uscmlogo.png><small><BR>\n<B>United States Colonial Marine Corps</B></small><BR>\n<B><font size=\"4\">USCM High Command Orders</B></font><BR>\n<font size = \"1\">Form C-1068</font></center><BR>\n<HR><BR>\n<font size = \"3\"><B>Vessel Orders Addressed To:</B> <I>USS Golden Arrow</I><BR>\n<B>Commanding Admiral:</B> <I>Rear Admiral Lenny Koggins</I><BR>\n<BR>\nDate: <I>Thursday 01 January 2182</I><BR>\nTime: <I>03:56</I><BR>\n<BR>\n<HR><BR>\n<B>USS Golden Arrow</B>, you are hereby assigned to stay in the vicinity of the LV-624 colony that is currently under assault by hostile UPP forces. The <B>USS Kuala</B> in the vicinity is currently engaging hostile forces at this time.<BR>\n<BR>\nAdditional support staff and equipment have been awoken and prepared in anticipation of further instructions.<BR>\n<BR>\n<BR>\n<B>Await further orders.</B> <BR>\n<BR>\n<BR>\n<center><B>Authorizing Commanding Officer: <I>Lenny Koggins</I></B><BR>\n<B>Rank: <I>Rear Admiral</I></B><BR>\n<HR><small><I>FOR COMMAND SANCTIONED USE ONLY</I></small>"
+	desc = "Operational instructions for the crew of the USS Golden Arrow"
+
+
 /obj/item/paper/prison_station/test_log
 	name = "paper- 'Test Log'"
 	info = "<p style=\"text-align: center;\"><sub>TEST LOG</sub></p><p>SPECIMEN: Bioweapon candidate Kappa. Individual 3</p><BR>\n<p>-</p><p>PROCEDURE: Observation</p><p>RESULTS: Specimen paces around cell. Appears agitated. Vocalisations.</p><p>-</p><p>PROCEDURE: Simian test subject</p><p>RESULTS: Devoured by specimen. No significant difference from last simian test.</p><p><em>Note: Time to amp it up</em></p><p>-</p><p>PROCEDURE: Human test subject (D-1). Instructed to \"pet it like a dog\"</p><p>RESULTS: Specimen and D-1 stare at each other for approximately two seconds. D-1 screams and begins pounding on observation window, begging to be released. Specimen pounces on D-1. Specimen kills D-1 with multiple slashes from its foreclaws.</p><p><em>Note: Promising!</em></p><p>-</p><p>PROCEDURE: Two human test subjects (D-2, D-3). Instructed to subdue specimen</p><p>RESULTS: D-2 and D-3 slowly approach specimen. D-3 punches specimen on forehead to no noticeable effect. Specimen pounces on D-3, then kills him with multiple slashes from its foreclaws. D-2 screams and begins pounding on observation window. Specimen pounces on D-2, then kills him with multiple slashes from its foreclaws.</p><p>Specimen begins slashing at observation access doors. Exhibiting an unexpected amount of strength, it is able to d~</p>"
@@ -610,6 +629,22 @@
 /obj/item/paper/brynhild
 	name = "GRENADES NOTICE!"
 	info = "Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations."
+
+/obj/item/paper/abyssal/captain
+	name = "Captains Directive"
+
+/obj/item/paper/lazarus/clf
+	name = "Log Entry"
+	info = "We've secured a foothold deep in the north-western jungle, within the bones of some ancient alien ruin. The company's colony is under attack south of our position, by what we don't know, the screams and gunfire of the colony have long since stopped. The jungle shields us, the ruins fortify us, and time is our ally. We wait. We prepare. When the moment comes, we will strike. We will liberate this colony when the time is right. We wait. We prepare. Liberation will come... We wait. We prepare. Liberation will come... We wait. We prepare. Liberation will come...\ncontinues until the end of the page\n"
+
+/obj/item/paper/abyssal/liaison
+	name = "Liaison Directive"
+
+/obj/item/paper/abyssal/liaison/Initialize(mapload, photo_list)
+	. = ..()
+
+	info = "<center> <br> <b><small>Con-Amalagated Corporation</b></small> <br> <b><large>Orders For Liaison: Con-AM 81 'Abyssal'</large></b> <br> <small>No.02</small></center> <hr> <br> Date: 2182 <br> <b><large>On Recovery Of Unidentified Craft<large></b>  <hr> We have recieved your Captains communique regarding the recovery of a possible xenocraft. Its transfer into Con-Am secure custody is considered priority 1. We are dispatching a Con-Am Security Service force to your station to transfer it off-station.<br><br> Your directive is to ensure its safe harbour until the recovery team arrives. You must render every effort to ensure the safety of the craft. You and your crew will be well rewarded for your efforts.  <hr><small><i>FOR SANCTIONED USE ONLY</i></small>"
+
 
 /obj/item/paper/crumpled
 	name = "paper scrap"
@@ -917,3 +952,7 @@
 	. = ..()
 	info = "<div> <img style='align:middle' src='[SSassets.transport.get_asset_url("colonialspacegruntsEZ.png")]'>"
 	update_icon()
+
+/obj/item/paper/navalis/rescue
+	name = "Rescue Imminent: Tell Others"
+	info = "I just got off the radio before the main relay tower was ripped apart, its the Marines! They heard our distress call and are on the way! They'll be landing within the day, I need to warn the others, hope is in sight! Its almost over."
