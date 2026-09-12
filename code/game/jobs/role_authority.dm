@@ -750,6 +750,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_SPIDER_GUARD)
+			M = /mob/living/carbon/xenomorph/spider_guard
+		if(XENO_CASTE_SPIDER_NURSE)
+			M = /mob/living/carbon/xenomorph/spider_nurse
+		if(XENO_CASTE_SPIDER_HUNTER)
+			M = /mob/living/carbon/xenomorph/spider_hunter
+		if(XENO_CASTE_GIANT_LIZARD)
+			M = /mob/living/carbon/xenomorph/giant_lizard
 		if(XENO_CASTE_SOLDIER)
 			M = /mob/living/carbon/xenomorph/soldier
 		if(XENO_CASTE_KING)

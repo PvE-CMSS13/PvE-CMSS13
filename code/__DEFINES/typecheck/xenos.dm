@@ -23,8 +23,13 @@
 #define isspitter(A) (istype(A, /mob/living/carbon/xenomorph/spitter))
 #define iswarrior(A) (istype(A, /mob/living/carbon/xenomorph/warrior))
 #define isburrower(A) (istype(A, /mob/living/carbon/xenomorph/burrower))
+#define isspiderguard(A) (istype(A, /mob/living/carbon/xenomorph/spider_guard))
+#define isspidernurse(A) (istype(A, /mob/living/carbon/xenomorph/spider_nurse))
+#define isspiderhunter(A) (istype(A, /mob/living/carbon/xenomorph/spider_hunter))
+#define islizard(A) (istype(A, /mob/living/carbon/xenomorph/giant_lizard))
 
 #define isxeno_builder(A) (isdrone(A) || ishivelord(A) || iscarrier(A) || isburrower(A) || isqueen(A))
+#define isspider(A) (isspiderguard(A) || isspidernurse(A) || isspiderhunter(A))
 
 /// Returns true/false based on if the xenomorph can harm the passed carbon mob.
 /mob/living/carbon/xenomorph/proc/can_not_harm(mob/living/carbon/attempt_harm_mob)

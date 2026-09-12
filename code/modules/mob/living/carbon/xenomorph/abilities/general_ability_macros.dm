@@ -16,6 +16,13 @@
 	var/action_name = "Plant Weeds (75)"
 	handle_xeno_macro(src, action_name)
 
+/datum/action/xeno_action/verb/verb_plant_webs()
+	set category = "Alien"
+	set name = "Plant Webs"
+	set hidden = TRUE
+	var/action_name = "Plant Weeds (10)"
+	handle_xeno_macro(src, action_name)
+
 /datum/action/xeno_action/verb/verb_mark_resin()
 	set category = "Alien"
 	set name = "Mark Resin"

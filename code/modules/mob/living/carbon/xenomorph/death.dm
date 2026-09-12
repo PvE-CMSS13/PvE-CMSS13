@@ -1,7 +1,7 @@
 #define DELETE_TIME 1800
 
-/mob/living/carbon/xenomorph/death(cause, gibbed)
-	var/msg = "lets out a waning guttural screech, green blood bubbling from its maw."
+/mob/living/carbon/xenomorph/death(cause, gibbed, deathmessage)
+	var/msg = deathmessage ? deathmessage : "lets out a waning guttural screech, green blood bubbling from its maw."
 	. = ..(cause, gibbed, msg)
 	if(!.)
 		return //If they're already dead, it will return.
@@ -79,6 +79,10 @@
 			playsound(loc,'sound/voice/predalien_death.ogg', 25, TRUE)
 		else if(isfacehugger(src))
 			playsound(loc, 'sound/voice/alien_facehugger_dies.ogg', 25, TRUE)
+		else if (isspider(src))
+			playsound(loc, 'sound/voice/pred_click2.ogg', 25, TRUE)
+		else if (islizard(src))
+			playsound(loc, 'sound/effects/giant_lizard_death.ogg', 25, TRUE)
 		else
 			playsound(loc, prob(50) == 1 ? 'sound/voice/alien_death.ogg' : 'sound/voice/alien_death2.ogg', 25, 1)
 		var/area/A = get_area(src)

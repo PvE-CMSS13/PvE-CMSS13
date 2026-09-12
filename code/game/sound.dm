@@ -476,6 +476,8 @@
 				sound = pick('sound/voice/larva_talk1.ogg','sound/voice/larva_talk2.ogg','sound/voice/larva_talk3.ogg','sound/voice/larva_talk4.ogg')
 			if("hiss_talk")
 				sound = pick('sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg')
+			if("click_talk")
+				sound = pick('sound/voice/pred_click1.ogg','sound/voice/pred_click2.ogg','sound/voice/pred_click3.ogg','sound/voice/pred_click4.ogg','sound/voice/pred_click5.ogg')
 			if("alien_growl")
 				sound = pick('sound/voice/alien_growl1.ogg','sound/voice/alien_growl2.ogg','sound/voice/alien_growl3.ogg')
 			if("alien_hiss")
