@@ -132,6 +132,18 @@
 	specialty = "military warden"
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/under/marine/army
+	name = "US Army uniform"
+	desc = "Standard-issue Army uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	specialty = "US Army"
+	icon_state = "army_uniform"
+	worn_state = "army_uniform"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
+	flags_atom = NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
+	)
+
 /obj/item/clothing/under/marine/officer
 	name = "marine officer uniform"
 	desc = "Substantially comfier officer's uniform. Still has the protection of a sheet of paper against actual threats but at least you won't be uncomfortable while bleeding out."
@@ -158,9 +170,8 @@
 	item_state = "WO_jumpsuit"
 	worn_state = "WO_jumpsuit"
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/cmp)
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	flags_jumpsuit = FALSE
 	specialty = "chief MP"
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/under/marine/officer/technical
 	name = "technical officer uniform"
@@ -459,12 +470,47 @@
 	worn_state = "officer_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 
-/obj/item/clothing/under/marine/veteran/pmc/commando
-	name = "\improper PMC commando uniform"
-	desc = "An armored uniform worn by Weyland-Yutani elite commandos. It is well protected while remaining light and comfortable."
-	icon_state = "commando_jumpsuit"
-	worn_state = "commando_jumpsuit"
+/obj/item/clothing/under/marine/veteran/pmc/leader/commando
+	name = "\improper W-Y Commando fatigues"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
+/obj/item/clothing/under/marine/veteran/pmc/leader/commando/leader
+	name = "\improper W-Y Commando leader fatigues"
+	icon_state = "commando_leader"
+	worn_state = "commando_leader"
+	flags_jumpsuit = null
+
+/obj/item/clothing/under/marine/veteran/pmc/engineer
+	name = "\improper PMC engineer fatigues"
+	desc = "A black and orange set of fatigues, designed for private security technicians. The symbol of the Weyland-Yutani corporation is emblazed on the suit."
+	icon_state = "engineer_jumpsuit"
+	worn_state = "engineer_jumpsuit"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+
+/obj/item/clothing/under/marine/veteran/pmc/guard
+	name = "\improper PMC guard fatigues"
+	desc = "A black and orange set of fatigues, designed for private security enforcer personnel. The symbol of the Weyland-Yutani corporation is emblazed on the suit."
+	icon_state = "guard_jumpsuit"
+	worn_state = "guard_jumpsuit"
+
+/obj/item/clothing/under/marine/veteran/pmc/apesuit
+	name = "\improper PMC apesuit uniform"
+	desc = "An armored uniform worn by Weyland-Yutani dog catchers. It is well protected while remaining light and comfortable."
+	icon_state = "ape_jumpsuit"
+	worn_state = "ape_jumpsuit"
 	flags_inventory = BLOCKGASEFFECT
+
+/obj/item/clothing/under/marine/veteran/pmc/combat_android
+	name = "\improper W-Y android combat uniform"
+	desc = "An armored uniform worn by Weyland-Yutani combat androids. It is well protected while remaining light and comfortable."
+	icon_state = "combat_android_uniform"
+	worn_state = "combat_android_uniform"
+	flags_jumpsuit = FALSE
+
+/obj/item/clothing/under/marine/veteran/pmc/combat_android/dark
+	desc = "An armored uniform compatible with optical camouflage, worn by Weyland-Yutani combat androids. It is well protected while remaining light and comfortable."
+	icon_state = "invis_android_uniform"
+	worn_state = "invis_android_uniform"
 
 /obj/item/clothing/under/marine/veteran/pmc/corporate
 	name = "\improper WY corporate security uniform"
@@ -660,10 +706,11 @@
 	has_sensor = UNIFORM_NO_SENSORS
 
 /obj/item/clothing/under/colonist
-	name = "abstract colonist"
-	desc = "Don't spawn this!"
+	name = "colonist jumpsuit"
+	desc = "A stylish gray-green jumpsuit. Standard issue for unspecialized Wey-Yu colonists."
+	icon_state = "colonist"
+	worn_state = "colonist"
 	has_sensor = UNIFORM_HAS_SENSORS
-	sensor_faction = FACTION_COLONIST
 
 /obj/item/clothing/under/colonist/workwear
 	name = "grey workwear"
@@ -970,27 +1017,39 @@
 /obj/item/clothing/under/rank/synthetic/utility
 	name = "\improper UA utility uniform"
 	desc = "A green-on-green utility uniform, popularly issued to UA contract workers on the frontier."
-	icon_state = "synth_green_utility"
-	worn_state = "synth_green_utility"
+	icon_state = "green_utility"
+	worn_state = "green_utility"
 	displays_id = FALSE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/yellow
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
-	icon_state = "synth_yellow_utility"
-	worn_state = "synth_yellow_utility"
+	icon_state = "yellow_utility"
+	worn_state = "yellow_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/red
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with red suspenders and blue jeans, the sign of a veteran laborer, or someone not paid by the hour."
-	icon_state = "synth_red_utility"
-	worn_state = "synth_red_utility"
+	icon_state = "red_utility"
+	worn_state = "red_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/blue
 	name = "\improper utility uniform"
 	desc = "A blue utility uniform with teal suspenders and rugged pants."
-	icon_state = "synth_blue_utility"
-	worn_state = "synth_blue_utility"
+	icon_state = "blue_utility"
+	worn_state = "blue_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/councillor
 	name = "\improper USCM Pristine Support Uniform"
@@ -1012,6 +1071,13 @@
 /obj/item/clothing/under/rank/synthetic/old
 	icon_state = "rdalt_s"
 	worn_state = "rdalt_s"
+
+/obj/item/clothing/under/rank/synthetic/upp_joe
+	name = "android suit"
+	desc = "Uniform designed for UPP security synthetics."
+	icon_state = "upp_joe"
+	worn_state = "upp_joe"
+	flags_item = NO_CRYO_STORE
 
 /obj/item/clothing/under/rank/synthetic/joe
 	name = "\improper Working Joe Uniform"
@@ -1077,11 +1143,37 @@
 	contained_sprite = TRUE
 	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
 
+/obj/item/clothing/under/marine/veteran/royal_marine_pvp
+	name = "royal marines commando uniform"
+	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "rmc_uniform"
+	worn_state = "rmc_uniform"
+	flags_atom = FPRINT|NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/veteran/royal_marine_pvp/tl
+	icon_state = "rmc_uniform_teaml"
+	worn_state = "rmc_uniform_teaml"
+
 /obj/item/clothing/under/marine/veteran/royal_marine/lt
 	name = "marine commando officer field uniform"
 	desc = "Subdued-camouflage field-officer uniform of the royal marine commandos. Has venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "rmc_uniform_lt"
 	worn_state = "rmc_uniform_lt"
+
+/obj/item/clothing/under/marine/veteran/royal_marine_pvp/lt_pvp
+	name = "IASF No.8 combat uniform"
+	desc = "Standard issue No.8 Pattern BDU used by the Imperial Armed Space Force. Identical in cut and protection to the Royal Marine Commando variant, but issued in woodland camouflage. Lightweight Kevlar mesh offers limited protection against shrapnel and close-quarters threats."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "rmc_uniform_lt"
+	worn_state = "rmc_uniform_lt"
+	flags_atom = FPRINT|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/veteran/royal_marine/lt/service
 	name = "marine commando officers service uniform"
@@ -1097,6 +1189,7 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = BLOCKGASEFFECT
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 
@@ -1114,6 +1207,7 @@
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 	flags_jumpsuit = NO_FLAGS
+	flags_inventory = PROTECTFROMWEATHER
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_LOW
@@ -1336,3 +1430,77 @@
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/under/colonist/steward
+	name = "steward utilities"
+	desc = "A stylish brown vest and shorts - uniforms like this are often worn by clerks and shop stewards."
+	icon_state = "steward"
+	worn_state = "steward"
+	has_sensor = UNIFORM_HAS_SENSORS
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
+/obj/item/clothing/under/rank/utility/gray
+	name = "\improper Gray utility uniform"
+	desc = "A stylish gray jumpsuit, popularly issued to UA contract workers on the frontier."
+	icon_state = "grey_utility"
+	worn_state = "grey_utility"
+
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
+
+/obj/item/clothing/under/rank/utility/yellow
+	name = "\improper Yellow utility uniform"
+	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
+	icon_state = "yellow_utility"
+	worn_state = "yellow_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
+
+/obj/item/clothing/under/colonist/clf/operative
+	name = "\improper Colonial Liberation Front Combat Clothes"
+	desc = "A stylish Brown-Green mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "clf_fighter"
+	worn_state = "clf_fighter"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/medic
+	name = "\improper Colonial Liberation Front Medic Clothes"
+	desc = "A stylish Light Blue-White mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "clf_medic"
+	worn_state = "clf_medic"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/leader
+	name = "\improper Colonial Liberation Front Clothes"
+	desc = "A stylish Dark blue mix of Military Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas, shows the rank of the leaders on the shoulder."
+	icon_state = "clf_leader"
+	worn_state = "clf_leader"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+//=IASF=\\
+
+/obj/item/clothing/under/marine/veteran/royal_marine_pvp/iasf
+	name = "IASF No.8 combat uniform"
+	desc = "Standard issue No.8 Pattern BDU used by the Imperial Armed Space Force. Identical in cut and protection to the Royal Marine Commando variant, but issued in woodland camouflage. Lightweight Kevlar mesh offers limited protection against shrapnel and close-quarters threats."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "iasf_uniform"
+	worn_state = "iasf_uniform"
+	flags_atom = FPRINT|NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/officer/royal_marine_pvp/iasf
+	name = "IASF No.2 service uniform"
+	desc = "A formal No.2 service uniform worn by IASF officers. Features the same upper torso cut as the No.8 BDU, but paired with pressed khaki trousers. Issued for inspections, ceremonial duties, or when deployed in an advisory role."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/TWE.dmi',
+	)
+	icon_state = "iasf_uniform_service"
+	worn_state = "iasf_uniform_service"
+	flags_atom = FPRINT|NO_NAME_OVERRIDE

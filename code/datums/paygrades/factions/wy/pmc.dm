@@ -41,12 +41,11 @@
 	prefix = "SPW."
 	pay_multiplier = 3
 
-/datum/paygrade/pmc/handler
-	paygrade = PAY_SHORT_PMC_XS
-	name = "Xeno Specialist"
-	prefix = "SPX."
+/datum/paygrade/pmc/crowd_control
+	paygrade = PAY_SHORT_PMC_CCS
+	name = "Crowd Control Specialist"
+	prefix = "SPCC."
 	pay_multiplier = 4
-	officer_grade = GRADE_OFFICER
 
 //PMC Support Staff
 /datum/paygrade/pmc/doctor
@@ -62,28 +61,6 @@
 	prefix = "TEC."
 	pay_multiplier = 4
 
-//PMC Elite
-/datum/paygrade/pmc/elite
-	paygrade = PAY_SHORT_PMC_ELR
-	name = "Elite Responder"
-	prefix = "ELR."
-	pay_multiplier = 4
-	officer_grade = GRADE_OFFICER
-
-/datum/paygrade/pmc/medic/elite
-	paygrade = PAY_SHORT_PMC_ELM
-	name = "Elite Medic"
-	prefix = "ELM."
-	pay_multiplier = 4.5
-	officer_grade = GRADE_OFFICER
-
-/datum/paygrade/pmc/spec/elite
-	paygrade = PAY_SHORT_PMC_ELG
-	name = "Elite Gunner"
-	prefix = "ELG."
-	pay_multiplier = 5
-	officer_grade = GRADE_OFFICER
-
 //PMC Command
 /datum/paygrade/pmc/teamlead
 	paygrade = PAY_SHORT_PMC_TL
@@ -93,7 +70,7 @@
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/pmc/oplead
-	paygrade = "PMC-OL"
+	paygrade = PAY_SHORT_PMC_FOL
 	name = "Operations Leader"
 	prefix = "OPL."
 	pay_multiplier = 3.5

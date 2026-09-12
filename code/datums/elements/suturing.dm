@@ -93,9 +93,9 @@ YOU TO 200 DAMAGE. I ASK NOT FOR MY OWN MEDIC EGOSTROKING, BUT FOR THE GOOD OF T
 		if(0) //No datum.
 			//Stitch in 10 damage increments. Balance between flexibility, spam, performance, and opportunities for people to mess about during do_afters.
 			if(suture_brute)
-				suturable_damage += min(10, target_limb.brute_dam * 0.5)
+				suturable_damage += min(10, target_limb.brute_dam * 0.75)
 			if(suture_burn)
-				suturable_damage += min(10, target_limb.burn_dam * 0.5)
+				suturable_damage += min(10, target_limb.burn_dam * 0.75)
 			if(!suturable_damage) //This stuff would be much tidier if datum stuff is moved to the limb.
 				to_chat(user, SPAN_WARNING("There are no [description_wounds] on [user == target ? "your" : "\the [target]'s"] [target_limb.display_name]."))
 				return
@@ -233,9 +233,9 @@ YOU TO 200 DAMAGE. I ASK NOT FOR MY OWN MEDIC EGOSTROKING, BUT FOR THE GOOD OF T
 	if(!repeat) //Don't need to update again if we're doing it immediately after adding stitches.
 		update_sutures(target_limb, previous_brute = target_limb.brute_dam, previous_burn = target_limb.burn_dam, pre_add = TRUE)
 	if(suture_brute)
-		. += clamp(0, (remaining_brute - sutured_brute) * 0.5, 10)
+		. += clamp(0, (remaining_brute - sutured_brute) * 0.75, 10)
 	if(suture_burn)
-		. += clamp(0, (remaining_burn - sutured_burn) * 0.5, 10)
+		. += clamp(0, (remaining_burn - sutured_burn) * 0.75, 10)
 	if(. <= 0.1) //to distinguish with 0 from send_signal() not getting any return value. Uses <= to prevent floating point errors.
 		if(suture_brute && sutured_brute || suture_burn && sutured_burn)
 			return FULLY_SUTURED
@@ -252,7 +252,7 @@ maximum_heal = total amount of each damage type that can be healed - IE TRUE/TRU
 	var/brute_to_heal
 	var/burn_to_heal
 	if(suture_brute)
-		brute_to_heal = min(maximum_heal, (remaining_brute - sutured_brute) * 0.5)
+		brute_to_heal = min(maximum_heal, (remaining_brute - sutured_brute) * 0.75)
 		sutured_brute += brute_to_heal
 		remaining_brute -= brute_to_heal
 		if(remaining_brute - sutured_brute <= 0)
@@ -264,7 +264,7 @@ maximum_heal = total amount of each damage type that can be healed - IE TRUE/TRU
 				W.bandaged |= WOUND_SUTURED
 
 	if(suture_burn)
-		burn_to_heal = min(maximum_heal, (remaining_burn - sutured_burn) * 0.5)
+		burn_to_heal = min(maximum_heal, (remaining_burn - sutured_burn) * 0.75)
 		sutured_burn += burn_to_heal
 		remaining_burn -= burn_to_heal
 		if(remaining_burn - sutured_burn <= 0)

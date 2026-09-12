@@ -101,8 +101,12 @@
 					else hud_used.nutrition_icon.icon_state = "nutrition3"
 
 			if(hud_used.oxygen_icon)
-				if(hal_screwyhud == 3 || oxygen_alert) hud_used.oxygen_icon.icon_state = "oxy1"
-				else hud_used.oxygen_icon.icon_state = "oxy0"
+				if(hal_screwyhud == 3 || oxygen_alert > 0.55)
+					hud_used.oxygen_icon.icon_state = "oxy1"
+				else if(oxygen_alert > 0.15)
+					hud_used.oxygen_icon.icon_state = "oxy0.5"
+				else
+					hud_used.oxygen_icon.icon_state = "oxy0"
 
 			check_status_effects()
 

@@ -65,6 +65,11 @@
 		return FALSE
 
 	if(istype(M, /mob/living/carbon))
+		if(istype(M, /mob/living/carbon/human) )
+			var/mob/living/carbon/human/H = M
+			if(H.helmet_blocking_mouth())
+				to_chat(user, SPAN_WARNING("You can't make [user == M ? "yourself" : "[M]"] eat the [src], the [H.head] is in the way!."))
+				return
 		var/mob/living/carbon/C = M
 		var/fullness = M.nutrition + (M.reagents.get_reagent_amount("nutriment") * 25)
 		if(fullness > NUTRITION_HIGH && world.time < C.overeat_cooldown)
@@ -88,6 +93,11 @@
 
 			if(user.action_busy)
 				return
+			if(istype(M, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = M
+				if(H.helmet_blocking_mouth())
+					to_chat(H, SPAN_DANGER("Your [H.head] stops you from eating the food."))
+					return
 
 			if(!do_after(user, eat_time, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 				return
@@ -2948,6 +2958,45 @@
 	. = ..()
 	for(var/i in 1 to 2)
 		var/obj/item/pizzabox/mystery/extra = new(src)
+		boxes += extra
+	update_icon()
+
+// Pizza Galaxy Pizza
+
+/obj/item/pizzabox/pizza_galaxy
+	icon = 'icons/obj/items/pizza_galaxy_pizza.dmi'
+
+/obj/item/pizzabox/pizza_galaxy/margherita/Initialize()
+	. = ..()
+	pizza = new /obj/item/reagent_container/food/snacks/sliceable/pizza/margherita(src)
+	boxtag = "Margherita Deluxe"
+
+/obj/item/pizzabox/pizza_galaxy/vegetable/Initialize()
+	. = ..()
+	pizza = new /obj/item/reagent_container/food/snacks/sliceable/pizza/vegetablepizza(src)
+	boxtag = "Gourmet Vegatable"
+
+/obj/item/pizzabox/pizza_galaxy/mushroom/Initialize()
+	. = ..()
+	pizza = new /obj/item/reagent_container/food/snacks/sliceable/pizza/mushroompizza(src)
+	boxtag = "Mushroom Special"
+
+/obj/item/pizzabox/pizza_galaxy/meat/Initialize()
+	. = ..()
+	pizza = new /obj/item/reagent_container/food/snacks/sliceable/pizza/meatpizza(src)
+	boxtag = "Meatlover's Supreme"
+
+/// Mystery Pizza, made with random ingredients!
+/obj/item/pizzabox/pizza_galaxy/mystery/Initialize(mapload, ...)
+	. = ..()
+	pizza = new /obj/item/reagent_container/food/snacks/sliceable/pizza/mystery(src)
+	boxtag = "Mystery Pizza"
+
+// Pre-stacked boxes for reqs
+/obj/item/pizzabox/pizza_galaxy/mystery/stack/Initialize(mapload, ...)
+	. = ..()
+	for(var/i in 1 to 2)
+		var/obj/item/pizzabox/pizza_galaxy/mystery/extra = new(src)
 		boxes += extra
 	update_icon()
 

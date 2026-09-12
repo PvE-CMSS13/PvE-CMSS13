@@ -1,0 +1,89 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/void/vehicle,
+/area/space)
+"F" = (
+/obj/structure/prop/vehicle/twe_tank{
+	pixel_x = -20;
+	pixel_y = -20
+	},
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/structure/phone_base{
+	dir = 4;
+	pixel_x = -14;
+	phone_category = "Vehicles";
+	name = "Tank Telephone";
+	phone_id = "FV150 Light Cavalry Tank"
+	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
+/area/interior/vehicle/twe_tank)
+"L" = (
+/turf/open/void/vehicle,
+/area/interior/vehicle/twe_tank)
+"U" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/tank;
+	name = "back entrance marker";
+	tag = "rear"
+	},
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 10;
+	layer = 3.2;
+	pixel_x = -14;
+	pixel_y = 33
+	},
+/obj/structure/vehicle_locker/tank/twe{
+	pixel_y = 31;
+	pixel_x = -6;
+	layer = 2.99
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	icon = 'icons/obj/vehicles/interiors/twe_tank.dmi';
+	pixel_x = 12;
+	pixel_y = 28;
+	icon_state = "ammo_loader"
+	},
+/obj/structure/vehicle_locker/tank/twe{
+	pixel_y = 31;
+	pixel_x = -6;
+	layer = 2.99
+	},
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_7,
+/area/interior/vehicle/twe_tank)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+L
+U
+F
+a
+"}
+(3,1,1) = {"
+a
+L
+L
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+"}

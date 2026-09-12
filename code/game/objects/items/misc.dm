@@ -430,3 +430,17 @@
 
 /obj/item/rappel_harness/extract/rmc
 	shuttle_id = DROPSHIP_GIBRALTAR
+
+/obj/item/clock
+	name = "digital clock"
+	desc = "A battery powered clock, able to keep time within about 5 seconds... it was never that accurate."
+	icon = 'icons/obj/items/devices.dmi'
+	icon_state = "digital_clock"
+	force = 3
+	throwforce = 2
+	throw_range = 4
+	w_class = SIZE_SMALL
+
+/obj/item/clock/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("The [name] reads: [GLOB.current_date_string] - [worldtime2text()]")

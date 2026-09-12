@@ -108,3 +108,19 @@
 /datum/job/special/wey_yu/pmc/director
 	title = JOB_PMC_DIRECTOR
 	gear_preset = /datum/equipment_preset/pmc/director
+
+/datum/job/special/wey_yu/pmc/commando
+	title = JOB_WY_COMMANDO_STANDARD
+	gear_preset = /datum/equipment_preset/pmc/commando/standard
+
+/datum/job/special/wey_yu/pmc/commando_leader
+	title = JOB_WY_COMMANDO_LEADER
+	gear_preset = /datum/equipment_preset/pmc/commando/leader
+
+/datum/job/special/wey_yu/pmc/commando_gunner
+	title = JOB_WY_COMMANDO_GUNNER
+	gear_preset = /datum/equipment_preset/pmc/commando/gunner
+
+/datum/job/special/wey_yu/pmc/commando_dogcatcher
+	title = JOB_WY_COMMANDO_DOGCATHER
+	gear_preset = /datum/equipment_preset/pmc/commando/dogcatcher

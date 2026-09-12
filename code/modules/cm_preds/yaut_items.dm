@@ -198,6 +198,10 @@
 	icon_state = "councilor_poncho"
 	clan_rank_required = CLAN_RANK_BLOODED_INT
 
+/obj/item/clothing/yautja_cape/damaged
+	name = PRED_YAUTJA_DAMAGED_CAPE
+	icon_state = "damagedcape"
+
 /obj/item/clothing/shoes/yautja
 	name = "ancient alien greaves"
 	desc = "Greaves made from scraps of cloth and a strange alloy. They feel cold with an alien weight."
@@ -1051,3 +1055,74 @@
 		to_chat(user, SPAN_NOTICE("Why would you try attaching this to your clothing?"))
 		return
 	. = ..()
+
+/// TOOLS
+
+/obj/item/tool/crowbar/yautja
+	name = "\improper yautja crowbar"
+	desc = "Used to remove floors and to pry open doors, made of an unusual alloy."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "bar"
+	item_state = "bar"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/wrench/yautja
+	name = "\improper alien wrench"
+	desc = "A wrench with many common uses. Made of some bizarre alien bones."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "wrench"
+	item_state = "wrench"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/wirecutters/yautja
+	name = "\improper alien wirecutters"
+	desc = "This cuts wires, also flesh. Made of some razorsharp animal teeth."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "wirescutter"
+	item_state = "wirescutter"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/screwdriver/yautja
+	name = "\improper alien screwdriver"
+	desc = "Some hightech screwing abilities."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "screwdriver"
+	item_state = "screwdriver"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+	force = 7
+
+/obj/item/device/multitool/yautja
+	name = "\improper alien multitool"
+	desc = "Top notch alien tech for B&E through hacking."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "multitool"
+	item_state = "multitool"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/weldingtool/yautja
+	name = "\improper alien chem welding tool"
+	desc = "A complex chemical welding device, keep away from youngblood."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "welder"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+	force = 10
+	throwforce = 15
+	max_fuel = 150	//The max amount of fuel the welder can hold

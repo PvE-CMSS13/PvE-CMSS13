@@ -1,0 +1,9 @@
+{
+    "map_name": "SSV Laituri",
+    "map_path": "map_files/laituri",
+    "map_file": "laituri.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/laituri/",
+    "platoon": "/datum/squad/marine/upp/forecon"
+}

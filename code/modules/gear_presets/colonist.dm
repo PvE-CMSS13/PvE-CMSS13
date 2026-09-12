@@ -35,6 +35,74 @@
 	//limbs
 	add_civilian_shoe(new_human)
 
+/datum/equipment_preset/colonist/bluecollar/eva
+	name = "US Civilian (Space Rescuee)"
+
+/datum/equipment_preset/colonist/bluecollar/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	var/random_tank_back = rand(1,8)
+	switch(random_tank_back)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/empty(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/red/empty(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/yellow/empty(new_human), WEAR_WAIST)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/air/empty(new_human), WEAR_WAIST)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space(new_human), WEAR_HEAD)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space(new_human), WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/emergency(new_human), WEAR_JACKET)
+	//belt
+	var/random_tank_waist = rand(1,5)
+	switch(random_tank_waist)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/empty(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi/empty(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double/empty(new_human), WEAR_WAIST)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double/empty(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/skillless(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen(new_human), WEAR_R_STORE)
+	//hand
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(new_human), WEAR_R_HAND)
+	//limbs
+	var/random_civilian_shoe = rand(1,7)
+	switch(random_civilian_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/colonist/bluecollar/eva/spanish
+	name = "LatAm Civilian (Space Rescuee)"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/bluecollar/eva/japanese
+	name = "TWE Civilian (Space Rescuee)"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
 /datum/equipment_preset/colonist/bluecollar/spanish
 	name = "LatAm Civilian Colonist, Blue-Collar"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
@@ -44,7 +112,6 @@
 	name = "Brazilian Civilian Colonist, Blue-Collar"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE)
-
 
 /datum/equipment_preset/colonist/bluecollar/japanese
 	name = "TWE Civilian Colonist, Blue-Collar"
@@ -186,6 +253,40 @@
 	name = "TWE Colonist, Blue-Collar (Roughneck)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/roughneck/eva
+	name = "US Civilian Colonist, Blue-Collar (Roughneck, EVA)"
+
+/datum/equipment_preset/colonist/roughneck/eva/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/fuel_cell, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	add_facewrap(new_human)
+	//uniform
+	add_worker_uniform(new_human)
+	//jacket head
+	add_colonist_eva_suit_set(new_human)
+	//limbs
+	add_worker_gloves(new_human)
+	add_worker_shoe(new_human)
+	//belt
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/atmostech, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/device/analyzer, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/cell, WEAR_IN_BELT)
+
+/datum/equipment_preset/colonist/roughneck/eva/japanese
+	name = "TWE Colonist, Blue-Collar (Roughneck, EVA)"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/roughneck/eva/spanish
+	name = "LatAm Colonist, Blue-Collar (Roughneck, EVA)"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/cook
 	name = "US Civilian Colonist, Blue-Collar (Cook)"
@@ -535,6 +636,51 @@
 
 /datum/equipment_preset/colonist/doctor/scrubs/japanese
 	name = "TWE Civilian Doctor, Scrubs"
+	ethnicity = JAPANESE_ETHNICITY
+	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/doctor/scrubs/eva
+	name = "US Civilian Doctor, EVA."
+
+/datum/equipment_preset/colonist/doctor/scrubs/eva/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	var/random_scrubs= rand(1,4)
+	switch(random_scrubs)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/green(new_human), WEAR_BODY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/blue(new_human), WEAR_BODY)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/purple(new_human), WEAR_BODY)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/stethoscope(new_human), WEAR_ACCESSORY)
+	//suit head
+	add_colonist_eva_suit_set(new_human)
+	new_human.wear_suit.attach_accessory(new_human, new /obj/item/clothing/accessory/armband/medgreen)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/liquid(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/red(new_human), WEAR_L_STORE)
+	//limb
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+
+/datum/equipment_preset/colonist/doctor/scrubs/eva/spanish
+	name = "LatAm Civilian Doctor, EVA"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/doctor/scrubs/eva/japanese
+	name = "TWE Civilian Doctor, EVA"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 

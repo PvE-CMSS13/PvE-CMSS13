@@ -27,6 +27,9 @@ endmap
 map chapaev
 endmap
 
+map laituri
+endmap
+
 map rover
 endmap
 
@@ -36,8 +39,32 @@ endmap
 map uscss_obsidian_falk
 endmap
 
+map golden_arrow_classic
+endmap
+
+map lv_818_firebase_zulu
+endmap
+
+map golden_arrow_tethered
+endmap
+
+map lv_818_firebase_juliet
+endmap
+
+map lv_818_firebase_juliet_forecon
+endmap
+
+map lv522_firebase_charlie_charlie
+endmap
+
+map lv295_firebase_sierra_bravo
+endmap
+
 map uscss_onyx_karain
 endmap
 
 map hms_brynhild
+endmap
+
+map badayaga_ship
 endmap

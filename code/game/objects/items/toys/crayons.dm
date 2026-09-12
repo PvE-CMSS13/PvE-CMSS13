@@ -148,6 +148,11 @@
 
 /obj/item/toy/crayon/attack(mob/M as mob, mob/user as mob)
 	if(M == user)
+		if(istype(M, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = M
+			if(H.helmet_blocking_mouth())
+				to_chat(H, SPAN_DANGER("You try to eat the crayon but... uh, there's this invisible dome in the way?."))
+				return
 		to_chat(user, "You take a bite of the crayon and swallow it.")
 // user.nutrition += 5
 		if(uses)

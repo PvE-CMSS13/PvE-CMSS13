@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")
@@ -1180,7 +1180,15 @@
 		TRACKER_CSL = /datum/squad/marine/charlie,
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
-		TRACKER_FSL = /datum/squad/marine/cryo
+		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_RSL = /datum/squad/marine/forecon,
+		TRACKER_R2SL = /datum/squad/marine/sof/forecon,
+		TRACKER_RMCSL = /datum/squad/marine/rmc,
+		TRACKER_PSL = /datum/squad/marine/pmc,
+		TRACKER_P2SL = /datum/squad/marine/pmc/secondary,
+		TRACKER_PSSL = /datum/squad/marine/pmc/small,
+		TRACKER_UPPSL = /datum/squad/marine/upp,
+		TRACKER_UPP2SL = /datum/squad/marine/upp/secondary
 	)
 	switch(tracker_setting)
 		if(TRACKER_SL)
@@ -1454,7 +1462,7 @@
 		visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 			SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
 
-	if(istype(get_turf(src), /turf/open/gm/river))
+	if(istype(get_turf(src), /turf/open/gm/river) || (/obj/effect/blocker/water in loc))
 		ExtinguishMob()
 
 	if(fire_stacks > 0)
@@ -1695,7 +1703,10 @@
 				platoon = "3rd Bat. 'Solar Devils"
 		if(FACTION_UPP)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/upp
-			platoon = "Red Dawn"
+			if(assigned_squad && assigned_squad.name == SQUAD_SISSI)
+				platoon = "Fox Stalkers"
+			else
+				platoon = "Red Dawn"
 		if(FACTION_PMC)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
 			platoon = "Azure-15"
@@ -1726,3 +1737,23 @@
 
 	return .
 
+/mob/living/carbon/human/onZImpact(turf/impact_turf, height)
+	if(isyautja(src))
+		return
+
+	. = ..()
+
+	KnockDown(height * 5)
+	Stun(height * 5)
+
+	var/total_damage = (20 * height) ** 1.3
+	apply_damage(total_damage / 2, BRUTE, "r_leg")
+	apply_damage(total_damage / 2, BRUTE, "l_leg")
+
+	var/obj/limb/leg/found_rleg = locate(/obj/limb/leg/l_leg) in limbs
+	var/obj/limb/leg/found_lleg = locate(/obj/limb/leg/r_leg) in limbs
+
+	found_rleg?.fracture(100)
+	found_lleg?.fracture(100)
+
+	playsound(impact_turf.loc, "slam", 50, 1)

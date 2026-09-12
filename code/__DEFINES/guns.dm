@@ -57,3 +57,8 @@
 #define CO_GUN_DEAGLE "Desert Eagle"
 #define CO_GUN_MATEBA_COUNCIL "Colonel's Mateba"
 #define CO_GUN_DEAGLE_COUNCIL "Golden Desert Eagle"
+
+//SHARP modes
+#define SHARP_DANGER_MODE "DANGER"
+#define SHARP_DIRECTED_MODE "DIRECTED"
+#define SHARP_SAFE_MODE "SAFE"

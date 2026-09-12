@@ -46,3 +46,15 @@
 	owner.move_max_momentum = initial(owner.move_max_momentum)
 	owner.move_momentum_build_factor = initial(owner.move_momentum_build_factor)
 	owner.move_turn_momentum_loss_factor = initial(owner.move_turn_momentum_loss_factor)
+
+/obj/item/hardpoint/locomotion/treads/ridgeway
+	name = "\improper M40 Ridgeway Treads"
+	desc = "Treads for the M40 Ridgeway heavy tank. The least groundbreaking of the Ridgeway's advancements, though significant in their ability to tackle many of the problems faced by US forces in the colonies previous tanks couldn't. The tracks terrain adaptability and ease of maintenance design, makes it a favoured component for marine tankers"
+
+	icon_state = "treads_ridgeway"
+	disp_icon = "tank"
+	disp_icon_state = "treads_ridgeway"
+
+	health = 4500
+
+	move_max_momentum = 5 //same top speed, but takes 5 tiles to reach it

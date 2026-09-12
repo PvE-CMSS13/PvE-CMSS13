@@ -43,7 +43,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_WARRIOR_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER, XENO_CASTE_PRAETORIAN, XENO_CASTE_RAVAGER, XENO_CASTE_SENTINEL, XENO_CASTE_SPITTER, XENO_CASTE_QUEEN)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
@@ -135,7 +135,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_UPP, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_UPP, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 

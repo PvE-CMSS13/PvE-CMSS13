@@ -342,7 +342,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	return
 
 GLOBAL_LIST_INIT(non_fakeattack_weapons, list(/obj/item/device/aicard,\
-	/obj/item/clothing/shoes/magboots, /obj/item/disk/nuclear,\
+	/obj/item/clothing/shoes/marine/magboots, /obj/item/disk/nuclear,\
 	/obj/item/clothing/head/helmet/space/odyssey, /obj/item/tank))
 
 /proc/fake_attack(mob/living/target)

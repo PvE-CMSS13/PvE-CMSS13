@@ -16,6 +16,8 @@
 #define iscolonysynthetic(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial))
 #define isworkingjoe(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/working_joe))
 #define ishazardjoe(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/working_joe/hazard))
+#define isuppjoe(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/working_joe/upp))
+#define iswydroid(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/colonial/wy_droid))
 #define isinfiltratorsynthetic(A) (ishuman(A) && istype(A?:species, /datum/species/synthetic/infiltrator))
 
 //Specic group checks, use instead of typechecks (but use traits instead)

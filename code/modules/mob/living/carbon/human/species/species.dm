@@ -46,6 +46,7 @@
 	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
 
 	var/breath_type = "oxygen"   // Non-oxygen gas breathed, if any.
+	var/breath_pressure = MIN_BREATH_PRESSURE
 	var/poison_type = "phoron"   // Poisonous air.
 	var/exhale_type = "carbon_dioxide"   // Exhaled gas type.
 

@@ -33,8 +33,6 @@ SUBSYSTEM_DEF(xeno_ai)
 		valid_targets += potential_target
 
 	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
-		if(potential_vehicle_target.health <= 0)
-			continue
 
 		if(hive.faction_is_ally(potential_vehicle_target.vehicle_faction))
 			continue

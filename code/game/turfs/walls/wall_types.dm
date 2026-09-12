@@ -282,6 +282,92 @@
 
 
 
+/turf/closed/wall/upp_ship/reinforced
+	name = "reinforced hull"
+	damage_cap = HEALTH_WALL_REINFORCED
+	icon_state = "uppwall_reinforced"
+
+/turf/closed/wall/upp_ship/reinforced/outer
+	name = "ultra reinforced hull"
+	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas."
+	icon_state = "uppwall_hull"
+
+/turf/closed/wall/upp_ship/grey
+	damage = 0
+	damage_cap = HEALTH_WALL //Wall will break down to girders if damage reaches this point
+	opacity = TRUE
+	density = TRUE
+	walltype = WALL_UPP_SHIP
+	icon = 'icons/turf/walls/upp_walls_grey.dmi'
+	icon_state = "uppwall_interior"
+
+/turf/closed/wall/upp_ship/grey/reinforced
+	name = "reinforced hull"
+	damage_cap = HEALTH_WALL_REINFORCED
+	icon_state = "uppwall_reinforced"
+
+/turf/closed/wall/upp_ship/grey/reinforced/outer
+	name = "ultra reinforced hull"
+	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas."
+	icon_state = "uppwall_hull"
+
+// LV colony walls
+
+/turf/closed/wall/lv_outpost
+	name = "bare outpost walls"
+	icon = 'icons/turf/walls/lv_colony_walls.dmi'
+	icon_state = "lvwall"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	walltype = WALL_LV_BASE
+
+/turf/closed/wall/lv_outpost/reinforced
+	name = "ribbed outpost walls"
+	icon_state = "lvwall_reinforced"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/lv_outpost/reinforced/hull
+	desc = "A thick and chunky metal wall that is, just by virtue of its placement and imposing presence, entirely indestructible."
+	icon_state = "lvwall_hull"
+
+/turf/closed/wall/lv_outpost/white
+	name = "bare outpost walls"
+	icon = 'icons/turf/walls/white_lv_colony_walls.dmi'
+	icon_state = "lvwall"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+
+/turf/closed/wall/lv_outpost/white/reinforced
+	name = "ribbed outpost walls"
+	icon_state = "lvwall_reinforced"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/lv_outpost/white/reinforced/hull
+	desc = "A thick and chunky metal wall that is, just by virtue of its placement and imposing presence, entirely indestructible."
+	icon_state = "lvwall_hull"
+
+
+// Strata Outpost walls
+
+/turf/closed/wall/strata_outpost
+	name = "bare outpost walls"
+	icon = 'icons/turf/walls/strata_outpost.dmi'
+	icon_state = "strata_bare_outpost_"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	walltype = WALL_STRATA_OUTPOST_BARE
+
+/turf/closed/wall/strata_outpost/reinforced
+	name = "ribbed outpost walls"
+	icon_state = "strata_ribbed_outpost_"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	walltype = WALL_STRATA_OUTPOST_RIBBED
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/strata_outpost/reinforced/hull
+	icon_state = "strata_hull"
+	desc = "A thick and chunky metal wall that is, just by virtue of its placement and imposing presence, entirely indestructible."
+
+///
 
 /turf/closed/wall/indestructible
 	name = "wall"
@@ -339,15 +425,12 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "invisible"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-
-
-
 // Mineral Walls
 
 /turf/closed/wall/mineral
 	name = "mineral wall"
 	desc = "This shouldn't exist"
-	icon = 'icons/turf/walls/stone.dmi'
+	icon = 'icons/turf/walls/mineral_wall.dmi'
 	icon_state = "stone"
 	walltype = WALL_STONE
 	var/mineral
@@ -386,28 +469,60 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/mineral/sandstone
 	name = "sandstone wall"
 	desc = "A wall with sandstone plating."
+	icon = 'icons/turf/walls/hunter/hunter_temple.dmi'
+	color = null
+	icon_state = "ancient_stone"
 	mineral = "sandstone"
-	color = "#c6a480"
+	walltype = WALL_ANCIENT_BASE
 	baseturfs = /turf/open/gm/dirt
+	var/decoration_type
+	blend_turfs = list(/turf/closed/wall/mineral, /turf/closed/wall/mineral/sandstone/runed, /turf/closed/wall/mineral/sandstone/runed/decor, /turf/closed/wall/mineral/sandstone/runed/deco_1, /turf/closed/wall/mineral/sandstone/runed/deco_2, /turf/closed/wall/ancient_temple, /turf/closed/wall/ancient_temple/sandstone, /turf/closed/wall/ancient_temple/sandstone/runed)
+	blend_objects = list(/obj/structure/prop/hunter/ancient_temple/collapsed_wall, /obj/structure/machinery/door, /obj/structure/window_frame, /obj/structure/window/framed)
+
+/turf/closed/wall/mineral/sandstone/LateInitialize()
+	. = ..()
+	if(prob(20))
+		decoration_type = rand(0,3)
+	update_icon()
+
+/turf/closed/wall/mineral/sandstone/update_icon()
+	if(decoration_type == null)
+		return ..()
+	if(neighbors_list in list(EAST|WEST))
+		special_icon = TRUE
+		icon_state = "ancient_stone_deco_wall[decoration_type]"
+	else // Wall connection was broken, return to normality
+		special_icon = FALSE
+	return ..()
 
 /turf/closed/wall/mineral/sandstone/runed
-	name = "sandstone temple wall"
-	desc = "A heavy wall of sandstone."
+	name = "sandstone decorated wall"
+	desc = "A heavy wall of sandstone, with elegant carvings and runes inscribed upon its face."
+	icon = 'icons/turf/walls/hunter/hunter_temple_deco_3.dmi'
+	color = null
+	icon_state = "ancient_stone"
 	mineral = "runed sandstone"
-	color = "#b29082"
 	damage_cap = HEALTH_WALL_REINFORCED//Strong, but only available to Hunters, can can still be blown up or melted by boilers.
 	baseturfs = /turf/open/floor/sandstone/runed
+	blend_turfs = list(/turf/closed/wall/mineral, /turf/closed/wall/mineral/sandstone/runed, /turf/closed/wall/mineral/sandstone/runed/decor, /turf/closed/wall/mineral/sandstone/runed/deco_1, /turf/closed/wall/mineral/sandstone/runed/deco_2)
 
 /turf/closed/wall/mineral/sandstone/runed/attack_alien(mob/living/carbon/xenomorph/user)
 	visible_message("[user] scrapes uselessly against [src] with their claws.")
 	return
 
 /turf/closed/wall/mineral/sandstone/runed/decor
-	name = "runed sandstone temple wall"
+	name = "decorated sandstone wall"
 	desc = "A heavy wall of sandstone, with elegant carvings and runes inscribed upon its face."
-	icon = 'icons/turf/walls/runedstone.dmi'
-	icon_state = "runedstone"
-	walltype = "runedstone"
+	icon = 'icons/turf/walls/hunter/hunter_temple_deco_3.dmi'
+	blend_turfs = list(/turf/closed/wall/mineral, /turf/closed/wall/mineral/sandstone/runed, /turf/closed/wall/mineral/sandstone/runed/decor, /turf/closed/wall/mineral/sandstone/runed/deco_1, /turf/closed/wall/mineral/sandstone/runed/deco_2)
+
+/turf/closed/wall/mineral/sandstone/runed/deco_1
+	icon = 'icons/turf/walls/hunter/hunter_temple_deco_1.dmi'
+	blend_turfs = list(/turf/closed/wall/mineral, /turf/closed/wall/mineral/sandstone/runed, /turf/closed/wall/mineral/sandstone/runed/decor, /turf/closed/wall/mineral/sandstone/runed/deco_1, /turf/closed/wall/mineral/sandstone/runed/deco_2)
+
+/turf/closed/wall/mineral/sandstone/runed/deco_2
+	icon = 'icons/turf/walls/hunter/hunter_temple_deco_2.dmi'
+	blend_turfs = list(/turf/closed/wall/mineral, /turf/closed/wall/mineral/sandstone/runed, /turf/closed/wall/mineral/sandstone/runed/decor, /turf/closed/wall/mineral/sandstone/runed/deco_1, /turf/closed/wall/mineral/sandstone/runed/deco_2)
 
 /turf/closed/wall/mineral/sandstone/runed/can_be_dissolved()
 	return 2
@@ -470,15 +585,20 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/mineral/bone/is_weedable()
 	return NOT_WEEDABLE
 
+/turf/closed/wall/mineral/bone_resin/k_series //mineral wall because, reasons bro.
+	desc = "A wall made of molted resin. Seems these yellow xenomorphs are fast builders."
+	color = "#ffff80"
+/turf/closed/wall/mineral/bone
+
 //Misc walls
 
 /turf/closed/wall/cult
-	name = "wall"
-	desc = "The patterns engraved on the wall seem to shift as you try to focus on them. You feel sick"
-	icon = 'icons/turf/walls/cult.dmi'
-	icon_state = "cult"
+	name = "dark temple wall"
+	desc = "Dark temple walls, the bricks look ancient - made of a rare type of stone."
+	icon = 'icons/turf/walls/hunter/runedstone.dmi'
+	icon_state = "runedstone"
 	walltype = WALL_CULT
-	color = "#3c3434"
+	color = "#524e49"
 
 /turf/closed/wall/cult/make_girder(destroyed_girder)
 	return
@@ -514,7 +634,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "dome"
 	walltype = WALL_DOME
 
-//Wood wall
+// Wood walls
 
 /turf/closed/wall/wood
 	name = "wood wall"
@@ -522,6 +642,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "wood"
 	walltype = WALL_WOOD
 	baseturfs = /turf/open/floor/wood
+	blend_objects = list(/obj/structure/machinery/door, /obj/structure/window_frame, /obj/structure/window/framed, /obj/structure/mineral_door)
 
 /turf/closed/wall/wood/update_icon()
 	..()
@@ -531,6 +652,41 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 		var/r1 = rand(0,10) //Make a random chance for this to happen
 		if(r1 >= 9)
 			overlays += image(icon, icon_state = "wood_variant")
+
+/turf/closed/wall/wood/plain
+	name = "plain wood wall"
+	icon = 'icons/turf/walls/wood_plain.dmi'
+	icon_state = "wood"
+	walltype = WALL_WOOD
+	baseturfs = /turf/open/floor/wood
+
+/turf/closed/wall/wood/blue
+	name = "blue wood wall"
+	icon = 'icons/turf/walls/wood_blue.dmi'
+	icon_state = "wood"
+	walltype = WALL_WOOD
+	baseturfs = /turf/open/floor/wood
+
+/turf/closed/wall/wood/green
+	name = "green wood wall"
+	icon = 'icons/turf/walls/wood_green.dmi'
+	icon_state = "wood"
+	walltype = WALL_WOOD
+	baseturfs = /turf/open/floor/wood
+
+/turf/closed/wall/wood/purple
+	name = "purple wood wall"
+	icon = 'icons/turf/walls/wood_purple.dmi'
+	icon_state = "wood"
+	walltype = WALL_WOOD
+	baseturfs = /turf/open/floor/wood
+
+/turf/closed/wall/wood/teal
+	name = "teal wood wall"
+	icon = 'icons/turf/walls/wood_teal.dmi'
+	icon_state = "wood"
+	walltype = WALL_WOOD
+	baseturfs = /turf/open/floor/wood
 
 //Colorable rocks. Looks like moonsand.
 
@@ -542,9 +698,28 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_CAVE
 	hull = 1
 	color = "#535963"
+	baseturfs = /turf/open/gm/dirt
+	noblend_turfs = list(/turf/closed/wall/ancient_temple, /turf/closed/wall/ancient_temple/sandstone/runed, /turf/closed/wall/ancient_temple/sandstone/runed/decor, /turf/closed/wall/ancient_temple/sandstone/runed/deco_1, /turf/closed/wall/ancient_temple/sandstone/runed/deco_2, /turf/closed/wall/mineral/bone_resin)
+
+
+
+/turf/closed/wall/rock/Initialize(mapload)
+	. = ..()
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(!isnull(turf_to_check) && !turf_to_check.density && !(istype(turf_to_check, /turf/open/space)))
+			minimap_color = MINIMAP_SOLID
 
 /turf/closed/wall/rock/brown
 	color = "#826161"
+
+/turf/closed/wall/rock/brown/mud
+	color = "#826161"
+	baseturfs = /turf/open/auto_turf/lv_grass/layer0_mud_alt
+
+/turf/closed/wall/rock/grey
+	color = "#645e5f"
+	baseturfs = /turf/open/gm/dirt
 
 /turf/closed/wall/rock/orange
 	color = "#994a16"
@@ -581,6 +756,28 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "jungle_veg"
 	desc = "Exceptionally dense vegetation that you can't see through."
 	walltype = WALL_JUNGLE_UPDATED //Not a metal wall
+	hull = 1
+
+/turf/closed/wall/strata_ice/forest
+	name = "forest vegetation"
+	icon = 'icons/turf/walls/forest_veg.dmi'
+	icon_state = "forest_veg"
+	desc = "Exceptionally dense vegetation that you can't see through."
+	walltype = WALL_FOREST //Thick forest, not metal.
+	hull = 1
+
+/turf/closed/wall/strata_ice/forest/rock
+	name = "rock columns"
+	icon_state = "rock_forest"
+	desc = "Exceptionally dense rock formations."
+	walltype = WALL_FOREST_ROCK //Rock but near a forest not jungle.
+	hull = 1
+
+/turf/closed/wall/strata_ice/forest/rock/dirty
+	name = "rock columns"
+	icon_state = "rock_forest_dirty"
+	desc = "Exceptionally dense rock formations."
+	walltype = WALL_FOREST_ROCK_DIRTY //Dirty rock but near a forest not jungle.
 	hull = 1
 
 /turf/closed/wall/strata_outpost_ribbed //this guy is our reinforced replacement
@@ -818,6 +1015,10 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	name = "tutorial resin wall"
 	desc = "Weird slime solidified into a wall. Remarkably resilient."
 	hivenumber = XENO_HIVE_TUTORIAL
+
+/turf/closed/wall/resin/kseries
+	color = "#ffff80"
+	hivenumber = XENO_HIVE_K_SERIES
 
 /turf/closed/wall/resin/tutorial/attack_alien(mob/living/carbon/xenomorph/xeno)
 	return

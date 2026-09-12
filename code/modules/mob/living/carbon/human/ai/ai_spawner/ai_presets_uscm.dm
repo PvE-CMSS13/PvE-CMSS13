@@ -6,10 +6,10 @@
 	desc = "Armed with a M41A rifle, carries a simple IFAK with gauze, ointment and an injector."
 	path = /datum/equipment_preset/uscm/private_equipped
 
-/datum/human_ai_equipment_preset/uscm/rifleman/eva
-	name = "USCM Squad Rifleman EVA"
-	desc = "Armed with a M41A rifle, carries a simple IFAK with gauze, ointment and an injector."
-	path = /datum/equipment_preset/uscm/private_equipped/eva
+/datum/human_ai_equipment_preset/uscm/rifleman/battlerifle
+	name = "USCM Squad Sniper (M49A6)"
+	desc = "Armed with a M49A6 rifle with DU magazines, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/private_equipped/battlerifle
 
 /datum/human_ai_equipment_preset/uscm/smartgunner
 	name = "USCM Squad Smartgunner"
@@ -94,3 +94,54 @@
 	name = "USCM Hazmat Joe"
 	desc = "You always know a working joe"
 	path = /datum/equipment_preset/synth/working_joe/engi
+
+//EVA
+/datum/human_ai_equipment_preset/uscm/eva
+	faction = /datum/human_ai_equipment_preset/uscm::faction + " (EVA)"
+
+/datum/human_ai_equipment_preset/uscm/eva/rifleman/eva
+	name = "USCM Squad Rifleman EVA"
+	desc = "Armed with a M41A or M49A rifle, carries a simple IFAK with gauze, ointment and an injector."
+	path = /datum/equipment_preset/uscm/private_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/eva/rifleman/battlerifle
+	name = "USCM Squad Sniper (M49A6)"
+	desc = "Armed with a M49A6 rifle with DU magazines, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/private_equipped/eva/battlerifle
+
+/datum/human_ai_equipment_preset/uscm/eva/rifleman/flamer
+	name = "EVA USCM Squad Rifleman (Incinerator)"
+	desc = "Armed with a M4A3 AP-loaded Pistol and a M240A1 Incinerator."
+	path = /datum/equipment_preset/uscm/private_equipped/eva/flamer
+
+/datum/human_ai_equipment_preset/uscm/eva/rifleman/grenade
+	name = "USCM Squad Grenadier (M92 HEFA)"
+	desc = "Armed with a M4A3 AP-loaded Pistol and a M92 grenade launcher loaded with 30mm HEFA."
+	path = /datum/equipment_preset/uscm/private_equipped/eva/grenade
+
+/datum/human_ai_equipment_preset/uscm/eva/rpg_weapons_op
+	name = "USCM RPG Weapons Operator"
+	desc = "A USCM rocketeer, has an RPG"
+	path = /datum/equipment_preset/uscm/specialist_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/eva/smartgunner
+	name = "EVA USCM Squad Smartgunner"
+	desc = "Armed with a M56A2 smartgun, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/smartgunner_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/eva/medic
+	name = "EVA USCM Squad Corpsman"
+	desc = "Able to stablize wounded. Armed with a M41A rifle, carries medical equipment."
+	path = /datum/equipment_preset/uscm/medic_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/eva/squadleader
+	name = "EVA USCM Squad Leader"
+	desc = "Functionally a rifleman. Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/tl_equipped/eva
+
+/datum/human_ai_equipment_preset/uscm/eva/sectionleader
+	name = "EVA USCM Section Leader"
+	desc = "Functionally a rifleman. Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/leader_equipped/eva
+
+

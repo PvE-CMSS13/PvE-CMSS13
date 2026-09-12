@@ -1,0 +1,285 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/cargo_arrow,
+/area/golden_arrow/hangar)
+"c" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"d" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"e" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"f" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Storage Bay Blast Door"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"i" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"k" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/hangar)
+"l" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"n" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
+"o" = (
+/obj/structure/machinery/prop{
+	layer = 3.6;
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_turret_1";
+	pixel_x = -19;
+	pixel_y = -12;
+	mouse_opacity = 0
+	},
+/obj/structure/machinery/prop{
+	layer = 3.7;
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "ltb_cannon_1";
+	pixel_x = -19;
+	pixel_y = -33;
+	mouse_opacity = 0
+	},
+/obj/structure/machinery/prop{
+	layer = 3.5;
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "damaged_frame";
+	pixel_x = -19;
+	pixel_y = -20;
+	mouse_opacity = 0
+	},
+/obj/structure/machinery/prop{
+	layer = 3.7;
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "damaged_turret";
+	pixel_x = -19;
+	pixel_y = -12;
+	mouse_opacity = 0
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/roof/cargocrane_tracks/tjoint{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"s" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/cargo_arrow,
+/area/golden_arrow/hangar)
+"u" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
+"v" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"x" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"y" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"E" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop{
+	layer = 3.6;
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "slauncher_1";
+	pixel_x = -50;
+	pixel_y = -21;
+	mouse_opacity = 0
+	},
+/obj/structure/blocker/invisible_wall,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"F" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"J" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Storage Bay Blast Door"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"K" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/hangar)
+"P" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"R" = (
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/hangar)
+"S" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "tank_base";
+	pixel_x = -18;
+	pixel_y = 10;
+	name = "wrecked M34A2 Longstreet Light Tank";
+	desc = "It looks absolutely messed up - it's tracked, has a hole blown in it's side, and the turret looks like it was rammed straight into a wall. Makes you wonder if bad driving or the RPG took it out first...";
+	layer = 3.4
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/vehicles/tank.dmi';
+	icon_state = "treads_1";
+	pixel_x = -18;
+	pixel_y = 12;
+	name = "wrecked M34A2 Longstreet Light Tank";
+	desc = "It looks absolutely messed up - it's tracked, has a hole blown in it's side, and the turret looks like it was rammed straight into a wall. Makes you wonder if bad driving or the RPG took it out first...";
+	layer = 3.4
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"W" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
+"X" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"Z" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "\improper Storage Bay Blast Door"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+x
+x
+x
+x
+x
+x
+"}
+(2,1,1) = {"
+u
+y
+c
+y
+a
+f
+"}
+(3,1,1) = {"
+u
+v
+i
+l
+s
+Z
+"}
+(4,1,1) = {"
+n
+F
+o
+S
+a
+f
+"}
+(5,1,1) = {"
+W
+d
+E
+X
+a
+J
+"}
+(6,1,1) = {"
+W
+X
+P
+d
+a
+J
+"}
+(7,1,1) = {"
+x
+K
+k
+R
+e
+x
+"}

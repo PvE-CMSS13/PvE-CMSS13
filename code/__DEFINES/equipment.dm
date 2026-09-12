@@ -48,7 +48,8 @@
 #define USES_SEEING (1<<19)
 // Can be quick drawn
 #define QUICK_DRAWABLE (1<<20)
-
+/// If an object will fall through open space, use this when dashing \ jumping for example
+#define NO_ZFALL (1<<21)
 //==========================================================================================
 
 #define HANDLE_BARRIER_CHANCE 1
@@ -145,6 +146,8 @@
 #define ALLOWCPR (1<<7)
 /// Helmet does not fall off when blocking a decapitation
 #define FULL_DECAP_PROTECTION (1<<8)
+/// Cannot allow infection of spores
+#define SPOREPROOF (1<<9)
 
 //HELMET AND MASK======================================================================================
 
@@ -152,15 +155,19 @@
 //To successfully stop taking all pressure damage you must have both a suit and head item with this flag.
 
 /// From /tg: prevents syringes, parapens and hypos if the external suit or helmet (if targeting head) has this flag. Example: space suits, biosuit, bombsuits, thick suits that cover your body.
-#define BLOCKSHARPOBJ (1<<9)
+#define BLOCKSHARPOBJ (1<<10)
 /// This flag is used on the flags variable for SUIT and HEAD items which stop pressure damage.
-#define NOPRESSUREDMAGE (1<<10)
+#define NOPRESSUREDMAGE (1<<11)
 /// Suits only. Wearing this will stop you from being pushed over.
-#define BLOCK_KNOCKDOWN (1<<11)
+#define BLOCK_KNOCKDOWN (1<<12)
 /// Whether wearing this suit grants you the ability to fire a smartgun
-#define SMARTGUN_HARNESS (1<<12)
+#define SMARTGUN_HARNESS (1<<13)
 ///Whether wearing this headset grants you the ability to use the IFF targetting system of the smartgun
-#define SMARTGUN_OPTIC (1<<13)
+#define SMARTGUN_OPTIC (1<<14)
+//Ignores NOPRESSUREDMAGE for injectors, but is supposed to have a delay
+#define BYPASSFORINJECTOR (1<<14)
+//This stops damage from weather effects
+#define PROTECTFROMWEATHER (1<<15)
 
 //SUITS AND HELMETS====================================================================================
 
@@ -479,6 +486,9 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 #define ACCESSORY_SLOT_SGPAINT "SG Paint"
 #define ACCESSORY_SLOT_PAINT "Paint"
 #define ACCESSORY_SLOT_M3UTILITY "M3 Utility"
+#define ACCESSORY_SLOT_PLATE "USCM plate"
+#define ACCESSORY_SLOT_PLATE2 "TWE plate"
+#define ACCESSORY_SLOT_PLATE3 "UPP plate"
 #define ACCESSORY_SLOT_M56UTILITY "M56 Utility"
 #define ACCESSORY_SLOT_WRIST_L "Left wrist"
 #define ACCESSORY_SLOT_WRIST_R "Right wrist"

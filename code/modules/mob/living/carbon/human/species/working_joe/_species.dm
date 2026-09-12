@@ -18,6 +18,17 @@
 	name_plural = "Hazard Joes"
 	emote_panel_type = /datum/joe_emote_panel/hazard
 
+/datum/species/synthetic/colonial/working_joe/hazard/handle_death(mob/living/carbon/human/dying_joe, gibbed)
+	playsound(get_turf(dying_joe), "hj_death", 25, FALSE)
+
+/datum/species/synthetic/colonial/working_joe/upp
+	name = SYNTH_UPP_JOE
+	name_plural = "Dzho Automaton"
+	emote_panel_type = /datum/joe_emote_panel/upp
+
+/datum/species/synthetic/colonial/working_joe/upp/handle_death(mob/living/carbon/human/dying_joe, gibbed)
+	playsound(get_turf(dying_joe), "upp_wj_death", 25, FALSE)
+
 /datum/species/synthetic/colonial/working_joe/handle_post_spawn(mob/living/carbon/human/joe)
 	. = ..()
 	give_action(joe, /datum/action/joe_emote_panel)
@@ -104,6 +115,22 @@
 	data["emotes"] = list()
 
 	for(var/datum/emote/living/carbon/human/synthetic/working_joe/emote as anything in GLOB.hj_emotes)
+		data["emotes"] += list(list(
+			"id" = initial(emote.key),
+			"text" = (initial(emote.override_say) || initial(emote.say_message)),
+			"category" = initial(emote.category),
+			"path" = "[emote]",
+		))
+
+	return data
+
+/datum/joe_emote_panel/upp/ui_static_data(mob/user)
+	var/list/data = list()
+
+	data["categories"] = GLOB.uppj_categories
+	data["emotes"] = list()
+
+	for(var/datum/emote/living/carbon/human/synthetic/working_joe/emote as anything in GLOB.uppj_emotes)
 		data["emotes"] += list(list(
 			"id" = initial(emote.key),
 			"text" = (initial(emote.override_say) || initial(emote.say_message)),

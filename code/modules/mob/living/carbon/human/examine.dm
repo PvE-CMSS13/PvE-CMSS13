@@ -241,7 +241,7 @@
 			user.visible_message("[SPAN_BOLD("[user]")] checks [src]'s pulse.", "You check [src]'s pulse.", null, 4)
 		spawn(15)
 			if(user && src && distance <= 1)
-				if(pulse == PULSE_NONE || status_flags & FAKEDEATH)
+				if(pulse == PULSE_NONE || status_flags & FAKEDEATH || iszombie(src))
 					to_chat(user, SPAN_DEADSAY("[t_He] has no pulse[client ? "" : " and [t_his] soul has departed"]..."))
 				else
 					to_chat(user, SPAN_DEADSAY("[t_He] has a pulse!"))
@@ -471,6 +471,10 @@
 
 	for(var/implant in get_visible_implants())
 		msg += SPAN_WARNING(SPAN_BOLD("[t_He] has \a [implant] sticking out of [t_his] flesh!\n"))
+
+	if(iszombie(src))
+		if(src.undefibbable)
+			msg += SPAN_WARNING(SPAN_BOLD("\n[t_He] doesn't look like [lowertext(t_He)] will be getting up again.\n"))
 
 	if(hasHUD(user,"security") || (observer && observer.HUD_toggled["Security HUD"]))
 		var/perpref

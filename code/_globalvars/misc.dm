@@ -137,5 +137,17 @@ GLOBAL_VAR(xeno_queue_candidate_count)
 GLOBAL_VAR(obfs_x)
 /// A number between -500 and 500.
 GLOBAL_VAR(obfs_y)
+/// A number between -10 and 10
+GLOBAL_VAR(obfs_z)
+
+GLOBAL_VAR_INIT(overmind_cancel, FALSE)
 
 GLOBAL_VAR_INIT(ai_xeno_weeding, TRUE)
+/// Multiplier added on to the chance to delimb a zombie
+GLOBAL_VAR(gm_set_zombie_delimb_multi)
+/// Zombies have a chance to get helmets
+GLOBAL_VAR_INIT(gm_set_zombie_random_helmet, FALSE)
+/// Zombies chance to get "helmets"
+GLOBAL_VAR_INIT(gm_set_zombie_helmet_chance, 25)
+/// Zombie individually set disable auto clean, stops callback qdels for droppedlimbs and perma corpses
+GLOBAL_VAR_INIT(gm_set_zombie_disable_auto_clean, FALSE)

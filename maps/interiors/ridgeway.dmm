@@ -1,0 +1,113 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/prop/vehicle/ridgeway{
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/turf/open/void/vehicle,
+/area/space)
+"c" = (
+/turf/open/void/vehicle,
+/area/space)
+"h" = (
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	pixel_y = 24;
+	icon_state = "weapons_loader_ridgeway"
+	},
+/obj/structure/vehicle_locker/tank/ridgeway{
+	pixel_x = -23;
+	pixel_y = 9
+	},
+/turf/open/shuttle/vehicle/floor_3_11,
+/area/interior/vehicle/uppvan/ridgeway)
+"o" = (
+/obj/effect/landmark/interior/spawn/vehicle_commander_seat/armor{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_12,
+/area/interior/vehicle/uppvan/ridgeway)
+"r" = (
+/obj/structure/phone_base{
+	name = "Tank Telephone";
+	phone_id = "Cheetah 2A Light Tank";
+	phone_category = "Vehicles";
+	dir = 4;
+	pixel_x = -14;
+	pixel_y = -25
+	},
+/turf/open/shuttle/vehicle/floor_1_14,
+/area/interior/vehicle/uppvan/ridgeway)
+"x" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/tank;
+	name = "back entrance marker";
+	tag = "back"
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	icon = 'icons/obj/vehicles/interiors/general.dmi';
+	pixel_x = 10;
+	pixel_y = 22;
+	layer = 3.1
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 22;
+	pixel_x = -1
+	},
+/turf/open/shuttle/vehicle/floor_1_13,
+/area/interior/vehicle/uppvan/ridgeway)
+"C" = (
+/turf/open/void/vehicle/unopacity,
+/area/interior/vehicle/uppvan/ridgeway)
+"O" = (
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_5,
+/area/interior/vehicle/uppvan/ridgeway)
+
+(1,1,1) = {"
+c
+c
+c
+a
+c
+"}
+(2,1,1) = {"
+c
+C
+x
+C
+c
+"}
+(3,1,1) = {"
+c
+h
+r
+o
+c
+"}
+(4,1,1) = {"
+c
+C
+O
+C
+c
+"}
+(5,1,1) = {"
+c
+C
+C
+C
+c
+"}
+(6,1,1) = {"
+c
+c
+c
+c
+c
+"}

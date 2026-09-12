@@ -3,6 +3,9 @@
 	action_flags = ACTION_USING_HANDS
 
 /datum/ai_action/treat_self/get_weight(datum/human_ai_brain/brain)
+	if(iszombie(brain.tied_human))
+		return 0
+
 	if(brain.healing_someone)
 		return 0
 

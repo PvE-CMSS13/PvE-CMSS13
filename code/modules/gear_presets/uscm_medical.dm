@@ -36,7 +36,7 @@
 	)
 	assignment = JOB_CMO
 	rank = JOB_CMO
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_MO4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CMO"
 	skills = /datum/skills/CMO
 
@@ -66,7 +66,7 @@
 
 	assignment = JOB_DOCTOR
 	rank = JOB_DOCTOR
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Doc"
 	skills = /datum/skills/doctor
 
@@ -107,15 +107,15 @@
 
 	assignment = JOB_NURSE
 	rank = JOB_NURSE
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_1)
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Nurse"
 	skills = /datum/skills/nurse
 
 	minimap_icon = list("medic")
 
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
-	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 

@@ -280,6 +280,11 @@
 /obj/structure/bed/chair/comfy/blue
 	icon_state = "comfychair_blue"
 
+/obj/structure/bed/chair/comfy/yautja
+	name = "alien chair"
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	debris = list(/obj/item/stack/sheet/mineral/sandstone/runed)
+
 /obj/structure/bed/chair/comfy/alpha
 	icon_state = "comfychair_alpha"
 	name = "Alpha squad chair"

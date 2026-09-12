@@ -63,7 +63,7 @@
 		langchat_image = image(null, src)
 		langchat_image.layer = 20
 		langchat_image.plane = RUNECHAT_PLANE
-		langchat_image.appearance_flags = NO_CLIENT_COLOR|KEEP_APART|RESET_COLOR|RESET_TRANSFORM
+		langchat_image.appearance_flags = NO_CLIENT_COLOR|KEEP_APART|RESET_COLOR|RESET_TRANSFORM|APPEARANCE_UI_IGNORE_ALPHA
 		langchat_image.maptext_y = langchat_height
 		langchat_image.maptext_height = 64
 		langchat_image.maptext_y -= LANGCHAT_MESSAGE_POP_Y_SINK

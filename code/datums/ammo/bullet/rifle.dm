@@ -182,6 +182,18 @@
 	shell_speed = AMMO_SPEED_TIER_7
 	effective_range_max = 24
 
+/datum/ammo/bullet/rifle/heavy/rmcdmr/on_hit_mob(mob/M,obj/projectile/P)
+	if((P.projectile_flags & PROJECTILE_BULLSEYE) && M == P.original)
+		var/slow_duration = 7
+		var/mob/living/L = M
+		if(isxeno(M))
+			var/mob/living/carbon/xenomorph/target = M
+			if(target.mob_size >= MOB_SIZE_BIG)
+				slow_duration = 4
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		L.apply_armoured_damage(damage*1.5, ARMOR_BULLET, BRUTE, null, penetration)
+		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
 /datum/ammo/bullet/rifle/heavy/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
@@ -448,6 +460,8 @@
 		if(target.mob_size >= MOB_SIZE_BIG)
 			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
 		M.adjust_effect(slow_duration, SUPERSLOW)
+		burst(get_turf(M),P,damage_type, 2 , 2)
+		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 	else
 		M.adjust_effect(slow_duration, SUPERSLOW)
@@ -565,7 +579,6 @@
 	name = "wall-penerating 10x27 bullet"
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "bullet_blue"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_CYAN

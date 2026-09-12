@@ -1,0 +1,906 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aU" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	layer = 3.5;
+	pixel_y = 15
+	},
+/obj/item/storage/beer_pack{
+	pixel_y = 5;
+	layer = 2.99;
+	pixel_x = 3
+	},
+/turf/open/floor/almayer/edge/northeast,
+/area/golden_arrow/dorms)
+"bV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"cP" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/suit/storage/jacket/marine/service{
+	pixel_x = 11
+	},
+/obj/item/prop/magazine/dirty/torn{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"dp" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"dA" = (
+/obj/item/prop/magazine/book/starshiptroopers{
+	layer = 4.1;
+	pixel_y = 47
+	},
+/obj/item/trash/crushed_cup{
+	pixel_x = -7;
+	icon = 'icons/obj/items/drinkcans.dmi';
+	icon_state = "beer_crushed";
+	desc = "A sad, crushed can of beer.";
+	name = "\improper Weyland-Yutani Lite";
+	pixel_y = 19
+	},
+/obj/effect/decal/cleanable/vomit,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"dX" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/bedsheetbin{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/edge/southeast,
+/area/golden_arrow/dorms)
+"eP" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"fD" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/atm{
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"gv" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"gJ" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"gR" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"he" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	dir = 4;
+	layer = 3.2;
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
+	},
+/obj/item/clothing/mask/cigarette/weed{
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/dorms)
+"hs" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"hx" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"iA" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/recharger{
+	pixel_y = -14
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 9;
+	pixel_y = 6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 5;
+	pixel_x = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 15;
+	pixel_x = -4
+	},
+/obj/item/trash/crushed_cup{
+	pixel_y = 5;
+	pixel_x = -4
+	},
+/obj/item/trash/crushed_cup{
+	pixel_x = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"kG" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"lG" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"lK" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/prop/magazine/dirty/torn/alt,
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"lT" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"mr" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/vending/walkman{
+	pixel_y = 21;
+	pixel_x = 10;
+	density = 0
+	},
+/obj/item/trash/kepler{
+	pixel_x = 8;
+	pixel_y = 44
+	},
+/obj/item/trash/barcardine,
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"nw" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/item/storage/beer_pack,
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"nO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"pa" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"qf" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/magazine/dirty/torn{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/obj/item/trash/eat{
+	pixel_x = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"qR" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"qT" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/item/trash/crushed_cup{
+	pixel_x = -7;
+	icon = 'icons/obj/items/drinkcans.dmi';
+	icon_state = "beer_crushed";
+	desc = "A sad, crushed can of beer.";
+	name = "\improper Weyland-Yutani Lite";
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/grime/grime1,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"ro" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"rL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/trash/crushed_cup{
+	pixel_x = 4;
+	icon = 'icons/obj/items/drinkcans.dmi';
+	icon_state = "ale_crushed";
+	desc = "Beer's misunderstood cousin.";
+	name = "\improper Weyland-Yutani IPA"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/dorms)
+"sa" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 16;
+	pixel_y = 22
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"so" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"sP" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"uc" = (
+/obj/item/trash/crushed_cup{
+	pixel_x = -7;
+	icon = 'icons/obj/items/drinkcans.dmi';
+	icon_state = "beer_crushed";
+	desc = "A sad, crushed can of beer.";
+	name = "\improper Weyland-Yutani Lite";
+	pixel_y = 19
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"uU" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"wj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/computer/PC{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"wz" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/northwest,
+/area/golden_arrow/dorms)
+"xF" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Aw" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/southeast,
+/area/golden_arrow/dorms)
+"AM" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/trash/crushed_cup{
+	pixel_y = -10;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"Bx" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"BN" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/obj/item/trash/hotdog{
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"BV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/vomit,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/dorms)
+"CD" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"EP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Ft" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/cup,
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = 10;
+	pixel_y = -8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"Hb" = (
+/obj/structure/largecrate/random/secure,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"Hs" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -29
+	},
+/obj/structure/machinery/power/apc/almayer/west,
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
+	},
+/obj/item/trash/chips{
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"Jx" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/disposalpipe/segment,
+/obj/item/reagent_container/food/drinks/cup,
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = -11
+	},
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = -11;
+	pixel_y = -9
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"KM" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"LT" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Ma" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/clothing/under/marine/officer/boiler,
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Mv" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Nu" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/grime/grime3,
+/obj/item/prop{
+	icon = 'icons/obj/items/weapons/weapons.dmi';
+	icon_state = "snowball";
+	name = "pong ball";
+	desc = "A small, round, white ball used for playing beer pong.";
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/dorms)
+"Ok" = (
+/obj/structure/bed/chair,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Or" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/disposal{
+	density = 0;
+	layer = 3.2;
+	pixel_y = 16
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
+	},
+/obj/item/trash/crushed_cup{
+	layer = 3.3;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Pq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/trash/semki,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"QO" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/northeast,
+/area/golden_arrow/dorms)
+"RH" = (
+/obj/structure/bed/chair,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"UB" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 3
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"Vx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/dorms)
+"VL" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/edge/southwest,
+/area/golden_arrow/dorms)
+"Wm" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = 15;
+	pixel_y = 13;
+	layer = 3.03
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+"WW" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/trash/kepler,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"WY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/obj/item/prop/helmetgarb/bullet_pipe,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"Xd" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 25
+	},
+/obj/structure/pipes/vents/pump,
+/obj/item/trash/uscm_mre{
+	pixel_y = 14;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/north,
+/area/golden_arrow/dorms)
+"Yb" = (
+/obj/item/trash/popcorn,
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Yr" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"Za" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/dorms)
+
+(1,1,1) = {"
+mr
+hx
+pa
+wz
+Hs
+pa
+wj
+Hb
+pa
+"}
+(2,1,1) = {"
+fD
+iA
+he
+qf
+Or
+Nu
+bV
+qR
+VL
+"}
+(3,1,1) = {"
+Xd
+Pq
+UB
+KM
+kG
+WW
+RH
+Ft
+Wm
+"}
+(4,1,1) = {"
+LT
+nO
+CD
+lG
+EP
+WY
+Ok
+Jx
+gJ
+"}
+(5,1,1) = {"
+nw
+dA
+rL
+Yr
+qT
+lK
+lT
+gR
+dp
+"}
+(6,1,1) = {"
+sa
+sP
+uU
+uc
+Za
+hs
+Mv
+BV
+BN
+"}
+(7,1,1) = {"
+so
+eP
+xF
+Yb
+gv
+pa
+Ma
+eP
+cP
+"}
+(8,1,1) = {"
+QO
+Vx
+Bx
+ro
+Aw
+pa
+aU
+AM
+dX
+"}

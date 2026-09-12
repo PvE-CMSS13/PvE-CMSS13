@@ -124,6 +124,12 @@
 		to_chat(user, SPAN_DANGER("The [src.name] is empty!"))
 		return 0
 
+	if(istype(M, /mob/living/carbon/human) )
+		var/mob/living/carbon/human/H = M
+		if(H.helmet_blocking_mouth())
+			to_chat(user, SPAN_WARNING("You can't make [user == M ? "yourself" : "[M]"] drink the [src], the [H.head] is in the way!."))
+			return
+
 	if(M == user)
 		to_chat(M, SPAN_NOTICE("You swallow a gulp of [src]."))
 		if(reagents.total_volume)
@@ -445,7 +451,7 @@
 	reagents.add_reagent("coconutmilk", 30)
 
 /obj/item/reagent_container/food/drinks/cans/soylent
-	name = "\improper Weyland-Yutani Premium Choco Soylent"
+	name = "\improper Weyland-Yutani Meal Ready-to-Drink (Choco Milk)"
 	desc = "Plastic bottle full of gooey goodness, choco flavor. One bottle has enough calories for a lunch - don't drink it all in one sitting, better not risk getting diarrhea."
 	desc_lore = "Initially designed in 2173 as meal replacement for high-intensity workers, MRD was recalled from the market multiple times due to reports of gastrointestinal illness, including nausea, vomiting, and diarrhea. Improved formula was created, but the brand name was already stained (quite literally), so now the drink remains as emergency food supply for internal Company use."
 	icon_state = "wy_soylent"

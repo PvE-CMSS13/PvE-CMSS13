@@ -91,6 +91,19 @@
 	desc = "An insertable visor HUD into a standard RMC helmet."
 	hud_type = list(MOB_HUD_FACTION_TWE)
 
+/obj/item/device/helmet_visor/pmc
+	name = "C/PAV-Mk.1 visor"
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
+	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_PMC)
+	helmet_overlay = "hud_sight_right"
+
+/obj/item/device/helmet_visor/pmc/alt
+	name = "C/PAV-Mk.2 visor"
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. This one's been adapted by corporate techs to fit in the Mk.16 tactical helmet used by their smartgunners."
+	icon_state = "hud_sight"
+	action_icon_string = "hud_sight_down"
+	helmet_overlay = "hud_sight_full"
+
 /obj/item/device/helmet_visor/medical
 	name = "AN/MPAV-71 visor"
 	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. Uncommon to see in use outside of US Army units."
@@ -323,9 +336,11 @@
 	if(!.)
 		return
 
+/*
 	if(user.client?.view > 7)
 		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
 		return FALSE
+*/
 
 	if(!NVG_VISOR_USAGE(FALSE))
 		to_chat(user, SPAN_NOTICE("Your [src] is out of power! You'll need to recharge it."))
@@ -348,7 +363,7 @@
 
 /obj/item/device/helmet_visor/night_vision/proc/change_view(mob/user, new_size)
 	SIGNAL_HANDLER
-	if(new_size > 7) // cannot use binos with NVO
+	if(new_size > 20) // cannot use loooong-range optics with NVO
 		var/obj/item/clothing/head/helmet/marine/attached_helmet = loc
 		if(!istype(attached_helmet))
 			return

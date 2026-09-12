@@ -61,17 +61,17 @@
  * Bomb protection
  */
 /obj/item/clothing/head/bomb_hood
-	name = "bomb hood"
-	desc = "Use in case of bomb."
+	name = "explosive ordinance disposal helmet"
+	desc = "Blast protective helmet with liquid armor sublayer and reinforced transparent composite visor. Internal cooling prevents overheating, but it still isn't comfortable."
 	icon_state = "bombsuit"
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_inventory = COVEREYES|COVERMOUTH
 	flags_inv_hide = HIDEFACE|HIDEMASK|HIDEEARS|HIDEALLHAIR
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
@@ -80,23 +80,23 @@
 
 /obj/item/clothing/suit/bomb_suit
 	name = "bomb suit"
-	desc = "A suit designed for safety when handling explosives."
+	desc = "A complete suit of venlar, shock-stiffening liquid armor, and rigid composite. An internal cooling system keeps working in it tolerable. Not bulletproof, but very resistant to concussive explosion or shrapnel impact."
 	icon_state = "bombsuit"
 	item_state = "bombsuit"
 	w_class = SIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	slowdown = 2
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_NONE
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bomb = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
 	flags_inv_hide = HIDEJUMPSUIT|HIDETAIL
-	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_HANDS|BODY_FLAG_FEET//mostly just for gameplay reasons.
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	siemens_coefficient = 0
 

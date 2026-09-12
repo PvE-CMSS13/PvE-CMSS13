@@ -82,6 +82,13 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/black/army
+	name = "US Army beret"
+	desc = "The proud tradition of the US Army 1st Air Cav using black berets for their troopers is maintained since the 20th century."
+
+/obj/item/clothing/head/beret/marine/commander/black/army
+	name = "army major black beret"
+
 /obj/item/clothing/head/beret/cm/green
 	icon_state = "beret_green"
 
@@ -368,6 +375,12 @@
 /obj/item/clothing/head/cmcap/boonie/snow
 	icon_state = "booniehat_snow"
 
+/obj/item/clothing/head/cmcap/boonie/fisherman
+	name = "\improper fisherman's boonie hat"
+	desc = "A floppy boonie hat with hooks, lines, and sinkers tucked around the band—clearly the choice of a seasoned angler. Offers shade from the sun and some rain protection."
+	icon_state = "booniehat_fisher"
+	flags_atom = FPRINT|NO_SNOW_TYPE
+
 /obj/item/clothing/head/cmcap/co
 	name = "\improper USCM Commanding officer cap"
 	icon_state = "cocap"
@@ -440,6 +453,22 @@
 	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
 	icon_state = "pmc_hat"
 	flags_marine_hat = HAT_GARB_OVERLAY
+
+/obj/item/clothing/head/cmcap/weyyu/black
+	name = "\improper PMC black tactical cap"
+	icon_state = "pmc_hat_dark"
+
+/obj/item/clothing/head/cmcap/weyyu/guard
+	name = "\improper PMC guard tactical cap"
+	icon_state = "guard_cap"
+
+/obj/item/clothing/head/cmcap/weyyu/guard/crewman
+	name = "\improper PMC driver tactical cap"
+	icon_state = "guard_cap"
+
+/obj/item/clothing/head/cmcap/weyyu/guard/lead
+	name = "\improper PMC guard leader tactical cap"
+	icon_state = "guard_lead_cap"
 
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
@@ -600,6 +629,19 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
+
+/obj/item/clothing/head/cmcap/pmc
+	name = "\improper PMC beret"
+	desc = "The pinnacle of fashion for any aspiring mercenary leader. Designed to protect the head from light impacts."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "officer_hat"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
+/obj/item/clothing/head/cmcap/pmc/fieldleader
+	name = "\improper PMC field officer beret"
+	icon_state = "field_officer_hat"
 
 //==========================//PROTECTIVE\\===============================\\
 //=======================================================================\\
@@ -862,3 +904,31 @@
 		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
 	)
+
+/obj/item/clothing/head/beret/royal_marine/team_leader
+	icon_state = "rmc_beret_tl"
+	item_state = "rmc_beret_tl"
+
+/obj/item/clothing/head/cavalry
+	name = "\improper US cavalry hat"
+	desc = "Also known as Cavalry Stetson, this hat is a symbol of tradition and remembrence of heroism that is ongoing from as far as 19th century. Even though cavalry divison had cashed in its horses for choppers, choppers for dropships, and gone tear-assing around space, looking for the shit."
+	icon_state = "cavalry"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/UA.dmi'
+	)
+
+/obj/item/clothing/head/beret/royal_marine_pvp
+	name = "royal marine beret"
+	desc = "A green beret belonging to the royal marines commando. This beret symbolizes a royal marines ability to fight in any environment, desert, sea, artic or space a royal marine will always be ready."
+	icon_state = "rmc_beret"
+	item_state = "rmc_beret"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	flags_atom = NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
+	)
+
+/obj/item/clothing/head/beret/royal_marine_pvp/team_leader
+	icon_state = "rmc_beret_tl"
+	item_state = "rmc_beret_tl"

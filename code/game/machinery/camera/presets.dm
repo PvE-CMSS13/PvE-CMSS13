@@ -126,7 +126,10 @@
 	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_TRIPOLI)
 
 /obj/structure/machinery/camera/autoname/golden_arrow/gibraltar
-	network = list(CAMERA_NET_GOLDEN_ARROW, CAMERA_NET_GIBRALTAR)
+	network = list(CAMERA_NET_GIBRALTAR)
+
+/obj/structure/machinery/camera/autoname/golden_arrow/korobka
+	network = list(CAMERA_NET_KOROBKA)
 
 //used by the landing camera dropship equipment. Do not place them right under where the dropship lands.
 //Should place them near each corner of your LZs.
@@ -189,5 +192,5 @@
 	network = list(CAMERA_NET_SIMULATION)
 	invuln = TRUE
 	view_range = 14
-	use_power = FALSE
+	use_power = USE_POWER_NONE
 	invisibility = INVISIBILITY_MAXIMUM

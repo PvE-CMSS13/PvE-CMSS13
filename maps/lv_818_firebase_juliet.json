@@ -1,0 +1,8 @@
+{
+    "map_name": "LV818 Firebase Juliet",
+    "map_path": "map_files/LV_818_Firebase_Juliet",
+    "map_file": "LV_818_Firebase_Juliet.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}

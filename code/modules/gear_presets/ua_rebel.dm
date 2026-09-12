@@ -405,8 +405,422 @@
 	add_rebel_ua_shoes(new_human)
 	if(prob(35))
 		add_rebel_gloves(new_human)
-	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/M42A(new_human))
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/M42A/basic(new_human))
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+//EVA
+//*****************************************************************************************************/
+//They get "TWE" rebel guns because those on average have higher AP. Spacesuits have a little more bullet protection overall.
+/datum/equipment_preset/rebel/soldier/eva
+	name = "UA Rebel, Soldier (Rifle, EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/rebel/soldier/eva/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/rebel/soldier/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	if(prob(70))
+		add_rebel_twe_rifle(new_human)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/ap, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+/datum/equipment_preset/rebel/soldier/eva/machine_gun
+	name = "UA Rebel, Soldier (Machine Gun, EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/rebel/soldier/eva/machine_gun/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/rebel/soldier/eva/machine_gun/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	var/random_gun = rand(1,3)
+	switch(random_gun)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m16, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ar10, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+//*****************************************************************************************************/
+/datum/equipment_preset/rebel/soldier/eva/grenade
+	name = "UA Rebel, Grenadier (M92 HE IED, EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,2)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	//nade lancher
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/ied_he, WEAR_J_STORE)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary
+	name = "UA Rebel, Grenadier (M92 Incend IED, EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,2)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	//nade lancher
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary, WEAR_J_STORE)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/rebel/soldier/shotgun/eva
+	name = "UA Rebel, Soldier (Shotgun, EVA)"
+
+/datum/equipment_preset/rebel/soldier/shotgun/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	add_rebel_twe_shoes(new_human)
+	add_rebel_twe_shotgun(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/rebel/soldier/flamer/eva
+	name = "UA Rebel, Soldier (Incinerator, EVA)"
+	skills = /datum/skills/clf/specialist
+
+/datum/equipment_preset/rebel/soldier/flamer/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/flamer/weak(new_human))
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/weak, WEAR_IN_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/rebel/soldier/bolt_eva
+	name = "UA Rebel, Sniper (Basira-Armstrong, EVA)"
+	skills = /datum/skills/clf/sniper
+
+/datum/equipment_preset/rebel/soldier/bolt_eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	//waist
+	var/random_belt = rand(1,3)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/boltaction(new_human))
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction(new_human), WEAR_IN_BELT)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/rebel/sniper/eva
+	name = "UA Rebel, Sniper (Type-88, EVA)"
+	skills = /datum/skills/clf/sniper
+
+/datum/equipment_preset/rebel/sniper/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,4)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_BELT)
+
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.put_in_active_hand(new /obj/item/weapon/gun/rifle/sniper/svd/pve(new_human))
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd(new_human), WEAR_IN_BELT)
+
+//*****************************************************************************************************/

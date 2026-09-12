@@ -135,12 +135,39 @@
 /obj/structure/closet/secure_closet/marine_personal/forecon/rto
 	job = JOB_SQUAD_RTO
 
+// ==UPP FORECON aka SISSI== //
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret/recon(src)
+	new /obj/item/clothing/under/marine/veteran/UPP(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/accessory/patch/upp/recon(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/forecon(src)
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rto
+	job = JOB_SQUAD_RTO
+
 // ==WY PMC== //
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/pmc(src)
 	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
-	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+	new /obj/item/clothing/shoes/veteran/pmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/rifleman
 	job = JOB_SQUAD_MARINE
@@ -161,7 +188,7 @@
 	job = JOB_SO
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander/spawn_gear()
-	new /obj/item/clothing/head/beret/pmc(src)
+	new /obj/item/clothing/head/cmcap/pmc(src)
 	new /obj/item/clothing/under/liaison_suit/formal(src)
 	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
@@ -175,11 +202,17 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader/spawn_gear()
+	new /obj/item/clothing/head/cmcap/royal_marine(src)
+	new /obj/item/clothing/under/marine/veteran/royal_marine(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
+	new /obj/item/clothing/shoes/marine/rmc/knife(src)
+
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander/spawn_gear()
 	new /obj/item/clothing/head/cmcap/royal_marine(src)
 	new /obj/item/clothing/under/marine/veteran/royal_marine/lt(src)
 	new /obj/item/clothing/accessory/ranks/rmc/o1(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq(src)
 	new /obj/item/clothing/shoes/marine/rmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/rifleman

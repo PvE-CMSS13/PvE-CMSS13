@@ -100,7 +100,6 @@ SUBSYSTEM_DEF(ticker)
 			time_left -= wait
 
 			if(time_left <= 40 SECONDS && !tipped)
-				send_tip_of_the_round()
 				tipped = TRUE
 				flash_clients()
 

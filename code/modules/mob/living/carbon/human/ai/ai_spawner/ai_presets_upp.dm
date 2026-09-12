@@ -6,6 +6,11 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
 	path = /datum/equipment_preset/upp/militia
 
+/datum/human_ai_equipment_preset/upp/militia/rto
+	name = "UPP People's Territorial Guardsman RTO"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is a radio transmissions operator."
+	path = /datum/equipment_preset/upp/militia/rto
+
 /datum/human_ai_equipment_preset/upp/militia/at
 	name = "UPP People's Territorial Guardsman Anti-Tank"
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
@@ -46,6 +51,16 @@
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. EVA equipped"
 	path = /datum/equipment_preset/upp/rifleman/eva
 
+/datum/human_ai_equipment_preset/upp/rto
+	name = "UPP Squad RTO"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto
+
+/datum/human_ai_equipment_preset/upp/rto/ag80
+	name = "UPP Squad RTO - AG80"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/ag80
+
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
 	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily. This one shoots standard 10x27mm."
@@ -55,11 +70,6 @@
 	name = "UPP Squad Anti-Tank"
 	desc = "UPP RPG armed soldier, otherwise similarly equipped as standard"
 	path = /datum/equipment_preset/upp/rifleman/at
-
-/datum/human_ai_equipment_preset/upp/combat_synth
-	name = "UPP Synthetic Commando"
-	desc = "A strong commando synthetic equipped with several weapons. Its durability and firepower lets it take on multiple marines at once."
-	path = /datum/equipment_preset/upp/synth/commando
 
 /datum/human_ai_equipment_preset/upp/medic
 	name = "UPP Squad Sanitar"
@@ -122,6 +132,41 @@
 	name = "UPP Support Synthetic"
 	desc = "A generic UPP Support synthetic"
 	path = /datum/equipment_preset/upp/synth
+
+/datum/human_ai_equipment_preset/upp/forecon/rifleman
+	name = "UPP Recon Rifleman"
+	desc = "Light Infantry UPP soldier. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/rto
+	name = "UPP Recon RTO"
+	desc = "Light Infantry UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner
+	name = "UPP Recon Machinegunner"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG."
+	path = /datum/equipment_preset/upp/machinegunner/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner_heap
+	name = "UPP Recon Machinegunner (HEAP)"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG firing HEAP rounds."
+	path = /datum/equipment_preset/upp/machinegunner/forecon/heap
+
+/datum/human_ai_equipment_preset/upp/forecon/medic
+	name = "UPP Recon Sanitar"
+	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
+	path = /datum/equipment_preset/upp/sanitar/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/sergeant
+	name = "UPP Assistant Recon Squad Sergeant"
+	desc = "The assistant leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/squadlead/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/platoon_sergeant
+	name = "UPP Recon Squad Sergeant"
+	desc = "The leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/navallead/forecon
 
 /datum/human_ai_equipment_preset/upp/combat_android
 	name = "UPP Combat Android"
@@ -219,3 +264,65 @@
 	name = "UPP Dzho Automaton"
 	desc = "You always know a legally distinct working joe"
 	path = /datum/equipment_preset/synth/working_joe/upp
+
+/datum/human_ai_equipment_preset/upp/eva
+	faction = "UPP (EVA)"
+
+/datum/human_ai_equipment_preset/upp/eva/rifleman_eva
+	name = "EVA UPP Squad Rifleman (AG 80)"
+	desc = "The standard UPP soldier armed with a AG-80. "
+	path = /datum/equipment_preset/upp/rifleman/eva
+
+/datum/human_ai_equipment_preset/upp/eva/rifleman_eva_type71
+	name = "EVA UPP Squad Rifleman (Type 71)"
+	desc = "The standard UPP soldier armed with a Type 71. Sometimes wears a toolbelt."
+	path = /datum/equipment_preset/upp/rifleman/eva_type71
+
+/datum/human_ai_equipment_preset/upp/eva/rifleman_eva_sniper
+	name = "EVA UPP Squad Sniper (Type 88)"
+	desc = "The standard UPP soldier armed with a Non-AP Type 88 SVD."
+	path = /datum/equipment_preset/upp/rifleman/eva/sniper
+
+/datum/human_ai_equipment_preset/upp/eva/shotgun_eva
+	name = "EVA UPP Squad Shotgunner"
+	desc = "The standard UPP soldier, but with a Type 23 shotgun loaded with slugs."
+	path = /datum/equipment_preset/upp/rifleman/shotgun_eva
+
+/datum/human_ai_equipment_preset/upp/eva/machinegunner_eva
+	name = "EVA UPP Squad Machinegunner"
+	desc = "The UPP’s answer to the USCM’s smartgunner. Shoots HEAP 10x27mm."
+	path = /datum/equipment_preset/upp/machinegunner/eva
+
+/datum/human_ai_equipment_preset/upp/eva/flamethrower_eva
+	name = "EVA UPP Squad Flamethrower"
+	desc = "Equiped with a flamerthrower and pistol sidearm, can kill multiple marines if not anticipated."
+	path = /datum/equipment_preset/upp/rifleman/flamethrower_eva
+
+/datum/human_ai_equipment_preset/upp/eva/eva_rocket
+	name = "EVA UPP Squad Rocketeer"
+	desc = "Carries a UPP rocket launcher loaded with a single AP rocket, and a sidearm."
+	path = /datum/equipment_preset/upp/rifleman/eva_rocket
+
+/datum/human_ai_equipment_preset/upp/eva/grenade_eva
+	name = "EVA UPP Squad Grenadier (M92 HEFA)"
+	desc = "Has a sidearm and a M92 grenade launcher loaded with 30mm HEFA."
+	path = /datum/equipment_preset/upp/rifleman/grenade_eva
+
+/datum/human_ai_equipment_preset/upp/eva/medic_eva
+	name = "EVA UPP Squad Sanitar"
+	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
+	path = /datum/equipment_preset/upp/sanitar/eva
+
+/datum/human_ai_equipment_preset/upp/eva/sergeant
+	name = "EVA UPP Squad Sergeant"
+	desc = "The leader of a UPP squad. Functionally very similar to squad riflemen."
+	path = /datum/equipment_preset/upp/squadlead_eva
+
+//
+
+/datum/human_ai_equipment_preset/upp/eva/civilian
+	name = "EVA UPP Civilian"
+	desc = "A generic colonist in an emergency space suit and limited air supply."
+	path = /datum/equipment_preset/upp/colonist/eva
+
+

@@ -265,3 +265,216 @@
 /obj/structure/machinery/door_control/cl/quarter/windows
 	name = "Quarter Windows Shutters"
 	id = "cl_quarter_windows"
+
+// Hybrisa lockdown announcements
+
+/obj/structure/machinery/door_control/colony_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/colony_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The colony-wide lockdown cannot be lifted yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The colony-wide lockdown has already been lifted."))
+		return
+	. = ..()
+	marine_announcement("The colony-wide lockdown protocols have been lifted.")
+	used = TRUE
+
+// Research
+
+/obj/structure/machinery/door_control/research_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 10 MINUTES
+
+/obj/structure/machinery/door_control/research_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The WY-Research-Facility lockdown cannot be lifted yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The WY-Research-Facility lockdown has already been lifted."))
+		return
+	. = ..()
+	marine_announcement("The WY-Research-Facility lockdown protocols have been lifted.")
+	used = TRUE
+
+
+// Navalis Rig 13 Buttons
+
+// Navalis Industrial Rig Lockdown
+
+/obj/structure/machinery/door_control/navalis_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The Industrial Rig lockdown cannot be lifted yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The Industrial Rig lockdown has already been lifted."))
+		return
+	. = ..()
+	marine_announcement("The Industrial Rig primary entrance lockdown has been lifted.")
+	xeno_announcement("The hosts have opened the entrance to the industrial area! Beware of the imminent southern attack!")
+	used = TRUE
+
+// PSV Charon vessel Vehicle Accessway
+
+/obj/structure/machinery/door_control/navalis_charon_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_charon_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The vehicle accessway cannot be opened yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The vehicle accessway has already been opened."))
+		return
+	. = ..()
+	marine_announcement("The PSV Charon vehicle accessway has been opened.")
+	xeno_announcement("The hosts have opened the supply vessels accessway! Be wary of a northern flank!")
+	used = TRUE
+
+// Comms Industrial Accessway
+
+/obj/structure/machinery/door_control/navalis_comms_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_comms_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The internal access path cannot be opened yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The internal access path has already been opened."))
+		return
+	. = ..()
+	marine_announcement("The Industrial Rig's secondary vehicle access blastdoors have been opened.")
+	used = TRUE
+
+// Internal Industrial Accessway
+
+/obj/structure/machinery/door_control/navalis_industrial_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_industrial_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The internal access path cannot be opened yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The internal access path has already been opened."))
+		return
+	. = ..()
+	marine_announcement("The Industrial Rig's internal blastdoors have been opened.")
+	xeno_announcement("Be wary! The hosts have opened the internal blastdoors of the industrial rig. This area may now be far harder to hold!")
+	used = TRUE
+
+// Internal Industrial Accessway
+
+/obj/structure/machinery/door_control/navalis_walkway_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_walkway_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("This external access blastdoor cannot be sealed off yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The external access blastdoor has already been sealed off."))
+		return
+	. = ..()
+	marine_announcement("The Industrial Rig's external eastern blastdoor has been permanently sealed off.")
+	xeno_announcement("The hosts have shut off the external lattice access to the industrial area! We can now no longer access this area via our hidden external walkway!")
+	used = TRUE
+
+// Dig Site Walkway
+
+/obj/structure/machinery/door_control/navalis_digsite_nw_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_digsite_nw_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("This external access blastdoor cannot be sealed off yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The external access blastdoor has already been sealed off."))
+		return
+	. = ..()
+	marine_announcement("The Mining Platforms external blastdoors have been sealed off. The xenomorphs will no longer be able to use this area to cross over to the primary rig structure.")
+	xeno_announcement("The hosts sealed off the exteral walkway doors in the Mining Platform! We will no longer be able to use this to cross over easily to the main rig!")
+	used = TRUE
+
+// Command Upper Access
+
+/obj/structure/machinery/door_control/navalis_command_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 25 MINUTES
+
+/obj/structure/machinery/door_control/navalis_command_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("This external access blastdoor cannot be opened yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The external access blastdoor has already been opened off."))
+		return
+	. = ..()
+	marine_announcement("The Command - Logistic rig level 2 bridge access  blastdoor has been opened.")
+	xeno_announcement("The hosts have opened the upper bridge access to the Command rig!")
+	desiredstate = !desiredstate
+
+/obj/structure/machinery/door_control/abyssal_lockdown
+	var/used = FALSE
+	var/colony_lockdown_time = 5 MINUTES
+
+/obj/structure/machinery/door_control/abyssal_lockdown/use_button(mob/living/user,force)
+	if(world.time < SSticker.mode.round_time_lobby + colony_lockdown_time)
+		to_chat(user, SPAN_WARNING("The station-wide emergency lockdown cannot be lifted yet. Please wait another [floor((SSticker.mode.round_time_lobby + colony_lockdown_time-world.time)/600)] minutes before trying again."))
+		return
+	if(used)
+		to_chat(user, SPAN_WARNING("The station-wide emergency lockdown has already been lifted."))
+		return
+	. = ..()
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_ABYSSAL_LOCKDOWN)
+	marine_announcement("The station-wide emergency lockdown has been lifted.")
+	xeno_announcement("We sense the encroachment of new hosts upon our metal hive.")
+	used = TRUE
+
+/obj/structure/machinery/door_control/dropship_airlock
+	name = "maintenance hatch release"
+	var/linked_inner_dropship_airlock_id = "generic"
+	var/obj/docking_port/stationary/marine_dropship/airlock/inner/linked_inner = null
+
+/obj/structure/machinery/door_control/dropship_airlock/Initialize(mapload, ...)
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/machinery/door_control/dropship_airlock/LateInitialize()
+	. = ..()
+	for(var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock in GLOB.dropship_airlock_docking_ports)
+		if(linked_inner_dropship_airlock_id == inner_airlock.dropship_airlock_id)
+			linked_inner = inner_airlock
+			linked_inner.door_controls += src
+
+/obj/structure/machinery/door_control/dropship_airlock/Destroy()
+	if(linked_inner)
+		linked_inner.door_controls -= src
+	. = ..()
+
+/obj/structure/machinery/door_control/dropship_airlock/use_button(mob/living/user, force)
+	if(linked_inner?.open_outer_airlock)
+		to_chat(user, SPAN_WARNING("Locked out while the outer airlock is open."))
+		flick(initial(icon_state) + "-denied",src)
+		return
+	. = ..()
+
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_one
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_ONE
+
+/obj/structure/machinery/door_control/dropship_airlock/golden_arrow_two
+	linked_inner_dropship_airlock_id = GOLDEN_ARROW_AIRLOCK_TWO

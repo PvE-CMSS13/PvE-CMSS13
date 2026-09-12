@@ -14,7 +14,7 @@
 	var/list/egg_triggers = list()
 	var/status = EGG_GROWING //can be EGG_GROWING, EGG_GROWN, EGG_BURST, EGG_BURSTING, or EGG_DESTROYED; all mutually exclusive
 	var/on_fire = FALSE
-	var/hivenumber = XENO_HIVE_NORMAL
+	hivenumber = XENO_HIVE_NORMAL
 	var/flags_embryo = NO_FLAGS
 	var/trigger_radius = 2
 
@@ -234,6 +234,9 @@
 
 /obj/effect/alien/egg/alpha
 	hivenumber = XENO_HIVE_ALPHA
+
+/obj/effect/alien/egg/kseries
+	hivenumber = XENO_HIVE_K_SERIES
 
 /obj/effect/alien/egg/forsaken
 	hivenumber = XENO_HIVE_FORSAKEN

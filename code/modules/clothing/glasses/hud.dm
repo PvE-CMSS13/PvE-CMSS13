@@ -17,6 +17,14 @@
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_MEDIC
 
+/obj/item/clothing/glasses/hud/health/basic
+	name = "\improper Basic HealthMate HUD"
+	desc = "A heads-up display that scans the humans in view and provides accurate data about their health status. This one is a simpler model."
+	hud_type = MOB_HUD_MEDICAL_BASIC
+	req_skill = NONE
+	req_skill_level = NONE
+	actions_types = list(/datum/action/item_action/toggle)
+
 /obj/item/clothing/glasses/hud/health/prescription
 	name = "\improper Prescription HealthMate HUD"
 	desc = "A heads-up display that scans the humans in view and provides accurate data about their health status. Contains prescription lenses."

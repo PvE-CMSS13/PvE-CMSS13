@@ -13,7 +13,7 @@
 /// RMC2E, Sapper
 #define PAY_SHORT_RMC2E "RMC2E"
 
-/// RMC2G, Gunner
+/// RMC2G, Lance Bombardier
 #define PAY_SHORT_RMC2G "RMC2G"
 
 /// RMC3, Corporal

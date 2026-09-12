@@ -193,6 +193,23 @@
 	// Unable to move, try next time.
 	if(!can_move_and_apply_move_delay())
 		return TRUE
+	var/area/check_for_gravity = get_area(src)
+
+	if(!check_for_gravity.gravity)
+		if(!Check_Dense_Object())
+			if(prob(10))
+				KnockDown(0.2)
+				inertia_dir = get_dir(src, current_path[current_path.len-1])
+				step(src, inertia_dir)
+				apply_damage(30)
+				var/obj/item/thrown_piece
+				if(prob(50))
+					thrown_piece = new /obj/item/stack/sheet/xenochitin(src.loc)
+				else
+					thrown_piece = new /obj/item/xenos_claw(src.loc)
+				INVOKE_ASYNC(thrown_piece, TYPE_PROC_REF(/atom/movable, throw_atom), get_ranged_target_turf(src, reverse_direction(inertia_dir), 8), 8, SPEED_VERY_SLOW, src, TRUE)
+				QDEL_IN(thrown_piece, 20)
+			return TRUE
 
 	var/turf/next_turf = current_path[current_path.len]
 	var/list/L = LinkBlocked(src, loc, next_turf, list(src), TRUE)

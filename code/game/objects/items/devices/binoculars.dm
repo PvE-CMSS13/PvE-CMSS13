@@ -67,6 +67,7 @@
 	var/rangefinder_popup = TRUE //Whether coordinates are displayed in a separate popup window.
 	var/last_x = "UNKNOWN"
 	var/last_y = "UNKNOWN"
+	var/last_z = "UNKNOWN"
 
 	/// Normally used for the small green dot signifying coordinations-obtaining mode.
 	var/range_laser_overlay = "laser_range"
@@ -84,7 +85,7 @@
 
 /obj/item/device/binoculars/range/get_examine_text(mob/user)
 	. = ..()
-	. += SPAN_NOTICE(FONT_SIZE_LARGE("The rangefinder reads: LONGITUDE [last_x], LATITUDE [last_y]."))
+	. += SPAN_NOTICE(FONT_SIZE_LARGE("The rangefinder reads: LONGITUDE [last_x], LATITUDE [last_y], HEIGHT [last_z]."))
 
 /obj/item/device/binoculars/range/verb/toggle_rangefinder_popup()
 	set name = "Toggle Rangefinder Display"
@@ -171,6 +172,7 @@
 	coord = LT
 	last_x = obfuscate_x(coord.x)
 	last_y = obfuscate_y(coord.y)
+	last_z = obfuscate_z(coord.z)
 	playsound(src, 'sound/effects/binoctarget.ogg', 35)
 	show_coords(user)
 	while(coord)
@@ -182,7 +184,7 @@
 	if(rangefinder_popup)
 		tgui_interact(user)
 	else
-		to_chat(user, SPAN_NOTICE(FONT_SIZE_LARGE("SIMPLIFIED COORDINATES OF TARGET. LONGITUDE [last_x]. LATITUDE [last_y].")))
+		to_chat(user, SPAN_NOTICE(FONT_SIZE_LARGE("SIMPLIFIED COORDINATES OF TARGET. LONGITUDE [last_x]. LATITUDE [last_y], HEIGHT [last_z].")))
 
 /obj/item/device/binoculars/range/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -198,6 +200,7 @@
 
 	data["xcoord"] = src.last_x
 	data["ycoord"] = src.last_y
+	data["zcoord"] = src.last_z
 
 	return data
 
@@ -350,6 +353,7 @@
 		coord = LT
 		last_x = obfuscate_x(coord.x)
 		last_y = obfuscate_y(coord.y)
+		last_z = obfuscate_z(coord.z)
 		show_coords(user)
 		playsound(src, 'sound/effects/binoctarget.ogg', 35)
 		while(coord)
@@ -607,6 +611,14 @@
 
 	COOLDOWN_START(designator, spotting_cooldown, designator.spotting_cooldown_delay)
 	return TRUE
+
+/obj/item/device/binoculars/range/designator/spotter/equipped(mob/living/user, slot)
+	. = ..()
+	//Toggle Spot Target on equip in hands. Avoids toggle in pockets
+	if(slot == WEAR_R_HAND || slot == WEAR_L_HAND)
+		var /datum/action/toggling_action = locate(/datum/action/item_action/specialist/spotter_target) in user.actions
+		if(toggling_action)
+			toggling_action.action_activate()
 
 //ADVANCED LASER DESIGNATER, was used for WO.
 /obj/item/device/binoculars/designator

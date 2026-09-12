@@ -18,8 +18,9 @@
 		var/thermal_protection = get_flags_heat_protection(loc_temp) //This returns a 0 - 1 value, which corresponds to the percentage of protection based on what you're wearing and what you're exposed to.
 		if(thermal_protection < 1)
 			temp_adj = (1 - thermal_protection) * ((loc_temp - bodytemperature) / BODYTEMP_HEAT_DIVISOR)
-
 	bodytemperature += clamp(temp_adj, BODYTEMP_COOLING_MAX, BODYTEMP_HEATING_MAX)
+	if(GLOB.all_human_breathe_space)
+		bodytemperature = max(bodytemperature, species.cold_level_1)
 
 	//+/- 50 degrees from 310.15K is the 'safe' zone, where no damage is dealt.
 	if(bodytemperature > species.heat_level_1)

@@ -57,6 +57,16 @@
 
 	door_locked = FALSE
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 4,
+		"slash" = 3,
+		"bullet" = 3,
+		"explosive" = 2.5,
+		"blunt" = 2.5,
+		"abstract" = 1,
+	)
+
 	var/overdrive_next = 0
 	var/overdrive_cooldown = 15 SECONDS
 	var/overdrive_duration = 3 SECONDS

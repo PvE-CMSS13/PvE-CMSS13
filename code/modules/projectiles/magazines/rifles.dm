@@ -43,6 +43,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/rifle/heap/empty
+	current_rounds = 0
+
 /obj/item/ammo_magazine/rifle/ap
 	name = "\improper M41A AP magazine (10x24mm)"
 	desc = "A 10mm armor piercing magazine."
@@ -178,6 +181,9 @@
 	desc = "A magazine of high explosive armor piercing 10x28mm rounds for use in the M49A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/m49a/heap/empty
+	current_rounds = 0
 
 /obj/item/ammo_magazine/rifle/m49a/penetrating
 	name = "\improper M49A wall-penetrating magazine (10x28mm)"
@@ -543,6 +549,12 @@
 	desc = "A magazine for the M707 \"Vulture\" anti-matieriel rifle. Contains up to 4 massively oversized <b>IFF-CAPABLE</b> holo-targeting rounds, which excel at marking heavy targets to be attacked by allied ground forces. The logistical requirements for such capabilities heavily hinder the performance and stopping power of this round."
 	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
+
+/obj/item/ammo_magazine/rifle/boltaction/vulture/terror
+	name = "\improper M707 cursed magazine (20x102mm)"
+	desc = "A magazine for the M707 anti-matieriel rifle. Contains two... Something, inside."
+	default_ammo = /datum/ammo/xeno_container/king
+	max_rounds = 2
 
 //=ROYAL MARINES=\\
 

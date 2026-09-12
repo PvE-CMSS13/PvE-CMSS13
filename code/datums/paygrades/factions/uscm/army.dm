@@ -57,7 +57,7 @@
 /datum/paygrade/army/e6
 	paygrade = PAY_SHORT_AE6
 	name = "Staff Sergeant"
-	prefix = "SSGT"
+	prefix = "SSG"
 	rank_pin = /obj/item/clothing/accessory/ranks/army/e6
 	ranking = 6
 	pay_multiplier = 2.2

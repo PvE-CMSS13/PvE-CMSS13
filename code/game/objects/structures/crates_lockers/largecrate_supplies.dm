@@ -251,9 +251,29 @@
 	icon_state = "case_double"
 
 /obj/structure/largecrate/supply/explosives/mines
-	name = "\improper M20A2 claymore case (x25)"
-	desc = "A case containing five boxes of five M20A2 claymores."
+	name = "M20A2 claymore bulk crate (x25)"
+	desc = "A crate containing five cases of five M20A2 claymores."
 	supplies = list(/obj/item/storage/box/explosive_mines = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/m760
+	name = "M760 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five M760 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/m760ap = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/m5a3betty
+	name = "M5A3 bounding mine bulk crate (x25)"
+	desc = "A crate containing five cases of five M5A3 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/m5a3betty = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/fzd91
+	name = "FZD-91 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five FZD-91 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/fzd91 = 5)
+
+/obj/structure/largecrate/supply/explosives/mines/tn13
+	name = "TN-13 landmine bulk crate (x25)"
+	desc = "A crate containing five cases of five TN-13 antipersonnel landmines."
+	supplies = list(/obj/item/storage/box/explosive_mines/tn13 = 5)
 
 /obj/structure/largecrate/supply/explosives/grenades
 	name = "\improper M40 HEDP grenade case (x50)"
@@ -566,3 +586,49 @@
 
 	qdel(src)
 	return TRUE
+
+// Empty
+
+/obj/structure/largecrate/empty/secure
+	name = "secure supply crate"
+	desc = "A secure crate."
+	icon_state = "secure_crate_strapped"
+	var/strapped = TRUE
+
+/obj/structure/largecrate/empty/secure/attackby(obj/item/W as obj, mob/user as mob)
+	if (!strapped)
+		..()
+		return
+
+	if (!W.sharp)
+		to_chat(user, SPAN_NOTICE("You need something sharp to cut off the straps."))
+		return
+
+	to_chat(user, SPAN_NOTICE("You begin to cut the straps off [src]..."))
+
+	if (do_after(user, 1.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		playsound(loc, 'sound/items/Wirecutter.ogg', 25, 1)
+		to_chat(user, SPAN_NOTICE("You cut the straps away."))
+		icon_state = "secure_crate"
+		strapped = FALSE
+
+/obj/structure/largecrate/empty/case
+	name = "storage case"
+	desc = "A black storage case."
+	icon_state = "case"
+
+/obj/structure/largecrate/empty/case/double
+	name = "cases"
+	desc = "A stack of black storage cases."
+	icon_state = "case_double"
+
+/obj/structure/largecrate/empty/case/double/unpack()
+	if(parts_type)
+		new parts_type(loc, 2)
+	for(var/obj/thing in contents)
+		thing.forceMove(loc)
+	new /obj/structure/largecrate/empty/case(loc)
+	playsound(src, unpacking_sound, 35)
+	qdel(src)
+
+//----------------------------------------------------//

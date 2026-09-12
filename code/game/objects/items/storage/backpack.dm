@@ -496,6 +496,20 @@
 	max_storage_space = 15
 	xeno_types = null
 
+/obj/item/storage/backpack/marine/satchel/army // I hate Steelpoint why they even need this subtype
+	name = "\improper US Army satchel"
+
+/obj/item/storage/backpack/marine/satchel/big/army
+	name = "\improper US Army logistics IMP backpack"
+
+/obj/item/storage/backpack/molle/army
+	name = "\improper M1 MOLLE Satchel"
+	desc = "Tactical satchel manufactured by one of the Alphatech subsidiaries. Very lightweight beltbag variant that utilizes UA standard MOLLE fastening systems. Standard issue pack for US army troopers."
+
+/obj/item/storage/backpack/molle/backpack/army
+	name = "\improper M2 MOLLE Backpack"
+	desc = "Tactical backpack manufactured by one of the Alphatech subsidiaries. Very lightweight backpack that utilizes UA standard MOLLE fastening systems, which allows easy access and optimal weight distribution. Standard issue heavy duty pack for US army troopers."
+
 /obj/item/storage/backpack/marine/satchel/standard
 	has_gamemode_skin = FALSE
 
@@ -581,7 +595,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559 'Bagulnik' Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+
+	phone_category = PHONE_UPP_SOLDIER
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 
@@ -589,11 +607,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper USCM Small Radio Telephone Pack"
 	max_storage_space = 10
 
-/obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	name = "\improper UPP Radio Telephone Pack"
-	networks_receive = list(FACTION_UPP)
-	networks_transmit = list(FACTION_UPP)
-	phone_category = PHONE_UPP_SOLDIER
+/obj/item/storage/backpack/marine/satchel/rto/upp_net/small
+	name = "\improper R-559-A 'Bagulnik' Small Radio Telephone Pack"
+	desc = "A smaller variant of the heavy-duty pack, used for telecommunications between central command. Commonly carried by RTOs."
+	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
@@ -604,6 +621,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "smock"
 	worn_accessible = TRUE
 	xeno_types = null
+
+/obj/item/storage/backpack/marine/smock/select_gamemode_skin()
+	. = ..()
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("urban")
+			name = "\improper M60 Sniper Cloak"
+			desc = "A specially-designed cloak with thermal dampering waterproof coating, designed for urban environments. Doesn't have the optical camouflage electronics that more advanced M68 cloak has."
 
 /obj/item/storage/backpack/marine/marsoc
 	name = "\improper USCM SOF IMP tactical rucksack"
@@ -623,13 +647,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/grenadepack
 	name = "\improper USCM IMP M63A1 grenade satchel"
-	desc = "A secure satchel with dedicated grenade pouches meant to minimize risks of secondary ignition."
+	desc = "A secure satchel with dedicated partitions meant to minimize risks of secondary ignition of stored grenade packets."
 	icon_state = "grenadierpack"
 	overlays = list("+grenadierpack_unlocked")
 	worn_accessible = TRUE
-	max_storage_space = 36 //12 grenades
-	storage_slots = 12
-	can_hold = list(/obj/item/explosive/grenade)
+	storage_slots = 7
+	can_hold = list(/obj/item/explosive/grenade, /obj/item/storage/box/packet/)
+	max_w_class = SIZE_LARGE
 	is_id_lockable = TRUE
 	has_gamemode_skin = FALSE
 	xeno_types = null
@@ -705,6 +729,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
+/obj/item/storage/backpack/general_belt/wy
+	name = "\improper WY-TM612 pattern general utility pouch"
+	desc = "A small, lightweight pouch that can be clipped onto M4 Pattern PMC armor to provide additional storage. The newer WY-TM612, while uncomfortable, can also be clipped around the waist."
+	icon_state = "wy_sparepouch"
+	item_state = "wy_sparepouch"
+
 #define FULL_CAMO_ALPHA 15
 #define VISIBLE_CAMO_ALPHA 60
 
@@ -729,6 +759,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/camo_message_delay = 2 SECONDS
 
 	actions_types = list(/datum/action/item_action/specialist/toggle_cloak)
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("urban")
+			icon_state = "u_scout_cloak"
+		else
+			icon_state = "scout_cloak"
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/dropped(mob/user)
 	if(ishuman(user) && !issynth(user))
@@ -881,6 +919,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	current_camo = FULL_CAMO_ALPHA
 	visible_camo_alpha = VISIBLE_CAMO_ALPHA
 
+/obj/item/storage/backpack/marine/satchel/scout_cloak/invis/wy_droid
+	name = "M7X Mark II optical camouflage powerpack"
+	desc = "A heavy-duty powerpack carried by Weyland-Yutani combat androids. Powers the reverse-engineered optical camouflage system utilized by M7X Mark II Apesuit."
+	icon_state = "invis_android_powerpack"
+	flags_atom = FPRINT
+	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/dark)
+
 // Welder Backpacks //
 
 /obj/item/storage/backpack/marine/engineerpack
@@ -970,7 +1015,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "satchel_marine_welder"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/marine/engineerpack/welder_chestrig
@@ -980,7 +1025,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "welder_chestrig"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 // Pyrotechnician Spec backpack fuel tank
@@ -1070,16 +1115,65 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/engineerpack/ert
 	name = "\improper lightweight technician welderpack"
-	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."
+	desc = "A small, lightweight pack for expeditions and short-range operations. Features a compact fueltank for quick blowtorch refueling."
 	icon_state = "ERT_satchel_welder"
 	has_gamemode_skin = FALSE
 	worn_accessible = TRUE
+	max_fuel = 210
+	max_storage_space = 12
+
+/obj/item/storage/backpack/pmc
+	name = "\improper W-Y combat pack"
+	desc = "A small, lightweight pack for expeditions and short-range operations, designed for Weyland-Yutani security and private military personnel."
+	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon_state = "pmc_satchel"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/back.dmi'
+	)
+	worn_accessible = TRUE
+	max_storage_space = 18
+
+/obj/item/storage/backpack/pmc/backpack
+	name = "\improper PMC combat backpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs."
+	icon_state = "pmc_backpack"
+	max_storage_space = 24
+	worn_accessible = FALSE
+
+/obj/item/storage/backpack/pmc/backpack/rto_broken
+	name = "\improper Broken WY Radio Telephone Pack"
+	desc = "A heavy-duty extended-pack, used for telecommunications between central command. Commonly carried by RTOs. This one bears the logo of Weyland Yutani and internal systems seem to completely fried and broken."
+	icon_state = "pmc_broken_rto"
+	item_state = "pmc_broken_rto"
+	flags_atom = FPRINT
+	flags_item = ITEM_OVERRIDE_NORTHFACE
+
+/obj/item/storage/backpack/pmc/backpack/commando
+	name = "\improper W-Y Commando combat backpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani Commandos."
+	icon_state = "commando_backpack"
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/pmc/backpack/commando/leader
+	icon_state = "commando_leader_backpack"
+
+/obj/item/storage/backpack/pmc/backpack/commando/apesuit
+	name = "Dog Catcher bag"
+	desc = "A heavy-duty bag carried by Weyland-Yutani Dog Catchers."
+	icon_state = "apesuit_pack"
+
+/obj/item/storage/backpack/marine/engineerpack/ert/pmc
+	name = "\improper PMC technician welderpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs. Features a small fueltank for quick blowtorch refueling."
+	icon_state = "pmc_welderpack"
+	flags_atom = FPRINT
+	worn_accessible = TRUE
 	max_fuel = 180
 
-/obj/item/storage/backpack/commando
-	name = "commando bag"
-	desc = "A heavy-duty bag carried by Weyland-Yutani commandos."
-	icon_state = "commandopack"
+/obj/item/storage/backpack/combat_droid
+	name = "combat android powerpack"
+	desc = "A heavy-duty powerpack carried by Weyland-Yutani combat androids."
+	icon_state = "combat_android_powerpack"
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/mcommander
@@ -1151,6 +1245,22 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_fuel = 180
 	max_storage_space = 12
 
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, it's bulky profile provides ample space for all the gear necessary for time spent in the field."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, this variant of the bulky MK4 has been modified for UPP medical personnel usage, allowing for quick access."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	max_storage_space = 21
+	worn_accessible = TRUE
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
@@ -1199,7 +1309,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_sapper"
 	item_state = "backpack_sapper"
 	max_storage_space = 18
-	max_fuel = 150
+	max_fuel = 100
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/rmc/light

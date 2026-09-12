@@ -415,3 +415,103 @@
 	throwforce = 0.5
 	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
 	w_class = SIZE_LARGE
+
+
+// Massive Digger by dimdimich1996
+
+/obj/structure/prop/invuln/dense/excavator
+	name = "Model 30 Light Excavator"
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice orange color."
+	icon = 'icons/obj/structures/props/digger.dmi'
+	icon_state = "digger_orange"
+	layer = BIG_XENO_LAYER
+
+/obj/structure/prop/invuln/dense/excavator/gray
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice gray color."
+	icon_state = "digger_gray"
+
+/obj/structure/prop/invuln/dense/excavator/Initialize()
+	. = ..()
+	if(dir & (SOUTH|NORTH))
+		bound_height = 192
+		bound_width = 96
+	else
+		bound_height = 96
+		bound_width = 192
+
+/obj/structure/prop/invuln/dense/cliff_wall
+	name = "Cliff Wall"
+	desc = "Massive cliff wall, seems impassable."
+	icon = 'icons/obj/structures/props/natural/huge_canyon.dmi'
+	icon_state = "canyon_wall"
+	layer = OBJ_LAYER
+
+/obj/structure/prop/invuln/dense/cliff_wall/alt
+	icon_state = "canyon_wall_alt"
+
+/obj/structure/prop/invuln/dense/cliff_wall/short
+	icon_state = "canyon_wall_short"
+
+/obj/structure/prop/invuln/dense/cliff_wall/short_alt
+	icon_state = "canyon_wall_short_alt"
+
+/obj/structure/prop/invuln/dense/cliff_wall/left_long
+	icon_state = "canyon_wall_long_left"
+
+/obj/structure/prop/invuln/dense/cliff_wall/left_short
+	icon_state = "canyon_wall_short_left"
+
+/obj/structure/prop/invuln/dense/cliff_wall/right_long
+	icon_state = "canyon_wall_long_right"
+
+/obj/structure/prop/invuln/dense/cliff_wall/right_short
+	icon_state = "canyon_wall_short_right"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable
+	icon = 'icons/obj/structures/props/natural/huge_canyon_colorable.dmi'
+	icon_state = "canyon_wall"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/alt
+	icon_state = "canyon_wall_alt"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/short
+	icon_state = "canyon_wall_short"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/short_alt
+	icon_state = "canyon_wall_short_alt"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/left_long
+	icon_state = "canyon_wall_long_left"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/left_short
+	icon_state = "canyon_wall_short_left"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/right_long
+	icon_state = "canyon_wall_long_right"
+
+/obj/structure/prop/invuln/dense/cliff_wall/colorable/right_short
+	icon_state = "canyon_wall_short_right"
+
+// Fake railings
+
+/obj/structure/prop/fake/railing
+	name = "handrail"
+	desc = "A railing, for your hands. Woooow."
+	icon = 'icons/obj/structures/handrail.dmi'
+	icon_state = "handrail_strata"
+	unslashable = TRUE
+	unacidable = TRUE
+	explo_proof = FALSE
+
+/obj/structure/prop/fake/railing/update_icon()
+	overlays.Cut()
+	switch(dir)
+		if(SOUTH)
+			layer = ABOVE_MOB_LAYER
+		if(NORTH)
+			layer = initial(layer) - 0.01
+		else
+			layer = initial(layer)
+
+/obj/structure/prop/fake/railing/strata
+	icon_state = "handrail_strata"

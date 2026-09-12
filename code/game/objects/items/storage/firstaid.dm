@@ -439,6 +439,96 @@
 	icon_state = "softpack_gray_upp"
 	open_state = "softpack_empty_upp"
 
+/obj/item/storage/firstaid/whiteout
+	name = "elite repair kit"
+	desc = "An expensive looking, carbon finish kit box, has a big W-Y logo on front. Contains advanced equipment for repairing a damaged synthetic, including a reset key."
+	icon_state = "whiteout"
+	open_state = "whiteout_empty"
+	item_state = "whiteout"
+	w_class = SIZE_MEDIUM //No softpack yet
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/stack/nanopaste,
+		/obj/item/stack/cable_coil,
+		/obj/item/tool/weldingtool,
+	)
+
+/obj/item/storage/firstaid/whiteout/fill_preset_inventory()
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/cable_coil/white(src)
+	new /obj/item/tool/weldingtool/largetank(src)
+
+/obj/item/storage/firstaid/whiteout/empty/fill_preset_inventory()
+	return
+
+/obj/item/storage/firstaid/whiteout/medical
+	name = "elite field revival kit"
+	desc = "An expensive looking, carbon finish kit box, has a big W-Y logo on front. Contains advanced medical tools for providing medical aid to high priority figures."
+	icon_state = "whiteout_medical"
+	open_state = "whiteout_empty"
+	item_state = "whiteout"
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/stack/nanopaste,
+		/obj/item/stack/cable_coil,
+		/obj/item/tool/weldingtool,
+		/obj/item/device/defibrillator,
+		/obj/item/tool/surgery/scalpel/manager,
+		/obj/item/storage/box/czsp/medic_upgraded_kits/full,
+		/obj/item/storage/surgical_case,
+		/obj/item/roller,
+	)
+
+/obj/item/storage/firstaid/whiteout/medical/fill_preset_inventory()
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/full(src)
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/full(src)
+	new /obj/item/stack/medical/splint/nano(src)
+	new /obj/item/storage/surgical_case/elite/whiteout(src)
+	new /obj/item/storage/syringe_case/whiteout(src)
+	new /obj/item/device/defibrillator/compact(src)
+	new /obj/item/roller/surgical(src)
+
+/obj/item/storage/firstaid/whiteout/medical/commando/fill_preset_inventory()
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/full(src)
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/full(src)
+	new /obj/item/stack/medical/splint/nano(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/storage/syringe_case/commando(src)
+	new /obj/item/storage/surgical_case/elite/commando(src)
+	new /obj/item/roller/surgical(src)
+
+/obj/item/storage/firstaid/whiteout/medical/commando/looted/fill_preset_inventory() //for commando insert
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/looted(src)
+	new /obj/item/storage/box/czsp/medic_upgraded_kits/looted(src)
+	new /obj/item/stack/medical/splint/nano(src, rand(1,2))
+	new /obj/item/storage/syringe_case/commando/looted(src)
+	new /obj/item/storage/surgical_case/elite/commando/looted(src)
+	new /obj/item/roller(src)
+
 /obj/item/storage/firstaid/softpack/rad
 	name = "radiation first-aid pack"
 	desc = "A soft first-aid pack containing equipment to treat radiation exposure in the field."
@@ -495,6 +585,7 @@
 	desc = "It's a medical case for storing syringes and bottles."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "syringe_case"
+	item_state = "syringe_case"
 	throw_speed = SPEED_FAST
 	throw_range = 8
 	storage_slots = 3
@@ -537,6 +628,55 @@
 	new /obj/item/reagent_container/glass/bottle/inaprovaline( src )
 	new /obj/item/reagent_container/glass/bottle/dexalin( src )
 
+/obj/item/storage/syringe_case/rmc
+
+/obj/item/storage/syringe_case/rmc/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone( src )
+
+/obj/item/storage/syringe_case/whiteout
+
+/obj/item/storage/syringe_case/whiteout/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/redemption_stimulant( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone( src )
+
+/obj/item/storage/syringe_case/commando
+
+/obj/item/storage/syringe_case/commando/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/emergency( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline( src )
+
+/obj/item/storage/syringe_case/commando/looted //for surv insert
+
+/obj/item/storage/syringe_case/commando/looted/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/ultrazine/empty( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline( src )
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline( src )
+
+/obj/item/storage/box/czsp/medic_upgraded_kits
+	name = "medical upgrade kit"
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "upgradedkitbox"
+	desc = "This kit holds upgraded trauma and burn kits, for critical injuries."
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 2
+
+/obj/item/storage/box/czsp/medic_upgraded_kits/full/Initialize()
+	. = ..()
+	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
+	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
+
+/obj/item/storage/box/czsp/medic_upgraded_kits/looted/Initialize()
+	. = ..()
+	if(prob(35))
+		new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src, rand(1,4))
+	if(prob(35))
+		new /obj/item/stack/medical/advanced/ointment/upgraded(src, rand(1,4))
+
 //---------SURGICAL CASE---------
 
 
@@ -551,6 +691,7 @@
 		\nStep five: Close the incision with a surgical line."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "surgical_case"
+	item_state = "surgical_case"
 	throw_speed = SPEED_FAST
 	throw_range = 8
 	storage_slots = 3
@@ -572,6 +713,42 @@
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
 
+/obj/item/storage/surgical_case/elite
+	name = "elite surgical case"
+	desc = "It's an expensive looking medical case for storing compactly placed field surgical tools. Has a bright reflective W-Y logo on it.\
+		\nBefore surgery: Verify correct location and patient is adequately numb to pain.\
+		\nStep one: Open an incision at the site with the scalpel.\
+		\nStep two: Clamp bleeders with the hemostat.\
+		\nStep three: Draw back the skin with the retracter.\
+		\nStep four: Patch the damaged vein with a surgical line.\
+		\nStep five: Close the incision with a surgical line."
+	icon_state = "surgical_case_elite"
+	storage_slots = 5
+
+/obj/item/storage/surgical_case/elite/commando/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel(src)
+	new /obj/item/tool/surgery/hemostat(src)
+	new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+
+/obj/item/storage/surgical_case/elite/commando/looted/fill_preset_inventory()
+	if(prob(65))
+		new /obj/item/tool/surgery/scalpel(src)
+	if(prob(65))
+		new /obj/item/tool/surgery/hemostat(src)
+	if(prob(65))
+		new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+
+/obj/item/storage/surgical_case/elite/whiteout
+	storage_slots = 3
+
+/obj/item/storage/surgical_case/elite/whiteout/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel/manager(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 
 /obj/item/storage/surgical_case/rmc_surgical_case
 	name = "\improper RMC surgical case"

@@ -172,6 +172,7 @@
 
 	announcement_title = PMC_COMMAND_ANNOUNCE
 	announcement_faction = FACTION_PMC
+	req_access = list(ACCESS_WY_LEADERSHIP)
 
 	minimap_type = MINIMAP_FLAG_PMC
 

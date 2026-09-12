@@ -153,10 +153,9 @@
 	if(organ_status >= ORGAN_BRUISED)
 		if(prob(2))
 			spawn owner.emote("me", 1, "coughs up blood!")
-			owner.drip(10)
+			owner.drip(10)/*
 		if(prob(4))
-			spawn owner.emote("me", 1, "gasps for air!")
-			owner.losebreath += 15
+			owner.losebreath += 15*/
 
 /datum/internal_organ/lungs/rejuvenate()
 	owner.losebreath = 0

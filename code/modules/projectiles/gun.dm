@@ -1187,7 +1187,6 @@ and you're good to go.
 /obj/item/weapon/gun/proc/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
 	var/turf/curloc = get_turf(user) //In case the target or we are expired.
 	var/turf/targloc = get_turf(target)
-
 	var/atom/original_target = target //This is for burst mode, in case the target changes per scatter chance in between fired bullets.
 
 	if(loc != user || (flags_gun_features & GUN_WIELDED_FIRING_ONLY && !(flags_item & WIELDED)))
@@ -1198,6 +1197,12 @@ and you're good to go.
 		var/obj/projectile/projectile_to_fire = load_into_chamber(user) //Load a bullet in or check for existing one.
 		if(!projectile_to_fire) //If there is nothing to fire, click.
 			click_empty(user)
+			var/mob/living/carbon/human/check_if_ai = user
+			var/datum/human_ai_brain/brain = check_if_ai.get_ai_brain()
+			if(brain)
+				if(istype(brain.primary_weapon, /obj/item/weapon/gun/launcher/grenade))
+					COOLDOWN_START(brain, stop_fire_cooldown, 40)
+			afterattack(target, user, params) //Special case for grenade launchers.
 			flags_gun_features &= ~GUN_BURST_FIRING
 			return NONE
 
@@ -1802,6 +1807,9 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 			playsound(user, actual_sound, 25, firing_sndfreq)
 
 /obj/item/weapon/gun/proc/simulate_scatter(obj/projectile/projectile_to_fire, atom/target, turf/curloc, turf/targloc, mob/user, bullets_fired = 1)
+	if(curloc.z != targloc.z)
+		return target
+
 	var/fire_angle = Get_Angle(curloc, targloc)
 	var/total_scatter_angle = projectile_to_fire.scatter
 
@@ -2100,7 +2108,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	SIGNAL_HANDLER
 
 	var/list/modifiers = params2list(params)
-	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
+	if(modifiers[CTRL_CLICK] || modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
 		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.

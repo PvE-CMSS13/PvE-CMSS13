@@ -1,0 +1,135 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/void/vehicle,
+/area/space)
+"k" = (
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4;
+	pixel_x = 8;
+	pixel_y = 3
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"q" = (
+/obj/structure/bed/chair/vehicle/toc{
+	dir = 1;
+	pixel_y = 2;
+	pixel_x = 16
+	},
+/obj/structure/surface/table/reinforced/toc/west{
+	pixel_y = 11;
+	density = 0
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 4;
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"s" = (
+/obj/structure/vehicle_locker/tank/twe{
+	pixel_y = 34;
+	pixel_x = -3;
+	layer = 2.99
+	},
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	pixel_y = 12
+	},
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 5;
+	layer = 3.2;
+	pixel_x = 15;
+	pixel_y = 37
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"t" = (
+/turf/open/void/vehicle,
+/area/interior/vehicle/twe_apc/command)
+"A" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/tank;
+	name = "back entrance marker";
+	tag = "rear"
+	},
+/obj/structure/prop/vehicle/twe_tank/apc{
+	pixel_x = -8;
+	pixel_y = -20
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 12
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"G" = (
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"R" = (
+/obj/structure/phone_base{
+	pixel_x = -11;
+	phone_category = "Vehicles";
+	name = "APC Telephone";
+	phone_id = "FV150-C Light Command APC";
+	pixel_y = 34
+	},
+/obj/structure/surface/table/reinforced/toc/east{
+	pixel_y = 11;
+	density = 0
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_x = 15;
+	pixel_y = 32
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/lifeboat{
+	name = "Vehicle NanoMed";
+	pixel_x = 3;
+	pixel_y = 32
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/twe_apc/command)
+"U" = (
+/obj/structure/machinery/computer/overwatch/twe{
+	pixel_y = -8;
+	icon_state = "overwatch"
+	},
+/turf/open/void/vehicle,
+/area/interior/vehicle/twe_apc/command)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+U
+q
+A
+a
+"}
+(3,1,1) = {"
+a
+t
+R
+k
+a
+"}
+(4,1,1) = {"
+a
+t
+s
+G
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+"}

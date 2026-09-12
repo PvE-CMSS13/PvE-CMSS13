@@ -60,7 +60,7 @@
 		if(user.is_mob_incapacitated() || get_dist(user, src) > 1 || user.blinded)
 			return
 
-		if(!skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE))
+		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
 			to_chat(user, SPAN_WARNING("You don't know how to [attached ? "disconnect" : "connect"] this!"))
 			return
 

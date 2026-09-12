@@ -149,17 +149,10 @@
 
 /obj/item/weapon/gun/launcher/grenade/able_to_fire(mob/living/user) //Skillchecks and fire blockers go in the child items.
 	. = ..()
-	if(.)
-		if(!length(cylinder.contents))
-			to_chat(user, SPAN_WARNING("The [name] is empty."))
-			click_empty(user)
-			return FALSE
-		var/obj/item/explosive/grenade/G = cylinder.contents[1]
-		if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
-			to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
-			msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
-			return FALSE
-
+	if(!length(cylinder.contents))
+		to_chat(user, SPAN_WARNING("The [name] is empty."))
+		click_empty(user)
+		return FALSE
 
 /obj/item/weapon/gun/launcher/grenade/afterattack(atom/target, mob/user, flag) //Not actually after the attack. After click, more like.
 	if(able_to_fire(user))
@@ -272,7 +265,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92
 	name = "\improper M92 grenade launcher"
-	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
+	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m92"
 	item_state = "m92"
@@ -281,12 +274,13 @@
 	matter = list("metal" = 6000)
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
 
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/scope/mini)
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	map_specific_decoration = TRUE
 
 	is_lobbing = TRUE
-	internal_slots = 6
+	throw_range = 20
+	internal_slots = 8
 	direct_draw = FALSE
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_attachment_offsets()
@@ -294,7 +288,27 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4*4)
+	set_fire_delay(FIRE_DELAY_TIER_3)
+
+/obj/item/weapon/gun/launcher/grenade/m92/scoped
+	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions. This one is outfitted with a low-power scope securely mounted to it."
+
+/obj/item/weapon/gun/launcher/grenade/m92/scoped/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/optic = new(src)
+	optic.hidden = FALSE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
+
+/obj/item/weapon/gun/launcher/grenade/m92/frag
+	preload = /obj/item/explosive/grenade/high_explosive/frag
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_he
+	preload = /obj/item/explosive/grenade/custom/large/ied_he
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
+	preload = /obj/item/explosive/grenade/custom/incendiary_plus
 
 //UPP DEDICATED GL
 
@@ -304,10 +318,12 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "m92_upp"
 	item_state = "m92_upp"
+	internal_slots = 6
 	flags_item = TWOHANDED
 	map_specific_decoration = FALSE
 	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
 	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
+	starting_attachment_types = list()
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
 	..()
@@ -327,7 +343,83 @@
 	grip.Attach(src)
 	update_attachable(grip.slot)
 
+/obj/item/weapon/gun/launcher/grenade/m92/upp/frag
+	preload = /obj/item/explosive/grenade/high_explosive/frag
+
 /obj/item/weapon/gun/launcher/grenade/m92/upp/stored
+	preload = null
+	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
+
+//UPP PUMP-ACTION GL / FORECON EXCLUSIVE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon
+	name = "\improper OG-74 Grenade Launcher"
+	desc = "A lightweight, pump-action grenade launcher, with the barrel below the magazine. This development found popularity amongst light infantry units in the UPP Armed Collective, who are typically fielded with carbines and need a grenade launcher platform to support their operations."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "og74"
+	item_state = "og74"
+	fire_sound = 'sound/weapons/gun_ugl_fire.ogg'
+	reload_sound = 'sound/weapons/gun_shotgun_open2.ogg'
+	unload_sound = 'sound/weapons/gun_shotgun_shell_insert.ogg'
+	internal_slots = 4
+	throw_speed = SPEED_FAST
+	is_lobbing = TRUE
+	actions_types = list() // cuz pump action
+	flags_equip_slot = SLOT_SUIT_STORE|SLOT_BACK
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	map_specific_decoration = FALSE
+	valid_munitions = list(
+		/obj/item/explosive/grenade/high_explosive/upp,
+		/obj/item/explosive/grenade/high_explosive/impact/upp,
+		/obj/item/explosive/grenade/high_explosive/impact/upp/ap,
+		/obj/item/explosive/grenade/high_explosive/airburst/upp,
+		/obj/item/explosive/grenade/incendiary/impact/upp,
+		/obj/item/explosive/grenade/smokebomb/upp,
+		/obj/item/explosive/grenade/phosphorus/upp,
+	)
+	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
+	var/cocked = TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14,  "sling_x" = 12, "sling_y" = 22)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/handle_starting_attachment()
+	return
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_1 * 1.5)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/able_to_fire(mob/living/user)
+	. = ..()
+
+	if(!.)
+		return FALSE
+
+	if(!cocked)
+		to_chat(user, SPAN_WARNING("\The [src] must be cocked! <b>(use unique-action)</b>"))
+		return FALSE
+
+	return TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/fire_grenade(atom/target, mob/user)
+	. = ..()
+
+	cocked = FALSE
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/unique_action(mob/user)
+	. = ..()
+
+	if(cocked)
+		to_chat(user, SPAN_WARNING("[src] is already cocked."))
+		return
+
+	cocked = TRUE
+	to_chat(user, SPAN_NOTICE("You close \the [src]'s breech, cocking it!"))
+	playsound(src, "shotgunpump", 25, 1)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/stored
 	preload = null
 	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
 
@@ -361,6 +453,7 @@
 		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm,
 	)
 	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+	starting_attachment_types = list()
 
 	is_lobbing = TRUE
 	internal_slots = 8
@@ -395,7 +488,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m81/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4 * 1.5)
+	set_fire_delay(FIRE_DELAY_TIER_4)
 
 /obj/item/weapon/gun/launcher/grenade/m81/on_pocket_removal()
 	..()

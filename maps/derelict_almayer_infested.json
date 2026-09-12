@@ -1,0 +1,18 @@
+{
+    "map_name": "Infested Almayer",
+    "map_path": "map_files/derelict_almayer_infested",
+    "map_file": "derelict_almayer_infested.dmm",
+    "webmap_url": "Almayer",
+    "map_item_type": "/obj/item/map/almayer",
+    "announce_text": "An automated distress signal has been received from the \"USS Almayer\". A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "traits": [{ "Ground": true }],
+    "nightmare_path": "maps/Nightmare/maps/derelict_almayer_infested/",
+    "camouflage": "classic",
+	"gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

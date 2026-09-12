@@ -623,7 +623,7 @@
 
 /obj/item/storage/box/explosive_mines
 	name = "\improper M20A2 mine box"
-	desc = "A secure box holding five M20 anti-personnel proximity mines."
+	desc = "A secure box holding five M20 proximity-fuzed intelligent claymores."
 	icon = 'icons/obj/items/storage/packets.dmi'
 	icon_state = "minebox"
 	w_class = SIZE_MEDIUM
@@ -633,6 +633,58 @@
 /obj/item/storage/box/explosive_mines/fill_preset_inventory()
 	for(var/i in 1 to 5)
 		new /obj/item/explosive/mine/strong(src)
+
+/obj/item/storage/box/explosive_mines/m760ap
+	name = "\improper M760 landmine case"
+	desc = "A secure case holding five M760 anti-personnel landmines."
+	icon = 'icons/obj/items/storage/packets.dmi'
+	icon_state = "minebox"//fix this later. ask pandora?
+	w_class = SIZE_MEDIUM
+	max_storage_space = 10
+	can_hold = list(/obj/item/explosive/mine/m760ap)
+
+/obj/item/storage/box/explosive_mines/m760ap/fill_preset_inventory()
+	for(var/i in 1 to 5)
+		new /obj/item/explosive/mine/m760ap(src)
+
+/obj/item/storage/box/explosive_mines/m5a3betty
+	name = "\improper M5A3 bounding landmine box"
+	desc = "A secure case holding five M5A3 anti-personnel jumping mines."
+	icon = 'icons/obj/items/storage/packets.dmi'
+	icon_state = "minebox"
+	w_class = SIZE_MEDIUM
+	max_storage_space = 10
+	can_hold = list(/obj/item/explosive/mine/m5a3betty)
+
+/obj/item/storage/box/explosive_mines/m5a3betty/fill_preset_inventory()
+	for(var/i in 1 to 5)
+		new /obj/item/explosive/mine/m5a3betty(src)
+
+/obj/item/storage/box/explosive_mines/fzd91
+	name = "\improper FZD-91 landmine box"
+	desc = "A secure case holding five FZD-91 anti-personnel combined effects landmines."
+	icon = 'icons/obj/items/storage/packets.dmi'
+	icon_state = "minebox"
+	w_class = SIZE_MEDIUM
+	max_storage_space = 10
+	can_hold = list(/obj/item/explosive/mine/fzd91)
+
+/obj/item/storage/box/explosive_mines/fzd91/fill_preset_inventory()
+	for(var/i in 1 to 5)
+		new /obj/item/explosive/mine/fzd91(src)
+
+/obj/item/storage/box/explosive_mines/tn13
+	name = "\improper TN-13 landmine box"
+	desc = "A secure case holding five TN-13 anti-personnel landmines."
+	icon = 'icons/obj/items/storage/packets.dmi'
+	icon_state = "minebox"
+	w_class = SIZE_MEDIUM
+	max_storage_space = 10
+	can_hold = list(/obj/item/explosive/mine/tn13)
+
+/obj/item/storage/box/explosive_mines/tn13/fill_preset_inventory()
+	for(var/i in 1 to 5)
+		new /obj/item/explosive/mine/tn13(src)
 
 /obj/item/storage/box/explosive_mines/pmc
 	name = "\improper M20A2P mine box"

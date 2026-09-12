@@ -673,8 +673,22 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/seclead
 	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
 
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/pltco
 	initial_keys = list(/obj/item/device/encryptionkey/bravo, /obj/item/device/encryptionkey/squadlead)
+
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"A-Section Sergeant" = TRACKER_ASL,
+		"B-Section Sergeant" = TRACKER_BSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
@@ -690,10 +704,11 @@
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_RSL
 
 	inbuilt_tracking_options = list(
-		"Squad Leader" = TRACKER_ASL,
+		"Snake Eaters Squad Leader" = TRACKER_RSL,
+		"Ocelot Grapplers Squad Leader" = TRACKER_R2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -707,10 +722,15 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	inbuilt_tracking_options = list(
-		"Troop Commander" = TRACKER_PLTCO,
+		"Troop Commander" = TRACKER_RMCSL,
 		"Section/Team Leader" = TRACKER_FTL,
 	)
-	locate_setting = TRACKER_PLTCO
+	locate_setting = TRACKER_RMCSL
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq
+	name = "Royal Marine Commando command headset"
+	desc = "A special headset used by the commanders of the TWE's elite Royal Marine Commandos."
+	initial_keys = list(/obj/item/device/encryptionkey/command)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
@@ -721,8 +741,15 @@
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
 	frequency = UPP_FREQ
+	misc_tracking = TRUE
 	minimap_type = MINIMAP_FLAG_UPP
 	hud_type = list(MOB_HUD_FACTION_UPP)
+	inbuilt_tracking_options = list(
+		"Platoon Commander" = TRACKER_PLTCO,
+		"Platoon Sergeant" = TRACKER_SL,
+		"Squad Sergeant" = TRACKER_FTL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth
 	name = "UPP synth headset"
@@ -730,13 +757,21 @@
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_UPPSL
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Red Dawn Platoon Sergeant" = TRACKER_UPPSL,
+		"Golden Embers Platoon Sergeant" = TRACKER_UPP2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/forecon
+	name = "UPP Recon headset"
+	desc = "A special headset issued exclusively to Recon units."
+	frequency = UPP_FORECON_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/forecon)
+	volume = RADIO_VOLUME_QUIET
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
 	name = "UPP Territorial Guard headset"
@@ -762,6 +797,8 @@
 	item_state = "upp_headset"
 	frequency = CLF_FREQ
 	has_hud = FALSE //Until we get CANC stuff, this'll do
+
+
 
 /obj/item/device/radio/headset/almayer/cia
 	name = "radio headset"
@@ -1046,11 +1083,23 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
 
+	has_tracker = TRUE
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CL
 	inbuilt_tracking_options = list(
 		"Corporate Liaison" = TRACKER_CL
 	)
+
+/obj/item/device/radio/headset/distress/pmc/commando
+	name = "W-Y commando headset"
+	desc = "A special headset used by unidentified operatives. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel, :y - Corporate."
+	icon_state = "pmc_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc)
+	maximum_keys = 5
+
+/obj/item/device/radio/headset/distress/pmc/commando/leader
+	name = "W-Y commando leader headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
 
 /obj/item/device/radio/headset/distress/pmc/platoon
 	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
@@ -1074,7 +1123,9 @@
 
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_ASL,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -1082,6 +1133,14 @@
 	name = "overwatch headset"
 	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
+	inbuilt_tracking_options = list(
+		"Overwatch" = TRACKER_PLTCO,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"VIRIDIAN 22 Operation Leader" = TRACKER_P2SL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
+		"Landing Zone" = TRACKER_LZ
+	)
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
@@ -1097,6 +1156,14 @@
 	frequency = FORECON_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 	ignore_z = TRUE
+	has_hud = TRUE
+
+/obj/item/device/radio/headset/distress/wy_android
+	name = "W-Y android headset"
+	desc = "A special headset used by unidentified androids. Channels are as follows: :o - colony :y - Corporate #pmc - PMC"
+	frequency = WY_WO_FREQ
+	icon_state = "ms_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
 	has_hud = TRUE
 
 /obj/item/device/radio/headset/distress/pmc/hvh
@@ -1253,6 +1320,14 @@
 	icon_state = "wy_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/cmb)
 
+/obj/item/device/radio/headset/distress/NSPA
+	name = "NSPA Headset"
+	desc = "NSPA headset."
+	frequency = RMC_FREQ
+	icon_state = "vai_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
+	volume = RADIO_VOLUME_IMPORTANT
+
 /obj/item/device/radio/headset/almayer/highcom
 	name = "USCM High Command headset"
 	desc = "Issued to members of USCM High Command and their immediate subordinates. Channels are as follows: :v - marine command, :p - military police, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC,  :t - intel,  :z - HighCom"
@@ -1385,3 +1460,13 @@
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+
+/obj/item/device/radio/headset/almayer/sof/survivor_army
+	name = "US Army headset"
+	desc = "Issued exclusively to Army troopers."
+	icon_state = "soc_headset"
+	frequency = ARMY_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/soc/army)
+	volume = RADIO_VOLUME_QUIET
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE

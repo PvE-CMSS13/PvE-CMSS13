@@ -345,6 +345,8 @@
 	var/atom/movable/vis_obj/xeno_pack/backpack_icon_holder
 	/// If TRUE, the xeno cannot slash anything
 	var/cannot_slash = FALSE
+	// If specified, will always default to that name.
+	var/preset_name = null
 
 /mob/living/carbon/xenomorph/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber, ai_hard_off = FALSE)
 
@@ -355,6 +357,10 @@
 	//putting the organ in for research
 	if(organ_value != 0)
 		var/obj/item/organ/xeno/organ = new() //give
+		if(hivenumber == XENO_HIVE_PATHOGEN)
+			organ = new /obj/item/organ/xeno/pathogen()
+		else
+			organ = new()
 		organ.forceMove(src)
 		organ.research_value = organ_value
 		organ.caste_origin = caste_type
@@ -574,6 +580,11 @@
 	//Im putting this in here, because this proc gets called when a player inhabits a SSD xeno and it needs to go somewhere (sorry)
 	hud_set_marks()
 
+	if(preset_name)
+		change_real_name(src, preset_name)
+		in_hive.hive_ui.update_xeno_info()
+		return
+
 	var/name_prefix = in_hive.prefix
 	var/name_client_prefix = ""
 	var/name_client_postfix = ""
@@ -586,14 +597,17 @@
 	if(!HAS_TRAIT(src, TRAIT_NO_COLOR))
 		color = in_hive.color
 
-	var/age_display = show_age_prefix ? age_prefix : ""
-	var/name_display = ""
-	// Rare easter egg
-	if(nicknumber == 666)
-		number_decorator = "Infernal "
-	if(show_name_numbers)
-		name_display = show_only_numbers ? " ([nicknumber])" : " ([name_client_prefix][nicknumber][name_client_postfix])"
-	name = "[name_prefix][number_decorator][age_display][caste.display_name || caste.caste_type][name_display]"
+	if(!HAS_TRAIT(src, TRAIT_PATHOGEN_OVERMIND))
+		var/age_display = show_age_prefix ? age_prefix : ""
+		var/name_display = ""
+		// Rare easter egg
+		if(nicknumber == 666)
+			number_decorator = "Infernal "
+		if(show_name_numbers)
+			name_display = show_only_numbers ? " ([nicknumber])" : " ([name_client_prefix][nicknumber][name_client_postfix])"
+		name = "[name_prefix][number_decorator][age_display][caste.display_name || caste.caste_type][name_display]"
+	else
+		name = "Overmind ([full_designation])"
 
 	//Update linked data so they show up properly
 	change_real_name(src, name)
@@ -839,6 +853,9 @@
 	// Update the hive status UI
 	new_hive.hive_ui.update_all_xeno_data()
 
+	if(new_hivenumber == XENO_HIVE_PATHOGEN)
+		make_pathogen_speaker()
+
 	return TRUE
 
 
@@ -1008,6 +1025,8 @@
 		SPAN_NOTICE("We extinguish ourselves."), null, 5)
 
 /mob/living/carbon/xenomorph/proc/get_organ_icon()
+	if(hivenumber == XENO_HIVE_PATHOGEN)
+		return "m_heart_t[tier]"
 	return "heart_t[tier]"
 
 /mob/living/carbon/xenomorph/resist_restraints()
@@ -1117,3 +1136,12 @@
 	if(new_player.mind)
 		new_player.mind_initialize()
 		new_player.mind.transfer_to(target, TRUE)
+
+/mob/living/carbon/xenomorph/onZImpact(turf/impact_turf, height)
+	if(mob_size >= MOB_SIZE_BIG)
+		KnockDown(height * 5)
+		Stun(height * 5)
+
+		var/total_damage = (60 * height) ** 1.3
+		apply_damage(total_damage / 2, BRUTE)
+		playsound(impact_turf.loc, "slam", 50, 1)

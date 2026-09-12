@@ -1,0 +1,48 @@
+{
+	"map_name": "LV-671 Ark Borealis",
+    "short_name": "Ark Borealis",
+	"map_path": "map_files/lv671",
+	"map_file": "lv671.dmm",
+    "webmap_url": "LV671",
+
+    "weather_holder": "/datum/weather_ss_map_holder/sorokyne",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/forecon/standard"
+    ],
+	"synth_survivor_types": [
+        "/datum/equipment_preset/synth/survivor/forecon"
+    ],
+	"CO_survivor_types": [
+        "/datum/equipment_preset/survivor/forecon/major"
+    ],
+    "defcon_triggers": [
+        3300,
+        2100,
+        1450,
+        580,
+        0.0
+    ],
+    "survivor_message": "You are a Marine from the USS Almayer. Wrecked on this planet, you were forced to abandon your platoon for the sake of your own survival after a battle with a superior enemy force.",
+    "announce_text": "Attention. This is the Lieutenant from the USS Almayer speaking. We crashed on the planet LV-671, crashing right into the atmospheric processor. The thermonuclear reaction has not started, but it is unstable. We are facing a superior enemy force and we demand an immediate evacuation. This message will be repeated every 24 hours.",
+    "map_item_type": "/obj/item/map/lv_671",
+	"monkey_types": [
+        "neaera",
+        "monkey"
+    ],
+    "environment_traits": { "Fog": true },
+    "traits": [{ "Ground": true }],
+    "xvx_hives": {
+        "xeno_hive_alpha": 0,
+        "xeno_hive_bravo": 0,
+        "xeno_hive_charlie": 0,
+        "xeno_hive_delta": 0
+    },
+    "camouflage": "snow",
+	"gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

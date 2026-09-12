@@ -85,7 +85,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 		if(1) //pmc
 			new /obj/item/clothing/under/marine/veteran/pmc(src)
 			new /obj/item/clothing/head/helmet/marine/veteran/pmc(src)
-			new /obj/item/clothing/suit/storage/marine/veteran/pmc(src)
+			new /obj/item/clothing/suit/marine/veteran/pmc(src)
 			new /obj/item/clothing/gloves/marine/veteran/pmc(src)
 			new /obj/item/clothing/mask/gas/pmc(src)
 			new /obj/item/storage/backpack/lightpack/five_slot(src)
@@ -255,6 +255,19 @@ Additionally, weapons that are way too good to put in the basically-flavor black
 		/obj/item/ammo_magazine/smg/fp9000,
 	)
 	dollar_cost = 25
+	containertype = /obj/structure/largecrate/black_market
+
+/datum/supply_packs/contraband/seized/p90
+	name = "FN P90 submachinegun crate (x5 magazines included)"
+	contains = list(
+		/obj/item/weapon/gun/smg/p90,
+		/obj/item/ammo_magazine/smg/p90,
+		/obj/item/ammo_magazine/smg/p90,
+		/obj/item/ammo_magazine/smg/p90,
+		/obj/item/ammo_magazine/smg/p90,
+		/obj/item/ammo_magazine/smg/p90,
+	)
+	dollar_cost = 20
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/seized/mp27
@@ -785,6 +798,12 @@ USCM spare items, miscellaneous gear that's too niche and distant (or restricted
 	name = "Magazines box (FN FP9000, 10x mags)"
 	dollar_cost = 35
 	contains = list(/obj/item/ammo_box/magazine/fp9000)
+	containertype = /obj/structure/largecrate/black_market
+
+/datum/supply_packs/contraband/ammo/p90
+	name = "Magazines box (FN P90, 10x mags)"
+	dollar_cost = 30
+	contains = list(/obj/item/ammo_box/magazine/p90)
 	containertype = /obj/structure/largecrate/black_market
 
 /datum/supply_packs/contraband/ammo/mp27

@@ -25,6 +25,11 @@
 
 	// Convert it to an edible form, yum yum.
 	if(!robotic && user.a_intent == INTENT_HELP && user.zone_selected == "mouth")
+		if(istype(user, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = user
+			if(H.helmet_blocking_mouth())
+				to_chat(H, SPAN_DANGER("Your [H.head] stops you from eating the [src]."))
+				return
 		bitten(user)
 		return
 
@@ -124,6 +129,11 @@
 	var/research_value = 1 //depending on the size and tier
 	///the caste in a string, which is used in a xenoanalyzer
 	var/caste_origin // used for desc in xenoanalyzer
+
+/obj/item/organ/xeno/pathogen
+	name = "mycelium heart"
+	desc = "Mycelium heart removed from a strange creature."
+	black_market_value = 120
 
 //These are here so they can be printed out via the fabricator.
 /obj/item/organ/heart/prosthetic

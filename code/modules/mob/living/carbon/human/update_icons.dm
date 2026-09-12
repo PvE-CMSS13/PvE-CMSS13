@@ -83,11 +83,12 @@ There are several things that need to be remembered:
 	overlays += images
 
 /mob/living/carbon/human/remove_overlay(cache_index)
-	if(overlays_standing[cache_index])
-		var/image/I = overlays_standing[cache_index]
-		SEND_SIGNAL(src, COMSIG_HUMAN_OVERLAY_REMOVED, cache_index, I)
-		overlays -= I
-		overlays_standing[cache_index] = null
+	if(!isnull(overlays_standing))
+		if(overlays_standing[cache_index])
+			var/image/I = overlays_standing[cache_index]
+			SEND_SIGNAL(src, COMSIG_HUMAN_OVERLAY_REMOVED, cache_index, I)
+			overlays -= I
+			overlays_standing[cache_index] = null
 
 /mob/living/carbon/human/UpdateDamageIcon()
 	for(var/obj/limb/O in limbs)
@@ -420,7 +421,7 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 		if(!((wear_suit && wear_suit.flags_inv_hide & HIDESHOES) || (w_uniform && w_uniform.flags_inv_hide & HIDESHOES)))
 			I =  shoes.get_mob_overlay(src, WEAR_FEET)
 
-	else if(feet_blood_color && species.blood_mask)
+	else if(feet_blood_color && species?.blood_mask)
 		I = overlay_image(species.blood_mask, "feet_blood", feet_blood_color, RESET_COLOR)
 	if(!I)
 		return
@@ -739,11 +740,14 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 /mob/living/carbon/human/update_burst()
 	remove_overlay(BURST_LAYER)
 	var/image/standing
+	var/icon_file = 'icons/mob/xenos/effects.dmi'
+	if(mob_flags & BLOOD_BURSTING)
+		icon_file = 'icons/mob/pathogen/bloodburster_stage.dmi'
 	switch(chestburst)
 		if(1)
-			standing = image("icon" = 'icons/mob/xenos/effects.dmi',"icon_state" = "burst_stand", "layer" = -BURST_LAYER)
+			standing = image("icon" = icon_file,"icon_state" = "burst_stand", "layer" = -BURST_LAYER)
 		if(2)
-			standing = image("icon" = 'icons/mob/xenos/effects.dmi',"icon_state" = "bursted_stand", "layer" = -BURST_LAYER)
+			standing = image("icon" = icon_file,"icon_state" = "bursted_stand", "layer" = -BURST_LAYER)
 		else
 			return
 	overlays_standing[BURST_LAYER] = standing

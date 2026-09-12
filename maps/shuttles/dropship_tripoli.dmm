@@ -207,8 +207,9 @@
 	},
 /area/shuttle/tripoli)
 "qR" = (
-/obj/structure/machinery/light/double{
-	dir = 8
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
@@ -357,11 +358,12 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "CD" = (
-/obj/structure/machinery/light/double{
-	dir = 4
-	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
@@ -369,8 +371,9 @@
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
 "Dy" = (
-/obj/structure/machinery/light/double{
-	dir = 4
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)
@@ -566,11 +569,12 @@
 /turf/template_noop,
 /area/shuttle/tripoli)
 "VM" = (
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/tripoli)

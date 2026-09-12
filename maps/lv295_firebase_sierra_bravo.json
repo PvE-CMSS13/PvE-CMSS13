@@ -1,0 +1,8 @@
+{
+    "map_name": "LV295_Firebase_Sierra_Bravo",
+    "map_path": "map_files/LV295_Firebase_Sierra_Bravo",
+    "map_file": "LV295_Firebase_Sierra_Bravo.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha"
+}

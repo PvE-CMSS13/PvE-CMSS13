@@ -52,3 +52,48 @@
 	name = "UA Rebel Combat Android"
 	desc = "An illegal combat android for the UA rebel faction. Use this sparingly."
 	path = /datum/equipment_preset/synth/working_joe/security_android/ua_rebel
+
+//TWE Rebels in EVA
+
+/datum/human_ai_equipment_preset/eva_clf
+	faction = "UA Rebel EVA"
+
+/datum/human_ai_equipment_preset/eva_clf/soldier_eva
+	name = "UA Rebel, Soldier (Rifle, EVA)"
+	desc = "Armed with either a MAR variant rifle or F90 rifle, or sometimes a Viper SMG with AP rounds."
+	path = /datum/equipment_preset/rebel/soldier/eva
+
+/datum/human_ai_equipment_preset/eva_clf/machine_gun_eva
+	name = "UA Rebel, Soldier (Machine Gun, EVA)"
+	desc = "Armed with either a MAR-50 LMG , AR10 or M16 rifle."
+	path = /datum/equipment_preset/rebel/soldier/eva/machine_gun
+
+/datum/human_ai_equipment_preset/eva_clf/grenade
+	name = "UA Rebel, Grenadier (M92 HE IED, EVA)"
+	desc = "Will shoot improvised HE grenades wih a M92 grenade launcher. Has a two second delay."
+	path = /datum/equipment_preset/rebel/soldier/eva/grenade
+
+/datum/human_ai_equipment_preset/eva_clf/grenade_incendiary
+	name = "UA Rebel, Grenadier (M92 Incendiary IED, EVA)"
+	desc = "Will shoot improvised incendiary grenades wih a M92 grenade launcher. Has a two second delay."
+	path = /datum/equipment_preset/rebel/soldier/eva/grenade/incendiary
+
+/datum/human_ai_equipment_preset/eva_clf/shotgunner_eva
+	name = "UA Rebel, Soldier (Shotgunner, EVA)"
+	desc = "Armed with an HG-37 shotgun."
+	path = /datum/equipment_preset/rebel/soldier/shotgun/eva
+
+/datum/human_ai_equipment_preset/eva_clf/flamer_eva
+	name = "UA Rebel, Soldier (Incinerator, EVA)"
+	desc = "Armed with a M240A1 incinerator unit."
+	path = /datum/equipment_preset/rebel/soldier/flamer/eva
+
+/datum/human_ai_equipment_preset/eva_clf/sniper_eva
+	name = "UA Rebel, Sniper (SVD, Eva)"
+	desc = "Armed with a Non-AP Type 88 SVD Marksman rifle."
+	path = /datum/equipment_preset/rebel/sniper/eva
+
+/datum/human_ai_equipment_preset/eva_clf/bolt_eva
+	name = "UA Rebel, Sniper (Bolt, EVA)"
+	desc = "Armed with a bolt-action rifle."
+	path = /datum/equipment_preset/rebel/soldier/bolt_eva

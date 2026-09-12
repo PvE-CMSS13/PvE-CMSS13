@@ -131,14 +131,18 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 
 		list("OVERWATCH & HUD EQUIPMENT (CHOOSE 1)", 0, null, null, null),
 		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
+		list("Spare AN/MAV-72 Advanced Medical Visor", 0, /obj/item/device/helmet_visor/medical/advanced, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Medical Satchel", 0, /obj/item/storage/backpack/marine/satchel/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Lifesaver Bag (Full, Pills)", 0, /obj/item/storage/belt/medical/lifesaver/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Lifesaver Bag (Full. Liquid)", 0, /obj/item/storage/belt/medical/lifesaver/full/liquid, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig (Full, Pills)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig (Full, Liquid)", 0, /obj/item/storage/belt/medical/full/liquid, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -208,8 +212,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Medical Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("UPP Medical Backpack", 0, /obj/item/storage/backpack/marine/upp/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("UPP Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("Type 41 Ammo Load Rig", 0, /obj/item/storage/belt/marine/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -287,24 +291,25 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
-		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/standard/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
+		list("Red Cross On White Paint", 0, /obj/item/clothing/accessory/paint/medic/wy, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
+		list("Red Cross On Black Paint", 0, /obj/item/clothing/accessory/paint/medic/wy/black, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT", 0, null, null, null),
+		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch (Full)", 0, /obj/item/storage/pouch/medkit/wy/full_advanced, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR, VENDOR_ITEM_RECOMMENDED),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/wy, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/medic/pmc
@@ -365,7 +370,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_medic, list(
 // Chemical vendor
 
 GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
-
 		list("ESSENTIAL MEDICATION (CHOOSE 1)", 0, null, null, null),
 		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
 		list("Liquid Bottle (Imidazoline-Alkysine)", 0, /obj/item/reagent_container/glass/bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),

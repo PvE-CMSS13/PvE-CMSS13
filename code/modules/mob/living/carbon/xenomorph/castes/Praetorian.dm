@@ -2,10 +2,10 @@
 	caste_type = XENO_CASTE_PRAETORIAN
 	tier = 3
 
-	melee_damage_lower = XENO_DAMAGE_TIER_5
-	melee_damage_upper = XENO_DAMAGE_TIER_5
+	melee_damage_lower = XENO_DAMAGE_TIER_6
+	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_7
-	max_health = XENO_HEALTH_TIER_9
+	max_health = XENO_HEALTH_KING
 	plasma_gain = XENO_PLASMA_GAIN_TIER_5
 	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_4
@@ -60,10 +60,11 @@
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
 		/datum/action/xeno_action/activable/corrosive_acid,
-		/datum/action/xeno_action/activable/xeno_spit,
+		/datum/action/xeno_action/activable/xeno_spit/ai,
 		/datum/action/xeno_action/activable/pounce/base_prae_dash,
 		/datum/action/xeno_action/activable/prae_acid_ball,
 		/datum/action/xeno_action/activable/spray_acid/base_prae_spray_acid,
+		/datum/action/xeno_action/onclick/crusher_stomp,
 		/datum/action/xeno_action/onclick/tacmap,
 	)
 
@@ -71,8 +72,11 @@
 	icon_xenonid = 'icons/mob/xenonids/praetorian.dmi'
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
+	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_64x64.dmi'
 	weed_food_states = list("Praetorian_1","Praetorian_2","Praetorian_3")
 	weed_food_states_flipped = list("Praetorian_1","Praetorian_2","Praetorian_3")
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
 
 /datum/behavior_delegate/praetorian_base
 	name = "Base Praetorian Behavior Delegate"
@@ -103,3 +107,15 @@
 	bound_xeno.add_xeno_shield(reward_shield, XENO_SHIELD_SOURCE_BASE_PRAE, add_shield_on = TRUE, max_shield = 45)
 	to_chat(bound_xeno, SPAN_NOTICE("Your exoskeleton shimmers for a fraction of a second as the acid coats your target."))
 	return
+
+/mob/living/carbon/xenomorph/praetorian/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
+	. = ..()
+	AddComponent(/datum/component/footstep, 2, 50, 15, 1, "metalbang")
+
+	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
+	if(!get_turf(src)) //autowiki compat, spawns in nullspace
+		return
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
+		var/relative_dir = get_dir(current_mob, src)
+		var/final_dir = dir2text(relative_dir)
+		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))

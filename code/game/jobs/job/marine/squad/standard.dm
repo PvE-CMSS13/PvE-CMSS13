@@ -1,5 +1,6 @@
 #define STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO 0.4
 
+#define JSGT_VARIANT "Junior Sergeant"
 #define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
 #define PFC_VARIANT "Private First Class"
@@ -111,6 +112,43 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+/datum/job/marine/standard/ai/upp/rto
+	title = JOB_SQUAD_UPP_RTO
+	gear_preset = /datum/equipment_preset/uscm/rto/upp
+	gear_preset_secondary = /datum/equipment_preset/uscm/rto/upp/corporal
+	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL")
+
+/obj/effect/landmark/start/marine/upp/rto
+	name = JOB_SQUAD_UPP_RTO
+	job = /datum/job/marine/standard/ai/upp/rto
+
+/datum/job/marine/standard/ai/upp/forecon
+	title = JOB_SQUAD_MARINE_FORECON_UPP
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/pfc/upp/forecon
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/forecon/senior_private
+	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/upp/forecon/junior_sergeant
+	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+
+/obj/effect/landmark/start/marine/upp/forecon
+	name = JOB_SQUAD_MARINE_FORECON_UPP
+	squad = SQUAD_SISSI
+	job = /datum/job/marine/standard/ai/upp/forecon
+
+/datum/job/marine/standard/ai/upp/rto/forecon
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_RTO_FORECON_UPP
+	gear_preset = /datum/equipment_preset/uscm/rto/upp/forecon
+	gear_preset_secondary = /datum/equipment_preset/uscm/rto/upp/forecon/corporal
+	gear_preset_tertiary = /datum/equipment_preset/uscm/rto/upp/forecon/senior_private
+	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+
+/obj/effect/landmark/start/marine/upp/rto/forecon
+	name = JOB_SQUAD_RTO_FORECON_UPP
+	squad = SQUAD_SISSI
+	job = /datum/job/marine/standard/ai/upp/rto/forecon
 
 /datum/job/marine/standard/ai/pmc
 	title = JOB_PMCPLAT_STANDARD
@@ -158,6 +196,7 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+#undef JSGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT

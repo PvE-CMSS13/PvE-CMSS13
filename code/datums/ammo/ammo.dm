@@ -165,6 +165,9 @@
 	var/direction = Get_Compass_Dir(fired_projectile.z ? fired_projectile : fired_projectile.firer, living_mob) //More precise than get_dir.
 	if(!direction) //Same tile.
 		return
+	var/area/area_with_gravity = get_area(living_mob.loc)
+	if(!area_with_gravity.gravity)
+		living_mob.inertia_dir = direction
 	if(!step(living_mob, direction))
 		living_mob.animation_attack_on(get_step(living_mob, direction))
 		playsound(living_mob.loc, "punch", 25, 1)

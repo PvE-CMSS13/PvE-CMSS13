@@ -131,7 +131,7 @@
 /obj/item/storage/fancy/cigar{
 	pixel_y = 2
 	},
-/obj/item/clothing/head/beret/pmc,
+/obj/item/clothing/head/cmcap/pmc,
 /turf/open/floor/wood/ship,
 /area/firefly/ptsgt)
 "bL" = (

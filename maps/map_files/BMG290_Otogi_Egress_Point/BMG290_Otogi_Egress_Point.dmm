@@ -123,10 +123,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/relay/cargo)
 "adW" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
-/obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
+/obj/item/clothing/suit/marine/veteran/pmc/light/corporate,
 /obj/item/storage/pouch/magazine,
 /obj/item/storage/pouch/magazine,
 /obj/structure/closet/secure_closet/guncabinet{

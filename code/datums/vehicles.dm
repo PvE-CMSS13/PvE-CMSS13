@@ -30,6 +30,10 @@
 	name = "Movie APC"
 	interior_id = "apc_movie"
 
+/datum/map_template/interior/apc_wolfpack
+	name = "Wolfpack APC"
+	interior_id = "apc_wolfpack"
+
 /datum/map_template/interior/apc_aa
 	name = "Anti-Air APC"
 	interior_id = "apc_aa"
@@ -57,6 +61,10 @@
 /datum/map_template/interior/upptank_command
 	name = "UPP Command Tank"
 	interior_id = "upptank_command"
+
+/datum/map_template/interior/ridgeway
+	name = "Ridgeway Tank"
+	interior_id = "ridgeway"
 
 /datum/map_template/interior/aev
 	name = "AEV"
@@ -93,6 +101,21 @@
 /datum/map_template/interior/pizza_van
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"
+/datum/map_template/interior/white_van
+	name = "Weyland-Yutani Van"
+	interior_id = "white_van"
+
+/datum/map_template/interior/clf_van
+	name = "CLF Technical"
+	interior_id = "clf_van"
+
+/datum/map_template/interior/box_van
+	name = "Box Van"
+	interior_id = "box_van"
+
+/datum/map_template/interior/pizza_van
+	name = "Pizza-Galaxy Van"
+	interior_id = "pizza_van"
 
 /datum/map_template/interior/ambulance
 	name = "Ambulance"
@@ -113,3 +136,15 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
+
+/datum/map_template/interior/twe_tank
+	name = "FV150 Cavalry Tank"
+	interior_id = "twe_tank"
+
+/datum/map_template/interior/twe_apc
+	name = "Type 200/FCV Light APC"
+	interior_id = "twe_apc"
+
+/datum/map_template/interior/twe_apc/command
+	name = "Type 200/FCV-C Command Light APC"
+	interior_id = "twe_command_apc"

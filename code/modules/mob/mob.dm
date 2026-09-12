@@ -54,6 +54,7 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
+	vis_flags |= VIS_INHERIT_PLANE
 	GLOB.last_mob_gid++
 	gid = GLOB.last_mob_gid
 
@@ -104,6 +105,8 @@
 				I = image('icons/mob/hud/hud_yautja.dmi', src, "")
 			if(HOLOCARD_HUD)
 				I = image('icons/mob/hud/marine_hud.dmi', src, "")
+		if(hud in /datum/mob_hud/faction::hud_icons)
+			I.appearance_flags |= RESET_ALPHA
 		I.appearance_flags |= NO_CLIENT_COLOR|KEEP_APART|RESET_COLOR
 		hud_list[hud] = I
 

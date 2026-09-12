@@ -36,6 +36,18 @@
 	overlay_content = "_buck"
 	magazine_type = /obj/item/ammo_magazine/shotgun/buckshot/special
 
+/obj/item/ammo_box/magazine/shotgun/special_slug
+	name = "\improper shotgun shell box (Mgn. Slug x 100)"
+	icon_state = "base_spcslug"
+	overlay_content = "_slug"
+	magazine_type = /obj/item/ammo_magazine/shotgun/slug/special
+
+/obj/item/ammo_box/magazine/shotgun/special_dart
+	name = "\improper shotgun shell box (DU Flechette x 100)"
+	icon_state = "base_spcdart"
+	overlay_content = "_flech"
+	magazine_type = /obj/item/ammo_magazine/shotgun/flechette/special
+
 /obj/item/ammo_box/magazine/shotgun/flechette
 	name = "\improper shotgun shell box (Flechette x 100)"
 	icon_state = "base_flech"

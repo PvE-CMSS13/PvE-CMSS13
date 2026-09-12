@@ -73,6 +73,7 @@
 	icon_xenonid = 'icons/mob/xenonids/crusher.dmi'
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
+	mycelium_food_icon = 'icons/mob/pathogen/pathogen_weeds_64x64.dmi'
 	weed_food_states = list("Crusher_1","Crusher_2","Crusher_3")
 	weed_food_states_flipped = list("Crusher_1","Crusher_2","Crusher_3")
 
@@ -205,6 +206,15 @@
 			throw_atom(TA, impact_range, launch_speed)
 
 			. =  TRUE
+
+	else if(istype(target, /obj/structure/fence/electrified))
+		var/obj/structure/fence/electrified/fence = target
+		if (fence.cut)
+			. = FALSE
+		else
+			src.visible_message(SPAN_DANGER("[src] smashes into [fence]!"))
+			fence.cut_grille()
+			. = TRUE
 
 	// Anything else?
 	else

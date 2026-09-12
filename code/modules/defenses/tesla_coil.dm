@@ -197,6 +197,8 @@
 	desc = "Tactical Electroshock Deterrence device, also simply called 'tedds' by those who use them. A perfected way of producing high-frequency & high-voltage, low-current electricity. Adaptave grounding in RMC equipment allows it to only hit hostile targets with a devastating shock."
 	tesla_range = TESLA_COIL_RMC_RANGE
 	fire_delay = TESLA_COIL_FIREDELAY
+	health = 250
+	health_max = 250
 	handheld_type = /obj/item/defenses/handheld/tesla_coil/stun/rmc
 	disassemble_time = 0.5 SECONDS
 

@@ -14,6 +14,15 @@
 	var/weaken_power = 0.5
 	var/slowdown = 2
 
+/datum/action/xeno_action/activable/fling/alien
+	xeno_cooldown = 2 SECONDS
+
+	// Configurables
+	fling_distance = 2
+	stun_power = 1
+	weaken_power = 1
+	slowdown = 5
+
 // Warrior Lunge
 /datum/action/xeno_action/activable/lunge
 	name = "Lunge"
@@ -28,6 +37,11 @@
 	var/grab_range = 4
 	var/click_miss_cooldown = 15
 	var/twitch_message_cooldown = 0 //apparently this is necessary for a tiny code that makes the lunge message on cooldown not be spammable, doesn't need to be big so 5 will do.
+
+/datum/action/xeno_action/activable/lunge/alien
+	xeno_cooldown = 10
+	grab_range = 7
+	click_miss_cooldown = 0
 
 /datum/action/xeno_action/activable/warrior_punch
 	name = "Punch"
