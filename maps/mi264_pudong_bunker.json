@@ -1,0 +1,10 @@
+{
+    "map_name": "MI264 - Pudong Bunker",
+    "short_name": "Pudong",
+	"map_path": "map_files/pudong_bunker",
+	"map_file": "mi264_pudong_bunker.dmm",
+    "webmap_url": "LV552",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/upp"
+}
+

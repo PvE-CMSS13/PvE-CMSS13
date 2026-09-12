@@ -361,6 +361,11 @@
 	desc = "A crate containing fifty Weyland-Yutani Bottled Spring Water bottles."
 	supplies = list(/obj/item/reagent_container/food/drinks/cans/waterbottle = 50)
 
+/obj/structure/largecrate/supply/supplies/water/upp
+	name = "\improper Gerolsteiner Bottled Sparkling Water crate (x50)"
+	desc = "A crate containing fifty Gerolsteiner Bottled Sparkling Water bottles."
+	supplies = list(/obj/item/reagent_container/food/drinks/cans/waterbottle/upp = 50)
+
 /obj/structure/largecrate/supply/powerloader
 	name = "\improper Caterpillar P-5000 Work Loader crate"
 	desc = "A crate containing one folded, but fully assembled, Caterpillar P-5000 Work Loader and included pamphlet for quick training."

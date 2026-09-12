@@ -1,0 +1,10 @@
+{
+    "map_name": "MI410 - Bandakar Pass Staging Ground",
+    "short_name": "Bandakar",
+	"map_path": "map_files/bandakar_pass",
+	"map_file": "mi410_bandakar_pass.dmm",
+    "webmap_url": "LV552",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/upp"
+}
+
