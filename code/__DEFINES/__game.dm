@@ -53,6 +53,9 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_JUNGLE_DELTA "Jungle Delta" //Featureless Jungle
+#define MAP_PROSPECTOR_CANYON "Prospector Canyon"//Mostly Featureless Desert canyon
+#define MAP_ARCTIC_VALLEY "Arctic Valley"//Featureless Arctic
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
