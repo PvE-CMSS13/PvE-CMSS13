@@ -616,7 +616,7 @@
 
 /obj/item/ammo_magazine/rifle/ak4047
 	name = "\improper AK-4047 magazine (10x24mm)"
-	desc = "A rugged and reliable 40-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	desc = "A rugged and reliable 55-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
 	caliber = "10x24mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ak4047"
