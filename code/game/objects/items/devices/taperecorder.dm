@@ -189,7 +189,7 @@
 
 	if(mytape.used_capacity < mytape.max_capacity)
 		recording = TRUE
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] Recording started."))
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] Recording started."))
 		update_sound()
 		update_icon()
 		var/used = mytape.used_capacity //to stop runtimes when you eject the tape
@@ -199,13 +199,13 @@
 			used += 1 SECONDS
 			if(max - used < time_left_warning && !time_warned)
 				time_warned = TRUE
-				audible_message(SPAN_MAROON("[icon2html(src, usr)] [(max - used) / 10] seconds left!")) //deciseconds / 10 = seconds
+				audible_message(SPAN_GREEN("[icon2html(src, usr)] [(max - used) / 10] seconds left!")) //deciseconds / 10 = seconds
 			sleep(1 SECONDS)
 		if(used >= max)
-			audible_message(SPAN_MAROON("[icon2html(src, usr)] Tape full."))
+			audible_message(SPAN_GREEN("[icon2html(src, usr)] Tape full."))
 		stop()
 	else
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] The tape is full!"))
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] The tape is full!"))
 		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 
 
@@ -218,11 +218,11 @@
 
 	if(recording)
 		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] Recording stopped."))
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] Recording stopped."))
 		recording = FALSE
 	else if(playing)
 		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] Playback stopped."))
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] Playback stopped."))
 		playing = FALSE
 	time_warned = FALSE
 	update_icon()
@@ -242,13 +242,13 @@
 		return
 
 	if(length(mytape.storedinfo) < 1)
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] Tape has no data."))
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] Tape has no data."))
 		return
 
 	playing = TRUE
 	update_icon()
 	update_sound()
-	audible_message(SPAN_MAROON("[icon2html(src, usr)] Playback started."))
+	audible_message(SPAN_GREEN("[icon2html(src, usr)] Playback started."))
 	playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
 	var/used = mytape.used_capacity //to stop runtimes when you eject the tape
 	var/max = mytape.max_capacity
@@ -258,13 +258,13 @@
 		if(playing == FALSE)
 			break
 		if(length(mytape.storedinfo) < i)
-			audible_message(SPAN_MAROON("[icon2html(src, usr)] End of recording."))
+			audible_message(SPAN_GREEN("[icon2html(src, usr)] End of recording."))
 			break
 
 		var/list/heard = get_mobs_in_view(GLOB.world_view_size, src)
 		langchat_speech(mytape.storedinfo[i], heard, GLOB.all_languages, skip_language_check = TRUE, additional_styles = list("langchat_small"))
 
-		audible_message(SPAN_MAROON("[icon2html(src, usr)] [mytape.storedinfo[i]]"))//We want to display this properly, don't double encode
+		audible_message(SPAN_GREEN("[icon2html(src, usr)] [mytape.storedinfo[i]]"))//We want to display this properly, don't double encode
 		if(length(mytape.storedinfo) < i + 1)
 			playsleepseconds = 1
 			sleep(1 SECONDS)
@@ -273,7 +273,7 @@
 		if(playsleepseconds > 14 SECONDS)
 			sleep(1 SECONDS)
 			langchat_speech("Skipping [playsleepseconds/10] seconds of silence", heard, GLOB.all_languages, skip_language_check = TRUE, additional_styles = list("langchat_small"))
-			audible_message(SPAN_MAROON("[icon2html(src, usr)] Skipping [playsleepseconds/10] seconds of silence."))
+			audible_message(SPAN_GREEN("[icon2html(src, usr)] Skipping [playsleepseconds/10] seconds of silence."))
 			playsleepseconds = 1 SECONDS
 		i++
 
@@ -322,7 +322,7 @@
 	if(recording || playing)
 		return
 
-	audible_message(SPAN_MAROON("[icon2html(src, usr)] Transcript printed."))
+	audible_message(SPAN_GREEN("[icon2html(src, usr)] Transcript printed."))
 	playsound(src, 'sound/items/taperecorder/taperecorder_print.ogg', 50, FALSE)
 	var/obj/item/paper/sheet_of_paper = new /obj/item/paper(get_turf(src))
 	var/t1 = "<B>Transcript:</B><BR><BR>"
