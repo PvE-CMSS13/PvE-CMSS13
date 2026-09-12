@@ -933,7 +933,7 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PLT"
 	skills = /datum/skills/pilot
 

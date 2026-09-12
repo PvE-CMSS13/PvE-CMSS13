@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/upp{
+	id = "starboard_door"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/shuttle/ds_upp)
 "aA" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 4;
@@ -783,8 +789,8 @@ Jy
 Jy
 Jy
 PQ
-cO
-cO
+aa
+aa
 xc
 Fz
 di

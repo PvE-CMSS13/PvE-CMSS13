@@ -25,7 +25,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 /obj/structure/machinery/nuclearbomb/Initialize(mapload, ...)
 	. = ..()
 
-	update_minimap_icon()
+	// update_minimap_icon()
 
 /obj/structure/machinery/nuclearbomb/proc/update_minimap_icon()
 	if(!is_ground_level(z))
@@ -55,7 +55,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 /obj/structure/machinery/nuclearbomb/process()
 	. = ..()
 	if(!timing)
-		update_minimap_icon()
+		// update_minimap_icon()
 		return PROCESS_KILL
 
 	GLOB.bomb_set = TRUE //So long as there is one nuke timing, it means one nuke is armed.
@@ -197,7 +197,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 					if(!safety)
 						GLOB.bomb_set = TRUE
 						explosion_time = world.time + timeleft
-						update_minimap_icon()
+						// update_minimap_icon()
 						start_processing()
 						announce_to_players()
 						message_admins("\The [src] has been activated by [key_name(ui.user, 1)] [ADMIN_JMP_USER(ui.user)]")
@@ -385,7 +385,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 /obj/structure/machinery/nuclearbomb/proc/explode()
 	if(safety)
 		timing = FALSE
-		update_minimap_icon()
+		// update_minimap_icon()
 		stop_processing()
 		update_icon()
 		return FALSE
@@ -657,6 +657,17 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	icon_state = "adm"
 	pixel_x = 0
 	var/source_type = /obj/item/ADM
+
+/obj/structure/machinery/nuclearbomb/ADM/sixty
+	timeleft = 60 MINUTES
+
+/obj/structure/machinery/nuclearbomb/ADM/thirty
+
+	timeleft = 30 MINUTES
+
+/obj/structure/machinery/nuclearbomb/ADM/fifteen
+
+	timeleft = 15 MINUTES
 
 /obj/structure/machinery/nuclearbomb/ADM/attackby(obj/item/item, mob/user)
 	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
