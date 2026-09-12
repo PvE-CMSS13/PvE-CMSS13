@@ -371,6 +371,11 @@
 	name = "\improper Akademia Nauk cargo door"
 	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp/korobka
+	name = "\improper Korobka cargo door"
+	id = "aft_door"
+	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc
 	name = "\improper Cash Flow cargo door"
 	icon = 'icons/obj/structures/doors/dropshippmc_cargo.dmi'

@@ -581,7 +581,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559 'Bagulnik' Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+
+	phone_category = PHONE_UPP_SOLDIER
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
 
@@ -589,11 +593,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper USCM Small Radio Telephone Pack"
 	max_storage_space = 10
 
-/obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	name = "\improper UPP Radio Telephone Pack"
-	networks_receive = list(FACTION_UPP)
-	networks_transmit = list(FACTION_UPP)
-	phone_category = PHONE_UPP_SOLDIER
+/obj/item/storage/backpack/marine/satchel/rto/upp_net/small
+	name = "\improper R-559-A 'Bagulnik' Small Radio Telephone Pack"
+	desc = "A smaller variant of the heavy-duty pack, used for telecommunications between central command. Commonly carried by RTOs."
+	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
@@ -1150,6 +1153,22 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	worn_accessible = TRUE
 	max_fuel = 180
 	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, it's bulky profile provides ample space for all the gear necessary for time spent in the field."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, this variant of the bulky MK4 has been modified for UPP medical personnel usage, allowing for quick access."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	max_storage_space = 21
+	worn_accessible = TRUE
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"

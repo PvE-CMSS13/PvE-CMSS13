@@ -1583,6 +1583,17 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	)
 	new_human.equip_to_slot_or_del(new maybeberet, WEAR_HEAD)
 
+/datum/equipment_preset/proc/add_upp_recon_head(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/maybeberet = pick(
+		/obj/item/clothing/head/uppcap,
+		/obj/item/clothing/head/uppcap/beret/recon,
+		/obj/item/clothing/head/uppcap/boonie,
+		/obj/item/clothing/head/uppcap/civi,
+	)
+	new_human.equip_to_slot_or_del(new maybeberet, WEAR_HEAD)
+
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
@@ -1596,6 +1607,20 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
+
+/datum/equipment_preset/proc/add_upp_recon_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/random_uniform = rand(1,4)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2 to 3)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/recon, WEAR_ACCESSORY)
 
 /datum/equipment_preset/proc/add_money_poor(mob/living/carbon/human/new_human)
 	if(!istype(new_human))

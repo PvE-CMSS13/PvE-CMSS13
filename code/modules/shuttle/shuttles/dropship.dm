@@ -215,6 +215,19 @@
 /obj/docking_port/mobile/marine_dropship/gibraltar/get_transit_path_type()
 	return /turf/open/space/transit/dropship/gibraltar
 
+/obj/docking_port/mobile/marine_dropship/korobka
+	name = "Korobka"
+	id = DROPSHIP_KOROBKA
+	width = 9
+	height = 13
+
+	dwidth = 4
+	dheight = 6
+
+/obj/docking_port/mobile/marine_dropship/korobka/get_transit_path_type()
+	return /turf/open/space/transit/dropship/korobka
+
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -439,6 +452,10 @@
 /datum/map_template/shuttle/upp
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
+
+/datum/map_template/shuttle/korobka
+	name = "Korobka"
+	shuttle_id = DROPSHIP_KOROBKA
 
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"

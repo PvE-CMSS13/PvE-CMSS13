@@ -210,6 +210,16 @@
 /obj/item/storage/large_holster/m39/full/elite/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite())
 
+/obj/item/storage/large_holster/m39/upp
+	name = "\improper Type 44 holster rig"
+	desc = "A Type 44 holster, consisting of a modular belt with various clips. There is a prominent backboard to support the Type 64 submachinegun's unique shape within the larger frame of the holster, but some have been known to adapt the clips to fit the OG-74 Grenade Launcher too due to a similar profile. With the uncommon issuing of the Type 64 and OG-74 as is, this holster is not a very common sight, and is usually only specially issued."
+	icon_state = "upp_smg_holster"
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/weapon/gun/smg/bizon,
+		/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon,
+	)
 
 /obj/item/storage/large_holster/fuelpack
 	name = "\improper Broiler-T flexible refueling system"

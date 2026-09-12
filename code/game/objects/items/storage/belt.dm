@@ -277,8 +277,8 @@
 /obj/item/storage/belt/medical/upp
 	name = "\improper Type 41 pattern medical storage rig"
 	desc = "The Type 41 is the standard load-bearing equipment of UPP military. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
-	icon_state = "medicalbelt_upp"
-	item_state = "upp_belt"
+	icon_state = "upp_medicalbelt"
+	item_state = "upp_medicalbelt"
 
 /obj/item/storage/belt/medical/upp/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -1072,6 +1072,13 @@
 	else
 		return ..()
 
+/obj/item/storage/belt/grenade/upp
+	name="\improper Type 39 pattern Grenade rig"
+	desc = "The Type 39 grenade rig is an older issue for the UPP military. It consists of a modular belt with various clips for secure fastening on the armor, and this variant features two large pouches ideal for bulk grenade storage."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
+
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
 	desc="The M276 Mk. II is is an upgraded version of the M276 grenade rig, with more storage capacity."
@@ -1097,6 +1104,14 @@
 	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
 	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
 	new /obj/item/explosive/grenade/high_explosive/impact/tmfrag(src)
+
+/obj/item/storage/belt/grenade/large/upp
+	name="\improper Type 40 pattern grenade rig"
+	desc = "The Type 40 grenade rig is an improvement on Type 39 variant. Besides the two main pouches for general grenade storage, front-facing belt clips were altered to hold additional grenades, thus increasing the overall quantity of grenades carried without over-encumbering the wearer."
+	icon_state = "upp_grenadebelt"
+	item_state = "upp_grenadebelt"
+	has_gamemode_skin = FALSE
+
 
 /obj/item/storage/belt/grenade/large/dutch
 	name = "\improper Dutch's Grenadier Rigging"
@@ -1474,6 +1489,27 @@
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
 #define MAXIMUM_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/gun/bizon
+	name = "\improper Type 49 SMG holster rig"
+	desc = "Special issue variant of Type 41 belt with refitted holster for a Type 64 Submachinegun and three spare magazines. Uncommonly issued to UPP support and specialist personnel."
+	icon_state = "upp_smg"
+	item_state = "upp_smg"
+	storage_slots = 4
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/weapon/gun/smg/bizon,
+		/obj/item/ammo_magazine/smg/bizon,
+	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -8,
+			"icon_y" = -5))
+
+/obj/item/storage/belt/gun/bizon/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/bizon/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"

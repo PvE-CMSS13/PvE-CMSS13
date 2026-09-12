@@ -738,6 +738,13 @@
 		"Landing Zone" = TRACKER_LZ
 	)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/upp/forecon
+	name = "UPP Recon headset"
+	desc = "A special headset issued exclusively to Recon units."
+	frequency = UPP_FORECON_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/upp/forecon)
+	volume = RADIO_VOLUME_QUIET
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial
 	name = "UPP Territorial Guard headset"
 	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."

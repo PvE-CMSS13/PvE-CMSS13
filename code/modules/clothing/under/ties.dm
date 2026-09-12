@@ -439,6 +439,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
 	icon_state = "vdvpatch"
 
+/obj/item/clothing/accessory/patch/upp/recon
+	name = "UPP 'Rozbójnik' Group patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon_state = "uppreconpatch"
+
 /obj/item/clothing/accessory/patch/upp/naval
 	name = "UPP Naval Infantry patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
@@ -1909,6 +1914,13 @@
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/upp
+	name = "\improper Type 82 Pattern Grenade Webbing"
+	desc = "A set of UPP webbing outfitted with small pouches specifically shaped to carry grenades, hand or impact."
+	icon_state = "upp_webbing_grenade"
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 

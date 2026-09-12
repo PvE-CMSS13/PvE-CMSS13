@@ -119,7 +119,7 @@
 /obj/item/storage/box/guncase/heavy/m92_upp/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "m92uppcase_lid")
 		return
@@ -137,6 +137,46 @@
 
 /obj/item/storage/box/guncase/heavy/m92_upp/preloaded/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m92/upp/stored(src)
+	new /obj/item/storage/pouch/explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)
+
+/obj/item/storage/box/guncase/heavy/upp_forecon
+	name = "\improper OG-74 grenade launcher case"
+	desc = "A case for storing an OG-74 grenade launcher."
+	icon_state = "og74case"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon, /obj/item/storage/pouch/explosive, /obj/item/storage/large_holster/m39/upp, /obj/item/storage/box/packet/high_explosive/upp)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp(src)
+	new /obj/item/storage/pouch/explosive(src)
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcase_lid_open")
+	else
+		overlays += image(icon, "og74case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon) in contents)
+		overlays += image(icon, "+og74")
+	var/obj/item/storage/pouch/explosive/nade_pouch = locate(/obj/item/storage/pouch/explosive) in contents
+	if(nade_pouch)
+		if(!nade_pouch.contents.len)
+			overlays += image(icon, "+nade_pouch")
+		else
+			overlays += image(icon, "+nade_pouch_full")
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/preloaded
+	storage_slots = 6
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/preloaded/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp(src)
 	new /obj/item/storage/pouch/explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
@@ -398,7 +438,7 @@
 /obj/item/storage/box/guncase/heavy/smg/type64/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t64case_lid")
 		return
@@ -428,6 +468,7 @@
 
 
 /obj/item/storage/box/guncase/heavy/smg/type64/fill_preset_inventory()
+	new /obj/item/storage/belt/gun/bizon(src)
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
@@ -437,6 +478,7 @@
 	new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64/heap/fill_preset_inventory()
+	new /obj/item/storage/belt/gun/bizon(src)
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
@@ -511,7 +553,7 @@
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t88case_lid")
 		return

@@ -14,6 +14,7 @@
 #define CAMERA_NET_TYPHOON "Typhoon"
 #define CAMERA_NET_TRIPOLI "Tripoli"
 #define CAMERA_NET_GIBRALTAR "Gibraltar"
+#define CAMERA_NET_KOROBKA "Korobka"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
 

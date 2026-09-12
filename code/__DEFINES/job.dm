@@ -23,6 +23,7 @@
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
+#define SQUAD_SISSI "Fox Stalkers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -38,6 +39,7 @@
 #define JOB_SQUAD_ROLES_LIST list(JOB_SQUAD_MARINE, JOB_SQUAD_LEADER, JOB_SQUAD_ENGI, JOB_SQUAD_MEDIC, JOB_SQUAD_SPECIALIST, JOB_SQUAD_SMARTGUN, JOB_SQUAD_TEAM_LEADER)
 
 #define JOB_SQUAD_MARINE_UPP "Infantryman"
+#define JOB_SQUAD_UPP_RTO "Radio Transmissions Operator"
 #define JOB_SQUAD_LEADER_UPP "Platoon Sergeant"
 #define JOB_SQUAD_MEDIC_UPP "Platoon Sanitar"
 #define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
@@ -356,6 +358,15 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP_MAY_GENERAL "Major General"
 #define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
+
+//-------- UPP Small --------//
+
+#define JOB_SQUAD_TEAM_LEADER_FORECON_UPP "Assistant Recon Squad Sergeant"
+#define JOB_SQUAD_LEADER_FORECON_UPP  "Recon Squad Sergeant"
+#define JOB_SQUAD_MEDIC_FORECON_UPP "Recon Sanitar"
+#define JOB_SQUAD_RTO_FORECON_UPP "Recon Radio Transmissions Operator"
+#define JOB_SQUAD_MARINE_FORECON_UPP "Recon Infantryman"
+#define JOB_SQUAD_SMARTGUN_FORECON_UPP "Recon Machinegunner"
 
 #define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
 #define JOB_UPP_SUPPORT_SYNTH "Support Synthetic"

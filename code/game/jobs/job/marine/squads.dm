@@ -206,6 +206,18 @@
 	usable = TRUE
 	squad_type = "Squad"
 
+/datum/squad/marine/upp/forecon
+	name = SQUAD_SISSI
+	equipment_color = "#07770d"
+	chat_color = "#07770d"
+	minimap_color = "#07770d"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FORECON_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"

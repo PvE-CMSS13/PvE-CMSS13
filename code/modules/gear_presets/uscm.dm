@@ -146,6 +146,20 @@
 	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/upp/forecon
+	name = "UPP Recon Infantryman"
+	assignment = JOB_SQUAD_MARINE_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/pfc/recon
+
+/datum/equipment_preset/uscm/pfc/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/pfc/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -217,6 +231,24 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/sg/upp/forecon
+	name = "UPP Recon Machinegunner"
+	assignment = JOB_SQUAD_SMARTGUN_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/smartgunner/recon
+
+/datum/equipment_preset/uscm/sg/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto
@@ -239,6 +271,41 @@
 /datum/equipment_preset/uscm/rto/pfc
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm/rto/upp
+	name = "UPP Radio Transmissions Operator"
+	assignment = JOB_SQUAD_UPP_RTO
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_UPP_GENERAL)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	role_comm_title = "RTO"
+	skills = /datum/skills/pfc
+
+	minimap_icon = "rto"
+
+/datum/equipment_preset/uscm/rto/upp/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+
+/datum/equipment_preset/uscm/rto/upp/forecon
+	name = "UPP Recon Radio Transmissions Operator"
+	assignment = JOB_SQUAD_RTO_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 
@@ -313,6 +380,24 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/medic/upp/forecon
+	name = "UPP Recon Sanitar"
+	assignment = JOB_SQUAD_MEDIC_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/combat_medic/recon
+
+/datum/equipment_preset/uscm/medic/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -358,6 +443,17 @@
 /datum/equipment_preset/uscm/tl/forecon/sergeant
 	name = parent_type::name + " (E5 Rank)"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/tl/upp/forecon
+	name = "UPP Assistant Recon Squad Sergeant"
+	assignment = JOB_SQUAD_TEAM_LEADER_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ARSS"
+	skills = /datum/skills/tl/recon
+
+/datum/equipment_preset/uscm/tl/upp/forecon/sergeant
+	name = parent_type::name + " (E5 Rank)"
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -432,6 +528,12 @@
 /datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
 	name = parent_type::name + " (E7 Rank)"
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/upp/forecon
+	name = "UPP Recon Squad Sergeant"
+	assignment = JOB_SQUAD_LEADER_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RSS"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

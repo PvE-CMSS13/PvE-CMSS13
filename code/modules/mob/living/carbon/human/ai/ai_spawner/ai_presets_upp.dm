@@ -6,6 +6,11 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
 	path = /datum/equipment_preset/upp/militia
 
+/datum/human_ai_equipment_preset/upp/militia/rto
+	name = "UPP People's Territorial Guardsman RTO"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is a radio transmissions operator."
+	path = /datum/equipment_preset/upp/militia/rto
+
 /datum/human_ai_equipment_preset/upp/militia/at
 	name = "UPP People's Territorial Guardsman Anti-Tank"
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
@@ -45,6 +50,16 @@
 	name = "UPP Squad Rifleman - EVA"
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. EVA equipped"
 	path = /datum/equipment_preset/upp/rifleman/eva
+
+/datum/human_ai_equipment_preset/upp/rto
+	name = "UPP Squad RTO"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto
+
+/datum/human_ai_equipment_preset/upp/rto/ag80
+	name = "UPP Squad RTO - AG80"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/ag80
 
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
@@ -122,6 +137,41 @@
 	name = "UPP Support Synthetic"
 	desc = "A generic UPP Support synthetic"
 	path = /datum/equipment_preset/upp/synth
+
+/datum/human_ai_equipment_preset/upp/forecon/rifleman
+	name = "UPP Recon Rifleman"
+	desc = "Light Infantry UPP soldier. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/rto
+	name = "UPP Recon RTO"
+	desc = "Light Infantry UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner
+	name = "UPP Recon Machinegunner"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG."
+	path = /datum/equipment_preset/upp/machinegunner/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner_heap
+	name = "UPP Recon Machinegunner (HEAP)"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG firing HEAP rounds."
+	path = /datum/equipment_preset/upp/machinegunner/forecon/heap
+
+/datum/human_ai_equipment_preset/upp/forecon/medic
+	name = "UPP Recon Sanitar"
+	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
+	path = /datum/equipment_preset/upp/sanitar/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/sergeant
+	name = "UPP Assistant Recon Squad Sergeant"
+	desc = "The assistant leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/squadlead/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/platoon_sergeant
+	name = "UPP Recon Squad Sergeant"
+	desc = "The leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/navallead/forecon
 
 /datum/human_ai_equipment_preset/upp/combat_android
 	name = "UPP Combat Android"

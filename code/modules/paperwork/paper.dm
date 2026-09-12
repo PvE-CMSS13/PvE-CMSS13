@@ -611,6 +611,10 @@
 	name = "GRENADES NOTICE!"
 	info = "Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations."
 
+/obj/item/paper/laituri
+	name = "PARADROP STORAGE NOTICE!"
+	info = "Since we have had several incidents of shuttles flying without adequate equipment, hopefully this makes it clear - the paradrop equipment and a GREEN crate with parachutes are aft of the shuttles rear bay doors, that is to say the room directly port of you currently! There is powerloader equipment nearby, handy eh? If you are instead rappelling, there is a BLACK crate of rappel equipment stored behind you in this area you're currently standing in, it is very hard to miss. Get your act together!"
+
 /obj/item/paper/crumpled
 	name = "paper scrap"
 	icon_state = "scrap"
