@@ -242,7 +242,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/combat
 	name = "\improper M120 tactical shotgun"
-	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
+	desc = "Twelve gauge semi-automatic tube fed shotgun holding six shells. Comes with sling points, detachable stock, and PN/c 30mm USGL. In an attempt at maintaining a familiar manual of arms, the shotgun uses an M41A style non-reciprocating charging handle instead of a pump."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "mk221"
 	item_state = "mk221"
@@ -262,6 +262,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/tactical,
+		/obj/item/attachable/attached_gun/grenade/mk1/m120, //whoever made this and forgot this... I will Get you.
 		/obj/item/attachable/sling,
 	)
 
@@ -284,7 +285,10 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/m120, /obj/item/attachable/stock/tactical)
+	starting_attachment_types = list(
+		/obj/item/attachable/attached_gun/grenade/mk1/m120,
+		/obj/item/attachable/stock/tactical,
+		)
 
 /obj/item/weapon/gun/shotgun/combat/get_examine_text(mob/user)
 	. = ..()

@@ -2076,7 +2076,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/tactical
 	name = "\improper M120 tactical stock"
-	desc = "A metal stock made for the M120 tactical shotgun."
+	desc = "Alloy-reinforced polymer stock for the M120 tactical shotgun. Solid and well built."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -3491,7 +3491,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/mk1/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
 	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
-	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	attachment_firing_delay = 15
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_REMOVABLE
 	max_rounds = 3
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
