@@ -30,11 +30,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -56,7 +59,7 @@
 /datum/equipment_preset/canc/remnant/leader
 	name = "CANC Rebel, Unit Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA4 = JOB_PLAYTIME_TIER_0)
 	assignment = "Unit Leader"
 	skills = /datum/skills/tl
 
@@ -72,12 +75,59 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
-	//head
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e4(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	add_canc_rifle(new_human)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+/datum/equipment_preset/canc/remnant/officer
+	name = "CANC Rebel, Officer"
+	flags = EQUIPMENT_PRESET_EXTRA
+	paygrades = list(PAY_SHORT_CA5 = JOB_PLAYTIME_TIER_0)
+	assignment = "Officer"
+	skills = /datum/skills/lt
+
+/datum/equipment_preset/canc/remnant/officer/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/random_neckwear_canc = rand(1,4)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
@@ -99,7 +149,7 @@
 /datum/equipment_preset/canc/remnant/marksman
 	name = "CANC Rebel, Marksman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/load_gear(mob/living/carbon/human/new_human)
@@ -113,11 +163,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	if(prob(50))
 		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/uppcap/boonie/canc)
@@ -130,7 +183,7 @@
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317/dmr(new_human), WEAR_J_STORE)
@@ -149,6 +202,7 @@
 /datum/equipment_preset/canc/machinegunner
 	name = "CANC Rebel, Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Machinegunner"
 	skills = /datum/skills/smartgunner
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
@@ -158,17 +212,63 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_BELT)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/canc(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff/standard_fmj, WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+/datum/equipment_preset/canc/machinegunner/heap
+	name = "CANC Rebel, Machinegunner (HEAP)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Machinegunner"
+	paygrades = list(PAY_SHORT_CA3 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/smartgunner
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+
+/datum/equipment_preset/canc/machinegunner/heap/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	var/random_neckwear_canc = rand(1,4)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e3(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
@@ -188,6 +288,7 @@
 /datum/equipment_preset/canc/at
 	name = "CANC Rebel, Anti-Tank"
 	flags = EQUIPMENT_PRESET_EXTRA
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 	assignment = "Anti-Tank Rifleman"
 
 /datum/equipment_preset/canc/at/load_gear(mob/living/carbon/human/new_human)
@@ -199,17 +300,20 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_J_STORE)
@@ -252,14 +356,15 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription, WEAR_EYES)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	var/random_neckwear_canc = rand(1,4)
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -299,6 +404,8 @@
 	add_random_satchel(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
@@ -337,6 +444,8 @@
 	add_random_satchel(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket

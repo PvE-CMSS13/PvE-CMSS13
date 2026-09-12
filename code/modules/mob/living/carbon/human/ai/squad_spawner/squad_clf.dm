@@ -94,3 +94,31 @@
 		/datum/equipment_preset/canc/remnant/leader = 1,
 		/datum/equipment_preset/canc/remnant = 2,
 	)
+
+/datum/human_ai_squad_preset/clf/canc/recruits
+	name = "CANC Rebel, Recruits"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant = 1,
+		/datum/equipment_preset/canc/newblood = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/mgteam
+	name = "CANC Rebel, Machinegun Team"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/machinegunner = 1,
+		/datum/equipment_preset/canc/remnant = 1,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/lmgteam
+	name = "CANC Rebel, Light Machinegun Team"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/newblood_machinegunner = 1,
+		/datum/equipment_preset/canc/newblood = 1,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/atteam
+	name = "CANC Rebel, Anti-Tank Team"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/at = 1,
+		/datum/equipment_preset/canc/remnant = 1,
+	)
