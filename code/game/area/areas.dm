@@ -424,3 +424,7 @@
 		areas_in_z["[z]"] = list()
 	areas_in_z["[z]"] += src
 
+/area/sky
+	name = "Sky"
+	icon_state = "lv-626"
+	flags_area = AREA_UNWEEDABLE

@@ -41,6 +41,14 @@
 	name = "van interior"
 	icon_state = "van"
 
+/area/interior/vehicle/white_van
+	name = "WY van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/clf_van
+	name = "CLF van interior"
+	icon_state = "van"
+
 /area/interior/vehicle/box_van
 	name = "box-van interior"
 	icon_state = "van"

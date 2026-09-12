@@ -48,7 +48,8 @@
 #define USES_SEEING (1<<19)
 // Can be quick drawn
 #define QUICK_DRAWABLE (1<<20)
-
+/// If an object will fall through open space, use this when dashing \ jumping for example
+#define NO_ZFALL (1<<21)
 //==========================================================================================
 
 #define HANDLE_BARRIER_CHANCE 1

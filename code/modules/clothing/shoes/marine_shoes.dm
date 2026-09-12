@@ -41,6 +41,14 @@
 /obj/item/clothing/shoes/marine/knife
 	spawn_item_type = /obj/item/weapon/knife/marine
 
+/obj/item/clothing/shoes/marine/army
+	name = "army combat boots"
+	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time."
+
+/obj/item/clothing/shoes/marine/army/knife
+	icon_state = "marine_jungle"
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/brown
 	icon_state = "marine_brown"
 	desc = "A pair of standard issue brown United States Colonial Marine combat boots."
@@ -133,6 +141,80 @@
 	icon_state = "stompers"
 	flags_inventory = NOSLIPPING
 
+/obj/item/clothing/shoes/veteran/pmc
+	name = "polished shoes"
+	desc = "The height of fashion, but these look to be woven with protective fiber."
+	icon_state = "jackboots"
+	item_state = "jackboots"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	min_cold_protection_temperature = SHOE_MIN_COLD_PROT
+	max_heat_protection_temperature = SHOE_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_FEET
+	flags_inventory = FPRINT|NOSLIPPING
+	siemens_coefficient = 0.6
+	allowed_items_typecache = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/throwing_knife,
+		/obj/item/weapon/gun/pistol/holdout,
+		/obj/item/weapon/gun/pistol/clfpistol,
+		/obj/item/weapon/straight_razor,
+	)
+
+/obj/item/clothing/shoes/marine/corporate
+	name = "rugged boots"
+	desc = "These synth-leather boots seem high quality when first worn, but quickly detoriate, especially in the environments the corporate security members these are issued to operate in. Still, better than nothing."
+
+/obj/item/clothing/shoes/marine/corporate/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
+//=ROYAL MARINES=\\
+
+/obj/item/clothing/shoes/royal_marine
+	name = "\improper L10 pattern combat boots"
+	desc = "Standard issue combat boots for combat scenarios or combat situations. Used by the three world empires royal marines commando units."
+	icon_state = "rmc_boots"
+	item_state = "rmc_boots"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	min_cold_protection_temperature = SHOE_MIN_COLD_PROT
+	max_heat_protection_temperature = SHOE_MAX_HEAT_PROT
+	flags_cold_protection = BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_FEET
+	flags_inventory = FPRINT|NOSLIPPING
+	siemens_coefficient = 0.6
+	allowed_items_typecache = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/throwing_knife,
+		/obj/item/weapon/gun/pistol/holdout,
+		/obj/item/weapon/gun/pistol/clfpistol,
+	)
+	flags_atom = NO_NAME_OVERRIDE
+
+/obj/item/clothing/shoes/royal_marine/knife
+	spawn_item_type = /obj/item/attachable/bayonet/rmc
+
+/obj/item/clothing/shoes/veteran/pmc/commando/cbrn
+	name = "\improper M3 MOPP boots"
+	desc = "M3 MOPP boots have been designed to protect the wearer from contact with any possible infection vectors or hazardous substances that may have contaminated the area of operations. This includes further enhancements in conjunction with the standard durability of M3 boots, reducing the probability of punctures or cuts as well as the effects of radiation."
+	icon_state = "cbrn"
+	item_state = "cbrn"
+	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
+	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
+	spawn_item_type = /obj/item/attachable/bayonet
 /obj/item/clothing/shoes/cowboy
 	name = "leather boots"
 	desc = "A pair of leather cowboy boots."

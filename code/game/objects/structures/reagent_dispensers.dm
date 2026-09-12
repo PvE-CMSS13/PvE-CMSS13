@@ -378,6 +378,11 @@
 	name = "gastank"
 	desc = "A gas tank"
 
+/obj/structure/reagent_dispensers/fueltank/spacecraft
+	name = "spacecraft fuel-mix tank"
+	desc = "A fuel tank mix with fuel designed for various spacecraft, very combustible."
+	icon_state = "weldtank_alt"
+
 /obj/structure/reagent_dispensers/fueltank/gas/leak_fuel(amount)
 	if(reagents.total_volume == 0)
 		return
@@ -447,6 +452,18 @@
 	density = FALSE
 	amount_per_transfer_from_this = 45
 	chemical = "condensedcapsaicin"
+
+/obj/structure/reagent_dispensers/forensictank
+	name = "forensic spray refiller"
+	desc = "Refill forensic spray bottles."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "forensictank"
+	anchored = TRUE
+	drag_delay = 3
+	wrenchable =  FALSE
+	density = FALSE
+	amount_per_transfer_from_this = 45
+	chemical = "forensic_spray"
 
 /obj/structure/reagent_dispensers/water_cooler
 	name = "water cooler"

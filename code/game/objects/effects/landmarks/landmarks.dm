@@ -6,6 +6,7 @@
 	unacidable = TRUE
 
 	var/invisibility_value = INVISIBILITY_MAXIMUM
+	var/spawn_chance = 100
 
 /obj/effect/landmark/New()
 	tag = "landmark*[name]"
@@ -109,6 +110,10 @@
 /obj/effect/landmark/ert_spawns/groundside_xeno
 	name = "distress_groundside_xeno"
 
+/obj/effect/landmark/ert_spawns/groundside_army
+	name = "distress_groundside_army"
+	icon_state = "spawn_distress_wo"
+
 /obj/effect/landmark/monkey_spawn
 	name = "monkey_spawn"
 	icon_state = "monkey_spawn"
@@ -204,6 +209,7 @@
 /obj/effect/landmark/xeno_spawn
 	name = "xeno spawn"
 	icon_state = "xeno_spawn"
+	var/species
 
 /obj/effect/landmark/xeno_spawn/Initialize(mapload, ...)
 	. = ..()
@@ -603,3 +609,73 @@
 /obj/effect/landmark/personal_weapon/Destroy()
 	GLOB.personal_weapon -= src
 	return ..()
+
+// AMMO SPAWN (tyrargo)
+
+// m41a ammo
+
+/obj/effect/landmark/ammo_spawn/m41a_random_spawn
+	name = "m41a ammo spawn"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/m41a_random_spawn/Initialize(mapload, ...)
+	. = ..()
+	if(!prob(spawn_chance))
+		return
+
+	new /obj/item/ammo_magazine/rifle(loc)
+
+/obj/effect/landmark/ammo_spawn/m41a_ext_random_spawn
+	name = "m41a extended ammo spawn"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/m41a_ext_random_spawn/Initialize(mapload, ...)
+	. = ..()
+	if(!prob(spawn_chance))
+		return
+
+	new /obj/item/ammo_magazine/rifle/extended(loc)
+
+// M4RA Rifle ammo
+
+/obj/effect/landmark/ammo_spawn/m4ra_random_spawn
+	name = "m4ra ammo spawn"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/m4ra_random_spawn/Initialize(mapload, ...)
+	. = ..()
+	if(!prob(spawn_chance))
+		return
+
+	new /obj/item/ammo_magazine/rifle/m49a(loc)
+
+/obj/effect/landmark/ammo_spawn/m4ra_ext_random_spawn
+	name = "m41a extended ammo spawn"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/m4ra_ext_random_spawn/Initialize(mapload, ...)
+	. = ..()
+	if(!prob(spawn_chance))
+		return
+
+	new /obj/item/ammo_magazine/rifle/m49a/ext(loc)
+
+// vp78 ammo
+/obj/effect/landmark/ammo_spawn/vp78_ammo
+	name = "vp78 ammo (70)"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/vp78_ammo/Initialize(mapload, ...)
+	. = ..()
+	if(prob(70))
+		new /obj/item/ammo_magazine/pistol/vp78(loc)
+
+// smg ammo
+/obj/effect/landmark/ammo_spawn/smg_ammo
+	name = "SMG ammo (60)"
+	icon_state = "ipool"
+
+/obj/effect/landmark/ammo_spawn/smg_ammo/Initialize(mapload, ...)
+	. = ..()
+	if(prob(60))
+		new /obj/item/ammo_magazine/smg/m39(loc)

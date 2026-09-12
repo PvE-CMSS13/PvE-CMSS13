@@ -19089,7 +19089,7 @@
 /area/taipei/maints/south)
 "qYq" = (
 /obj/structure/coatrack,
-/obj/item/clothing/head/det_hat/black{
+/obj/item/clothing/head/fedora/brown{
 	pixel_x = -6;
 	pixel_y = 9
 	},

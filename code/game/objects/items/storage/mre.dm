@@ -402,3 +402,6 @@
 			new /obj/item/reagent_container/food/drinks/cans/spread/strawberryjam(src)
 		if(2)
 			new /obj/item/reagent_container/food/drinks/cans/spread/sunflowerbutter(src)
+/obj/item/storage/box/mre/us_army
+	name = "\improper US Army MRE"
+	desc = "A Meal, Ready-to-Eat. A single-meal combat ration designed to provide a soldier with enough nutrients for a day of strenuous work. Its expiration date is at least is a few years ahead of your expected service time."

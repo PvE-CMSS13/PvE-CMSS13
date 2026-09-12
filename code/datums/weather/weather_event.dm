@@ -11,6 +11,10 @@
 	var/length = 0 // Length of the event
 
 	//// Optional vars
+
+	/// If this is set, display a fullscreen type to mobs
+	var/fullscreen_type = null
+
 	var/turf_overlay_icon_state // The icon to set on the VFX holder instanced into every turf at round start
 	var/turf_overlay_alpha = 255
 
@@ -26,6 +30,9 @@
 	var/fire_smothering_strength = 0 // How much will this weather smother fires on turfs and on mobs - should be 0 to 10
 
 /datum/weather_event/proc/start_weather_event()
+	return
+
+/datum/weather_event/proc/end_weather_event()
 	return
 
 // remember, this happens every five seconds or so

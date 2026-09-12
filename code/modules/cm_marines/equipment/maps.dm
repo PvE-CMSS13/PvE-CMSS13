@@ -62,6 +62,11 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	desc = "A satellite printout of the Lazarus Landing colony on LV-624."
 	html_link = "images/6/6f/LV624.png"
 
+/obj/item/map/lv624_lazarus_landing_map
+	name = "\improper Lazarus Landing Map"
+	desc = "A satellite printout of the Lazarus Landing colony on LV-624."
+	html_link = "images/6/6f/LV624.png"
+
 /obj/item/map/ice_colony_map
 	name = "\improper Ice Colony map"
 	desc = "A satellite printout of the Ice Colony."
@@ -136,6 +141,12 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = "images/b/bb/C_claim.png"
 	color = "cyan"
 
+/obj/item/map/lv759_map
+	name = "\improper LV-759 Map"
+	desc = "An overview of LV-759 schematics."
+	html_link = "images/6/60/LV759_Hybrisa_Prospera.png" //needs proper image still.
+	color = "#005eab"
+
 /obj/item/map/new_varadero
 	name = "\improper New Varadero map"
 	desc = "A labeled blueprint of the UA outpost New Varadero."
@@ -166,12 +177,41 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/tyrargo_rift
+	name = "\improper Tyrargo Rift map"
+	desc = "A labeled blueprint of the UA city Tyrargo Rift"
+	html_link = "images/7/79/Tyrargo_Rift.png"
+
+/obj/item/map/white_antre_map
+	name = "\improper White Antre Research Facility map"
+	desc = "An overview of the White Antre facility schematics."
+	html_link = "images/d/da/White_Antre_Research_Facility.png"
+	color = "cyan"
+
+/obj/item/map/cape_river
+	name = "\improper Cape River map"
+	desc = "A labeled blueprint of the Con-Am mining outpost Cape River"
+	html_link = "images/4/46/Cape_River.png"
+	color = "red"
+
+/obj/item/map/lv1021_map
+	name = "\improper LV-1021 map"
+	desc = "A general overview of the aproximate area of the CLF camp."
+	html_link = "images/d/da/White_Antre_Research_Facility.png"
+
+/obj/item/map/galaxy
+	name = "\improper Galaxy map"
+	desc = "A diagrammatic map of the milky way, laid out by sector."
+	html_link = "images/9/9e/Galaxy_Map.png"
+	color = "#005eab"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
 	return list(
 		MAP_LV_624 = new /obj/item/map/lazarus_landing_map(),
 		MAP_LV_624_REPAIRED = new /obj/item/map/lazarus_landing_map(),
+		MAP_LV_624_LAZARUS_LANDING = new /obj/item/map/lv624_lazarus_landing_map(),
 		MAP_ICE_COLONY = new /obj/item/map/ice_colony_map(),
 		MAP_ICE_COLONY_V1 = new /obj/item/map/ice_colony_map/v1(),
 		MAP_ICE_COLONY_V2 = new /obj/item/map/ice_colony_map/v2(),
@@ -186,6 +226,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
 		MAP_LV522_CHANCES_CLAIM_FORECON = new /obj/item/map/lv522_map(),
+		MAP_LV759_HYBRISA_PROSPERA = new /obj/item/map/lv759_map(),
+		MAP_LV759_HYBRISA_PROSPERA_REPAIRED = new /obj/item/map/lv759_map(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
@@ -201,6 +243,12 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
+		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
+		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
+		MAP_CAPE_RIVER = new /obj/item/map/cape_river(),
+		MAP_LV1021_FALCONS_FURY = new /obj/item/map/lv1021_map()
 	)
 
 //used by marine equipment machines to spawn the correct map.

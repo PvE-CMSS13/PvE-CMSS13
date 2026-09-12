@@ -45,22 +45,65 @@
 	icon_state = "smoke"
 	opacity = TRUE
 
-/obj/structure/blocker/fog/Initialize(mapload, time_to_dispel)
+/obj/structure/blocker/door
+	name = "shutter"
+	desc = "Containment shutter. Used during routine testing to reduce the risk of a containment breach."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shutter"
+	opacity = TRUE
+
+/obj/structure/blocker/door/Initialize(mapload, time_to_dispel)
 	. = ..()
 
 	if(!time_to_dispel)
 		return INITIALIZE_HINT_QDEL
 
 	dir = pick(CARDINAL_DIRS)
-	QDEL_IN(src, time_to_dispel + rand(-5 SECONDS, 5 SECONDS))
+	QDEL_IN(src, time_to_dispel)
 
-/obj/structure/blocker/fog/attack_hand(mob/M)
-	to_chat(M, SPAN_NOTICE("You peer through the fog, but it's impossible to tell what's on the other side..."))
+/obj/structure/blocker/door/attack_hand(mob/M)
+	to_chat(M, SPAN_NOTICE("Won't budge, you'll have to wait until the all-clear is sent."))
 
-/obj/structure/blocker/fog/attack_alien(M)
+/obj/structure/blocker/door/attack_alien(M)
 	attack_hand(M)
 	return XENO_NONCOMBAT_ACTION
 
+/obj/structure/blocker/preserve_edge
+	name = "dense fog"
+	desc = "You think you can see a way through."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	opacity = TRUE
+
+/obj/structure/blocker/preserve_edge/attack_hand(mob/user)
+	if(isyautja(user))
+		to_chat(user, SPAN_WARNING("Why would you do this?"))///no leaving for preds
+		return
+
+	if(user.action_busy)
+		return
+
+	var/choice = tgui_alert(user, "Are you sure you want to traverse the fog and escape the preserve?", "[src]", list("Yes", "No"), 15 SECONDS)
+	if(!choice)
+		return
+
+	if(choice == "No")
+		return
+
+	if(choice == "Yes")
+		to_chat(user, SPAN_DANGER("You begin to make your escape!"))
+
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		to_chat(user, SPAN_NOTICE("You lose your way and come back."))
+		return
+
+	announce_dchat("[user.real_name] has escaped from the hunting grounds!")
+	playsound(user, 'sound/misc/fog_escape.ogg')
+	qdel(user)
+
+/obj/structure/blocker/preserve_edge/attack_alien(user)
+	attack_hand(user)
+	return XENO_NONCOMBAT_ACTION
 
 /obj/structure/blocker/forcefield
 	name = "forcefield"
@@ -126,13 +169,17 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	return FALSE
 
 /obj/structure/blocker/forcefield/human
-	types = list(/mob/living/carbon/human)
+	types = list(/mob/living/carbon/human, /obj/item/weapon)
 	icon_state = "purple_line"
 
 	visible = TRUE
 
 /obj/structure/blocker/forcefield/human/bulletproof/get_projectile_hit_boolean()
 	return TRUE
+
+/obj/structure/blocker/forcefield/all
+	types = list(/mob/living/carbon/human, /mob/living/carbon/xenomorph, /obj/item/weapon)
+	icon_state = "purple_line"
 
 // for fuel pump since it's a large sprite.
 /obj/structure/blocker/fuelpump
@@ -145,3 +192,13 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 	name = "directional blocker"
 	icon_state = "invisible_wall_directional"
 	flags_atom = ON_BORDER
+
+/obj/structure/blocker/forcefield/all
+	types = list(/mob/living/carbon/human, /mob/living/carbon/xenomorph, /obj/item/weapon, /mob/living/simple_animal/hostile/retaliate/giant_lizard)
+	icon_state = "purple_line"
+	alpha = 0
+/obj/structure/blocker/forcefield/all
+	types = list(/mob/living/carbon/human, /mob/living/carbon/xenomorph, /obj/item/weapon, /mob/living/simple_animal/hostile/retaliate/giant_lizard)
+	icon_state = "purple_line"
+
+	visible = TRUE

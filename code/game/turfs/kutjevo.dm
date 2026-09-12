@@ -271,6 +271,9 @@
 /turf/open/floor/kutjevo/colors/purple/edge/west
 	dir = WEST
 
+/turf/open/floor/kutjevo/colors/purple/edge/northwest
+	dir = NORTHWEST
+
 /turf/open/floor/kutjevo/colors/purple/inner_corner
 	icon_state = "purp4"
 

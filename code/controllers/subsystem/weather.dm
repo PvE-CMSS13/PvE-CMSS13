@@ -167,6 +167,8 @@ SUBSYSTEM_DEF(weather)
 	else
 		message_admins(SPAN_BLUE("Weather Event of unknown type [weather_event_type] ending after [DisplayTimeText(world.time - current_event_start_time)]."))
 
+	weather_event_instance.end_weather_event()
+
 	for(var/area/area as anything in weather_areas)
 		area.overlays -= curr_master_turf_overlay
 
@@ -201,4 +203,8 @@ SUBSYSTEM_DEF(weather)
 
 /obj/effect/weather_vfx_holder/rain
 	icon_state = "strata_storm"
+	alpha = 50
+
+/obj/effect/weather_vfx_holder/hybrisa_rain
+	icon_state = "hybrisa_rain"
 	alpha = 50

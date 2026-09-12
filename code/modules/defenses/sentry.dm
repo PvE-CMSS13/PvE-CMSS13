@@ -613,6 +613,33 @@
 	fire_delay = 5
 	burst = 1
 
+/obj/structure/machinery/defenses/sentry/premade/clf
+	name = "\improper Hacked UA-577 Gauss Turret"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been hacked and its color scheme is non-standard issue. Best to treat it as hostile."
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_CLF
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/lowammo
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/lowammo/random
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
 /obj/structure/machinery/defenses/sentry/premade/Initialize()
 	. = ..()
 	if(selected_categories[SENTRY_CATEGORY_IFF])
@@ -640,6 +667,23 @@
 	faction_group = null
 	ammo = new /obj/item/ammo_magazine/sentry
 
+/obj/structure/machinery/defenses/sentry/premade/antre_wy
+	name = "\improper Static UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "premade"
+	sentry_type = "wy_sentry"
+	faction_group = list(FACTION_LIST_WY, FACTION_COLONIST, FACTION_SURVIVOR)
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random/Initialize()
+	. = ..()
+	ammo.current_rounds = rand(40,60)
+
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
 	name = "\improper UA-633 Static Gauss Turret"
@@ -657,26 +701,22 @@
 	. = ..()
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR)
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_NSPA)
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy
 	name = "WY 5-GSE3 Static Turret"
-	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
+	desc = "A state-of-the-art, high-tech static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
 	icon = 'icons/obj/structures/machinery/defenses/wy_static.dmi'
 	defense_type = "Static"
 	sentry_type = "wy_sentry"
-	health = 350
-	health_max = 350
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY)
-	fire_delay = 0.6 SECONDS
-	damage_mult = 2
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY, FACTION_NSPA)
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy/Initialize()
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY
@@ -1029,6 +1069,27 @@
 	omni_directional = FALSE
 	density = FALSE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
+
+/obj/structure/machinery/defenses/sentry/clf
+	name = "CLF Hacked UA-577 Gauss Turret"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been hacked and its color scheme is non-standard issue. Best to treat it as hostile."
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	sentry_type = "uac_sentry"
+	health = 300
+	health_max = 300
+	damage_mult = 1.2
+	disassemble_time = 5 SECONDS
+	handheld_type = /obj/item/defenses/handheld/sentry/clf
+	ammo = new /obj/item/ammo_magazine/sentry
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_CLF,
+	)
+
+/obj/structure/machinery/defenses/sentry/omni
+	name = "\improper UA 571-D omnidirectional sentry gun"
+	omni_directional = TRUE
+	damage_mult = 0.7
+	sentry_range = 4
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE

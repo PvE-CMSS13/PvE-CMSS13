@@ -611,6 +611,22 @@
 	name = "GRENADES NOTICE!"
 	info = "Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations."
 
+/obj/item/paper/abyssal/captain
+	name = "Captains Directive"
+
+/obj/item/paper/lazarus/clf
+	name = "Log Entry"
+	info = "We've secured a foothold deep in the north-western jungle, within the bones of some ancient alien ruin. The company's colony is under attack south of our position, by what we don't know, the screams and gunfire of the colony have long since stopped. The jungle shields us, the ruins fortify us, and time is our ally. We wait. We prepare. When the moment comes, we will strike. We will liberate this colony when the time is right. We wait. We prepare. Liberation will come... We wait. We prepare. Liberation will come... We wait. We prepare. Liberation will come...\ncontinues until the end of the page\n"
+
+/obj/item/paper/abyssal/liaison
+	name = "Liaison Directive"
+
+/obj/item/paper/abyssal/liaison/Initialize(mapload, photo_list)
+	. = ..()
+
+	info = "<center> <br> <b><small>Con-Amalagated Corporation</b></small> <br> <b><large>Orders For Liaison: Con-AM 81 'Abyssal'</large></b> <br> <small>No.02</small></center> <hr> <br> Date: 2182 <br> <b><large>On Recovery Of Unidentified Craft<large></b>  <hr> We have recieved your Captains communique regarding the recovery of a possible xenocraft. Its transfer into Con-Am secure custody is considered priority 1. We are dispatching a Con-Am Security Service force to your station to transfer it off-station.<br><br> Your directive is to ensure its safe harbour until the recovery team arrives. You must render every effort to ensure the safety of the craft. You and your crew will be well rewarded for your efforts.  <hr><small><i>FOR SANCTIONED USE ONLY</i></small>"
+
+
 /obj/item/paper/crumpled
 	name = "paper scrap"
 	icon_state = "scrap"
@@ -917,3 +933,7 @@
 	. = ..()
 	info = "<div> <img style='align:middle' src='[SSassets.transport.get_asset_url("colonialspacegruntsEZ.png")]'>"
 	update_icon()
+
+/obj/item/paper/navalis/rescue
+	name = "Rescue Imminent: Tell Others"
+	info = "I just got off the radio before the main relay tower was ripped apart, its the Marines! They heard our distress call and are on the way! They'll be landing within the day, I need to warn the others, hope is in sight! Its almost over."

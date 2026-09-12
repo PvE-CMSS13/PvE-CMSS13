@@ -508,6 +508,20 @@
 	icon_state = "101a"
 	opacity = FALSE
 
+// TWE Ship Cosmetic
+
+/obj/structure/shuttle/part/twe_cosmetic1
+	name = "\improper UD4-UK"
+	icon = 'icons/turf/twedropship.dmi'
+	icon_state = "0,0"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/twe_cosmetic1/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/twe_cosmetic1/transparent
+	opacity = FALSE
+
 /obj/structure/shuttle/part/gibraltar
 	name = "\improper Gibraltar"
 	icon = 'icons/turf/dropship_rmc.dmi'
@@ -565,3 +579,117 @@
 	desc = "The nose of a TWE produced DAA.4 Nimrod dropship. Contains the AESA radar system and the chin-mounted powered gunpod."
 	icon_state = "101a"
 	opacity = FALSE
+
+// CLF Ship
+
+/obj/structure/shuttle/part/dropship_clf
+	name = "\improper UD-9M 'Dogbite'"
+	desc = "The UD-9M 'Dogbite' is a repurposed utility dropship, originally designed for short-haul cargo operations across colonial systems. Stolen and heavily modified by the Colonial Liberation Front, it's now a rugged smuggler and strike craft, capable of dropping a full fireteam through tight patrol nets. Its hull is scarred with gunfire, rust, and graffiti — a patchwork of rebellion held together by grit and stolen parts."
+	icon = 'icons/turf/dropship_clf.dmi'
+	icon_state = "1"
+
+/obj/structure/shuttle/part/dropship_clf/ex_act(severity, direction)
+	return FALSE
+
+/obj/structure/shuttle/part/dropship_clf/transparent
+	opacity = FALSE
+
+/obj/structure/shuttle/part/dropship_clf/transparent/nose_top_right
+	icon_state = "102"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/nose_center
+	icon_state = "101"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/nose_top_left
+	icon_state = "100"
+
+/obj/structure/shuttle/part/dropship_clf/nose_front_left
+	icon_state = "95"
+
+/obj/structure/shuttle/part/dropship_clf/nose_front_right
+	icon_state = "99"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/inner_right_weapons
+	icon_state = "90"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/outer_right_weapons
+	icon_state = "91"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/inner_left_weapons
+	icon_state = "85"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/outer_left_weapons
+	icon_state = "84"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/upper_right_wing
+	icon_state = "74"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/middle_right_wing
+	icon_state = "70"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/lower_right_wing
+	icon_state = "65"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/upper_left_wing
+	icon_state = "71"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/middle_left_wing
+	icon_state = "66"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/lower_left_wing
+	icon_state = "61"
+
+/obj/structure/shuttle/part/dropship_clf/lower_left_wall
+	icon_state = "46"
+
+/obj/structure/shuttle/part/dropship_clf/lower_right_wall
+	icon_state = "49"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/engine_left_cap
+	icon_state = "40"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/engine_right_cap
+	icon_state = "41"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/engine_left_exhaust
+	icon_state = "16"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/engine_right_exhaust
+	icon_state = "17"
+
+/obj/structure/shuttle/part/dropship_clf/bottom_left_wall
+	icon_state = "9"
+
+/obj/structure/shuttle/part/dropship_clf/bottom_right_wall
+	icon_state = "15"
+
+/obj/structure/shuttle/part/dropship_clf/left_inner_wing_connector
+	icon_state = "7"
+
+/obj/structure/shuttle/part/dropship_clf/right_inner_wing_connector
+	icon_state = "8"
+
+/obj/structure/shuttle/part/dropship_clf/left_outer_wing_connector
+	icon_state = "3"
+
+/obj/structure/shuttle/part/dropship_clf/right_outer_wing_connector
+	icon_state = "4"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/left_outer_bottom_wing
+	icon_state = "1"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/left_outer_inner_wing
+	icon_state = "2"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/right_inner_bottom_wing
+	icon_state = "5"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/right_outer_bottom_wing
+	icon_state = "6"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/left_engine
+	icon_state = "leftengine_1"
+
+/obj/structure/shuttle/part/dropship_clf/transparent/right_engine
+	icon_state = "rightengine_1"
+

@@ -206,3 +206,35 @@
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+//= UPP =\\
+
+/obj/item/clothing/mask/gas/upp_pfb
+	name = "\improper ShMB/4 gasmask"
+	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+	icon_state = "pfb"
+	item_state = "pfb"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
+//= CLF =\\
+
+/obj/item/clothing/mask/gas/riot
+	name = "riot mask"
+	desc = "A mask of colonial riot control department, with red laser shield lenses for eye protection due a somewhat often use of RXF-M5 EVA by colonial rioters. Riot gear is also often seen in hands of CLF terrorists, due to large surplus of it being captured in colonial rebellions."
+	icon_state = "carbon_mask"
+	item_state = "balaclava"
+	vision_impair = VISION_IMPAIR_NONE
+	eye_protection = EYE_PROTECTION_FLAVOR
+	flags_inv_hide = HIDEEARS|HIDEFACE
+
+//= Security =\\
+
+/obj/item/clothing/mask/gas/sec_mask
+	name = "\improper Sec Mask"
+	desc = "Standard issue mask issued to Con-Am security forces. Typically locks in with the standard issue helmet Voice modulator appears to be disabled."
+	icon_state = "sec_mask"
+	item_state = "sec_mask"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEFACE

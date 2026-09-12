@@ -334,6 +334,25 @@
 	icon_opened = "open_trashcart"
 	icon_closed = "closed_trashcart"
 
+/obj/structure/closet/crate/trashcart/alt
+	name = "trash cart"
+	desc = "A heavy, metal trashcart with wheels."
+	icon_state = "closed_trashcart_alt"
+	icon_opened = "open_trashcart_alt"
+	icon_closed = "closed_trashcart_alt"
+
+/obj/structure/closet/crate/foodcart
+	name = "food cart"
+	desc = "A heavy, metal foodcart with wheels."
+	icon_state = "foodcart2"
+	icon_opened = "foodcart2_open"
+	icon_closed = "foodcart2"
+
+/obj/structure/closet/crate/foodcart/alt
+	icon_state = "foodcart1"
+	icon_opened = "foodcart1_open"
+	icon_closed = "foodcart1"
+
 /obj/structure/closet/crate/weapon
 	name = "weapons crate"
 	desc = "A weapons crate."

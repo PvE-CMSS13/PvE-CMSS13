@@ -61,6 +61,19 @@
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			deconstruct(FALSE)
 
+/obj/structure/showcase/yautja/ancient
+	icon = 'icons/obj/structures/props/hunter/ancientsmallstatue.dmi'
+	icon_state = "statue_ancient"
+
+/obj/structure/showcase/yautja
+	name = "alien warrior statue"
+	desc = "A statue of some armored alien humanoid."
+	icon = 'icons/obj/structures/props/hunter/ancientsmallstatue.dmi'
+	icon_state = "statue_sandstone"
+
+/obj/structure/showcase/yautja/alt
+	icon_state = "statue_grey"
+
 /obj/structure/target
 	name = "shooting target"
 	anchored = FALSE
@@ -165,6 +178,69 @@
 	plane = FLOOR_PLANE
 	density = FALSE
 	opacity = FALSE
+
+/obj/structure/stairs/multiz
+	var/direction
+
+/obj/structure/stairs/multiz/Initialize(mapload, ...)
+	. = ..()
+	RegisterSignal(loc, COMSIG_TURF_ENTERED, PROC_REF(on_turf_entered))
+
+/obj/structure/stairs/multiz/proc/on_turf_entered(turf/source, atom/movable/enterer)
+	if(!istype(enterer, /mob))
+		return
+
+	RegisterSignal(enterer, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_premove))
+	RegisterSignal(enterer, COMSIG_MOVABLE_MOVED, PROC_REF(on_leave))
+
+/obj/structure/stairs/multiz/proc/on_leave(atom/movable/mover, atom/oldloc, newDir)
+	SIGNAL_HANDLER
+	if(mover.loc == loc)
+		return
+	UnregisterSignal(mover, list(COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED))
+
+/obj/structure/stairs/multiz/proc/on_premove(atom/movable/mover, atom/newLoc)
+	SIGNAL_HANDLER
+
+	if(direction == UP && get_dir(src, newLoc) != dir || direction == DOWN && get_dir(src, newLoc) != REVERSE_DIR(dir))
+		return
+
+	var/turf/target_turf = get_step(src, direction == UP ? dir : REVERSE_DIR(dir))
+	var/turf/actual_turf
+	if(direction == UP)
+		actual_turf = SSmapping.get_turf_above(target_turf)
+	else
+		actual_turf = SSmapping.get_turf_below(target_turf)
+
+	if(actual_turf)
+		if(istype(mover, /mob))
+			var/mob/mover_mob = mover
+			mover_mob.trainteleport(actual_turf)
+		else
+			mover.forceMove(actual_turf)
+		if(!(mover.flags_atom & DIRLOCK))
+			mover.setDir(direction == UP ? dir : REVERSE_DIR(dir))
+
+	return COMPONENT_CANCEL_MOVE
+
+/obj/structure/stairs/multiz/up
+	direction = UP
+
+/obj/structure/stairs/multiz/down
+	direction = DOWN
+
+/obj/effect/stairs
+	var/direction
+
+/obj/effect/stairs/Initialize(mapload, ...)
+	. = ..()
+	SSminimaps.add_marker(src, z, MINIMAP_FLAG_ALL, "stairs_[direction]")
+
+/obj/effect/stairs/up
+	direction = "up"
+
+/obj/effect/stairs/down
+	direction = "down"
 
 /obj/structure/stairs/perspective //instance these for the required icons
 	icon = 'icons/obj/structures/stairs/perspective_stairs.dmi'

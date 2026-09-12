@@ -171,6 +171,15 @@
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/stack/medical/splint(src)
 
+/obj/item/storage/pouch/survival/black
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/survival/full/black
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/survival/full/wy
+	icon_state = "soctools"
+
 /obj/item/storage/pouch/survival/synth
 	name = "synth survival pouch"
 	desc = "An emergency pouch given to synthetics in the event of an emergency."
@@ -207,6 +216,9 @@
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/splint,
 	)
+
+/obj/item/storage/pouch/firstaid/wy
+	icon_state = "wy_firstaid"
 
 /obj/item/storage/pouch/firstaid/full
 	desc = "Contains some basic first aid supplies."
@@ -848,6 +860,9 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+
+/obj/item/storage/pouch/autoinjector/full/wy
+	icon_state = "wy_medicpack"
 
 /obj/item/storage/pouch/syringe
 	name = "syringe pouch"

@@ -327,3 +327,15 @@
 	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/upp
 	starting_mask_type = /obj/item/clothing/mask/breath
 	starting_tank_type = /obj/item/tank/oxygen/yellow
+
+/obj/structure/machinery/suit_storage_unit/compression_suit
+	starting_suit_type =/obj/item/clothing/suit/space/pressure
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure
+	starting_mask_type = /obj/item/clothing/mask/breath
+	starting_tank_type = /obj/item/tank/oxygen
+
+/obj/structure/machinery/suit_storage_unit/compression_suit/uscm
+	starting_suit_type = /obj/item/clothing/suit/space/pressure/uscm
+	starting_helmet_type = /obj/item/clothing/head/helmet/space/pressure/uscm
+	starting_mask_type = /obj/item/clothing/mask/breath
+	starting_tank_type = /obj/item/tank/oxygen

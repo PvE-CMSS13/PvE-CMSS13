@@ -188,9 +188,10 @@
 	var/welding = 0
 	/// The max amount of fuel the welder can hold
 	var/max_fuel = 40
+	/// Adding this line of code to determine whether a welder should have fuel when created or not.
+	var/starting_fuel = TRUE
 	/// Used to slowly deplete the fuel when the tool is left on.
 	var/weld_tick = 0
-
 	/// Whether you need welding protection to use without eye damage, if it has a welding screen you do not take eye damage
 	var/has_welding_screen = TRUE
 	preferred_storage = list(/obj/item/clothing/accessory/storage/tool_webbing = WEAR_ACCESSORY)
@@ -199,7 +200,9 @@
 /obj/item/tool/weldingtool/Initialize()
 	. = ..()
 	create_reagents(max_fuel)
-	reagents.add_reagent("fuel", max_fuel)
+	if (starting_fuel)
+		reagents.add_reagent("fuel", max_fuel)
+
 	base_icon_state = initial(icon_state)
 	return
 
@@ -456,6 +459,9 @@
 
 	if(welding)
 		toggle(FALSE)
+
+/obj/item/tool/weldingtool/empty
+	starting_fuel = FALSE
 
 /obj/item/tool/weldingtool/largetank
 	name = "industrial blowtorch"

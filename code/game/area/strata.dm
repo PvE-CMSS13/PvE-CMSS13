@@ -16,6 +16,16 @@ EXTERIOR is FUCKING FREEZING, and refers to areas out in the open and or exposed
 	temperature = SOROKYNE_TEMPERATURE //If not in a building, it'll be cold. All interior areas are set to T20C
 	minimap_color = MINIMAP_AREA_COLONY
 
+/area/strata/interior/out_of_bounds
+	name = "Out of Bounds"
+	icon_state = "ag_i"
+	soundscape_playlist = FALSE
+	ambience_exterior = FALSE
+	requires_power = FALSE
+	is_resin_allowed = FALSE
+	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
+	ceiling = CEILING_MAX
+
 /area/shuttle/drop1/strata //Not in Sulaco.DM because holy shit we need to sort things.
 	name = "Dropship Alamo Landing Zone"
 	icon_state = "shuttle"
@@ -137,6 +147,66 @@ EXTERIOR is FUCKING FREEZING, and refers to areas out in the open and or exposed
 
 /area/strata/ag/exterior/research_decks
 	name = "Outpost Decks"
+
+/area/strata/exterior/marsh/spring_marshes
+	name = "Geothermal Springs Marshes"
+
+/area/strata/exterior/marsh/water_marshes
+	name = "Geothermal Water Marshes"
+
+/area/strata/exterior/marsh/island_marshes
+	name = "Geothermal Island Marshes"
+	is_landing_zone = TRUE
+
+/area/strata/exterior/marsh/relay_marshes
+	name = "Geothermal Relay Marshes"
+	is_landing_zone = TRUE
+
+/area/strata/exterior/marsh/center
+	name = "Geothermal Springs"
+	icon_state = "marshcenter"
+
+/area/strata/exterior/marsh/river
+	name = "Geothermal River"
+	icon_state = "marshriver"
+
+/area/strata/exterior/marsh/crash
+	name = "Geothermal Crashed Dropship"
+	icon_state = "marshship"
+
+/area/strata/exterior/marsh/water
+	name = "Geothermal Water"
+	icon_state = "marshwater"
+
+//-Outside "interiors"
+
+/area/strata/interior/vanyard
+	name = "Flight Control Vehicle Yard"
+	icon_state = "garage"
+
+/area/strata/exterior/tcomms_mining_caves
+	name = "Mining Pathway Relay"
+	icon_state = "tcomms1"
+/area/strata/exterior/tcomms_vehicle_yard
+	name = "Vehicle Yard Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_geosprings
+	name = "Geothermal Springs Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_crashed_dropship
+	name = "Crashed Dropship Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_engineering_parts_storage
+	name = "Engineering - Parts Storage Platform Relay"
+	icon_state = "tcomms1"
+
+//-Outpost
+
+/area/strata/exterior/outpost_decks
+	name = "Outpost - Decks"
 	icon_state = "rdecks"
 	is_resin_allowed = TRUE
 	minimap_color = MINIMAP_AREA_RESEARCH

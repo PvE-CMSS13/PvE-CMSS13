@@ -313,6 +313,11 @@
 	base_icon_state = "m20"
 	map_deployed = TRUE
 
+/obj/item/explosive/mine/active/clf
+	name = "\improper Hacked M20 Claymore anti-personnel mine"
+	desc = "Appears to be a standard M20 Claymore. On visual inspection, this one appears to have been tampered with."
+	iff_signal = FACTION_CLF
+
 /obj/item/explosive/mine/pmc
 	name = "\improper M20P Claymore anti-personnel mine"
 	desc = "The M20P Claymore is a directional anti-personnel smart mine modified for corporate PMC use. Generates 120 degree cone of shrapnel if a valid target crosses before or over it. On its face, it reads \"FRONT TOWARD ENEMY\"."
