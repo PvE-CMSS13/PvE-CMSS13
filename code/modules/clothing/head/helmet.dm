@@ -1066,6 +1066,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper Mk16 tactical helmet"
 	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "heavy_wy"
+	vision_impair = VISION_IMPAIR_MIN
+	ignore_zoom_tint = TRUE // they can use scopes
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
@@ -1082,6 +1084,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "commando_helmet"
 	item_state = "commando_helmet"
 	unacidable = 1
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
@@ -1196,6 +1200,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
 	name = "\improper 6B79 helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
