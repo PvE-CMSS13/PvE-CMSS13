@@ -12,6 +12,7 @@
 #define DIRT_TYPE_SNOW 3
 #define DIRT_TYPE_SAND 4
 #define DIRT_TYPE_SHALE 5
+#define DIRT_TYPE_BASALT 6
 
 //wet floors
 

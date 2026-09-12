@@ -1363,6 +1363,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall covered in jagged ribs."
 	hull = 1
 
+/turf/closed/wall/jockey
+	name = "strange structure"
+	desc = "A nigh indestructible structure, looks like nothing you can do will penetrate it."
+	icon = 'icons/turf/walls/engineership.dmi'
+	icon_state = "metal"
+	hull = TRUE
+	walltype = WALL_JOCKEY
+
 /turf/closed/wall/upp_wall/grey
 	name = "reinforced walls"
 	icon = 'icons/turf/walls/upp_grey.dmi'
@@ -1378,3 +1386,13 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
 	hull = 1
 
+/turf/closed/wall/lavaland
+	name = "lavaland"
+	icon = 'icons/turf/walls/lava_walls.dmi'
+
+/turf/closed/wall/lavaland/rock
+	name = "basalt wall"
+	desc = "A wall made up of heavy volcanic rock."
+	icon_state = "basalt_rock"
+	walltype = WALL_BASALT
+	hull = 1

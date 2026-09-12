@@ -6,6 +6,9 @@ sound/misc/sadtrombone.ogg
 sound/misc/distressbeacon_Sunshine.ogg
 sound/misc/surrounded_by_assholes.ogg
 sound/misc/good_is_dumb.ogg
+sound/misc/derelictnoise.ogg
+sound/misc/derelictchirp.ogg
+sound/misc/derelicthorn.ogg
 sound/AI/commandreport.ogg
 sound/AI/evacuate.ogg
 sound/AI/ionstorm.ogg

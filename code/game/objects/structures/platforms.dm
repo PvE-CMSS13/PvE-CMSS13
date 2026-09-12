@@ -209,3 +209,14 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed
 	name = "sandstone temple platform corner"
 	color = "#b29082"
+
+// basalt platforms
+/obj/structure/platform/basalt
+	name = "basalt ledge"
+	desc = "A ledge elevated above the ground made up of basalt. It seems pretty sturdy."
+	icon_state = "basalt_platform"
+
+/obj/structure/platform_decoration/basalt
+	name = "basalt ledge corner"
+	desc = "A corner to a ledge elevated above the ground made up of basalt. It seems pretty sturdy."
+	icon_state = "basalt_platform_deco"

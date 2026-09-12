@@ -1216,3 +1216,73 @@
 	mouse_opacity = 0
 	layer = 6
 	density = 0
+
+/obj/structure/prop/invuln/dense/jockey
+	name = "jockey prop"
+
+/obj/structure/prop/invuln/dense/jockey/pod
+	name = "strange pod"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. It's empty."
+	icon = 'icons/obj/structures/props/engineers/engineerPod.dmi'
+	icon_state = "pod"
+	layer = ABOVE_MOB_LAYER
+	bound_width = 64
+	bound_height = 96
+
+/obj/structure/prop/invuln/dense/jockey/pod/flipped
+	icon_state = "pod_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken
+	icon_state = "pod_broken"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. This one appears to be empty."
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken/flipped
+	icon_state = "pod_broken_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/console
+	name = "strange console"
+	desc = "A large console with three separate panels. You can't seem to interface with them."
+	icon = 'icons/obj/structures/props/engineers/consoles.dmi'
+	icon_state = "engineerconsole"
+	pixel_x = -1
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar
+	name = "strange pillar"
+	desc = "A strange alien pillar that extends at an angle."
+	icon = 'icons/obj/structures/props/engineers/pillarangled.dmi'
+	icon_state = "placeholder"
+	density = FALSE
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest1
+	icon_state = "engineerpillar_NW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest2
+	icon_state = "engineerpillar_NW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest1
+	icon_state = "engineerpillar_SW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest2
+	icon_state = "engineerpillar_SW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest1
+	icon_state = "engineerpillar_SW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest2
+	icon_state = "engineerpillar_SW2fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest1
+	icon_state = "engineerpillar_NW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest2
+	icon_state = "engineerpillar_NW2fade"

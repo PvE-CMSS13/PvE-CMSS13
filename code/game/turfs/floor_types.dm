@@ -3751,3 +3751,145 @@
 
 /turf/open/floor/yellowfull
 	icon_state = "yellowfull"
+
+
+//jockey stuff
+
+/turf/open/floor/jockey
+	name = "strange floor"
+	icon = 'icons/turf/floors/engineership.dmi'
+	icon_state = "plating"
+	hull_floor = TRUE
+	allow_construction = FALSE
+
+// Engineer tiles
+
+/turf/open/floor/jockey/flooring
+	desc = "A strange metal floor, unlike anything you've seen before."
+	plating_type = /turf/open/floor/jockey
+
+/turf/open/floor/jockey/flooring/engineer_floor1
+	icon_state = "engineer_metalfloor_3"
+/turf/open/floor/jockey/flooring/engineer_floor2
+	icon_state = "engineer_floor_4"
+/turf/open/floor/jockey/flooring/engineer_floor3
+	icon_state = "engineer_metalfloor_2"
+/turf/open/floor/jockey/flooring/engineer_floor4
+	icon_state = "engineer_metalfloor_1"
+/turf/open/floor/jockey/flooring/engineer_floor5
+	icon_state = "engineerlight"
+/turf/open/floor/jockey/flooring/engineer_floor6
+	icon_state = "engineer_floor_2"
+/turf/open/floor/jockey/flooring/engineer_floor7
+	icon_state = "engineer_floor_1"
+
+/turf/open/floor/jockey/flooring/engineer_floor8
+	icon_state = "engineer_floor_5"
+/turf/open/floor/jockey/flooring/engineer_floor9
+	icon_state = "engineer_metalfloor_4"
+/turf/open/floor/jockey/flooring/engineer_floor10
+	icon_state = "engineer_floor_corner1"
+/turf/open/floor/jockey/flooring/engineer_floor11
+	icon_state = "engineer_floor_corner2"
+/turf/open/floor/jockey/flooring/engineer_floor12
+	icon_state = "engineerwallfloor1"
+
+/turf/open/floor/jockey/flooring/engineer_floor13
+	icon_state = "outerhull_dir"
+
+/turf/open/floor/jockey/flooring/engineer_floor13/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/jockey/flooring/engineer_floor13/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/jockey/flooring/engineer_floor13/east
+	dir = EAST
+
+/turf/open/floor/jockey/flooring/engineer_floor13/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/jockey/flooring/engineer_floor13/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/jockey/flooring/engineer_floor14
+	icon_state = "engineer_floor_corner3"
+
+/turf/open/floor/jockey/flooring/engineer_floor14/north
+	dir = NORTH
+
+/turf/open/floor/jockey/flooring/engineer_floor14/west
+	dir = WEST
+
+//floor hull
+/turf/open/floor/jockey/hull
+	name = "strange structure"
+	desc = "A nigh indestructible structure, looks like nothing you can do will penetrate it."
+	icon_state = "engineerwallfloor1"
+
+/turf/open/floor/jockey/outerhull
+	icon_state = "outerhull_dir"
+
+/turf/open/floor/jockey/outerhull/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/jockey/outerhull/north
+	dir = NORTH
+
+/turf/open/floor/jockey/outerhull/east
+	dir = EAST
+
+/turf/open/floor/jockey/outerhull/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/jockey/outerhull/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/jockey/outerhull/west
+	dir = WEST
+
+/turf/open/floor/jockey/outerhull/northwest
+	dir = NORTHWEST
+
+//pillars
+/turf/open/floor/jockey/pillars
+	name = "strange metal pillar"
+	desc = "A strange metal pillar, unlike any metal you've seen before."
+	icon_state = "eng_pillar1"
+	allow_construction = FALSE
+
+/turf/open/floor/jockey/pillars/is_weedable()
+	return NOT_WEEDABLE
+
+/turf/open/floor/jockey/pillars/north/pillar1
+	icon_state = "eng_pillar1"
+/turf/open/floor/jockey/pillars/north/pillar2
+	icon_state = "eng_pillar2"
+/turf/open/floor/jockey/pillars/north/pillar3
+	icon_state = "eng_pillar3"
+/turf/open/floor/jockey/pillars/north/pillar4
+	icon_state = "eng_pillar4"
+/turf/open/floor/jockey/pillars/south/pillarsouth1
+	icon_state = "eng_pillarsouth1"
+/turf/open/floor/jockey/pillars/south/pillarsouth2
+	icon_state = "eng_pillarsouth2"
+/turf/open/floor/jockey/pillars/south/pillarsouth3
+	icon_state = "eng_pillarsouth3"
+/turf/open/floor/jockey/pillars/south/pillarsouth4
+	icon_state = "eng_pillarsouth4"
+/turf/open/floor/jockey/pillars/west/pillarwest1
+	icon_state = "eng_pillarwest1"
+/turf/open/floor/jockey/pillars/west/pillarwest2
+	icon_state = "eng_pillarwest2"
+/turf/open/floor/jockey/pillars/west/pillarwest3
+	icon_state = "eng_pillarwest3"
+/turf/open/floor/jockey/pillars/west/pillarwest4
+	icon_state = "eng_pillarwest4"
+/turf/open/floor/jockey/pillars/east/pillareast1
+	icon_state = "eng_pillareast1"
+/turf/open/floor/jockey/pillars/east/pillareast2
+	icon_state = "eng_pillareast2"
+/turf/open/floor/jockey/pillars/east/pillareast3
+	icon_state = "eng_pillareast3"
+/turf/open/floor/jockey/pillars/east/pillareast4
+	icon_state = "eng_pillareast4"
