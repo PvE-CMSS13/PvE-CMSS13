@@ -193,6 +193,30 @@
 
 	qdel(src)
 
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/twe
+	name = "TWE seat spawner"
+	var/buckling_y = 0
+	var/buckling_x = 0
+
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/twe/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/driver/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.required_skill = S.vehicle.required_skill
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+	S.buckling_y = buckling_y
+	S.buckling_x = buckling_x
+
+	qdel(src)
+
 /obj/effect/landmark/interior/spawn/vehicle_support_gunner_seat
 	name = "1st support gunner's seat spawner"
 	icon = 'icons/obj/vehicles/interiors/general.dmi'

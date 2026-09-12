@@ -71,3 +71,24 @@
 		target = L
 
 	return ..()
+
+
+/obj/item/hardpoint/support/smoke_launcher/twe_tank
+	name = "\improper L-39T Smoke Discharger"
+	desc = "A support module for the FV150, based off those used by the UA for their vehicles."
+	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
+
+	icon_state = "slauncher_0"
+	disp_icon = "tank"
+
+	firing_arc = 150
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/twe
+	max_clips = 5
+
+	scatter = 3
+	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	gun_firemode_list = list(
+		GUN_FIREMODE_BURSTFIRE,
+	)
+	burst_amount = 2
+	burst_delay = 1.0 SECONDS
