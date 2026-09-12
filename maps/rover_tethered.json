@@ -1,0 +1,8 @@
+{
+    "map_name": "USS Rover Tethered",
+    "map_path": "map_files/rover_tethered",
+    "map_file": "rover_tethered.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/forecon"
+}

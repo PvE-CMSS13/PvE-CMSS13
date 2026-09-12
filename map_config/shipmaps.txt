@@ -30,6 +30,9 @@ endmap
 map rover
 endmap
 
+map rover_tethered
+endmap
+
 map golden_arrow_classic
 endmap
 
