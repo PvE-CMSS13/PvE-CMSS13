@@ -54,6 +54,9 @@
 	var/list/xenos = list()
 	var/list/infected = list()
 	var/list/ert_members = list()
+	var/list/army = list()
+	var/list/navy = list()
+	var/list/uacg = list()
 	var/list/upp = list()
 	var/list/clf = list()
 	var/list/wy = list()
@@ -158,6 +161,12 @@
 					predators += list(serialized)
 				else if(human.faction in FACTION_LIST_ERT_OTHER)
 					ert_members += list(serialized)
+				else if(human.faction in FACTION_LIST_ARMY)
+					army += list(serialized)
+				else if(human.faction in FACTION_LIST_NAVY)
+					navy += list(serialized)
+				else if(human.faction in FACTION_LIST_UACG)
+					uacg += list(serialized)
 				else if(human.faction in FACTION_LIST_UPP)
 					upp += list(serialized)
 				else if(human.faction in FACTION_LIST_CLF)
@@ -190,6 +199,9 @@
 	data["xenos"] = xenos
 	data["infected"] = infected
 	data["ert_members"] = ert_members
+	data["army"] = army
+	data["navy"] = navy
+	data["uacg"] = uacg
 	data["upp"] = upp
 	data["clf"] = clf
 	data["wy"] = wy

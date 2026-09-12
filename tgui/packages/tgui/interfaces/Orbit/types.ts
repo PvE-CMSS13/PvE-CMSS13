@@ -8,6 +8,9 @@ export type OrbitData = {
   xenos: Observable[];
   infected: Observable[];
   ert_members: Observable[];
+  army: Observable[];
+  navy: Observable[];
+  uacg: Observable[];
   upp: Observable[];
   twe: Observable[];
   clf: Observable[];
