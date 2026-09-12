@@ -1008,6 +1008,131 @@
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 
+//TEMP -- Only for certain operations, requested by Itus, will not be in end version.
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/mercenary
+	name = "\improper BDS.Ltd Automated Utilities Section Vendor"
+	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Black Dragoons Mercenary."
+	req_access = list()
+	req_one_access = list()
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/mercenary/populate_product_list(scale)
+	listed_products = list(
+		list("FOOD", -1, null, null),
+		list("MRE", round(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
+		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
+
+		list("MEDICAL", -1, null, null),
+		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 15), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+
+		list("TOOLS", -1, null, null),
+		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
+		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
+		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
+		list("Tactical Prybar", round(scale * 5), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
+		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
+		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+
+		list("EXPLOSIVES", -1, null, null),
+		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
+
+		list("FLARE AND LIGHT", -1, null, null),
+		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
+		list("Box of Flashlights", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
+		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARMS", -1, null, null), //can never go without the beretta
+		list("Beretta 92FS M9 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/b92fs, VENDOR_ITEM_REGULAR),
+		list("ES4 Electrostatic Pistol", round(scale * 3), /obj/item/weapon/gun/pistol/es4/unloaded, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARM AMMUNITION", -1, null, null),
+		list("Beretta 92FS M9 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/b92fs, VENDOR_ITEM_REGULAR),
+		list("ES4 Stun Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol/es4, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null),
+		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
+		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
+		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
+		list("Binoculars", round(scale * 1), /obj/item/device/binoculars, VENDOR_ITEM_REGULAR),
+		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
+		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		)
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/mercenary
+	name = "\improper BDS.Ltd Surplus Uniform Vendor"
+	desc = "An automated supply rack hooked up to a small storage of standard mercenary uniforms."
+	req_access = list()
+	req_one_access = list()
+	listed_products = list()
+	hackable = TRUE
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/mercenary/populate_product_list(scale)
+	listed_products = list(
+		list("STANDARD EQUIPMENT", -1, null, null, null),
+		list("Combat Boots", round(scale * 10), /obj/item/clothing/shoes/marine/civilian/knife, VENDOR_ITEM_REGULAR),
+		list("Black Dragoons Uniform", round(scale * 10), /obj/item/clothing/under/colonist/boilersuit/darkblue, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
+		list("DP MK60-TAC Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/merc, VENDOR_ITEM_REGULAR),
+		list("Uniformed Cap", round(scale * 10), /obj/item/clothing/head/cmcap/corrections, VENDOR_ITEM_REGULAR),
+		list("Holobadge", round(scale * 10), /obj/item/clothing/accessory/holobadge/cord, VENDOR_ITEM_REGULAR),
+		list("Radio Headset", round(scale * 10) ,/obj/item/device/radio/headset/distress/merc, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS", -1, null, null),
+		list("Drop Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/smallpouch, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", round(scale * 2), /obj/item/clothing/accessory/storage/holster/waist, VENDOR_ITEM_REGULAR),
+
+		list("ARMOR & STORAGE", -1, null, null),
+		list("DP TAC-PACK Gen I-L armored vest", round(scale * 10), /obj/item/clothing/suit/storage/marine/veteran/merc/light, VENDOR_ITEM_REGULAR),
+		list("DP TAC-PACK Gen II armored vest", round(scale * 10), /obj/item/clothing/suit/storage/marine/veteran/merc, VENDOR_ITEM_REGULAR),
+		list("Black Satchel", round(scale * 5), /obj/item/storage/backpack/satchel/black, VENDOR_ITEM_REGULAR),
+		list("Lightweight IMP Backpack", round(scale * 15), /obj/item/storage/backpack/marine/standard, VENDOR_ITEM_REGULAR),
+		list("Technical Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel/tech, VENDOR_ITEM_REGULAR),
+
+		list("BELTS", -1, null, null),
+		list("L70 Pattern Ammo Load Rig", round(scale * 10), /obj/item/storage/belt/marine/rmc, VENDOR_ITEM_RECOMMENDED),
+		list("L26 Pattern General Utility Belt", round(scale * 10), /obj/item/storage/backpack/general_belt/rmc, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", round(scale * 10), /obj/item/storage/belt/gun/l905, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES", -1, null, null, null),
+		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
+		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
+		list("Medium General Pouch", floor(scale * 15), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
+		list("Pistol Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Pistol Pouch", floor(scale * 15), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+
+		list("RESTRICTED POUCHES", -1, null, null, null),
+		list("Construction Pouch", 1.25, /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
+		list("Explosive Pouch", 1.25, /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
+		list("First Responder Pouch", 2.5, /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR),
+		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+
+		list("MASK", -1, null, null, null),
+		list("CSP-1 Gas Mask", round(scale * 10), /obj/item/clothing/mask/gas/swat/merc, VENDOR_ITEM_REGULAR),
+		list("Balaclava", round(scale * 15), /obj/item/clothing/mask/balaclava, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null, null),
+		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
+		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
+	)
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 

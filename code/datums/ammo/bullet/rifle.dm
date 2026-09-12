@@ -604,6 +604,23 @@
 	damage = 55
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
+//R81M1
+/datum/ammo/bullet/rifle/r81m1
+	name = "9x32 high-velocity rifle bullet"
+	damage = 50
+	accuracy = HIT_ACCURACY_TIER_5
+
+/datum/ammo/bullet/rifle/r81m1/ap
+	name = "9x32 high-velocity AP rifle bullet"
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_3
+
+/datum/ammo/bullet/rifle/r81m1/hp
+	name = "9x32 high-velocity HP rifle bullet"
+	damage = 60
+	penetration = -ARMOR_PENETRATION_TIER_3
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+
 //NSG TWE RMC AMMO
 
 /datum/ammo/bullet/rifle/twe

@@ -945,9 +945,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "helmetp_tex"
 	built_in_visors = list(new /obj/item/device/helmet_visor/po_visor/lightblue)
 
-/obj/item/clothing/head/helmet/upp/marinepilot/merc //just so it uses the wide overlay for garbs
+/obj/item/clothing/head/helmet/upp/marinepilot/merc
 	name = "\improper DP MK80-TAC aviation helmet"
-	desc = "Standard flight helmet of the UA treaty forces, presumably stolen or found and reproduced with cheaper materials by Davis Proprietary for extortionate amounts. Less comfortable but comes with some cool goggles that do absolutely nothing!"
+	desc = "Standard flight helmet of the UA treaty forces, presumably stolen or found and reproduced with cheaper materials by Davis Proprietary for extortionate amounts. Less comfortable but comes with some cool goggles!"
 	icon_state = "pilot_merc"
 	item_state = "pilot_merc"
 
@@ -1742,6 +1742,23 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 		if("s_skullcapm")
 			desc = "A hood meant to protect the wearer from both the cold and the guise of the enemy in the tundra."
 			flags_inv_hide = HIDEEARS|HIDEALLHAIR
+
+/obj/item/clothing/head/helmet/marine/veteran/merc
+	name = "\improper DP MK60-TAC helmet"
+	desc = "A commercially available combat helmet favored by various mercenary groups. Has some decent ballistic protection, though a bit uncomfortable to wear for long periods of time. Made by Davis Proprietary."
+	icon_state = "merc"
+	item_state = "merc"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 
 //===========================//HELGHAST - MERCENARY\\================================\\
 //=====================================================================\\

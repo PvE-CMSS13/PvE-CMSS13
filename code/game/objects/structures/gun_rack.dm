@@ -217,3 +217,18 @@
 
 /obj/structure/gun_rack/nsg/Empty
 	initial_stored = 0
+
+/obj/structure/gun_rack/r81m1
+	name = "R81M1 pulse rifle rack"
+	icon_state = "r81"
+	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five R81M1 pulse rifles."
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/r81m1a
+	populate_type = /obj/item/weapon/gun/rifle/r81m1a
+
+/obj/structure/gun_rack/r81m1/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/r81m1a/unloaded
+
+/obj/structure/gun_rack/r81m1/Empty
+	initial_stored = 0

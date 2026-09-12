@@ -1240,3 +1240,51 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
+
+//P79S Shotgun
+/obj/item/storage/box/guncase/p79s
+	name = "\improper P79S shotgun case"
+	desc = "A gun case containing the P79S shotgun. An older weapon, but one that packs a serious punch."
+	storage_slots = 7
+	can_hold = list(/obj/item/weapon/gun/shotgun/p79s, /obj/item/ammo_magazine/handful/shotgun/medium/slugs, /obj/item/storage/pouch/shotgun/large)
+
+/obj/item/storage/box/guncase/p79s/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/p79s(src)
+	new /obj/item/ammo_magazine/handful/shotgun/medium/slugs(src)
+	new /obj/item/ammo_magazine/handful/shotgun/medium/slugs(src)
+	new /obj/item/ammo_magazine/handful/shotgun/medium(src)
+	new /obj/item/ammo_magazine/handful/shotgun/medium(src)
+	new /obj/item/ammo_magazine/handful/shotgun/medium(src)
+	new /obj/item/storage/pouch/shotgun/large(src)
+
+//R81M1B Designated Marksman Rifle
+/obj/item/storage/box/guncase/r81m1b
+	name = "\improper R81M1B Pulse Marksman Rifle case"
+	desc = "A gun case containing the R81M1B Pulse Marksman Rifle, alongside some specialized ammunition."
+	storage_slots = 7
+	can_hold = list(/obj/item/weapon/gun/rifle/r81m1a/m1b, /obj/item/ammo_magazine/rifle/r81m1/ap, /obj/item/ammo_magazine/rifle/r81m1/hp)
+
+/obj/item/storage/box/guncase/r81m1b/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/r81m1a/m1b(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/ap(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/ap(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/hp(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/hp(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/hp(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/hp(src)
+
+//R81M1D Squad Automatic Rifle
+/obj/item/storage/box/guncase/r81m1d
+	name = "\improper R81M1D Squad Automatic Rifle case"
+	desc = "A gun case containing the R81M1D Squad Automatic Rifle, alongside some drum magazines."
+	storage_slots = 7
+	can_hold = list(/obj/item/weapon/gun/rifle/r81m1a/m1d, /obj/item/ammo_magazine/rifle/r81m1/drum, /obj/item/ammo_magazine/rifle/r81m1)
+
+/obj/item/storage/box/guncase/r81m1d/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/r81m1a/m1d(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/drum(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/drum(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/drum(src)
+	new /obj/item/ammo_magazine/rifle/r81m1/drum(src)
+	new /obj/item/ammo_magazine/rifle/r81m1(src)
+	new /obj/item/ammo_magazine/rifle/r81m1(src)

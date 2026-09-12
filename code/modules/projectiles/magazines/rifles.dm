@@ -469,6 +469,43 @@
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+//-------------------------------------------------------
+//R81M1 mags
+
+/obj/item/ammo_magazine/rifle/r81m1
+	name = "\improper R81M1 magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle magazine."
+	caliber = "9x32mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "fal"
+	bonus_overlay = "fal_overlay"
+	default_ammo = /datum/ammo/bullet/rifle/r81m1
+	max_rounds = 20
+	gun_type = /obj/item/weapon/gun/rifle/r81m1a
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+fal_band"
+	ammo_band_icon_empty = "+fal_band_e"
+
+/obj/item/ammo_magazine/rifle/r81m1/ap
+	name = "\improper R81M1 AP magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle armor piercing magazine."
+	default_ammo = /datum/ammo/bullet/rifle/r81m1/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/r81m1/hp
+	name = "\improper R81M1 HP magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity battle rifle hollow point magazine."
+	default_ammo = /datum/ammo/bullet/rifle/r81m1/hp
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/r81m1/drum
+	name = "\improper R81M1D drum magazine (9x32mm)"
+	desc = "A 9x32mm high-velocity drum magazine."
+	icon_state = "fal_drum"
+	bonus_overlay = "fal_drum_overlay"
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/r81m1a/m1d
+
 //M20A
 
 /obj/item/ammo_magazine/rifle/m20a

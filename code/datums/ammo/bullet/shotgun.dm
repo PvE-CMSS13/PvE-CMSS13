@@ -521,3 +521,76 @@
 			living_mob.apply_effect(2, SLOW)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+
+
+/*
+					10 GAUGE SHOTGUN AMMO
+*/
+
+/datum/ammo/bullet/shotgun/buckshot/medium
+	name = "medium buckshot"
+	handful_state = "medium_buck"
+	multiple_handful_name = TRUE
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/buckshot/medium/spread
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_6
+	accurate_range = 9
+	max_range = 12
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_speed = AMMO_SPEED_TIER_2
+
+/datum/ammo/bullet/shotgun/buckshot/medium/spread
+	name = "medium buckshot spread"
+	bonus_projectiles_amount = 0
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_10
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_1
+	scatter = SCATTER_AMOUNT_TIER_3
+	damage = 30
+
+/datum/ammo/bullet/shotgun/flechette/medium
+	name = "medium flechette shell"
+
+	handful_state = "medium_flech"
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/flechette_spread/medium
+
+	max_range = 15
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_8
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_2
+	handful_state = "medium_flech"
+	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/flechette_spread/medium
+	name = "additional medium flechette"
+
+	max_range = 12
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_5
+
+/datum/ammo/bullet/shotgun/slug/medium
+	name = "medium shotgun slug"
+	handful_state = "medium_slug"
+
+	accurate_range = 9
+	max_range = 17
+	damage = 105
+	penetration = ARMOR_PENETRATION_TIER_7
+
+/datum/ammo/bullet/shotgun/slug/medium/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 5)
+
+/datum/ammo/bullet/shotgun/slug/medium/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(4.5)
+		target.Stun(4.5)
+		target.Slow(6)
+	else
+		if(!isyautja(living_mob)) //Not predators.
+			living_mob.KnockDown(3)
+			living_mob.Stun(3)
+			living_mob.Superslow(5.5)
+			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
+		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)

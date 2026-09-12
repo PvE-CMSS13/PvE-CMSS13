@@ -45,26 +45,24 @@
 #define PAY_SHORT_VAI_L "VAI-L"
 
 // BLACK DRAGOONS COMPANY LTD.
-/// BD-G, Logistics Grunt
-#define PAY_SHORT_BD_G "BD-G"
 
-/// BD-S, Sentinel
-#define PAY_SHORT_BD_S "BD-S"
+/// BD-SY, Synthetic
+#define PAY_SHORT_BD_SY "BD-SY"
+
+/// BD-PC, Probationary Contractor
+#define PAY_SHORT_BD_PC "BD-PC"
+
+/// BD-C, Contractor
+#define PAY_SHORT_BD_C "BD-C"
+
+/// BD-CS, Contractor Specialist
+#define PAY_SHORT_BD_CS "BD-CS"
+
+/// BD-SC, Senior Contractor
+#define PAY_SHORT_BD_SC "BD-SC"
 
 /// BD-SV, Supervisor
 #define PAY_SHORT_BD_SV "BD-SV"
 
-/// BD-P, Pilot
-#define PAY_SHORT_BD_P "BD-P"
-
-/// BD-S, Bulwark
-#define PAY_SHORT_BD_B "BD-B"
-
-/// BD-S, Synth
-#define PAY_SHORT_BD_SY "BD-SY"
-
-/// BD-I, Infiltrator
-#define PAY_SHORT_BD_I "BD-I"
-
-/// BD-O, Officer
-#define PAY_SHORT_BD_O "BD-O"
+/// BD-OC, Operations Coordinator
+#define PAY_SHORT_BD_OC "BD-OC"

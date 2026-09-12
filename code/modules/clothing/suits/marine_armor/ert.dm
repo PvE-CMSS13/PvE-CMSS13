@@ -852,13 +852,14 @@
 	icon_state = "merc_medium"
 	item_state = "merc_medium"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
 
 /obj/item/clothing/suit/storage/marine/veteran/merc/light
@@ -876,16 +877,16 @@
 	flags_armor_protection = BODY_FLAG_CHEST
 
 /obj/item/clothing/suit/storage/marine/veteran/merc/heavy
-	name = "DP TAC-PACK Gen IV-H armored vest"
-	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts, allowing users to resist a lot of damage before going down. Made by Davis Proprietary."
+	name = "DP TAC-PACK Gen IV-H custom armored suit"
+	desc = "A custom piece of armor tailored for high durability in the field, rarely commissioned due to it's weight and cost, alongside limited conventional use, the Gen IV-H is one of the only open market heavy armored suits available. Made by Davis Proprietary."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
 	icon_state = "merc_heavy"
 	item_state = "merc_heavy"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	flags_inventory = BLOCK_KNOCKDOWN

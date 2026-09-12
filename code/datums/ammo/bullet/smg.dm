@@ -151,6 +151,17 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	accuracy = HIT_ACCURACY_TIER_2
 
+/datum/ammo/bullet/smg/mp47a2
+	name = "high-velocity submachinegun bullet"
+	damage = 35
+	accurate_range = 5
+	effective_range_max = 7
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_5
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_7
+	accuracy = HIT_ACCURACY_TIER_3
+
 /datum/ammo/bullet/smg/ppsh
 	name = "crude submachinegun bullet"
 	damage = 30

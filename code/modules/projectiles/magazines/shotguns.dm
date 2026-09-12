@@ -214,6 +214,19 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 
+/obj/item/ammo_magazine/internal/shotgun/p79s
+	caliber = "10g"
+	max_rounds = 6
+	current_rounds = 6
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/medium
+
+/obj/item/ammo_magazine/internal/shotgun/p79s/slug
+	default_ammo = /datum/ammo/bullet/shotgun/slug/medium
+
+/obj/item/ammo_magazine/internal/shotgun/p79s/unloaded
+	current_rounds = 0
+
+
 /obj/item/ammo_magazine/internal/shotgun/type23
 	caliber = "8g"
 	max_rounds = 4
@@ -402,6 +415,30 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g_reasonable, list(
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	caliber = "16g"
 	gun_type = /obj/item/weapon/gun/rifle/xm51
+
+/obj/item/ammo_magazine/handful/shotgun/medium
+	name = "handful of medium buckshot shells (10g)"
+	icon = 'icons/obj/items/weapons/guns/handful_pr.dmi'
+	icon_state = "medium_buck_5"
+	handful_state = "medium_buck"
+	max_rounds = 5
+	current_rounds = 5
+	transfer_handful_amount = 5
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/medium
+	caliber = "10g"
+	gun_type = /obj/item/weapon/gun/shotgun/p79s
+
+/obj/item/ammo_magazine/handful/shotgun/medium/slugs
+	name = "handful of medium slug shells (10g)"
+	icon_state = "medium_slug_5"
+	handful_state = "medium_slug"
+	default_ammo = /datum/ammo/bullet/shotgun/slug/medium
+
+/obj/item/ammo_magazine/handful/shotgun/medium/flechette
+	name = "handful of medium flechette shells (10g)"
+	icon_state = "medium_flech_5"
+	handful_state = "medium_flech"
+	default_ammo = /datum/ammo/bullet/shotgun/flechette/medium
 
 /obj/item/ammo_magazine/handful/shotgun/twobore
 	name = "handful of shotgun slugs (2 bore)"

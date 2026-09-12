@@ -148,6 +148,13 @@
 	name = "\improper flight mask"
 	desc = "A close-fitting mask used by pilots who might end up exposed to the vacuum of space during sorties."
 
+/obj/item/clothing/mask/gas/swat/merc
+	name = "\improper CSP-1 gasmask"
+	icon_state = "swat_merc"
+	desc = "A close-fitting mask from Chemical Solutions and Protections Ltd. Can be connected to an air supply. It is a popular choice among mercenaries and private security contractors."
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."
