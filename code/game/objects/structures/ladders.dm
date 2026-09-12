@@ -14,6 +14,8 @@
 	var/is_watching = 0
 	var/obj/structure/machinery/camera/cam
 	var/busy = FALSE //Ladders are wonderful creatures, only one person can use it at a time
+	var/climb_time = 2 SECONDS
+	var/climb_sound = null
 
 /obj/structure/ladder/Initialize(mapload, ...)
 	. = ..()
@@ -92,14 +94,18 @@
 	step(user, get_dir(user, src))
 	user.visible_message(SPAN_NOTICE("[user] starts climbing [ladder_dir_name] [src]."),
 	SPAN_NOTICE("You start climbing [ladder_dir_name] [src]."))
+	if(climb_sound)
+		playsound_client(user.client, climb_sound, src, 10)
+		user.Root(climb_time) // You aren't getting off Mr Bones Wild Ride, bucko
 	busy = TRUE
-	if(do_after(user, 20, INTERRUPT_INCAPACITATED|INTERRUPT_OUT_OF_RANGE|INTERRUPT_RESIST, BUSY_ICON_GENERIC, src, INTERRUPT_NONE))
+	if(do_after(user, climb_time, INTERRUPT_INCAPACITATED|INTERRUPT_OUT_OF_RANGE|INTERRUPT_RESIST, BUSY_ICON_GENERIC, src, INTERRUPT_NONE))
 		if(!user.is_mob_incapacitated() && get_dist(user, src) <= 1 && !user.blinded && user.body_position != LYING_DOWN && !user.buckled && !user.anchored)
 			visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src].")) //Hack to give a visible message to the people here without duplicating user message
 			user.visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src]."),
 			SPAN_NOTICE("You climb [ladder_dir_name] [src]."))
 			ladder_dest.add_fingerprint(user)
 			user.trainteleport(ladder_dest.loc)
+			user.SetRoot(0) //Unstick the poor sod
 	busy = FALSE
 	add_fingerprint(user)
 
@@ -284,6 +290,12 @@
 
 /obj/structure/ladder/rope/update_icon()
 	return
+
+/obj/structure/ladder/tall
+	name = "exceptionally long ladder"
+	desc = "A very long metal ladder. Looks like it would take a while to climb."
+	climb_time = 30 SECONDS
+	climb_sound = 'sound/machines/long_ladder.ogg'
 
 /obj/structure/ladder/maintenance
 	name = "maintenance ladder"
