@@ -1243,6 +1243,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/helmet_overlays[]
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NONE
+	flags_atom = null
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	var/flags_marine_helmet = HELMET_SQUAD_OVERLAY|HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 	var/helmet_bash_cooldown = 0
@@ -1306,6 +1307,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in actions
 			if(cycle_action)
 				cycle_action.set_action_overlay(active_visor)
+
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
 
 /obj/item/clothing/head/helmet/upp/Destroy(force)
 	helmet_overlays = null
@@ -1596,20 +1601,29 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
 
+/obj/item/clothing/head/uppcap/Initialize(mapload)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type)
+	update_icon()
+
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2c cap"
 	icon_state = "upp_cap_civi"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/boonie
 	name = "\improper UL5 hat"
 	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/boonie/canc
 	name = "\improper boonie hat"
 	desc = "A boonie hat in CANC uniform colors."
 	icon_state = "canc_boonie"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret/naval
 	name = "\improper UL4 Naval Infantry beret"
@@ -1622,16 +1636,19 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A red beret popular with communist revolutionaries."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/beret
 	name = "\improper UL3 beret"
 	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked
 	name = "\improper UL3 peaked cap"
 	desc = "Standard issue peaked service cap of the UPP's military."
 	icon_state = "upp_peaked"
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/peaked/police
 	name = "\improper UL3 PaP peaked cap"
@@ -1651,6 +1668,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/tied = FALSE
 	var/original_state = "upp_ushanka"
 	flags_inv_hide = HIDEEARS
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/uppcap/ushanka/verb/flaps_up()
 	set name = "Tie Up/Down"
