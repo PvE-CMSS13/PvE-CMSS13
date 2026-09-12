@@ -73,6 +73,7 @@
 
 //*****************************************************************************************************/
 // Civilians
+
 /datum/equipment_preset/corpse/bluecollar
 	name = "Corpse - Blue-Collar"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -359,7 +360,7 @@
 	skills = /datum/skills/civilian/survivor/marshal
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_SECURITY)
 
-/datum/equipment_preset/colonist/corpse/security/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/corpse/security/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
 	//back
@@ -415,8 +416,8 @@
 	xenovictim = TRUE
 
 //*****************************************************************************************************/
-
 //UPP
+
 /datum/equipment_preset/corpse/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE,40;FEMALE)
 	var/datum/preferences/A = new()
@@ -519,6 +520,9 @@
 	name = "Corpse - UPP Squad Rifleman (Burst)"
 	xenovictim = TRUE
 
+//*****************************************************************************************************/
+//TWE
+
 /datum/equipment_preset/corpse/royal_marine
 	name = "Corpse - TWE Squad Rifleman"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
@@ -551,6 +555,9 @@
 	name = "Corpse - TWE Squad Rifleman (Burst)"
 	xenovictim = TRUE
 
+//*****************************************************************************************************/
+//USCM
+
 /datum/equipment_preset/corpse/uscm
 	name = "Corpse - USCM Squad Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -580,8 +587,58 @@
 	name = "Corpse - USCM Squad Rifleman (Burst)"
 	xenovictim = TRUE
 
-//*****************************************************************************************************/
+/datum/equipment_preset/corpse/uscm_dp
+	name = "Corpse - USCM Dropship Pilot"
+	idtype = /obj/item/card/id/dogtag
+	flags = EQUIPMENT_PRESET_EXTRA
+	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
+	assignment = JOB_DROPSHIP_PILOT
+	rank = JOB_DROPSHIP_PILOT
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "PLT"
+	skills = /datum/skills/pilot
+	minimap_icon = "pilot"
 
+/datum/equipment_preset/corpse/uscm_dp/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/pilot(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+
+/datum/equipment_preset/corpse/uscm_dp/burst
+	name = "Corpse - USCM Dropship Pilot (Burst)"
+	xenovictim = TRUE
+
+/datum/equipment_preset/corpse/uscm_unequipped	//Used for POWs
+	name = "USCM Squad Rifleman"
+	idtype = /obj/item/card/id/dogtag
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	access = list(ACCESS_MARINE_PREP)
+	assignment = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_MARINE
+	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RFN"
+	skills = /datum/skills/pfc
+
+	minimap_icon = "private"
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
+
+/datum/equipment_preset/corpse/uscm_unequipped/burst
+	name = "Corpse - Unequipped USCM Squad Rifleman (Burst)"
+	xenovictim = TRUE
+
+
+//*****************************************************************************************************/
 //Freelancer
 
 /datum/equipment_preset/corpse/freelancer
@@ -613,7 +670,6 @@
 	xenovictim = TRUE
 
 //*****************************************************************************************************/
-
 //FORECON
 
 /datum/equipment_preset/corpse/forecon_spotter
