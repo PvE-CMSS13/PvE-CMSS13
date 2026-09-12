@@ -63,6 +63,12 @@
 	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
 	helmet_item.flags_inv_hide &= ~(HIDEFACE)
 
+//Requested GM gasmask for subtle sporeproof masks
+/obj/item/clothing/mask/gas/military/sporeproof
+	name = "\improper M5 gasmask"
+	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear. This mask has newly installed filters and seals."
+	flags_inventory = SPOREPROOF
+
 /obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
 	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
@@ -75,6 +81,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "cbrn_hood"
 	item_state = "cbrn_hood"
+	flags_inventory = SPOREPROOF
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'

@@ -66,6 +66,9 @@
 	/// Is fishing allowed on this turf
 	var/fishing_allowed = FALSE
 
+	/// Can xenomorph weeds grow on the tile
+	var/is_weedable = FULLY_WEEDABLE
+
 	///hybrid lights affecting this turf
 	var/tmp/list/atom/movable/lighting_mask/hybrid_lights_affecting
 

@@ -131,6 +131,7 @@ const xenoSplitter = (members: Array<Observable>) => {
   const corruptedHive: Array<Observable> = [];
   const forsakenHive: Array<Observable> = [];
   const otherHives: Array<Observable> = [];
+  const pathogenHive: Array<Observable> = [];
 
   members.forEach((x) => {
     if (x.hivenumber?.includes('normal')) {
@@ -139,6 +140,8 @@ const xenoSplitter = (members: Array<Observable>) => {
       corruptedHive.push(x);
     } else if (x.hivenumber?.includes('forsaken')) {
       forsakenHive.push(x);
+    } else if (x.hivenumber?.includes('pathogen')) {
+      pathogenHive.push(x);
     } else {
       otherHives.push(x);
     }
@@ -148,6 +151,7 @@ const xenoSplitter = (members: Array<Observable>) => {
     buildSquadObservable('Corrupted', 'green', corruptedHive),
     buildSquadObservable('Forsaken', 'grey', forsakenHive),
     buildSquadObservable('Other', 'light-grey', otherHives),
+    buildSquadObservable('Pathogen', 'white', pathogenHive),
   ];
   return squads;
 };

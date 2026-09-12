@@ -275,7 +275,7 @@
 	if(target_turf.z != X.z)
 		to_chat(X, SPAN_XENOWARNING("This area is too far away to affect!"))
 		return
-	if(!X.hive.living_xeno_queen || X.hive.living_xeno_queen.z != X.z)
+	if(!X.hive.allow_no_queen_actions && (!X.hive.living_xeno_queen || X.hive.living_xeno_queen.z != X.z))
 		to_chat(X, SPAN_XENOWARNING("We have no queen, the psychic link is gone!"))
 		return
 
@@ -927,7 +927,7 @@
 		return FALSE
 
 	var/distance = get_dist(stabbing_xeno, targetted_atom)
-	if(distance > 2)
+	if(distance > stab_range)
 		return FALSE
 
 	var/list/turf/path = get_line(stabbing_xeno, targetted_atom, include_start_atom = FALSE)
