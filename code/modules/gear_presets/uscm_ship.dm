@@ -75,7 +75,7 @@
 	rank = JOB_CORPORATE_LIAISON
 	paygrades = list(PAY_SHORT_WYC2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_WYC3 = JOB_PLAYTIME_TIER_2, PAY_SHORT_WYC4 = JOB_PLAYTIME_TIER_3, PAY_SHORT_WYC5 = JOB_PLAYTIME_TIER_4)
 	role_comm_title = "CL"
-	skills = /datum/skills/civilian
+	skills = /datum/skills/civilian/liaison
 
 	minimap_icon = "cl"
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
@@ -151,17 +151,6 @@
 /datum/equipment_preset/uscm_ship/liaison/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_MARINE_LIAISON)
-
-/datum/equipment_preset/uscm_ship/liaison/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel/lockable/liaison
-	//There is no suitable backpack for a CL really...
-	//if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		//back_item = /obj/item/storage/backpack
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcl(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/ivy(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 
 //*****************************************************************************************************/
 
@@ -730,6 +719,27 @@
 	if(!late_join)
 		add_verb(new_human.client, /client/proc/commander_rename_platoon)
 
+/datum/equipment_preset/uscm_ship/so/mss
+	name = "MSS Operative Agent (PltCo)"
+	assignment = JOB_UPP_AGENT
+	rank = JOB_UPP_AGENT
+	skills = /datum/skills/upp/agent
+	idtype = /obj/item/card/id/silver
+	role_comm_title = "MSS-OP"
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE, LANGUAGE_ENGLISH)
+	paygrades = list(PAY_SHORT_UO4 = JOB_PLAYTIME_TIER_0)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	access_list = ACCESS_LIST_UPP_ALL
+
+/datum/equipment_preset/uscm_ship/so/mss/load_gear(mob/living/carbon/human/new_human)
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")
+
+/datum/equipment_preset/uscm_ship/so/mss/handle_late_join(mob/living/carbon/human/new_human, late_join)
+	if(!late_join)
+		add_verb(new_human.client, /client/proc/commander_rename_platoon)
+
 /datum/equipment_preset/uscm_ship/so/pmc
 	name = "PMC Overwatch (PltCo)"
 	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)
@@ -933,7 +943,7 @@
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_PREP)
 	assignment = JOB_DROPSHIP_PILOT
 	rank = JOB_DROPSHIP_PILOT
-	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MW1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PLT"
 	skills = /datum/skills/pilot
 
@@ -1087,3 +1097,66 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm_ship/advisor
+	name = "Civilian Advisor"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND
+
+	idtype = /obj/item/card/id/silver/cl
+	access = list(
+		ACCESS_MARINE_COMMAND,
+		ACCESS_MARINE_ALPHA,
+		ACCESS_CIVILIAN_COMMAND,
+	)
+	assignment = JOB_ADVISOR
+	rank = JOB_ADVISOR
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "CA"
+	skills = /datum/skills/civilian/advisor
+
+	minimap_icon = "ca"
+	minimap_background = MINIMAP_ICON_BACKGROUND_CIVILIAN
+
+	utility_under = list(/obj/item/clothing/under/colonist)
+	utility_shoes = list(/obj/item/clothing/shoes/stompers)
+	utility_extra = list(/obj/item/clothing/under/liaison_suit/blue)
+
+	dress_under = list(/obj/item/clothing/under/colonist)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather)
+	dress_hat = list()
+	dress_gloves = list()
+	dress_shoes = list(/obj/item/clothing/shoes/stompers)
+
+/datum/equipment_preset/uscm_ship/advisor/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_MARINE_LIAISON)
+
+/datum/equipment_preset/uscm_ship/advisor_upp
+	name = "Civilian Specialist"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND
+
+	idtype = /obj/item/card/id/lanyard
+	access = list(ACCESS_UPP_GENERAL)
+	faction = FACTION_UPP
+	faction_group = list(FACTION_UPP)
+	assignment = JOB_UPP_ADVISOR
+	rank = JOB_UPP_ADVISOR
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "CS"
+	skills = /datum/skills/civilian/advisor
+
+	utility_under = list(/obj/item/clothing/under/colonist)
+	utility_shoes = list(/obj/item/clothing/shoes/marine/civilian/brown)
+
+	dress_under = list(/obj/item/clothing/under/colonist)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather)
+	dress_hat = list()
+	dress_gloves = list()
+	dress_shoes = list(/obj/item/clothing/shoes/marine/civilian/brown)
+
+/datum/equipment_preset/uscm_ship/advisor_upp/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_UPP_LIAISON)

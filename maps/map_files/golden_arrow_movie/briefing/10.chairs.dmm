@@ -1,0 +1,1084 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aD" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_full_cap";
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"bp" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"bq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"bs" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
+"bA" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"cU" = (
+/obj/structure/phone_base{
+	name = "briefing receiver";
+	phone_category = "Golden Arrow";
+	phone_id = "Briefing";
+	pixel_x = 17;
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"dC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"dL" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 31
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/briefing)
+"dO" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"ei" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"ej" = (
+/obj/structure/platform_decoration,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"eu" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/briefing)
+"ey" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"eI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"fg" = (
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_full_cap";
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"fB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"fE" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"fJ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"gk" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"hw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/map/current_map,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/map/current_map{
+	pixel_y = 2
+	},
+/obj/item/map/current_map{
+	pixel_y = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"iM" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 5;
+	layer = 5.2
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"jk" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/briefing)
+"kh" = (
+/obj/item/reagent_container/food/drinks/plasticcup{
+	pixel_y = 9
+	},
+/obj/effect/decal/strata_decals/grime/grime4/game_plane{
+	layer = 2.9;
+	pixel_y = 2
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"lk" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"ln" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/briefing)
+"lP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"mq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"mE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"mI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"nV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"nZ" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"ra" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10;
+	layer = 5.2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"rb" = (
+/obj/structure/sign/safety/terminal{
+	layer = 2.96;
+	pixel_x = 34
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"rJ" = (
+/obj/structure/platform/stair_cut/alt,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"sI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/strata_decals/grime/grime1,
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 3;
+	pixel_x = -1
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 6;
+	pixel_x = -2
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"tL" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"wc" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/briefing)
+"wD" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"xk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"xW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/briefing)
+"yr" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"yH" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 3;
+	pixel_x = -1
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 6;
+	pixel_x = -2
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"zy" = (
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"zA" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"Au" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"Ax" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/briefing)
+"AF" = (
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"AV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"By" = (
+/obj/structure/platform,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"BL" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/area/golden_arrow/briefing)
+"CO" = (
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Dx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"DR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"Eh" = (
+/obj/effect/decal/strata_decals/grime/grime4,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"FG" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_y = -10;
+	layer = 5.2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/briefing)
+"Hk" = (
+/obj/structure/platform_decoration,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/strata_decals/grime/grime2,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"HI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"IB" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"IX" = (
+/obj/structure/surface/table/almayer,
+/obj/item/notepad/black{
+	pixel_y = -3;
+	pixel_x = -6
+	},
+/obj/item/tool/pen{
+	pixel_x = 5
+	},
+/obj/item/prop/tableflag{
+	pixel_y = 13;
+	layer = 5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"JH" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	id = "briefingdoor";
+	req_access = null;
+	name = "\improper Assembly Room"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/briefing)
+"Ka" = (
+/obj/structure/prop/almayer/whiteboard{
+	pixel_y = 25;
+	density = 0
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/west,
+/area/golden_arrow/briefing)
+"Km" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_y = 29;
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"Ld" = (
+/obj/structure/platform,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"Lq" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"Lz" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/briefing)
+"LT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"MI" = (
+/obj/structure/platform,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"Nt" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/briefing)
+"NE" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/firealarm{
+	pixel_y = 2;
+	dir = 8;
+	pixel_x = -21
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"NJ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/briefing)
+"Op" = (
+/obj/structure/prop/almayer/whiteboard/clear{
+	pixel_y = 18;
+	density = 0
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"OV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"PR" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -10;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 6;
+	layer = 5.2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"PX" = (
+/obj/structure/platform,
+/obj/structure/machinery/power/apc/almayer/east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29;
+	pixel_x = 11
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/briefing)
+"PZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/item/tool/mop{
+	pixel_x = -1;
+	pixel_y = 20
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"Qd" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	dir = 4;
+	icon_state = "shuttle";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_x = 1;
+	pixel_y = 14
+	},
+/obj/item/prop/tableflag/uscm{
+	pixel_y = 2;
+	pixel_x = -3
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Ry" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/briefing)
+"RC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 28;
+	pixel_x = 15
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/janitorialcart{
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
+"RD" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"TT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/device/megaphone{
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Uk" = (
+/turf/template_noop,
+/area/template_noop)
+"Ur" = (
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/briefing)
+"UC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Xx" = (
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/golden_arrow/briefing)
+"XB" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/briefing)
+"XO" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"Yi" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "map";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 25;
+	layer = 2.96
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"ZU" = (
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	pixel_x = -8;
+	id = "briefingdoor";
+	req_one_access_txt = "19;12";
+	specialfunctions = 4;
+	normaldoorcontrol = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+
+(1,1,1) = {"
+Nt
+Nt
+Km
+yH
+sI
+Nt
+Yi
+NE
+AF
+Eh
+bs
+Uk
+"}
+(2,1,1) = {"
+Nt
+dO
+MI
+Au
+nV
+mE
+wc
+XB
+NJ
+Xx
+bs
+Uk
+"}
+(3,1,1) = {"
+Nt
+mq
+XO
+fg
+Lz
+dC
+ln
+nZ
+lP
+Ax
+bs
+bs
+"}
+(4,1,1) = {"
+JH
+Lq
+DR
+yr
+DR
+wD
+Ry
+IB
+ei
+Ax
+hw
+bs
+"}
+(5,1,1) = {"
+Nt
+ZU
+ej
+aD
+fJ
+AV
+ln
+kh
+mI
+Ax
+TT
+bs
+"}
+(6,1,1) = {"
+Nt
+dO
+Ld
+ey
+Dx
+UC
+eu
+jk
+xW
+Ur
+bs
+bs
+"}
+(7,1,1) = {"
+Nt
+Nt
+PX
+bA
+OV
+Nt
+Op
+tL
+gk
+cU
+bs
+Uk
+"}
+(8,1,1) = {"
+Nt
+Nt
+Nt
+Nt
+Nt
+iM
+PR
+ra
+FG
+dL
+bs
+bs
+"}
+(9,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+fB
+LT
+eI
+bq
+bq
+bs
+"}
+(10,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+RC
+bq
+xk
+bq
+LT
+bs
+"}
+(11,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+LT
+LT
+xk
+bq
+LT
+bs
+"}
+(12,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+PZ
+bq
+xk
+LT
+bq
+bs
+"}
+(13,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+Hk
+lk
+zy
+fE
+zA
+bs
+"}
+(14,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+By
+IX
+bp
+Qd
+rJ
+bs
+"}
+(15,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+Ka
+jk
+xW
+jk
+BL
+bs
+"}
+(16,1,1) = {"
+Uk
+Uk
+Uk
+Uk
+Nt
+Nt
+HI
+HI
+CO
+rb
+RD
+bs
+"}

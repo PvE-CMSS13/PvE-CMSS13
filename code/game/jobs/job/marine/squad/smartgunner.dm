@@ -71,6 +71,9 @@
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/smartgunner/movie
+	squad = SQUAD_MARINE_MOVIE
+
 /datum/job/marine/smartgunner/ai
 	total_positions = 2
 	spawn_positions = 2
@@ -121,6 +124,9 @@
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
+
+/obj/effect/landmark/start/marine/smartgunner/upp/movie
+	squad = SQUAD_UPP_MOVIE
 
 /datum/job/marine/smartgunner/ai/pmc
 	title = JOB_PMCPLAT_SG

@@ -13,6 +13,27 @@ CIVILIAN
 		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
 	)
 
+/datum/skills/civilian/advisor
+	name = "Civilian Advisor"
+	skills = list(
+		SKILL_CQC = SKILL_CQC_DEFAULT,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_SURVIVOR,
+		SKILL_VEHICLE = SKILL_VEHICLE_LARGE,
+		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
+		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
+		SKILL_OVERWATCH = SKILL_OVERWATCH_TRAINED,
+	)
+
+/datum/skills/civilian/liaison
+	name = "Corporate Liaison"
+	skills = list(
+		SKILL_CQC = SKILL_CQC_DEFAULT,
+		SKILL_FIREARMS = SKILL_FIREARMS_CIVILIAN,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_WEAK,
+		SKILL_VEHICLE = SKILL_VEHICLE_LARGE,
+		SKILL_OVERWATCH = SKILL_OVERWATCH_TRAINED,
+	)
+
 /datum/skills/civilian/manager
 	name = "Weyland-Yutani Manager" // Semi-competent leader with basic knowledge in most things.
 	skills = list(

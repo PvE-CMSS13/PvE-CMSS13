@@ -76,6 +76,26 @@
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/pltco(src)
 
+/obj/structure/closet/secure_closet/marine_personal/advisor
+	job = JOB_ADVISOR
+
+/obj/structure/closet/secure_closet/marine_personal/advisor/spawn_gear()
+	new /obj/item/clothing/under/colonist/boilersuit(src)
+	new /obj/item/clothing/under/colonist/boilersuit/darkblue(src)
+	new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather(src)
+	new /obj/item/clothing/shoes/stompers(src)
+
+/obj/structure/closet/secure_closet/marine_personal/liaison
+	job = JOB_CORPORATE_LIAISON
+
+/obj/structure/closet/secure_closet/marine_personal/liaison/spawn_gear()
+	new /obj/item/clothing/under/liaison_suit/outing(src)
+	new /obj/item/clothing/under/liaison_suit/outing/red(src)
+	new /obj/item/clothing/under/liaison_suit(src)
+	new /obj/item/clothing/shoes/laceup/brown(src)
+	new /obj/item/clothing/shoes/marine/civilian(src)
+
 // ==UPP== //
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
@@ -109,6 +129,31 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
+
+/obj/structure/closet/secure_closet/marine_personal/upp/advisor
+	job = JOB_UPP_ADVISOR
+
+/obj/structure/closet/secure_closet/marine_personal/upp/advisor/spawn_gear()
+	new /obj/item/clothing/under/colonist/boilersuit/cyan(src)
+	new /obj/item/clothing/under/colonist/boilersuit/grey(src)
+	new /obj/item/clothing/under/colonist/workwear/khaki(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/corporate/brown/leather(src)
+	new /obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow(src)
+	new /obj/item/clothing/shoes/marine/civilian/brown(src)
+
+/obj/structure/closet/secure_closet/marine_personal/upp/agent
+	job = JOB_UPP_AGENT
+
+/obj/structure/closet/secure_closet/marine_personal/upp/agent/spawn_gear()
+	new /obj/item/clothing/head/uppcap/peaked/mss(src)
+	new /obj/item/clothing/under/marine/veteran/UPP/service(src)
+	new /obj/item/clothing/accessory/storage/holster(src)
+	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/upp/mss(src)
+	new /obj/item/device/taperecorder(src)
+	new /obj/item/notepad(src)
+	new /obj/item/tool/pen/clicky(src)
 
 // ==USCM FORECON== //
 

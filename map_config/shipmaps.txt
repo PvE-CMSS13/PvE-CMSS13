@@ -41,3 +41,9 @@ endmap
 
 map hms_brynhild
 endmap
+
+map golden_arrow_movie
+endmap
+
+map chapaev_movie
+endmap

@@ -117,6 +117,21 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN),\
+		/datum/squad/marine/movie = list(/datum/job/command/bridge/ai = JOB_SO,\
+		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,\
+		/datum/job/civilian/liaison = JOB_CORPORATE_LIAISON,\
+		/datum/job/civilian/advisor = JOB_ADVISOR),\
+		/datum/squad/marine/upp/movie = list(/datum/job/command/bridge/ai/mss = JOB_UPP_AGENT,\
+		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/smartgunner/ai/upp/ = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE,\
+		/datum/job/civilian/advisor_upp = JOB_UPP_ADVISOR),\
 		/datum/squad/marine/pmc/small = list(/datum/job/marine/tl/ai/pmc/small = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/pmc/small =  JOB_SQUAD_MARINE,\
 		/datum/job/marine/medic/ai/pmc/small = JOB_SQUAD_MEDIC,\
@@ -137,6 +152,8 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/movie = ROLES_AI_MARINE_MOVIE,\
+												/datum/squad/marine/upp/movie = ROLES_AI_UPP_MOVIE,\
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL,\
 												/datum/squad/marine/rmc = ROLES_RMCTROOP))
 

@@ -92,6 +92,19 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
 
+/obj/effect/landmark/start/bridge/mss
+	name = JOB_UPP_AGENT
+	squad = SQUAD_UPP_MOVIE
+	job = /datum/job/command/bridge/ai/mss
+
+/datum/job/command/bridge/ai/mss
+	title = JOB_UPP_AGENT
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm_ship/so/mss
+	job_options = null
+	supervisors = "the Ministry of Space Security, and the Darkstar Progam"
+	entry_message_body = "Your job is to conduct the briefing for the troop, lead the operation, and carry out your orders per the Ministry of Space Security.</a> You have been given clearance to assume command of the SOF detachment for the current operation, bypassing the usual chain of command - this arrangment MUST be complied with by the detachment.<br>You will recieve your standing orders regarding Project Darkstar when necessary.<br>Your job involves heavy roleplay, requiring you to behave like a Ministry of Space Security agent and to stay in character at all times."
+
 /datum/job/command/bridge/ai/pmc
 	title = JOB_PMCPLAT_OW
 	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc

@@ -1,0 +1,9 @@
+{
+    "map_name": "SSV Chapaev (Movie)",
+    "map_path": "map_files/chapaev_movie",
+    "map_file": "chapaev_movie.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/chapaev_movie/",
+    "platoon": "/datum/squad/marine/upp/movie"
+}

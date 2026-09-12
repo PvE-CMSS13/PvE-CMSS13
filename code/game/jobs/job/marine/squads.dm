@@ -165,6 +165,16 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/movie
+	name = SQUAD_MARINE_MOVIE
+	equipment_color = "#4148c8"
+	chat_color = "#828cff"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = ALPHA_FREQ
+	minimap_color = MINIMAP_SQUAD_ALPHA
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/upp
 	name = SQUAD_UPP
 	equipment_color = "#8B0000"
@@ -183,6 +193,20 @@
 	. = ..()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/upp/movie
+	name = SQUAD_UPP_MOVIE
+	equipment_color = "#8B0000"
+	chat_color = "#B22222"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+	squad_type = "Platoon"
+	squad_one_access = ACCESS_UPP_SQUAD_ONE
+	squad_two_access = ACCESS_UPP_SQUAD_TWO
 
 /datum/squad/marine/upp/secondary
 	name = SQUAD_UPP_2

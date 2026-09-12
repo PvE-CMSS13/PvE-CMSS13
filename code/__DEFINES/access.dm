@@ -230,6 +230,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///All access levels associated with UPP
 #define ACCESS_LIST_UPP_ALL "UPP (ALL)"
 #define ACCESS_LIST_UPP_PLATOON "UPP (Platoon)"
+#define ACCESS_LIST_UPP_LIAISON "UPP (Liaison)"
 
 ///Generic/basic access to CLF stuff
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"

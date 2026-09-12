@@ -56,6 +56,9 @@
 	icon_state = "marine_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+/obj/effect/landmark/start/marine/movie
+	squad = SQUAD_MARINE_MOVIE
+
 /datum/job/marine/standard/ai
 	total_positions = 4
 	spawn_positions = 4
@@ -111,6 +114,8 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+/obj/effect/landmark/start/marine/upp/movie
+	squad = SQUAD_UPP_MOVIE
 
 /datum/job/marine/standard/ai/pmc
 	title = JOB_PMCPLAT_STANDARD
