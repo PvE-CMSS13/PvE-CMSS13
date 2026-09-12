@@ -53,6 +53,7 @@
 	var/atom/movable/screen/fire_icon
 	var/atom/movable/screen/healths
 	var/atom/movable/screen/bodytemp_icon
+	var/atom/movable/screen/important_action_icon
 
 	var/atom/movable/screen/gun_setting_icon
 	var/atom/movable/screen/gun_item_use_icon
@@ -149,6 +150,7 @@
 	fire_icon = null
 	healths = null
 	bodytemp_icon = null
+	important_action_icon = null
 
 	gun_setting_icon = null
 	gun_item_use_icon = null
@@ -335,6 +337,16 @@
 	if(ui_color)
 		using.color = ui_color
 	hotkeybuttons += using
+
+/datum/hud/proc/draw_important_action(datum/custom_hud/ui_datum, ui_alpha, ui_color)
+	important_action_icon = new /atom/movable/screen/important_action()
+	important_action_icon.icon = ui_datum.ui_style_icon
+	important_action_icon.screen_loc = ui_datum.ui_important_action
+	if(ui_alpha)
+		important_action_icon.alpha = ui_alpha
+	if(ui_color)
+		important_action_icon.color = ui_color
+	toggleable_inventory += important_action_icon
 
 /datum/hud/proc/draw_left_hand(datum/custom_hud/ui_datum, ui_alpha, ui_color)
 	var/atom/movable/screen/inventory/inv_box = new /atom/movable/screen/inventory()

@@ -444,6 +444,21 @@
 	else
 		icon_state = "pull0"
 
+/atom/movable/screen/important_action
+	name = "important emote"
+	icon = 'icons/mob/hud/human_midnight.dmi'
+	icon_state = "act_important_action"
+	layer = HUD_LAYER
+
+/atom/movable/screen/important_action/clicked(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		var/message = reject_bad_text(input(user,"Must be formatted like an emote", "Important Action", ""))
+		if(!message)
+			return FALSE
+		human.do_important_action(message)
+		return 1
+
 
 
 /atom/movable/screen/squad_leader_locator

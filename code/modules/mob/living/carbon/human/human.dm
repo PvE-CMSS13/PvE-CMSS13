@@ -1704,6 +1704,35 @@
 			platoon = "Gamma Troop"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
+/mob/living/carbon/human/verb/important_action(msg as text)
+	set category = "IC"
+	set name = "Important Action"
+
+	do_important_action(msg)
+
+/mob/living/carbon/human/proc/do_important_action(msg)
+
+	msg = strip_html(msg)
+	if(!msg) return
+	usr.manual_emote("<u>[msg]</u>")
+	if(usr.client)
+		if(usr.client.prefs.muted & MUTE_PRAY)
+			to_chat(usr, SPAN_DANGER("You cannot use important action (muted)."))
+			return
+		if(src.client.handle_spam_prevention(msg,MUTE_PRAY))
+			return
+
+	var/prefix = SPAN_PURPLE("IMPORTANT ACTION: ")
+
+	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)] [ADMIN_PP(src)]: [msg]")
+	log_admin(msg)
+	for(var/client/admin in GLOB.admins)
+		if(AHOLD_IS_MOD(admin.admin_holder))
+			to_chat(admin, SPAN_STAFF_IC(msg))
+			if(admin.prefs.toggles_sound & SOUND_ARES_MESSAGE)
+				admin << 'sound/machines/terminal_alert.ogg'
+
+
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
 		var/obj/item/item = A
