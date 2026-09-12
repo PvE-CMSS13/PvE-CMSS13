@@ -118,6 +118,10 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
 
+/obj/item/weapon/gun/smg/m39/solidstock/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/smg/m39/elite

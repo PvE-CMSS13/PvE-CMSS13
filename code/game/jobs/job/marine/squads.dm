@@ -52,6 +52,20 @@
 	sub_squad = "Section"
 	sub_leader = "Section Leader"
 
+/datum/squad_type/uacg_unit
+	name = "Squad"
+	lead_name = "Senior Leader"
+	lead_icon = "sl"
+	sub_squad = "Unit"
+	sub_leader = "Unit Leader"
+
+/datum/squad_type/uacg_cmd_unit
+	name = "Element"
+	lead_name = "Commanding Officer"
+	lead_icon = "co"
+	sub_squad = "Executive Officer"
+	sub_leader = "xo"
+
 /datum/squad
 	/// Name of the squad
 	var/name
@@ -440,6 +454,74 @@
 	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
 //###############################
+/datum/squad/marine/uacg
+	name = SQUAD_MILITIA
+	equipment_color = "#c47a50"
+	chat_color = "#c47a50"
+	minimap_color = MINIMAP_SQUAD_MILITIA
+	use_stripe_overlay = FALSE
+	radio_freq = GRD_FREQ
+	usable = TRUE
+	squad_one_access = ACCESS_UACG
+	squad_two_access = ACCESS_UACG
+	faction = FACTION_UACG
+	max_positions = 27
+
+/datum/squad/marine/uacg_bravo
+	name = SQUAD_MILITIA_2
+	equipment_color = "#c2c450"
+	chat_color = "#c2c450"
+	minimap_color = MINIMAP_SQUAD_MILITIA
+	use_stripe_overlay = FALSE
+	radio_freq = GRD_2_FREQ
+	usable = FALSE
+	squad_one_access = ACCESS_UACG
+	squad_two_access = ACCESS_UACG
+	faction = FACTION_UACG
+
+/datum/squad/marine/uacg_charlie
+	name = SQUAD_MILITIA_3
+	equipment_color = "#2a752e"
+	chat_color = "#2a752e"
+	minimap_color = MINIMAP_SQUAD_MILITIA
+	use_stripe_overlay = FALSE
+	radio_freq = JTAC_FREQ
+	usable = FALSE
+	squad_one_access = ACCESS_UACG
+	squad_two_access = ACCESS_UACG
+	faction = FACTION_UACG
+
+/datum/squad/marine/uacg_delta
+	name = SQUAD_MILITIA_4
+	equipment_color = "#752a2a"
+	chat_color = "#752a2a"
+	minimap_color = MINIMAP_SQUAD_MILITIA
+	use_stripe_overlay = FALSE
+	radio_freq = MED_FREQ
+	usable = FALSE
+	squad_one_access = ACCESS_UACG
+	squad_two_access = ACCESS_UACG
+	faction = FACTION_UACG
+
+/datum/squad/marine/uacg_echo
+	name = SQUAD_MILITIA_5
+	equipment_color = "#572a75"
+	chat_color = "#572a75"
+	minimap_color = MINIMAP_SQUAD_MILITIA
+	use_stripe_overlay = FALSE
+	radio_freq = GRD_3_FREQ
+	usable = FALSE
+	squad_one_access = ACCESS_UACG
+	squad_two_access = ACCESS_UACG
+	faction = FACTION_UACG
+
+/datum/squad/marine/uacg/auxiliary
+	name = SQUAD_MILITIA_6
+	equipment_color = "#2a4875"
+	chat_color = "#2a4875"
+	radio_freq = GRD_2_FREQ
+
+//###############################
 /datum/squad/clf
 	name = "Root"
 	squad_type = "Cell"
@@ -629,11 +711,11 @@
 //Straight-up insert a marine into a squad.
 //This sets their ID, increments the total count, and so on. Everything else is done in job_controller.dm.
 //So it does not check if the squad is too full already, or randomize it, etc.
-/datum/squad/proc/put_marine_in_squad(mob/living/carbon/human/M, obj/item/card/id/ID)
+/datum/squad/proc/put_marine_in_squad(mob/living/carbon/human/M, obj/item/card/id/ID, force_usable)
 
 	if(!istype(M))
 		return FALSE //Logic
-	if(!src.usable)
+	if(!src.usable && !force_usable)
 		return FALSE
 	if(!M.job)
 		return FALSE //Not yet
@@ -722,6 +804,47 @@
 				assignment = "Officer"
 
 //This is a mess
+		if(JOB_UACG_SENLEAD)
+			assignment = JOB_UACG_SENLEAD
+			M.important_radio_channels += radio_freq
+			num_leaders++
+			squad_leader = M
+			SStracking.set_leader(tracking_id, M)
+			SStracking.start_tracking("marine_sl", M)
+		if(JOB_UACG_RIFLE)
+			assignment = JOB_UACG_RIFLE
+			num_riflemen++
+		if(JOB_UACG_TECH)
+			assignment = JOB_UACG_TECH
+			num_engineers++
+			C.claimedgear = FALSE
+			var/squad_number = (num_engineers > 2) ? pick(1, 3) : num_engineers
+			assign_fireteam("SQ[squad_number]", M)
+		if(JOB_UACG_MEDIC)
+			assignment = JOB_UACG_MEDIC
+			num_medics++
+			C.claimedgear = FALSE
+			var/squad_number = (num_medics > 2) ? pick(1, 3) : num_medics
+			assign_fireteam("SQ[squad_number]", M)
+		if(JOB_UACG_LEAD)
+			assignment = JOB_UACG_LEAD
+			num_tl++
+			M.important_radio_channels += radio_freq
+			var/squad_number = (num_tl > 2) ? pick(1, 2, 3, 4) : num_tl
+			assign_fireteam("SQ[squad_number]", M)
+			assign_ft_leader("SQ[squad_number]", M)
+		if(JOB_UACG_GNR)
+			assignment = JOB_UACG_GNR
+			num_smartgun++
+			var/squad_number = (num_smartgun > 2) ? pick(2, 4) : num_smartgun
+			assign_fireteam("SQ[squad_number]", M)
+		if(JOB_UACG_DM)
+			assignment = JOB_UACG_DM
+			num_specialists++
+			var/squad_number = (num_specialists > 2) ? pick(2, 4) : num_specialists
+			assign_fireteam("SQ[squad_number]", M)
+
+//I am in pain
 		if(JOB_TWE_RMC_SECTIONLEADER)
 			assignment = JOB_TWE_RMC_SECTIONLEADER
 			num_tl++

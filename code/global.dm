@@ -1,7 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
 #define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
-#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow",  "USS Golden Arrow (Classic)", "SSV Chapaev", "USS Rover", "USCSS Firefly", "USCSS Obsidian Falk", "USCSS Onyx Karain", "HMS Brynhild")
+#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow",  "USS Golden Arrow (Classic)", "SSV Chapaev", "USS Rover", "USCSS Firefly", "USCSS Obsidian Falk", "USCSS Onyx Karain", "HMS Brynhild", "GJ1232 - Badayaga", "GJ1232 - Badayaga UACG")
 
 #define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
 #define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
@@ -9,6 +9,10 @@
 #define FORECON_AUXILIARY_PLATOON new /datum/squad/marine/sof/forecon
 #define UPP_AUXILIARY_PLATOON new /datum/squad/marine/upp/secondary
 #define PMC_AUXILIARY_PLATOON new /datum/squad/marine/pmc/secondary
+#define UACG_MEDICAL_SQUAD new /datum/squad/marine/uacg_charlie
+#define UACG_MORTAR_SQUAD new /datum/squad/marine/uacg_delta
+#define UACG_COMMAND_SQUAD new /datum/squad/marine/uacg_echo
+#define UACG_SECOND_SQUAD new /datum/squad/marine/uacg/auxiliary
 
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn

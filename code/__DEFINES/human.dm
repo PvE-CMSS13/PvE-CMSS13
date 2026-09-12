@@ -139,15 +139,15 @@
 #define SUIT_LAYER 30
 #define SUIT_GARB_LAYER 29
 #define SUIT_SQUAD_LAYER 28
-#define GLASSES_LAYER 27
-#define BELT_LAYER 26
-#define SUIT_STORE_LAYER 25
-#define BACK_LAYER 24
-#define HAIR_LAYER 23
-#define HAIR_GRADIENT_LAYER 22
-#define FACIAL_LAYER 21
-#define EARS_LAYER 19
-#define FACEMASK_LAYER 20
+#define GLASSES_LAYER 19
+#define BELT_LAYER 27
+#define SUIT_STORE_LAYER 26
+#define BACK_LAYER 25
+#define HAIR_LAYER 24
+#define HAIR_GRADIENT_LAYER 23
+#define FACIAL_LAYER 22
+#define EARS_LAYER 20
+#define FACEMASK_LAYER 21
 
 /// Unrevivable headshot overlays, suicide/execution.
 #define HEADSHOT_LAYER 18

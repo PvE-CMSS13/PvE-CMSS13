@@ -117,6 +117,54 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	squad = SQUAD_RMC
 	job = /datum/job/command/bridge/ai/rmc
 
+/datum/job/command/bridge/ai/uacg
+	title = JOB_UACG_OFFICER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uacg/officer
+	gear_preset_secondary = /datum/equipment_preset/uacg/officer/lesser_rank
+	job_options = list(SECOND_LT_VARIANT = "2ndLt", FIRST_LT_VARIANT = "1stLt")
+	supervisors = "the company commander and UACG high command"
+	entry_message_body = "Your original Captain is dead and you have volunteered to pick up the reigns, and unfortunately so did the other Squad Officer. Your job is to coordinate with the other Officer and administer and oversee the operations of the stationed regimental detachment, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in your bunkroom, and that your equipment can be located in the Officers Quarters.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+
+/datum/job/command/bridge/ai/uacg/handle_job_options(option)
+	if(option != SECOND_LT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/bridge/uacg
+	name = JOB_UACG_OFFICER
+	squad = SQUAD_MILITIA_5
+	job = /datum/job/command/bridge/ai/uacg
+
+/datum/job/command/bridge/ai/uacg/doctor
+	title = JOB_UACG_DOCTOR
+	gear_preset = /datum/equipment_preset/uacg/officer/doctor
+	job_options = null
+	supervisors = "the unit commander"
+	entry_message_body = "Your job is to oversee any medical emergencies onsite as well as provide mental care to the Guard as well as any civilians present. Your rank holds no weight as you exist outside the chain of command, just being there for paygrade..<b>You remember that you've stored your personal gear and uniform in your office.</b>"
+
+/obj/effect/landmark/start/bridge/uacg/doctor
+	name = JOB_UACG_DOCTOR
+	job = /datum/job/command/bridge/ai/uacg/doctor
+
+/datum/job/command/bridge/ai/uacg/mess
+	title = JOB_UACG_MESS
+	gear_preset = /datum/equipment_preset/uacg/officer/messofficer
+	gear_preset_secondary = /datum/equipment_preset/uacg/messofficer/lesser_rank
+	supervisors = "the unit commander"
+	entry_message_body = "You signed on to be an Infantry Officer, but they needed a cook. As a Colonial Guard Mess Officer, your authority only extends to what the menu is and what procurement is needed to get you the ingredients you need.<b>You remember that you've stored your personal gear and uniform in your office.</b>"
+
+/datum/job/command/bridge/ai/uacg/mess/handle_job_options(option)
+	if(option != SECOND_LT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/bridge/uacg/mess
+	name = JOB_UACG_MESS
+	job = /datum/job/command/bridge/ai/uacg/mess
+
 #undef FIRST_LT_VARIANT
 #undef SR_LT_VARIANT
 #undef SECOND_LT_VARIANT

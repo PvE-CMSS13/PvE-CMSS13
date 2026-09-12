@@ -1316,7 +1316,7 @@
 	..()
 
 /datum/equipment_preset/colonist/security/guard/nco
-	name = "US Colonial Guard Unit Leader"
+	name = "US Colonial Guard Unit Leader (Security)"
 	assignment = "Colonial Militiaman Unit Leader"
 	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "UACG-L"
@@ -1383,7 +1383,7 @@
 	..()
 
 /datum/equipment_preset/colonist/security/guard/co
-	name = "US Colonial Guard Officer"
+	name = "US Colonial Guard Officer (Security)"
 	assignment = "Colonial Militiaman Officer"
 	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "UACG-CO"

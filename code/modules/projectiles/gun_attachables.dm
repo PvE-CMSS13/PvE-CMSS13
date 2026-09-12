@@ -619,6 +619,14 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 14
 	hud_offset_mod = -4
 
+/obj/item/attachable/ak4047_barrel
+	name = "AK4047 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "ak4047_barrel"
+	desc = "The very end of an AK4047 pulse assault rifle. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+
 // Mateba barrels
 
 /obj/item/attachable/mateba
@@ -2495,6 +2503,66 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/ar10/New()//no stats, its cosmetic
 	..()
 
+/obj/item/attachable/stock/rifle/collapsible/ak4047
+	name = "\improper AK-4047 folding stock"
+	icon_state = "ak4047_folding"
+	attach_icon = "ak4047_folding_a"
+	desc = "The standard back end of any gun starting with 'AK'. Compatible with the AK-4047 series, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Also enhances the thwacking of things with the stock-end of the rifle, just like its ancestors."
+	flags_attach_features = NO_FLAGS
+	melee_mod = 5
+	size_mod = 1
+	pixel_shift_x = 29
+	hud_offset_mod = 3
+	wield_delay_mod = WIELD_DELAY_NONE
+	collapse_delay = 0.5 SECONDS
+
+/obj/item/attachable/stock/rifle/collapsible/ak4047/New()
+	..()
+
+	//rifle stock starts collapsed so we zero out everything
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
+/obj/item/attachable/stock/rifle/collapsible/ak4047/apply_on_weapon(obj/item/weapon/gun/gun)
+	if(stock_activated)
+		accuracy_mod = HIT_ACCURACY_MULT_TIER_2
+		recoil_mod = -RECOIL_AMOUNT_TIER_5
+		scatter_mod = -SCATTER_AMOUNT_TIER_9
+		//it makes stuff worse when one handed
+		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
+		aim_speed_mod = CONFIG_GET(number/slowdown_med)
+		hud_offset_mod = 5
+		icon_state = "ak4047_folding_on"
+		attach_icon = "ak4047_folding_a_on"
+		wield_delay_mod = WIELD_DELAY_VERY_FAST //added 0.2 seconds for wield, basic solid stock adds 0.4
+
+	else
+		accuracy_mod = 0
+		recoil_mod = 0
+		scatter_mod = 0
+		movement_onehanded_acc_penalty_mod = 0
+		accuracy_unwielded_mod = 0
+		recoil_unwielded_mod = 0
+		scatter_unwielded_mod = 0
+		aim_speed_mod = 0
+		hud_offset_mod = 3
+		icon_state = "ak4047_folding"
+		attach_icon = "ak4047_folding_a"
+		wield_delay_mod = WIELD_DELAY_NONE //stock is folded so no wield delay
+
+	gun.recalculate_attachment_bonuses()
+	gun.update_overlays(src, "stock")
+
 /obj/item/attachable/stock/m79
 	name = "\improper M79 hardened polykevlon stock"
 	desc = "Helps to mitigate the recoil of launching a 40mm grenade. Fits only to the M79."
@@ -2532,6 +2600,12 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
 	icon_state = "xm51_military_stock"
 	attach_icon = "xm51_military_stock_a"
+
+/obj/item/attachable/stock/xm51/gilded
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. This one trades out the military brown plastic with pure gold."
+	icon_state = "xm51_gilded_stock"
+	attach_icon = "xm51_gilded_stock_a"
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"

@@ -1,0 +1,14 @@
+{
+	"map_name": "GJ1232 - Badayaga",
+    "short_name": "Badayaga",
+	"map_path": "map_files/badayaga_groundmap",
+	"map_file": "GJ1232_badayaga_ground.dmm",
+    "webmap_url": "LV552",
+    "map_item_type": "/obj/item/map/lv522_map",
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "announce_text": "Goooooooood morning, Colonial Marines, Troopers and you brave few Voidsmen down here on the dirt! It's another chilly day here on Badayaga, with lows of negative twenty degrees expected later on. Be sure to pack your mittens and extra socks! Now, our thoughts go out to the India Company of the Colonial Marines Third Battalion, the \"Solar Devils\". Those poor shmucks are stuck in the muddy fields to the far East of Camp Yukon. - Local UA servicemembers radio broadcast.",
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "snow"
+}
+

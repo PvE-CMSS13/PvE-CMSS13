@@ -1332,12 +1332,16 @@
 	new /obj/item/tool/wrench(src)
 	new /obj/item/stack/cable_coil(src)
 
+/obj/item/storage/pouch/tools/pfc
+	name = "tools pouch"
+	desc = "It's designed to hold maintenance tools - screwdriver, wrench, cable coil, etc. It also has a hook for an entrenching tool or light replacer."
+	storage_slots = 4
+
 /obj/item/storage/pouch/tools/pfc/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wirecutters(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wrench(src)
-	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/synth/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
@@ -1520,6 +1524,9 @@
 			if(0)
 				icon_state = base_icon_state
 
+/obj/item/storage/pouch/sling/medic/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
+
 /obj/item/storage/pouch/machete
 	name = "\improper H6B pattern M2132 machete scabbard"
 	desc = "A large leather scabbard used to carry a M2132 machete. It can be strapped to the pouch slot."
@@ -1558,3 +1565,15 @@
 	can_hold = /obj/item/tool/shovel/etool
 	storage_slots = null
 	max_storage_space = 2
+
+/obj/item/storage/pouch/etool/uacg
+	name = "entrenching tool pouch"
+	desc = "A pouch designed to carry an entrenching tool. Sadly, not good for much else."
+	icon_state = "entrench2"
+	max_w_class = SIZE_SMALL
+	can_hold = /obj/item/tool/shovel/etool
+	storage_slots = null
+	max_storage_space = 2
+
+/obj/item/storage/pouch/etool/uacg/full/fill_preset_inventory()
+	new /obj/item/tool/shovel/etool(src)

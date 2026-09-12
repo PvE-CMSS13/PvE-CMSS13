@@ -109,3 +109,9 @@ endmap
 
 map binhai_supply_station
 endmap
+
+map badayaga_ground
+endmap
+
+map badayaga_ground_uacg
+endmap

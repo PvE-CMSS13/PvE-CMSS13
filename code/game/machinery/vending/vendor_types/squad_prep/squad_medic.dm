@@ -408,3 +408,12 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	req_access = list(ACCESS_TWE_MEDPREP)
 	vendor_theme = VENDOR_THEME_COMPANY
 	vendor_role = list(JOB_TWE_RMC_MEDIC)
+
+/obj/structure/machinery/cm_vending/gear/medic_chemical/uacg
+	name = "\improper Medical Chemical Rack"
+	req_access = list(ACCESS_MARINE_MEDPREP)
+	vendor_role = list(JOB_UACG_LEAD_MED,
+		JOB_UACG_MEDIC_TRIAGE,
+		JOB_UACG_MEDIC,
+		JOB_UACG_DOCTOR
+	)

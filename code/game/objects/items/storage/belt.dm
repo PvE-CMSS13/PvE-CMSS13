@@ -2143,7 +2143,7 @@
 	)
 	bypass_w_limit = list(/obj/item/mortar_shell, /obj/item/device/binoculars)
 	has_gamemode_skin = FALSE
-	storage_slots = 8
+	storage_slots = 4
 
 /obj/item/storage/belt/gun/mortarbelt/full_upp/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/np92/unloaded())

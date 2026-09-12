@@ -20,9 +20,9 @@
 	if(direction)
 		setDir(direction)
 
-	if(dir == SOUTH)
+	if(dir == SOUTH && !do_not_adjust)
 		pixel_y = -7
-	else if(dir == NORTH)
+	else if(dir == NORTH && !do_not_adjust)
 		pixel_y = 7
 
 	. = ..(loc, user)

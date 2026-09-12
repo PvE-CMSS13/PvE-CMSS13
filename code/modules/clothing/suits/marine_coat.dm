@@ -404,6 +404,14 @@
 	item_state = "jacket_grey"
 	has_buttons = FALSE
 
+/obj/item/clothing/suit/storage/jacket/marine/bomber/pretty
+	name = "bomber jacket"
+	desc = "A bomber jacket popular among stationeers and blue-collar workers everywhere."
+	icon_state = "co_bomber"
+	item_state = "co_bomber"
+	flags_atom = NO_SNOW_TYPE
+	has_buttons = FALSE
+
 //==================UPP==================\\
 
 /obj/item/clothing/suit/storage/jacket/marine/upp

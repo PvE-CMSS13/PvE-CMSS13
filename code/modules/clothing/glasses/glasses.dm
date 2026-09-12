@@ -582,6 +582,14 @@
 	name = "prescription UPP ballistic goggles"
 	prescription = TRUE
 
+/obj/item/clothing/glasses/mgoggles/uacg
+	name = "Tactical ballistic goggles"
+	desc = "Generic commercial ballistic goggles for all operator needs. Perfectly capable of preventing insects, dust, and other things from getting into one's eyes."
+	icon_state = "mgogglesuacg"
+	active_icon_state = "mgogglesuacg_down"
+	inactive_icon_state = "mgogglesuacg"
+
+
 
 //welding goggles
 

@@ -29,8 +29,8 @@
 #define RADIO_CHANNEL_PROVOST "Provost"
 #define RADIO_CHANNEL_INTERCOM "intercom"
 #define RADIO_CHANNEL_INTEL "Intel"
-#define RADIO_CHANNEL_JTAC "JTAC"
-#define RADIO_CHANNEL_MEDSCI "MedSci"
+#define RADIO_CHANNEL_JTAC "Fires"
+#define RADIO_CHANNEL_MEDSCI "Medical"
 #define RADIO_CHANNEL_MP "MP"
 #define RADIO_CHANNEL_NORMANDY "Normandy"
 #define RADIO_CHANNEL_SAIPAN "Saipan"
@@ -39,7 +39,10 @@
 #define RADIO_CHANNEL_SPECIAL "special"
 #define RADIO_CHANNEL_USASF "USASF"
 #define RADIO_CHANNEL_US_ARMY "US Army"
-#define RADIO_CHANNEL_UA_GUARD "UA Colonial Guard"
+#define RADIO_CHANNEL_UA_GUARD "Prairie Dogs"
+#define RADIO_CHANNEL_UA_GUARD_2 "Jayhawkers"
+#define RADIO_CHANNEL_UA_GUARD_3 "Warchiefs"
+
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"

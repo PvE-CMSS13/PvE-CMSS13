@@ -619,6 +619,45 @@
 		// Otherwise its some amount between 1 and the original amount
 		vendspec[2] = rand(1, amount)
 
+/obj/structure/machinery/cm_vending/sorted/medical/uacg
+	name = "\improper Wey-Med Standard"
+	desc = "Medical pharmaceutical dispenser with basic medical supplies, for installations that need medical care but can't justify buying the Wey Med Plus subscription."
+	icon_state = "med"
+	req_access = list()
+	req_one_access = list()
+	vendor_theme = VENDOR_THEME_USCM
+
+	chem_refill = list(
+		/obj/item/reagent_container/hypospray/autoinjector/skillless,
+		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
+	)
+
+/obj/structure/machinery/cm_vending/sorted/medical/uacg/populate_product_list(scale)
+	listed_products = list(
+		list("AUTOINJECTORS", -1, null, null),
+		list("First-Aid Autoinjector", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/skillless, VENDOR_ITEM_REGULAR),
+		list("Pain-Stop Autoinjector", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
+
+		list("DEVICES", -1, null, null),
+		list("Health Diagnostic Equipment", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("FIELD SUPPLIES", -1, null, null),
+		list("Fire Extinguisher (portable)", 5, /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Ointment", floor(scale * 8), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Roll of Gauze", floor(scale * 8), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Splints", floor(scale * 8), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Saline IV bag", floor(scale * 4), /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
+		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray/tricordrazine, VENDOR_ITEM_REGULAR),
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
+
+	list("LIQUID BOTTLES", -1, null, null),
+		list("Bottle (Tricordrazine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tricordrazine, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dylovene)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/antitoxin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dexalin)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/dexalin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Oxycodone)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/oxycodone, VENDOR_ITEM_REGULAR),
+		list("Bottle (Peridaxon)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/peridaxon, VENDOR_ITEM_REGULAR),
+		list("Bottle (Paracetamol)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/paracetamol, VENDOR_ITEM_REGULAR)
+	)
+
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry
 	name = "\improper Wey-Chem Plus"
 	desc = "Medical chemistry dispenser. Provided by Wey-Yu Pharmaceuticals Division(TM)."

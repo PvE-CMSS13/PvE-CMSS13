@@ -41,3 +41,9 @@ endmap
 
 map hms_brynhild
 endmap
+
+map badayaga_ship
+endmap
+
+map badayaga_ship_uacg
+endmap

@@ -158,6 +158,81 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+/datum/job/marine/standard/ai/uacg
+	title = JOB_UACG_RIFLE
+	total_positions = 18
+	spawn_positions = 18
+	gear_preset = /datum/equipment_preset/uacg/rifle
+	gear_preset_secondary = /datum/equipment_preset/uacg/rifle/private
+	gear_preset_tertiary = /datum/equipment_preset/uacg/rifle/lance_corporal
+	gear_preset_quaternary = /datum/equipment_preset/uacg/rifle/corporal
+	job_options = list(PVT_VARIANT = "PVT (E1)", PFC_VARIANT = "PVT (E2)", LCPL_VARIANT = "PFC", CPL_VARIANT = "SPC")
+	supervisors = "the unit leader and senior"
+	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a rifleman. Whether a veteran cycling out of service or a volunteer weekend warrior, you make up the bulk of the UACG.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
+
+/datum/job/marine/standard/ai/uacg/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_quaternary
+
+/obj/effect/landmark/start/marine/uacg
+	name = JOB_UACG_RIFLE
+	job = /datum/job/marine/standard/ai/uacg
+
+/datum/job/marine/standard/ai/uacg/security
+	title = JOB_UACG_SCR_RIFLE
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the fires leader and officer"
+	gear_preset = /datum/equipment_preset/uacg/rifle/security
+	gear_preset_secondary = /datum/equipment_preset/uacg/rifle/security/private
+	gear_preset_tertiary = /datum/equipment_preset/uacg/rifle/security/lance_corporal
+	gear_preset_quaternary = /datum/equipment_preset/uacg/rifle/security/corporal
+	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a rifleman. You are specifically a Rear Line Guardsman, tasked with protecting the mortar pit and working under the Fires Leader. Should the need arise, you will also assist in subduing unruly Guardsmen until they chill out.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
+
+/datum/job/marine/standard/ai/uacg/security/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_quaternary
+
+/obj/effect/landmark/start/marine/uacg/security
+	name = JOB_UACG_SCR_RIFLE
+	squad = SQUAD_MILITIA_3
+	job = /datum/job/marine/standard/ai/uacg/security
+
+/datum/job/marine/standard/ai/uacg/armory
+	title = JOB_UACG_ARMORY_LACKEY
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uacg/rifle/armory
+	gear_preset_secondary = /datum/equipment_preset/uacg/rifle/armory/private
+	gear_preset_tertiary = /datum/equipment_preset/uacg/rifle/armory/lance_corporal
+	gear_preset_quaternary = /datum/equipment_preset/uacg/rifle/armory/corporal
+	supervisors = "the armorer and officer"
+	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a weapons technician to assist the armorer with arms maintenance and repairs.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
+
+/datum/job/marine/standard/ai/uacg/armory/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_quaternary
+
+/obj/effect/landmark/start/marine/uacg/armory
+	name = JOB_UACG_ARMORY_LACKEY
+	squad = SQUAD_MILITIA_5
+	job = /datum/job/marine/standard/ai/uacg/armory
+
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT

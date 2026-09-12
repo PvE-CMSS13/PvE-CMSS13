@@ -1,3 +1,7 @@
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+#define PVT_VARIANT "Private"
+
 /datum/job/marine/specialist
 	title = JOB_SQUAD_SPECIALIST
 	total_positions = 4
@@ -79,3 +83,32 @@
 	name = JOB_TWE_RMC_MARKSMAN
 	squad = SQUAD_RMC
 	job = /datum/job/marine/specialist/ai/rmc
+
+/datum/job/marine/specialist/ai/uacg
+	total_positions = 4
+	spawn_positions = 4
+	title = JOB_UACG_DM
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uacg/marksman
+	gear_preset_secondary = /datum/equipment_preset/uacg/marksman/lance_corporal
+	gear_preset_tertiary = /datum/equipment_preset/uacg/marksman/private
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "SPC")
+	supervisors = "the unit leader and unit officer"
+	entry_message_body = "You are a handpicked member of the United Americas Colonial Guard as a designated marksman. While that typically comes with a bunch of fancy gear, you've found it means your rifle is just a bit more expensive.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be requisitioned from the armory.</b>"
+
+/datum/job/marine/specialist/ai/uacg/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/specialist/ai/uacg
+	name = JOB_UACG_DM
+	job = /datum/job/marine/specialist/ai/uacg
+
+#undef LCPL_VARIANT
+#undef PFC_VARIANT
+#undef PVT_VARIANT

@@ -1,4 +1,7 @@
+#define WO1_VARIANT "Warrant Officer First Class"
+#define CMDSGTMJR_VARIANT "Command Sergeant Major"
 #define MSSGT_VARIANT "Master Sergeant"
+#define SFC_VARIANT "Sergeant First Class"
 #define GYSGT_VARIANT "Gunnery Sergeant"
 #define SGTMJR_VARIANT "Sergeant Major"
 #define SSGT_VARIANT "Staff Sergeant"
@@ -125,8 +128,77 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_RMC
 	job = /datum/job/marine/leader/ai/rmc
 
+/datum/job/marine/leader/ai/uacg
+	title = JOB_UACG_SENLEAD
+	gear_preset = /datum/equipment_preset/uacg/senleader
+	gear_preset_secondary = /datum/equipment_preset/uacg/senleader/greater_rank
+	job_options =  list(SFC_VARIANT = "SFC", MSSGT_VARIANT = "MSGT")
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the officer"
+	entry_message_body = "You are the senior leadership of your Guard squad under the United Americas Colonial Guard. You report directly to the officer in charge of your formation and you fully take responsibility for the actions of those under you. You are the backbone of the Guard.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be requisitioned from the armory.</b>"
+
+/datum/job/marine/leader/ai/uacg/handle_job_options(option)
+	if(option != SSGT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/leader/uacg
+	name = JOB_UACG_SENLEAD
+	job = /datum/job/marine/leader/ai/uacg
+
+/datum/job/marine/leader/ai/uacg/armorer
+	title = JOB_UACG_ARMORY
+	gear_preset = /datum/equipment_preset/uacg/senleader/armorer
+	gear_preset_secondary = /datum/equipment_preset/uacg/senleader/armorer/greater_rank
+	gear_preset_tertiary = /datum/equipment_preset/uacg/senleader/armorer/even_greater_rank
+	job_options = list(SFC_VARIANT = "SFC", MSSGT_VARIANT = "MSGT", SGTMJR_VARIANT = "SGM")
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the officer"
+	entry_message_body = "You are the quartermaster for a Colonial Guard unit and are in charge of ensuring all equipment are accounted for and maintained. You understand the ends and outs of every weapon system in your arsenal, and just how woefully underprepared it is for a war with a near peer adversary.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that no one else bar your superior officers and the weapons technician should be in the armory.</b>"
+
+/datum/job/marine/leader/ai/uacg/armorer/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == SGTMJR_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == SFC_VARIANT)
+		gear_preset = gear_preset
+	if(option == MSSGT_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/leader/uacg/armorer
+	name = JOB_UACG_ARMORY
+	squad = SQUAD_MILITIA_5
+	job = /datum/job/marine/leader/ai/uacg/armorer
+
+/datum/job/marine/leader/ai/uacg/chaplain
+	title = JOB_UACG_CHAPLAIN
+	gear_preset = /datum/equipment_preset/uacg/senleader/chaplain
+	gear_preset_secondary = /datum/equipment_preset/uacg/senleader/chaplain/greater_rank
+	job_options = list(CMDSGTMJR_VARIANT = "CSGM", WO1_VARIANT = "WO1")
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the officer"
+	entry_message_body = "You are the Chaplain for a Colonial Guard unit and act as a religious grounding for your fellow man. That, and someone needs to make sure the dead get a proper burial and sendoff.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b>"
+
+/datum/job/marine/leader/ai/uacg/chaplain/handle_job_options(option)
+	if(option != WO1_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/leader/uacg/chaplain
+	name = JOB_UACG_CHAPLAIN
+	squad = SQUAD_MILITIA_5
+	job = /datum/job/marine/leader/ai/uacg/chaplain
+
+#undef WO1_VARIANT
+#undef CMDSGTMJR_VARIANT
 #undef MSSGT_VARIANT
 #undef GYSGT_VARIANT
+#undef SFC_VARIANT
 #undef SGTMJR_VARIANT
 #undef SSGT_VARIANT
 #undef SRSGT_VARIANT

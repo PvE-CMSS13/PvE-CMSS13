@@ -1,0 +1,14 @@
+{
+	"map_name": "GJ1232 - Badayaga UACG",
+    "short_name": "Badayaga",
+	"map_path": "map_files/badayaga_groundmap_uacg",
+	"map_file": "GJ1232_badayaga_ground_uacg.dmm",
+    "webmap_url": "LV552",
+    "map_item_type": "/obj/item/map/lv522_map",
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "announce_text": "Attention all personnel, this is Captain Redding security status has moved to yellow, All Hands on Standby. Until further notice, all combat fit Guardsmen are to report to man their posts and be ready for enemy contact. This message will repeat every day until Security Status is lowered to Green. This message has been repeating for- %#@%SCEE!",
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "snow"
+}
+

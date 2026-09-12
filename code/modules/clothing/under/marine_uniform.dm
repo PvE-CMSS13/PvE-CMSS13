@@ -736,6 +736,12 @@
 	icon_state = "boilersuit_steel"
 	worn_state = "boilersuit_steel"
 
+/obj/item/clothing/under/colonist/boilersuit/green
+	name = "green boilersuit"
+	desc = "A green boilersuit."
+	icon_state = "boilersuit_green"
+	worn_state = "boilersuit_green"
+
 /obj/item/clothing/under/colonist/clf
 	name = "\improper Colonial Liberation Front uniform"
 	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."

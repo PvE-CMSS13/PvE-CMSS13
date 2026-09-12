@@ -1,3 +1,4 @@
+#define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
 #define PFC_VARIANT "Private First Class"
 
@@ -103,5 +104,53 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/engineer/ai/rmcmortar
 
+/datum/job/marine/engineer/ai/uacg
+	total_positions = 2
+	spawn_positions = 2
+	title = JOB_UACG_TECH
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uacg/tech
+	gear_preset_secondary = /datum/equipment_preset/uacg/tech/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uacg/tech/greater_rank
+	job_options = list(PFC_VARIANT = "PVT", LCPL_VARIANT = "PFC", CPL_VARIANT = "SPC")
+	supervisors = "the unit leader and senior leader"
+	entry_message_body = "You are a Technician of the Colonial Guard, expected to maintain the defenses and machinery utilized by your unit. You are also trained in demolitions and other combat engineering skills, giving you a flexible array of skills for building up and knocking down.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that lethals and additional equipment can be requisitioned from the armory.</b>"
+
+/datum/job/marine/engineer/ai/uacg/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/engineer/uacg
+	name = JOB_UACG_TECH
+	job = /datum/job/marine/engineer/ai/uacg
+
+/datum/job/marine/engineer/ai/uacg/mortar
+	title = JOB_UACG_MORTAR
+	gear_preset = /datum/equipment_preset/uacg/tech/mortar
+	gear_preset_secondary = /datum/equipment_preset/uacg/tech/mortar/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uacg/tech/mortar/greater_rank
+	supervisors = "the unit leader and officer"
+	entry_message_body = "You are a Mortarman of the Colonial Guard, an irregular role not usually called up to be filled. Your job is to man one of the mortar tubes and standby for firemissions, acting as the lightweight firesupport element to your fellow man.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armory. The mortars are already set up in the mortar pit on the surface.</b>"
+
+/datum/job/marine/engineer/ai/uacg/mortar/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/engineer/uacg/mortar
+	name = JOB_UACG_MORTAR
+	squad = SQUAD_MILITIA_3
+	job = /datum/job/marine/engineer/ai/uacg/mortar
+
+#undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT

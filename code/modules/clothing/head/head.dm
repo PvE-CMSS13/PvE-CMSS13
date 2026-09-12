@@ -388,6 +388,11 @@
 	desc = "A khaki utility cap"
 	icon_state = "cap_khaki"
 
+/obj/item/clothing/head/cmcap/khaki/snow
+	name = "\improper white utility cap"
+	desc = "A white utility cap"
+	icon_state = "uacap_snow"
+
 /obj/item/clothing/head/cmcap/snow
 	name = "\improper coldweather utility cap"
 	desc = "A utility cap worn in cold weather environments."
@@ -538,6 +543,15 @@
 	name = "marine colonel beret"
 	desc = "A dark blue, custom-tailored beret signifying The Colonel. Definitely not an alias for a General."
 	icon_state = "cdrechiefberet"
+
+/obj/item/clothing/head/beret/marine/uacg
+	name = "black beret"
+	desc = "A military style black beret."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "beret_uacg"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
 
 /obj/item/clothing/head/marine/peaked
 	name = "marine peaked cap"
@@ -839,6 +853,12 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
+
+/obj/item/clothing/head/beanie/royal_marine/uacg
+	name = "stocking cap"
+	desc = "better for keeping your head warm, and stylish too."
+	icon_state = "uacg_beanie"
+	icon_state = "uacg_beanie"
 
 /obj/item/clothing/head/beanie/royal_marine/turban
 	name = "royal marine turban"

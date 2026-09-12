@@ -971,6 +971,10 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
+/obj/item/weapon/gun/rifle/m16/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+
 /obj/item/weapon/gun/rifle/m16/grenadier
 	name = "\improper M16 grenadier rifle"
 	desc = "The little worn and faded sticker on the lower receiver claims that this is a Mustang Special, Little Friend Edition. Point is, it's an M16 repro with an irremovable M203 underslung. 40mm, careful where you point it."
@@ -1562,6 +1566,67 @@
 
 	//-------------------------------------------------------
 
+//-------------------------------------------------------
+//UPP Norcomm AK-4047 RIFLE
+
+/obj/item/weapon/gun/rifle/ak4047
+	name = "\improper AK-4047 pulse assault rifle"
+	desc = "The first attempt of the UPP to make a pulse action equivalent to the M20 Pulse Rifle, the AK-4047 is a cheap and reliable substitute. As such, the weapon often winds up in the hands of mercenaries and insurgents. While not as accurate as western models, the AK-4047 is sturdier than the USCMC weapon. An AK-4047 still works after being thrown off a cliff and left underwater for a month."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "ak4047"
+	item_state = "ak4047"
+
+	fire_sound = 'sound/weapons/gun_ak4047.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/ak4047
+	wield_delay = WIELD_DELAY_FAST
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/flashlight/grip/upp,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/flashlight,
+		)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible/ak4047)
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_equip_slot = SLOT_BACK
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/ak4047/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 17,"rail_x" = 20, "rail_y" = 23, "under_x" = 24, "under_y" = 23, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/ak4047/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/ak4047_barrel/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
+
+/obj/item/weapon/gun/rifle/ak4047/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
 //M49A Battle Rifle, standard USCM DMR
 
 /obj/item/weapon/gun/rifle/m49a
@@ -1764,6 +1829,7 @@
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
@@ -1791,6 +1857,9 @@
 
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
+
+/obj/item/weapon/gun/rifle/l42a/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //-------------------------------------------------------

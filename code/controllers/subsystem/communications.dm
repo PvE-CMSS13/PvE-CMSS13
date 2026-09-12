@@ -81,6 +81,8 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define CIA_FREQ 1225
 #define ARM_FREQ 1228
 #define GRD_FREQ 1229
+#define GRD_2_FREQ 1207
+#define GRD_3_FREQ 1208
 
 //WY Channels (1230-1249)
 #define WY_FREQ 1231
@@ -160,6 +162,8 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_USASF = ASF_FREQ,
 	RADIO_CHANNEL_US_ARMY = ARM_FREQ,
 	RADIO_CHANNEL_UA_GUARD = GRD_FREQ,
+	RADIO_CHANNEL_UA_GUARD_2 = GRD_2_FREQ,
+	RADIO_CHANNEL_UA_GUARD_3 = GRD_3_FREQ,
 	RADIO_CHANNEL_DUTCH_DOZEN = DUT_FREQ,
 	RADIO_CHANNEL_ROYAL_MARINE = RMC_FREQ,
 	RADIO_CHANNEL_CIA = CIA_FREQ,
@@ -297,6 +301,8 @@ SUBSYSTEM_DEF(radio)
 		"[ASF_FREQ]" = "usasfradio",
 		"[ARM_FREQ]" = "armyradio",
 		"[GRD_FREQ]" = "guardradio",
+		"[GRD_2_FREQ]" = "guardradio",
+		"[GRD_3_FREQ]" = "guardradio",
 		"[MERC_FREQ]" = "mercradio",
 		"[ALPHA_FREQ]" = "alpharadio",
 		"[BRAVO_FREQ]" = "bravoradio",

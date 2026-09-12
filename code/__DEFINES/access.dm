@@ -173,6 +173,10 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 //=================================================
 
+#define ACCESS_UACG 320
+#define ACCESS_UACG_CMD 321
+
+//=================================================
 // Yautja Access Levels
 /// Requires a visible ID chip to open
 #define ACCESS_YAUTJA_SECURE 390

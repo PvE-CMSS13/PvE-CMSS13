@@ -101,6 +101,17 @@
 	. = ..()
 	reagents.add_reagent("tramadol", 180)
 
+/obj/item/reagent_container/glass/bottle/paracetamol
+	name = "\improper Paracetamol bottle"
+	desc = "A small glossy bottle full of paracetamol, also known as Tylenol."
+	icon = 'icons/obj/items/chemistry.dmi'
+	icon_state = "bottle1"
+	amount_per_transfer_from_this = 180
+
+/obj/item/reagent_container/glass/bottle/paracetamol/Initialize()
+	. = ..()
+	reagents.add_reagent("paracetamol", 180)
+
 /obj/item/reagent_container/glass/bottle/oxycodone
 	name = "\improper Oxycodone bottle"
 	desc = "A small glossy bottle full of oxycodone, an aggressive analgesic. May be habit forming."

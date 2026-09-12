@@ -213,6 +213,59 @@
 		/obj/item/clothing/accessory/pads/groin,
 	)
 
+/obj/item/storage/box/guncase/uacg
+	name = "\improper M3 Pattern Armor case"
+	desc = "A case containing the standard issue parts of the M3 Pattern Armor set utilized by the UACG. No parts sold separately, despite the attempts of many guardsmen."
+	can_hold = list(/obj/item/clothing/head/helmet/marine/veteran/ua_riot, /obj/item/clothing/head/helmet/marine/veteran/ua_riot/black, /obj/item/clothing/suit/marine/guard, /obj/item/clothing/suit/marine/guard/white, /obj/item/clothing/accessory/pads/groin/uacg, /obj/item/clothing/accessory/pads/groin/uacg/white, /obj/item/clothing/accessory/pads/neckguard/uacg)
+	storage_slots = 2
+
+/obj/item/storage/box/guncase/uacg/standard/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot(src)
+
+/obj/item/storage/box/guncase/uacg/white/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot(src)
+
+/obj/item/storage/box/guncase/uacg/black/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/black(src)
+
+/obj/item/storage/box/guncase/uacg/inverted/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/black(src)
+
+/obj/item/storage/box/guncase/uacg/heavy
+
+/obj/item/storage/box/guncase/uacg/heavy/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/heavy(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot(src)
+
+/obj/item/storage/box/guncase/uacg/heavy/black
+
+/obj/item/storage/box/guncase/uacg/heavy/black/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/black(src)
+
+/obj/item/storage/box/guncase/uacg/medic/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic(src)
+
+/obj/item/storage/box/guncase/uacg/medic2/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic(src)
+
+/obj/item/storage/box/guncase/uacg/senlead/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead(src)
+
+/obj/item/storage/box/guncase/uacg/senlead/black/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead/black(src)
+
+/obj/item/storage/box/guncase/uacg/standard/chaplain/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/chaplain(src)
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp
 	name = "\improper UnTech Surplus Uniform Vendor"

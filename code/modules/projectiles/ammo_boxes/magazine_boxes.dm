@@ -75,6 +75,15 @@
 
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m20a/heap
+	name = "magazine box (M20A x 10)"
+	icon_state = "base_m41"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_content = "_reg"
+	overlay_gun_type = "_m20a"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a/heap
+
 //-----------------------Viper 9 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39

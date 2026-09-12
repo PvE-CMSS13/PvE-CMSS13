@@ -943,11 +943,34 @@
 	flags_atom = NO_SNOW_TYPE
 	name = "\improper M3 pattern armor"
 	specialty = "M3 pattern"
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/guard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
+
+/obj/item/clothing/suit/marine/guard/white
+	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	icon_state = "uacg_white"
+	item_state = "uacg_white"
+
+/obj/item/clothing/suit/marine/guard/white/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/uacg/white/crotchplate = new()
+	src.attach_accessory(null, crotchplate, TRUE)
+
+/obj/item/clothing/suit/marine/guard/heavy
+	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	icon_state = "uacg"
+	item_state = "uacg"
+
+/obj/item/clothing/suit/marine/guard/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
+	src.attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/neckguard/uacg/neckguard = new()
+	src.attach_accessory(null, neckguard, TRUE)
 
 //Army & USASF custom-armors\\
 

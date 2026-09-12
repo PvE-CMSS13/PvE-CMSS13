@@ -1427,3 +1427,12 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/xm51/military/withstock
 	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)
+
+/obj/item/weapon/gun/rifle/xm51/gilded
+	name = "\improper XM51 shotgun"
+	desc = "Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems, also known as M1771 Cobra Max Tactical. This one clearly has been modified, trading out the plastic casing with pure gold that radiates with a shine. It either fills you with pride, or inexplicable anger depending on who you are."
+	icon_state = "xm51_gilded"
+	item_state = "xm51_gilded"
+
+/obj/item/weapon/gun/rifle/xm51/gilded/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51/gilded)

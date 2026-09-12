@@ -259,6 +259,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/glasses/mgoggles/green/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp/prescription = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/glasses/mgoggles/uacg = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/sunglasses = "sunglasses",
 	/obj/item/clothing/glasses/sunglasses/prescription = "sunglasses",
 	/obj/item/clothing/glasses/sunglasses/aviator = "aviator",
@@ -1123,6 +1124,21 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
 	icon_state = "ua_riot"
 	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black
+	icon_state = "ua_riot_black"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic
+	icon_state = "ua_riot_med"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead
+	icon_state = "ua_riot_sl"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead/black
+	icon_state = "ua_riot_sl_black"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/chaplain
+	icon_state = "ua_riot_chaplain"
 
 // KUTJEVO HELMET
 

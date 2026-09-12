@@ -165,6 +165,54 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/medic/ai/rmc
 
+/datum/job/marine/medic/ai/uacg
+	title = JOB_UACG_MEDIC
+	gear_preset = /datum/equipment_preset/uacg/medic
+	gear_preset_secondary = /datum/equipment_preset/uacg/medic/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uacg/medic/greater_rank
+	job_options = null
+	total_positions = 4
+	spawn_positions = 4
+	job_options = list(PFC_VARIANT = "PVT", LCPL_VARIANT = "PFC", CPL_VARIANT = "SPC")
+	supervisors = "the unit leader and senior leader"
+	entry_message_body = "You are a reservist mobilized by the United Americas Colonial Guard for your background with providing medical treatment. While you are tasked to keep your members alive, you mainly are expected to stabilize wounds and assist with triage.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that other equipment can be located in the Sick Bay.</b>"
+
+/datum/job/marine/medic/ai/uacg/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/medic/uacg
+	name = JOB_UACG_MEDIC
+	job = /datum/job/marine/medic/ai/uacg
+
+/datum/job/marine/medic/ai/uacg/triage
+	title = JOB_UACG_MEDIC_TRIAGE
+	total_positions = 2
+	gear_preset = /datum/equipment_preset/uacg/medic/triage
+	gear_preset_secondary = /datum/equipment_preset/uacg/medic/triage/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uacg/medic/triage/greater_rank
+	supervisors = "the unit leader and officer"
+	entry_message_body = "You are a reservist mobilized by the United Americas Colonial Guard for your background with providing medical treatment. Unlike Combat Medics, you are specifically assigned to coordinate triage with the other Triage Medics and Triage Leader, and have priority over Combat Medics in treating wounded.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that other equipment can be located in the Sick Bay.</b>"
+
+/datum/job/marine/medic/ai/uacg/triage/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/medic/uacg/triage
+	name = JOB_UACG_MEDIC_TRIAGE
+	squad = SQUAD_MILITIA_4
+	job = /datum/equipment_preset/uacg/medic/triage
+
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT
