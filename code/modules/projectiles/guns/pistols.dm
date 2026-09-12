@@ -897,3 +897,27 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	accuracy_mult = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+
+//-------------------------------------------------------
+//luger
+/obj/item/weapon/gun/pistol/luger
+	name = "Pistole 08"
+	desc = "9x19mm sidearm of the Wehrmacht, using a distinctive toggle-lock mechanism. More well known as the Luger."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
+	icon_state = "luger"
+	item_state = "luger"
+	fire_sound = "vp90"
+	current_mag = /obj/item/ammo_magazine/pistol/luger
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AUTO_EJECT_CASINGS
+
+/obj/item/weapon/gun/pistol/luger/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+
+

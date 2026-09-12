@@ -121,6 +121,33 @@
 	if(reload_sound)
 		playsound(user, reload_sound, 25, 1, 5)
 
+/obj/item/weapon/gun/boltaction/kar98k
+	name = "Karabiner 98k"
+	desc = "A 7.92mm bolt action rifle with five round internal magazine."
+	flags_gun_features = null
+	indestructible = FALSE
+	attachable_allowed = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/stock/hunting/karabiner,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/hunting/karabiner,
+	)
+
+/obj/item/weapon/gun/boltaction/kar98k/set_gun_config_values()
+	..()
+	set_burst_amount(0)
+	set_fire_delay(FIRE_DELAY_TIER_4)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
 
 /obj/item/weapon/gun/boltaction/vulture
 	name = "\improper M707 \"Vulture\" anti-materiel rifle"

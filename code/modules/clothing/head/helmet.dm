@@ -1965,3 +1965,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+/obj/item/clothing/head/helmet/stahlhelm
+	name = "stahlhelm"
+	desc = "Standard issue helmet of the Wehrmacht during the Second World War. Steel construction, resistant to pistol and shell fragments."
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_NONE //for the sake of gameplay, sort of.
+

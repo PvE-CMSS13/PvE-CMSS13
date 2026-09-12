@@ -802,3 +802,26 @@
 	item_state = "tnailgun"
 	w_class = SIZE_SMALL
 	material_per_repair = 2
+
+/obj/item/weapon/gun/smg/mp40
+	name = "Maschinenpistole 40"
+	desc = "The iconic Axis SMG. Chambered in 9x19mm, it became increasingly widely proliferated, especially in close quarters fighting. This weapon indeed directly lead to the issuing of body armor for Soviet Assault Engineers."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
+	icon_state = "mp40"
+	item_state = "mp40"
+	fire_sound = "m4a3"
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
+	current_mag = /obj/item/ammo_magazine/smg/mp40
+
+/obj/item/weapon/gun/smg/mp40/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7

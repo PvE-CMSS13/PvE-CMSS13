@@ -2178,6 +2178,10 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/stock/hunting/karabiner
+	name = "Karabiner 98k stock"
+	desc = "Nondetachable stock of a Kar98k."
+
 /obj/item/attachable/stock/olympiets
 	name = "Olympiets 'wooden' stock"
 	desc = "Shouldn't be seeing this."

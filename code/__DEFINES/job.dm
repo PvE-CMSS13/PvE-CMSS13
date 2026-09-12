@@ -439,6 +439,11 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define BD_MERCS_JOB_LIST list(JOB_MERCENARY_GRUNT, JOB_MERCENARY_PILOT, JOB_MERCENARY_SENTINEL, JOB_MERCENARY_SUPERVISOR, JOB_MERCENARY_BULWARK, JOB_MERCENARY_SYNTH, JOB_MERCENARY_INFILTRATOR, JOB_MERCENARY_OFFICER)
 
+//-------- GERMAN RIFLES --------//
+#define JOB_HEER_GRUNT "Heer Rifleman"
+#define JOB_HEER_GUNNER "Heer Machinegunner"
+#define JOB_HEER_OFFICER "Heer Officer"
+
 //-------- UACG -------//
 #define JOB_UACG_RIFLE "Colonial Militiaman"
 #define JOB_UACG_TECH "Colonial Militiaman Technician"

@@ -584,6 +584,18 @@
 
 // Misc
 
+/datum/ammo/bullet/rifle/karabiner
+	name = "full metal jacket 7.92mm bullet"
+	damage = 50
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	damage_var_low = PROJECTILE_VARIANCE_TIER_5
+	penetration = -ARMOR_PENETRATION_TIER_4
+	stamina_damage = 15
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
+/datum/ammo/bullet/rifle/karabiner/on_hit_mob(mob/M,obj/projectile/P)
+	slam_back(M, P, 3)
+
 /datum/ammo/bullet/rifle/mar40
 	name = "8.8x29 rifle bullet"
 	damage = 45

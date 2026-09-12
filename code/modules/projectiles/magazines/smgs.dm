@@ -297,3 +297,19 @@
 	w_class = SIZE_SMALL
 	max_rounds = 48
 	gun_type = /obj/item/weapon/gun/smg/nailgun
+
+//-------------------------------------------------------
+//MP40
+
+/obj/item/ammo_magazine/smg/mp40
+	name = "Maschinenpistolle 40 magazine (9mm)"
+	desc = "32 round stick of 9x19mm."
+	caliber = "9x19mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/event.dmi'
+	icon_state = "mp40clip"
+	max_rounds = 32
+	w_class = SIZE_MEDIUM
+	gun_type = /obj/item/weapon/gun/smg/mp40
+	default_ammo = /datum/ammo/bullet/pistol/hitlerforce
+	ammo_band_icon = "+m39_band"
+	ammo_band_icon_empty = "+m39_band_e"

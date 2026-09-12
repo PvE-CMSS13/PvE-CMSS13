@@ -387,3 +387,15 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "skorpion" //PLACEHOLDER
 	gun_type = /obj/item/weapon/gun/pistol/skorpion
 	max_rounds = 20
+
+//-------------------------------------------------------
+//Luger
+/obj/item/ammo_magazine/pistol/luger
+	name = "Pistolle 08 magazine (9mm)"
+	desc = "An 8 round clip for the Pistolle 08, or Luger."
+	caliber = "9x19mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/event.dmi'
+	icon_state = "lugerclip"
+	max_rounds = 8
+	default_ammo = /datum/ammo/bullet/pistol/hitlerforce
+	gun_type = /obj/item/weapon/gun/pistol/luger

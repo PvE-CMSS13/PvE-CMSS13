@@ -12,7 +12,15 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = null
 
-
+/obj/item/ammo_magazine/m56d/mg42
+	name = "Maschinengewehr 42 drum (7.92mm Mauser)"
+	desc = "250 round belt feed for the MG42 in a static defense configuration."
+	w_class = SIZE_MEDIUM
+	icon_state = "m56d_drum"
+	caliber = "7.92mm"
+	max_rounds = 250
+	default_ammo = /datum/ammo/bullet/rifle/karabiner
+	gun_type = null
 
 // Now we need a box for this.
 /obj/item/storage/box/m56d_hmg
@@ -1193,3 +1201,43 @@
 		deployment_system.deployed_mg = null
 		deployment_system = null
 	return ..()
+
+/obj/item/device/m56d_gun/mg42
+//MG FORTY TWO IN THE WINDOOOOW
+	name = "Maschinengewehr 42"
+	desc = "The infamous 7.92 buzzsaw. Feeds from a 250 round belt, the Patronengurt 33. This also makes it more or less inoperable dismounted."
+
+/obj/item/device/m56d_gun/mg42/get_examine_text(mob/user) //Let us see how much ammo we got in this thing.
+	. = ..()
+	if(rounds)
+		. += "It has [rounds] remaining."
+	else
+		. += "It's unloaded, probably."
+
+/obj/item/device/m56d_gun/mg42/attackby(obj/item/O as obj, mob/user as mob)
+	if(!ishuman(user) || !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
+		return
+
+	if(QDELETED(O))
+		return
+
+	if(istype(O,/obj/item/ammo_magazine/m56d/mg42)) //lets equip it with ammo
+		if(!rounds)
+			rounds = 250
+			qdel(O)
+			update_icon()
+			return
+		else
+			to_chat(usr, "Weapon already loaded.")
+		return
+
+/obj/item/device/m56d_gun/mg42/mounted
+	has_mount = TRUE
+	rounds = 250
+
+/obj/structure/machinery/m56d_hmg/mg42
+	name = "mounted Maschinengewehr 42"
+	desc = "A mounted 7,92mm general purpose machine gun."
+	rounds_max = 700
+
+
