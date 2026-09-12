@@ -69,7 +69,10 @@ SUBSYSTEM_DEF(minimaps)
 					continue
 
 				if(istype(location, /turf/open/space))
-					continue
+					if(istype(get_area(location), /area/space/minimap_show))
+
+					else
+						continue
 
 				var/atom/movable/alttarget = (locate(/obj/structure/machinery/door) in location) || (locate(/obj/structure/fence) in location)
 				if(alttarget)

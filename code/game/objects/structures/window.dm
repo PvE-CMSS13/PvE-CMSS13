@@ -668,6 +668,24 @@
 	reinf = 1
 	window_frame = /obj/structure/window_frame/colony/reinforced
 
+/obj/structure/window/framed/colony/reinforced/Destroy(force)
+	if(force)
+		return ..()
+
+	spawn_shutters()
+	. = ..()
+
+/obj/structure/window/framed/colony/reinforced/proc/spawn_shutters(from_dir = 0)
+	var/list/space = orange(4, src)
+	var/is_space = FALSE
+	for(var/object in space)
+		if(istype(object, /area/space))
+			is_space = TRUE
+	if(is_space)
+		var/area/the_area = get_area(src)
+		for(var/obj/structure/machinery/door/firedoor/pressure_door in the_area.contents)
+			INVOKE_ASYNC(pressure_door, TYPE_PROC_REF(/obj/structure/machinery/door, close), TRUE)
+
 /obj/structure/window/framed/colony/reinforced/tinted
 	name =  "tinted reinforced window"
 	desc = "A glass window with a special rod matrix inside a wall frame. It looks rather strong. Might take a few good hits to shatter it. This one is opaque. You have an uneasy feeling someone might be watching from the other side."

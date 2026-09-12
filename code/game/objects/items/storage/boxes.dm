@@ -1033,3 +1033,139 @@
 /obj/item/storage/box/cheeseslices/fill_preset_inventory()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft(src)
+
+/obj/item/storage/box/m4a3_mag/rubber
+	name = "box of pistol magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+
+/obj/item/storage/box/m4a3_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+
+/obj/item/storage/box/m4a3_mag
+	name = "box of pistol magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/m4a3_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/box/vp78_mag
+	name = "box of doublestack magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/vp78_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/box/mar40_mag
+	name = "box of light bullpup magazines"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/mar40_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+
+/obj/item/storage/box/mp5_mag/rubber
+	name = "box of SMG magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 16
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/smg)
+
+/obj/item/storage/box/m39_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+
+/obj/item/storage/box/mp5_mag
+	name = "box of SMG magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/smg)
+
+/obj/item/storage/box/mp5_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+
+/obj/item/storage/box/mp5_mag/rubber
+	name = "box of SMG magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+
+/obj/item/storage/box/mp5_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+
+/obj/item/storage/box/bloodpacks
+	name = "blood packs box"
+	desc = "This box contains empty blood packs."
+	storage_slots = 8
+	w_class = SIZE_SMALL
+	can_hold = list(/obj/item/reagent_container/blood)
+
+/obj/item/storage/box/bloodpacks/fill_preset_inventory()
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+
+/obj/item/storage/box/bloodpacks/saline
+	name = "glucose box"
+	desc = "This box contains glucose IV bags."
+
+/obj/item/storage/box/bloodpacks/saline/fill_preset_inventory()
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)

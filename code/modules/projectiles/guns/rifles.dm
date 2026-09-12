@@ -828,6 +828,10 @@
 	starting_attachment_types = list(/obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
+/obj/item/weapon/gun/rifle/mar40/carbine/tactical/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/mar40/carbine/tactical::flags_gun_features | GUN_TRIGGER_SAFETY
+
 /obj/item/weapon/gun/rifle/mar40/lmg
 	name = "\improper MAR-50 light machine gun"
 	desc = "A cheap, reliable LMG chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals."

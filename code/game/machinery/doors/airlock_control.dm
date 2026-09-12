@@ -224,6 +224,18 @@
 	var/on = 1
 
 
+/obj/structure/machinery/access_button/Initialize()
+	if(istype(get_area(src), /area/torch))
+		var/obj/structure/machinery/door_control/knock = new
+		knock.loc = loc
+		knock.name = name
+		knock.id = command
+		knock.pixel_x = pixel_x
+		knock.pixel_y = pixel_y
+		qdel(src)
+		return
+	. = ..()
+
 /obj/structure/machinery/access_button/update_icon()
 	if(on)
 		icon_state = "access_button_standby"

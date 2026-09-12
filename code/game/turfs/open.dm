@@ -158,6 +158,9 @@
 	can_bloody = FALSE
 	supports_surgery = FALSE
 
+/turf/open/void/show_pipes
+	intact_tile = FALSE
+
 /turf/open/void/vehicle
 	density = TRUE
 	opacity = TRUE
@@ -458,7 +461,7 @@
 	if(rand(0,15) == 0)
 		icon_state = "desert[pick("0","1","2","3")]"
 
-/turf/open/gm/dirt/desert0
+/turf/open/gm/dirt/desert0	
 	icon_state = "desert0"
 
 /turf/open/gm/dirt/desert1

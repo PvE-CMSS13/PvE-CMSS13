@@ -1,0 +1,14 @@
+{
+    "map_name": "SS Torch",
+    "short_name": "Torch",
+    "map_path": "map_files/baytorch",
+    "map_file": "baytorch.dmm",
+
+    "map_item_type": "/obj/item/map/bay_torch",
+
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "jungle",
+
+    "environment_traits": { "Fog": true }
+}

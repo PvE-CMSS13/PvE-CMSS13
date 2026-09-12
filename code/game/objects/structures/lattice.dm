@@ -12,8 +12,8 @@
 
 /obj/structure/lattice/Initialize()
 	. = ..()
-	if(!istype(src.loc, /turf/open/space))
-		return INITIALIZE_HINT_QDEL
+	//if(!istype(src.loc, /turf/open/space))
+	//	return INITIALIZE_HINT_QDEL
 	for(var/obj/structure/lattice/LAT in src.loc)
 		if(LAT != src)
 			qdel(LAT)

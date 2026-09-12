@@ -94,7 +94,15 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mp5"
 	gun_type = /obj/item/weapon/gun/smg/mp5
+	ammo_band_icon = "+mp5_band"
+	ammo_band_icon_empty = "+mp5_band_e"
 	max_rounds = 30 //Also comes in 10 and 40.
+
+/obj/item/ammo_magazine/smg/mp5/rubber
+	name = "\improper MP5 rubber magazine (9mm)"
+	desc = "A 9mm rubber bullet magazine for the MP5."
+	default_ammo = /datum/ammo/bullet/smg/rubber
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 
 //-------------------------------------------------------

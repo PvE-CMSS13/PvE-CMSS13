@@ -166,6 +166,18 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/nerva
+	name = "\improper SS Nerva deck layout map"
+	desc = "A large fold out diagram of the six decks of the SS Nerva"
+	html_link = ""
+	color = "cyan"
+
+/obj/item/map/bay_torch
+	name = "\improper SS Torch deck layout map"
+	desc = "A large fold out diagram of the six decks of the SS Torch"
+	html_link = ""
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -198,6 +210,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
+		MAP_TORCH = new /obj/item/map/bay_torch(),
+		MAP_NERVA = new /obj/item/map/nerva(),
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),

@@ -251,10 +251,11 @@
 		return FALSE
 
 	for(var/turf/turf_tile in locs)
-		for(var/obj/structure/blocking_structure in turf_tile)
-			if(blocking_structure.density || istype(blocking_structure, /obj/structure/closet))
-				addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-				return FALSE
+		if(!istype(src, /obj/structure/machinery/door/firedoor))
+			for(var/obj/structure/blocking_structure in turf_tile)
+				if(blocking_structure.density || istype(blocking_structure, /obj/structure/closet))
+					addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+					return FALSE
 
 	operating = DOOR_OPERATING_CLOSING
 	density = TRUE

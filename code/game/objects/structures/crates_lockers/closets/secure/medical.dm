@@ -227,3 +227,30 @@
 /obj/structure/closet/secure_closet/professor_dummy/ex_act(severity)
 	check_and_destroy_dummy()
 	..()
+
+/obj/structure/closet/secure_closet/medi_tech
+	name = "medical technician's locker"
+	desc = "Filled with medical items."
+	icon_state = "secure_locked_medical"
+	icon_closed = "secure_unlocked_medical"
+	icon_locked = "secure_locked_medical"
+	icon_opened = "secure_open_medical"
+	icon_broken = "secure_closed_medical"
+	icon_off = "secure_closed_medical"
+	req_access = list(ACCESS_MARINE_MEDBAY)
+
+/obj/structure/closet/secure_closet/medi_tech/Initialize()
+	. = ..()
+	new /obj/item/clothing/accessory/storage/black_vest(src)
+	new /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/encryptionkey/med(src)
+	new /obj/item/storage/belt/medical(src)
+	new /obj/item/clothing/mask/breath/medical(src)
+	new /obj/item/tank/emergency_oxygen/double(src)
+	new /obj/item/clothing/glasses/hud/health(src)
+	new /obj/item/clothing/head/hardhat/white(src)
+	new /obj/item/weapon/swiss_army_knife(src)
+	new /obj/item/storage/backpack/medic(src)
+
+

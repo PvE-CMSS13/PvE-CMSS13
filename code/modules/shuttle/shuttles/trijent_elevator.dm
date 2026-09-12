@@ -65,6 +65,7 @@
 	// open dock doors
 	var/datum/door_controller/single/door_control = new()
 	door_control.doors = get_doors()
+	door_control.control_doors("unlock", FALSE, FALSE)
 	door_control.control_doors("open", FALSE, FALSE)
 	qdel(door_control)
 

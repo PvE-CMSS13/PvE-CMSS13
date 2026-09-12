@@ -165,7 +165,7 @@
 					alarmed = 1
 			if(alarmed)
 				nextstate = CLOSED
-				close()
+				close(TRUE)
 
 /obj/structure/machinery/door/firedoor/attackby(obj/item/C as obj, mob/user as mob)
 	add_fingerprint(user)
@@ -204,7 +204,7 @@
 				if(density)
 					open(TRUE)
 				else
-					close()
+					close(TRUE)
 		return TRUE //no afterattack call
 	else
 		if(blocked)
@@ -239,7 +239,7 @@
 			open()
 		if(CLOSED)
 			nextstate = null
-			close()
+			close(TRUE)
 	return
 
 /obj/structure/machinery/door/firedoor/close(forced = FALSE)

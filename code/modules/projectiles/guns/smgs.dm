@@ -257,6 +257,10 @@
 		UGL.Attach(src)
 		update_attachable(UGL.slot)
 
+/obj/item/weapon/gun/smg/mp5/unloaded
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/smg/mp5::flags_gun_features | GUN_TRIGGER_SAFETY
+
 //-------------------------------------------------------
 //MP27, based on the MP27, based on the M7.
 

@@ -1754,7 +1754,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
-/datum/equipment_preset/proc/add_canc_rifle(mob/living/carbon/human/new_human)
+/datum/equipment_preset/proc/add_canc_rifle	(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
 	var/random_canc_rifle = rand(1,5)
