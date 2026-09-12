@@ -37,6 +37,7 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 	var/list/roles_to_roll
 
 	var/corpses_to_spawn = 0
+	var/human_ai_to_spawn = 0
 
 	var/hardcore = FALSE
 
@@ -75,6 +76,9 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 		spawn_static_comms()
 	if(corpses_to_spawn)
 		generate_corpses()
+	if(human_ai_to_spawn)
+		generate_human_ai()
+
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MODE_PRESETUP)
 	return 1
 
@@ -264,6 +268,21 @@ GLOBAL_VAR_INIT(cas_tracking_id_increment, 0) //this var used to assign unique t
 				if(!found_nest.buckled_mob)
 					found_nest.do_buckle(M,M)
 		gamemode_spawn_corpse.Remove(spawner)
+
+/datum/game_mode/proc/generate_human_ai()
+	var/list/obj/effect/landmark/humanaispawner/gamemode_spawn_human_ai = GLOB.human_ai_spawns.Copy()
+	while(human_ai_to_spawn--)
+		if(!length(gamemode_spawn_human_ai))
+			break
+		var/obj/effect/landmark/humanaispawner/spawner = pick(gamemode_spawn_human_ai)
+		var/turf/spawnpoint = get_turf(spawner)
+		if(spawnpoint)
+			var/mob/living/carbon/human/H = new /mob/living/carbon/human(spawnpoint)
+			H.create_hud()
+			arm_equipment(H, spawner.equip_path, TRUE, FALSE)
+			H.AddComponent(/datum/component/human_ai)
+			H.get_ai_brain().appraise_inventory()
+		gamemode_spawn_human_ai.Remove(spawner)
 
 /datum/game_mode/proc/spawn_static_comms()
 	for(var/i = 1 to static_comms_amount)
