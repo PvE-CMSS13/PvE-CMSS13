@@ -1534,6 +1534,7 @@
 #include "code\modules\admin\game_master\fire_support\toggle_portrait.dm"
 #include "code\modules\admin\game_master\game_master_submenu\ambush.dm"
 #include "code\modules\admin\game_master\game_master_submenu\infest.dm"
+#include "code\modules\admin\game_master\game_master_submenu\ladders.dm"
 #include "code\modules\admin\game_master\game_master_submenu\tunnels.dm"
 #include "code\modules\admin\game_master\game_master_submenu\vents.dm"
 #include "code\modules\admin\medal_panel\medals_panel.dm"
