@@ -1259,3 +1259,40 @@
 	name = "Synthetic - Security Android - Malfunction"
 	faction = FACTION_MALF_SYNTH
 	faction_group = list(FACTION_MALF_SYNTH)
+
+/datum/equipment_preset/synth/hybrid
+	name = "Xeno-Human Hybrid"
+	flags = EQUIPMENT_PRESET_EXTRA
+	faction = FACTION_COLONIST
+	assignment = JOB_COLONIST
+	rank = JOB_COLONIST
+	skills = /datum/skills/infiltrator_synthetic
+	idtype = /obj/item/card/id/lanyard
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_SPANISH, LANGUAGE_XENOMORPH)
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/synth/hybrid/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/synth/hybrid/load_race(mob/living/carbon/human/new_human)
+	new_human.set_species("Hybrid")
+	new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
+
+/datum/equipment_preset/synth/hybrid/load_skills(mob/living/carbon/human/new_human)
+		new_human.set_skills(/datum/skills/infiltrator_synthetic)
+		new_human.allow_gun_usage = TRUE
+
+/datum/equipment_preset/synth/hybrid/load_gear(mob/living/carbon/human/new_human)
+	add_random_synth_infiltrator_equipment(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack/predator(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack/predator(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/ointment/predator(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint/nano(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/butterfly(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/chloroform(new_human), WEAR_IN_L_STORE)
